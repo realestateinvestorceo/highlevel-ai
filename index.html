@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HighLevel AI — The #1 AI-Powered Marketing Platform for Agencies</title>
+<meta name="description" content="Discover how GoHighLevel's AI tools help agencies automate marketing, close more deals, and scale faster. Honest review, tutorials, and exclusive trial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 14px;
+    font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 14px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 160px 0 100px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 18px; border-radius: 50px;
+    background: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    font-size: 14px; font-weight: 600; color: var(--accent-bright);
+    margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge span { font-size: 16px; }
+  .hero h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(42px, 6.5vw, 76px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 .gradient-text {
+    background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-green) 50%, var(--accent-orange) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--text-secondary);
+    max-width: 600px; margin: 0 auto 40px;
+    line-height: 1.65;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-cta {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .hero-proof {
+    margin-top: 48px;
+    display: flex; align-items: center; justify-content: center; gap: 24px;
+    color: var(--text-muted); font-size: 14px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .hero-proof .stars { color: #facc15; font-size: 16px; letter-spacing: 2px; }
+  .hero-proof strong { color: var(--text-secondary); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── STATS BAR ─── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 100px;
+  }
+  .stat-item {
+    background: var(--bg-secondary);
+    padding: 36px 24px;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  .stat-item:hover { background: var(--bg-card); }
+  .stat-number {
+    font-family: 'Sora', sans-serif;
+    font-size: 36px; font-weight: 900; letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-bright));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 6px; font-weight: 500; }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.1;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 560px; margin: 16px auto 0;
+  }
+
+  /* ─── AI FEATURES GRID ─── */
+  #features { padding: 60px 0 100px; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .feature-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+  }
+  .feature-card:hover::before { opacity: 1; }
+  .feature-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 20px;
+    background: var(--accent-glow);
+    border: 1px solid rgba(79,125,249,0.15);
+  }
+  .feature-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700; margin-bottom: 10px;
+  }
+  .feature-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+
+  /* ─── COMPARISON TABLE ─── */
+  #compare { padding: 60px 0 100px; }
+  .compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .compare-table thead th {
+    background: var(--bg-card);
+    padding: 18px 24px;
+    text-align: left;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px; font-weight: 700;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-table thead th:first-child { width: 30%; }
+  .compare-table thead th.highlight {
+    background: linear-gradient(180deg, rgba(79,125,249,0.12), var(--bg-card));
+    color: var(--accent-bright);
+    position: relative;
+    padding-top: 38px;
+  }
+  .compare-table thead th.highlight::before {
+    content: '★ RECOMMENDED';
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: #fff;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    padding: 4px 12px; border-radius: 0 0 8px 8px;
+  }
+  .compare-table tbody td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 15px; color: var(--text-secondary);
+    background: var(--bg-secondary);
+  }
+  .compare-table tbody td.highlight {
+    background: rgba(79,125,249,0.03);
+  }
+  .compare-table tbody tr:last-child td { border-bottom: none; }
+  .compare-table .feature-name { color: var(--text-primary); font-weight: 600; }
+  .check { color: var(--accent-green); font-weight: 700; font-size: 18px; }
+  .cross { color: #ef4444; font-size: 18px; }
+  .partial { color: var(--accent-orange); font-size: 14px; font-weight: 600; }
+
+  /* ─── PRICING ─── */
+  #pricing { padding: 60px 0 100px; }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .price-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .price-card.featured {
+    border-color: var(--border-accent);
+    background: linear-gradient(180deg, rgba(79,125,249,0.06), var(--bg-card));
+    transform: scale(1.03);
+  }
+  .price-card.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; padding: 5px 16px; border-radius: 50px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  }
+  .price-name {
+    font-size: 14px; font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+  }
+  .price-amount {
+    font-family: 'Sora', sans-serif;
+    font-size: 48px; font-weight: 900; letter-spacing: -2px;
+    margin-bottom: 4px;
+  }
+  .price-amount span { font-size: 18px; font-weight: 500; color: var(--text-muted); }
+  .price-desc { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
+  .price-features { list-style: none; margin-bottom: 28px; }
+  .price-features li {
+    padding: 8px 0; font-size: 14px; color: var(--text-secondary);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .price-features li::before {
+    content: '✓'; color: var(--accent-green); font-weight: 700; font-size: 14px;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #reviews { padding: 60px 0 100px; }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: all 0.3s;
+  }
+  .testimonial-card:hover { border-color: rgba(255,255,255,0.1); }
+  .testimonial-stars { color: #facc15; font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+  .testimonial-text { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-glow), var(--bg-card));
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 15px; color: var(--accent-bright);
+  }
+  .testimonial-name { font-weight: 700; font-size: 14px; }
+  .testimonial-role { font-size: 12px; color: var(--text-muted); }
+
+  /* ─── FAQ ─── */
+  #faq { padding: 60px 0 100px; }
+  .faq-list { max-width: 720px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 300px; padding-top: 16px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    padding: 100px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 72px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 18px; max-width: 520px; margin: 0 auto 36px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; }
+  .affiliate-disclosure {
+    max-width: 600px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.5;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .features-grid, .pricing-grid, .testimonial-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .price-card.featured { transform: none; }
+    .nav-links { display: none; }
+    .compare-table { font-size: 14px; }
+    .compare-table thead th, .compare-table tbody td { padding: 12px 14px; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="nav-logo">highlevel.ai</a>
+    <div class="nav-links">
+      <a href="#features">AI Features</a>
+      <a href="#compare">Compare</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav">Start Free Trial →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span>⚡</span> The AI Marketing Platform 1,000,000+ Businesses Trust</div>
+    <h1>
+      Stop Duct-Taping Tools.<br>
+      <span class="gradient-text">One AI Platform. Everything.</span>
+    </h1>
+    <p class="hero-sub">
+      GoHighLevel replaces your CRM, email marketing, funnel builder, appointment scheduler, and 10+ other tools — powered by AI that actually works.
+    </p>
+    <div class="hero-cta">
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary">Start Your 14-Day Free Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-ghost">See AI Features</a>
+    </div>
+    <div class="hero-proof">
+      <div class="stars">★★★★★</div>
+      <span><strong>4.6/5</strong> from 5,200+ reviews</span>
+      <span>•</span>
+      <span>Trusted by <strong>1M+ businesses</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="container">
+  <div class="stats-bar animate-on-scroll">
+    <div class="stat-item">
+      <div class="stat-number">$1,000+</div>
+      <div class="stat-label">Saved per month vs. stacking tools</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">14 Days</div>
+      <div class="stat-label">Free trial — no credit card</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">10-in-1</div>
+      <div class="stat-label">Replaces your entire tech stack</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">24/7</div>
+      <div class="stat-label">AI works while you sleep</div>
+    </div>
+  </div>
+</div>
+
+<!-- AI FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">AI-Powered Features</div>
+      <h2>AI That Actually Moves the Needle</h2>
+      <p>Not just chatbot gimmicks — real AI automations that save hours per day and close more deals.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">🤖</div>
+        <h3>AI Conversation Bot</h3>
+        <p>Responds to leads in under 60 seconds via SMS, email, and webchat — 24/7. Books appointments automatically while you sleep.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">📧</div>
+        <h3>AI Content Engine</h3>
+        <p>Generate high-converting emails, SMS campaigns, ad copy, and funnel content in seconds. Trained on what actually converts.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">📞</div>
+        <h3>AI Voice Agent</h3>
+        <p>An AI receptionist that answers calls, qualifies leads, and books appointments on your calendar — sounding completely natural.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">🔁</div>
+        <h3>Workflow Automations</h3>
+        <p>Visual drag-and-drop automations that trigger across SMS, email, calls, and pipelines. If-then logic without writing a line of code.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">📊</div>
+        <h3>AI Reporting & Insights</h3>
+        <p>Automatically surface which campaigns, funnels, and sources are driving revenue. Stop guessing, start knowing.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">🏷️</div>
+        <h3>White-Label SaaS Mode</h3>
+        <p>Resell the entire platform under your own brand. Agencies are building $10K–$100K/mo SaaS businesses on top of HighLevel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="compare">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">Side-by-Side</div>
+      <h2>Why Agencies Are Switching</h2>
+      <p>One platform that replaces your entire bloated, expensive tech stack.</p>
+    </div>
+    <div class="animate-on-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">GoHighLevel</th>
+            <th>HubSpot</th>
+            <th>ClickFunnels</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">CRM & Pipeline</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="partial">Basic</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Funnel Builder</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">AI Chatbot / SMS Bot</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="partial">Add-on</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">AI Voice Agent</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Email Marketing</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Appointment Scheduling</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">White-Label / SaaS Mode</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Starting Price</td>
+            <td class="highlight"><strong style="color:var(--accent-green)">$97/mo</strong></td>
+            <td><strong>$800+/mo</strong></td>
+            <td><strong>$147/mo</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">Simple Pricing</div>
+      <h2>Plans That Scale With You</h2>
+      <p>Start with a 14-day free trial. No credit card required. Cancel anytime.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card animate-on-scroll">
+        <div class="price-name">Starter</div>
+        <div class="price-amount">$97<span>/mo</span></div>
+        <p class="price-desc">Perfect for getting started and small teams.</p>
+        <ul class="price-features">
+          <li>CRM & Pipeline Management</li>
+          <li>Funnel & Website Builder</li>
+          <li>Email & SMS Marketing</li>
+          <li>Calendar & Booking</li>
+          <li>AI Conversation Bot</li>
+        </ul>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-ghost" style="width:100%;justify-content:center;">Start Free Trial</a>
+      </div>
+      <div class="price-card featured animate-on-scroll">
+        <div class="price-name">Unlimited</div>
+        <div class="price-amount">$297<span>/mo</span></div>
+        <p class="price-desc">Unlimited everything for growing agencies.</p>
+        <ul class="price-features">
+          <li>Everything in Starter</li>
+          <li>Unlimited Sub-Accounts</li>
+          <li>Unlimited Contacts</li>
+          <li>API Access</li>
+          <li>Branded Desktop App</li>
+        </ul>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" style="width:100%;justify-content:center;">Start Free Trial</a>
+      </div>
+      <div class="price-card animate-on-scroll">
+        <div class="price-name">SaaS Pro</div>
+        <div class="price-amount">$497<span>/mo</span></div>
+        <p class="price-desc">White-label the entire platform as your own SaaS.</p>
+        <ul class="price-features">
+          <li>Everything in Unlimited</li>
+          <li>Full White-Label SaaS</li>
+          <li>SaaS Billing & Rebilling</li>
+          <li>AI Employee Add-ons</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-ghost" style="width:100%;justify-content:center;">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">What People Are Saying</div>
+      <h2>Agencies Love HighLevel</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We cancelled HubSpot, Calendly, ClickFunnels, and ActiveCampaign. HighLevel replaced all of them for a fraction of the price. The AI booking bot alone paid for the subscription in the first week."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Marcus T.</div>
+            <div class="testimonial-role">Digital Agency Owner</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We white-labeled HighLevel and now charge our clients $297/mo for our 'own' platform. We went from agency to SaaS company overnight. Best business decision we've ever made."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Sarah K.</div>
+            <div class="testimonial-role">Marketing Consultant</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The AI conversation bot handles 80% of our inbound leads without any human intervention. Our response time went from hours to seconds. Conversion rate doubled."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div>
+            <div class="testimonial-name">James R.</div>
+            <div class="testimonial-role">Real Estate Team Lead</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Is GoHighLevel good for beginners?</button>
+        <div class="faq-answer">
+          <p>Absolutely. While HighLevel is incredibly powerful, it's designed with agencies and small businesses in mind. There's a visual drag-and-drop builder for funnels and automations, extensive tutorials, and a massive community of users sharing templates and strategies. The 14-day free trial gives you plenty of time to explore.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What tools does GoHighLevel replace?</button>
+        <div class="faq-answer">
+          <p>HighLevel can replace your CRM (Salesforce, HubSpot), email marketing (Mailchimp, ActiveCampaign), funnel builder (ClickFunnels), scheduling (Calendly), SMS marketing (Twilio front-end), website builder, reputation management, and more. Most agencies save $500–$2,000/month in tool costs.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How does the AI conversation bot work?</button>
+        <div class="faq-answer">
+          <p>The AI bot automatically responds to inbound leads via SMS, email, and webchat. It can answer common questions, qualify leads based on your criteria, and book appointments directly on your calendar — all without human intervention. It works 24/7 and responds in under 60 seconds.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I white-label it as my own software?</button>
+        <div class="faq-answer">
+          <p>Yes — this is one of HighLevel's killer features. On the SaaS Pro plan ($497/mo), you can fully rebrand the platform with your own logo, domain, and colors, then resell it to your clients at whatever price you choose. Many agencies charge $297–$997/mo per client for their white-labeled version.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Is there a free trial?</button>
+        <div class="faq-answer">
+          <p>Yes! GoHighLevel offers a 14-day free trial so you can explore the full platform with no commitment. No credit card is required to start. You'll have access to all the core features including the AI tools.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-box animate-on-scroll">
+      <h2>Ready to Ditch the Tool Chaos?</h2>
+      <p>Join 1,000,000+ businesses running on one AI-powered platform. Start your free 14-day trial today.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary">Start Your Free Trial <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#compare">Compare</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <p>© 2026 highlevel.ai — An independent review & resource site.</p>
+    <p class="affiliate-disclosure">
+      Affiliate Disclosure: This site contains affiliate links to GoHighLevel. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend products we genuinely believe in.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // FAQ Toggle
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+    
+    if (!isOpen) {
+      answer.classList.add('open');
+      btn.classList.add('active');
+    }
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
