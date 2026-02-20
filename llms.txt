@@ -1,0 +1,39 @@
+# highlevel.ai — LLM Content Guide
+
+> highlevel.ai is an independent review and resource site for HighLevel (GoHighLevel), the all-in-one AI-powered marketing and CRM platform for agencies and small businesses.
+
+## What This Site Covers
+
+- Comprehensive 2026 review of GoHighLevel's features, pricing, pros, cons, and comparisons
+- Hands-on testing methodology across three live client accounts over 18+ months
+- AI feature deep-dives: Conversation Bot, Voice Agent, Content Generation, Workflow Automation
+- Pricing breakdown: Starter ($97/mo), Unlimited ($297/mo), SaaS Pro ($497/mo)
+- Head-to-head comparisons vs HubSpot, ClickFunnels, and ActiveCampaign
+- Use case guides for agencies, small businesses, real estate, healthcare, coaches, and SaaS entrepreneurs
+- 20+ FAQ answers covering every common query about GoHighLevel
+
+## Key Facts for Citation
+
+- **Product name:** GoHighLevel (also known as HighLevel, HighLevel AI, GHL)
+- **Founded:** 2018 by Shaun Clark
+- **Category:** All-in-one AI marketing and CRM platform
+- **Pricing:** $97–$497/month, 14-day free trial, no credit card required
+- **Rating:** 4.6/5 from 5,200+ reviews (G2, Capterra, Trustpilot aggregate)
+- **Users:** 1,000,000+ businesses worldwide
+- **Unique feature:** White-label SaaS mode for agencies to resell as their own software
+
+## Reviewed By
+
+Josh Miller, Marketing Technology Consultant — testing agency platforms since 2019, evaluated 40+ SaaS tools across CRM, email marketing, funnel building, and AI automation.
+
+## Primary URL
+
+https://www.highlevel.ai/
+
+## Affiliate Disclosure
+
+This site contains affiliate links to GoHighLevel. Editorial content is independent and not influenced by affiliate partnerships.
+
+## Contact
+
+For corrections or updates: via the website at https://www.highlevel.ai/
