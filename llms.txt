@@ -23,6 +23,19 @@
 - **About:** https://www.highlevel.ai/about.html — author credentials and site independence
 - **Editorial Policy:** https://www.highlevel.ai/editorial-policy.html — testing methodology and correction process
 
+## Cluster Guides & Comparisons
+
+- **Pricing Explained:** https://www.highlevel.ai/pricing-explained.html — full breakdown of all three plans, hidden costs (Twilio, Mailgun, A2P), total cost calculator, and plan decision guide
+- **HighLevel vs HubSpot:** https://www.highlevel.ai/highlevel-vs-hubspot.html — 15+ feature comparison, tier-by-tier pricing, where each platform wins
+- **Mistakes to Avoid:** https://www.highlevel.ai/mistakes-to-avoid.html — 12 common GoHighLevel pitfalls covering setup, automation, compliance, and operations
+- **Voice Agent Setup Guide:** https://www.highlevel.ai/voice-agent-setup.html — step-by-step voice agent configuration, script writing, and compliance checklist
+- **Workflows for Agencies:** https://www.highlevel.ai/workflows-for-agencies.html — 7 essential agency workflow templates with builder instructions and best practices
+- **Best Prompts for Sales & Support:** https://www.highlevel.ai/best-prompts-sales-support.html — 20+ AI prompt templates for sales, support, and content generation
+- **HighLevel for Med Spas:** https://www.highlevel.ai/highlevel-for-med-spas.html — how med spas use GoHighLevel for bookings, reminders, reviews, and HIPAA considerations
+- **HighLevel for Real Estate:** https://www.highlevel.ai/highlevel-for-real-estate.html — pipeline setup, lead qualification, and automation templates for real estate teams
+- **HighLevel vs Zapier & Make:** https://www.highlevel.ai/highlevel-vs-zapier-make.html — when native workflows are enough vs when you still need third-party automation
+- **HighLevel vs ChatGPT:** https://www.highlevel.ai/highlevel-vs-chatgpt.html — complementary tools, not competitors; what each does best and how to use them together
+
 ## Key Facts for Citation
 
 - **Product name:** GoHighLevel (also known as HighLevel, HighLevel AI, GHL)

@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- Primary Meta -->
+<title>HighLevel AI Voice Agent Setup Guide: Step-by-Step Configuration (2026)</title>
+<meta name="description" content="Complete step-by-step guide to setting up the GoHighLevel AI Voice Agent. Learn how to connect Twilio, provision a number, write scripts, configure routing, and go live in 8 steps.">
+<meta name="author" content="Josh Miller">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.highlevel.ai/voice-agent-setup.html">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="HighLevel AI Voice Agent Setup Guide: Step-by-Step Configuration (2026)">
+<meta property="og:description" content="Complete step-by-step guide to setting up the GoHighLevel AI Voice Agent. Connect Twilio, write scripts, configure routing, and go live in 8 steps.">
+<meta property="og:url" content="https://www.highlevel.ai/voice-agent-setup.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-02-15T00:00:00Z">
+<meta property="article:modified_time" content="2026-02-20T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HighLevel AI Voice Agent Setup Guide (2026)">
+<meta name="twitter:description" content="Step-by-step guide to setting up the GoHighLevel AI Voice Agent. 8 steps from Twilio connection to going live.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HighLevel AI Voice Agent Setup Guide: Step-by-Step Configuration (2026)",
+  "description": "Complete step-by-step guide to setting up the GoHighLevel AI Voice Agent. Learn how to connect Twilio, provision a number, write scripts, configure routing, and go live in 8 steps.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-20",
+  "mainEntityOfPage": "https://www.highlevel.ai/voice-agent-setup.html",
+  "image": "https://www.highlevel.ai/og-image.png"
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Voice Agent Setup Guide"
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does the HighLevel AI Voice Agent cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The HighLevel AI Voice Agent is included on the Unlimited plan at $297 per month and the SaaS Pro plan at $497 per month. It is not available on the Starter plan at $97 per month. In addition to the platform subscription, you will need a Twilio account for phone number provisioning and per-minute voice charges, which typically run between $15 and $40 per month depending on call volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the voice agent transfer calls to a human?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the HighLevel AI Voice Agent supports live call transfers to human team members. You can configure transfer rules based on lead qualification criteria, caller intent, or specific requests. When a caller asks to speak with a person or meets certain conditions, the agent can warm-transfer the call to a designated team member or ring group. You can also set up fallback routing so that calls transfer to a human if the AI is unable to resolve the caller's request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the voice agent work for outbound calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the HighLevel AI Voice Agent supports both inbound and outbound calling. For outbound calls, you can trigger the voice agent through workflow automations to call leads, confirm appointments, or follow up on form submissions. Outbound calling is subject to TCPA regulations, so you must have proper consent before initiating automated calls. You should also register your phone numbers for A2P (Application-to-Person) compliance to maintain good deliverability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does the voice agent support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The HighLevel AI Voice Agent primarily supports English with natural-sounding voice synthesis. HighLevel has been expanding language support over time, and availability of additional languages may vary depending on the voice model and provider configuration. Check the GoHighLevel support documentation or contact their team for the most current list of supported languages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize what the voice agent says?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the voice agent is fully customizable. You write the complete script including the greeting, qualification questions, booking flow, FAQ responses, and transfer logic. You can define the agent's personality and tone, set specific qualification criteria, customize responses for different scenarios, and configure how the agent handles edge cases like unrecognized questions or after-hours calls. The script editor in GoHighLevel gives you full control over the conversation flow."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* ─── CONTENT BLOCKS (article-style) ─── */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 56px 0 20px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 40px 0 16px;
+  }
+
+  /* ─── SUMMARY BOX ─── */
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+  }
+  .summary-box p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ─── CHECKLIST TABLE ─── */
+  .checklist-table {
+    width: 100%; max-width: 780px; margin: 0 auto;
+    border-collapse: separate; border-spacing: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .checklist-table thead th {
+    background: var(--bg-card); padding: 14px 20px;
+    text-align: left; font-family: 'Sora', sans-serif;
+    font-size: 13px; font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .checklist-table tbody td {
+    padding: 12px 20px; border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--text-secondary);
+    background: var(--bg-secondary);
+  }
+  .checklist-table tbody tr:last-child td { border-bottom: none; }
+
+  /* ─── SETUP LIST (numbered CSS counters) ─── */
+  .setup-list {
+    list-style: none; padding: 0;
+    max-width: 780px; margin: 0 auto;
+    counter-reset: setup-step;
+  }
+  .setup-list li {
+    counter-increment: setup-step;
+    padding: 14px 0;
+    font-size: 15px; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+  }
+  .setup-list li::before {
+    content: counter(setup-step);
+    min-width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px; font-weight: 700; color: var(--accent-bright);
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .setup-list li:last-child { border-bottom: none; }
+  .setup-list li strong { color: var(--text-primary); }
+
+  /* ─── METHODOLOGY BOX ─── */
+  .methodology-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .methodology-box h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 16px; color: var(--text-primary);
+  }
+  .methodology-box p {
+    color: var(--text-secondary); font-size: 15px; line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .methodology-box p:last-child { margin-bottom: 0; }
+  .methodology-list {
+    list-style: none; padding: 0; margin: 12px 0 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+  }
+  .methodology-list li {
+    font-size: 14px; color: var(--text-secondary);
+    padding-left: 20px; position: relative;
+  }
+  .methodology-list li::before {
+    content: '\2713'; position: absolute; left: 0;
+    color: var(--accent-green); font-weight: 700;
+  }
+
+  /* ─── SOURCES BOX ─── */
+  .sources-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .sources-box h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 16px; color: var(--text-primary);
+  }
+  .sources-list {
+    list-style: none; padding: 0; margin: 0;
+    columns: 2; column-gap: 24px;
+  }
+  .sources-list li {
+    font-size: 14px; color: var(--text-secondary);
+    padding: 6px 0; break-inside: avoid;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .sources-list li .source-num {
+    color: var(--accent-bright); font-weight: 700;
+    font-size: 12px; min-width: 20px;
+  }
+  .sources-list li a {
+    color: var(--text-secondary); text-decoration: underline;
+    text-decoration-color: rgba(165,165,184,0.3);
+  }
+  .sources-list li a:hover { color: var(--text-primary); }
+  .citation-ref {
+    font-size: 11px; color: var(--accent-bright);
+    text-decoration: none; font-weight: 700;
+    vertical-align: super; line-height: 0;
+    margin-left: 2px;
+  }
+  .citation-ref:hover { text-decoration: underline; }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .toc-links {
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    list-style: none; padding: 0;
+  }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary);
+    text-decoration: none; border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .toc-links li a:hover {
+    color: var(--accent-bright);
+    border-bottom-color: var(--accent-bright);
+  }
+
+  /* ─── FAQ ─── */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* ─── SECTION SPACING ─── */
+  .page-section { padding: 70px 0; }
+
+  /* ─── AUTHOR BYLINE ─── */
+  .author-byline {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff;
+    flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+
+  /* ─── INLINE DISCLOSURE ─── */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    text-align: center; margin-top: 16px;
+    animation: fadeUp 0.6s 0.45s ease both;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  /* ─── NOT-FOR LIST ─── */
+  .not-for-list {
+    list-style: none; padding: 0;
+    max-width: 780px; margin: 0 auto;
+  }
+  .not-for-list li {
+    padding: 12px 0;
+    font-size: 15px; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 12px; line-height: 1.6;
+  }
+  .not-for-list li::before {
+    content: '\2717'; color: var(--accent-red); font-weight: 700;
+    font-size: 16px; flex-shrink: 0; margin-top: 2px;
+  }
+  .not-for-list li:last-child { border-bottom: none; }
+  .not-for-list li strong { color: var(--text-primary); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .sources-list { columns: 1; }
+    .toc-links { gap: 6px 12px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .methodology-list { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── ARTICLE-SPECIFIC ─── */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  @media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#comparison">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Voice Agent Setup Guide
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <div class="section-tag">SETUP GUIDE</div>
+    <h1>HighLevel AI Voice Agent Setup Guide: Step-by-Step Configuration (2026)</h1>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <div class="article-meta">Published February 15, 2026 &middot; Updated February 20, 2026 &middot; 10 min read</div>
+    <p class="inline-disclosure">This guide contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. <a href="#affiliate-disclosure">Full disclosure</a>.</p>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-bar animate-on-scroll">
+    <p>Table of Contents</p>
+    <ul class="toc-links">
+      <li><a href="#what-is-voice-agent">What Is the Voice Agent?</a></li>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#step-by-step-setup">Step-by-Step Setup</a></li>
+      <li><a href="#writing-scripts">Writing an Effective Script</a></li>
+      <li><a href="#compliance-checklist">Compliance Checklist</a></li>
+      <li><a href="#tips-gotchas">Tips &amp; Gotchas</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box animate-on-scroll">
+    <p><strong>Summary:</strong> The HighLevel AI Voice Agent answers inbound calls, qualifies leads, books appointments, and transfers to humans &mdash; all automatically. It is available on the Unlimited ($297/mo) and SaaS Pro ($497/mo) plans<a href="#sources" class="citation-ref">[4]</a> and requires a Twilio integration for phone provisioning.<a href="#sources" class="citation-ref">[2]</a> This guide walks you through the complete setup process in 8 steps.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-block">
+
+    <!-- SECTION 1: What Is the Voice Agent -->
+    <div class="page-section animate-on-scroll" id="what-is-voice-agent">
+      <h2>What Is the HighLevel AI Voice Agent?</h2>
+      <p>The HighLevel AI Voice Agent is an AI-powered virtual receptionist built into the GoHighLevel platform. It handles both inbound and outbound phone calls using natural language processing, enabling it to carry on human-sounding conversations with callers without requiring a live team member on the line.<a href="#sources" class="citation-ref">[1]</a></p>
+      <p>When a call comes in, the voice agent can respond within 60 seconds,<a href="#sources" class="citation-ref">[1]</a> greet the caller by name (if the contact exists in your CRM), ask qualification questions you define, answer frequently asked questions about your business, and book appointments directly on your team's calendar. If a caller needs to speak with a human, the agent can warm-transfer the call to a designated team member.</p>
+      <p>The voice agent is designed for agencies, service businesses, and any team that needs to ensure every call is answered promptly. It is available on the Unlimited plan ($297/mo) and the SaaS Pro plan ($497/mo).<a href="#sources" class="citation-ref">[4]</a> It is not included on the Starter plan ($97/mo). Beyond the platform subscription, you will need a Twilio account to provision phone numbers and handle per-minute voice charges.<a href="#sources" class="citation-ref">[2]</a></p>
+    </div>
+
+    <!-- SECTION 2: Prerequisites -->
+    <div class="page-section animate-on-scroll" id="prerequisites">
+      <h2>Prerequisites Before You Start</h2>
+      <p>Before configuring the voice agent, make sure you have the following in place. Missing any of these items will block or delay your setup.</p>
+    </div>
+  </div>
+
+  <div class="animate-on-scroll">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Requirement</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GoHighLevel Unlimited or SaaS Pro plan</strong></td>
+          <td>The voice agent is not available on the Starter plan ($97/mo). You need the Unlimited plan at $297/mo or the SaaS Pro plan at $497/mo.<a href="#sources" class="citation-ref">[4]</a></td>
+        </tr>
+        <tr>
+          <td><strong>Twilio account</strong></td>
+          <td>Create a Twilio account and connect it to GoHighLevel using your Account SID and Auth Token. Twilio handles the telephony layer for voice calls.<a href="#sources" class="citation-ref">[2]</a></td>
+        </tr>
+        <tr>
+          <td><strong>Phone number provisioned via Twilio or LC Phone</strong></td>
+          <td>You need at least one phone number (local or toll-free) provisioned through Twilio or GoHighLevel's LC Phone system to receive and make calls.</td>
+        </tr>
+        <tr>
+          <td><strong>Calendar or booking page configured</strong></td>
+          <td>Set up at least one calendar in GoHighLevel with available time slots so the voice agent can book appointments during conversations.</td>
+        </tr>
+        <tr>
+          <td><strong>Business hours defined</strong></td>
+          <td>Define your operating hours so the agent knows when to route calls live vs. when to use after-hours handling (voicemail, text follow-up, etc.).</td>
+        </tr>
+        <tr>
+          <td><strong>CRM pipeline set up</strong></td>
+          <td>Create a pipeline with stages (e.g., New Lead, Qualified, Appointment Booked) so qualified callers are automatically moved through your sales process.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-block">
+
+    <!-- SECTION 3: Step-by-Step Setup -->
+    <div class="page-section animate-on-scroll" id="step-by-step-setup">
+      <h2>Step-by-Step Voice Agent Setup</h2>
+      <p>Follow these 8 steps to get your voice agent configured, tested, and live. The entire process typically takes between 1 and 3 hours depending on script complexity and how many qualification rules you need.</p>
+    </div>
+  </div>
+
+  <ol class="setup-list animate-on-scroll">
+    <li><strong>Connect your Twilio account.</strong> Navigate to Settings &gt; Phone Integration in GoHighLevel. Enter your Twilio Account SID and Auth Token (found in your Twilio Console dashboard). Click "Connect" and verify the integration status shows as active. This connection enables GoHighLevel to provision numbers and route calls through Twilio's telephony network.<a href="#sources" class="citation-ref">[2]</a></li>
+    <li><strong>Provision a phone number.</strong> Go to Settings &gt; Phone Numbers and click "Add Number." Choose a local number for regional trust or a toll-free number for national reach. Local numbers typically cost around $1/mo and toll-free numbers around $2/mo through Twilio.<a href="#sources" class="citation-ref">[2]</a> Select an area code, confirm, and assign the number to the sub-account where your voice agent will operate.</li>
+    <li><strong>Create your voice agent in GoHighLevel settings.</strong> Navigate to the AI Voice Agent section under your sub-account settings. Click "Create New Agent" and give it a descriptive name (e.g., "Main Inbound Receptionist"). Select the phone number you just provisioned as the agent's assigned line. Choose a voice style that matches your brand tone.</li>
+    <li><strong>Write your agent script.</strong> Build the conversation flow starting with a greeting, then qualification questions, then either a booking flow or a transfer to a human. Include fallback responses for when the AI does not understand a question. Define the key information your agent needs to collect (name, service interest, budget, timeline). See the script-writing section below for detailed guidance.</li>
+    <li><strong>Set qualification criteria.</strong> Define what makes a caller a "qualified" lead. This might include criteria such as the type of service they need, their budget range, their timeline, or their location. Configure the agent to tag contacts and move them to the appropriate pipeline stage based on their qualification status. Unqualified callers can receive a polite response and a text follow-up instead of a booked appointment.</li>
+    <li><strong>Configure business hours and after-hours routing.</strong> Set your operating hours in the agent's configuration. During business hours, the agent can transfer qualified callers to your team. Outside business hours, configure the agent to handle calls independently: take messages, book appointments for the next business day, or send a follow-up SMS. This ensures every call gets a response regardless of when it comes in.</li>
+    <li><strong>Connect to your calendar for live booking.</strong> Link the voice agent to your GoHighLevel calendar so it can check real-time availability and book appointments during conversations. Select which calendar the agent should use, set minimum scheduling notice (e.g., 24 hours), and configure confirmation messages. The agent will offer available slots to the caller and confirm the booking on the spot.</li>
+    <li><strong>Test with real calls before going live.</strong> Place at least 5 test calls from different phone numbers to verify the complete flow: greeting, qualification, booking, transfer, and after-hours handling. Test edge cases like callers who refuse to answer questions, callers who ask unexpected questions, and calls during the transition between business hours and after-hours. Fix any issues in the script before routing real traffic to the agent.</li>
+  </ol>
+
+  <div class="content-block">
+
+    <!-- SECTION 4: Writing an Effective Script -->
+    <div class="page-section animate-on-scroll" id="writing-scripts">
+      <h2>Writing an Effective Voice Agent Script</h2>
+      <p>The script is the single most important factor in your voice agent's performance. A well-written script feels natural, moves the caller through qualification efficiently, and handles unexpected responses gracefully. A poorly written script will frustrate callers and lose leads.</p>
+
+      <h3>Script Structure</h3>
+      <p>Every voice agent script should follow a three-part structure: greeting, qualification, and resolution. The greeting sets the tone and confirms the caller has reached the right business. Qualification gathers the information you need to determine if the caller is a fit. Resolution either books an appointment, transfers to a human, or provides a helpful next step.</p>
+      <p>Keep each section concise. Callers expect a phone conversation to move quickly. Your greeting should be no more than two sentences. Each qualification question should be followed by a brief acknowledgment before moving to the next question. The booking or transfer step should happen as soon as qualification is complete.</p>
+
+      <h3>Personality and Tone Guidelines</h3>
+      <p>Write your script in the same tone your best receptionist would use. If your business is a medical spa, the tone should be warm, professional, and reassuring. If your business is a roofing company, the tone should be direct, confident, and friendly. Avoid overly formal language that sounds robotic, and avoid overly casual language that sounds unprofessional.</p>
+      <p>Use the caller's name once the agent knows it. Acknowledge their answers before asking the next question ("Great, thanks for sharing that. Let me ask you..."). Include brief transition phrases between sections so the conversation flows naturally.</p>
+
+      <h3>Common Pitfalls to Avoid</h3>
+      <p>Do not write scripts that ask too many questions in a row without pausing. Three to four qualification questions is the practical limit before callers lose patience. Do not use jargon or industry terms that callers may not understand. Do not forget to include fallback responses for when the AI encounters something outside its script. Always include a path to a human agent for callers who specifically request one.</p>
+    </div>
+  </div>
+
+  <!-- Sample Script Outline (methodology-box) -->
+  <div class="methodology-box animate-on-scroll">
+    <h3>Sample Voice Agent Script Outline</h3>
+    <p>Below is an example conversation structure for a service-based business. Customize the specific questions and responses to match your industry and qualification criteria.</p>
+    <ul class="methodology-list">
+      <li>Greeting: "Hi, thanks for calling [Business Name]. How can I help you today?"</li>
+      <li>Identify intent: "Are you looking to schedule an appointment or do you have a question?"</li>
+      <li>Qualification Q1: "What type of service are you interested in?"</li>
+      <li>Qualification Q2: "When were you looking to get this done?"</li>
+      <li>Qualification Q3: "Have you had this type of service before?"</li>
+      <li>Booking: "I have availability on [date]. Would that work for you?"</li>
+      <li>Confirmation: "You're all set for [date/time]. You'll receive a confirmation text shortly."</li>
+      <li>Fallback: "Let me connect you with a team member who can help with that."</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+
+    <!-- SECTION 5: Compliance Checklist -->
+    <div class="page-section animate-on-scroll" id="compliance-checklist">
+      <h2>Voice Agent Compliance Checklist</h2>
+      <p>Voice communication is subject to federal and state regulations. Failing to comply can result in significant fines. Review the following checklist before launching your voice agent, and consult with a legal professional if you have questions about your specific situation.</p>
+    </div>
+  </div>
+
+  <div class="animate-on-scroll">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Requirement</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Call recording consent disclosure</strong></td>
+          <td>Required</td>
+          <td>If you record calls, you must disclose this to the caller at the beginning of the conversation. Include a disclosure statement in your agent's greeting script.</td>
+        </tr>
+        <tr>
+          <td><strong>TCPA compliance for outbound calls</strong></td>
+          <td>Required</td>
+          <td>The Telephone Consumer Protection Act requires prior express consent before making automated outbound calls. Ensure you have documented consent for any outbound voice agent campaigns.<a href="#sources" class="citation-ref">[3]</a></td>
+        </tr>
+        <tr>
+          <td><strong>Two-party consent state awareness</strong></td>
+          <td>Required</td>
+          <td>Thirteen states require all parties to consent to call recording. If you operate in or receive calls from these states (including California, Florida, and Illinois), your agent must obtain explicit consent before recording.<a href="#sources" class="citation-ref">[5]</a></td>
+        </tr>
+        <tr>
+          <td><strong>Human handoff capability</strong></td>
+          <td>Required</td>
+          <td>Configure your agent to transfer to a human when requested. Callers should always have the option to speak with a real person.</td>
+        </tr>
+        <tr>
+          <td><strong>After-hours voicemail fallback</strong></td>
+          <td>Recommended</td>
+          <td>Set up a voicemail or callback option for times when neither the AI agent nor a human team member is available. This prevents dropped calls.</td>
+        </tr>
+        <tr>
+          <td><strong>Call monitoring and quality review</strong></td>
+          <td>Recommended</td>
+          <td>Review call recordings or transcripts weekly for the first month to identify script issues, missed qualification opportunities, and caller complaints.</td>
+        </tr>
+        <tr>
+          <td><strong>Phone number registration (A2P)</strong></td>
+          <td>Required</td>
+          <td>Register your phone numbers for A2P (Application-to-Person) messaging and calling through Twilio to maintain deliverability and avoid carrier filtering.<a href="#sources" class="citation-ref">[2]</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-block">
+
+    <!-- SECTION 6: Tips and Gotchas -->
+    <div class="page-section animate-on-scroll" id="tips-gotchas">
+      <h2>Tips and Common Gotchas</h2>
+      <p>Based on hands-on testing and common patterns from agencies deploying the voice agent, here are the most important warnings to keep in mind during your setup.</p>
+    </div>
+  </div>
+
+  <ul class="not-for-list animate-on-scroll">
+    <li><strong>Don't skip after-hours routing.</strong> If a caller reaches your voice agent outside business hours and the agent tries to transfer to a human who is unavailable, the call drops with no resolution. Always configure an after-hours flow (voicemail, SMS follow-up, or next-day appointment booking) before going live.</li>
+    <li><strong>Don't launch without testing at least 5 real calls.</strong> Test the full conversation flow including greeting, each qualification path, booking, transfer, and error handling. A single untested branch in your script can cause the agent to loop or go silent during a live call.</li>
+    <li><strong>Monitor call transcripts weekly for the first month.</strong> The first 30 days reveal patterns you cannot anticipate during setup: unexpected questions, regional dialects the AI handles poorly, and script branches that confuse callers. Review transcripts and refine your script based on real data.</li>
+    <li><strong>Budget an estimated $15 to $40 per month for Twilio voice costs.</strong> Twilio charges per minute for inbound and outbound calls, plus a monthly fee for each provisioned phone number. Actual costs depend on your call volume and duration. This is an estimate based on typical small business usage; high-volume operations will cost more.<a href="#sources" class="citation-ref">[2]</a></li>
+    <li><strong>Don't forget recording disclosure in two-party consent states.</strong> If you record calls and operate in a two-party consent state (such as California, Florida, Illinois, or Pennsylvania), your voice agent must explicitly state that the call is being recorded and obtain the caller's consent before proceeding.<a href="#sources" class="citation-ref">[5]</a></li>
+  </ul>
+
+  <div class="content-block">
+
+    <!-- SECTION 7: FAQ -->
+    <div class="page-section animate-on-scroll" id="faq">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+  </div>
+
+  <div class="faq-list animate-on-scroll">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How much does the HighLevel AI Voice Agent cost?</button>
+      <div class="faq-answer">
+        <p>The HighLevel AI Voice Agent is included on the Unlimited plan at $297 per month and the SaaS Pro plan at $497 per month.<a href="#sources" class="citation-ref">[4]</a> It is not available on the Starter plan at $97 per month. In addition to the platform subscription, you will need a Twilio account for phone number provisioning and per-minute voice charges, which typically run an estimated $15 to $40 per month depending on call volume.<a href="#sources" class="citation-ref">[2]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can the voice agent transfer calls to a human?</button>
+      <div class="faq-answer">
+        <p>Yes, the HighLevel AI Voice Agent supports live call transfers to human team members. You can configure transfer rules based on lead qualification criteria, caller intent, or specific requests. When a caller asks to speak with a person or meets certain conditions, the agent can warm-transfer the call to a designated team member or ring group. You can also set up fallback routing so that calls transfer to a human if the AI is unable to resolve the caller's request.<a href="#sources" class="citation-ref">[1]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Does the voice agent work for outbound calls?</button>
+      <div class="faq-answer">
+        <p>Yes, the HighLevel AI Voice Agent supports both inbound and outbound calling.<a href="#sources" class="citation-ref">[1]</a> For outbound calls, you can trigger the voice agent through workflow automations to call leads, confirm appointments, or follow up on form submissions. Outbound calling is subject to TCPA regulations, so you must have proper consent before initiating automated calls.<a href="#sources" class="citation-ref">[3]</a> You should also register your phone numbers for A2P compliance to maintain good deliverability.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What languages does the voice agent support?</button>
+      <div class="faq-answer">
+        <p>The HighLevel AI Voice Agent primarily supports English with natural-sounding voice synthesis. HighLevel has been expanding language support over time, and availability of additional languages may vary depending on the voice model and provider configuration. Check the GoHighLevel support documentation or contact their team for the most current list of supported languages.<a href="#sources" class="citation-ref">[1]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can I customize what the voice agent says?</button>
+      <div class="faq-answer">
+        <p>Yes, the voice agent is fully customizable. You write the complete script including the greeting, qualification questions, booking flow, FAQ responses, and transfer logic. You can define the agent's personality and tone, set specific qualification criteria, customize responses for different scenarios, and configure how the agent handles edge cases like unrecognized questions or after-hours calls. The script editor in GoHighLevel gives you full control over the conversation flow.<a href="#sources" class="citation-ref">[1]</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+
+    <!-- SECTION 8: Sources -->
+    <div class="page-section animate-on-scroll" id="sources">
+      <h2>Sources</h2>
+    </div>
+  </div>
+
+  <div class="sources-box animate-on-scroll">
+    <h3>References</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="source-num">[1]</span>
+        <a href="https://www.gohighlevel.com/voice-agent?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Voice Agent Features &mdash; gohighlevel.com</a>
+      </li>
+      <li>
+        <span class="source-num">[2]</span>
+        <a href="https://www.twilio.com/voice/pricing" target="_blank" rel="noopener">Twilio Voice Pricing &mdash; twilio.com/voice/pricing</a>
+      </li>
+      <li>
+        <span class="source-num">[3]</span>
+        <a href="https://www.fcc.gov/general/telemarketing-and-robocalls" target="_blank" rel="noopener">TCPA Compliance &mdash; fcc.gov/tcpa</a>
+      </li>
+      <li>
+        <span class="source-num">[4]</span>
+        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing &mdash; gohighlevel.com/pricing</a>
+      </li>
+      <li>
+        <span class="source-num">[5]</span>
+        <a href="https://www.ncsl.org/technology-and-communication/electronic-surveillance-laws" target="_blank" rel="noopener">Two-Party Consent States &mdash; ncsl.org</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- RELATED GUIDES -->
+  <div class="related-guides animate-on-scroll">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/" class="related-card">
+        <span class="related-tag">Pillar</span>
+        <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+      </a>
+      <a href="/workflows-for-agencies.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">HighLevel Workflows for Agencies</span>
+      </a>
+      <a href="/mistakes-to-avoid.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">HighLevel Mistakes to Avoid</span>
+      </a>
+      <a href="/highlevel-for-med-spas.html" class="related-card">
+        <span class="related-tag">Industry</span>
+        <span class="related-title">HighLevel for Med Spas</span>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /.container -->
+
+<!-- FINAL CTA -->
+<div class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>Test the AI Voice Agent, conversation bot, CRM, and full automation suite with a no-commitment free trial. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site. Not affiliated with or endorsed by HighLevel Inc.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: February 2026</p>
+    <p class="affiliate-disclosure" id="affiliate-disclosure">
+      <strong>Affiliate Disclosure:</strong> This site contains affiliate links to GoHighLevel. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend products we genuinely believe in. Our editorial content is independent and not influenced by affiliate partnerships.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // FAQ Toggle with aria-expanded
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.classList.remove('active');
+      q.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      answer.classList.add('open');
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Initialize aria-expanded on all FAQ buttons
+  document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+  // Scroll animations with IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1224,12 +1224,73 @@
     max-width: 780px; margin: 12px auto 0;
   }
 
+  /* ─── HUB GRID (Guides & Comparisons) ─── */
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .hub-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .hub-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    transform: translateY(-3px);
+  }
+  .hub-card .hub-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .hub-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .hub-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  .hub-card .hub-arrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 14px;
+  }
+  .inline-guide-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .inline-guide-link:hover { color: var(--accent-bright); }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     .features-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     .testimonial-grid { grid-template-columns: 1fr; }
     .use-case-grid { grid-template-columns: 1fr; }
+    .hub-grid { grid-template-columns: 1fr; }
     .comparison-details { grid-template-columns: 1fr; }
     .pros-cons-grid { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
@@ -1293,6 +1354,8 @@
       <a href="#verdict">Verdict</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
+      <a href="#guides">Guides</a>
+      <a href="#comparisons">Comparisons</a>
       <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
@@ -1377,6 +1440,8 @@
       <li><a href="#mistakes">Mistakes</a></li>
       <li><a href="#verdict">Verdict</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#comparisons">Comparisons</a></li>
     </ul>
   </nav>
 </div>
@@ -1536,6 +1601,7 @@
         <div class="use-case-icon">&#127968;</div>
         <h3>Real Estate Professionals</h3>
         <p>Real estate agents and teams rely on HighLevel's speed-to-lead capabilities. The AI bot responds to property inquiries in seconds, qualifies buyers and sellers, and books showings automatically. The CRM pipeline tracks deals from first contact through closing. Automated follow-up sequences nurture leads over weeks and months until they are ready to transact.</p>
+        <a href="/highlevel-for-real-estate.html" class="inline-guide-link">Full real estate guide &rarr;</a>
       </div>
       <div class="use-case-card animate-on-scroll">
         <div class="use-case-icon">&#127891;</div>
@@ -1551,6 +1617,7 @@
         <div class="use-case-icon">&#9764;&#65039;</div>
         <h3>Healthcare and Dental Practices</h3>
         <p>Medical and dental offices use HighLevel for automated appointment reminders (which dramatically reduce no-show rates), two-way SMS communication with patients, review generation after visits, and the AI voice agent to handle after-hours calls. HighLevel offers HIPAA compliance features for eligible plans, though practices should confirm their specific configuration meets compliance requirements.</p>
+        <a href="/highlevel-for-med-spas.html" class="inline-guide-link">Full med spa guide &rarr;</a>
       </div>
     </div>
   </div>
@@ -1648,6 +1715,7 @@
       <p><strong>Choose the Unlimited plan ($297/mo) if</strong> you are an agency managing multiple clients. This plan removes all limits on sub-accounts and contacts, includes API access, and adds the AI voice agent and branded desktop app. It is the most popular plan among agencies and the one we recommend for anyone with more than two clients.</p>
       <p><strong>Choose the SaaS Pro plan ($497/mo) if</strong> you want to white-label the platform and resell it as your own branded software. This plan adds full SaaS billing, client subscription management, and custom branding. It is designed for agencies that want to build a recurring SaaS revenue stream on top of their service fees.</p>
       <p>All plans include a 14-day free trial with no credit card required. You can upgrade or downgrade at any time.</p>
+      <a href="/pricing-explained.html" class="inline-guide-link">Read our full Pricing Guide (hidden costs, calculator, plan comparison) &rarr;</a>
     </div>
   </div>
 </section>
@@ -1760,6 +1828,7 @@
       <div class="comparison-block">
         <h3>HighLevel vs HubSpot</h3>
         <p>HubSpot is a well-established CRM and marketing automation platform, but its professional-tier features start at around $800 per month<a href="#sources" class="citation-ref">[6]</a> — more than eight times HighLevel's entry price.<a href="#sources" class="citation-ref">[1]</a> HubSpot does not include a funnel builder, AI conversation bot, AI voice agent, SMS marketing, or white-label SaaS mode. HubSpot offers a more polished interface and stronger native reporting, making it a good fit for enterprise companies with large budgets. However, for agencies and small businesses seeking an affordable all-in-one solution with AI capabilities, GoHighLevel delivers significantly more value per dollar.</p>
+        <a href="/highlevel-vs-hubspot.html" class="inline-guide-link">Read the full HighLevel vs HubSpot comparison &rarr;</a>
       </div>
       <div class="comparison-block">
         <h3>HighLevel vs ClickFunnels</h3>
@@ -1769,6 +1838,9 @@
         <h3>HighLevel vs ActiveCampaign</h3>
         <p>ActiveCampaign is a strong email marketing and automation platform starting at around $49 per month<a href="#sources" class="citation-ref">[8]</a>, but its pricing scales quickly as your contact list grows. ActiveCampaign excels at email deliverability and has a powerful automation builder, but it does not include funnel building, website hosting, appointment scheduling, AI conversation bots, AI voice agents, reputation management, or white-label SaaS capabilities. For businesses primarily focused on email marketing, ActiveCampaign is a solid choice. For businesses that want an all-in-one platform with broader capabilities, GoHighLevel covers more ground.</p>
       </div>
+    </div>
+    <div class="content-block animate-on-scroll" style="margin-top:24px;">
+      <p style="color:var(--text-secondary);font-size:14px;">More in-depth comparisons: <a href="/highlevel-vs-hubspot.html" class="inline-guide-link" style="margin-top:0;display:inline;">HighLevel vs HubSpot</a> &nbsp;|&nbsp; <a href="/highlevel-vs-zapier-make.html" class="inline-guide-link" style="margin-top:0;display:inline;">HighLevel vs Zapier &amp; Make</a> &nbsp;|&nbsp; <a href="/highlevel-vs-chatgpt.html" class="inline-guide-link" style="margin-top:0;display:inline;">HighLevel vs ChatGPT</a></p>
     </div>
   </div>
 </section>
@@ -1892,6 +1964,9 @@
         <div class="recipe-steps">Lead enters nurture → Day 1: value email → Day 3: case study SMS → Day 7: educational email → Day 14: soft offer → Day 30: check-in → Repeat quarterly until conversion or opt-out</div>
       </div>
     </div>
+    <div class="content-block animate-on-scroll" style="margin-top:24px;">
+      <a href="/workflows-for-agencies.html" class="inline-guide-link">Explore 7 more agency workflow templates with step-by-step setup &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -1949,6 +2024,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="content-block animate-on-scroll" style="margin-top:24px;">
+      <a href="/voice-agent-setup.html" class="inline-guide-link">Read our complete Voice Agent Setup Guide (step-by-step with scripts) &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -1968,6 +2046,9 @@
       <li><strong>Going live without testing workflows.</strong> Always test automations with a test contact before launching. Check that triggers fire correctly, messages send to the right channels, delays work as expected, and branching logic routes properly. One misconfigured step can send hundreds of incorrect messages.</li>
       <li><strong>Underestimating the learning curve.</strong> Plan for 1–2 dedicated weeks of setup and learning. GoHighLevel replaces 10+ tools, so there is genuinely a lot to configure. Front-load this investment and use the official knowledge base, YouTube tutorials, and Facebook community for guidance.</li>
     </ul>
+    <div class="content-block animate-on-scroll" style="margin-top:24px;">
+      <a href="/mistakes-to-avoid.html" class="inline-guide-link">See all 12 mistakes (with prevention checklist and risk ratings) &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -2350,6 +2431,92 @@
 
 </article>
 
+<!-- GUIDES HUB -->
+<section id="guides" class="page-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">Deep Dives</div>
+      <h2>HighLevel AI Guides</h2>
+      <p>In-depth guides covering pricing, setup, workflows, prompts, and common mistakes.</p>
+    </div>
+    <div class="hub-grid animate-on-scroll">
+      <a href="/pricing-explained.html" class="hub-card">
+        <div class="hub-tag">Guide</div>
+        <h3>HighLevel AI Pricing Explained (2026)</h3>
+        <p>Full breakdown of all three plans, hidden costs (Twilio, Mailgun, A2P), total cost calculator for three scenarios, and a plan decision guide.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/voice-agent-setup.html" class="hub-card">
+        <div class="hub-tag">Guide</div>
+        <h3>Voice Agent Setup Guide</h3>
+        <p>Step-by-step walkthrough for configuring the HighLevel AI voice agent, writing effective scripts, and meeting compliance requirements.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/workflows-for-agencies.html" class="hub-card">
+        <div class="hub-tag">Guide</div>
+        <h3>Workflows for Agencies</h3>
+        <p>Seven essential agency workflow templates with step-by-step builder instructions, best practices, and common mistakes to avoid.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/best-prompts-sales-support.html" class="hub-card">
+        <div class="hub-tag">Guide</div>
+        <h3>Best Prompts for Sales &amp; Support</h3>
+        <p>20+ ready-to-use AI prompt templates for sales qualification, customer support, and content generation inside GoHighLevel.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/mistakes-to-avoid.html" class="hub-card">
+        <div class="hub-tag">Guide</div>
+        <h3>Mistakes to Avoid</h3>
+        <p>12 common GoHighLevel pitfalls covering setup, automation, compliance, and operations — with a prevention checklist and risk ratings.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/highlevel-for-med-spas.html" class="hub-card">
+        <div class="hub-tag">Industry</div>
+        <h3>HighLevel for Med Spas</h3>
+        <p>How med spas use GoHighLevel to automate bookings, send treatment reminders, generate reviews, and stay HIPAA-aware.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+      <a href="/highlevel-for-real-estate.html" class="hub-card">
+        <div class="hub-tag">Industry</div>
+        <h3>HighLevel for Real Estate</h3>
+        <p>Pipeline setup, lead qualification workflows, and four ready-to-use automation templates for real estate teams.</p>
+        <div class="hub-arrow">Read guide &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISONS HUB -->
+<section id="comparisons" class="page-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">Head-to-Head</div>
+      <h2>HighLevel AI Comparisons</h2>
+      <p>Detailed feature and pricing comparisons with the platforms agencies ask about most.</p>
+    </div>
+    <div class="hub-grid animate-on-scroll">
+      <a href="/highlevel-vs-hubspot.html" class="hub-card">
+        <div class="hub-tag">Comparison</div>
+        <h3>HighLevel vs HubSpot (2026)</h3>
+        <p>Feature-by-feature and pricing-tier comparison. Where each platform wins, and when to choose one over the other.</p>
+        <div class="hub-arrow">Read comparison &rarr;</div>
+      </a>
+      <a href="/highlevel-vs-zapier-make.html" class="hub-card">
+        <div class="hub-tag">Comparison</div>
+        <h3>HighLevel vs Zapier &amp; Make (2026)</h3>
+        <p>Does GoHighLevel replace Zapier and Make? When native workflows are enough, and when you still need third-party automation.</p>
+        <div class="hub-arrow">Read comparison &rarr;</div>
+      </a>
+      <a href="/highlevel-vs-chatgpt.html" class="hub-card">
+        <div class="hub-tag">Comparison</div>
+        <h3>HighLevel vs ChatGPT (2026)</h3>
+        <p>Complementary, not competitors. What each tool does best and how to use ChatGPT alongside HighLevel for better results.</p>
+        <div class="hub-arrow">Read comparison &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <aside>
 <section class="final-cta">
@@ -2375,6 +2542,11 @@
       <a href="#comparison">Compare</a>
       <a href="#verdict">Verdict</a>
       <a href="#faq">FAQ</a>
+      <a href="/pricing-explained.html">Pricing Guide</a>
+      <a href="/highlevel-vs-hubspot.html">vs HubSpot</a>
+      <a href="/workflows-for-agencies.html">Workflows</a>
+      <a href="/voice-agent-setup.html">Voice Agent</a>
+      <a href="/mistakes-to-avoid.html">Mistakes to Avoid</a>
       <a href="/about.html">About</a>
       <a href="/editorial-policy.html">Editorial Policy</a>
       <a href="/contact.html">Contact</a>
