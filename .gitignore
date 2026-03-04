@@ -1,0 +1,5 @@
+.vercel
+
+# GSC tool credentials and tokens
+scripts/.credentials/
+scripts/reports/
