@@ -130,6 +130,14 @@ PAGE_TOPICS = {
             "highlevel pitfalls", "highlevel tips",
         ],
     },
+    "/gohighlevel-reviews.html": {
+        "title": "GoHighLevel Reviews",
+        "keywords": [
+            "gohighlevel reviews", "gohighlevel capterra rating",
+            "gohighlevel g2 rating", "highlevel reviews", "highlevel ratings",
+            "gohighlevel trustpilot", "gohighlevel user reviews",
+        ],
+    },
     "/about.html": {
         "title": "About highlevel.ai",
         "keywords": ["highlevel ai about", "who runs highlevel ai"],
