@@ -453,7 +453,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; scroll-padding-top: 112px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
 
   body {
     font-family: 'DM Sans', -apple-system, sans-serif;
@@ -498,28 +498,80 @@
   .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
   /* ─── NAV ─── */
-  nav {
-    position: fixed; top: 32px; left: 0; right: 0; z-index: 100;
-    padding: 16px 0;
-    background: rgba(10,10,15,0.8);
+  nav[aria-label="Main navigation"] {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 14px 0;
+    background: rgba(10,10,15,0.92);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     transition: all 0.3s;
   }
-  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  nav[aria-label="Main navigation"] .container { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo {
     font-family: 'Sora', sans-serif;
     font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
     background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     text-decoration: none;
+    flex-shrink: 0;
   }
-  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
   .nav-links a {
     color: var(--text-secondary); text-decoration: none; font-size: 13px;
     font-weight: 500; transition: color 0.2s; white-space: nowrap;
   }
   .nav-links a:hover { color: var(--text-primary); }
+
+  /* ─── NAV DROPDOWN ─── */
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown-toggle {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; cursor: pointer; white-space: nowrap;
+    background: none; border: none; font-family: 'DM Sans', sans-serif;
+    display: flex; align-items: center; gap: 4px; padding: 0;
+    transition: color 0.2s;
+  }
+  .nav-dropdown-toggle:hover { color: var(--text-primary); }
+  .nav-dropdown-toggle::after {
+    content: '';
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: transform 0.2s;
+  }
+  .nav-dropdown:hover .nav-dropdown-toggle::after { transform: rotate(180deg); }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    z-index: 200;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-dropdown-menu a:hover {
+    background: rgba(255,255,255,0.05);
+    color: var(--text-primary);
+  }
+
   .nav-toggle {
     display: none; background: none; border: none; cursor: pointer;
     width: 32px; height: 32px; position: relative;
@@ -565,7 +617,7 @@
 
   /* ─── HERO ─── */
   .hero {
-    padding: 140px 0 80px;
+    padding: 100px 0 80px;
     text-align: center;
   }
   .hero-badge {
@@ -1051,9 +1103,7 @@
     padding: 8px 24px;
     font-size: 12px;
     color: #fb923c;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 101;
+    position: relative;
   }
   .independence-banner a { color: #fb923c; text-decoration: underline; }
 
@@ -1380,14 +1430,30 @@
       display: none;
       position: absolute; top: 100%; left: 0; right: 0;
       flex-direction: column;
-      background: rgba(10,10,15,0.95);
+      background: rgba(10,10,15,0.97);
       backdrop-filter: blur(20px);
       padding: 20px 24px;
       border-bottom: 1px solid var(--border);
-      gap: 16px;
+      gap: 12px;
     }
     .nav-links.open { display: flex; }
     .nav-toggle { display: flex; }
+    .nav-dropdown-menu {
+      position: static;
+      transform: none;
+      display: none;
+      background: rgba(255,255,255,0.03);
+      border: none;
+      border-radius: 8px;
+      box-shadow: none;
+      padding: 4px 0;
+      margin-top: 6px;
+      min-width: auto;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block; }
+    .nav-dropdown:hover .nav-dropdown-menu { display: none; }
+    .nav-dropdown.open:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { padding: 6px 16px; font-size: 13px; }
     .compare-table { font-size: 13px; }
     .compare-table thead th, .compare-table tbody td { padding: 10px 12px; }
     .hero-answer { text-align: center; }
@@ -1470,13 +1536,32 @@
     </button>
     <div class="nav-links">
       <a href="#overview">Overview</a>
-      <a href="#features">AI Features</a>
-      <a href="#who-is-it-for">Use Cases</a>
       <a href="#pricing">Pricing</a>
-      <a href="#comparison">Compare</a>
-      <a href="#pros-and-cons">Pros &amp; Cons</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Compare</button>
+        <div class="nav-dropdown-menu">
+          <a href="#comparison">Quick Compare</a>
+          <a href="/highlevel-vs-hubspot.html">vs HubSpot</a>
+          <a href="/highlevel-vs-salesforce.html">vs Salesforce</a>
+          <a href="/highlevel-vs-clickfunnels.html">vs ClickFunnels</a>
+          <a href="/highlevel-vs-activecampaign.html">vs ActiveCampaign</a>
+          <a href="/highlevel-vs-keap.html">vs Keap</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Guides</button>
+        <div class="nav-dropdown-menu">
+          <a href="/voice-agent-setup.html">Voice Agent Setup</a>
+          <a href="/workflows-for-agencies.html">Workflows for Agencies</a>
+          <a href="/best-prompts-sales-support.html">AI Prompts</a>
+          <a href="/gohighlevel-white-label-guide.html">White-Label Guide</a>
+          <a href="/mistakes-to-avoid.html">Mistakes to Avoid</a>
+          <a href="/highlevel-for-coaches.html">For Coaches</a>
+          <a href="/highlevel-for-med-spas.html">For Med Spas</a>
+          <a href="/highlevel-for-real-estate.html">For Real Estate</a>
+        </div>
+      </div>
       <a href="#verdict">Verdict</a>
-      <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
@@ -2723,6 +2808,18 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+  // Mobile nav dropdown toggles
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      if (window.innerWidth > 768) return;
+      e.preventDefault();
+      var dropdown = btn.closest('.nav-dropdown');
+      var wasOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+      if (!wasOpen) dropdown.classList.add('open');
+    });
+  });
 
   // Sticky Mobile CTA
   (function() {
