@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- Primary Meta -->
+<title>GoHighLevel White-Label Guide: Start Your Own SaaS in 2026</title>
+<meta name="description" content="Step-by-step guide to white-labeling GoHighLevel as your own SaaS platform. Pricing, setup, branding, client management, and revenue projections for agency owners.">
+<meta name="author" content="Josh Miller">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.highlevel.ai/gohighlevel-white-label-guide.html">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel White-Label Guide: Start Your Own SaaS in 2026">
+<meta property="og:description" content="Step-by-step guide to white-labeling GoHighLevel as your own SaaS platform. Pricing, setup, branding, client management, and revenue projections for agency owners.">
+<meta property="og:url" content="https://www.highlevel.ai/gohighlevel-white-label-guide.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-03-20T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-20T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel White-Label Guide: Start Your Own SaaS in 2026">
+<meta name="twitter:description" content="Step-by-step guide to white-labeling GoHighLevel as your own SaaS platform. Pricing, setup, branding, client management, and revenue projections for agency owners.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GoHighLevel White-Label Guide: Start Your Own SaaS in 2026",
+  "description": "Step-by-step guide to white-labeling GoHighLevel as your own SaaS platform. Pricing, setup, branding, client management, and revenue projections for agency owners.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-20",
+  "dateModified": "2026-03-20",
+  "mainEntityOfPage": "https://www.highlevel.ai/gohighlevel-white-label-guide.html",
+  "image": "https://www.highlevel.ai/og-image.png"
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "White-Label SaaS Guide"
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can my clients tell it's GoHighLevel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GoHighLevel's white-label mode removes all GoHighLevel branding from the platform. Your clients see your logo, your brand colors, your custom domain, and your app name — on both the desktop platform and the mobile app. There is no mention of GoHighLevel anywhere in the client-facing experience. As far as your clients are concerned, they are using your proprietary software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many clients can I have on SaaS Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The SaaS Pro plan includes unlimited sub-accounts, which means there is no cap on how many clients you can onboard. Each client gets their own sub-account with isolated data, their own contacts, workflows, and settings. Your monthly cost stays at $497 per month regardless of whether you have 5 clients or 500 clients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I set my own pricing for clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GoHighLevel includes built-in Stripe billing integration that lets you create your own subscription plans and pricing tiers. You set the price, and clients pay you directly through Stripe. You keep 100% of what you charge. GoHighLevel does not take a cut of your client revenue — your only cost is the flat $497 per month SaaS Pro subscription plus any Twilio and Mailgun usage costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to provide support to my clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When you white-label GoHighLevel, you become the software provider in your clients' eyes. You are responsible for onboarding, training, and first-line support. However, GoHighLevel provides dedicated agency support for you — so when you encounter issues you cannot resolve, you can escalate to GoHighLevel's support team. Many resellers also integrate Zendesk or use GoHighLevel's built-in support widget to manage client tickets efficiently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start with a lower plan and upgrade later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "White-label functionality is only available on the SaaS Pro plan at $497 per month. The Starter ($97/mo) and Unlimited ($297/mo) plans do not include white-labeling. However, you can start with the 14-day free trial of the SaaS Pro plan to test everything before committing. If you are not ready for white-label, you can use the lower plans for your own agency operations and upgrade to SaaS Pro when you are ready to resell."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GoHighLevel",
+  "alternateName": ["HighLevel", "HighLevel AI", "GHL"],
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based (Cloud SaaS)",
+  "description": "GoHighLevel is an all-in-one AI-powered marketing, CRM, and automation platform for agencies and small businesses. Replaces 12+ separate tools.",
+  "url": "https://www.gohighlevel.com/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "97",
+    "highPrice": "497",
+    "priceCurrency": "USD",
+    "offerCount": "3",
+    "offers": [
+      {"@type": "Offer", "name": "Starter", "price": "97", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "Unlimited", "price": "297", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "SaaS Pro", "price": "497", "priceCurrency": "USD"}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "bestRating": "5",
+    "ratingCount": "5200"
+  },
+  "featureList": "CRM, Funnel Builder, Email Marketing, SMS Marketing, AI Chatbot, Voice Agent, Workflow Automation, Appointment Scheduling, Reputation Management, White-Label SaaS Mode"
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* ─── CONTENT BLOCKS (article-style) ─── */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 56px 0 20px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 40px 0 16px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 0;
+    padding-left: 24px;
+  }
+  .content-block li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .content-block li strong {
+    color: var(--text-primary);
+  }
+
+  /* ─── SUMMARY BOX ─── */
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+  }
+  .summary-box p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ─── CHECKLIST TABLE ─── */
+  .checklist-table {
+    width: 100%; max-width: 780px; margin: 0 auto;
+    border-collapse: separate; border-spacing: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .checklist-table thead th {
+    background: var(--bg-card); padding: 14px 20px;
+    text-align: left; font-family: 'Sora', sans-serif;
+    font-size: 13px; font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .checklist-table tbody td {
+    padding: 12px 20px; border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--text-secondary);
+    background: var(--bg-secondary);
+  }
+  .checklist-table tbody tr:last-child td { border-bottom: none; }
+
+  /* ─── SETUP LIST (numbered CSS counters) ─── */
+  .setup-list {
+    list-style: none; padding: 0;
+    max-width: 780px; margin: 0 auto;
+    counter-reset: setup-step;
+  }
+  .setup-list li {
+    counter-increment: setup-step;
+    padding: 14px 0;
+    font-size: 15px; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 14px; line-height: 1.6;
+  }
+  .setup-list li::before {
+    content: counter(setup-step);
+    min-width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px; font-weight: 700; color: var(--accent-bright);
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .setup-list li:last-child { border-bottom: none; }
+  .setup-list li strong { color: var(--text-primary); }
+
+  /* ─── RECIPE CARDS ─── */
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .recipe-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .recipe-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px; font-weight: 700;
+    margin-bottom: 8px; color: var(--text-primary);
+  }
+  .recipe-card p { color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+  .recipe-steps {
+    font-size: 13px; color: var(--accent-bright);
+    font-family: 'DM Sans', monospace;
+    word-break: break-all;
+  }
+
+  /* ─── METHODOLOGY BOX ─── */
+  .methodology-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .methodology-box h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 16px; color: var(--text-primary);
+  }
+  .methodology-box p {
+    color: var(--text-secondary); font-size: 15px; line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .methodology-box p:last-child { margin-bottom: 0; }
+  .methodology-list {
+    list-style: none; padding: 0; margin: 12px 0 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+  }
+  .methodology-list li {
+    font-size: 14px; color: var(--text-secondary);
+    padding-left: 20px; position: relative;
+  }
+  .methodology-list li::before {
+    content: '\2713'; position: absolute; left: 0;
+    color: var(--accent-green); font-weight: 700;
+  }
+
+  /* ─── SOURCES BOX ─── */
+  .sources-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .sources-box h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 16px; color: var(--text-primary);
+  }
+  .sources-list {
+    list-style: none; padding: 0; margin: 0;
+    columns: 2; column-gap: 24px;
+  }
+  .sources-list li {
+    font-size: 14px; color: var(--text-secondary);
+    padding: 6px 0; break-inside: avoid;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .sources-list li .source-num {
+    color: var(--accent-bright); font-weight: 700;
+    font-size: 12px; min-width: 20px;
+  }
+  .sources-list li a {
+    color: var(--text-secondary); text-decoration: underline;
+    text-decoration-color: rgba(165,165,184,0.3);
+  }
+  .sources-list li a:hover { color: var(--text-primary); }
+  .citation-ref {
+    font-size: 11px; color: var(--accent-bright);
+    text-decoration: none; font-weight: 700;
+    vertical-align: super; line-height: 0;
+    margin-left: 2px;
+  }
+  .citation-ref:hover { text-decoration: underline; }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .toc-links {
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    list-style: none; padding: 0;
+  }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary);
+    text-decoration: none; border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .toc-links li a:hover {
+    color: var(--accent-bright);
+    border-bottom-color: var(--accent-bright);
+  }
+
+  /* ─── FAQ ─── */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* ─── SECTION SPACING ─── */
+  .page-section { padding: 70px 0; }
+
+  /* ─── AUTHOR BYLINE ─── */
+  .author-byline {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff;
+    flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+
+  /* ─── INLINE DISCLOSURE ─── */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    text-align: center; margin-top: 16px;
+    animation: fadeUp 0.6s 0.45s ease both;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .sources-list { columns: 1; }
+    .toc-links { gap: 6px 12px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .methodology-list { grid-template-columns: 1fr; }
+    .recipe-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── ARTICLE-SPECIFIC ─── */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  @media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  /* --- HEADLESS DATA (hidden, for LLM extraction) --- */
+  .headless-data {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#comparison">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; White-Label SaaS Guide
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <div class="section-tag">WHITE-LABEL GUIDE</div>
+    <h1>GoHighLevel White-Label SaaS Guide: How to Start Your Own SaaS Business in 2026</h1>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">GoHighLevel user since 2019</div>
+      </div>
+    </div>
+    <div class="article-meta">Published March 20, 2026 &middot; Last updated: March 2026 &middot; 12 min read</div>
+    <p class="inline-disclosure">This guide contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. <a href="#affiliate-disclosure">Full disclosure</a>.</p>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-bar animate-on-scroll">
+    <p>Table of Contents</p>
+    <ul class="toc-links">
+      <li><a href="#what-is-white-label">What Is White-Label SaaS Mode?</a></li>
+      <li><a href="#cost">How Much Does It Cost?</a></li>
+      <li><a href="#revenue">Revenue Model &amp; Projections</a></li>
+      <li><a href="#setup">Step-by-Step Setup</a></li>
+      <li><a href="#customize">What You Can Customize</a></li>
+      <li><a href="#who-should-use">Who Should Use White-Label Mode?</a></li>
+      <li><a href="#mistakes">Common Mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box animate-on-scroll">
+    <p><strong>Summary:</strong> GoHighLevel's SaaS Pro plan ($497/mo) lets you rebrand the entire GoHighLevel platform as your own software. You set your own pricing, sell it to clients under your brand, and keep 100% of what you charge above your cost. Custom domain, custom login, your logo, your brand colors &mdash; clients never see "GoHighLevel." This is the only CRM/marketing platform that offers full white-label at this price point, making it the fastest path to launching your own SaaS business without building software from scratch.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-block">
+
+    <!-- SECTION 1: What Is White-Label SaaS Mode? -->
+    <div class="page-section animate-on-scroll" id="what-is-white-label">
+      <h2>What Is White-Label SaaS Mode?</h2>
+      <p>GoHighLevel's SaaS Pro plan lets marketing agencies and entrepreneurs rebrand the entire GoHighLevel platform as their own proprietary software. Every element your clients interact with carries your brand: your custom domain, your logo, your color scheme, and your app name. Clients log in to your domain, use your branded mobile app, and never encounter the name "GoHighLevel" anywhere in their experience.<a href="#sources" class="citation-ref">[1]</a></p>
+      <p>This is not a simple logo swap. White-label mode gives you full control over the desktop web application, a branded iOS and Android mobile app published under your name in the app stores, custom email sending domains, and a branded login portal. You also get built-in Stripe billing integration so you can create subscription plans, charge clients automatically, and manage recurring revenue &mdash; all from within your white-labeled dashboard.<a href="#sources" class="citation-ref">[2]</a></p>
+      <p>The value proposition is straightforward: instead of spending $100,000&ndash;$500,000+ and 12&ndash;18 months building a CRM or marketing automation platform from scratch, you pay $497/mo and get a fully functional, battle-tested platform on day one. GoHighLevel handles the infrastructure, updates, server maintenance, and feature development. You focus on sales, client success, and building your brand.</p>
+      <p>No other CRM or marketing automation platform offers this level of white-labeling at a comparable price point. Competitors like HubSpot, ActiveCampaign, and Salesforce do not offer white-label reselling at all. Vendasta and similar white-label platforms exist but typically charge significantly more and offer a narrower feature set.<a href="#sources" class="citation-ref">[3]</a></p>
+    </div>
+
+    <!-- SECTION 2: How Much Does It Cost? -->
+    <div class="page-section animate-on-scroll" id="cost">
+      <h2>How Much Does It Cost?</h2>
+      <p>The white-label SaaS mode is available exclusively on the SaaS Pro plan. Here is the full cost breakdown:</p>
+
+      <h3>SaaS Pro Plan</h3>
+      <p>The base subscription is <strong>$497/mo</strong> (or approximately <strong>$414/mo</strong> if billed annually).<a href="#sources" class="citation-ref">[2]</a> This includes:</p>
+      <ul>
+        <li><strong>Unlimited sub-accounts</strong> &mdash; no cap on clients</li>
+        <li><strong>White-label desktop app</strong> &mdash; your brand on the web platform</li>
+        <li><strong>White-label mobile app</strong> &mdash; branded iOS and Android app</li>
+        <li><strong>Custom domains</strong> &mdash; clients access your URL, not GoHighLevel's</li>
+        <li><strong>API access</strong> &mdash; full API for custom integrations</li>
+        <li><strong>Built-in Stripe billing</strong> &mdash; charge clients and manage subscriptions</li>
+        <li><strong>SaaS Configurator</strong> &mdash; control which features each pricing tier includes</li>
+      </ul>
+
+      <h3>Add-On Costs</h3>
+      <p>Beyond the base subscription, budget for these operational costs:</p>
+      <ul>
+        <li><strong>Twilio (SMS &amp; voice):</strong> $15&ndash;$80/mo depending on volume. Required for SMS, MMS, and voice call functionality.</li>
+        <li><strong>Mailgun (email sending):</strong> $0&ndash;$35/mo. Free tier covers low volume; paid tiers for higher sends.</li>
+        <li><strong>Custom domain registration:</strong> $10&ndash;$15/year for your branded app domain.</li>
+      </ul>
+
+      <p><strong>Total estimated all-in cost: $530&ndash;$620/mo</strong>, depending on your messaging volume. This is your fixed operating cost whether you have 1 client or 100 clients &mdash; the cost does not scale with your client count.<a href="#sources" class="citation-ref">[2]</a></p>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Revenue Model & Projections -->
+  <div class="content-block">
+    <div class="page-section animate-on-scroll" id="revenue">
+      <h2>Revenue Model &amp; Projections</h2>
+      <p>The economics of white-label GoHighLevel reselling are compelling because your cost stays flat while revenue scales with each new client. Here are realistic projections based on common pricing strategies:<a href="#sources" class="citation-ref">[2]</a><a href="#sources" class="citation-ref">[4]</a></p>
+    </div>
+  </div>
+
+  <div class="animate-on-scroll">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Monthly Revenue</th>
+          <th>Monthly Cost</th>
+          <th>Monthly Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>5 clients @ $297/mo</strong></td>
+          <td>$1,485</td>
+          <td>~$530</td>
+          <td>$955</td>
+        </tr>
+        <tr>
+          <td><strong>10 clients @ $297/mo</strong></td>
+          <td>$2,970</td>
+          <td>~$530</td>
+          <td>$2,440</td>
+        </tr>
+        <tr>
+          <td><strong>20 clients @ $197/mo</strong></td>
+          <td>$3,940</td>
+          <td>~$530</td>
+          <td>$3,410</td>
+        </tr>
+        <tr>
+          <td><strong>50 clients @ $147/mo</strong></td>
+          <td>$7,350</td>
+          <td>~$550</td>
+          <td>$6,800</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-block">
+    <p style="margin-top: 24px;">Most white-label resellers charge between <strong>$97&ndash;$497/mo per client</strong>, depending on the niche, the features included, and the level of support provided. The key insight: your base cost stays flat at approximately $530/mo regardless of how many clients you onboard. Every new client is almost pure margin.<a href="#sources" class="citation-ref">[4]</a></p>
+  </div>
+
+  <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your White-Label SaaS &mdash; 14-Day Free Trial <span>&rarr;</span></a>
+  </div>
+
+  <!-- SECTION 4: Step-by-Step Setup -->
+  <div class="content-block">
+    <div class="page-section animate-on-scroll" id="setup">
+      <h2>Step-by-Step Setup: Launch Your White-Label SaaS</h2>
+      <p>Follow these eight steps to go from zero to a fully branded SaaS platform ready to onboard clients. Most agencies complete this process in 1&ndash;2 weeks.</p>
+    </div>
+  </div>
+
+  <ol class="setup-list animate-on-scroll">
+    <li><strong>Sign up for the GoHighLevel SaaS Pro plan.</strong> Start with the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> to test the full white-label experience before committing to $497/mo. You get access to all SaaS Pro features during the trial.<a href="#sources" class="citation-ref">[1]</a></li>
+    <li><strong>Choose your brand name and register your domain.</strong> Pick a professional brand name for your SaaS product (e.g., "AgencyOS," "ClientHub," or a niche-specific name like "DentalFlow CRM"). Register a domain and set up DNS records to point to your white-labeled GoHighLevel instance.</li>
+    <li><strong>Configure white-label settings.</strong> Upload your logo, set your brand colors, add your favicon, and apply any custom CSS to match your brand identity. This controls how the platform looks when clients log in.<a href="#sources" class="citation-ref">[1]</a></li>
+    <li><strong>Set up your custom domain for the client-facing app.</strong> Map your domain (e.g., app.yoursaas.com) to GoHighLevel so clients access your branded URL &mdash; not a GoHighLevel subdomain. Configure SSL certificates for secure access.</li>
+    <li><strong>Configure Twilio and Mailgun for messaging.</strong> Create accounts with Twilio (SMS/voice) and Mailgun (email), then connect them to your GoHighLevel account using API keys. These third-party integrations handle the actual message delivery for your clients.</li>
+    <li><strong>Create your pricing tiers and subscription plans.</strong> Use GoHighLevel's SaaS Configurator to build your pricing plans. Connect Stripe for payment processing. Define which features each tier includes &mdash; for example, a $97/mo starter plan with basic CRM, a $197/mo growth plan with automation, and a $297/mo pro plan with everything included.</li>
+    <li><strong>Build your first client sub-account as a template.</strong> Create a "snapshot" &mdash; a pre-built sub-account template with workflows, funnels, email templates, and pipeline stages already configured. When you onboard a new client, you deploy this snapshot to give them a ready-to-use account in minutes instead of hours.</li>
+    <li><strong>Launch and onboard your first client.</strong> Create a sub-account for your first client, deploy your snapshot template, customize it for their business, and walk them through the platform. Use this first onboarding to refine your process before scaling.</li>
+  </ol>
+
+  <!-- SECTION 5: What You Can Customize -->
+  <div class="content-block">
+    <div class="page-section animate-on-scroll" id="customize">
+      <h2>What You Can Customize</h2>
+      <p>GoHighLevel's white-label mode gives you control over virtually every client-facing element of the platform. Here is what you can rebrand:<a href="#sources" class="citation-ref">[1]</a><a href="#sources" class="citation-ref">[2]</a></p>
+    </div>
+  </div>
+
+  <div class="recipe-grid animate-on-scroll">
+    <div class="recipe-card">
+      <h3>Desktop App</h3>
+      <p>Full rebrand of the web application with your logo, brand colors, custom domain, and favicon. Clients see your software, not GoHighLevel.</p>
+    </div>
+    <div class="recipe-card">
+      <h3>Mobile App</h3>
+      <p>Your own branded iOS and Android app published in the Apple App Store and Google Play Store under your brand name and icon.</p>
+    </div>
+    <div class="recipe-card">
+      <h3>Login Page</h3>
+      <p>Custom login portal at your domain with your branding. Clients bookmark your URL and never encounter a GoHighLevel login screen.</p>
+    </div>
+    <div class="recipe-card">
+      <h3>Email Templates</h3>
+      <p>Send all transactional and marketing emails from your own domain using Mailgun integration. Your brand in every inbox.</p>
+    </div>
+    <div class="recipe-card">
+      <h3>Support Widget</h3>
+      <p>Zendesk integration or GoHighLevel's built-in support widget, branded to your company. Manage client support tickets under your name.</p>
+    </div>
+    <div class="recipe-card">
+      <h3>Marketplace</h3>
+      <p>Sell snapshots, workflow templates, and funnel templates to your clients through your own in-app marketplace for additional revenue.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Who Should Use White-Label Mode? -->
+  <div class="content-block">
+    <div class="page-section animate-on-scroll" id="who-should-use">
+      <h2>Who Should Use White-Label Mode?</h2>
+      <p>White-labeling GoHighLevel is not for everyone. It works best for businesses and individuals who want to build recurring revenue by providing software and services to clients. Here are the ideal use cases:</p>
+
+      <h3>Marketing Agencies</h3>
+      <p>Agencies that already manage client marketing can add a SaaS revenue stream on top of their service fees. Instead of just running ads and building funnels for clients, you sell them the platform itself. This creates sticky MRR that continues even if a client pauses their service contract. Many agencies report that SaaS revenue eventually exceeds their service revenue.<a href="#sources" class="citation-ref">[4]</a></p>
+
+      <h3>Freelancers Building a SaaS Side Business</h3>
+      <p>Freelance marketers, web designers, and consultants can use white-label GoHighLevel to transition from trading time for money to building a scalable product business. Start with a few clients on the side and grow it into a full-time SaaS company.</p>
+
+      <h3>Coaches and Consultants</h3>
+      <p>Business coaches and consultants who advise clients on marketing and operations can provide their own branded platform as part of their coaching packages. This increases the perceived value of your coaching and creates a tool-based lock-in that reduces client churn.</p>
+
+      <h3>Industry-Specific Software Companies</h3>
+      <p>Entrepreneurs targeting a specific vertical &mdash; dental practices, real estate agents, fitness studios, home services, law firms &mdash; can build a niche CRM product on top of GoHighLevel. Pre-configure workflows, templates, and pipelines specific to that industry, then sell it as a purpose-built solution. Niche SaaS products often command higher prices because they solve industry-specific problems out of the box.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 7: Common Mistakes -->
+  <div class="content-block">
+    <div class="page-section animate-on-scroll" id="mistakes">
+      <h2>Common Mistakes to Avoid</h2>
+      <p>After years of observing the GoHighLevel reseller community, these are the most frequent mistakes that cause white-label SaaS businesses to stall or fail:</p>
+      <ul>
+        <li><strong>Pricing too low.</strong> Charging under $97/mo does not cover the support time you will spend helping clients. Factor in onboarding calls, troubleshooting, and ongoing questions. Most successful resellers charge $197&ndash;$297/mo minimum.<a href="#sources" class="citation-ref">[4]</a></li>
+        <li><strong>Not investing in onboarding.</strong> Clients who do not get proper setup and training churn within 60 days. Build a structured onboarding process: kickoff call, account configuration, training videos, and a 30-day check-in. The upfront time investment pays off in retention.</li>
+        <li><strong>Trying to be everything to everyone.</strong> Pick a niche. "CRM for everyone" is impossible to market. "Booking and review automation for dental practices" is specific, sellable, and allows you to build templates that work out of the box. Niche resellers consistently outperform generalists.</li>
+        <li><strong>Skipping Twilio setup and relying on LC Phone.</strong> GoHighLevel's built-in LC Phone works for getting started, but at scale, the per-message costs are higher than using your own Twilio account. Set up Twilio from day one to keep your messaging costs predictable and lower.<a href="#sources" class="citation-ref">[3]</a></li>
+        <li><strong>Not creating snapshot templates.</strong> If you manually set up every new client account from scratch, onboarding takes hours instead of minutes. Build snapshot templates with pre-configured workflows, pipelines, email sequences, and funnel pages. Deploy a snapshot, customize the details, and your client is live in under an hour.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 8: FAQ -->
+    <div class="page-section animate-on-scroll" id="faq">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+  </div>
+
+  <div class="faq-list animate-on-scroll">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can my clients tell it's GoHighLevel?</button>
+      <div class="faq-answer">
+        <p>No. GoHighLevel's white-label mode removes all GoHighLevel branding from the platform. Your clients see your logo, your brand colors, your custom domain, and your app name &mdash; on both the desktop platform and the mobile app. There is no mention of GoHighLevel anywhere in the client-facing experience. As far as your clients are concerned, they are using your proprietary software.<a href="#sources" class="citation-ref">[1]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How many clients can I have on SaaS Pro?</button>
+      <div class="faq-answer">
+        <p>The SaaS Pro plan includes unlimited sub-accounts, which means there is no cap on how many clients you can onboard. Each client gets their own sub-account with isolated data, their own contacts, workflows, and settings. Your monthly cost stays at $497/mo regardless of whether you have 5 clients or 500 clients.<a href="#sources" class="citation-ref">[2]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can I set my own pricing for clients?</button>
+      <div class="faq-answer">
+        <p>Yes. GoHighLevel includes built-in Stripe billing integration that lets you create your own subscription plans and pricing tiers. You set the price, and clients pay you directly through Stripe. You keep 100% of what you charge. GoHighLevel does not take a cut of your client revenue &mdash; your only cost is the flat $497/mo SaaS Pro subscription plus any Twilio and Mailgun usage costs.<a href="#sources" class="citation-ref">[2]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Do I need to provide support to my clients?</button>
+      <div class="faq-answer">
+        <p>Yes. When you white-label GoHighLevel, you become the software provider in your clients' eyes. You are responsible for onboarding, training, and first-line support. However, GoHighLevel provides dedicated agency support for you &mdash; so when you encounter issues you cannot resolve, you can escalate to GoHighLevel's support team. Many resellers also integrate Zendesk or use GoHighLevel's built-in support widget to manage client tickets efficiently.<a href="#sources" class="citation-ref">[3]</a></p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can I start with a lower plan and upgrade later?</button>
+      <div class="faq-answer">
+        <p>White-label functionality is only available on the SaaS Pro plan at $497/mo. The Starter ($97/mo) and Unlimited ($297/mo) plans do not include white-labeling. However, you can start with the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> of the SaaS Pro plan to test everything before committing. If you are not ready for white-label, you can use the lower plans for your own agency operations and upgrade to SaaS Pro when you are ready to resell.<a href="#sources" class="citation-ref">[2]</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+
+    <!-- SECTION 9: Sources -->
+    <div class="page-section animate-on-scroll" id="sources">
+      <h2>Sources</h2>
+    </div>
+  </div>
+
+  <div class="sources-box animate-on-scroll">
+    <h3>References</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="source-num">[1]</span>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel White-Label SaaS Mode &mdash; gohighlevel.com</a>
+      </li>
+      <li>
+        <span class="source-num">[2]</span>
+        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing &mdash; gohighlevel.com/pricing</a>
+      </li>
+      <li>
+        <span class="source-num">[3]</span>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Features &amp; Integrations &mdash; gohighlevel.com</a>
+      </li>
+      <li>
+        <span class="source-num">[4]</span>
+        <span>GoHighLevel SaaS Reseller Community &mdash; community reports and case studies</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- RELATED GUIDES -->
+  <div class="related-guides animate-on-scroll">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/" class="related-card">
+        <span class="related-tag">Pillar</span>
+        <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+      </a>
+      <a href="/pricing-explained.html" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained: Which Plan Is Right?</span>
+      </a>
+      <a href="/workflows-for-agencies.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">HighLevel Workflows for Agencies</span>
+      </a>
+      <a href="/mistakes-to-avoid.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">HighLevel Mistakes to Avoid</span>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /.container -->
+
+<!-- FINAL CTA -->
+<div class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Start Your White-Label SaaS Business Today</h2>
+      <p>Launch your own branded SaaS platform on GoHighLevel's 14-day free trial. Set up your brand, configure your pricing tiers, and onboard your first client &mdash; risk free.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure" id="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+  // FAQ Toggle with aria-expanded
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.classList.remove('active');
+      q.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      answer.classList.add('open');
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Initialize aria-expanded on all FAQ buttons
+  document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+  // Scroll animations with IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
