@@ -499,12 +499,15 @@
 
   /* ─── NAV ─── */
   nav[aria-label="Main navigation"] {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 30px; left: 0; right: 0; z-index: 100;
     padding: 14px 0;
     background: rgba(10,10,15,0.92);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     transition: all 0.3s;
+  }
+  nav[aria-label="Main navigation"].nav-top {
+    top: 0;
   }
   nav[aria-label="Main navigation"] .container { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo {
@@ -617,7 +620,7 @@
 
   /* ─── HERO ─── */
   .hero {
-    padding: 100px 0 80px;
+    padding: 120px 0 80px;
     text-align: center;
   }
   .hero-badge {
@@ -1097,13 +1100,21 @@
 
   /* ─── INDEPENDENCE BANNER ─── */
   .independence-banner {
-    background: rgba(251, 146, 60, 0.1);
+    background: rgba(251, 146, 60, 0.12);
     border-bottom: 1px solid rgba(251, 146, 60, 0.2);
     text-align: center;
     padding: 8px 24px;
     font-size: 12px;
     color: #fb923c;
-    position: relative;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 101;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .independence-banner.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
   .independence-banner a { color: #fb923c; text-decoration: underline; }
 
@@ -2808,6 +2819,22 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+  // Hide independence banner on scroll
+  (function() {
+    var banner = document.querySelector('.independence-banner');
+    var mainNav = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!banner || !mainNav) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) {
+        banner.classList.add('hidden');
+        mainNav.classList.add('nav-top');
+      } else {
+        banner.classList.remove('hidden');
+        mainNav.classList.remove('nav-top');
+      }
+    });
+  })();
 
   // Mobile nav dropdown toggles
   document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
