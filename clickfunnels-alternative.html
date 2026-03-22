@@ -822,6 +822,53 @@
     white-space: nowrap;
     border: 0;
   }
+
+/* ─── STICKY CTA BAR ─── */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10,10,15,0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-accent);
+  padding: 12px 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.sticky-cta-bar.visible { transform: translateY(0); }
+.sticky-cta-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sticky-cta-bar p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.sticky-cta-bar p strong { color: var(--text-primary); }
+.sticky-cta-bar .btn-sticky {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.sticky-cta-bar .btn-sticky:hover { opacity: 0.9; }
+@media (max-width: 600px) {
+  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 8px; }
+  .sticky-cta-bar p { font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -848,6 +895,8 @@
       <a href="/">&larr; Full Review</a>
       <a href="/#guides">Guides</a>
       <a href="/#comparisons">Comparisons</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/blog/">Blog</a>
       <a href="https://www.gohighlevel.com/?fp_ref=highlevel-ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
@@ -899,7 +948,7 @@
       <h3>Why Agencies Are Looking for ClickFunnels Alternatives</h3>
       <p>ClickFunnels has been a go-to funnel builder since 2014, but the landscape has shifted. Agencies in 2026 are increasingly searching for alternatives due to three recurring pain points.</p>
 
-      <p><strong>Pricing increases.</strong> ClickFunnels' Basic plan starts at $147/month and only covers funnels and basic email. The Pro plan at $197/month adds more funnels and follow-up workflows, but agencies managing multiple clients quickly hit limits. The Funnel Hacker plan at $297/month unlocks everything, but at that price point you are paying a premium for a platform that still requires third-party tools for CRM, SMS, scheduling, and reputation management.</p>
+      <p><strong>Pricing increases.</strong> ClickFunnels' Basic plan starts at $147/month and only covers funnels and basic email. The Pro plan at $197/month adds more funnels and follow-up workflows, but agencies managing multiple clients quickly hit limits. The Funnel Hacker plan at $297/month unlocks everything, but at that price point you are paying a premium for a platform that still requires third-party tools for CRM, SMS, scheduling, and reputation management. See how much you'd save by switching: <a href="/tool-stack-savings-calculator.html">Tool Stack Savings Calculator</a>.</p>
 
       <p><strong>Limited CRM and marketing capabilities.</strong> ClickFunnels was designed as a funnel-first platform. It does not include a full-featured CRM with pipeline management, two-way SMS marketing, or multi-channel AI chatbots. Agencies using ClickFunnels typically need to add separate subscriptions for tools like ActiveCampaign or HubSpot (for email/CRM), Twilio or SlickText (for SMS), and Calendly (for scheduling). These add-ons create integration complexity and increase total monthly costs.</p>
 
@@ -1208,6 +1257,26 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+
+// Sticky CTA bar - show after 30% scroll
+(function() {
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  var shown = false;
+  window.addEventListener('scroll', function() {
+    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
+  });
+})();
 </script>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCta">
+  <div class="container">
+    <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+  </div>
+</div>
 </body>
 </html>

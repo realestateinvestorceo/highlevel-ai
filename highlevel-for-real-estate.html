@@ -741,6 +741,53 @@
     white-space: nowrap;
     border: 0;
   }
+
+/* ─── STICKY CTA BAR ─── */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10,10,15,0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-accent);
+  padding: 12px 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.sticky-cta-bar.visible { transform: translateY(0); }
+.sticky-cta-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sticky-cta-bar p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.sticky-cta-bar p strong { color: var(--text-primary); }
+.sticky-cta-bar .btn-sticky {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.sticky-cta-bar .btn-sticky:hover { opacity: 0.9; }
+@media (max-width: 600px) {
+  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 8px; }
+  .sticky-cta-bar p { font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -761,6 +808,8 @@
       <a href="/">&larr; Full Review</a>
       <a href="/#guides">Guides</a>
       <a href="/#comparison">Comparisons</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/blog/">Blog</a>
       <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
@@ -819,7 +868,7 @@
       <p>Real estate is one of the most competitive lead-driven industries. Agents juggle inquiries from Zillow, Realtor.com, Facebook Ads, Google Ads, open houses, and referrals &mdash; and the difference between winning and losing a deal often comes down to who responds first. Research from the National Association of Realtors suggests that responding to an inquiry within 5 minutes can significantly improve contact and conversion rates.<a href="#sources" class="citation-ref">[3]</a> Yet most agents take hours or even days to follow up.</p>
       <p>GoHighLevel solves this with an AI conversation bot that responds to new leads within 60 seconds via SMS, qualifying them and booking showings before a competitor even picks up the phone.<a href="#sources" class="citation-ref">[1]</a> But speed-to-lead is only part of the equation. Real estate buyer journeys can last months &mdash; a lead who inquires about a property in January may not be ready to buy until June. GoHighLevel's workflow automations handle that long nurture cycle automatically, sending market updates, new listing alerts, and check-in messages on a schedule you define.</p>
       <p>The platform also consolidates the scattered tools most real estate teams rely on. Instead of paying separately for a CRM, an IDX lead routing service, an email drip tool, an SMS platform, and a scheduling app, GoHighLevel bundles CRM, funnel builder, email and SMS automation, calendar booking, reputation management, call tracking, and document signing into a single platform.<a href="#sources" class="citation-ref">[1]</a> For teams, the Unlimited plan at $297 per month replaces software stacks that often cost $500 to $1,000+ per month when purchased individually (estimate based on typical tool pricing).<a href="#sources" class="citation-ref">[2]</a></p>
-      <p>Finally, GoHighLevel is significantly more affordable than enterprise alternatives like HubSpot or Salesforce for real estate teams that need marketing automation, CRM, and AI in one place. At $97 to $297 per month, it delivers comparable automation capabilities at a fraction of the cost.<a href="#sources" class="citation-ref">[2]</a></p>
+      <p>Finally, GoHighLevel is significantly more affordable than enterprise alternatives like HubSpot or Salesforce for real estate teams that need marketing automation, CRM, and AI in one place. At $97 to $297 per month, it delivers comparable automation capabilities at a fraction of the cost.<a href="#sources" class="citation-ref">[2]</a> Not sure which plan? Take our <a href="/which-gohighlevel-plan.html">60-second plan quiz</a>.</p>
     </div>
 
     <!-- SECTION 2: Pain Points -->
@@ -1174,7 +1223,27 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+
+// Sticky CTA bar - show after 30% scroll
+(function() {
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  var shown = false;
+  window.addEventListener('scroll', function() {
+    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
+  });
+})();
 </script>
 
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCta">
+  <div class="container">
+    <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+  </div>
+</div>
 </body>
 </html>

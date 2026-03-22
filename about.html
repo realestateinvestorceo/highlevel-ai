@@ -34,6 +34,18 @@
       });
     });
   })();
+
+
+// Sticky CTA bar - show after 30% scroll
+(function() {
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  var shown = false;
+  window.addEventListener('scroll', function() {
+    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
+  });
+})();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,6 +149,53 @@
   }
   footer p { font-size: 13px; color: var(--text-muted); }
   footer a { color: var(--text-muted); }
+
+/* ─── STICKY CTA BAR ─── */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10,10,15,0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-accent);
+  padding: 12px 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.sticky-cta-bar.visible { transform: translateY(0); }
+.sticky-cta-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sticky-cta-bar p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.sticky-cta-bar p strong { color: var(--text-primary); }
+.sticky-cta-bar .btn-sticky {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.sticky-cta-bar .btn-sticky:hover { opacity: 0.9; }
+@media (max-width: 600px) {
+  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 8px; }
+  .sticky-cta-bar p { font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -166,6 +225,14 @@
     <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
     <p style="font-size:12px;color:var(--text-muted);margin-top:8px;"><a href="/editorial-policy.html">Editorial Policy</a> &middot; <a href="/about.html">About</a> &middot; <a href="/">Home</a></p>
   </footer>
+</div>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCta">
+  <div class="container">
+    <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+  </div>
 </div>
 </body>
 </html>
