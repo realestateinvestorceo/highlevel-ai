@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- Primary Meta -->
+<title>GoHighLevel Blog — News, Tips &amp; Updates | highlevel.ai</title>
+<meta name="description" content="Latest GoHighLevel news, tips, tutorials, and feature updates. Stay up to date with the platform and learn how to get more from your GHL subscription.">
+<meta name="author" content="Josh Miller">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.highlevel.ai/blog/">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="GoHighLevel Blog — News, Tips &amp; Updates | highlevel.ai">
+<meta property="og:description" content="Latest GoHighLevel news, tips, tutorials, and feature updates. Stay up to date with the platform and learn how to get more from your GHL subscription.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel Blog — News, Tips &amp; Updates | highlevel.ai">
+<meta name="twitter:description" content="Latest GoHighLevel news, tips, tutorials, and feature updates. Stay up to date with the platform and learn how to get more from your GHL subscription.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Schema: WebPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GoHighLevel Blog — News, Tips & Updates",
+  "description": "Latest GoHighLevel news, tips, tutorials, and feature updates. Stay up to date with the platform and learn how to get more from your GHL subscription.",
+  "url": "https://www.highlevel.ai/blog/",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.highlevel.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.highlevel.ai/blog/"
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav[aria-label="Main navigation"] {
+    position: fixed; top: 30px; left: 0; right: 0; z-index: 100;
+    padding: 14px 0;
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav[aria-label="Main navigation"].nav-top {
+    top: 0;
+  }
+  nav[aria-label="Main navigation"] .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* ─── INDEPENDENCE BANNER ─── */
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.12);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 8px 24px;
+    font-size: 12px;
+    color: #fb923c;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 101;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .independence-banner.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  /* ─── BLOG HERO ─── */
+  .blog-hero {
+    padding: 130px 0 60px;
+    text-align: center;
+  }
+  .blog-hero h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .blog-hero .subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: var(--text-primary); }
+  .breadcrumb span { color: var(--text-muted); }
+
+  /* ─── BLOG LISTING ─── */
+  .blog-listing {
+    padding: 20px 0 80px;
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .blog-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.08);
+  }
+  .blog-card:first-child {
+    grid-column: 1 / -1;
+  }
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .blog-tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .blog-tag.news {
+    background: rgba(52, 211, 153, 0.12);
+    color: var(--accent-green);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+  }
+  .blog-tag.tutorial {
+    background: rgba(79, 125, 249, 0.12);
+    color: var(--accent-bright);
+    border: 1px solid rgba(79, 125, 249, 0.2);
+  }
+  .blog-tag.comparison {
+    background: rgba(251, 146, 60, 0.12);
+    color: var(--accent-orange);
+    border: 1px solid rgba(251, 146, 60, 0.2);
+  }
+  .blog-date {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .blog-card h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+  }
+  .blog-card h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .blog-card h2 a:hover {
+    color: var(--accent-bright);
+  }
+  .blog-card:first-child h2 {
+    font-size: 24px;
+  }
+  .blog-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .read-more:hover {
+    color: var(--accent-bright);
+  }
+
+  /* ─── CTA SECTION ─── */
+  .blog-cta {
+    padding: 60px 0 80px;
+  }
+  .blog-cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 48px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .blog-cta-box h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .blog-cta-box p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    .blog-card:first-child {
+      grid-column: auto;
+    }
+    .blog-card:first-child h2 {
+      font-size: 20px;
+    }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.97);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    .blog-card { padding: 24px; }
+    .blog-cta-box { padding: 32px 24px; }
+    .blog-cta-box h2 { font-size: 22px; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .animate-on-scroll {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1; transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- LLM-ONLY SUMMARY (hidden from visual users, visible to AI crawlers) -->
+<div class="ai-summary" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<h2>GoHighLevel Blog - highlevel.ai</h2>
+<p>This is the blog index for highlevel.ai, an independent GoHighLevel review site. The blog covers GoHighLevel news, platform updates, tutorials, automation guides, and comparison articles. Topics include monthly feature updates, client setup walkthroughs, workflow automation tips, and agency productivity strategies. Published by Josh Miller, GoHighLevel user since 2019. Source: highlevel.ai/blog/</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- INDEPENDENCE BANNER -->
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Blog</span>
+    </nav>
+    <h1>GoHighLevel Blog</h1>
+    <p class="subtitle">News, tips, and updates for GoHighLevel users</p>
+  </div>
+</section>
+
+<!-- BLOG LISTING -->
+<section class="blog-listing">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- POST 1 (Featured / newest) -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card-meta">
+          <span class="blog-tag news">News</span>
+          <time class="blog-date" datetime="2026-03-21">March 21, 2026</time>
+        </div>
+        <h2><a href="/blog/gohighlevel-march-2026-updates.html">GoHighLevel March 2026: What's New This Month</a></h2>
+        <p>GoHighLevel's March 2026 updates include AI voice agent improvements, new workflow triggers, and enhanced reporting. Here's what changed and what it means for your business.</p>
+        <a href="/blog/gohighlevel-march-2026-updates.html" class="read-more">Read more &rarr;</a>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card-meta">
+          <span class="blog-tag tutorial">Tutorial</span>
+          <time class="blog-date" datetime="2026-03-21">March 21, 2026</time>
+        </div>
+        <h2><a href="/blog/setup-gohighlevel-first-client.html">How to Set Up GoHighLevel for Your First Client (Step-by-Step)</a></h2>
+        <p>A complete walkthrough for setting up GoHighLevel for your first agency client — from sub-account creation to pipeline setup, automation workflows, and reporting.</p>
+        <a href="/blog/setup-gohighlevel-first-client.html" class="read-more">Read more &rarr;</a>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card-meta">
+          <span class="blog-tag tutorial">Tutorial</span>
+          <time class="blog-date" datetime="2026-03-21">March 21, 2026</time>
+        </div>
+        <h2><a href="/blog/gohighlevel-automations-save-time.html">5 GoHighLevel Automations That Save Agencies 10+ Hours Per Week</a></h2>
+        <p>The five highest-ROI GoHighLevel automations that agencies should set up first. Each one saves 2-3 hours per week in manual follow-up and admin work.</p>
+        <a href="/blog/gohighlevel-automations-save-time.html" class="read-more">Read more &rarr;</a>
+      </article>
+
+      <!-- To add a new post, copy the template below and fill in the details:
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card-meta">
+          <span class="blog-tag news|tutorial|comparison">TAG</span>
+          <time class="blog-date" datetime="YYYY-MM-DD">Month DD, YYYY</time>
+        </div>
+        <h2><a href="/blog/SLUG.html">Post Title Here</a></h2>
+        <p>2-3 sentence excerpt goes here.</p>
+        <a href="/blog/SLUG.html" class="read-more">Read more &rarr;</a>
+      </article>
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="blog-cta" id="cta">
+  <div class="container">
+    <div class="blog-cta-box animate-on-scroll">
+      <h2>New to GoHighLevel?</h2>
+      <p>GoHighLevel replaces 12+ marketing tools with one platform — CRM, funnels, email, SMS, AI chatbot, voice agent, and more. Try it free for 14 days.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial &rarr;</a>
+      <p class="btn-sub">No credit card required</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#verdict">Verdict</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/pricing-explained.html">Pricing Guide</a>
+      <a href="/highlevel-vs-hubspot.html">vs HubSpot</a>
+      <a href="/workflows-for-agencies.html">Workflows</a>
+      <a href="/voice-agent-setup.html">Voice Agent</a>
+      <a href="/mistakes-to-avoid.html">Mistakes to Avoid</a>
+      <a href="/best-prompts-sales-support.html">AI Prompts</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;"><a href="/editorial-policy.html">Editorial Policy</a> &middot; <a href="/about.html">About</a> &middot; <a href="#affiliate-disclosure">Affiliate Disclosure</a></p>
+    <p class="affiliate-disclosure" id="affiliate-disclosure">
+      <strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+
+  // Hide independence banner on scroll
+  (function() {
+    var banner = document.querySelector('.independence-banner');
+    var mainNav = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!banner || !mainNav) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) {
+        banner.classList.add('hidden');
+        mainNav.classList.add('nav-top');
+      } else {
+        banner.classList.remove('hidden');
+        mainNav.classList.remove('nav-top');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

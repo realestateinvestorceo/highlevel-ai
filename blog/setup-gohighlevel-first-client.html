@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>How to Set Up GoHighLevel for Your First Client (Step-by-Step Guide)</title>
+<meta name="description" content="Complete walkthrough for setting up GoHighLevel for your first agency client. Sub-account creation, pipeline setup, automation workflows, and reporting in under 2 hours.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/setup-gohighlevel-first-client.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Set Up GoHighLevel for Your First Client (Step-by-Step Guide)">
+<meta property="og:description" content="Complete walkthrough for setting up GoHighLevel for your first agency client. Sub-account creation, pipeline setup, automation workflows, and reporting in under 2 hours.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/setup-gohighlevel-first-client.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Set Up GoHighLevel for Your First Client (Step-by-Step)">
+<meta name="twitter:description" content="Complete walkthrough for setting up GoHighLevel for your first agency client in under 2 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Set Up GoHighLevel for Your First Client (Step-by-Step Guide)",
+  "description": "Complete walkthrough for setting up GoHighLevel for your first agency client. Sub-account creation, pipeline setup, automation workflows, and reporting in under 2 hours.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/setup-gohighlevel-first-client.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "First Client Setup"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* ─── CONTENT BLOCKS (article-style) ─── */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 56px 0 20px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 20px;
+    color: var(--text-secondary);
+  }
+  .content-block li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-decoration-color: rgba(107,147,255,0.3); }
+  .content-block a:hover { color: #fff; }
+
+  /* ─── STEP CARD ─── */
+  .step-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+  .step-card:hover { border-color: var(--border-accent); }
+  .step-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+  .step-card h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .step-card p { color: var(--text-secondary); margin-bottom: 14px; line-height: 1.8; }
+  .step-card ul, .step-card ol {
+    margin: 0 0 14px 20px;
+    color: var(--text-secondary);
+  }
+  .step-card li { margin-bottom: 8px; line-height: 1.7; }
+  .step-card strong { color: var(--text-primary); }
+
+  /* ─── WORKFLOW BOX ─── */
+  .workflow-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .workflow-box h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--accent-bright);
+    margin-bottom: 10px;
+  }
+  .workflow-box p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  /* ─── SUMMARY BOX ─── */
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+  }
+  .summary-box p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ─── PRO TIP BOX ─── */
+  .pro-tip-box {
+    background: linear-gradient(135deg, rgba(52,211,153,0.06), rgba(52,211,153,0.02));
+    border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 40px 0;
+  }
+  .pro-tip-box h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--accent-green);
+    margin: 0 0 14px;
+  }
+  .pro-tip-box ul {
+    margin: 0 0 0 20px;
+    color: var(--text-secondary);
+  }
+  .pro-tip-box li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .toc-links {
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    list-style: none; padding: 0;
+  }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary);
+    text-decoration: none; border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .toc-links li a:hover {
+    color: var(--accent-bright);
+    border-bottom-color: var(--accent-bright);
+  }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* ─── SECTION SPACING ─── */
+  .page-section { padding: 70px 0; }
+
+  /* ─── AUTHOR BYLINE ─── */
+  .author-byline {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff;
+    flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+
+  /* ─── INLINE DISCLOSURE ─── */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    text-align: center; margin-top: 16px;
+    animation: fadeUp 0.6s 0.45s ease both;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* ─── ARTICLE HEADER ─── */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 12px; }
+  .article-subtitle { font-size: 18px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+
+  /* ─── RELATED GUIDES ─── */
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  /* --- HEADLESS DATA (hidden, for LLM extraction) --- */
+  .headless-data {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+    .toc-links { gap: 6px 12px; }
+    .step-card { padding: 24px 20px; }
+    .final-cta-box { padding: 48px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="headless-data" aria-hidden="true">
+<h2>GoHighLevel First Client Setup Guide</h2>
+<p>Step-by-step tutorial for setting up GoHighLevel for your first agency client in under 2 hours. Covers sub-account creation, CRM pipeline setup (New Lead, Contacted, Qualified, Proposal Sent, Won, Lost), contact import, 3 essential automation workflows (lead follow-up, appointment reminders, review requests), landing page creation, Twilio SMS/voice configuration, email domain authentication (DKIM, SPF, DMARC), AI chatbot setup, client reporting dashboards, and client handoff process. Requires the Unlimited plan ($297/mo) for multiple client sub-accounts. Source: highlevel.ai/blog/setup-gohighlevel-first-client.html</p>
+</div>
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>First Client Setup</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Tutorial</div>
+    <h1>How to Set Up GoHighLevel for Your First Client</h1>
+    <p class="article-subtitle">A step-by-step walkthrough &mdash; from sub-account creation to live automations in under 2 hours</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published March 21, 2026 &bull; 8 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc-bar animate-on-scroll" aria-label="Table of contents">
+    <p>In This Guide</p>
+    <ul class="toc-links">
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#step-1">1. Sub-Account</a></li>
+      <li><a href="#step-2">2. CRM Pipeline</a></li>
+      <li><a href="#step-3">3. Import Contacts</a></li>
+      <li><a href="#step-4">4. Automations</a></li>
+      <li><a href="#step-5">5. Landing Page</a></li>
+      <li><a href="#step-6">6. Communications</a></li>
+      <li><a href="#step-7">7. Reporting</a></li>
+      <li><a href="#step-8">8. Client Handoff</a></li>
+      <li><a href="#pro-tips">Pro Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- Summary Box -->
+  <div class="summary-box animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <p><strong>What you will build:</strong> A fully configured GoHighLevel sub-account for your first agency client &mdash; complete with CRM pipeline, three core automation workflows, a landing page, communication channels (SMS, email, chatbot), and a reporting dashboard. Total time: under 2 hours once you know the steps.</p>
+  </div>
+
+  <!-- Introduction -->
+  <section id="intro" class="content-block animate-on-scroll">
+    <h2>Before You Start</h2>
+    <p>Setting up your first client is always the hardest. You are learning the platform, figuring out the right workflow, and trying to impress your client all at the same time. The good news: once you have done it once, it becomes a repeatable process you can knock out in under two hours.</p>
+    <p>This guide covers the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">Unlimited plan ($297/mo)</a> which supports multiple client sub-accounts. If you are on the Starter plan, you are limited to a single sub-account &mdash; that works for running your own business, but you will need the Unlimited tier to manage clients.</p>
+    <p><strong>What you will need before starting:</strong></p>
+    <ul>
+      <li>Client&rsquo;s business name, phone number, address, and timezone</li>
+      <li>Their logo (PNG or SVG, at least 500px wide)</li>
+      <li>Domain access or the ability to add a CNAME record</li>
+      <li>Any existing contacts or leads (CSV format preferred)</li>
+      <li>Basic content: a headline, a few benefit statements, and their key services</li>
+    </ul>
+  </section>
+
+  <!-- Step 1 -->
+  <div id="step-1" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 1</span>
+    <h2>Create a Sub-Account</h2>
+    <p>Sub-accounts are GoHighLevel&rsquo;s way of keeping each client&rsquo;s data completely separate. Each sub-account gets its own CRM, automations, funnels, and settings &mdash; nothing leaks between clients.</p>
+    <ol>
+      <li>Navigate to <strong>Agency Settings &rarr; Sub-Accounts &rarr; Create Sub-Account</strong></li>
+      <li>Enter your client&rsquo;s business name, timezone, and industry vertical</li>
+      <li>If you have built a snapshot (template) from a previous setup, apply it here. Otherwise, start with a blank account</li>
+      <li>Upload the client&rsquo;s logo under <strong>Business Profile</strong></li>
+      <li>Set up their custom domain by adding a CNAME record pointing to GoHighLevel &mdash; this lets their funnels and booking pages live on their own domain (e.g., <em>go.clientbusiness.com</em>)</li>
+    </ol>
+    <p>Take 5 minutes to fill out the business profile completely: business name, address, phone, email, and website. This information auto-populates throughout the platform &mdash; in email footers, SMS templates, and booking confirmations.</p>
+  </div>
+
+  <!-- Step 2 -->
+  <div id="step-2" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 2</span>
+    <h2>Set Up the CRM Pipeline</h2>
+    <p>The pipeline is how your client will track every lead from first contact to closed deal. A clean pipeline makes it easy to see where leads are getting stuck and what needs attention.</p>
+    <ol>
+      <li>Go to <strong>Opportunities &rarr; Pipelines &rarr; Create Pipeline</strong></li>
+      <li>Create your stages:
+        <ul>
+          <li><strong>New Lead</strong> &mdash; just came in, not yet contacted</li>
+          <li><strong>Contacted</strong> &mdash; first outreach made</li>
+          <li><strong>Qualified</strong> &mdash; confirmed they are a good fit</li>
+          <li><strong>Proposal Sent</strong> &mdash; pricing or proposal delivered</li>
+          <li><strong>Won</strong> &mdash; deal closed</li>
+          <li><strong>Lost</strong> &mdash; did not convert (track the reason)</li>
+        </ul>
+      </li>
+      <li>Customize the stage names if your client&rsquo;s industry uses different terminology (e.g., &ldquo;Consultation Booked&rdquo; instead of &ldquo;Qualified&rdquo; for a law firm)</li>
+      <li>Add custom fields relevant to their business: budget range, service needed, referral source, location, or whatever data points matter for their sales process</li>
+    </ol>
+  </div>
+
+  <!-- Step 3 -->
+  <div id="step-3" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 3</span>
+    <h2>Import Existing Contacts</h2>
+    <p>Most clients already have leads and customers sitting in a spreadsheet, old CRM, or email marketing tool. Bringing those in gives you a head start.</p>
+    <ol>
+      <li>Export the client&rsquo;s contacts from their old CRM or spreadsheet as a CSV file</li>
+      <li>Go to <strong>Contacts &rarr; Import &rarr; Upload CSV</strong></li>
+      <li>Map each CSV column to the corresponding GoHighLevel field (name, email, phone, etc.)</li>
+      <li>Apply tags during import to segment contacts &mdash; for example, tag them as &ldquo;imported-leads&rdquo; or &ldquo;existing-customers&rdquo; so you can identify them later</li>
+    </ol>
+    <p><strong>Important:</strong> Do not immediately blast imported contacts with emails or SMS. Warm up any new sending domain first. Start by sending to small batches (50&ndash;100 per day) and gradually increase over 2&ndash;3 weeks. Jumping straight to mass sends will get your domain flagged as spam.</p>
+  </div>
+
+  <!-- Step 4 -->
+  <div id="step-4" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 4</span>
+    <h2>Build Core Automations</h2>
+    <p>Automations are where GoHighLevel really earns its keep. Instead of building a dozen workflows on day one, start with these three essentials. They cover the entire customer journey from lead capture to review collection.</p>
+
+    <div class="workflow-box">
+      <h4>1. New Lead Follow-Up</h4>
+      <p><strong>Trigger:</strong> Form submission or new contact created &rarr; <strong>Instant:</strong> Send SMS + email welcoming them &rarr; <strong>Wait 5 minutes:</strong> If no reply, send a second SMS asking if they have questions &rarr; <strong>Wait 24 hours:</strong> If still no reply, send a follow-up email with more details about the service</p>
+    </div>
+
+    <div class="workflow-box">
+      <h4>2. Appointment Reminders</h4>
+      <p><strong>Trigger:</strong> Appointment booked &rarr; <strong>72 hours before:</strong> Confirmation email with appointment details and prep instructions &rarr; <strong>24 hours before:</strong> SMS reminder &rarr; <strong>2 hours before:</strong> Final SMS reminder with address or meeting link</p>
+    </div>
+
+    <div class="workflow-box">
+      <h4>3. Review Request</h4>
+      <p><strong>Trigger:</strong> Appointment status marked as &ldquo;completed&rdquo; &rarr; <strong>Wait 1 day:</strong> Send SMS asking for a Google review with a direct link &rarr; <strong>Wait 3 days:</strong> If no review detected, send a gentle follow-up email</p>
+    </div>
+
+    <p>Build each workflow under <strong>Automation &rarr; Workflows &rarr; Create Workflow</strong>. Use the visual builder to drag and drop trigger, wait, and action steps. Test each one by running yourself through as a contact before going live.</p>
+  </div>
+
+  <!-- Step 5 -->
+  <div id="step-5" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 5</span>
+    <h2>Create a Landing Page</h2>
+    <p>Your client needs a place to send traffic. GoHighLevel&rsquo;s funnel builder lets you build a landing page without touching code.</p>
+    <ol>
+      <li>Go to <strong>Sites &rarr; Funnels &rarr; Create Funnel</strong></li>
+      <li>Keep the layout simple: a clear headline, 3&ndash;4 benefit bullets, a lead capture form, and a section of social proof (testimonials or review count)</li>
+      <li>Connect the form to your CRM pipeline &mdash; when someone submits the form, they should automatically appear as a &ldquo;New Lead&rdquo; in the pipeline and trigger your lead follow-up workflow</li>
+      <li>Set up UTM parameter tracking so you and your client can see which traffic sources drive the most leads</li>
+      <li>Publish the page to the client&rsquo;s custom domain</li>
+    </ol>
+    <p>Do not spend three hours perfecting the design on day one. Get a clean, functional page live and iterate based on real data. You can always A/B test headlines and layouts later.</p>
+  </div>
+
+  <!-- Step 6 -->
+  <div id="step-6" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 6</span>
+    <h2>Configure Communication Channels</h2>
+    <p>Your automations need working SMS, email, and chat channels. Here is how to set up each one.</p>
+
+    <h3>SMS and Voice (Twilio)</h3>
+    <ol>
+      <li>Create a <a href="https://www.twilio.com" target="_blank" rel="noopener">Twilio</a> account if you do not have one</li>
+      <li>Purchase a local phone number in your client&rsquo;s area code</li>
+      <li>Complete A2P (Application-to-Person) registration &mdash; this is now required for business SMS in the US</li>
+      <li>Connect Twilio to GoHighLevel under <strong>Settings &rarr; Phone Numbers &rarr; Twilio</strong></li>
+      <li>Test by sending yourself an SMS from the sub-account</li>
+    </ol>
+
+    <h3>Email Domain Authentication</h3>
+    <ol>
+      <li>Go to <strong>Settings &rarr; Email Services</strong></li>
+      <li>Add your client&rsquo;s sending domain</li>
+      <li>Set up three DNS records: <strong>DKIM</strong> (verifies email authenticity), <strong>SPF</strong> (authorizes sending servers), and <strong>DMARC</strong> (tells receivers how to handle unauthenticated email)</li>
+      <li>Wait for verification (usually 15&ndash;60 minutes for DNS propagation)</li>
+      <li>Send a test email to confirm delivery</li>
+    </ol>
+
+    <h3>AI Chatbot</h3>
+    <ol>
+      <li>Navigate to <strong>Conversations &rarr; Chat Widget</strong></li>
+      <li>Configure the chatbot with your client&rsquo;s basic FAQ responses: business hours, service areas, pricing ballpark, and next steps</li>
+      <li>Set fallback behavior &mdash; if the bot cannot answer, route to a live person or capture the question for follow-up</li>
+      <li>Embed the chat widget on the client&rsquo;s website</li>
+    </ol>
+  </div>
+
+  <!-- Step 7 -->
+  <div id="step-7" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 7</span>
+    <h2>Set Up Reporting</h2>
+    <p>Clients want to see results. A clean dashboard keeps them informed and keeps you looking professional.</p>
+    <ol>
+      <li>Go to <strong>Reporting &rarr; Dashboards &rarr; Create Dashboard</strong></li>
+      <li>Add widgets for the metrics that matter most:
+        <ul>
+          <li><strong>New leads</strong> this week / month</li>
+          <li><strong>Appointments booked</strong> and attended rate</li>
+          <li><strong>Pipeline conversion rate</strong> (leads to won deals)</li>
+          <li><strong>Revenue attributed</strong> to marketing efforts</li>
+        </ul>
+      </li>
+      <li>Generate a shareable dashboard link and send it to your client so they can check in any time</li>
+      <li>Set up an automated <strong>weekly email report</strong> that sends every Monday morning with the previous week&rsquo;s numbers &mdash; this keeps clients engaged without you having to manually report</li>
+    </ol>
+  </div>
+
+  <!-- Step 8 -->
+  <div id="step-8" class="step-card animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <span class="step-number">Step 8</span>
+    <h2>Client Handoff</h2>
+    <p>The setup is done. Now hand it off in a way that makes your client feel confident and supported.</p>
+    <ol>
+      <li><strong>Record a Loom walkthrough</strong> of their dashboard, pipeline, and key automations. Keep it under 10 minutes and walk through the most common tasks: checking new leads, viewing appointments, and reading reports</li>
+      <li><strong>Provide login credentials</strong> &mdash; create a user account for the client with appropriate permissions (you probably do not want them editing automations on day one)</li>
+      <li><strong>Schedule a 30-minute training call</strong> within the first week. Let them click around and ask questions while you are there to guide them</li>
+      <li><strong>Set expectations for the first 30 days:</strong> explain that you will be monitoring automations, tweaking messaging based on response rates, and optimizing the pipeline. Let them know this is a living system, not a set-and-forget setup</li>
+    </ol>
+  </div>
+
+  <!-- Pro Tips -->
+  <div id="pro-tips" class="pro-tip-box animate-on-scroll" style="max-width:780px; margin-left:auto; margin-right:auto;">
+    <h3>Pro Tips for First-Time Setup</h3>
+    <ul>
+      <li><strong>Start with one workflow, get it right, then add more.</strong> It is tempting to build everything at once, but a broken automation is worse than no automation</li>
+      <li><strong>Do not over-automate on day one.</strong> Keep sequences short (2&ndash;3 steps) until you see how contacts respond. You can always add complexity later</li>
+      <li><strong>Always test SMS and email sequences yourself before going live.</strong> Create a test contact with your own phone number and email, then run through every workflow</li>
+      <li><strong>Use GoHighLevel&rsquo;s snapshot feature</strong> to save this entire setup as a template. The next time you onboard a client, you can apply the snapshot and customize it in 30 minutes instead of building from scratch</li>
+      <li><strong>Document your process.</strong> Keep a checklist of every step above so your team (or future you) can repeat it consistently</li>
+    </ul>
+  </div>
+
+  <!-- Related Guides -->
+  <div class="related-guides animate-on-scroll" style="max-width:780px;">
+    <h2>Related Posts</h2>
+    <div class="related-grid">
+      <a href="/workflows-for-agencies.html" class="related-card">
+        <span class="related-tag">Agency Guide</span>
+        <span class="related-title">GoHighLevel Workflows for Agencies: Automation Playbook</span>
+      </a>
+      <a href="/mistakes-to-avoid.html" class="related-card">
+        <span class="related-tag">Getting Started</span>
+        <span class="related-title">7 GoHighLevel Mistakes to Avoid (And How to Fix Them)</span>
+      </a>
+      <a href="/pricing-explained.html" class="related-card">
+        <span class="related-tag">Pricing Guide</span>
+        <span class="related-title">GoHighLevel Pricing Explained: Plans, Hidden Costs &amp; Real Totals</span>
+      </a>
+      <a href="/best-prompts-sales-support.html" class="related-card">
+        <span class="related-tag">AI Guide</span>
+        <span class="related-title">Best GoHighLevel AI Prompts for Sales &amp; Support</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="final-cta animate-on-scroll">
+    <div class="final-cta-box">
+      <h2>Start Building &mdash; Free 14-Day Trial</h2>
+      <p>Set up your first client sub-account today. Full access to CRM, automations, funnels, SMS, email, and AI chatbot &mdash; no credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+    </div>
+  </section>
+
+</div>
+</article>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>

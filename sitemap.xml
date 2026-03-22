@@ -211,6 +211,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.highlevel.ai/blog/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.highlevel.ai/blog/gohighlevel-march-2026-updates.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.highlevel.ai/blog/setup-gohighlevel-first-client.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.highlevel.ai/blog/gohighlevel-automations-save-time.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.highlevel.ai/llms.txt</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
