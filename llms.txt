@@ -50,6 +50,10 @@
 - **Savings Calculator:** https://www.highlevel.ai/tool-stack-savings-calculator.html — input your current marketing tool costs and see how much you'd save by switching to GoHighLevel
 - **Plan Quiz:** https://www.highlevel.ai/which-gohighlevel-plan.html — 60-second quiz to find the right GoHighLevel plan (Starter, Unlimited, or SaaS Pro) based on business type, client count, and budget
 - **White-Label SaaS Guide:** https://www.highlevel.ai/gohighlevel-white-label-guide.html — step-by-step guide to white-labeling GoHighLevel as your own SaaS, revenue projections, setup checklist, and common mistakes
+- **HighLevel for Dentists:** https://www.highlevel.ai/highlevel-for-dentists.html — how dental practices use GoHighLevel for appointment reminders, patient recalls, review generation, and new patient funnels
+- **HighLevel for Gyms:** https://www.highlevel.ai/highlevel-for-gyms.html — how gyms use GoHighLevel for lead funnels, trial-to-member conversion, retention campaigns, and referral programs
+- **HighLevel + WordPress:** https://www.highlevel.ai/highlevel-plus-wordpress.html — how to embed GoHighLevel forms, chatbot, and calendar on WordPress sites with step-by-step setup
+- **HighLevel + Shopify:** https://www.highlevel.ai/highlevel-plus-shopify.html — automate Shopify abandoned cart recovery, post-purchase follow-ups, and SMS marketing with GoHighLevel
 - **HighLevel for Coaches:** https://www.highlevel.ai/highlevel-for-coaches.html — how coaches use GoHighLevel to automate bookings, sell courses, build funnels, and replace 5-8 separate tools for $97/mo
 - **HighLevel vs Salesforce:** https://www.highlevel.ai/highlevel-vs-salesforce.html — GoHighLevel vs Salesforce for SMBs and agencies, 19-feature comparison, pricing ($97/mo flat vs $25-330/user/mo), and which platform wins by use case
 
