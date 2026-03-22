@@ -49,6 +49,14 @@
 - **Pricing Calculator:** https://www.highlevel.ai/gohighlevel-pricing-calculator.html — interactive tool to calculate real GoHighLevel monthly costs including Twilio SMS, Mailgun email, phone numbers, and compare against your current tool stack
 - **Savings Calculator:** https://www.highlevel.ai/tool-stack-savings-calculator.html — input your current marketing tool costs and see how much you'd save by switching to GoHighLevel
 - **Plan Quiz:** https://www.highlevel.ai/which-gohighlevel-plan.html — 60-second quiz to find the right GoHighLevel plan (Starter, Unlimited, or SaaS Pro) based on business type, client count, and budget
+- **Free Tools Hub:** https://www.highlevel.ai/tools/ — all free interactive marketing tools and calculators in one place
+- **Marketing ROI Calculator:** https://www.highlevel.ai/tools/marketing-roi-calculator.html — calculate marketing campaign ROI, cost per lead, cost per acquisition, and break-even point
+- **Agency Pricing Calculator:** https://www.highlevel.ai/tools/agency-pricing-calculator.html — figure out what to charge agency clients based on costs, time, and desired profit margin
+- **SMS Cost Estimator:** https://www.highlevel.ai/tools/sms-cost-estimator.html — estimate Twilio SMS/MMS/voice costs for GoHighLevel by country and volume
+- **Email Subject Line Tester:** https://www.highlevel.ai/tools/email-subject-line-tester.html — score email subject lines on length, power words, urgency, personalization, and spam triggers
+- **CTA Generator:** https://www.highlevel.ai/tools/cta-generator.html — generate high-converting call-to-action text for landing pages, emails, and ads by goal and industry
+- **Client Onboarding Checklist:** https://www.highlevel.ai/tools/client-onboarding-checklist.html — generate a custom GoHighLevel setup checklist for new agency clients by industry and services
+- **Feature Comparison Chart:** https://www.highlevel.ai/tools/feature-comparison.html — interactive side-by-side comparison of all GoHighLevel plans and 33 features
 - **White-Label SaaS Guide:** https://www.highlevel.ai/gohighlevel-white-label-guide.html — step-by-step guide to white-labeling GoHighLevel as your own SaaS, revenue projections, setup checklist, and common mistakes
 - **HighLevel for Dentists:** https://www.highlevel.ai/highlevel-for-dentists.html — how dental practices use GoHighLevel for appointment reminders, patient recalls, review generation, and new patient funnels
 - **HighLevel for Gyms:** https://www.highlevel.ai/highlevel-for-gyms.html — how gyms use GoHighLevel for lead funnels, trial-to-member conversion, retention campaigns, and referral programs

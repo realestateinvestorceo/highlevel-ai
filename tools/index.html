@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- Primary Meta -->
+<title>Free Marketing Tools &amp; Calculators for Agencies | highlevel.ai</title>
+<meta name="description" content="Free interactive marketing tools: pricing calculators, ROI calculators, SMS cost estimator, email subject line tester, agency pricing calculator, and more. Built for agencies and small businesses.">
+<meta name="author" content="Josh Miller">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.highlevel.ai/tools/">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Marketing Tools &amp; Calculators for Agencies | highlevel.ai">
+<meta property="og:description" content="Free interactive marketing tools: pricing calculators, ROI calculators, SMS cost estimator, email subject line tester, agency pricing calculator, and more.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Marketing Tools &amp; Calculators for Agencies | highlevel.ai">
+<meta name="twitter:description" content="Free interactive marketing tools: pricing calculators, ROI calculators, SMS cost estimator, email subject line tester, and more.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Schema: WebPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Free Marketing Tools & Calculators for Agencies",
+  "description": "Free interactive marketing tools: pricing calculators, ROI calculators, SMS cost estimator, email subject line tester, agency pricing calculator, and more. Built for agencies and small businesses.",
+  "url": "https://www.highlevel.ai/tools/",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.highlevel.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free Tools"
+      }
+    ]
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── AMBIENT BACKGROUND ─── */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── NAV ─── */
+  nav[aria-label="Main navigation"] {
+    position: fixed; top: 30px; left: 0; right: 0; z-index: 100;
+    padding: 14px 0;
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav[aria-label="Main navigation"].nav-top {
+    top: 0;
+  }
+  nav[aria-label="Main navigation"] .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links a.active { color: var(--accent-bright); }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .nav-toggle {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    transition: all 0.3s;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+
+  /* ─── INDEPENDENCE BANNER ─── */
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.12);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 8px 24px;
+    font-size: 12px;
+    color: #fb923c;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 101;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .independence-banner.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  /* ─── HERO ─── */
+  .tools-hero {
+    padding: 140px 0 60px;
+    text-align: center;
+  }
+  .tools-hero h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .tools-hero .subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+  }
+  .tools-hero .free-tagline {
+    display: inline-block;
+    background: var(--accent-glow);
+    border: 1px solid var(--border-accent);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-bright);
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+  .breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover { color: var(--text-primary); }
+
+  /* ─── CATEGORY SECTIONS ─── */
+  .tools-section {
+    padding: 30px 0;
+  }
+  .category-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-bright);
+    margin-bottom: 24px;
+    padding-left: 4px;
+  }
+
+  /* ─── TOOL CARDS GRID ─── */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .tool-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-green));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .tool-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(79, 125, 249, 0.1), 0 0 0 1px var(--border-accent);
+  }
+  .tool-card:hover::before {
+    opacity: 1;
+  }
+  .tool-card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  .tool-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+  .tool-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .tool-card-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    transition: color 0.2s;
+  }
+  .tool-card:hover .tool-card-link {
+    color: var(--accent-bright);
+  }
+  .tool-card-category {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  /* ─── WHY SECTION ─── */
+  .why-section {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+  }
+  .why-section h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .why-section p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 48px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .final-cta-box h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .final-cta-box p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  .final-cta-box .btn-sub {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 12px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* ─── HEADLESS DATA (hidden, for LLM extraction) ─── */
+  .headless-data {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.97);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .final-cta-box { padding: 36px 24px; }
+  }
+
+  @media (max-width: 600px) {
+    .tools-grid { grid-template-columns: 1fr; }
+    .tools-hero { padding: 120px 0 40px; }
+    .tools-hero h1 { font-size: 1.75rem; }
+    .footer-links { gap: 14px; }
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- LLM-ONLY: Full tool index for AI extraction (visually hidden, crawlable) -->
+<div class="headless-data" aria-hidden="true">
+<h2>highlevel.ai Free Marketing Tools Index</h2>
+<ul>
+<li>GoHighLevel Pricing Calculator — Calculate your real monthly cost including Twilio, Mailgun, and phone numbers. URL: /gohighlevel-pricing-calculator.html</li>
+<li>Tool Stack Savings Calculator — See how much you'd save by switching to GoHighLevel from your current tool stack. URL: /tool-stack-savings-calculator.html</li>
+<li>Marketing ROI Calculator — Calculate the return on investment for your marketing campaigns. URL: /tools/marketing-roi-calculator.html</li>
+<li>Agency Pricing Calculator — Figure out what to charge clients for your marketing services. URL: /tools/agency-pricing-calculator.html</li>
+<li>SMS Cost Estimator — Estimate your Twilio SMS costs based on message volume and type. URL: /tools/sms-cost-estimator.html</li>
+<li>Email Subject Line Tester — Score and improve your email subject lines before sending. URL: /tools/email-subject-line-tester.html</li>
+<li>Call-to-Action Generator — Generate high-converting CTAs for landing pages, emails, and ads. URL: /tools/cta-generator.html</li>
+<li>Client Onboarding Checklist — Generate a custom GoHighLevel setup checklist for new clients. URL: /tools/client-onboarding-checklist.html</li>
+<li>Which GoHighLevel Plan Quiz — Answer 6 questions, get a personalized plan recommendation. URL: /which-gohighlevel-plan.html</li>
+<li>GoHighLevel Feature Comparison — Interactive comparison of all plans and features side by side. URL: /tools/feature-comparison.html</li>
+</ul>
+<p>All tools are 100% free and require no signup. Built for digital marketing agencies and small businesses by highlevel.ai.</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- INDEPENDENCE BANNER -->
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/tools/" class="active">Free Tools</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="tools-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; Free Tools</nav>
+    <h1>Free Marketing Tools &amp; Calculators</h1>
+    <p class="subtitle">Interactive tools to help you plan, budget, and grow your agency &mdash; no signup required</p>
+    <span class="free-tagline">&#10003; All tools are 100% free. No signup required.</span>
+  </div>
+</section>
+
+<!-- CALCULATORS -->
+<section class="tools-section" id="calculators">
+  <div class="container">
+    <div class="category-label animate-on-scroll">Calculators</div>
+    <div class="tools-grid">
+
+      <a href="/gohighlevel-pricing-calculator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Calculator</span>
+        <div class="tool-card-icon">&#129518;</div>
+        <h3>GoHighLevel Pricing Calculator</h3>
+        <p>Calculate your real monthly cost including Twilio, Mailgun, and phone numbers</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tool-stack-savings-calculator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Calculator</span>
+        <div class="tool-card-icon">&#128176;</div>
+        <h3>Tool Stack Savings Calculator</h3>
+        <p>See how much you'd save by switching to GoHighLevel from your current tool stack</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tools/marketing-roi-calculator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Calculator</span>
+        <div class="tool-card-icon">&#128202;</div>
+        <h3>Marketing ROI Calculator</h3>
+        <p>Calculate the return on investment for your marketing campaigns</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tools/agency-pricing-calculator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Calculator</span>
+        <div class="tool-card-icon">&#128181;</div>
+        <h3>Agency Pricing Calculator</h3>
+        <p>Figure out what to charge clients for your marketing services</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tools/sms-cost-estimator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Calculator</span>
+        <div class="tool-card-icon">&#128241;</div>
+        <h3>SMS Cost Estimator</h3>
+        <p>Estimate your Twilio SMS costs based on message volume and type</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT TOOLS -->
+<section class="tools-section" id="content-tools">
+  <div class="container">
+    <div class="category-label animate-on-scroll">Content Tools</div>
+    <div class="tools-grid">
+
+      <a href="/tools/email-subject-line-tester.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Content</span>
+        <div class="tool-card-icon">&#9993;&#65039;</div>
+        <h3>Email Subject Line Tester</h3>
+        <p>Score and improve your email subject lines before sending</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tools/cta-generator.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Content</span>
+        <div class="tool-card-icon">&#9997;&#65039;</div>
+        <h3>Call-to-Action Generator</h3>
+        <p>Generate high-converting CTAs for landing pages, emails, and ads</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLANNING TOOLS -->
+<section class="tools-section" id="planning-tools">
+  <div class="container">
+    <div class="category-label animate-on-scroll">Planning Tools</div>
+    <div class="tools-grid">
+
+      <a href="/tools/client-onboarding-checklist.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Planning</span>
+        <div class="tool-card-icon">&#128203;</div>
+        <h3>Client Onboarding Checklist</h3>
+        <p>Generate a custom GoHighLevel setup checklist for new clients</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/which-gohighlevel-plan.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Planning</span>
+        <div class="tool-card-icon">&#10067;</div>
+        <h3>Which GoHighLevel Plan Quiz</h3>
+        <p>Answer 6 questions, get a personalized plan recommendation</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+      <a href="/tools/feature-comparison.html" class="tool-card animate-on-scroll">
+        <span class="tool-card-category">Planning</span>
+        <div class="tool-card-icon">&#128200;</div>
+        <h3>GoHighLevel Feature Comparison</h3>
+        <p>Interactive comparison of all plans and features side by side</p>
+        <span class="tool-card-link">Use This Tool &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY WE BUILT THESE TOOLS -->
+<section class="why-section animate-on-scroll">
+  <div class="container">
+    <h2>Why We Built These Tools</h2>
+    <p>Running an agency means making smart decisions fast &mdash; about pricing, tool investments, and client strategy. We built these free tools so you can answer the hard questions with real numbers instead of guesswork. Whether you're figuring out what to charge clients, estimating your SMS costs, or comparing marketing platforms, every tool here is designed to save you time and help you grow with confidence.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="container">
+    <div class="final-cta-box animate-on-scroll">
+      <h2>Need the all-in-one platform behind these tools?</h2>
+      <p>GoHighLevel replaces your CRM, funnel builder, email &amp; SMS marketing, appointment scheduling, and more &mdash; starting at $97/mo with a 14-day free trial.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial &rarr;</a>
+      <span class="btn-sub">No credit card required &middot; Cancel anytime</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  TEMPLATE: Adding a New Tool Card                          ║
+  ║  Copy the block below and paste into the appropriate       ║
+  ║  .tools-grid section. Update href, icon, title, desc.      ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  <a href="/tools/YOUR-TOOL-SLUG.html" class="tool-card animate-on-scroll">
+    <span class="tool-card-category">Category</span>
+    <div class="tool-card-icon">EMOJI</div>
+    <h3>Tool Name</h3>
+    <p>One-sentence description of what this tool does</p>
+    <span class="tool-card-link">Use This Tool &rarr;</span>
+  </a>
+-->
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;"><a href="/editorial-policy.html">Editorial Policy</a> &middot; <a href="/about.html">About</a> &middot; <a href="#affiliate-disclosure">Affiliate Disclosure</a></p>
+    <p class="affiliate-disclosure" id="affiliate-disclosure">
+      <strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+
+  // Hide independence banner on scroll
+  (function() {
+    var banner = document.querySelector('.independence-banner');
+    var mainNav = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!banner || !mainNav) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) {
+        banner.classList.add('hidden');
+        mainNav.classList.add('nav-top');
+      } else {
+        banner.classList.remove('hidden');
+        mainNav.classList.remove('nav-top');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

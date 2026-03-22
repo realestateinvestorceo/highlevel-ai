@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>Call-to-Action Generator: Create High-Converting CTAs | Free Tool</title>
+<meta name="description" content="Generate compelling call-to-action buttons and text for landing pages, emails, and ads. Choose your industry, goal, and tone — get 10 ready-to-use CTAs instantly.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/tools/cta-generator.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Call-to-Action Generator: Create High-Converting CTAs | Free Tool">
+<meta property="og:description" content="Generate compelling call-to-action buttons and text for landing pages, emails, and ads. Choose your industry, goal, and tone — get 10 ready-to-use CTAs instantly.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/cta-generator.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Call-to-Action Generator: Create High-Converting CTAs | Free Tool">
+<meta name="twitter:description" content="Generate compelling call-to-action buttons and text for landing pages, emails, and ads. Choose your industry, goal, and tone — get 10 ready-to-use CTAs instantly.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Call-to-Action Generator: Create High-Converting CTAs",
+  "description": "Generate compelling call-to-action buttons and text for landing pages, emails, and ads. Choose your industry, goal, and tone — get 10 ready-to-use CTAs instantly.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/tools/cta-generator.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.highlevel.ai/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "CTA Generator"}
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a call-to-action (CTA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CTA is a button, link, or phrase that tells visitors what to do next — sign up, book, buy, or download. Strong CTAs are action-oriented, specific, and create urgency or value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes a good CTA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best CTAs are short (2-6 words), start with an action verb, communicate clear value, and reduce friction (e.g., 'no credit card required'). Including urgency or specificity increases click-through rates by 20-30%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GoHighLevel include landing page CTAs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GoHighLevel's funnel and website builder includes customizable CTA buttons, pop-ups, and forms — all connected directly to the CRM and automation workflows."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* AMBIENT BACKGROUND */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* BREADCRUMB */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* ARTICLE HEADER */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
+  .article-header .subtitle { color: var(--text-secondary); font-size: 18px; margin-bottom: 16px; line-height: 1.6; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  /* INLINE DISCLOSURE */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    margin-top: 12px;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* GENERATOR TOOL */
+  .tool-container {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .tool-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+
+  .tool-step-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .tool-step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Sora', sans-serif;
+  }
+  .tool-step-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  /* RADIO CARDS */
+  .radio-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .radio-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .radio-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .radio-card.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    box-shadow: 0 0 20px rgba(79,125,249,0.1);
+    color: var(--text-primary);
+  }
+  .radio-card-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* TONE RADIOS */
+  .tone-cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tone-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .tone-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .tone-card.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    box-shadow: 0 0 20px rgba(79,125,249,0.1);
+    color: var(--text-primary);
+  }
+
+  /* DROPDOWN */
+  .tool-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2377778a' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+  .tool-select:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .tool-select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  /* TEXT INPUT */
+  .tool-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .tool-input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .tool-input::placeholder { color: var(--text-muted); }
+  .input-group { margin-bottom: 16px; }
+  .input-group:last-child { margin-bottom: 0; }
+  .input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .input-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* GENERATE BUTTON */
+  .generate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    font-family: 'Sora', sans-serif;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+    margin-top: 24px;
+    letter-spacing: -0.3px;
+  }
+  .generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .generate-btn:active {
+    transform: translateY(0);
+  }
+
+  /* OUTPUT AREA */
+  .output-area {
+    max-width: 780px;
+    margin: 0 auto;
+    display: none;
+  }
+  .output-area.visible { display: block; }
+
+  .output-header {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+  }
+  .output-subtext {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cta-preview {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .cta-preview:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+  }
+
+  .cta-button-preview {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(79,125,249,0.25);
+    pointer-events: none;
+    line-height: 1.4;
+  }
+
+  .cta-copy-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+
+  .cta-preview.copied .cta-copy-hint {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+
+  .cta-number {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+
+  /* CONTENT BLOCK */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+  }
+  .content-block ul {
+    padding-left: 20px; margin-bottom: 20px;
+  }
+  .content-block ul li {
+    margin-bottom: 8px; color: var(--text-secondary);
+  }
+  .content-block strong { color: var(--text-primary); }
+  .content-block ol {
+    padding-left: 20px; margin-bottom: 20px;
+  }
+  .content-block ol li {
+    margin-bottom: 10px; color: var(--text-secondary);
+  }
+
+  /* FAQ */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* RELATED GUIDES */
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+
+  /* SECTION SPACING */
+  .page-section { padding: 70px 0; }
+
+  /* SCROLL ANIMATIONS */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* LLM ONLY */
+  .llm-only {
+    display: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 700px) {
+    .radio-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cta-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .radio-cards {
+      grid-template-columns: 1fr;
+    }
+    .tone-cards {
+      gap: 8px;
+    }
+    .tone-card {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+    .tool-step { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="llm-only" style="display:none" aria-hidden="true">
+<p>Call-to-Action Generator: A free interactive tool that generates 10 high-converting CTA button texts for landing pages, emails, and ads. Users select a goal (signups, bookings, purchases, downloads, contact, learn more), industry, and tone (professional, friendly, urgent, casual, bold), then optionally enter a product name and offer. The tool outputs 10 styled CTA button previews with click-to-copy functionality. Source: highlevel.ai/tools/cta-generator.html</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Article navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>CTA Generator</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Interactive Tool</div>
+    <h1>Call-to-Action Generator</h1>
+    <p class="subtitle">Generate high-converting CTAs for landing pages, emails, and ads in seconds</p>
+    <p class="article-meta">Updated March 2026</p>
+    <p class="inline-disclosure">This page contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- GENERATOR TOOL -->
+  <div class="tool-container">
+
+    <!-- Step 1: Goal -->
+    <div class="tool-step animate-on-scroll">
+      <div class="tool-step-header">
+        <div class="tool-step-num">1</div>
+        <div class="tool-step-title">What's the goal?</div>
+      </div>
+      <div class="radio-cards" id="goal-cards">
+        <div class="radio-card selected" data-value="signups" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128640;</span>
+          Get signups / free trial
+        </div>
+        <div class="radio-card" data-value="book" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128197;</span>
+          Book appointments
+        </div>
+        <div class="radio-card" data-value="buy" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128179;</span>
+          Buy / purchase
+        </div>
+        <div class="radio-card" data-value="download" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128229;</span>
+          Download / lead magnet
+        </div>
+        <div class="radio-card" data-value="contact" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128172;</span>
+          Contact / get a quote
+        </div>
+        <div class="radio-card" data-value="learn" onclick="selectGoal(this)">
+          <span class="radio-card-icon">&#128218;</span>
+          Learn more
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Industry -->
+    <div class="tool-step animate-on-scroll">
+      <div class="tool-step-header">
+        <div class="tool-step-num">2</div>
+        <div class="tool-step-title">Industry</div>
+      </div>
+      <select class="tool-select" id="industry-select">
+        <option value="general">General</option>
+        <option value="agency">Marketing Agency</option>
+        <option value="realestate">Real Estate</option>
+        <option value="dental">Dental</option>
+        <option value="fitness">Fitness / Gym</option>
+        <option value="coaching">Coaching</option>
+        <option value="medspa">Med Spa</option>
+        <option value="ecommerce">E-commerce</option>
+        <option value="saas">SaaS</option>
+        <option value="restaurant">Restaurant</option>
+      </select>
+    </div>
+
+    <!-- Step 3: Tone -->
+    <div class="tool-step animate-on-scroll">
+      <div class="tool-step-header">
+        <div class="tool-step-num">3</div>
+        <div class="tool-step-title">Tone</div>
+      </div>
+      <div class="tone-cards" id="tone-cards">
+        <div class="tone-card selected" data-value="professional" onclick="selectTone(this)">Professional</div>
+        <div class="tone-card" data-value="friendly" onclick="selectTone(this)">Friendly</div>
+        <div class="tone-card" data-value="urgent" onclick="selectTone(this)">Urgent</div>
+        <div class="tone-card" data-value="casual" onclick="selectTone(this)">Casual</div>
+        <div class="tone-card" data-value="bold" onclick="selectTone(this)">Bold</div>
+      </div>
+    </div>
+
+    <!-- Step 4: Optional Inputs -->
+    <div class="tool-step animate-on-scroll">
+      <div class="tool-step-header">
+        <div class="tool-step-num">4</div>
+        <div class="tool-step-title">Optional Details</div>
+      </div>
+      <div class="input-group">
+        <label class="input-label" for="product-input">Your product or service name</label>
+        <input type="text" class="tool-input" id="product-input" placeholder="e.g., HighLevel, Acme Fitness, Bright Smile Dental">
+        <div class="input-hint">Leave blank to use generic CTAs</div>
+      </div>
+      <div class="input-group" style="margin-top: 16px;">
+        <label class="input-label" for="offer-input">Your offer</label>
+        <input type="text" class="tool-input" id="offer-input" placeholder="e.g., free consultation, 14-day trial, 50% off">
+        <div class="input-hint">Leave blank for default offer text</div>
+      </div>
+    </div>
+
+    <!-- Generate Button -->
+    <button class="generate-btn" onclick="generateCTAs()">Generate CTAs &rarr;</button>
+
+  </div>
+
+  <!-- Output Area -->
+  <div class="output-area" id="output-area" style="margin-top: 48px;">
+    <div class="output-header">Your 10 CTAs</div>
+    <p class="output-subtext">Click any CTA to copy it to your clipboard.</p>
+    <div class="cta-grid" id="cta-grid"></div>
+  </div>
+
+</div>
+
+<!-- Best Practices -->
+<section class="page-section">
+  <div class="container">
+    <div class="content-block animate-on-scroll">
+      <h2>CTA Best Practices</h2>
+      <p>Great CTAs do more than fill a button. They reduce friction, convey value, and push the visitor toward a clear next step. Here are five principles that consistently improve conversion rates.</p>
+
+      <ol>
+        <li><strong>Start with an action verb.</strong> Every high-performing CTA begins with a verb: "Get," "Start," "Book," "Claim," "Download." Passive phrasing like "Our free trial" underperforms active phrasing like "Start Your Free Trial" by a wide margin.</li>
+        <li><strong>Keep it short.</strong> The ideal CTA length is 2 to 6 words. Anything longer gets skimmed or ignored. If you need to add context, use supporting text above or below the button rather than cramming it all into the button itself.</li>
+        <li><strong>Reduce friction with reassurance.</strong> Phrases like "No credit card required," "Cancel anytime," and "Free forever" remove the risk your visitor feels. Even small friction reducers can increase click-through rates by 20% or more.</li>
+        <li><strong>Add urgency or scarcity when honest.</strong> Urgency works, but only when genuine. "Limited spots" or "Offer ends Friday" can increase conversions, but fake urgency erodes trust. Use time-bound offers only when the deadline is real.</li>
+        <li><strong>Match the CTA to the stage.</strong> A first-time visitor is not ready for "Buy Now." They may respond to "See How It Works." Match the commitment level of your CTA to how much the visitor already knows and trusts you.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- GHL Pitch -->
+<section class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Build High-Converting Landing Pages with GoHighLevel</h2>
+      <p>GoHighLevel's drag-and-drop funnel builder includes customizable CTA buttons, pop-ups, and forms &mdash; all connected directly to the built-in CRM and automation workflows.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="page-section" id="faq">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What is a call-to-action (CTA)?</button>
+        <div class="faq-answer">
+          <p>A CTA is a button, link, or phrase that tells visitors what to do next &mdash; sign up, book, buy, or download. Strong CTAs are action-oriented, specific, and create urgency or value. They are the single most important element on any landing page, email, or ad because they define the conversion point.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What makes a good CTA?</button>
+        <div class="faq-answer">
+          <p>The best CTAs are short (2-6 words), start with an action verb, communicate clear value, and reduce friction (e.g., "no credit card required"). Including urgency or specificity increases click-through rates by 20-30%. Personalizing the CTA to match the visitor's intent and awareness level also makes a measurable difference.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Does GoHighLevel include landing page CTAs?</button>
+        <div class="faq-answer">
+          <p>Yes. GoHighLevel's funnel and website builder includes customizable CTA buttons, pop-ups, and forms &mdash; all connected directly to the CRM and automation workflows. You can A/B test different CTA text, colors, and placements within the builder to optimize your conversion rates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Guides -->
+<section class="page-section">
+  <div class="container">
+    <div class="related-guides animate-on-scroll">
+      <h2>Related Tools &amp; Guides</h2>
+      <div class="related-grid">
+        <a href="/tools/marketing-roi-calculator.html" class="related-card">
+          <span class="related-tag">Tool</span>
+          <span class="related-title">Marketing ROI Calculator</span>
+        </a>
+        <a href="/" class="related-card">
+          <span class="related-tag">Pillar Review</span>
+          <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+        </a>
+        <a href="/gohighlevel-pricing-calculator.html" class="related-card">
+          <span class="related-tag">Tool</span>
+          <span class="related-title">GoHighLevel Pricing Calculator</span>
+        </a>
+        <a href="/mistakes-to-avoid.html" class="related-card">
+          <span class="related-tag">Guide</span>
+          <span class="related-title">GoHighLevel Mistakes to Avoid</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+// ─── STATE ───
+var selectedGoal = 'signups';
+var selectedTone = 'professional';
+
+// ─── SELECTION FUNCTIONS ───
+function selectGoal(el) {
+  document.querySelectorAll('#goal-cards .radio-card').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedGoal = el.getAttribute('data-value');
+}
+
+function selectTone(el) {
+  document.querySelectorAll('#tone-cards .tone-card').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedTone = el.getAttribute('data-value');
+}
+
+// ─── CTA TEMPLATES ───
+// Structure: templates[goal][tone] = array of template strings
+// [Product] = product name, [Offer] = offer text, [Industry] = industry noun
+var templates = {
+  signups: {
+    professional: [
+      "Start Your Free [Offer] Today",
+      "Try [Product] Free for 14 Days",
+      "Get Started \u2014 No Credit Card Required",
+      "Claim Your Free [Offer] \u2192",
+      "Start Your Free Trial Now",
+      "Begin Your [Product] Journey",
+      "Experience [Product] Risk-Free",
+      "Unlock Your Free [Offer]",
+      "Get Instant Access to [Product]",
+      "[Offer] \u2014 Start Free Today"
+    ],
+    friendly: [
+      "Give [Product] a Try \u2014 It's Free!",
+      "Come See What [Product] Can Do",
+      "Jump In \u2014 Your Free [Offer] Awaits",
+      "Ready? Start Your Free [Offer]",
+      "Your Free [Offer] Is Waiting",
+      "Let's Get You Started for Free",
+      "See Why Teams Love [Product]",
+      "Start Exploring [Product] Free",
+      "Take [Product] for a Spin",
+      "Hey, Try [Product] Free \u2192"
+    ],
+    urgent: [
+      "Start Free Now \u2014 Limited Time",
+      "Claim Your [Offer] Before It's Gone",
+      "Don't Miss Out \u2014 Try [Product] Free",
+      "Free [Offer] Ending Soon \u2014 Act Now",
+      "Last Chance: Free [Offer] Today",
+      "Only a Few Free Spots Left",
+      "Get [Product] Free \u2014 Offer Ends Friday",
+      "Hurry \u2014 Start Your Free [Offer]",
+      "Limited Spots: Start Free Today",
+      "Time Is Running Out \u2014 Start Free"
+    ],
+    casual: [
+      "Try It Free \u2014 No Strings Attached",
+      "Just Try [Product] \u2014 It's Free",
+      "Go Ahead, Start Your Free [Offer]",
+      "Why Not? Try [Product] Free",
+      "Zero Risk. Start Free Today.",
+      "Free [Offer]? Yes Please.",
+      "Sign Up Free in 30 Seconds",
+      "Get In \u2014 It's Free",
+      "Start Free. Cancel Whenever.",
+      "Free [Offer]. No Catch."
+    ],
+    bold: [
+      "Start Free. Dominate Your Market.",
+      "Get [Product] Free \u2014 Outperform Everyone",
+      "Claim Your Free [Offer] Now",
+      "Stop Waiting. Start Winning. Try Free.",
+      "Unlock [Product] \u2014 Free Access Now",
+      "Your Competitors Already Started. Have You?",
+      "Get Ahead \u2014 Free [Offer] Today",
+      "Free [Offer]. Zero Excuses.",
+      "Launch Your Growth \u2014 Start Free",
+      "Own Your Market \u2014 Try [Product] Free"
+    ]
+  },
+  book: {
+    professional: [
+      "Schedule Your Free Consultation",
+      "Book a Strategy Session",
+      "Reserve Your Appointment",
+      "Schedule a Call with Our Team",
+      "Book Your Free [Offer]",
+      "Request a Personalized Demo",
+      "Secure Your Time Slot",
+      "Book a Discovery Call",
+      "Schedule Your [Offer] Today",
+      "Get on Our Calendar \u2192"
+    ],
+    friendly: [
+      "Book Your Free Chat \u2615",
+      "Let's Talk \u2014 Pick a Time",
+      "Grab a Spot on My Calendar",
+      "Schedule Your Free Consultation",
+      "Find a Time That Works for You",
+      "Let's Chat \u2014 Book a Free Call",
+      "Pick a Day, We'll Be There",
+      "Come In for a Free [Offer]",
+      "We'd Love to Chat \u2014 Book Now",
+      "Save Your Spot \u2014 It's Free"
+    ],
+    urgent: [
+      "Limited Spots \u2014 Book Now",
+      "Only 3 Spots Left This Week",
+      "Don't Miss Out \u2014 Book Today",
+      "Appointments Filling Fast \u2014 Reserve Yours",
+      "Last Chance to Book This Week",
+      "Calendar Almost Full \u2014 Grab a Spot",
+      "Book Now Before Spots Run Out",
+      "This Week Only \u2014 Free [Offer]",
+      "Hurry \u2014 Schedule Your [Offer]",
+      "Spots Are Going Fast \u2014 Book Now"
+    ],
+    casual: [
+      "Let's Set Up a Time to Chat",
+      "Pick a Time \u2014 Easy as That",
+      "Book a Quick Call with Us",
+      "Grab a Time on the Calendar",
+      "Let's Talk. No Pressure.",
+      "Schedule a Free Chat \u2192",
+      "Got 15 Minutes? Let's Talk.",
+      "Hop on a Call \u2014 It's Free",
+      "Pick a Slot, We'll Handle the Rest",
+      "Quick Call? Book One Here."
+    ],
+    bold: [
+      "Book Now. Transform Your Business.",
+      "Claim Your Strategy Session",
+      "Your First Step \u2014 Book the Call",
+      "Stop Guessing. Book a Free Call.",
+      "Get Expert Advice \u2014 Book Now",
+      "Reserve Your Spot \u2014 Results Await",
+      "Book the Call That Changes Everything",
+      "Take Action \u2014 Schedule Today",
+      "Your Breakthrough Starts with a Call",
+      "Serious About Growth? Book Now."
+    ]
+  },
+  buy: {
+    professional: [
+      "Get Started Today",
+      "Purchase [Product] Now",
+      "Add to Cart",
+      "Buy [Product] \u2014 [Offer]",
+      "Complete Your Purchase",
+      "Order [Product] Today",
+      "Get [Product] Now \u2192",
+      "Invest in [Product]",
+      "Choose Your Plan",
+      "Upgrade to [Product]"
+    ],
+    friendly: [
+      "Grab Yours Today!",
+      "Get [Product] \u2014 You'll Love It",
+      "Treat Yourself to [Product]",
+      "Yes, I Want [Product]!",
+      "Add to My Cart",
+      "Get [Product] Now \u2014 [Offer]",
+      "Shop [Product] Today",
+      "I'm In \u2014 Get [Product]",
+      "Love It? Get It!",
+      "Grab [Product] \u2014 [Offer]"
+    ],
+    urgent: [
+      "[Offer] \u2014 Buy Now Before It's Gone",
+      "Flash Sale: Get [Product] Today",
+      "Limited Stock \u2014 Order Now",
+      "Sale Ends Tonight \u2014 Buy [Product]",
+      "Don't Wait \u2014 [Offer] Ending Soon",
+      "Last Chance: [Offer] on [Product]",
+      "Only Hours Left \u2014 Get [Product]",
+      "Sell-Out Alert \u2014 Buy Now",
+      "Price Goes Up Tomorrow \u2014 Buy Today",
+      "[Offer] \u2014 Ends Midnight"
+    ],
+    casual: [
+      "Get Yours Now",
+      "Yeah, I Want This",
+      "Buy It. You Deserve It.",
+      "Snag [Product] Today",
+      "Grab [Product] \u2014 Easy Checkout",
+      "Just Buy It Already",
+      "One Click Away from [Product]",
+      "Shop Now. Thank Yourself Later.",
+      "Add [Product] to Cart",
+      "Get [Product] \u2014 Simple as That"
+    ],
+    bold: [
+      "Buy [Product] \u2014 No Regrets",
+      "Invest in Results. Buy Now.",
+      "Get [Product] and Win",
+      "Make the Smart Choice \u2014 Buy Today",
+      "Stop Settling. Get [Product].",
+      "Own [Product] Today",
+      "Join Thousands \u2014 Buy [Product]",
+      "The Best Decision You'll Make \u2014 Buy Now",
+      "Upgrade Everything. Get [Product].",
+      "[Product] Awaits. Buy Now."
+    ]
+  },
+  download: {
+    professional: [
+      "Download Your Free [Offer]",
+      "Get the [Offer] \u2192",
+      "Access Your Free Copy",
+      "Download the Complete Guide",
+      "Get Instant Access",
+      "Download Now \u2014 Free",
+      "Claim Your Free [Offer]",
+      "Get the [Offer] Sent to Your Inbox",
+      "Download Your [Offer] Today",
+      "Access the Free Resource"
+    ],
+    friendly: [
+      "Grab Your Free [Offer]!",
+      "Yes, Send Me the [Offer]!",
+      "I Want the Free [Offer]",
+      "Get Your Copy \u2014 It's Free",
+      "Download Your Free Guide Now",
+      "Snag the Free [Offer] \u2192",
+      "Send It to My Inbox",
+      "Get My Free [Offer]",
+      "Gimme the Free [Offer]!",
+      "Download \u2014 Totally Free"
+    ],
+    urgent: [
+      "Download Now \u2014 Limited Availability",
+      "Get the Free [Offer] Before It's Gone",
+      "Free Download Ending Soon",
+      "Grab Your [Offer] \u2014 Going Away Friday",
+      "Last Chance to Download Free",
+      "Don't Miss This Free [Offer]",
+      "Free for a Limited Time \u2014 Download Now",
+      "Act Fast \u2014 Free [Offer] Expires Soon",
+      "Download Now While It's Free",
+      "Hurry \u2014 Claim Your Free [Offer]"
+    ],
+    casual: [
+      "Get the Free Thing \u2192",
+      "Download It \u2014 No Email Required",
+      "Free Download. No Catch.",
+      "Grab It Free. That Easy.",
+      "Get the [Offer] \u2014 It's on Us",
+      "Free [Offer]? Sure, Why Not.",
+      "Just Download It Already",
+      "One Click. Free [Offer]. Done.",
+      "Yours Free \u2014 Download Now",
+      "Free [Offer] \u2014 Instant Download"
+    ],
+    bold: [
+      "Download the [Offer] That Changes Everything",
+      "Get the Playbook \u2014 Free Download",
+      "Unlock the Secret \u2014 Free [Offer]",
+      "This Free [Offer] Will Transform Your Approach",
+      "Download Now. Outperform Your Competition.",
+      "Claim the [Offer] Top Performers Use",
+      "Free [Offer] \u2014 Your Unfair Advantage",
+      "Get the Resource That Delivers Results",
+      "Download and Dominate \u2192",
+      "The Only [Offer] You Need \u2014 Free"
+    ]
+  },
+  contact: {
+    professional: [
+      "Request a Free Quote",
+      "Contact Our Team",
+      "Get in Touch Today",
+      "Request Your [Offer]",
+      "Speak with an Expert",
+      "Get a Custom Quote \u2192",
+      "Contact Us for Pricing",
+      "Reach Out for Your [Offer]",
+      "Submit an Inquiry",
+      "Talk to Our Specialists"
+    ],
+    friendly: [
+      "Say Hi \u2014 We'd Love to Help!",
+      "Drop Us a Line \u2192",
+      "Let's Connect \u2014 Free [Offer]",
+      "Ask Us Anything",
+      "Get in Touch \u2014 We Don't Bite",
+      "Send Us a Message!",
+      "We're Here to Help \u2014 Reach Out",
+      "Chat with Us \u2014 It's Free",
+      "Hey There \u2014 Contact Us",
+      "Questions? Just Ask!"
+    ],
+    urgent: [
+      "Get Your Quote Today \u2014 Limited Slots",
+      "Don't Wait \u2014 Contact Us Now",
+      "Spots Filling Up \u2014 Reach Out Today",
+      "Get a Quote Before Prices Change",
+      "Act Now \u2014 Free [Offer] Ending Soon",
+      "Limited Availability \u2014 Contact Us Today",
+      "Inquire Now \u2014 Offer Ends Friday",
+      "Time-Sensitive: Get Your [Offer]",
+      "Contact Us Now \u2014 Don't Miss Out",
+      "Request Your [Offer] Before It's Gone"
+    ],
+    casual: [
+      "Hit Us Up \u2014 Free [Offer]",
+      "Shoot Us a Message",
+      "Let's Talk. No Commitment.",
+      "Just Ask \u2014 We're Quick to Reply",
+      "Need Help? Reach Out.",
+      "Ping Us \u2014 We're Friendly",
+      "Quick Question? Ask Away.",
+      "Send Us a Note \u2192",
+      "We're All Ears \u2014 Contact Us",
+      "Message Us. Easy."
+    ],
+    bold: [
+      "Demand a Quote. Get Results.",
+      "Contact Us \u2014 Transform Your Business",
+      "Get Expert Help \u2014 Contact Now",
+      "Your Success Starts with a Message",
+      "Stop Wondering. Contact Us.",
+      "Reach Out \u2014 We Deliver Results",
+      "Get a Free [Offer] That Matters",
+      "Contact the Team Behind the Results",
+      "Serious About Results? Contact Us.",
+      "One Message Away from [Offer]"
+    ]
+  },
+  learn: {
+    professional: [
+      "Learn More About [Product]",
+      "Discover How [Product] Works",
+      "Explore Features \u2192",
+      "See How It Works",
+      "View the Full Details",
+      "Discover the Benefits",
+      "Learn How [Product] Can Help",
+      "Read the Full Overview",
+      "See [Product] in Action",
+      "Explore [Product] Today"
+    ],
+    friendly: [
+      "Want to Know More? Click Here!",
+      "See What [Product] Is All About",
+      "Curious? Take a Closer Look",
+      "Find Out How [Product] Helps",
+      "Check It Out \u2192",
+      "See Why Everyone's Talking About [Product]",
+      "Peek Inside [Product]",
+      "Come Take a Look!",
+      "Discover What Makes [Product] Special",
+      "Learn More \u2014 We'll Show You"
+    ],
+    urgent: [
+      "See Why 10,000+ Use [Product] \u2014 Learn Now",
+      "Don't Get Left Behind \u2014 Learn More",
+      "Your Competitors Already Know \u2014 Do You?",
+      "Discover What You're Missing",
+      "Learn More Before the Opportunity Passes",
+      "See Why Businesses Are Switching Now",
+      "Limited Seats for the Live Demo",
+      "Learn Now \u2014 Market Is Shifting",
+      "Find Out Before Everyone Else",
+      "See What's Changed \u2014 Learn More"
+    ],
+    casual: [
+      "Show Me How It Works",
+      "Tell Me More",
+      "What's This About? \u2192",
+      "I'm Curious \u2014 Show Me",
+      "Okay, Tell Me More",
+      "Sounds Cool. Learn More.",
+      "Give Me the Details",
+      "How Does This Work?",
+      "Hmm, Tell Me More \u2192",
+      "Sure, I'll Check It Out"
+    ],
+    bold: [
+      "See Why [Product] Wins",
+      "Discover the Platform Leaders Use",
+      "Learn What Sets [Product] Apart",
+      "See the Results for Yourself",
+      "Learn More \u2014 Then Decide to Win",
+      "Discover the [Product] Advantage",
+      "See Why Top Performers Choose [Product]",
+      "Uncover the Secret to Growth",
+      "Learn How [Product] Crushes It",
+      "The Proof Is Inside \u2014 Learn More"
+    ]
+  }
+};
+
+// ─── INDUSTRY MODIFIERS ───
+var industryNouns = {
+  general: '',
+  agency: 'agency',
+  realestate: 'real estate',
+  dental: 'dental',
+  fitness: 'fitness',
+  coaching: 'coaching',
+  medspa: 'med spa',
+  ecommerce: 'store',
+  saas: 'platform',
+  restaurant: 'restaurant'
+};
+
+// ─── DEFAULTS ───
+var defaultProducts = {
+  general: 'Our Platform',
+  agency: 'Our Agency Platform',
+  realestate: 'Our Real Estate Platform',
+  dental: 'Our Dental Practice',
+  fitness: 'Our Gym',
+  coaching: 'Our Coaching Program',
+  medspa: 'Our Med Spa',
+  ecommerce: 'Our Store',
+  saas: 'Our Platform',
+  restaurant: 'Our Restaurant'
+};
+
+var defaultOffers = {
+  signups: 'Trial',
+  book: 'Consultation',
+  buy: 'Deal',
+  download: 'Guide',
+  contact: 'Quote',
+  learn: 'Demo'
+};
+
+// ─── GENERATE ───
+function generateCTAs() {
+  var industry = document.getElementById('industry-select').value;
+  var product = document.getElementById('product-input').value.trim();
+  var offer = document.getElementById('offer-input').value.trim();
+
+  // Defaults
+  if (!product) product = defaultProducts[industry] || 'Our Platform';
+  if (!offer) offer = defaultOffers[selectedGoal] || 'Trial';
+
+  // Get templates
+  var tpls = templates[selectedGoal] && templates[selectedGoal][selectedTone]
+    ? templates[selectedGoal][selectedTone]
+    : templates.signups.professional;
+
+  // Build CTAs
+  var ctas = [];
+  for (var i = 0; i < tpls.length; i++) {
+    var cta = tpls[i]
+      .replace(/\[Product\]/g, product)
+      .replace(/\[Offer\]/g, offer)
+      .replace(/\[Industry\]/g, industryNouns[industry] || '');
+    ctas.push(cta);
+  }
+
+  // Shuffle slightly for variety (Fisher-Yates on last few)
+  for (var j = ctas.length - 1; j > 6; j--) {
+    var k = Math.floor(Math.random() * (j + 1));
+    var temp = ctas[j];
+    ctas[j] = ctas[k];
+    ctas[k] = temp;
+  }
+
+  // Take 10
+  ctas = ctas.slice(0, 10);
+
+  // Render
+  var grid = document.getElementById('cta-grid');
+  grid.innerHTML = '';
+  for (var n = 0; n < ctas.length; n++) {
+    var card = document.createElement('div');
+    card.className = 'cta-preview';
+    card.setAttribute('data-cta', ctas[n]);
+    card.onclick = copyCTA;
+    card.innerHTML =
+      '<span class="cta-number">#' + (n + 1) + '</span>' +
+      '<span class="cta-button-preview">' + escapeHtml(ctas[n]) + '</span>' +
+      '<span class="cta-copy-hint">Click to copy</span>';
+    grid.appendChild(card);
+  }
+
+  // Show output
+  var output = document.getElementById('output-area');
+  output.classList.add('visible');
+  output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Track event
+  if (typeof gtag === 'function') {
+    gtag('event', 'generate_ctas', {
+      event_category: 'tool_usage',
+      event_label: selectedGoal + '_' + selectedTone + '_' + industry
+    });
+  }
+}
+
+function escapeHtml(text) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
+}
+
+function copyCTA(e) {
+  var card = e.currentTarget;
+  var ctaText = card.getAttribute('data-cta');
+
+  // Copy to clipboard
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(ctaText);
+  } else {
+    var textarea = document.createElement('textarea');
+    textarea.value = ctaText;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  // Show copied feedback
+  card.classList.add('copied');
+  var hint = card.querySelector('.cta-copy-hint');
+  hint.textContent = 'Copied!';
+
+  setTimeout(function() {
+    card.classList.remove('copied');
+    hint.textContent = 'Click to copy';
+  }, 1500);
+}
+
+// ─── FAQ TOGGLE ───
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.classList.remove('active');
+    q.setAttribute('aria-expanded', 'false');
+  });
+
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// ─── SCROLL ANIMATIONS ───
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

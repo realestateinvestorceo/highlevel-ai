@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>SMS Cost Estimator for GoHighLevel &amp; Twilio | Free Calculator</title>
+<meta name="description" content="Estimate your monthly SMS and MMS costs for GoHighLevel. Calculate Twilio pricing based on message volume, type, and country. See per-message and monthly totals.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/tools/sms-cost-estimator.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SMS Cost Estimator for GoHighLevel & Twilio | Free Calculator">
+<meta property="og:description" content="Estimate your monthly SMS and MMS costs for GoHighLevel. Calculate Twilio pricing based on message volume, type, and country. See per-message and monthly totals.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/sms-cost-estimator.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SMS Cost Estimator for GoHighLevel & Twilio | Free Calculator">
+<meta name="twitter:description" content="Estimate your monthly SMS and MMS costs for GoHighLevel. Calculate Twilio pricing based on message volume, type, and country.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SMS Cost Estimator for GoHighLevel & Twilio",
+  "description": "Estimate your monthly SMS and MMS costs for GoHighLevel. Calculate Twilio pricing based on message volume, type, and country. See per-message and monthly totals.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/tools/sms-cost-estimator.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.highlevel.ai/#guides"},
+    {"@type": "ListItem", "position": 3, "name": "SMS Cost Estimator"}
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does SMS cost in GoHighLevel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SMS in GoHighLevel uses Twilio at approximately $0.0079 per segment for US numbers. A 1,000-message/month campaign costs about $7.90 in SMS fees plus your GoHighLevel plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an SMS segment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single SMS segment is 160 characters. Messages longer than 160 characters are split into multiple segments, each charged separately. A 300-character message equals 2 segments at $0.016."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need A2P 10DLC registration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for US SMS. It is a one-time $19 registration fee required by carriers for business texting. Without it, your messages may be filtered or blocked."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- AMBIENT BACKGROUND --- */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* --- LAYOUT --- */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* --- NAV --- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* --- BUTTONS --- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* --- BREADCRUMB --- */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* --- ARTICLE HEADER --- */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
+  .article-header .subtitle { color: var(--text-secondary); font-size: 18px; margin-bottom: 16px; line-height: 1.6; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  /* --- INLINE DISCLOSURE --- */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    margin-top: 12px;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- CALCULATOR LAYOUT --- */
+  .calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+  }
+  .calc-inputs { min-width: 0; }
+  .calc-results-wrap {
+    position: sticky;
+    top: 90px;
+  }
+
+  /* --- STEP SECTIONS --- */
+  .calc-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .calc-step-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .calc-step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Sora', sans-serif;
+  }
+  .calc-step-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  /* --- SLIDER INPUT GROUPS --- */
+  .slider-group { margin-bottom: 24px; }
+  .slider-group:last-child { margin-bottom: 0; }
+  .slider-label {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+  }
+  .slider-label-text {
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+  }
+  .slider-value {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px; font-weight: 700; color: var(--accent-bright);
+    min-width: 100px; text-align: right;
+  }
+  .slider-cost {
+    font-size: 12px; color: var(--text-muted); margin-top: 4px;
+  }
+
+  /* Custom range slider */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(79,125,249,0.4);
+    transition: transform 0.15s;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px; height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(79,125,249,0.4);
+  }
+  input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+  }
+
+  /* --- DROPDOWN SELECT --- */
+  .select-group { margin-bottom: 24px; }
+  .select-group label {
+    display: block;
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .select-group select {
+    width: 100%; padding: 10px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px; font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2377778a' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  .select-group select:focus {
+    outline: none; border-color: var(--accent);
+  }
+
+  /* --- RADIO GROUP --- */
+  .radio-group { margin-bottom: 24px; }
+  .radio-group-label {
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 10px; display: block;
+  }
+  .radio-options { display: flex; gap: 10px; flex-wrap: wrap; }
+  .radio-option {
+    flex: 1; min-width: 120px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+    font-size: 13px; font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .radio-option:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .radio-option.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    color: var(--text-primary);
+  }
+  .radio-option input { display: none; }
+
+  /* --- RESULTS PANEL --- */
+  .results-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 0 40px rgba(79,125,249,0.06), 0 0 80px rgba(79,125,249,0.03);
+  }
+  .results-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 20px; color: var(--text-primary);
+  }
+  .results-section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 10px; margin-top: 20px;
+  }
+  .results-section-label:first-of-type { margin-top: 0; }
+  .result-line {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0;
+    font-size: 14px; color: var(--text-secondary);
+  }
+  .result-line.total {
+    border-top: 1px solid var(--border);
+    margin-top: 8px; padding-top: 12px;
+    font-weight: 700; font-size: 16px;
+    color: var(--text-primary);
+  }
+  .result-line .amount {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+  }
+  .result-line.total .amount {
+    font-size: 20px;
+  }
+  .result-line.highlight .amount {
+    color: var(--accent-bright);
+  }
+
+  .results-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 16px 0;
+  }
+
+  .plan-totals-box {
+    background: rgba(79, 125, 249, 0.04);
+    border: 1px solid rgba(79, 125, 249, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-top: 16px;
+  }
+  .plan-totals-title {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .plan-total-line {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 4px 0;
+    font-size: 13px; color: var(--text-secondary);
+  }
+  .plan-total-line .amount {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700; font-size: 14px;
+  }
+
+  .results-cta {
+    display: block; width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+  /* --- CONTENT SECTION --- */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+  }
+  .content-block ul {
+    padding-left: 20px; margin-bottom: 20px;
+  }
+  .content-block ul li {
+    margin-bottom: 8px; color: var(--text-secondary);
+  }
+  .content-block strong { color: var(--text-primary); }
+
+  /* --- REFERENCE TABLE --- */
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .ref-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ref-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .ref-table tr:last-child td { border-bottom: none; }
+
+  /* --- INFO BOX --- */
+  .info-box {
+    background: rgba(79, 125, 249, 0.06);
+    border: 1px solid rgba(79, 125, 249, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .info-box-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .info-box p { margin-bottom: 8px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  /* --- TIP BOX --- */
+  .tip-box {
+    background: rgba(52, 211, 153, 0.06);
+    border: 1px solid rgba(52, 211, 153, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .tip-box-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--accent-green);
+    margin-bottom: 8px;
+  }
+
+  /* --- FAQ --- */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* --- SECTION HEADERS --- */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* --- FINAL CTA --- */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* --- RELATED GUIDES --- */
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+
+  /* --- SECTION SPACING --- */
+  .page-section { padding: 70px 0; }
+
+  /* --- SCROLL ANIMATIONS --- */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .calc-layout {
+      grid-template-columns: 1fr;
+    }
+    .calc-results-wrap {
+      position: relative;
+      top: 0;
+      order: -1;
+    }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+    .radio-options { flex-direction: column; }
+  }
+
+  @media (max-width: 600px) {
+    .calc-step { padding: 20px 16px; }
+    .results-panel { padding: 20px 16px; }
+  }
+
+  /* --- LLM ONLY --- */
+  .llm-only {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="llm-only" style="display:none" aria-hidden="true">
+<p>SMS Cost Estimator for GoHighLevel: Calculate your monthly Twilio SMS and MMS costs inside GoHighLevel. US SMS outbound costs $0.0079/segment, MMS costs $0.0200/message, voice outbound costs $0.013/min. A 1,000-message/month campaign costs about $7.90 in SMS fees. Messages over 160 characters are split into multiple segments, each charged separately. A2P 10DLC registration ($19 one-time) is required for US business texting. Source: highlevel.ai/tools/sms-cost-estimator.html</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Free Tools</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/#guides">Tools</a> &rsaquo; <span>SMS Cost Estimator</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Interactive Tool</div>
+    <h1>SMS Cost Estimator</h1>
+    <p class="subtitle">Calculate your real Twilio SMS costs inside GoHighLevel</p>
+    <p class="article-meta">Updated March 2026</p>
+    <p class="inline-disclosure">This page contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calc-layout" id="calculator">
+
+    <!-- LEFT: Inputs -->
+    <div class="calc-inputs">
+
+      <!-- Step 1: Message Volume -->
+      <div class="calc-step animate-on-scroll">
+        <div class="calc-step-header">
+          <div class="calc-step-num">1</div>
+          <div class="calc-step-title">Message Volume</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span class="slider-label-text">Monthly SMS messages sent</span>
+            <span class="slider-value" id="sms-display">1,000</span>
+          </div>
+          <input type="range" id="sms-slider" min="0" max="50000" value="1000" step="100" oninput="updateCalc(); updateSliderFill(this);">
+          <div class="slider-cost" id="sms-cost-display">$7.90/mo</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span class="slider-label-text">Monthly MMS messages sent</span>
+            <span class="slider-value" id="mms-display">100</span>
+          </div>
+          <input type="range" id="mms-slider" min="0" max="5000" value="100" step="10" oninput="updateCalc(); updateSliderFill(this);">
+          <div class="slider-cost" id="mms-cost-display">$2.00/mo</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span class="slider-label-text">Monthly voice minutes</span>
+            <span class="slider-value" id="voice-display">200</span>
+          </div>
+          <input type="range" id="voice-slider" min="0" max="5000" value="200" step="10" oninput="updateCalc(); updateSliderFill(this);">
+          <div class="slider-cost" id="voice-cost-display">$2.60/mo</div>
+        </div>
+      </div>
+
+      <!-- Step 2: Country & Type -->
+      <div class="calc-step animate-on-scroll">
+        <div class="calc-step-header">
+          <div class="calc-step-num">2</div>
+          <div class="calc-step-title">Country &amp; Message Type</div>
+        </div>
+
+        <div class="select-group">
+          <label for="country-select">Country</label>
+          <select id="country-select" onchange="updateCalc()">
+            <option value="us" selected>United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+          </select>
+        </div>
+
+        <div class="radio-group">
+          <span class="radio-group-label">Message type mix</span>
+          <div class="radio-options">
+            <label class="radio-option selected" onclick="selectMix('sms-only')">
+              <input type="radio" name="mix" value="sms-only" checked> SMS Only
+            </label>
+            <label class="radio-option" onclick="selectMix('sms-mms')">
+              <input type="radio" name="mix" value="sms-mms"> SMS + MMS
+            </label>
+            <label class="radio-option" onclick="selectMix('mostly-mms')">
+              <input type="radio" name="mix" value="mostly-mms"> Mostly MMS
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Results -->
+    <div class="calc-results-wrap">
+      <div class="results-panel">
+        <div class="results-title">Your Estimated Twilio Costs</div>
+
+        <div class="results-section-label">Messaging</div>
+        <div class="result-line">
+          <span>SMS cost</span>
+          <span class="amount" id="res-sms">$7.90</span>
+        </div>
+        <div class="result-line">
+          <span>MMS cost</span>
+          <span class="amount" id="res-mms">$2.00</span>
+        </div>
+
+        <div class="results-section-label">Voice</div>
+        <div class="result-line">
+          <span>Voice cost</span>
+          <span class="amount" id="res-voice">$2.60</span>
+        </div>
+
+        <div class="results-section-label">Infrastructure</div>
+        <div class="result-line">
+          <span>Phone number(s)</span>
+          <span class="amount" id="res-phone">$1.15</span>
+        </div>
+
+        <div class="result-line total">
+          <span>Total Monthly Twilio Cost</span>
+          <span class="amount" id="res-total">$13.65</span>
+        </div>
+
+        <div class="results-divider"></div>
+
+        <div class="result-line highlight">
+          <span>Cost per message (blended)</span>
+          <span class="amount" id="res-cpm">$0.0090</span>
+        </div>
+
+        <div class="results-divider"></div>
+
+        <div class="plan-totals-box">
+          <div class="plan-totals-title">Total GHL + Twilio per Plan</div>
+          <div class="plan-total-line">
+            <span>Starter ($97/mo)</span>
+            <span class="amount" id="res-plan-starter">$110.65</span>
+          </div>
+          <div class="plan-total-line">
+            <span>Unlimited ($297/mo)</span>
+            <span class="amount" id="res-plan-unlimited">$310.65</span>
+          </div>
+          <div class="plan-total-line">
+            <span>SaaS Pro ($497/mo)</span>
+            <span class="amount" id="res-plan-saas">$510.65</span>
+          </div>
+        </div>
+
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary results-cta" rel="nofollow sponsored">Start 14-Day Free Trial <span>&rarr;</span></a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Content Sections -->
+<section class="page-section" id="reference">
+  <div class="container">
+    <div class="content-block animate-on-scroll">
+
+      <h2>SMS Segment Character Reference</h2>
+      <p>SMS messages are split into segments based on character count. Each segment is billed separately, so keeping messages short saves money.</p>
+
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Characters</th>
+            <th>Segments</th>
+            <th>Cost (US)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 &ndash; 160</td><td>1</td><td>$0.0079</td></tr>
+          <tr><td>161 &ndash; 306</td><td>2</td><td>$0.0158</td></tr>
+          <tr><td>307 &ndash; 459</td><td>3</td><td>$0.0237</td></tr>
+          <tr><td>460 &ndash; 612</td><td>4</td><td>$0.0316</td></tr>
+          <tr><td>613 &ndash; 765</td><td>5</td><td>$0.0395</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Note:</strong> When a message exceeds 160 characters, the segment size drops to 153 characters per segment (7 characters are used for the concatenation header). Unicode characters (emojis, special characters) reduce the segment limit to 70 characters for the first segment and 67 for subsequent segments.</p>
+
+      <h2>Tips to Reduce Your SMS Costs</h2>
+      <div class="tip-box">
+        <div class="tip-box-title">5 Ways to Lower Your Twilio Bill</div>
+        <ul>
+          <li><strong>Keep messages under 160 characters.</strong> Every extra segment doubles (or triples) the per-message cost. Edit ruthlessly.</li>
+          <li><strong>Avoid MMS when possible.</strong> MMS costs $0.0200 per message vs $0.0079 for SMS. Only use MMS when the image is genuinely necessary.</li>
+          <li><strong>Use email for long content.</strong> If your message needs more than 2&ndash;3 sentences, send an email instead. GoHighLevel lets you mix channels in workflows.</li>
+          <li><strong>Avoid emojis and special characters.</strong> Unicode characters reduce your segment capacity from 160 to 70 characters, drastically increasing segment count.</li>
+          <li><strong>Segment your audience.</strong> Send SMS only to engaged contacts. Blasting your entire list wastes money on contacts who will never respond.</li>
+        </ul>
+      </div>
+
+      <h2>A2P 10DLC Registration</h2>
+      <div class="info-box">
+        <div class="info-box-title">Required for US Business Texting</div>
+        <p>A2P 10DLC (Application-to-Person 10-Digit Long Code) registration is required by US carriers for all business SMS. Without it, your messages may be filtered, delayed, or blocked entirely.</p>
+        <p><strong>Cost:</strong> $19 one-time registration fee through GoHighLevel's Twilio integration.</p>
+        <p><strong>What it covers:</strong> Registers your business and use case with The Campaign Registry (TCR), allowing carriers to verify that your messages are legitimate business communications.</p>
+        <p><strong>Timeline:</strong> Approval typically takes 1&ndash;5 business days. You can still send SMS during this period, but throughput may be limited.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="page-section" id="faq">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How much does SMS cost in GoHighLevel?</button>
+        <div class="faq-answer">
+          <p>SMS in GoHighLevel uses Twilio at approximately $0.0079 per segment for US numbers. A 1,000-message/month campaign costs about $7.90 in SMS fees plus your GoHighLevel subscription. MMS messages cost $0.0200 each. International rates vary &mdash; Canada is $0.0075/segment, UK is $0.04/segment, and Australia is $0.05/segment.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What is an SMS segment?</button>
+        <div class="faq-answer">
+          <p>A single SMS segment is 160 characters. Messages longer than 160 characters are split into multiple segments, each charged separately. For example, a 300-character message equals 2 segments and costs $0.0158 instead of $0.0079. If your message contains emojis or special Unicode characters, the segment limit drops to just 70 characters.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Do I need A2P 10DLC registration?</button>
+        <div class="faq-answer">
+          <p>Yes, for US SMS. A2P 10DLC is a one-time $19 registration fee required by carriers for business texting. Without it, your messages may be filtered or blocked. Registration is done through GoHighLevel's built-in Twilio integration and typically takes 1&ndash;5 business days to be approved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Guides -->
+<section class="page-section">
+  <div class="container">
+    <div class="related-guides animate-on-scroll">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/gohighlevel-pricing-calculator.html" class="related-card">
+          <span class="related-tag">Calculator</span>
+          <span class="related-title">GoHighLevel Pricing Calculator: Full Cost Breakdown</span>
+        </a>
+        <a href="/pricing-explained.html" class="related-card">
+          <span class="related-tag">Deep Dive</span>
+          <span class="related-title">GoHighLevel Pricing Explained: Full Breakdown</span>
+        </a>
+        <a href="/" class="related-card">
+          <span class="related-tag">Pillar Review</span>
+          <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+        </a>
+        <a href="/mistakes-to-avoid.html" class="related-card">
+          <span class="related-tag">Guide</span>
+          <span class="related-title">GoHighLevel Mistakes to Avoid</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>Full access to SMS, voice, email, and every other feature. No credit card required to start.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+// --- PRICING DATA ---
+var rates = {
+  us: { sms: 0.0079, mms: 0.0200, voiceOut: 0.013, voiceIn: 0.0085, phone: 1.15, label: 'US' },
+  ca: { sms: 0.0075, mms: 0.0200, voiceOut: 0.013, voiceIn: 0.0085, phone: 1.15, label: 'Canada' },
+  uk: { sms: 0.04,   mms: 0.0200, voiceOut: 0.013, voiceIn: 0.0085, phone: 1.15, label: 'UK' },
+  au: { sms: 0.05,   mms: 0.0200, voiceOut: 0.013, voiceIn: 0.0085, phone: 1.15, label: 'Australia' }
+};
+
+var plans = {
+  starter:   97,
+  unlimited: 297,
+  saas:      497
+};
+
+var selectedMix = 'sms-only';
+
+// --- SELECT MIX ---
+function selectMix(mix) {
+  selectedMix = mix;
+  document.querySelectorAll('.radio-option').forEach(function(el) { el.classList.remove('selected'); });
+  var radios = document.querySelectorAll('input[name="mix"]');
+  radios.forEach(function(r) {
+    if (r.value === mix) {
+      r.checked = true;
+      r.closest('.radio-option').classList.add('selected');
+    }
+  });
+  updateCalc();
+}
+
+// --- FORMAT HELPERS ---
+function fmt(n) {
+  return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+function fmt4(n) {
+  return '$' + n.toFixed(4);
+}
+function fmtNum(n) {
+  return n.toLocaleString();
+}
+
+// --- UPDATE RANGE SLIDER FILL ---
+function updateSliderFill(slider) {
+  var pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+  var accent = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+  var bg = getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary');
+  slider.style.background = 'linear-gradient(to right, ' + accent + ' 0%, ' + accent + ' ' + pct + '%, ' + bg + ' ' + pct + '%, ' + bg + ' 100%)';
+}
+
+// --- MAIN CALC ---
+function updateCalc() {
+  var country = document.getElementById('country-select').value;
+  var r = rates[country];
+
+  // Volumes
+  var smsVol = parseInt(document.getElementById('sms-slider').value) || 0;
+  var mmsVol = parseInt(document.getElementById('mms-slider').value) || 0;
+  var voiceVol = parseInt(document.getElementById('voice-slider').value) || 0;
+
+  // Adjust MMS slider visibility based on mix
+  var mmsSliderGroup = document.getElementById('mms-slider').closest('.slider-group');
+  if (selectedMix === 'sms-only') {
+    mmsVol = 0;
+    document.getElementById('mms-slider').value = 0;
+    mmsSliderGroup.style.opacity = '0.4';
+    mmsSliderGroup.style.pointerEvents = 'none';
+  } else {
+    mmsSliderGroup.style.opacity = '1';
+    mmsSliderGroup.style.pointerEvents = 'auto';
+  }
+
+  // Costs
+  var smsCost = smsVol * r.sms;
+  var mmsCost = mmsVol * r.mms;
+  var voiceCost = voiceVol * r.voiceOut;
+  var phoneCost = r.phone;
+  var totalTwilio = smsCost + mmsCost + voiceCost + phoneCost;
+
+  // Blended cost per message
+  var totalMessages = smsVol + mmsVol;
+  var costPerMessage = totalMessages > 0 ? (smsCost + mmsCost) / totalMessages : 0;
+
+  // Update display values
+  document.getElementById('sms-display').textContent = fmtNum(smsVol);
+  document.getElementById('sms-cost-display').textContent = fmt(smsCost) + '/mo';
+  document.getElementById('mms-display').textContent = fmtNum(mmsVol);
+  document.getElementById('mms-cost-display').textContent = fmt(mmsCost) + '/mo';
+  document.getElementById('voice-display').textContent = fmtNum(voiceVol);
+  document.getElementById('voice-cost-display').textContent = fmt(voiceCost) + '/mo';
+
+  // Update results
+  document.getElementById('res-sms').textContent = fmt(smsCost);
+  document.getElementById('res-mms').textContent = fmt(mmsCost);
+  document.getElementById('res-voice').textContent = fmt(voiceCost);
+  document.getElementById('res-phone').textContent = fmt(phoneCost);
+  document.getElementById('res-total').textContent = fmt(totalTwilio);
+  document.getElementById('res-cpm').textContent = totalMessages > 0 ? fmt4(costPerMessage) : '$0.00';
+
+  // Plan totals
+  document.getElementById('res-plan-starter').textContent = fmt(plans.starter + totalTwilio);
+  document.getElementById('res-plan-unlimited').textContent = fmt(plans.unlimited + totalTwilio);
+  document.getElementById('res-plan-saas').textContent = fmt(plans.saas + totalTwilio);
+
+  // Update slider fills
+  updateSliderFill(document.getElementById('sms-slider'));
+  updateSliderFill(document.getElementById('mms-slider'));
+  updateSliderFill(document.getElementById('voice-slider'));
+}
+
+// --- FAQ TOGGLE ---
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); q.setAttribute('aria-expanded', 'false'); });
+
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// --- SCROLL ANIMATION ---
+(function() {
+  var els = document.querySelectorAll('.animate-on-scroll');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function(el) { observer.observe(el); });
+})();
+
+// --- INIT ---
+updateCalc();
+</script>
+</body>
+</html>

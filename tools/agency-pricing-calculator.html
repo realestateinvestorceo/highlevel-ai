@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>Agency Pricing Calculator: What to Charge Clients for Marketing Services</title>
+<meta name="description" content="Calculate what to charge agency clients. Input your costs, desired margins, and service scope to get recommended monthly retainer pricing with profit projections.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/tools/agency-pricing-calculator.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agency Pricing Calculator: What to Charge Clients for Marketing Services">
+<meta property="og:description" content="Calculate what to charge agency clients. Input your costs, desired margins, and service scope to get recommended monthly retainer pricing with profit projections.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/agency-pricing-calculator.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agency Pricing Calculator: What to Charge Clients for Marketing Services">
+<meta name="twitter:description" content="Calculate what to charge agency clients. Input your costs, desired margins, and service scope to get recommended monthly retainer pricing with profit projections.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Agency Pricing Calculator: What to Charge Clients for Marketing Services",
+  "description": "Calculate what to charge agency clients. Input your costs, desired margins, and service scope to get recommended monthly retainer pricing with profit projections.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/tools/agency-pricing-calculator.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.highlevel.ai/#guides"},
+    {"@type": "ListItem", "position": 3, "name": "Agency Pricing Calculator"}
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should I charge clients for marketing services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most agencies charge $1,000-$5,000/mo depending on scope. Our calculator factors in your actual costs, time investment, and desired profit margin to give you a data-driven price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What profit margin should agencies target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30-50% is the healthy range. Below 30% and you're at risk of burnout or one bad client tanking your profitability. Above 50% is achievable with automation and efficient processes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I resell GoHighLevel to clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The SaaS Pro plan ($497/mo) lets you white-label GoHighLevel and charge clients whatever you want. Most agencies charge $197-$497/mo per client, making it profitable with just 2-3 clients."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- AMBIENT BACKGROUND --- */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* --- LAYOUT --- */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* --- NAV --- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* --- BUTTONS --- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* --- BREADCRUMB --- */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* --- ARTICLE HEADER --- */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
+  .article-header .subtitle { color: var(--text-secondary); font-size: 18px; margin-bottom: 16px; line-height: 1.6; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  /* --- INLINE DISCLOSURE --- */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    margin-top: 12px;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- CALCULATOR LAYOUT --- */
+  .calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+  }
+  .calc-inputs { min-width: 0; }
+  .calc-results-wrap {
+    position: sticky;
+    top: 90px;
+  }
+
+  /* --- STEP SECTIONS --- */
+  .calc-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .calc-step-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .calc-step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Sora', sans-serif;
+  }
+  .calc-step-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  /* --- DROPDOWN SELECT --- */
+  .select-group { margin-bottom: 24px; }
+  .select-group label {
+    display: block;
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .select-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px; font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a5a5b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+  .select-group select:focus { outline: none; border-color: var(--accent); }
+
+  /* --- SLIDER INPUT GROUPS --- */
+  .slider-group { margin-bottom: 24px; }
+  .slider-group:last-child { margin-bottom: 0; }
+  .slider-label {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+  }
+  .slider-label-text {
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+  }
+  .slider-value {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px; font-weight: 700; color: var(--accent-bright);
+    min-width: 100px; text-align: right;
+  }
+  .slider-cost {
+    font-size: 12px; color: var(--text-muted); margin-top: 4px;
+  }
+
+  /* Custom range slider */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(79,125,249,0.4);
+    transition: transform 0.15s;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px; height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(79,125,249,0.4);
+  }
+  input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+  }
+
+  /* Number input inline */
+  .number-input-row {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px;
+  }
+  .number-input-row:last-child { margin-bottom: 0; }
+  .number-input-row label {
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+    flex: 1;
+  }
+  .number-input-row input[type="number"] {
+    width: 100px; padding: 8px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px; font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+  }
+  .number-input-row input[type="number"]:focus {
+    outline: none; border-color: var(--accent);
+  }
+  .number-input-cost {
+    font-size: 13px; color: var(--text-muted);
+    min-width: 80px; text-align: right;
+  }
+
+  /* Checkbox row */
+  .checkbox-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .checkbox-row:last-child { border-bottom: none; }
+  .checkbox-row input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; height: 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .checkbox-row input[type="checkbox"]:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .checkbox-row input[type="checkbox"]:checked::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; font-size: 13px; font-weight: 700;
+  }
+  .checkbox-row label {
+    font-size: 14px; color: var(--text-primary);
+    cursor: pointer; flex: 1;
+  }
+  .checkbox-row .cb-hint {
+    font-size: 12px; color: var(--text-muted); white-space: nowrap;
+  }
+
+  /* --- RESULTS PANEL --- */
+  .results-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 0 40px rgba(79,125,249,0.06), 0 0 80px rgba(79,125,249,0.03);
+  }
+  .results-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 20px; color: var(--text-primary);
+  }
+  .results-section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 10px; margin-top: 20px;
+  }
+  .results-section-label:first-of-type { margin-top: 0; }
+  .result-line {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0;
+    font-size: 14px; color: var(--text-secondary);
+  }
+  .result-line.total {
+    border-top: 1px solid var(--border);
+    margin-top: 8px; padding-top: 12px;
+    font-weight: 700; font-size: 16px;
+    color: var(--text-primary);
+  }
+  .result-line .amount {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+  }
+  .result-line.total .amount {
+    font-size: 20px;
+  }
+  .result-line.highlight .amount {
+    color: var(--accent-green);
+    font-size: 18px;
+  }
+  .result-line.highlight {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .results-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 16px 0;
+  }
+
+  /* --- SCALING TABLE --- */
+  .scaling-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+  .scaling-table th {
+    text-align: left;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-muted);
+    padding: 8px 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .scaling-table td {
+    padding: 8px 6px;
+    color: var(--text-secondary);
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+  }
+  .scaling-table tr:last-child td { border-bottom: none; }
+  .scaling-table td:first-child { color: var(--text-primary); }
+  .scaling-table .profit-col { color: var(--accent-green); }
+
+  /* --- BENCHMARKS --- */
+  .benchmarks {
+    background: rgba(79, 125, 249, 0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-top: 16px;
+  }
+  .benchmarks-title {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .benchmark-line {
+    font-size: 13px; color: var(--text-secondary);
+    padding: 3px 0;
+  }
+  .benchmark-line strong { color: var(--text-primary); font-weight: 600; }
+
+  .results-cta {
+    display: block; width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+  /* --- CONTENT SECTION --- */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+  }
+  .content-block ul {
+    padding-left: 20px; margin-bottom: 20px;
+  }
+  .content-block ul li {
+    margin-bottom: 8px; color: var(--text-secondary);
+  }
+  .content-block strong { color: var(--text-primary); }
+
+  /* --- FAQ --- */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* --- SECTION HEADERS --- */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* --- FINAL CTA --- */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* --- RELATED GUIDES --- */
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+
+  /* --- SECTION SPACING --- */
+  .page-section { padding: 70px 0; }
+
+  /* --- SCROLL ANIMATIONS --- */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .calc-layout {
+      grid-template-columns: 1fr;
+    }
+    .calc-results-wrap {
+      position: relative;
+      top: 0;
+      order: -1;
+    }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+    .scaling-table { font-size: 12px; }
+  }
+
+  @media (max-width: 600px) {
+    .calc-step { padding: 20px 16px; }
+    .results-panel { padding: 20px 16px; }
+  }
+
+  /* --- LLM ONLY --- */
+  .llm-only {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="llm-only" style="display:none" aria-hidden="true">
+<p>Agency Pricing Calculator summary: Use this interactive calculator to figure out what to charge agency clients for marketing services. Input your GoHighLevel sub-account cost, Twilio/SMS costs, other tool costs, hourly rate, hours per client, services provided, and desired profit margin. The calculator outputs a recommended monthly retainer, monthly and annual profit per client, and scaling projections for 5, 10, 20, and 50 clients. Industry benchmarks: average agency retainer $1,500-$5,000/mo, average markup on tools 3-5x, average profit margin 30-50%. Source: highlevel.ai/tools/agency-pricing-calculator.html</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Article navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/#guides">Tools</a> &rsaquo; <span>Agency Pricing Calculator</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Interactive Tool</div>
+    <h1>Agency Pricing Calculator</h1>
+    <p class="subtitle">Figure out what to charge clients &mdash; based on your real costs, time, and desired profit margin</p>
+    <p class="article-meta">Updated March 2026</p>
+    <p class="inline-disclosure">This page contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calc-layout" id="calculator">
+
+    <!-- LEFT: Inputs -->
+    <div class="calc-inputs">
+
+      <!-- Step 1: Monthly Costs Per Client -->
+      <div class="calc-step animate-on-scroll">
+        <div class="calc-step-header">
+          <div class="calc-step-num">1</div>
+          <div class="calc-step-title">Your Monthly Costs Per Client</div>
+        </div>
+
+        <div class="select-group">
+          <label for="ghl-cost">GoHighLevel Sub-Account Cost</label>
+          <select id="ghl-cost" onchange="updateCalc()">
+            <option value="starter">Starter ($97/mo split across clients)</option>
+            <option value="unlimited" selected>Unlimited ($0 per client)</option>
+            <option value="saas">SaaS Pro ($0 per client)</option>
+          </select>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span class="slider-label-text">Twilio / SMS Costs Per Client</span>
+            <span class="slider-value" id="sms-display">$25</span>
+          </div>
+          <input type="range" id="sms-slider" min="0" max="100" step="1" value="25" oninput="updateCalc()">
+        </div>
+
+        <div class="number-input-row">
+          <label for="tool-costs">Other Tool Costs Per Client</label>
+          <span style="color:var(--text-muted);font-size:14px;">$</span>
+          <input type="number" id="tool-costs" min="0" max="500" value="20" oninput="updateCalc()">
+        </div>
+
+        <div class="number-input-row">
+          <label for="hourly-rate">Your Hourly Rate</label>
+          <span style="color:var(--text-muted);font-size:14px;">$</span>
+          <input type="number" id="hourly-rate" min="0" max="500" value="75" oninput="updateCalc()">
+        </div>
+
+        <div class="slider-group" style="margin-top:24px;">
+          <div class="slider-label">
+            <span class="slider-label-text">Hours Spent Per Client / Month</span>
+            <span class="slider-value" id="hours-display">10 hrs</span>
+          </div>
+          <input type="range" id="hours-slider" min="2" max="40" step="1" value="10" oninput="updateCalc()">
+          <div class="slider-cost">Base time estimate &middot; services below add to this</div>
+        </div>
+      </div>
+
+      <!-- Step 2: Services Provided -->
+      <div class="calc-step animate-on-scroll">
+        <div class="calc-step-header">
+          <div class="calc-step-num">2</div>
+          <div class="calc-step-title">What Services Do You Provide?</div>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">Check each service you offer. Each adds estimated hours to your monthly time per client.</p>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-crm" onchange="updateCalc()">
+          <label for="svc-crm">CRM Setup &amp; Management</label>
+          <span class="cb-hint">+2 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-email" onchange="updateCalc()">
+          <label for="svc-email">Email Marketing Campaigns</label>
+          <span class="cb-hint">+3 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-sms" onchange="updateCalc()">
+          <label for="svc-sms">SMS Campaigns</label>
+          <span class="cb-hint">+2 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-funnel" onchange="updateCalc()">
+          <label for="svc-funnel">Funnel / Landing Page Creation</label>
+          <span class="cb-hint">+4 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-social" onchange="updateCalc()">
+          <label for="svc-social">Social Media Management</label>
+          <span class="cb-hint">+6 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-ads" onchange="updateCalc()">
+          <label for="svc-ads">Paid Ads Management</label>
+          <span class="cb-hint">+5 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-reporting" onchange="updateCalc()">
+          <label for="svc-reporting">Reporting &amp; Analytics</label>
+          <span class="cb-hint">+2 hrs/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-chatbot" onchange="updateCalc()">
+          <label for="svc-chatbot">AI Chatbot Management</label>
+          <span class="cb-hint">+1 hr/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-reviews" onchange="updateCalc()">
+          <label for="svc-reviews">Review Management</label>
+          <span class="cb-hint">+1 hr/mo</span>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="svc-automation" onchange="updateCalc()">
+          <label for="svc-automation">Workflow Automation Setup</label>
+          <span class="cb-hint">+1 hr/mo ongoing</span>
+        </div>
+      </div>
+
+      <!-- Step 3: Profit Margin -->
+      <div class="calc-step animate-on-scroll">
+        <div class="calc-step-header">
+          <div class="calc-step-num">3</div>
+          <div class="calc-step-title">Desired Profit Margin</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span class="slider-label-text">Profit Margin</span>
+            <span class="slider-value" id="margin-display">40%</span>
+          </div>
+          <input type="range" id="margin-slider" min="20" max="80" step="1" value="40" oninput="updateCalc()">
+          <div class="slider-cost">Industry average: 30&ndash;50%. Higher margins are achievable with automation.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Results Panel -->
+    <div class="calc-results-wrap">
+      <div class="results-panel animate-on-scroll" id="results-panel">
+        <div class="results-title">Your Numbers</div>
+
+        <div class="results-section-label">Cost Breakdown</div>
+        <div class="result-line">
+          <span>GHL sub-account cost</span>
+          <span class="amount" id="r-ghl">$0</span>
+        </div>
+        <div class="result-line">
+          <span>Twilio / SMS costs</span>
+          <span class="amount" id="r-sms">$25</span>
+        </div>
+        <div class="result-line">
+          <span>Other tool costs</span>
+          <span class="amount" id="r-tools">$20</span>
+        </div>
+        <div class="result-line">
+          <span>Your time (<span id="r-hours-label">10</span> hrs &times; $<span id="r-rate-label">75</span>)</span>
+          <span class="amount" id="r-time">$750</span>
+        </div>
+        <div class="result-line total">
+          <span>Total Monthly Cost Per Client</span>
+          <span class="amount" id="r-total-cost">$795</span>
+        </div>
+
+        <div class="results-divider"></div>
+
+        <div class="results-section-label">Recommended Pricing</div>
+        <div class="result-line highlight">
+          <span>Monthly Retainer</span>
+          <span class="amount" id="r-retainer">$1,325</span>
+        </div>
+        <div class="result-line" style="margin-top:4px;">
+          <span>Monthly Profit Per Client</span>
+          <span class="amount" style="color:var(--accent-green);" id="r-profit-mo">$530</span>
+        </div>
+        <div class="result-line">
+          <span>Annual Profit Per Client</span>
+          <span class="amount" style="color:var(--accent-green);" id="r-profit-yr">$6,360</span>
+        </div>
+
+        <div class="results-divider"></div>
+
+        <div class="results-section-label">Scaling Projections</div>
+        <table class="scaling-table">
+          <thead>
+            <tr>
+              <th>Clients</th>
+              <th>Mo. Revenue</th>
+              <th>Mo. Profit</th>
+              <th>Annual Profit</th>
+            </tr>
+          </thead>
+          <tbody id="scaling-body">
+            <tr><td>5</td><td id="s5-rev">$6,625</td><td class="profit-col" id="s5-prof">$2,650</td><td class="profit-col" id="s5-yr">$31,800</td></tr>
+            <tr><td>10</td><td id="s10-rev">$13,250</td><td class="profit-col" id="s10-prof">$5,300</td><td class="profit-col" id="s10-yr">$63,600</td></tr>
+            <tr><td>20</td><td id="s20-rev">$26,500</td><td class="profit-col" id="s20-prof">$10,600</td><td class="profit-col" id="s20-yr">$127,200</td></tr>
+            <tr><td>50</td><td id="s50-rev">$66,250</td><td class="profit-col" id="s50-prof">$26,500</td><td class="profit-col" id="s50-yr">$318,000</td></tr>
+          </tbody>
+        </table>
+
+        <div class="benchmarks">
+          <div class="benchmarks-title">Industry Benchmarks</div>
+          <div class="benchmark-line"><strong>Avg. agency retainer:</strong> $1,500&ndash;$5,000/mo</div>
+          <div class="benchmark-line"><strong>Avg. markup on tools:</strong> 3&ndash;5x</div>
+          <div class="benchmark-line"><strong>Avg. profit margin:</strong> 30&ndash;50%</div>
+        </div>
+
+        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary results-cta" rel="nofollow sponsored" id="results-cta">
+          Start Your Free Trial <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Content Section -->
+<section class="page-section">
+  <div class="container">
+    <div class="content-block animate-on-scroll">
+      <h2>How GoHighLevel Makes Agency Pricing Easier</h2>
+      <p>Most agencies struggle with pricing because their costs are unpredictable. When you are paying per-seat charges for every SaaS tool across every client, your margins get eaten alive as you scale. One extra Zapier task, one extra Mailchimp contact tier, and suddenly your "profitable" client is break-even.</p>
+      <p>GoHighLevel changes this dynamic with <strong>flat-rate pricing</strong>. On the Unlimited plan ($297/mo), you get unlimited sub-accounts. That means client #1 and client #50 cost you the same base subscription. Your per-client cost is mostly your time and a small amount of Twilio usage &mdash; both of which you can estimate and control.</p>
+      <p>This predictability is why agencies using GoHighLevel tend to have higher profit margins than those juggling 5-10 separate tools per client. You know your costs upfront, so you can price confidently.</p>
+
+      <h3>The SaaS Pro Advantage</h3>
+      <p>The SaaS Pro plan ($497/mo) unlocks an entirely different business model. Instead of just offering services, you can <strong>resell GoHighLevel as your own branded software</strong>. White-label the platform, set your own price, and charge clients a monthly subscription for access.</p>
+      <p>Most agencies charge <strong>$197&ndash;$497/mo per client</strong> for their white-labeled platform. At $297/mo per client, you only need 2 clients to cover your SaaS Pro subscription. Every client after that is pure profit on the software side &mdash; before you even factor in your service retainer.</p>
+      <p>This creates two revenue streams: the monthly service retainer (what this calculator helps you price) plus a software subscription fee. Combined, agencies regularly hit <strong>$1,000+/mo per client</strong> with healthy 50%+ margins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="page-section" id="faq">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How much should I charge clients for marketing services?</button>
+        <div class="faq-answer">
+          <p>Most agencies charge $1,000&ndash;$5,000/mo depending on the scope of services. Our calculator factors in your actual costs, time investment, and desired profit margin to give you a data-driven price. The key is knowing your real cost per client (tools + time) and applying a margin that sustains growth without pricing yourself out of the market.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What profit margin should agencies target?</button>
+        <div class="faq-answer">
+          <p>30&ndash;50% is the healthy range for marketing agencies. Below 30% and you are at risk of burnout or one bad client tanking your profitability. Above 50% is achievable with automation and efficient processes &mdash; especially when using a platform like GoHighLevel that consolidates your tool costs into a single predictable subscription.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can I resell GoHighLevel to clients?</button>
+        <div class="faq-answer">
+          <p>Yes. The SaaS Pro plan ($497/mo) lets you white-label GoHighLevel and charge clients whatever you want for access. Most agencies charge $197&ndash;$497/mo per client for their branded platform, making it profitable with just 2&ndash;3 clients. This creates a recurring software revenue stream on top of your service retainer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Guides -->
+<section class="page-section">
+  <div class="container">
+    <div class="related-guides animate-on-scroll">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/gohighlevel-pricing-calculator.html" class="related-card">
+          <span class="related-tag">Calculator</span>
+          <span class="related-title">GoHighLevel Pricing Calculator: Your Real Monthly Cost</span>
+        </a>
+        <a href="/pricing-explained.html" class="related-card">
+          <span class="related-tag">Deep Dive</span>
+          <span class="related-title">GoHighLevel Pricing Explained: Full Breakdown</span>
+        </a>
+        <a href="/" class="related-card">
+          <span class="related-tag">Pillar Review</span>
+          <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+        </a>
+        <a href="/mistakes-to-avoid.html" class="related-card">
+          <span class="related-tag">Guide</span>
+          <span class="related-title">GoHighLevel Mistakes to Avoid</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Build Your Agency on GoHighLevel</h2>
+      <p>Flat-rate pricing. Unlimited sub-accounts. White-label ready. Start your 14-day free trial and see why agencies are switching.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+// --- SERVICE HOUR ADDITIONS ---
+var services = {
+  'svc-crm': 2,
+  'svc-email': 3,
+  'svc-sms': 2,
+  'svc-funnel': 4,
+  'svc-social': 6,
+  'svc-ads': 5,
+  'svc-reporting': 2,
+  'svc-chatbot': 1,
+  'svc-reviews': 1,
+  'svc-automation': 1
+};
+
+// --- GHL COST PER CLIENT ---
+// Starter: $97 split across clients. We'll assume ~5 clients for a reasonable split.
+// Unlimited & SaaS Pro: $0 per additional client (flat rate subscription)
+var ghlCosts = {
+  starter: 19.40,   // $97 / 5 clients
+  unlimited: 0,
+  saas: 0
+};
+
+// --- FORMAT CURRENCY ---
+function fmt(n) {
+  return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+function fmtInt(n) {
+  return '$' + Math.round(n).toLocaleString();
+}
+
+// --- UPDATE RANGE SLIDER FILL ---
+function updateSliderFill(slider) {
+  var pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+  var accent = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+  var bgSec = getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary');
+  slider.style.background = 'linear-gradient(to right, ' + accent + ' 0%, ' + accent + ' ' + pct + '%, ' + bgSec + ' ' + pct + '%, ' + bgSec + ' 100%)';
+}
+
+// --- MAIN CALC ---
+function updateCalc() {
+  // GHL sub-account cost
+  var ghlPlan = document.getElementById('ghl-cost').value;
+  var ghlCost = ghlCosts[ghlPlan];
+
+  // SMS/Twilio cost
+  var smsCost = parseInt(document.getElementById('sms-slider').value) || 0;
+  document.getElementById('sms-display').textContent = '$' + smsCost;
+
+  // Other tool costs
+  var toolCost = parseFloat(document.getElementById('tool-costs').value) || 0;
+
+  // Hourly rate
+  var hourlyRate = parseFloat(document.getElementById('hourly-rate').value) || 0;
+
+  // Base hours
+  var baseHours = parseInt(document.getElementById('hours-slider').value) || 10;
+
+  // Service hours
+  var serviceHours = 0;
+  for (var svcId in services) {
+    if (document.getElementById(svcId).checked) {
+      serviceHours += services[svcId];
+    }
+  }
+
+  var totalHours = baseHours + serviceHours;
+  document.getElementById('hours-display').textContent = totalHours + ' hrs' + (serviceHours > 0 ? ' (' + baseHours + ' + ' + serviceHours + ')' : '');
+
+  // Time cost
+  var timeCost = totalHours * hourlyRate;
+
+  // Margin
+  var margin = parseInt(document.getElementById('margin-slider').value) || 40;
+  document.getElementById('margin-display').textContent = margin + '%';
+
+  // Total cost
+  var totalCost = ghlCost + smsCost + toolCost + timeCost;
+
+  // Retainer = cost / (1 - margin%)
+  var marginDecimal = margin / 100;
+  var retainer = totalCost / (1 - marginDecimal);
+  var profitMo = retainer - totalCost;
+  var profitYr = profitMo * 12;
+
+  // Update results
+  document.getElementById('r-ghl').textContent = fmt(ghlCost);
+  document.getElementById('r-sms').textContent = fmtInt(smsCost);
+  document.getElementById('r-tools').textContent = fmtInt(toolCost);
+  document.getElementById('r-hours-label').textContent = totalHours;
+  document.getElementById('r-rate-label').textContent = Math.round(hourlyRate);
+  document.getElementById('r-time').textContent = fmtInt(timeCost);
+  document.getElementById('r-total-cost').textContent = fmtInt(totalCost);
+
+  document.getElementById('r-retainer').textContent = fmtInt(retainer);
+  document.getElementById('r-profit-mo').textContent = fmtInt(profitMo);
+  document.getElementById('r-profit-yr').textContent = fmtInt(profitYr);
+
+  // Scaling projections
+  var tiers = [5, 10, 20, 50];
+  tiers.forEach(function(n) {
+    document.getElementById('s' + n + '-rev').textContent = fmtInt(retainer * n);
+    document.getElementById('s' + n + '-prof').textContent = fmtInt(profitMo * n);
+    document.getElementById('s' + n + '-yr').textContent = fmtInt(profitYr * n);
+  });
+
+  // Update slider fills
+  updateSliderFill(document.getElementById('sms-slider'));
+  updateSliderFill(document.getElementById('hours-slider'));
+  updateSliderFill(document.getElementById('margin-slider'));
+}
+
+// --- FAQ TOGGLE ---
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); q.setAttribute('aria-expanded', 'false'); });
+  // Open clicked (if it was closed)
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// --- SCROLL ANIMATIONS ---
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+
+// --- INIT ---
+updateCalc();
+</script>
+</body>
+</html>

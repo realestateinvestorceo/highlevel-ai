@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>GoHighLevel Client Onboarding Checklist Generator | Free Tool</title>
+<meta name="description" content="Generate a custom GoHighLevel setup checklist for new agency clients. Select services, industry, and features — get a printable step-by-step onboarding guide.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/tools/client-onboarding-checklist.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel Client Onboarding Checklist Generator | Free Tool">
+<meta property="og:description" content="Generate a custom GoHighLevel setup checklist for new agency clients. Select services, industry, and features — get a printable step-by-step onboarding guide.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/client-onboarding-checklist.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel Client Onboarding Checklist Generator | Free Tool">
+<meta name="twitter:description" content="Generate a custom GoHighLevel setup checklist for new agency clients. Select services, industry, and features — get a printable step-by-step onboarding guide.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GoHighLevel Client Onboarding Checklist Generator",
+  "description": "Generate a custom GoHighLevel setup checklist for new agency clients. Select services, industry, and features — get a printable step-by-step onboarding guide.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/tools/client-onboarding-checklist.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.highlevel.ai/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Client Onboarding Checklist"}
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does GoHighLevel client onboarding take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A basic setup (CRM, email, scheduling) takes 2-4 hours. A full setup with automations, funnels, and AI chatbot takes 6-10 hours. Using snapshots/templates can reduce this to 1-2 hours after your first client."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a GoHighLevel snapshot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A snapshot is a saved template of your entire sub-account setup — pipelines, automations, funnels, email templates, everything. After setting up your first client, save it as a snapshot and apply it to new clients in one click."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I onboard clients on Starter or Unlimited?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have more than one client, Unlimited ($297/mo) is better — it allows unlimited sub-accounts so each client gets their own isolated environment. Starter only supports one account."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- AMBIENT BACKGROUND --- */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* --- LAYOUT --- */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* --- NAV --- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* --- BUTTONS --- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* --- BREADCRUMB --- */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* --- ARTICLE HEADER --- */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
+  .article-header .subtitle { color: var(--text-secondary); font-size: 18px; margin-bottom: 16px; line-height: 1.6; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  /* --- INLINE DISCLOSURE --- */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    margin-top: 12px;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- STEP SECTIONS --- */
+  .calc-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .calc-step-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .calc-step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Sora', sans-serif;
+  }
+  .calc-step-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  /* --- RADIO CARDS (Industry) --- */
+  .radio-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .radio-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .radio-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .radio-card.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    box-shadow: 0 0 20px rgba(79,125,249,0.1);
+  }
+  .radio-card .radio-dot {
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .radio-card.selected .radio-dot {
+    border-color: var(--accent);
+  }
+  .radio-card.selected .radio-dot::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .radio-card .radio-icon { font-size: 18px; }
+
+  /* --- CHECKBOX GRID (Services) --- */
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .service-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .service-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .service-card.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    box-shadow: 0 0 20px rgba(79,125,249,0.1);
+  }
+  .service-card .check-box {
+    width: 18px; height: 18px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .service-card.selected .check-box {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .service-card.selected .check-box::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; font-size: 11px; font-weight: 700;
+  }
+
+  /* --- PLAN CARDS --- */
+  .plan-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .plan-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+    position: relative;
+  }
+  .plan-card:hover { border-color: rgba(255,255,255,0.12); background: var(--bg-card-hover); }
+  .plan-card.selected {
+    border-color: var(--accent);
+    background: rgba(79, 125, 249, 0.06);
+    box-shadow: 0 0 20px rgba(79,125,249,0.1);
+  }
+  .plan-card.featured-plan::before {
+    content: 'BEST VALUE';
+    position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; padding: 3px 12px; border-radius: 50px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  }
+  .plan-card-name {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 6px;
+  }
+  .plan-card-price {
+    font-family: 'Sora', sans-serif;
+    font-size: 28px; font-weight: 900; letter-spacing: -1px;
+    color: var(--text-primary);
+  }
+  .plan-card-price span { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+
+  /* --- GENERATE BUTTON --- */
+  .generate-btn-wrap {
+    max-width: 780px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .btn-generate {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 18px 48px; border-radius: 50px; font-weight: 800;
+    font-size: 17px; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-generate:active { transform: translateY(0); }
+
+  /* --- CHECKLIST OUTPUT --- */
+  .checklist-output {
+    max-width: 780px;
+    margin: 0 auto;
+    display: none;
+  }
+  .checklist-output.visible { display: block; }
+
+  .checklist-header {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(79,125,249,0.06);
+  }
+  .checklist-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 24px; font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .checklist-meta { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+  .checklist-meta strong { color: var(--text-primary); }
+
+  /* Progress Bar */
+  .progress-wrap {
+    background: var(--bg-secondary);
+    border-radius: 50px;
+    height: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    border-radius: 50px;
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+  .progress-text {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+  }
+
+  /* Action buttons */
+  .checklist-actions {
+    display: flex; gap: 12px; justify-content: center;
+    margin-top: 20px; flex-wrap: wrap;
+  }
+  .btn-action {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 22px; border-radius: 50px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+  }
+  .btn-action:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-action.copied {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+  }
+
+  /* Phase blocks */
+  .phase-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-bottom: 16px;
+  }
+  .phase-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .phase-badge {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; padding: 3px 10px; border-radius: 50px;
+    background: rgba(79,125,249,0.12); color: var(--accent-bright);
+  }
+  .phase-time {
+    font-size: 12px; color: var(--text-muted); font-weight: 500;
+    margin-left: auto;
+  }
+
+  .checklist-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  .checklist-item:hover { opacity: 0.85; }
+  .cl-checkbox {
+    width: 22px; height: 22px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.2s;
+    margin-top: 1px;
+  }
+  .checklist-item.checked .cl-checkbox {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+  }
+  .checklist-item.checked .cl-checkbox::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; font-size: 13px; font-weight: 700;
+  }
+  .checklist-item.checked .cl-text {
+    text-decoration: line-through;
+    color: var(--text-muted);
+  }
+  .cl-text {
+    font-size: 14px; color: var(--text-secondary);
+    line-height: 1.5;
+    transition: all 0.2s;
+  }
+
+  /* --- CONTENT SECTION --- */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+  }
+  .content-block ul { padding-left: 20px; margin-bottom: 20px; }
+  .content-block ul li { margin-bottom: 8px; color: var(--text-secondary); }
+  .content-block strong { color: var(--text-primary); }
+
+  /* --- FAQ --- */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* --- SECTION HEADERS --- */
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15;
+  }
+  .section-header p {
+    color: var(--text-secondary); font-size: 17px;
+    max-width: 620px; margin: 16px auto 0;
+  }
+
+  /* --- FINAL CTA --- */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* --- SNAPSHOT TIP --- */
+  .snapshot-tip {
+    max-width: 780px;
+    margin: 40px auto 0;
+    background: rgba(52, 211, 153, 0.06);
+    border: 1px solid rgba(52, 211, 153, 0.15);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .snapshot-tip h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+  }
+  .snapshot-tip p {
+    color: var(--text-secondary); font-size: 15px; line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .snapshot-tip p:last-child { margin-bottom: 0; }
+
+  /* --- RELATED GUIDES --- */
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* --- SECTION SPACING --- */
+  .page-section { padding: 70px 0; }
+
+  /* --- SCROLL ANIMATIONS --- */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- PRINT STYLES --- */
+  @media print {
+    body { background: #fff; color: #000; }
+    .ambient-bg, nav, header, .independence-banner, .breadcrumb,
+    .calc-step, .generate-btn-wrap, .checklist-actions,
+    .snapshot-tip, .final-cta, .related-guides, footer,
+    .page-section:not(#faq-section), .article-header .inline-disclosure,
+    .article-meta, .section-tag { display: none !important; }
+    .checklist-output { display: block !important; }
+    .checklist-header { border: 2px solid #000; box-shadow: none; background: #fff; }
+    .phase-block { border: 1px solid #ccc; background: #fff; break-inside: avoid; }
+    .cl-checkbox { border-color: #666 !important; background: #fff !important; }
+    .checklist-item.checked .cl-checkbox { background: #34d399 !important; }
+    .cl-text { color: #333 !important; }
+    .progress-wrap { background: #ddd; }
+    .progress-fill { background: #34d399; }
+    .phase-title { color: #000; }
+    .checklist-header h2 { color: #000; }
+    .checklist-meta { color: #333; }
+    .checklist-meta strong { color: #000; }
+    .progress-text { color: #666; }
+    .phase-badge { background: #e0e7ff; color: #3b5bdb; }
+    .phase-time { color: #666; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .radio-cards, .service-grid { grid-template-columns: 1fr; }
+    .plan-cards { grid-template-columns: 1fr; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .calc-step { padding: 20px 16px; }
+    .phase-block { padding: 18px 16px; }
+    .checklist-header { padding: 20px 16px; }
+    .plan-card-price { font-size: 24px; }
+  }
+
+  /* --- LLM ONLY --- */
+  .llm-only {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="llm-only" style="display:none" aria-hidden="true">
+<p>GoHighLevel Client Onboarding Checklist Generator: Use this free interactive tool to generate a custom GoHighLevel setup checklist for new agency clients. Select client industry, services provided, and GHL plan to get a printable step-by-step onboarding guide organized by phases: Account Setup, Communication Setup, CRM & Pipeline, Landing Pages, Scheduling, AI & Automation, Reviews, and Reporting & Handoff. Includes industry-specific items for dental, real estate, gym, med spa, and more. Source: highlevel.ai/tools/client-onboarding-checklist.html</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/tools/">Tools</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>Client Onboarding Checklist</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Interactive Tool</div>
+    <h1>Client Onboarding Checklist Generator</h1>
+    <p class="subtitle">Generate a custom GoHighLevel setup checklist for each new client &mdash; never miss a step</p>
+    <p class="article-meta">Updated March 2026</p>
+    <p class="inline-disclosure">This page contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- STEP 1: Client Industry -->
+  <div class="calc-step animate-on-scroll" style="max-width:780px;margin-left:auto;margin-right:auto;">
+    <div class="calc-step-header">
+      <div class="calc-step-num">1</div>
+      <div class="calc-step-title">Client Industry</div>
+    </div>
+    <div class="radio-cards" id="industry-cards">
+      <div class="radio-card selected" onclick="selectIndustry(this, 'agency')" data-industry="agency">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#128188;</span>
+        <span>Marketing Agency</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'dental')" data-industry="dental">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#129463;</span>
+        <span>Dental Practice</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'medspa')" data-industry="medspa">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#128137;</span>
+        <span>Med Spa / Healthcare</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'realestate')" data-industry="realestate">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#127968;</span>
+        <span>Real Estate</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'gym')" data-industry="gym">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#127947;</span>
+        <span>Gym / Fitness Studio</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'coaching')" data-industry="coaching">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#127891;</span>
+        <span>Coaching / Consulting</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'restaurant')" data-industry="restaurant">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#127869;</span>
+        <span>Restaurant / Food Service</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'ecommerce')" data-industry="ecommerce">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#128722;</span>
+        <span>E-commerce</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'homeservices')" data-industry="homeservices">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#128295;</span>
+        <span>Home Services (plumber, HVAC, etc.)</span>
+      </div>
+      <div class="radio-card" onclick="selectIndustry(this, 'other')" data-industry="other">
+        <span class="radio-dot"></span>
+        <span class="radio-icon">&#9881;</span>
+        <span>Other / General</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: Services -->
+  <div class="calc-step animate-on-scroll" style="max-width:780px;margin-left:auto;margin-right:auto;">
+    <div class="calc-step-header">
+      <div class="calc-step-num">2</div>
+      <div class="calc-step-title">What services are you providing?</div>
+    </div>
+    <div class="service-grid" id="service-cards">
+      <div class="service-card selected" onclick="toggleService(this)" data-service="crm">
+        <span class="check-box"></span><span>CRM &amp; Pipeline Setup</span>
+      </div>
+      <div class="service-card selected" onclick="toggleService(this)" data-service="email">
+        <span class="check-box"></span><span>Email Marketing</span>
+      </div>
+      <div class="service-card selected" onclick="toggleService(this)" data-service="sms">
+        <span class="check-box"></span><span>SMS Marketing</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="funnels">
+        <span class="check-box"></span><span>Landing Pages / Funnels</span>
+      </div>
+      <div class="service-card selected" onclick="toggleService(this)" data-service="scheduling">
+        <span class="check-box"></span><span>Appointment Scheduling</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="chatbot">
+        <span class="check-box"></span><span>AI Chatbot</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="voice">
+        <span class="check-box"></span><span>Voice Agent</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="reviews">
+        <span class="check-box"></span><span>Review Management</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="social">
+        <span class="check-box"></span><span>Social Media Integration</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="automation">
+        <span class="check-box"></span><span>Workflow Automation</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="reporting">
+        <span class="check-box"></span><span>Reporting &amp; Analytics</span>
+      </div>
+      <div class="service-card" onclick="toggleService(this)" data-service="ads">
+        <span class="check-box"></span><span>Paid Ads Management</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: Plan -->
+  <div class="calc-step animate-on-scroll" style="max-width:780px;margin-left:auto;margin-right:auto;">
+    <div class="calc-step-header">
+      <div class="calc-step-num">3</div>
+      <div class="calc-step-title">GoHighLevel Plan</div>
+    </div>
+    <div class="plan-cards">
+      <div class="plan-card" onclick="selectPlan(this, 'starter')" id="plan-starter">
+        <div class="plan-card-name">Starter</div>
+        <div class="plan-card-price">$97<span>/mo</span></div>
+      </div>
+      <div class="plan-card featured-plan selected" onclick="selectPlan(this, 'unlimited')" id="plan-unlimited">
+        <div class="plan-card-name">Unlimited</div>
+        <div class="plan-card-price">$297<span>/mo</span></div>
+      </div>
+      <div class="plan-card" onclick="selectPlan(this, 'saas')" id="plan-saas">
+        <div class="plan-card-name">SaaS Pro</div>
+        <div class="plan-card-price">$497<span>/mo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <div class="generate-btn-wrap animate-on-scroll">
+    <button class="btn-generate" onclick="generateChecklist()">Generate My Checklist <span>&rarr;</span></button>
+  </div>
+
+  <!-- Checklist Output -->
+  <div class="checklist-output" id="checklist-output">
+    <div class="checklist-header">
+      <h2 id="checklist-title">Client Onboarding Checklist</h2>
+      <p class="checklist-meta"><strong id="checklist-industry-label">Marketing Agency</strong> &middot; <strong id="checklist-plan-label">Unlimited</strong> &middot; <span id="checklist-item-count">0</span> items &middot; Est. <span id="checklist-time">0</span> hours</p>
+      <div class="progress-wrap">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-text"><span id="progress-checked">0</span> / <span id="progress-total">0</span> completed (<span id="progress-pct">0</span>%)</div>
+      <div class="checklist-actions">
+        <button class="btn-action" onclick="printChecklist()">&#128424; Print Checklist</button>
+        <button class="btn-action" id="copy-btn" onclick="copyChecklist()">&#128203; Copy as Text</button>
+      </div>
+    </div>
+
+    <div id="phases-container"></div>
+
+    <!-- Snapshot Tip -->
+    <div class="snapshot-tip">
+      <h3>&#128161; Streamline Your Onboarding with GoHighLevel Snapshots</h3>
+      <p>After completing your first client setup, save the entire sub-account as a <strong>snapshot</strong>. Snapshots capture everything &mdash; pipelines, automations, funnels, email templates, calendars &mdash; and let you replicate the setup for new clients in one click. This can reduce onboarding time from several hours down to 1&ndash;2 hours.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored" style="font-size:14px;padding:12px 24px;">Start Building Your First Snapshot &rarr;</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FAQ Section -->
+<section class="page-section" id="faq-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How long does GoHighLevel client onboarding take?</button>
+        <div class="faq-answer">
+          <p>A basic setup (CRM, email, scheduling) takes 2&ndash;4 hours. A full setup with automations, funnels, and AI chatbot takes 6&ndash;10 hours. Using snapshots and templates can reduce this to 1&ndash;2 hours after your first client.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What is a GoHighLevel snapshot?</button>
+        <div class="faq-answer">
+          <p>A snapshot is a saved template of your entire sub-account setup &mdash; pipelines, automations, funnels, email templates, everything. After setting up your first client, save it as a snapshot and apply it to new clients in one click.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Should I onboard clients on Starter or Unlimited?</button>
+        <div class="faq-answer">
+          <p>If you have more than one client, Unlimited ($297/mo) is better &mdash; it allows unlimited sub-accounts so each client gets their own isolated environment. Starter only supports one account.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Guides -->
+<section class="page-section">
+  <div class="container">
+    <div class="related-guides animate-on-scroll">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/tools/" class="related-card">
+          <span class="related-tag">Tools</span>
+          <span class="related-title">All GoHighLevel Free Tools</span>
+        </a>
+        <a href="/" class="related-card">
+          <span class="related-tag">Pillar Review</span>
+          <span class="related-title">HighLevel AI Review 2026 &mdash; Complete Guide</span>
+        </a>
+        <a href="/gohighlevel-pricing-calculator.html" class="related-card">
+          <span class="related-tag">Calculator</span>
+          <span class="related-title">GoHighLevel Pricing Calculator</span>
+        </a>
+        <a href="/mistakes-to-avoid.html" class="related-card">
+          <span class="related-tag">Guide</span>
+          <span class="related-title">GoHighLevel Mistakes to Avoid</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta animate-on-scroll">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See if GoHighLevel fits your agency. Full access to every feature during the trial &mdash; no credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+// ─── STATE ───
+var selectedIndustry = 'agency';
+var selectedPlanKey = 'unlimited';
+var selectedServices = { crm: true, email: true, sms: true, scheduling: true };
+
+var industryLabels = {
+  agency: 'Marketing Agency', dental: 'Dental Practice', medspa: 'Med Spa / Healthcare',
+  realestate: 'Real Estate', gym: 'Gym / Fitness Studio', coaching: 'Coaching / Consulting',
+  restaurant: 'Restaurant / Food Service', ecommerce: 'E-commerce',
+  homeservices: 'Home Services', other: 'Other / General'
+};
+var planLabels = { starter: 'Starter ($97/mo)', unlimited: 'Unlimited ($297/mo)', saas: 'SaaS Pro ($497/mo)' };
+
+// ─── INDUSTRY SELECT ───
+function selectIndustry(el, key) {
+  selectedIndustry = key;
+  document.querySelectorAll('#industry-cards .radio-card').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+}
+
+// ─── SERVICE TOGGLE ───
+function toggleService(el) {
+  el.classList.toggle('selected');
+  var svc = el.getAttribute('data-service');
+  selectedServices[svc] = el.classList.contains('selected');
+}
+
+// ─── PLAN SELECT ───
+function selectPlan(el, key) {
+  selectedPlanKey = key;
+  document.querySelectorAll('.plan-card').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+}
+
+// ─── CHECKLIST DATA ───
+function buildChecklist() {
+  var svc = {};
+  document.querySelectorAll('#service-cards .service-card.selected').forEach(function(el) {
+    svc[el.getAttribute('data-service')] = true;
+  });
+
+  var phases = [];
+
+  // Phase 1: Account Setup (always)
+  var p1Items = [];
+  if (selectedPlanKey === 'starter') {
+    p1Items.push('Set up main account (Starter plan)');
+  } else {
+    p1Items.push('Create sub-account (' + (selectedPlanKey === 'unlimited' ? 'Unlimited' : 'SaaS Pro') + ')');
+  }
+  p1Items.push('Enter client business name, address, and timezone');
+  p1Items.push('Upload client logo and branding colors');
+  p1Items.push('Set up custom domain (CNAME record)');
+  p1Items.push('Configure sender email (DKIM, SPF, DMARC)');
+  phases.push({ title: 'Phase 1: Account Setup', badge: 'ALWAYS', time: '30 min', items: p1Items });
+
+  // Phase 2: Communication Setup
+  if (svc.sms || svc.email) {
+    var p2Items = [];
+    if (svc.sms) {
+      p2Items.push('Connect Twilio account for SMS/voice');
+      p2Items.push('Purchase phone number for client');
+      p2Items.push('Complete A2P 10DLC registration ($19)');
+    }
+    if (svc.email) {
+      p2Items.push('Warm up email domain (send 50/day week 1, increase gradually)');
+      p2Items.push('Set up email templates with client branding');
+    }
+    phases.push({ title: 'Phase 2: Communication Setup', badge: 'SMS / EMAIL', time: '45 min', items: p2Items });
+  }
+
+  // Phase 3: CRM & Pipeline
+  if (svc.crm) {
+    var p3Items = [
+      'Create sales pipeline with stages',
+      'Add custom fields for client\'s industry',
+      'Import existing contacts (CSV upload)',
+      'Tag imported contacts appropriately',
+      'Set up lead source tracking'
+    ];
+    phases.push({ title: 'Phase 3: CRM & Pipeline', badge: 'CRM', time: '45 min', items: p3Items });
+  }
+
+  // Phase 4: Landing Pages
+  if (svc.funnels) {
+    var p4Items = [
+      'Build main landing page / funnel',
+      'Connect form to CRM pipeline',
+      'Set up UTM tracking',
+      'Test form submission end-to-end'
+    ];
+    phases.push({ title: 'Phase 4: Landing Pages & Funnels', badge: 'FUNNELS', time: '60 min', items: p4Items });
+  }
+
+  // Phase 5: Scheduling
+  if (svc.scheduling) {
+    var p5Items = [
+      'Create calendar with business hours',
+      'Set appointment types and durations',
+      'Configure buffer time between appointments',
+      'Set up confirmation email/SMS templates',
+      'Set up reminder sequence (72hr, 24hr, 2hr)'
+    ];
+    phases.push({ title: 'Phase 5: Appointment Scheduling', badge: 'SCHEDULING', time: '30 min', items: p5Items });
+  }
+
+  // Phase 6: AI & Automation
+  if (svc.chatbot || svc.voice || svc.automation) {
+    var p6Items = [];
+    if (svc.chatbot) {
+      p6Items.push('Configure AI chatbot with FAQ responses');
+      p6Items.push('Set chatbot hours and handoff rules');
+    }
+    if (svc.voice) {
+      p6Items.push('Configure voice agent scripts and call routing');
+      p6Items.push('Set up voicemail transcription and follow-up');
+    }
+    if (svc.automation || svc.chatbot || svc.voice) {
+      p6Items.push('Build lead follow-up automation workflow');
+      p6Items.push('Build appointment reminder workflow');
+      p6Items.push('Build no-show recovery workflow');
+      p6Items.push('Test all automations with dummy contacts');
+    }
+    phases.push({ title: 'Phase 6: AI & Automation', badge: 'AI / WORKFLOWS', time: '90 min', items: p6Items });
+  }
+
+  // Phase 7: Reviews
+  if (svc.reviews) {
+    var p7Items = [
+      'Connect Google Business Profile',
+      'Create review request SMS/email template',
+      'Build automated review request workflow (triggered after service)',
+      'Set up negative feedback routing (internal form)'
+    ];
+    phases.push({ title: 'Phase 7: Review Management', badge: 'REVIEWS', time: '30 min', items: p7Items });
+  }
+
+  // Phase for social
+  if (svc.social) {
+    phases.push({
+      title: 'Phase ' + (phases.length + 1) + ': Social Media',
+      badge: 'SOCIAL',
+      time: '20 min',
+      items: [
+        'Connect Facebook and Instagram accounts',
+        'Connect Google Business Profile for posting',
+        'Set up social media posting calendar',
+        'Create content templates for recurring posts'
+      ]
+    });
+  }
+
+  // Phase for ads
+  if (svc.ads) {
+    phases.push({
+      title: 'Phase ' + (phases.length + 1) + ': Paid Ads',
+      badge: 'ADS',
+      time: '30 min',
+      items: [
+        'Connect Facebook Ads account',
+        'Connect Google Ads account',
+        'Set up conversion tracking pixels',
+        'Build ad-specific landing pages with UTM parameters'
+      ]
+    });
+  }
+
+  // Industry-Specific Phase
+  var indItems = [];
+  if (selectedIndustry === 'dental') {
+    indItems.push('Set up patient recall automation (6-month hygiene)');
+    indItems.push('Configure HIPAA-aware settings');
+    indItems.push('Create new patient welcome sequence');
+  } else if (selectedIndustry === 'medspa') {
+    indItems.push('Set up treatment reminder sequences');
+    indItems.push('Configure HIPAA-aware settings');
+    indItems.push('Create pre-appointment instruction automations');
+  } else if (selectedIndustry === 'realestate') {
+    indItems.push('Set up property listing pipeline');
+    indItems.push('Configure lead distribution among agents');
+    indItems.push('Build open house follow-up automation');
+  } else if (selectedIndustry === 'gym') {
+    indItems.push('Set up trial-to-member conversion workflow');
+    indItems.push('Configure absence alert automation (no visit in 14 days)');
+    indItems.push('Build referral reward automation');
+  } else if (selectedIndustry === 'restaurant') {
+    indItems.push('Set up reservation confirmation workflow');
+    indItems.push('Build birthday/anniversary promotion automation');
+  } else if (selectedIndustry === 'homeservices') {
+    indItems.push('Set up job completion follow-up sequence');
+    indItems.push('Build seasonal service reminder automation');
+  } else if (selectedIndustry === 'coaching') {
+    indItems.push('Set up discovery call pipeline');
+    indItems.push('Build program onboarding drip sequence');
+  } else if (selectedIndustry === 'ecommerce') {
+    indItems.push('Set up abandoned cart recovery workflow');
+    indItems.push('Build post-purchase review request automation');
+  }
+  if (indItems.length > 0) {
+    phases.push({
+      title: 'Phase ' + (phases.length + 1) + ': Industry-Specific (' + industryLabels[selectedIndustry] + ')',
+      badge: 'INDUSTRY',
+      time: '30 min',
+      items: indItems
+    });
+  }
+
+  // Reporting & Handoff (always)
+  var pLast = [
+    'Create client dashboard',
+    'Set up weekly/monthly report automation',
+    'Share dashboard access with client',
+    'Record Loom walkthrough for client',
+    'Schedule kickoff/training call',
+    'Document login credentials securely'
+  ];
+  if (svc.reporting) {
+    pLast.splice(1, 0, 'Configure custom KPI tracking metrics');
+    pLast.splice(2, 0, 'Set up conversion attribution reporting');
+  }
+  phases.push({ title: 'Phase ' + (phases.length + 1) + ': Reporting & Handoff', badge: 'ALWAYS', time: '30 min', items: pLast });
+
+  return phases;
+}
+
+// ─── GENERATE CHECKLIST ───
+function generateChecklist() {
+  var phases = buildChecklist();
+  var container = document.getElementById('phases-container');
+  container.innerHTML = '';
+
+  var totalItems = 0;
+  var totalMinutes = 0;
+
+  phases.forEach(function(phase) {
+    totalItems += phase.items.length;
+    var mins = parseInt(phase.time) || 30;
+    totalMinutes += mins;
+
+    var block = document.createElement('div');
+    block.className = 'phase-block';
+    var html = '<div class="phase-title"><span class="phase-badge">' + phase.badge + '</span>' + phase.title + '<span class="phase-time">' + phase.time + '</span></div>';
+
+    phase.items.forEach(function(item) {
+      html += '<div class="checklist-item" onclick="toggleCheck(this)"><div class="cl-checkbox"></div><span class="cl-text">' + escapeHtml(item) + '</span></div>';
+    });
+
+    block.innerHTML = html;
+    container.appendChild(block);
+  });
+
+  // Update header
+  document.getElementById('checklist-industry-label').textContent = industryLabels[selectedIndustry];
+  document.getElementById('checklist-plan-label').textContent = planLabels[selectedPlanKey];
+  document.getElementById('checklist-item-count').textContent = totalItems;
+  var hours = Math.round(totalMinutes / 60 * 10) / 10;
+  document.getElementById('checklist-time').textContent = hours;
+  document.getElementById('progress-total').textContent = totalItems;
+  document.getElementById('progress-checked').textContent = '0';
+  document.getElementById('progress-pct').textContent = '0';
+  document.getElementById('progress-fill').style.width = '0%';
+
+  // Show output
+  var output = document.getElementById('checklist-output');
+  output.classList.add('visible');
+  output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Track event
+  if (typeof gtag === 'function') {
+    gtag('event', 'generate_checklist', {
+      event_category: 'tool_usage',
+      event_label: selectedIndustry + ' / ' + selectedPlanKey,
+      page_path: window.location.pathname
+    });
+  }
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+// ─── TOGGLE CHECK ───
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  updateProgress();
+}
+
+// ─── UPDATE PROGRESS ───
+function updateProgress() {
+  var all = document.querySelectorAll('#phases-container .checklist-item');
+  var checked = document.querySelectorAll('#phases-container .checklist-item.checked');
+  var total = all.length;
+  var done = checked.length;
+  var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+  document.getElementById('progress-checked').textContent = done;
+  document.getElementById('progress-total').textContent = total;
+  document.getElementById('progress-pct').textContent = pct;
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+// ─── PRINT ───
+function printChecklist() {
+  window.print();
+}
+
+// ─── COPY AS TEXT ───
+function copyChecklist() {
+  var phases = document.querySelectorAll('#phases-container .phase-block');
+  var lines = [];
+  lines.push('GoHighLevel Client Onboarding Checklist');
+  lines.push(industryLabels[selectedIndustry] + ' | ' + planLabels[selectedPlanKey]);
+  lines.push('Generated at highlevel.ai/tools/client-onboarding-checklist.html');
+  lines.push('');
+
+  phases.forEach(function(block) {
+    var title = block.querySelector('.phase-title').textContent.trim();
+    lines.push(title);
+    lines.push('-'.repeat(title.length));
+    block.querySelectorAll('.checklist-item').forEach(function(item) {
+      var checked = item.classList.contains('checked');
+      var text = item.querySelector('.cl-text').textContent;
+      lines.push((checked ? '[x] ' : '[ ] ') + text);
+    });
+    lines.push('');
+  });
+
+  var text = lines.join('\n');
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      showCopied();
+    });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showCopied();
+  }
+}
+
+function showCopied() {
+  var btn = document.getElementById('copy-btn');
+  btn.classList.add('copied');
+  btn.innerHTML = '&#10003; Copied!';
+  setTimeout(function() {
+    btn.classList.remove('copied');
+    btn.innerHTML = '&#128203; Copy as Text';
+  }, 2000);
+}
+
+// ─── FAQ ───
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); q.setAttribute('aria-expanded', 'false'); });
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// ─── SCROLL ANIMATIONS ───
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

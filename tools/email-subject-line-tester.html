@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>Email Subject Line Tester &amp; Grader | Free Tool</title>
+<meta name="description" content="Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers. Improve open rates before you hit send.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/tools/email-subject-line-tester.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Email Subject Line Tester & Grader | Free Tool">
+<meta property="og:description" content="Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers. Improve open rates before you hit send.">
+<meta property="og:url" content="https://www.highlevel.ai/tools/email-subject-line-tester.html">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="article:published_time" content="2026-03-21T00:00:00Z">
+<meta property="article:modified_time" content="2026-03-21T00:00:00Z">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Email Subject Line Tester & Grader | Free Tool">
+<meta name="twitter:description" content="Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers.">
+<meta name="twitter:image" content="https://www.highlevel.ai/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Email Subject Line Tester & Grader",
+  "description": "Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers. Improve open rates before you hit send.",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": "https://www.highlevel.ai/tools/email-subject-line-tester.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.highlevel.ai/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Email Subject Line Tester"}
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes a good email subject line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A good subject line is 30-50 characters, includes a power word, creates curiosity or urgency, and avoids spam triggers. Subject lines with numbers get 15% higher open rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should an email subject line be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30-50 characters is optimal. This ensures the full subject line displays on mobile (35 chars) and desktop (60 chars) email clients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GoHighLevel have email marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GoHighLevel includes a full email marketing platform with drag-and-drop email builder, automation workflows, A/B testing, and deliverability tools starting at $97/mo."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- AMBIENT BACKGROUND --- */
+  .ambient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 40px); }
+  }
+
+  /* --- LAYOUT --- */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* --- NAV --- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* --- BUTTONS --- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+
+  /* --- BREADCRUMB --- */
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+
+  /* --- ARTICLE HEADER --- */
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 16px; }
+  .article-header .subtitle { color: var(--text-secondary); font-size: 18px; margin-bottom: 16px; line-height: 1.6; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+
+  /* --- INLINE DISCLOSURE --- */
+  .inline-disclosure {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    margin-top: 12px;
+  }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: #fb923c;
+    position: relative;
+    z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- TOOL CARD --- */
+  .tool-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    max-width: 780px;
+    margin: 0 auto 48px;
+  }
+
+  /* --- SUBJECT INPUT --- */
+  .subject-input-wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .subject-input {
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: border-color 0.3s;
+    outline: none;
+  }
+  .subject-input::placeholder { color: var(--text-muted); }
+  .subject-input:focus { border-color: var(--accent); }
+  .char-count {
+    text-align: right;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  .char-count .count-num { font-weight: 700; color: var(--text-secondary); }
+  .char-count .ideal { color: var(--accent-green); }
+  .char-count .warn { color: var(--accent-orange); }
+  .char-count .bad { color: var(--accent-red); }
+
+  .test-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  /* --- RESULTS --- */
+  .results-area { display: none; margin-top: 32px; }
+  .results-area.visible { display: block; }
+
+  /* Score Circle */
+  .score-display {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .score-circle {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+    position: relative;
+    border: 4px solid var(--border);
+  }
+  .score-circle .score-num {
+    font-family: 'Sora', sans-serif;
+    font-size: 48px; font-weight: 900;
+    letter-spacing: -2px; line-height: 1;
+  }
+  .score-circle .score-max {
+    font-size: 14px; color: var(--text-muted); font-weight: 600;
+  }
+  .score-grade {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 800;
+    margin-top: 4px;
+  }
+
+  .score-circle.grade-a { border-color: var(--accent-green); }
+  .score-circle.grade-a .score-num { color: var(--accent-green); }
+  .grade-a-text { color: var(--accent-green); }
+
+  .score-circle.grade-b { border-color: var(--accent-bright); }
+  .score-circle.grade-b .score-num { color: var(--accent-bright); }
+  .grade-b-text { color: var(--accent-bright); }
+
+  .score-circle.grade-c { border-color: var(--accent-orange); }
+  .score-circle.grade-c .score-num { color: var(--accent-orange); }
+  .grade-c-text { color: var(--accent-orange); }
+
+  .score-circle.grade-d { border-color: var(--accent-red); }
+  .score-circle.grade-d .score-num { color: var(--accent-red); }
+  .grade-d-text { color: var(--accent-red); }
+
+  .score-circle.grade-f { border-color: #dc2626; }
+  .score-circle.grade-f .score-num { color: #dc2626; }
+  .grade-f-text { color: #dc2626; }
+
+  /* Previews */
+  .preview-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .preview-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .preview-line {
+    font-size: 15px; color: var(--text-primary); font-weight: 600;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .preview-truncated {
+    color: var(--text-muted);
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .icon { flex-shrink: 0; font-size: 16px; line-height: 1.5; }
+  .check-pass .icon { color: var(--accent-green); }
+  .check-fail .icon { color: var(--accent-red); }
+  .check-warn .icon { color: var(--accent-orange); }
+  .checklist .label { flex: 1; }
+
+  .reset-btn {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  /* --- CONTENT SECTION --- */
+  .content-block {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+    color: var(--text-primary);
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+  }
+  .content-block ul {
+    padding-left: 20px; margin-bottom: 20px;
+  }
+  .content-block ul li {
+    margin-bottom: 8px; color: var(--text-secondary);
+  }
+  .content-block strong { color: var(--text-primary); }
+
+  /* --- TIPS LIST --- */
+  .tips-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: tip;
+  }
+  .tips-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .tips-list li:last-child { border-bottom: none; }
+  .tips-list li::before {
+    counter-increment: tip;
+    content: counter(tip);
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800;
+    font-family: 'Sora', sans-serif;
+  }
+
+  /* --- FAQ --- */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-question {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--text-primary);
+    background: none; border: none; width: 100%; text-align: left;
+    padding: 0; gap: 16px;
+  }
+  .faq-question::after {
+    content: '+'; font-size: 24px; color: var(--text-muted);
+    transition: transform 0.3s; flex-shrink: 0;
+  }
+  .faq-question.active::after { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .faq-answer.open { max-height: 600px; padding-top: 14px; }
+  .faq-answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+  /* --- FINAL CTA --- */
+  .final-cta {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .final-cta p {
+    color: var(--text-secondary);
+    font-size: 17px; max-width: 560px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .final-cta .btn { position: relative; }
+
+  /* --- SECTION SPACING --- */
+  .page-section { padding: 70px 0; }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* --- SCROLL ANIMATIONS --- */
+  .animate-on-scroll {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js-enabled .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .js-enabled .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    .tool-card { padding: 20px 16px; }
+    .subject-input { font-size: 16px; padding: 14px 16px; }
+    .score-circle { width: 120px; height: 120px; }
+    .score-circle .score-num { font-size: 40px; }
+  }
+
+  /* --- LLM ONLY --- */
+  .llm-only {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="llm-only" style="display:none" aria-hidden="true">
+<p>Email Subject Line Tester summary: Free tool that scores email subject lines out of 100 based on length (ideal 30-50 chars), power words, urgency/scarcity, personalization, emoji use, spam triggers, question format, numbers/statistics, and preview text length. Displays letter grade (A+ through F), mobile and desktop inbox previews, and a detailed checklist of scoring factors with actionable feedback. Source: highlevel.ai/tools/email-subject-line-tester.html</p>
+</div>
+
+<div class="ambient-bg"></div>
+
+<!-- NAV -->
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#guides">Guides</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>Email Subject Line Tester</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="section-tag">Free Tool</div>
+    <h1>Email Subject Line Tester</h1>
+    <p class="subtitle">Score your subject line before you send &mdash; improve open rates with data-driven feedback</p>
+    <p class="article-meta">Updated March 2026</p>
+    <p class="inline-disclosure">This page contains affiliate links. <a href="/editorial-policy.html">Full disclosure</a>.</p>
+  </div>
+
+  <!-- TOOL -->
+  <div class="tool-card animate-on-scroll" id="tester">
+    <label for="subject-input" style="display:block;font-family:'Sora',sans-serif;font-size:16px;font-weight:700;margin-bottom:12px;">Enter your email subject line</label>
+    <div class="subject-input-wrap">
+      <input type="text" id="subject-input" class="subject-input" placeholder="e.g. Don't miss our exclusive 50% off sale today" maxlength="200" autocomplete="off">
+      <div class="char-count"><span class="count-num" id="char-count">0</span> characters</div>
+    </div>
+    <button class="btn btn-primary test-btn" id="test-btn" onclick="analyzeSubject()">Test My Subject Line &rarr;</button>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="results-area">
+
+      <!-- Score Display -->
+      <div class="score-display">
+        <div class="score-circle" id="score-circle">
+          <span class="score-num" id="score-num">0</span>
+          <span class="score-max">/ 100</span>
+        </div>
+        <div class="score-grade" id="score-grade"></div>
+      </div>
+
+      <!-- Previews -->
+      <div class="preview-section">
+        <div class="preview-label">Mobile Inbox Preview (35 characters)</div>
+        <div class="preview-line" id="mobile-preview"></div>
+      </div>
+      <div class="preview-section">
+        <div class="preview-label">Desktop Inbox Preview (60 characters)</div>
+        <div class="preview-line" id="desktop-preview"></div>
+      </div>
+
+      <!-- Checklist -->
+      <div style="margin-top:24px;">
+        <div class="preview-label">Scoring Breakdown</div>
+        <ul class="checklist" id="checklist"></ul>
+      </div>
+
+      <button class="btn btn-ghost reset-btn" onclick="resetTool()">Test Another Subject Line</button>
+    </div>
+  </div>
+
+  <!-- BEST PRACTICES -->
+  <div class="content-block page-section animate-on-scroll">
+    <h2>5 Email Subject Line Best Practices</h2>
+    <p>Writing subject lines that get opened is both an art and a science. Here are five data-backed tips to consistently boost your open rates.</p>
+    <ol class="tips-list">
+      <li><strong>Keep it between 30&ndash;50 characters.</strong> Most mobile email clients truncate subject lines at 35 characters. Desktop clients show around 60. Aim for the sweet spot where your full message displays on both.</li>
+      <li><strong>Use one power word.</strong> Words like "exclusive," "proven," and "essential" trigger curiosity. Don't overdo it&mdash;one strong power word is more effective than stacking three.</li>
+      <li><strong>Add a number or statistic.</strong> Subject lines containing a number see roughly 15% higher open rates. Specificity builds credibility (e.g., "5 ways" or "23% increase").</li>
+      <li><strong>Create urgency without being spammy.</strong> Phrases like "ending tonight" or "last chance" work. All-caps "ACT NOW!!!" ends up in spam. The line between urgency and spam is subtlety.</li>
+      <li><strong>A/B test everything.</strong> Even small changes in wording can swing open rates by 10&ndash;20%. Send two variants to a small segment, then roll out the winner to your full list.</li>
+    </ol>
+  </div>
+
+  <!-- GHL PITCH -->
+  <div class="content-block animate-on-scroll">
+    <h2>Send Better Emails with GoHighLevel</h2>
+    <p>GoHighLevel includes a full email marketing platform built for agencies and small businesses. You get a drag-and-drop email builder, automation workflows that trigger based on contact behavior, and built-in A/B testing so you can test subject lines at scale.</p>
+    <p>Their deliverability tools help you monitor reputation, warm up new domains, and keep your emails out of spam folders. Combined with SMS, CRM, funnels, and scheduling in one platform, it eliminates the need for five or six separate subscriptions.</p>
+    <p>Plans start at <strong>$97/mo</strong> with a 14-day free trial&mdash;no credit card required.</p>
+    <p style="margin-top:24px;"><a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a></p>
+  </div>
+
+  <!-- FAQ -->
+  <section class="page-section" id="faq">
+    <div class="content-block" style="margin-bottom:32px;">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item animate-on-scroll">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What makes a good email subject line?</button>
+        <div class="faq-answer">
+          <p>A good subject line is 30&ndash;50 characters, includes a power word, creates curiosity or urgency, and avoids spam triggers. Subject lines with numbers get roughly 15% higher open rates. Personalization tokens like [Name] can further boost engagement when your list supports them.</p>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How long should an email subject line be?</button>
+        <div class="faq-answer">
+          <p>30&ndash;50 characters is optimal. This ensures the full subject line displays on mobile email clients (which typically show around 35 characters) and desktop clients (which show around 60 characters). Going over 60 characters means most readers will see a truncated version.</p>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Does GoHighLevel have email marketing?</button>
+        <div class="faq-answer">
+          <p>Yes. GoHighLevel includes a full email marketing platform with a drag-and-drop email builder, automation workflows, A/B testing for subject lines and content, and deliverability monitoring tools. Plans start at $97/mo and include a 14-day free trial. <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">Start your free trial here</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</article>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="container">
+    <div class="final-cta-box animate-on-scroll">
+      <h2>Ready to Boost Your Email Open Rates?</h2>
+      <p>GoHighLevel gives you email marketing, A/B testing, automation, SMS, CRM, and funnels&mdash;all in one platform. Start free for 14 days.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: March 2026</p>
+    <p class="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+// --- POWER WORDS ---
+var POWER_WORDS = ['free','new','proven','secret','exclusive','limited','instant','guaranteed','discover','unlock','save','boost','ultimate','essential','breakthrough','insider','urgent'];
+
+// --- URGENCY WORDS ---
+var URGENCY_WORDS = ['today','now','limited','last chance','expires','deadline','hurry','ending','final','don\'t miss','act fast','only','remaining'];
+
+// --- SPAM TRIGGERS ---
+var SPAM_WORDS = ['buy now','click here','act now','free money','cash','credit','winner','congratulations','earn money'];
+
+// --- EMOJI REGEX ---
+var EMOJI_RE = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{FE00}-\u{FE0F}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{200D}\u{20E3}\u{E0020}-\u{E007F}]/gu;
+
+// --- REAL-TIME CHAR COUNT ---
+var subjectInput = document.getElementById('subject-input');
+subjectInput.addEventListener('input', function() {
+  var len = this.value.length;
+  var countEl = document.getElementById('char-count');
+  countEl.textContent = len;
+  countEl.className = 'count-num';
+  if (len >= 30 && len <= 50) countEl.classList.add('ideal');
+  else if (len >= 20 && len <= 60) countEl.classList.add('warn');
+  else if (len > 0) countEl.classList.add('bad');
+});
+
+subjectInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') { e.preventDefault(); analyzeSubject(); }
+});
+
+// --- ANALYZE ---
+function analyzeSubject() {
+  var subject = subjectInput.value.trim();
+  if (!subject) return;
+
+  var len = subject.length;
+  var lower = subject.toLowerCase();
+  var score = 0;
+  var checks = [];
+
+  // 1. Length (25 pts max)
+  var lengthPts = 0;
+  if (len >= 30 && len <= 50) { lengthPts = 25; checks.push({ pass: true, text: 'Good length (' + len + ' characters) \u2014 fits most mobile screens' }); }
+  else if ((len >= 20 && len < 30) || (len > 50 && len <= 60)) { lengthPts = 15; checks.push({ pass: 'warn', text: 'Length is OK (' + len + ' chars) but not ideal \u2014 aim for 30\u201350 characters' }); }
+  else if (len < 20 || (len > 60 && len <= 70)) { lengthPts = 10; checks.push({ pass: 'warn', text: 'Subject line is ' + (len < 20 ? 'too short' : 'a bit long') + ' (' + len + ' chars) \u2014 30\u201350 characters is optimal' }); }
+  else if (len > 70) { lengthPts = 5; checks.push({ pass: false, text: 'Too long (' + len + ' chars) \u2014 will be truncated on most devices. Aim for 30\u201350 characters' }); }
+  else { lengthPts = 5; checks.push({ pass: false, text: 'Subject line is very short (' + len + ' chars) \u2014 add more detail to boost open rates' }); }
+  score += lengthPts;
+
+  // 2. Power Words (20 pts max)
+  var foundPower = [];
+  POWER_WORDS.forEach(function(w) {
+    var re = new RegExp('\\b' + w + '\\b', 'i');
+    if (re.test(subject)) foundPower.push(w);
+  });
+  if (foundPower.length >= 2) { score += 20; checks.push({ pass: true, text: 'Contains power words: "' + foundPower.join('", "') + '"' }); }
+  else if (foundPower.length === 1) { score += 15; checks.push({ pass: true, text: 'Contains power word: "' + foundPower[0] + '"' }); }
+  else { checks.push({ pass: false, text: 'No power words detected \u2014 try adding: "proven", "essential", or "exclusive"' }); }
+
+  // 3. Urgency / Scarcity (15 pts max)
+  var hasUrgency = false;
+  URGENCY_WORDS.forEach(function(w) {
+    var re = new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+    if (re.test(subject)) hasUrgency = true;
+  });
+  if (hasUrgency) { score += 15; checks.push({ pass: true, text: 'Urgency or scarcity language detected \u2014 creates a reason to open now' }); }
+  else { checks.push({ pass: false, text: 'No urgency words found \u2014 consider adding "today", "limited", or "last chance"' }); }
+
+  // 4. Personalization (15 pts max)
+  var hasBrackets = /\[.+?\]|\{.+?\}/.test(subject);
+  var hasYou = /\byou\b|\byour\b/i.test(subject);
+  if (hasBrackets) { score += 15; checks.push({ pass: true, text: 'Personalization token detected \u2014 personalized subject lines boost open rates by 26%' }); }
+  else if (hasYou) { score += 10; checks.push({ pass: true, text: 'Uses "you"/"your" for a personal tone \u2014 even better with a [Name] token' }); }
+  else { checks.push({ pass: false, text: 'No personalization \u2014 add "you", "your", or a merge tag like [Name]' }); }
+
+  // 5. Emoji Use (5 pts max)
+  var emojis = subject.match(EMOJI_RE);
+  var emojiCount = emojis ? emojis.length : 0;
+  if (emojiCount === 1) { score += 5; checks.push({ pass: true, text: 'Single emoji adds visual interest in crowded inboxes' }); }
+  else if (emojiCount === 0) { checks.push({ pass: 'warn', text: 'No emoji \u2014 a single emoji can increase open rates by 5\u201310% (optional)' }); }
+  else { checks.push({ pass: 'warn', text: 'Multiple emojis (' + emojiCount + ') detected \u2014 stick to one to avoid looking spammy' }); }
+
+  // 6. Spam Trigger Penalty (-5 to -20 pts)
+  var spamPenalty = 0;
+  var spamIssues = [];
+
+  // ALL CAPS words (more than 1)
+  var capsWords = subject.match(/\b[A-Z]{2,}\b/g) || [];
+  if (capsWords.length > 1) {
+    spamPenalty += 5;
+    spamIssues.push('Multiple ALL CAPS words ("' + capsWords.slice(0, 3).join('", "') + '") \u2014 use lowercase or title case instead');
+  }
+
+  // Excessive punctuation
+  if (/[!]{2,}|[?]{2,}/.test(subject)) {
+    spamPenalty += 5;
+    spamIssues.push('Excessive punctuation (!!/??) \u2014 use a single mark');
+  }
+
+  // Spam words
+  SPAM_WORDS.forEach(function(w) {
+    var re = new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+    if (re.test(subject)) {
+      spamPenalty += 5;
+      spamIssues.push('Contains spam trigger: "' + w + '"');
+    }
+  });
+
+  if (spamPenalty > 20) spamPenalty = 20;
+  score -= spamPenalty;
+
+  if (spamIssues.length > 0) {
+    spamIssues.forEach(function(issue) {
+      checks.push({ pass: 'warn', text: issue });
+    });
+  } else {
+    checks.push({ pass: true, text: 'No spam triggers detected' });
+  }
+
+  // 7. Question Format Bonus (5 pts)
+  if (/\?\s*$/.test(subject)) {
+    score += 5;
+    checks.push({ pass: true, text: 'Question format increases curiosity and engagement' });
+  }
+
+  // 8. Number/Statistic Bonus (5 pts)
+  if (/\d/.test(subject)) {
+    score += 5;
+    checks.push({ pass: true, text: 'Contains a number \u2014 subject lines with numbers get ~15% higher open rates' });
+  } else {
+    checks.push({ pass: false, text: 'No numbers found \u2014 adding a specific number (e.g., "5 ways" or "23% off") boosts credibility' });
+  }
+
+  // 9. Preview Text Length (10 pts)
+  if (len < 50) { score += 10; checks.push({ pass: true, text: 'Short enough to display fully in most inbox previews' }); }
+  else if (len <= 60) { score += 5; checks.push({ pass: 'warn', text: 'May be truncated on mobile \u2014 front-load your key message' }); }
+  else { checks.push({ pass: false, text: 'Will be truncated on mobile and some desktop clients' }); }
+
+  // Clamp score
+  if (score < 0) score = 0;
+  if (score > 100) score = 100;
+
+  // Grade
+  var grade, gradeClass;
+  if (score >= 90) { grade = 'A+'; gradeClass = 'a'; }
+  else if (score >= 80) { grade = 'A'; gradeClass = 'a'; }
+  else if (score >= 70) { grade = 'B'; gradeClass = 'b'; }
+  else if (score >= 60) { grade = 'C'; gradeClass = 'c'; }
+  else if (score >= 50) { grade = 'D'; gradeClass = 'd'; }
+  else { grade = 'F'; gradeClass = 'f'; }
+
+  // Display score
+  var circleEl = document.getElementById('score-circle');
+  circleEl.className = 'score-circle grade-' + gradeClass;
+  document.getElementById('score-num').textContent = score;
+  var gradeEl = document.getElementById('score-grade');
+  gradeEl.textContent = 'Grade: ' + grade;
+  gradeEl.className = 'score-grade grade-' + gradeClass + '-text';
+
+  // Previews
+  var mobilePreview = document.getElementById('mobile-preview');
+  var desktopPreview = document.getElementById('desktop-preview');
+
+  if (subject.length > 35) {
+    mobilePreview.innerHTML = escapeHtml(subject.substring(0, 35)) + '<span class="preview-truncated">\u2026</span>';
+  } else {
+    mobilePreview.textContent = subject;
+  }
+
+  if (subject.length > 60) {
+    desktopPreview.innerHTML = escapeHtml(subject.substring(0, 60)) + '<span class="preview-truncated">\u2026</span>';
+  } else {
+    desktopPreview.textContent = subject;
+  }
+
+  // Checklist
+  var checklistEl = document.getElementById('checklist');
+  checklistEl.innerHTML = '';
+  checks.forEach(function(c) {
+    var li = document.createElement('li');
+    var icon, cls;
+    if (c.pass === true) { icon = '\u2705'; cls = 'check-pass'; }
+    else if (c.pass === 'warn') { icon = '\u26A0\uFE0F'; cls = 'check-warn'; }
+    else { icon = '\u274C'; cls = 'check-fail'; }
+    li.className = cls;
+    li.innerHTML = '<span class="icon">' + icon + '</span><span class="label">' + escapeHtml(c.text) + '</span>';
+    checklistEl.appendChild(li);
+  });
+
+  // Show results
+  document.getElementById('results-area').classList.add('visible');
+
+  // Track event
+  gtag('event', 'tool_use', {
+    event_category: 'email_subject_tester',
+    event_label: 'score_' + score + '_grade_' + grade,
+    value: score
+  });
+
+  // Scroll to results
+  document.getElementById('results-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+function resetTool() {
+  subjectInput.value = '';
+  document.getElementById('char-count').textContent = '0';
+  document.getElementById('char-count').className = 'count-num';
+  document.getElementById('results-area').classList.remove('visible');
+  subjectInput.focus();
+  window.scrollTo({ top: document.getElementById('tester').offsetTop - 100, behavior: 'smooth' });
+}
+
+// --- FAQ TOGGLE ---
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); q.setAttribute('aria-expanded', 'false'); });
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); }
+}
+
+// --- SCROLL ANIMATIONS ---
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>
