@@ -8,6 +8,32 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +41,8 @@
 <meta name="googlebot" content="index, follow">
 
 <!-- Primary Meta -->
-<title>7 GoHighLevel Workflow Templates for Agencies</title>
-<meta name="description" content="7 copy-paste GoHighLevel workflow templates for agencies: lead qualification, missed-call text-back, review requests, and more.">
+<title>7 GoHighLevel Workflow Templates You Can Copy Today (2026)</title>
+<meta name="description" content="Copy-paste these 7 GoHighLevel workflow automations: lead qualification, missed-call text-back, review requests, no-show recovery. Step-by-step setup included.">
 <meta name="author" content="Josh Miller">
 
 <!-- Canonical -->
@@ -796,7 +822,11 @@
 <body>
 <div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
 <script>document.documentElement.classList.add('js-enabled');</script>
-
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="ai-summary" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<h2>GoHighLevel Workflow Templates for Agencies</h2>
+<p>GoHighLevel Workflow Templates for Agencies (March 2026): 7 copy-paste workflow automations including lead qualification, missed-call text-back (60-second SMS response), automated review requests, no-show recovery, and 12-week nurture drip. Available on all GoHighLevel plans ($97-$497/mo). Source: highlevel.ai/workflows-for-agencies.html</p>
+</div>
 <div class="ambient-bg"></div>
 
 <!-- NAV -->
@@ -981,6 +1011,10 @@
     </div>
   </div>
 </section>
+
+<div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
+  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Build These Workflows &mdash; Start Free Trial <span>&rarr;</span></a>
+</div>
 
 <!-- BEST PRACTICES -->
 <section id="best-practices" class="page-section">

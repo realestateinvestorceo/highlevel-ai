@@ -8,6 +8,32 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -723,7 +749,11 @@
 <body>
 <div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
 <script>document.documentElement.classList.add('js-enabled');</script>
-
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="ai-summary" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<h2>GoHighLevel AI Voice Agent Setup Guide</h2>
+<p>GoHighLevel AI Voice Agent Setup (March 2026): Available on Unlimited ($297/mo) and SaaS Pro ($497/mo) plans only. Requires Twilio account ($15-$40/mo additional). Answers calls within 60 seconds, qualifies leads with 3-4 questions, books appointments, and warm-transfers to humans. 8-step setup process. Call recording consent required in all states; two-party consent required in CA, FL, IL, PA. Source: highlevel.ai/voice-agent-setup.html</p>
+</div>
 <div class="ambient-bg"></div>
 
 <!-- NAV -->
@@ -973,6 +1003,10 @@
     <li><strong>Don't forget recording disclosure in two-party consent states.</strong> If you record calls and operate in a two-party consent state (such as California, Florida, Illinois, or Pennsylvania), your voice agent must explicitly state that the call is being recorded and obtain the caller's consent before proceeding.<a href="#sources" class="citation-ref">[5]</a></li>
   </ul>
 
+  <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Set Up Your Voice Agent &mdash; Start Free Trial <span>&rarr;</span></a>
+  </div>
+
   <div class="content-block">
 
     <!-- SECTION 7: FAQ -->
@@ -1060,9 +1094,9 @@
         <span class="related-tag">Guide</span>
         <span class="related-title">HighLevel Workflows for Agencies</span>
       </a>
-      <a href="/mistakes-to-avoid.html" class="related-card">
+      <a href="/pricing-explained.html" class="related-card">
         <span class="related-tag">Guide</span>
-        <span class="related-title">HighLevel Mistakes to Avoid</span>
+        <span class="related-title">GoHighLevel Pricing Explained: Which Plan Is Right for You?</span>
       </a>
       <a href="/highlevel-for-med-spas.html" class="related-card">
         <span class="related-tag">Industry</span>

@@ -8,6 +8,32 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -992,6 +1018,10 @@
     </div>
   </section>
 
+  <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Get More Than Funnels &mdash; Try GoHighLevel Free <span>&rarr;</span></a>
+  </div>
+
   <!-- WHERE CLICKFUNNELS WINS -->
   <section id="clickfunnels-wins" class="page-section animate-on-scroll">
     <div class="section-header">
@@ -1074,6 +1104,10 @@
       <p>Point your custom domains to GoHighLevel, update any external links, and thoroughly test all funnels, forms, and automations before deactivating your ClickFunnels account. Most agencies complete the full migration within one to two weeks depending on the number of funnels and complexity of automations.</p>
     </div>
   </section>
+
+  <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>&rarr;</span></a>
+  </div>
 
   <!-- FAQ -->
   <section id="faq" class="page-section animate-on-scroll">

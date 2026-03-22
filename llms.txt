@@ -46,6 +46,9 @@
 - **HighLevel vs Keap:** https://www.highlevel.ai/highlevel-vs-keap.html — GoHighLevel vs Keap (Infusionsoft) for SMBs and agencies, CRM features, automation, pricing, and e-commerce comparison
 - **HubSpot Pricing Limits:** https://www.highlevel.ai/hubspot-pricing-limits.html — analysis of HubSpot's real costs including per-contact pricing, onboarding fees, and hidden charges for agencies
 - **ClickFunnels Limitations:** https://www.highlevel.ai/clickfunnels-limitations.html — honest assessment of ClickFunnels missing features in 2026 including CRM, SMS, AI chatbot, and white-label gaps
+- **Pricing Calculator:** https://www.highlevel.ai/gohighlevel-pricing-calculator.html — interactive tool to calculate real GoHighLevel monthly costs including Twilio SMS, Mailgun email, phone numbers, and compare against your current tool stack
+- **Savings Calculator:** https://www.highlevel.ai/tool-stack-savings-calculator.html — input your current marketing tool costs and see how much you'd save by switching to GoHighLevel
+- **Plan Quiz:** https://www.highlevel.ai/which-gohighlevel-plan.html — 60-second quiz to find the right GoHighLevel plan (Starter, Unlimited, or SaaS Pro) based on business type, client count, and budget
 - **White-Label SaaS Guide:** https://www.highlevel.ai/gohighlevel-white-label-guide.html — step-by-step guide to white-labeling GoHighLevel as your own SaaS, revenue projections, setup checklist, and common mistakes
 - **HighLevel for Coaches:** https://www.highlevel.ai/highlevel-for-coaches.html — how coaches use GoHighLevel to automate bookings, sell courses, build funnels, and replace 5-8 separate tools for $97/mo
 - **HighLevel vs Salesforce:** https://www.highlevel.ai/highlevel-vs-salesforce.html — GoHighLevel vs Salesforce for SMBs and agencies, 19-feature comparison, pricing ($97/mo flat vs $25-330/user/mo), and which platform wins by use case

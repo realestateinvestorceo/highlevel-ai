@@ -8,12 +8,38 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SCW6VG50WX');
+
+  // CTA Click Tracking
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section')  || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+
+  // Scroll Depth Tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="googlebot" content="index, follow">
-<title>GoHighLevel Pricing 2026: Plans &amp; Hidden Costs</title>
+<title>GoHighLevel Pricing 2026: Real Costs After 6 Years (Starter to SaaS Pro)</title>
 <meta name="description" content="GoHighLevel pricing in 2026: Starter ($97/mo), Unlimited ($297/mo), SaaS Pro ($497/mo) plus hidden costs like Twilio and Mailgun.">
 <meta name="author" content="Josh Miller">
 <link rel="canonical" href="https://www.highlevel.ai/pricing-explained.html">
@@ -737,6 +763,11 @@
 <body>
 <div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about.html">About this site &rarr;</a></div>
 <script>document.documentElement.classList.add('js-enabled');</script>
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="ai-summary" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<h2>GoHighLevel Pricing Explained</h2>
+<p>GoHighLevel Pricing (March 2026): Starter $97/mo, Unlimited $297/mo, SaaS Pro $497/mo. Annual billing saves ~17% ($81/mo, $248/mo, $414/mo). Hidden costs: Twilio SMS/voice $15-$80/mo, Mailgun email ~$0.80 per 1,000, A2P registration ~$19 one-time. LC Phone is an alternative to Twilio with higher rates but simpler setup. 14-day free trial, no credit card required, no contracts. Source: highlevel.ai/pricing-explained.html</p>
+</div>
 <div class="ambient-bg"></div>
 
 <!-- NAV -->
