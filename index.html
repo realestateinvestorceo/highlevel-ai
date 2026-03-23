@@ -1117,6 +1117,9 @@
     pointer-events: none;
   }
   .independence-banner a { color: #fb923c; text-decoration: underline; }
+  @media (max-width: 900px) {
+    .independence-banner { padding: 6px 16px; font-size: 11px; }
+  }
 
   /* ─── METHODOLOGY BOX ─── */
   .methodology-box {
@@ -1446,6 +1449,9 @@
       padding: 20px 24px;
       border-bottom: 1px solid var(--border);
       gap: 12px;
+      max-height: 70vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .nav-links.open { display: flex; }
     .nav-toggle { display: flex; }
@@ -1464,7 +1470,10 @@
     .nav-dropdown.open .nav-dropdown-menu { display: block; }
     .nav-dropdown:hover .nav-dropdown-menu { display: none; }
     .nav-dropdown.open:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a { padding: 6px 16px; font-size: 13px; }
+    .nav-dropdown-menu a { padding: 8px 16px; font-size: 14px; }
+    .nav-links a { font-size: 15px; padding: 4px 0; }
+    .nav-dropdown-toggle { font-size: 15px; padding: 4px 0; }
+    .btn-nav { text-align: center; margin-top: 8px; }
     .compare-table { font-size: 13px; }
     .compare-table thead th, .compare-table tbody td { padding: 10px 12px; }
     .hero-answer { text-align: center; }
@@ -1473,28 +1482,7 @@
     .toc-links { gap: 6px 12px; }
   }
 
-  /* ─── STICKY MOBILE CTA ─── */
-  .sticky-cta {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background: rgba(10,10,15,0.95);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border-accent);
-    padding: 12px 20px;
-    text-align: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-  }
-  .sticky-cta.visible { transform: translateY(0); }
-  .sticky-cta .btn { width: 100%; justify-content: center; padding: 14px 24px; font-size: 15px; }
-  .sticky-cta .btn-sub { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
-  @media (max-width: 768px) {
-    .sticky-cta { display: block; }
-  }
+  /* ─── STICKY MOBILE CTA (removed — using sticky-cta-bar instead) ─── */
 
   /* ─── SCROLL ANIMATIONS ─── */
   /* Default: content visible for crawlers and no-JS browsers */
@@ -1564,9 +1552,17 @@
   transition: opacity 0.2s;
 }
 .sticky-cta-bar .btn-sticky:hover { opacity: 0.9; }
-@media (max-width: 600px) {
-  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 8px; }
-  .sticky-cta-bar p { font-size: 13px; }
+@media (max-width: 900px) {
+  .sticky-cta-bar { padding: 8px 0; }
+  .sticky-cta-bar .container { flex-direction: row; align-items: center; gap: 12px; }
+  .sticky-cta-bar p { font-size: 12px; flex: 1; }
+  .sticky-cta-bar .btn-sticky { padding: 8px 16px; font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 6px; }
+  .sticky-cta-bar p { font-size: 11px; }
+  .sticky-cta-bar p strong { display: inline; }
+  .sticky-cta-bar .btn-sticky { padding: 8px 20px; font-size: 13px; width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -2827,10 +2823,7 @@
 </section>
 </aside>
 
-<div class="sticky-cta" id="stickyCta">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial &rarr;</a>
-  <p class="btn-sub">No credit card required</p>
-</div>
+<!-- sticky CTA moved to bottom of page as sticky-cta-bar -->
 
 </main>
 
@@ -2930,7 +2923,7 @@
   // Mobile nav dropdown toggles
   document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
-      if (window.innerWidth > 768) return;
+      if (window.innerWidth > 900) return;
       e.preventDefault();
       var dropdown = btn.closest('.nav-dropdown');
       var wasOpen = dropdown.classList.contains('open');
@@ -2939,36 +2932,30 @@
     });
   });
 
-  // Sticky Mobile CTA
-  (function() {
-    var stickyCta = document.getElementById('stickyCta');
-    if (!stickyCta) return;
-    var heroHeight = 600;
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > heroHeight) {
-        stickyCta.classList.add('visible');
-      } else {
-        stickyCta.classList.remove('visible');
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) {
+        document.querySelector('.nav-links').classList.remove('open');
       }
     });
-  })();
-
-
-// Sticky CTA bar - show after 30% scroll
-(function() {
-  var bar = document.getElementById('stickyCta');
-  if (!bar) return;
-  var shown = false;
-  window.addEventListener('scroll', function() {
-    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
   });
-})();
+
+  // Sticky CTA bar - show after 30% scroll
+  (function() {
+    var bar = document.getElementById('stickyCtaBar');
+    if (!bar) return;
+    var shown = false;
+    window.addEventListener('scroll', function() {
+      var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
+    });
+  })();
 </script>
 
 
 <!-- Sticky CTA Bar -->
-<div class="sticky-cta-bar" id="stickyCta">
+<div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
     <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>

@@ -558,6 +558,7 @@
       gap: 16px;
     }
     .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     .nav-toggle { display: flex; }
     .toc-links { gap: 6px 12px; }
     .related-grid { grid-template-columns: 1fr; }
@@ -818,6 +819,15 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) {
+        document.querySelector('.nav-links').classList.remove('open');
+      }
+    });
+  });
 </script>
 </body>
 </html>

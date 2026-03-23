@@ -696,6 +696,7 @@
       gap: 16px;
     }
     .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     .nav-toggle { display: flex; }
     .related-grid { grid-template-columns: 1fr; }
   }
@@ -1158,6 +1159,15 @@ document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.
 
 // --- INIT ---
 recalc();
+
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) {
+        document.querySelector('.nav-links').classList.remove('open');
+      }
+    });
+  });
 </script>
 </body>
 </html>

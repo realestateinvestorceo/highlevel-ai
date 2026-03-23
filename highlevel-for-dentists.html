@@ -614,6 +614,7 @@
       gap: 16px;
     }
     .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     .nav-toggle { display: flex; }
     .toc-links { gap: 6px 12px; }
     .related-grid { grid-template-columns: 1fr; }
@@ -805,9 +806,16 @@
   transition: opacity 0.2s;
 }
 .sticky-cta-bar .btn-sticky:hover { opacity: 0.9; }
-@media (max-width: 600px) {
-  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 8px; }
-  .sticky-cta-bar p { font-size: 13px; }
+@media (max-width: 900px) {
+  .sticky-cta-bar { padding: 8px 0; }
+  .sticky-cta-bar .container { flex-direction: row; align-items: center; gap: 12px; }
+  .sticky-cta-bar p { font-size: 12px; flex: 1; }
+  .sticky-cta-bar .btn-sticky { padding: 8px 16px; font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 6px; }
+  .sticky-cta-bar p { font-size: 11px; }
+  .sticky-cta-bar .btn-sticky { padding: 8px 20px; font-size: 13px; width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -1186,7 +1194,7 @@
 
 // Sticky CTA bar - show after 30% scroll
 (function() {
-  var bar = document.getElementById('stickyCta');
+  var bar = document.getElementById('stickyCtaBar');
   if (!bar) return;
   var shown = false;
   window.addEventListener('scroll', function() {
@@ -1194,11 +1202,20 @@
     if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
   });
 })();
+
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) {
+        document.querySelector('.nav-links').classList.remove('open');
+      }
+    });
+  });
 </script>
 
 
 <!-- Sticky CTA Bar -->
-<div class="sticky-cta-bar" id="stickyCta">
+<div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
     <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
