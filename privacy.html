@@ -173,6 +173,7 @@
 }
 .sticky-cta-bar p strong { color: var(--text-primary); }
 .sticky-cta-bar .btn-sticky {
+  touch-action: manipulation;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -191,12 +192,14 @@
   .sticky-cta-bar { padding: 8px 0; }
   .sticky-cta-bar .container { flex-direction: row; align-items: center; gap: 12px; }
   .sticky-cta-bar p { font-size: 12px; flex: 1; }
-  .sticky-cta-bar .btn-sticky { padding: 8px 16px; font-size: 13px; }
+  .sticky-cta-bar .btn-sticky {
+  touch-action: manipulation; padding: 8px 16px; font-size: 13px; }
 }
 @media (max-width: 480px) {
   .sticky-cta-bar .container { flex-direction: column; text-align: center; gap: 6px; }
   .sticky-cta-bar p { font-size: 11px; }
-  .sticky-cta-bar .btn-sticky { padding: 8px 20px; font-size: 13px; width: 100%; justify-content: center; }
+  .sticky-cta-bar .btn-sticky {
+  touch-action: manipulation; padding: 8px 20px; font-size: 13px; width: 100%; justify-content: center; }
 }
 </style>
 </head>
