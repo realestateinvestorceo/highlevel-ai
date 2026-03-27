@@ -1,0 +1,72 @@
+{# ─── Footer partial (includes affiliate disclosure and sticky CTA) ─── #}
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparison">Compare</a>
+      <a href="/about.html">About</a>
+      <a href="/editorial-policy.html">Editorial Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; An independent review and resource site operated by Josh Miller. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. GoHighLevel&trade; is a registered trademark of HighLevel Inc., used here solely for purposes of identification and review.</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Last updated: {{ date_modified_display }}</p>
+    <p class="affiliate-disclosure" id="affiliate-disclosure"><strong>Affiliate Disclosure:</strong> This site participates in the GoHighLevel affiliate program. If you sign up through links on this site, we may earn a commission at no extra cost to you. Our editorial content and opinions are entirely independent and not influenced by that relationship.</p>
+  </div>
+</footer>
+
+<script>
+  // FAQ Toggle with aria-expanded
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => { q.classList.remove('active'); q.setAttribute('aria-expanded', 'false'); });
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); }
+  }
+
+  // Initialize aria-expanded on all FAQ buttons
+  document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+  // Scroll animations with IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+  // Sticky CTA bar - show after 30% scroll
+  (function() {
+    var bar = document.getElementById('stickyCtaBar');
+    if (!bar) return;
+    var shown = false;
+    window.addEventListener('scroll', function() {
+      var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (pct > 0.3 && !shown) { bar.classList.add('visible'); shown = true; }
+    });
+  })();
+
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) {
+        document.querySelector('.nav-links').classList.remove('open');
+      }
+    });
+  });
+</script>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCtaBar">
+  <div class="container">
+    <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+  </div>
+</div>

@@ -1,0 +1,2039 @@
+# Freshness Audit Report -- 2026-03-27
+
+## Summary
+
+- **Pages checked:** 47
+- **Total issues:** 628
+- **Critical:** 623
+- **Warnings:** 5
+
+| Issue Type | Count |
+|---|---|
+| outdated_year | 5 |
+| pricing_mismatch | 623 |
+
+## Critical Issues
+
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...limited contacts on $297+ plans. activecampa...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...n 2026. starting at $97/month with flat-rate pric...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...'s saas pro plan at $497/month lets agencies fully...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...-rate per-contact — $15–$800+/mo email mark...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e per-contact — $15–$800+/mo email marketing...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$15/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...kdown. entry level ~$15/mo — start...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$400/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...pays approximately $400/month for email and autom...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...contact growth. the $297/month unlimited plan incl...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$25` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nth), sms platform ($25–$50/month), schedul...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$50/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `..., sms platform ($25–$50/month), scheduling tool (...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$30/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cheduling tool ($15–$30/month), and website build...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$16` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nd website builder ($16–$45/month) — the ac...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$45/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ebsite builder ($16–$45/month) — the activecampai...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ck commonly exceeds $500–$800/month in total...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$800/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mmonly exceeds $500–$800/month in total software c...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$400` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...pays approximately $400 per month, and ente...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...evel charges a flat $97 per month for the s...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$97/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...r tools starting at $97/mo with flat-rate pric...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$297` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...limited contacts on $297+ plans. activecampa...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$97/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...n 2026. starting at $97/month with flat-rate pric...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$15/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ns at approximately $15/month for 1,000 contacts,...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$4` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...al plan pays around $4...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$497/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...'s saas pro plan at $497/month lets agencies fully...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$15` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...-rate per-contact — $15–$800+/mo email mark...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$800` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...e per-contact — $15–$800+/mo email marketing...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$400/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...pays approximately $400/month for email and autom...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$297/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...contact growth. the $297/month unlimited plan incl...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$97` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...— a funnel builder ($97–$297/month), sms pl...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$25` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...nth), sms platform ($25–$50/month), schedul...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$50/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `..., sms platform ($25–$50/month), scheduling tool (...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$30/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...cheduling tool ($15–$30/month), and website build...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$16` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...nd website builder ($16–$45/month) — the ac...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$45/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ebsite builder ($16–$45/month) — the activecampai...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$500` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ck commonly exceeds $500–$800/month in total...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$800/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...mmonly exceeds $500–$800/month in total software c...`
+- **Pricing mismatch** in `activecampaign-alternative.html`: found `$400` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...pays approximately $400 per month, and ente...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$50/hr` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...saved per week. at $50/hr, that is $2,100/mon...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$2,100/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...at $50/hr, that is $2,100/month in recovered time v...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...recovered time vs. $97-297/mo gohighlevel...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$525` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...lling rate, that is $525 per week or roughly...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$2,100` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...per week or roughly $2,100 per month in recove...`
+- **Pricing mismatch** in `blog/gohighlevel-automations-save-time.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...hlevel costs $97 to $297 per mont...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$100` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mode. agencies save $100-200/mo switching fr...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...n 2026. starting at $97/month, it includes a full...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$200/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...typically save $100–$200/month by consolidating th...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...'s saas pro plan at $497/month lets agencies fully...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$147/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cing (entry) $97/mo $147/mo — basic plan funnel...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...kfunnels' top tier ($297/month) and gohig...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.... but gohighlevel's $297 plan includes unlim...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$100/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...50–$100/month), sms platform ($25...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$25` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nth), sms platform ($25–$50/month), schedul...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$50/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `..., sms platform ($25–$50/month), scheduling tool (...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...), scheduling tool ($15–$30/month), and rev...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$30/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cheduling tool ($15–$30/month), and review manage...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$30` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...review management ($30–$50/month) — the cl...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$350` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ck commonly exceeds $350–$500/month in total...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$500/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mmonly exceeds $350–$500/month in total software c...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$15/client/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...imited pays roughly $15/client/month for the platform. o...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97 per month for the s...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$147` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147 per month for a mor...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mmonly save $100 to $200 per month or more b...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$100` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mode. agencies save $100...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$97/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...n 2026. starting at $97/month, it includes a full...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$200/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...typically save $100–$200/month by consolidating th...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$147/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...asic plan starts at $147/month and only covers fun...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$197/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...il. the pro plan at $197/month adds more funnels a...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$497/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...'s saas pro plan at $497/month lets agencies fully...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$147/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...cing (entry) $97/mo $147/mo — basic plan funnel...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$297/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...kfunnels' top tier ($297/month) and gohighlevel's...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$297` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `.... but gohighlevel's $297 plan includes...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$50` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...arty tools — a crm ($50–$100/month), sms pl...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$100/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...tools — a crm ($50–$100/month), sms platform ($25...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$25` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...nth), sms platform ($25–$50/month), schedul...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$50/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `..., sms platform ($25–$50/month), scheduling tool (...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$15` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...), scheduling tool ($15–$30/month), and rev...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$30/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...cheduling tool ($15–$30/month), and review manage...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$30` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...review management ($30–$50/month) — the cl...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$350` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ck commonly exceeds $350–$500/month in total...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$500/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mmonly exceeds $350–$500/month in total software c...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$2` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...s unlimited plan at $2...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$15/client/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...imited pays roughly $15/client/month for the platform. o...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...highlevel starts at $97 per month for the s...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$147` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147 per month for a mor...`
+- **Pricing mismatch** in `clickfunnels-alternative.html`: found `$200` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mmonly save $100 to $200 per month or more b...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$147/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...funnels basic plan ($147/mo) is capped at 20 fu...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$147/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nels' basic plan at $147/month is...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...e — all starting at $97 per month. other al...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$147/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...funnels basic plan ($147/mo) is capped at 20 fu...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$147/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...nels' basic plan at $147/month is capped at 20 fun...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$197/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...te. the pro plan at $197/month allows 100 f...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$297/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...nnel hacker plan at $297/month unlocks unlimited f...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$97/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...s mode, starting at $97/month. you can start a fr...`
+- **Pricing mismatch** in `clickfunnels-limitations.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...e — all starting at $97 per month. other al...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$81/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ns: starter $97/mo ($81/mo annual), unlimited...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$248/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...unlimited $297/mo ($248/mo annual), saas pro $...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$4` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...o annual), saas pro $4...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$414/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `..., saas pro $497/mo ($414/mo annual). add-on cos...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...clude twilio sms at $0.0079/segment, voice...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$19` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...a2p registration at $19 one-time. typical t...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$112` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cost with add-ons: $112-180/mo for starter,...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$312` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...180/mo for starter, $312-380/mo for unlimite...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...rcom) $ $ base plan $97 sms cost $3.95 voic...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$3` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e plan $97 sms cost $3.95 voice cost $0.00...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$1` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$0.00 phone numbers $1.15 a2p (amortized)...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$103` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...8 gohighlevel total $103.68 tool stack total...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$280` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...y stack easily runs $280+/mo before you add...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...businesses spending $200+ per month on separ...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$0` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...e minutes / month 0 $0.00/mo emails / mont...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$1` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...onth 2,000 $0.00/mo $1.15/mo $19 one-time...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$19` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...0 $0.00/mo $1.15/mo $19 one-time ($1.58/mo...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...rcom) $ $ base plan $97 sms cost $3.95 voic...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$3` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...e plan $97 sms cost $3.95 voice cost $0.00...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$280` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...y stack easily runs $280+/mo before you add...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$1` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...$1.15/mo $19 one-time...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$19` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...$1.15/mo $19 one-time ($1.58/mo...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...rcom) $ $ base plan $97 sms cost $3.95 voic...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$3` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...e plan $97 sms cost $3.95 voice cost $0.00...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$0` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...st $3.95 voice cost $0.00 email cost $0.00...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$103` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...8 gohighlevel total $103.68 tool sta...`
+- **Pricing mismatch** in `gohighlevel-pricing-calculator.html`: found `$280` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...y stack easily runs $280+/mo before you add...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...the saas pro plan ($497/month). this turns a mark...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$400` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...t stack ran me over $400 per month. gohighle...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...currently spending $200 or more per month o...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...latform starting at $97 per month.[4] the p...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$497/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...the saas pro plan ($497/month). this turns a mark...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$400` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...t stack ran me over $400 per month. gohighle...`
+- **Pricing mismatch** in `gohighlevel-reviews.html`: found `$400` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...t stack ran me over $400 per month. gohighle...`
+- **Pricing mismatch** in `gohighlevel-white-label-guide.html`: found `$100,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...instead of spending $100,000–$500,000+ and 12–18...`
+- **Pricing mismatch** in `gohighlevel-white-label-guide.html`: found `$500,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...f spending $100,000–$500,000+ and 12–18 months b...`
+- **Pricing mismatch** in `gohighlevel-white-label-guide.html`: found `$1,485` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...5 clients @ $297/mo $1,485 ~$...`
+- **Pricing mismatch** in `gohighlevel-white-label-guide.html`: found `$197/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...n with basic crm, a $197/mo growth...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...els, and more — for $97–$297/mo. automate c...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.... most coaches save $200–$500/mo by consolid...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$500/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...t coaches save $200–$500/mo by consolidating th...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$16/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e stack — calendly ($16/mo) + kajabi ($149/mo)...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$149/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...($16/mo) + kajabi ($149/mo) + mailchimp ($30/m...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$30/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...49/mo) + mailchimp ($30/mo...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$147/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mo) + clickfunnels ($147/mo) — runs about $342/...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$342/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...47/mo) — runs about $342/mo before you add form...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$245/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...,[2] saving roughly $245/mo or nearly $3,000/ye...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$3,000/year` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...y $245/mo or nearly $3,000/year. beyond cost, the o...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$30/m` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mo email mailchimp ($30/m...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$25/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.../mo forms typeform ($25/mo) forms & surveys $2...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$50/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...o crm hubspot (free–$50/mo) built-in crm $0–50...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...50/mo) built-in crm $0–50/mo total $367–$4...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$367` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...crm $0–50/mo total $367–$417/mo $97/mo (sta...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$417/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$0–50/mo total $367–$417/mo $97/mo (starter) ~$...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$300/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...o $97/mo (starter) ~$300/mo saved → best gohigh...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$9` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...or coaches starter ($9...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$149/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...kajabi ($149/mo) memberships & cour...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$30/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...mo email mailchimp ($30/mo) email marketing $3...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$147/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...nnels clickfunnels ($147/mo) funnel builder $14...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$25/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `.../mo forms typeform ($25/mo) forms & surveys $2...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$50/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...o crm hubspot (free–$50/mo) built-in crm $0–50...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$0` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...50/mo) built-in crm $0–50/mo total $367–$4...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$367` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...crm $0–50/mo total $367–$417/mo $97/mo (sta...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$417/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...$0–50/mo total $367–$417/mo $97/mo (starter) ~$...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...total $367–$417/mo $97/mo (starter) ~$300/mo...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$300/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...o $97/mo (starter) ~$300/mo saved → best gohigh...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...els, and more — for $97–$297/mo. automate c...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$200` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `.... most coaches save $200–$500/m...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$500/m` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...t coaches save $200–$500/m...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$16/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...e stack — calendly ($16/mo) + kajabi ($149/mo)...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$149/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...($16/mo) + kajabi ($149/mo) + mailchimp ($30/m...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$30/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...49/mo) + mailchimp ($30/mo) + clickfunnels ($1...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$147/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mo) + clickfunnels ($147/mo) — runs about $342/...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$342/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...47/mo) — runs about $342/mo before you add form...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$245/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...,[2] saving roughly $245/mo or nearly $3,000/ye...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$3,000/year` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...y $245/mo or nearly $3,000/year. beyond cost, the o...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$25/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `.../mo forms typeform ($25/mo) forms & surveys $2...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$50/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...o crm hubspot (free–$50/mo) built-in crm $0–50...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$0` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...50/mo) built-in crm $0–50/mo total $367–$4...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$367` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...crm $0–50/mo total $367–$417/mo $97/mo (sta...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$417/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...$0–50/mo total $367–$417/mo $97/mo (starter) ~$...`
+- **Pricing mismatch** in `highlevel-for-coaches.html`: found `$300/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...o $97/mo (starter) ~$300/mo saved → best gohigh...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$300` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ystems while paying $300–500...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...single platform for $97–130/mo. this guide...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$97/mo. add roughly $20–30/mo for twilio sm...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$117` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...your total cost is $117–130/mo — a fraction...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$99` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...th first visit" or "$99 new patient special...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$20/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...l mailchimp (email) $20/mo calendly (schedulin...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$16/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...lendly (scheduling) $16/mo podium (rev...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$99/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mo podium (reviews) $99/mo sms service $30/mo...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$30/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$99/mo sms service $30/mo landing page builde...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$29/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...anding page builder $29/mo chatbot tool $39/mo...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$39/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$29/mo chatbot tool $39/mo with gohighlevel st...`
+- **Pricing mismatch** in `highlevel-for-dentists.html`: found `$25/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...o twilio sms/voice ~$25/mo getting started: de...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$122/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...l tools — for about $122/mo total. automate lea...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$139` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...lot. most gyms save $139+/mo by consolidatin...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$99/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$99/mo), and often a chatb...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$29/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nd often a chatbot ($29/mo) and referral tool...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$49/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...and referral tool ($49/mo) on top. that adds...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$261/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...op. that adds up to $261/mo or more — and none...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$25/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...us twilio for sms (~$25/mo) gives you email ma...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$139/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.../mo, saving roughly $139/mo compared to the fra...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$30/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...rketing mailchimp — $30/mo included ingohighle...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$1,668/yr` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ly savings $139/mo ($1,668/yr) getting started ch...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...plus approximately $20–30/mo for twilio sm...`
+- **Pricing mismatch** in `highlevel-for-gyms.html`: found `$120` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...aging. total: about $120–130/mo. this replac...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...n save an estimated $500–$1,500 per month in...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$1,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e an estimated $500–$1,500 per month in softwa...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...the saas pro plan ($497...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ically an estimated $15–$40/mo depending on...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$40/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ly an estimated $15–$40/mo depending on volume...`
+- **Pricing mismatch** in `highlevel-for-med-spas.html`: found `$1,500/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e an estimated $500–$1,500/mo in software costs d...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e unlimited plan at $297 pe...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cks that often cost $500 to $1,000+ per mont...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$1,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...often cost $500 to $1,000+ per month when pur...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ai in one place. at $97 to $297 per month,...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ically estimated at $15 to $40 per month de...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$40` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...estimated at $15 to $40 per month depending...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$500` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...t often cost $500 to $1,000+ per mont...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$1,000` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...often cost $500 to $1,000+ per month when pur...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ai in one place. at $97 to $297 per month,...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$297` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ne place. at $97 to $297 per month, it deliv...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$500` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...t $500 to $1,000+ per mont...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$1,000` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...t $500 to $1,000+ per month when pur...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$97` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...ai in one place. at $97 to $297 per month,...`
+- **Pricing mismatch** in `highlevel-for-real-estate.html`: found `$297` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...ne place. at $97 to $297 per month, it deliv...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$25/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...($97/mo) + twilio (~$25/mo) + zapier ($20/mo)...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$20/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...(~$25/mo) + zapier ($20/mo) = ~$142/mo total....`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$142/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...zapier ($20/mo) = ~$142/mo total. shopify hand...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$50` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s. on a store doing $50k/mo with a 70% aban...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$3,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nment rate, that is $3,500–$5,250 in recovered...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$5,250` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ate, that is $3,500–$5,250 in recovered revenu...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...omers (3+ orders or $500+ lifetime spend) g...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$30` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...up. this replaces a $30–50/mo standalone ch...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...twilio rates (about $0.0079 per segment),...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$45/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...marketing klaviyo — $45/mo gohighlevel $97/mo+...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$19/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...campaigns smsbump — $19/mo product reviews loo...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$29/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...stomer chat tidio — $29/mo upsell funn...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$8/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...funnels reconvert — $8/mo total ~$120/mo in a...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$120/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...vert — $8/mo total ~$120/mo in apps...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...plus approximately $20–30/mo for twilio sm...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$39/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...with shopify basic ($39/mo), your total is abo...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$156` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...your total is about $156–166/mo. this replac...`
+- **Pricing mismatch** in `highlevel-plus-shopify.html`: found `$25` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.../mo), sms platform ($25–50/mo), and custome...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97/month with unlimited cont...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$29/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ts at approximately $29/month for 500 contacts bu...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$29/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...unlimited contacts ~$29/mo — lite (500 contact...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$174/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...pays approximately $174/month for email and basic...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s could easily cost $500–$1,500/month. gohig...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$1,500/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ld easily cost $500–$1,500/month. gohighlevel's unli...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s unlimited plan at $297/month covers unlimited su...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$300` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...are likely spending $300–$600/month across a...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$600/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ikely spending $300–$600/month across all of them....`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$174` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...costs approximately $174 per month for email...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...l's starter plan at $97 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...'s saas pro plan at $497 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$300` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...are likely spending $300–$600/month across a...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$600/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ikely spending $300–$600/month across all of them....`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$9` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...l's starter plan at $9...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$97/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...highlevel starts at $97/month with unlimited cont...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$29` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ts at approximately $29/...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$29/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ts at approximately $29/month for 500 contacts bu...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$97/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ntacts. entry level $97/mo — s...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$29/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...unlimited contacts ~$29/mo — l...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$174/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...contacts on plus: ~$174/mo. 50k contacts on pl...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$486/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...contacts on plus: ~$486/mo.[2] free trial 14 d...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$174/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...pays approximately $174/month for email and basic...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$500` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...s could easily cost $500–$1,500/month. gohig...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$1,500/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ld easily cost $500–$1,500/month. gohighlevel's unli...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$297/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...s unlimited plan at $297/month covers unlimited su...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$497/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...el saas mode on the $497/month plan allows you to...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$300` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...are likely spending $300–$600/mo...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$600/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ikely spending $300–$600/mo...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$174` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...costs approximately $174 per month for email...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$97` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...l's starter plan at $97 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-activecampaign.html`: found `$497` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...'s saas pro plan at $497 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-chatgpt.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...platform priced at $97–$497 per month.[2]...`
+- **Pricing mismatch** in `highlevel-vs-chatgpt.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...tform priced at $97–$497 per month.[2] it co...`
+- **Pricing mismatch** in `highlevel-vs-chatgpt.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cing $97–$497/mo[2] $0–$20/mo[3] the table...`
+- **Pricing mismatch** in `highlevel-vs-chatgpt.html`: found `$20/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...g $97–$497/mo[2] $0–$20/mo[3] the table makes...`
+- **Pricing mismatch** in `highlevel-vs-chatgpt.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...[1] chatgpt plus at $20 per month is a usef...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97/month and includes crm, f...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$147/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147/month and focuses primari...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$300` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...rm commonly reaches $300–$500/month on top o...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$500/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mmonly reaches $300–$500/month on top of the click...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$50` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `..., gohighlevel costs $50 less per month whil...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$600/year` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ls. that represents $600/year in savings before a...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$197/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...plan and 100 on its $197/month pro plan.[1][2] bui...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$300/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ickfunnels plus $50–$300/month for additional tool...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...el saas mode on the $497/month plan allows you to...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ypically range from $200 to $500 per month d...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...range from $200 to $500 per month depending...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97 per month for the s...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$147` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147 per month for its b...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ts saas pro plan at $497 per month. you can...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$97/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...highlevel starts at $97/month and includes crm, f...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$147/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147/month and focuses primari...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$300` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...rm commonly reaches $300–$500/month on top o...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$500/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mmonly reaches $300–$500/month on top of t...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$50` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `..., gohighlevel costs $50 less per month whil...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$600/year` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ls. that represents $600/year in savings before a...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$197/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...plan and 100 on its $197/month pro plan.[1][2] bui...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$300/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ickfunnels plus $50–$300/month for additional tool...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$497/month` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...el saas mode on the $497/month plan allows you to...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$200` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ypically range from $200 to $500 per month d...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$500` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...range from $200 to $500 per month depe...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...highlevel starts at $97 per month for the s...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$147` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ckfunnels starts at $147 per month for its b...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$497` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ts saas pro plan at $497 per month. you can...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$300` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...rm commonly reaches $300–$500/month on top o...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$500/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...mmonly reaches $300–$500/month on top of the click...`
+- **Pricing mismatch** in `highlevel-vs-clickfunnels.html`: found `$97/month` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...these into a single $97/month payment.[1][3] see...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...t $97/mo vs hubspot $800+/mo for comparable...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97/month and replaces 10+ ma...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$20/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ub starts at around $20/month for its starter tie...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$800/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ps to approximately $800/month for profess...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$29` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s unlimited plan at $29...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s unlimited plan at $297/month to hubspot's profes...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$6,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...would save roughly $6,000 per year with gohig...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...paring highlevel at $97–$497/month against...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ng highlevel at $97–$497/month against hubspot at...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...against hubspot at $20–$3,600/month, the m...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$3,600/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...inst hubspot at $20–$3,600/month, the math strongly...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ndors commonly cost $500–$2,000/month combin...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$2,000/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...commonly cost $500–$2,000/month combined.[1][3] tru...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...highlevel starts at $97/mo vs hubspot $800+/mo...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$800` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...t $97/mo vs hubspot $800+/mo for comparable...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$97/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...highlevel starts at $97/month and replaces 10+ ma...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$20/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ub starts at around $20/month for its starter tie...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$800/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ps to approximately $800/month for professional-le...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$297/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...s unlimited plan at $297/month to hubspot's profes...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$6,000` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...would save roughly $6,000 per year with gohig...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...paring highlevel at $97–$497/month against...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$497/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ng highlevel at $97–$497/month against hubspot at...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$20` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...against hubspot at $20–$3,600/month, the m...`
+- **Pricing mismatch** in `highlevel-vs-hubspot.html`: found `$3,600/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...inst hubspot at $20–$3,600/month, the math strongly...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel starts at $97/month with unlimited cont...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$199/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...sionsoft) starts at $199/month...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cies, gohighlevel's $297/month unlimited plan with...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...l's starter plan at $97 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$199` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...pro plan starts at $199 per mon...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$97/month` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...highlevel starts at $97/month with unlimited cont...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$199/month` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...sionsoft) starts at $199/month for 1,500 contacts...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$97/mo` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...ou get. entry level $97/mo — starter[1]crm, fu...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$297/month` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...cies, gohighlevel's $297/month unlimited plan with...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$497/month` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...el saas mode on the $497/month plan allows you to...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$97` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...l's starter plan at $97 per month includes...`
+- **Pricing mismatch** in `highlevel-vs-keap.html`: found `$199` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...pro plan starts at $199 per month for only...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$25` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...-rate vs salesforce $25-$330/use...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$330/use` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e vs salesforce $25-$330/use...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$330/user/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e vs salesforce $25-$330/user/mo. gohighlevel includ...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$2,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ctionality, costing $2,000+/mo...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...small businesses at $97–$497/mo flat-rate p...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$330/user/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...sales teams at $25–$330/user/month, with costs scali...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$25/user/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...price $97/mo (flat) $25/user/mo (starter) 5-user co...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$125` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...5-user cost $97/mo $125–$1,650/mo 10-user c...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$1,650/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...er cost $97/mo $125–$1,650/mo 10-user cost $97/mo...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$250` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...10-user cost $97/mo $250–$3,300/mo crm ✓ ✓ e...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$3,300/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...er cost $97/mo $250–$3,300/mo crm ✓ ✓ email marke...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$500/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...esforce equivalent: $500/mo (...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$1,250/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nal crm, 5 users) + $1,250/mo (marketing cloud fo...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$49` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...anagement — for $97–$49...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$50/user/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...salesforce charges $50/user/mo for einstein ai as...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...them into a single $97/month subscription. the f...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...g 8 more users adds $800/...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$800/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...g 8 more users adds $800/mo to your bill.[1][2]...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...el's saas pro plan ($497...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.../mo vs salesforce's $500–$2,000+/mo when you...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$97/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...highlevel starts at $97/mo flat-rate vs salesf...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$25` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...-rate vs salesforce $25-$330/user/mo. gohig...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$2,000` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...ctionality, costing $2,000+/mo for a small tea...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$97` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...small businesses at $97–$497/mo flat-rate p...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$497/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...l businesses at $97–$497/mo flat-rate p...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$330/user/month` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...sales teams at $25–$330/user/month, with costs scaling...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$297/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `..., gohighlevel costs $297/mo vs salesforce's $2,...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$25/user/m` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...price $97/mo (flat) $25/user/m...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$125` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...5-user cost $97/mo $125–$1,650/mo 10-user c...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$1,650/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...er cost $97/mo $125–$1,650/mo 10-user cost $97/mo...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$250` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...10-user cost $97/mo $250–$3,300/mo crm ✓ ✓ e...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$3,300/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...er cost $97/mo $250–$3,300/mo crm ✓ ✓ email marke...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$500/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...esforce equivalent: $500/mo (professional crm,...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$1,250/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...nal crm, 5 users) + $1,250/mo (marketing cloud fo...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$50/user/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...salesforce charges $50/user/mo for einstein ai as...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$800/mo` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...g 8 more users adds $800/mo to your bill.[1][2]...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$297` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...highlevel costs $97–$297/...`
+- **Pricing mismatch** in `highlevel-vs-salesforce.html`: found `$500` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `.../mo vs salesforce's $500–$2,000+/mo when you...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$9/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...paid plans start at $9/month for 10,000 operatio...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$19` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ort ✓ ✓ ✓ pricing ✓ $19.99+/mo[2] $9+/mo[3]...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$9` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ing ✓ $19.99+/mo[2] $9+/mo[3] learning cur...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$49` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$49 = ~$346/mo[2] $297...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$346/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$49 = ~$346/mo[2] $297 + $29 = ~$3...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$49 = ~$346/mo[2] $297 + $29 = ~$326/mo[3]...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$29` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...~$346/mo[2] $297 + $29 = ~$326/mo[3] heavy...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$326/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mo[2] $297 + $29 = ~$326/mo[3] heavy integratio...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$69` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s $297/mo[1] $297 + $69 = ~$366/mo[2] $297...`
+- **Pricing mismatch** in `highlevel-vs-zapier-make.html`: found `$366/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mo[1] $297 + $69 = ~$366/mo[2] $297 + $49 = ~$3...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$800/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...costs approximately $800/mo versus gohighlevel...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$503/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$297/mo. that is a $503/month difference — or ov...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$6,000/year` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ifference — or over $6,000/year in savings — and go...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...highlevel offers at $97/month, you are spending 3...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...latform starting at $97 per month. hubspot...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...h. hubspot requires $800 per month or more t...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$800/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...costs approximately $800/mo versus gohighlevel...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$297/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...hlevel unlimited at $297/mo...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$20/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ts at approximately $20/month on the starter...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$800/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...er at approximately $800/month. enterprise pricing...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$3,600/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ing jumps to around $3,600/month.[2] for agencies ma...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$3,600` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `.../mo) or enterprise ($3,600...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...orms, no automation $97/mo — starter[1]crm, fu...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$2` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ub-account starter ~$2...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$503/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...$297/mo. that is a $503/month difference — or ove...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$6,000/year` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ifference — or over $6,000/year in savings — and go...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$97/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...highlevel offers at $97/month, you are spending 3...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$497/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...7/mo) and saas pro ($497/mo) plans include unli...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...latform starting at $97 per month. hubspot...`
+- **Pricing mismatch** in `hubspot-alternative.html`: found `$800` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...h. hubspot requires $800 per month or more t...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$800/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...fessional starts at $800/mo for 2,000 contacts...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...onboarding fees of $3,000-$6,000 for professi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$6,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ding fees of $3,000-$6,000 for professional an...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...t-rate pricing from $97-$497/mo with unlimi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$20/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ional — a jump from $20/month to $800/month. hubs...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$800/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...p from $20/month to $800/month. hubspot vs flat-ra...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$1,160/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...at 10,000 contacts ~$1,160/mo $297/mo cost at 50,...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$2,960/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...at 50,000 contacts ~$2,960/mo $297/mo onboarding...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$297/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...tacts pays the same $297/month as an agency managi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s range from $500 to $3,500 depending...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...range from $500 to $3,500 depending on the ti...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...pricing from $97 to $497 per month with unli...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e unlimited plan at $297 per month includes...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$800/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...fessional starts at $800/mo for 2,000 contacts...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,0` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...onboarding fees of $3,0...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,000` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...onboarding fees of $3,000-$6,000 for professi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$6,000` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ding fees of $3,000-$6,000 for professional an...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...t-rate pricing from $97-$497/mo with unlimi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$497/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...te pricing from $97-$497/mo with unlimited cont...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$800` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ents. professional ($800+/mo). this is the t...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$800/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...t the base price of $800/month only covers 2,000 m...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$225/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...tacts costs roughly $225/month. an agency managing...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$1,610/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...d pay approximately $1,610/month for the marketing h...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,600` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...alone. enterprise ($3,600+/mo). hubspot's ent...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,600/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ution. it starts at $3,600/month for 10,000 marketin...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$2` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...r-contact overages ~$2...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$225` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...r-contact overages ~$225 per 5,000 contacts...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$500` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...g fees ranging from $500 to $3,500 e...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,500` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...anging from $500 to $3,500 e...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$8,000/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ing at a minimum of $8,000/month in hubspot subscrip...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$20/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ional — a jump from $20/month to $800/month. hubs...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$297/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...base price $800/mo $297/mo contacts included 2...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$1,160/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...at 10,000 contacts ~$1,160/mo $297/mo cost at 50,...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ot's: starter plan ($97/mo): includes crm, ema...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$297/month` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...tacts pays the same $297/month as an agency managi...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$0` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...d pricing starts at $0 for the free tier a...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$20` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...r the free tier and $20 per month for start...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$297` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...e unlimited plan at $297 per month includes...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$3,600/month` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...ution. it starts at $3,600/month for 10,000 marketin...`
+- **Pricing mismatch** in `hubspot-pricing-limits.html`: found `$225` for **salesforce** (known: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+  - Context: `...r-contact overages ~$225 per 5,000 contacts...`
+- **Pricing mismatch** in `index.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...dict after 6 years ($97–$497/mo) gohighleve...`
+- **Pricing mismatch** in `index.html`: found `$800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mpetitors: hubspot ($800+/mo for comparable...`
+- **Pricing mismatch** in `index.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...he saas pro plan at $497 per month. this all...`
+- **Pricing mismatch** in `index.html`: found `$147/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...)[6], clickfunnels ($147/mo)[7], calendly ($12/...`
+- **Pricing mismatch** in `index.html`: found `$12/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...7/mo)[7], calendly ($12/mo)[11], activecampaig...`
+- **Pricing mismatch** in `index.html`: found `$150` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...1], activecampaign ($150+/mo)[8], twilio ($5...`
+- **Pricing mismatch** in `index.html`: found `$50` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...50+/mo)[8], twilio ($50+/mo), and a reputat...`
+- **Pricing mismatch** in `index.html`: found `$100` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...on management tool ($100+/mo) — totaling wel...`
+- **Pricing mismatch** in `index.html`: found `$1,200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...totaling well over $1,200 per month. gohighle...`
+- **Pricing mismatch** in `index.html`: found `$97/m` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e the starter plan ($97/m...`
+- **Pricing mismatch** in `index.html`: found `$147` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...builder starting at $147 per month,[7] while...`
+- **Pricing mismatch** in `index.html`: found `$49` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...starting at around $49 per month[8], but i...`
+- **Pricing mismatch** in `index.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...starter $97/mo[1] ~$15–25/mo ~$112–122/mo...`
+- **Pricing mismatch** in `index.html`: found `$112` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...7/mo[1] ~$15–25/mo ~$112–122/mo ~1,000 sms/m...`
+- **Pricing mismatch** in `index.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...arges approximately $0.0079/sms segment an...`
+- **Pricing mismatch** in `index.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...if you are spending $200 or more per month o...`
+- **Pricing mismatch** in `index.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...port saving between $500 and $2,000 per mont...`
+- **Pricing mismatch** in `index.html`: found `$2,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ng between $500 and $2,000 per month in softwa...`
+- **Pricing mismatch** in `index.html`: found `$29` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nlimited plan costs $29...`
+- **Pricing mismatch** in `index.html`: found `$997` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nd $997 per month for their...`
+- **Pricing mismatch** in `index.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...eir clients between $297 and $997 per month...`
+- **Pricing mismatch** in `index.html`: found `$10,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...y owners generating $10,000 to $100,000 or more...`
+- **Pricing mismatch** in `index.html`: found `$100,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nerating $10,000 to $100,000 or more per month i...`
+- **Pricing mismatch** in `index.html`: found `$800` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...mpetitors: hubspot ($800+/mo for comparable...`
+- **Pricing mismatch** in `index.html`: found `$500` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...st agencies between $500 and $2,000 per mont...`
+- **Pricing mismatch** in `index.html`: found `$2,000` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...es between $500 and $2,000 per month. a typica...`
+- **Pricing mismatch** in `index.html`: found `$147/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...)[6], clickfunnels ($147/mo)[7], calendly ($12/...`
+- **Pricing mismatch** in `index.html`: found `$12/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...7/mo)[7], calendly ($12/mo)[11], activecampaig...`
+- **Pricing mismatch** in `index.html`: found `$150` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...1], activecampaign ($150+/mo)[8], twilio ($5...`
+- **Pricing mismatch** in `index.html`: found `$50` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...50+/mo)[8], twilio ($50+/mo), and a reputat...`
+- **Pricing mismatch** in `index.html`: found `$100` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...on management tool ($100+/mo) — totaling wel...`
+- **Pricing mismatch** in `index.html`: found `$1,200` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...totaling well over $1,200 per month....`
+- **Pricing mismatch** in `index.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...✗ ✗ starting price $97/mo $800+/mo $147/mo $4...`
+- **Pricing mismatch** in `index.html`: found `$49` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...mo $800+/mo $147/mo $49+/mo highlevel vs hu...`
+- **Pricing mismatch** in `index.html`: found `$97` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...highlevel starts at $97 per month. gohighle...`
+- **Pricing mismatch** in `index.html`: found `$800` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mpetitors: hubspot ($800+/mo for comparable...`
+- **Pricing mismatch** in `index.html`: found `$500` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...st agencies between $500 and $2,000 per mont...`
+- **Pricing mismatch** in `index.html`: found `$2,000` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...es between $500 and $2,000 per month. a typica...`
+- **Pricing mismatch** in `index.html`: found `$147/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...)[6], clickfunnels ($147/mo)[7], calendly ($12/...`
+- **Pricing mismatch** in `index.html`: found `$12/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...7/mo)[7], calendly ($12/mo)[11], activecampaig...`
+- **Pricing mismatch** in `index.html`: found `$150` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...1], activecampaign ($150+/mo)[8], twilio ($5...`
+- **Pricing mismatch** in `index.html`: found `$50` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...50+/mo)[8], twilio ($50+/mo), and a reputat...`
+- **Pricing mismatch** in `index.html`: found `$100` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...on management tool ($100+/mo) — totaling wel...`
+- **Pricing mismatch** in `index.html`: found `$1,200` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...totaling well over $1,200 per month. gohighle...`
+- **Pricing mismatch** in `index.html`: found `$147` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...builder starting at $147 per month,[7] while...`
+- **Pricing mismatch** in `index.html`: found `$97` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...latform starting at $97 per month[1] that i...`
+- **Pricing mismatch** in `index.html`: found `$800` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...mpetitors: hubspot ($800+/mo for comparable...`
+- **Pricing mismatch** in `index.html`: found `$500` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...st agencies between $500 and $2,000 per mont...`
+- **Pricing mismatch** in `index.html`: found `$2,000` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...es between $500 and $2,000 per month. a typica...`
+- **Pricing mismatch** in `index.html`: found `$147/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...)[6], clickfunnels ($147/mo)[7], calendly ($12/...`
+- **Pricing mismatch** in `index.html`: found `$12/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...7/mo)[7], calendly ($12/mo)[11], activecampaig...`
+- **Pricing mismatch** in `index.html`: found `$150` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...1], activecampaign ($150+/mo)[8], twilio ($5...`
+- **Pricing mismatch** in `index.html`: found `$50` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...50+/mo)[8], twilio ($50+/mo), and a reputat...`
+- **Pricing mismatch** in `index.html`: found `$100` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...on management tool ($100+/mo) — totaling wel...`
+- **Pricing mismatch** in `index.html`: found `$1,200` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...totaling well over $1,200 per month. gohighle...`
+- **Pricing mismatch** in `index.html`: found `$97` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...f these starting at $97 per month while add...`
+- **Pricing mismatch** in `index.html`: found `$49` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...starting at around $49 per month[8], but i...`
+- **Pricing mismatch** in `index.html`: found `$800` for **keap** (known: $199/mo, $289/mo, $349/mo)
+  - Context: `...mpetitors: hubspot ($800+/mo for comparable...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...that can range from $0.0079 to $0.05+ depe...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$80` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e twilio charges of $80–$150 on top of thei...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$150` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ilio charges of $80–$150 on top of their goh...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...w to fix it: budget $15–$80 per month for t...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...it typically costs $500–$2,000 but can save...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$2,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ypically costs $500–$2,000 but can save you we...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...the saas pro plan ($497/month) includes dedicated...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$500,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cts could result in $500,000 to $1,500,000 in po...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$1,500,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...sult in $500,000 to $1,500,000 in potential liabil...`
+- **Pricing mismatch** in `mistakes-to-avoid.html`: found `$1,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...damages of $500 to $1,500 per unsolicited tex...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$81/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...billing saves ~17% ($81/mo,...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$248/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...saves ~17% ($81/mo, $248/mo, $414/mo). hidden c...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$414/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...% ($81/mo, $248/mo, $414/mo). hidden costs: twi...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...s: twilio sms/voice $15-$80/m...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$80/m` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...wilio sms/voice $15-$80/m...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$80/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...wilio sms/voice $15-$80/mo, mailgun email ~$0....`
+- **Pricing mismatch** in `pricing-explained.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.../mo, mailgun email ~$0.80 per 1,...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$1` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e number runs about $1.15 per month. gohig...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$4` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ee of approximately $4 and a campaign regi...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$2` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nthly fee of around $2 per registered camp...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$19` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...c registration ~$15–$19 one-time + $2/mo[2]...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$2/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...~$15–$19 one-time + $2/mo[2] twilio / carrier...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$5/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...sms (est. volume) ~$5/mo (500 msgs)...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$50` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...re a crm ($50+/mo), a funnel buil...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `..., a funnel builder ($97–$147/mo), an email...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$147/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...funnel builder ($97–$147/mo), an email platform...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...an email platform ($20–$50/mo), a scheduli...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$50/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...email platform ($20–$50/mo), a scheduling tool...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$10` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...a scheduling tool ($10–$15/mo), and an sms...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$15/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...cheduling tool ($10–$15/mo), and an sms servic...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$360/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...plan, the estimated $360/mo covers unlimited cl...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$100` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...that to paying $50–$100 per client per mont...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...you charge clients $200–$500/mo for your ma...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$500/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...charge clients $200–$500/mo for your marketing...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$800/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ng price $97/mo[1] ~$800/mo (professional)[5] $...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$49/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nal)[5] $147/mo[6] ~$49/mo (plus)[7] crm ✓ ✓ ✗...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...el option saas pro ($497) ✗ ✗ ✗ free trial 1...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$80` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ce of approximately $80...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$972/year` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...en billed annually ($972/year). the unlimited pla...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$2,976/year` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...nnually ($2,976/year). annual billing ef...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ign. starting price $97/mo[1] ~$800/mo (profes...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$800/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ng price $97/mo[1] ~$800/mo (professional)[5] $...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$147/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...o (professional)[5] $147/mo[6] ~$49/mo (plus)[7...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$49/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...nal)[5] $147/mo[6] ~$49/mo (plus)[7] crm ✓ ✓ ✗...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$497` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...el option saas pro ($497) ✗ ✗ ✗ free trial 1...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$800/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ng price $97/mo[1] ~$800/mo (professional)[5] $...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$147/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...o (professional)[5] $147/mo[6] ~$49/mo (plus)[7...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$49/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...nal)[5] $147/mo[6] ~$49/mo (plus)[7] crm ✓ ✓ ✗...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$97/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ign. starting price $97/mo[1] ~$800/mo (profes...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$800/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...ng price $97/mo[1] ~$800/mo (professional)[5] $...`
+- **Pricing mismatch** in `pricing-explained.html`: found `$147/mo` for **activecampaign** (known: $145/mo, $15/mo, $49/mo, $79/mo)
+  - Context: `...o (professional)[5] $147/mo[6] ~$49/mo (plus)[7...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$50` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...for tools like crm ($50), email marketing (...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$30` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...), email marketing ($30), sms ($25), funnel...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$25` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...rketing ($30), sms ($25), funnel builder ($...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...5), funnel builder ($97), scheduling ($16),...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$16` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...($97), scheduling ($16), automation ($29),...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$29` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...($16), automation ($29), chatbot ($39), re...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$39` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ion ($29), chatbot ($39), review management...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...most agencies save $200-500+/mo by switchin...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$20` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...o saas pro /mo add ~$20-40/mo for sms/voice...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$218/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...lio tool stack cost $218/mo gohighlevel plan $9...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$300` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...most agencies spend $300-$800/mo on 5-8 sepa...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$800/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...agencies spend $300-$800/mo on 5-8 separate too...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$16/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ling like calendly ($16/mo), automation like z...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$29/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...mation like zapier ($29/mo), and a chatbot lik...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$39/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...tbot like intercom ($39/mo). the total adds up...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$300` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...most agencies spend $300-$800/mo on 5-8 sepa...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$800/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...agencies spend $300-$800/mo on 5-8 separate too...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$50` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...a crm like hubspot ($50+/mo), email marketi...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$30/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ing like mailchimp ($30/mo), sms like simplete...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$25/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...like simpletexting ($25/mo), a funnel builder...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$97/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...like clickfunnels ($97/mo), scheduling like c...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$16/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...ling like calendly ($16/mo), automation like z...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$29/mo` for **hubspot** (known: $0/mo, $20/mo, $3,600/mo, $890/mo)
+  - Context: `...mation like zapier ($29/mo), a...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$300` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...gencies spend $300-$800/mo on 5-8 sepa...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$800/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...gencies spend $300-$800/mo on 5-8 separate too...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$50` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...a crm like hubspot ($50+/mo), email marketi...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$30/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ing like mailchimp ($30/mo), sms like simplete...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$25/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...like simpletexting ($25/mo), a funnel builder...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$16/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...ling like calendly ($16/mo), automation like z...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$29/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...mation like zapier ($29/mo), and a chatbot lik...`
+- **Pricing mismatch** in `tool-stack-savings-calculator.html`: found `$39/mo` for **clickfunnels** (known: $297/mo, $97/mo)
+  - Context: `...tbot like intercom ($39/mo). the total adds up...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$1,325` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...monthly retainer $1,325 monthly profit per...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$530` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...y profit per client $530 annual profit per c...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$6,360` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...l profit per client $6,360 5 $6,625 $2,650 $31...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$6,625` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...per client $6,360 5 $6,625 $2,650 $31,800 10 $...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$2,650` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ent $6,360 5 $6,625 $2,650 $31,800 10 $13,250...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$31,800` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...360 5 $6,625 $2,650 $31,800 10 $13,250 $5,300 $...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$13,250` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...5 $2,650 $31,800 10 $13,250 $5,300 $63,600 20 $...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$5,300` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$31,800 10 $13,250 $5,300 $63,600 20 $26,500...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$63,600` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...0 10 $13,250 $5,300 $63,600 20 $26,500 $10,600...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$26,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...0 $5,300 $63,600 20 $26,500 $10,600 $127,200 50...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$10,600` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$63,600 20 $26,500 $10,600 $127,200 50 $66,250...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$127,200` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...20 $26,500 $10,600 $127,200 50 $66,250 $26,500...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$66,250` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...$10,600 $127,200 50 $66,250 $26,500 $318,000 →...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$318,000` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...50 $66,250 $26,500 $318,000 → how gohighlevel m...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$197` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ost agencies charge $197–$497/mo per client...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$1,500` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...age agency retainer $1,500-$5,000/mo, average...`
+- **Pricing mismatch** in `tools/agency-pricing-calculator.html`: found `$5,000/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ncy retainer $1,500-$5,000/mo, average markup on...`
+- **Pricing mismatch** in `tools/email-subject-line-tester.html`: found `$97/m` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ols. plans start at $97/m...`
+- **Pricing mismatch** in `tools/feature-comparison.html`: found `$297/m` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `.... $97/mo best value $297/m...`
+- **Pricing mismatch** in `tools/sms-cost-estimator.html`: found `$0` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...sms outbound costs $0.0079/segment, mms c...`
+- **Pricing mismatch** in `tools/sms-cost-estimator.html`: found `$7` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ampaign costs about $7.90 in sms fees. mes...`
+- **Pricing mismatch** in `tools/sms-cost-estimator.html`: found `$19` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...c registration ($19 one-time) is requir...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$15` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...res twilio account ($15-$40/mo additional)....`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$40/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...twilio account ($15-$40/mo additional). answer...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$1/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...ound $1/mo and toll-free numbe...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$2/mo` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...free numbers around $2/mo through twilio.[2]...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$297` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...e unlimited plan at $297 per month and the s...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$497` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...he saas pro plan at $497 per month.[4] it is...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...the starter plan at $97 per month. in addit...`
+- **Pricing mismatch** in `voice-agent-setup.html`: found `$40` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...an estimated $15 to $40 per month depending...`
+- **Pricing mismatch** in `which-gohighlevel-plan.html`: found `$97/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...vel plans starter — $97/month the starter plan is...`
+- **Pricing mismatch** in `which-gohighlevel-plan.html`: found `$497/month` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...es land. saas pro — $497/month saas pro is designe...`
+- **Pricing mismatch** in `which-gohighlevel-plan.html`: found `$197` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...y to charge clients $197-497+ per mont...`
+- **Pricing mismatch** in `workflows-for-agencies.html`: found `$97` for **gohighlevel** (known: $297/mo, $497/mo, $97/mo)
+  - Context: `...gohighlevel plans ($97-$497/mo). source: h...`
+
+## Warnings
+
+- **Outdated year** `2020` in `about.html` (`<p>`) -- `...By 2020 I had moved on from real esta...`
+- **Outdated year** `2014` in `clickfunnels-alternative.html` (`<p>`) -- `...a go-to funnel builder since 2014, but the landscape has shifte...`
+- **Outdated year** `2014` in `clickfunnels-limitations.html` (`<p>`) -- `...ussell Brunson launched it in 2014. It popularized the idea of d...`
+- **Outdated year** `2024` in `highlevel-for-coaches.html` (`<p>`) -- `...se and membership platform in 2024,[1] which is a game-changer f...`
+- **Outdated year** `2023` in `workflows-for-agencies.html` (`<p>`) -- `...s older "Campaigns" system in 2023. Where Campaigns were limited...`
+
+## Full Details
+
+### `about.html`
+_0 critical, 1 warnings_
+
+- [WARNING] Year `2020` in `<p>`: `...By 2020 I had moved on from real esta...`
+
+### `activecampaign-alternative.html`
+_36 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$400/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$45/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$400` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$297` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$15/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$4` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$497/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$15` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$800` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$400/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$297/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$25` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$50/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$30/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$16` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$45/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$500` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$800/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$400` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+
+### `blog/gohighlevel-automations-save-time.html`
+_6 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$50/hr` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,100/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$525` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,100` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `clickfunnels-alternative.html`
+_42 critical, 1 warnings_
+
+- [WARNING] Year `2014` in `<p>`: `...a go-to funnel builder since 2014, but the landscape has shifte...`
+- [CRITICAL] Pricing: found `$100` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$350` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15/client/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$350` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15/client/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for clickfunnels (expected one of: $297/mo, $97/mo)
+
+### `clickfunnels-limitations.html`
+_9 critical, 1 warnings_
+
+- [WARNING] Year `2014` in `<p>`: `...ussell Brunson launched it in 2014. It popularized the idea of d...`
+- [CRITICAL] Pricing: found `$147/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$147/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+
+### `gohighlevel-pricing-calculator.html`
+_27 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$81/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$248/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$4` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$414/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$112` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$312` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$103` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$280` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$19` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$280` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$103` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$280` for clickfunnels (expected one of: $297/mo, $97/mo)
+
+### `gohighlevel-reviews.html`
+_7 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$400` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$400` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$400` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+
+### `gohighlevel-white-label-guide.html`
+_4 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$100,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,485` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-for-coaches.html`
+_44 critical, 1 warnings_
+
+- [WARNING] Year `2024` in `<p>`: `...se and membership platform in 2024,[1] which is a game-changer f...`
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$149/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$342/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$245/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,000/year` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/m` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$367` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$417/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$9` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$149/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$30/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$147/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$25/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$50/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$0` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$367` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$417/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$300/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/m` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$149/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$342/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$245/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,000/year` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$367` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$417/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+
+### `highlevel-for-dentists.html`
+_12 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$300` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$117` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$99` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$99/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$39/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-for-gyms.html`
+_12 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$122/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$139` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$99/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$261/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$139/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,668/yr` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$120` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-for-med-spas.html`
+_6 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$40/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-for-real-estate.html`
+_14 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$40` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1,000` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$500` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$1,000` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$97` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$297` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+
+### `highlevel-plus-shopify.html`
+_18 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$25/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$142/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$5,250` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$45/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$8/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$120/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$39/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$156` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-vs-activecampaign.html`
+_32 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$174/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$600/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$174` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$600/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$9` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$29` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$29/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$29/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$174/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$486/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$174/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$500` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$1,500/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$297/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$497/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$300` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$600/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$174` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$497` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+
+### `highlevel-vs-chatgpt.html`
+_5 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `highlevel-vs-clickfunnels.html`
+_31 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$600/year` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$600/year` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$500/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97/month` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+
+### `highlevel-vs-hubspot.html`
+_24 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$6,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,600/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,000/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$20/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$6,000` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$497/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$20` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+
+### `highlevel-vs-keap.html`
+_12 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$199/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$199` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$199/month` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$97/mo` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$297/month` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$497/month` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$97` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+- [CRITICAL] Pricing: found `$199` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+
+### `highlevel-vs-salesforce.html`
+_38 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$25` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$330/use` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$330/user/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$330/user/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/user/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$125` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,650/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$250` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,300/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,250/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/user/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$25` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$2,000` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$97` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$497/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$330/user/month` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$297/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$25/user/m` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$125` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$1,650/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$250` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$3,300/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$500/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$1,250/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$50/user/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$800/mo` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$297` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$500` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+
+### `highlevel-vs-zapier-make.html`
+_10 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$9/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$9` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$346/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$326/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$69` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$366/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `hubspot-alternative.html`
+_20 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$800/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$503/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$6,000/year` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$20/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$2` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$503/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$6,000/year` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$497/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+
+### `hubspot-pricing-limits.html`
+_40 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$800/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$6,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,160/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,960/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$3,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,0` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,000` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$6,000` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$497/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$225/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1,610/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$2` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$225` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$500` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,500` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$8,000/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$20/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1,160/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297/month` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$0` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$20` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$297` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$3,600/month` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+- [CRITICAL] Pricing: found `$225` for salesforce (expected one of: $165/user/mo, $25/user/mo, $330/user/mo, $80/user/mo)
+
+### `index.html`
+_58 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$12/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$150` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/m` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$112` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$997` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$10,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$500` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$2,000` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$147/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$12/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$150` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$50` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$100` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$1,200` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$49` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,000` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$12/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$150` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,200` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$500` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$2,000` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$147/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$12/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$150` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$50` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$100` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$1,200` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$97` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$49` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$800` for keap (expected one of: $199/mo, $289/mo, $349/mo)
+
+### `mistakes-to-avoid.html`
+_10 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$80` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$150` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `pricing-explained.html`
+_41 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$81/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$248/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$414/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$80/m` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$80/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$4` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$5/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$10` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$15/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$360/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$100` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$500/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$80` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$972/year` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,976/year` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$147/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$49/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$497` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$147/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$49/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$800/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+- [CRITICAL] Pricing: found `$147/mo` for activecampaign (expected one of: $145/mo, $15/mo, $49/mo, $79/mo)
+
+### `tool-stack-savings-calculator.html`
+_31 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$50` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$39` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$20` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$218/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$39/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$300` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$800/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$50` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$30/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$25/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$97/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$16/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$29/mo` for hubspot (expected one of: $0/mo, $20/mo, $3,600/mo, $890/mo)
+- [CRITICAL] Pricing: found `$300` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$800/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$50` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$30/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$25/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$16/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$29/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+- [CRITICAL] Pricing: found `$39/mo` for clickfunnels (expected one of: $297/mo, $97/mo)
+
+### `tools/agency-pricing-calculator.html`
+_17 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$1,325` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$530` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$6,360` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$6,625` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2,650` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$31,800` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$13,250` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$5,300` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$63,600` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$26,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$10,600` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$127,200` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$66,250` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$318,000` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1,500` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$5,000/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `tools/email-subject-line-tester.html`
+_1 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97/m` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `tools/feature-comparison.html`
+_1 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$297/m` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `tools/sms-cost-estimator.html`
+_3 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$0` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$7` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$19` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `voice-agent-setup.html`
+_8 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$15` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$40/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$1/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$2/mo` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$297` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$40` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `which-gohighlevel-plan.html`
+_3 critical, 0 warnings_
+
+- [CRITICAL] Pricing: found `$97/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$497/month` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+- [CRITICAL] Pricing: found `$197` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+### `workflows-for-agencies.html`
+_1 critical, 1 warnings_
+
+- [WARNING] Year `2023` in `<p>`: `...s older "Campaigns" system in 2023. Where Campaigns were limited...`
+- [CRITICAL] Pricing: found `$97` for gohighlevel (expected one of: $297/mo, $497/mo, $97/mo)
+
+---
+_Generated by freshness_monitor.py at 2026-03-27 09:54:35_

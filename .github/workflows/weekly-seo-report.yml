@@ -34,19 +34,19 @@ jobs:
         working-directory: ${{ github.workspace }}
 
       - name: Install Node.js dependencies
-        run: npm install
-        working-directory: ${{ github.workspace }}
+        run: |
+          if [ -f package.json ]; then npm install; else echo "No package.json, skipping"; fi
 
       - name: Write credentials files
         run: |
-          mkdir -p site/scripts/.credentials
+          mkdir -p scripts/.credentials
           echo '${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}' > /tmp/ga4-service-account.json
-          echo '${{ secrets.GSC_CLIENT_SECRET_JSON }}' > site/scripts/.credentials/client_secret.json
-          echo '${{ secrets.GSC_TOKEN_JSON }}' > site/scripts/.credentials/token.json
+          echo '${{ secrets.GSC_CLIENT_SECRET_JSON }}' > scripts/.credentials/client_secret.json
+          echo '${{ secrets.GSC_TOKEN_JSON }}' > scripts/.credentials/token.json
 
       - name: Create .env file
         run: |
-          cat > .env << 'ENVEOF'
+          cat > .env << ENVEOF
           GA4_PROPERTY_ID=526181718
           GA4_SERVICE_ACCOUNT_FILE=/tmp/ga4-service-account.json
           GSC_SITE_URL=sc-domain:highlevel.ai

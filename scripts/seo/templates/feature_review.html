@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include 'partials/head.html' %}
+
+<!-- Schema: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "{{ date_published }}",
+  "dateModified": "{{ date_modified }}",
+  "mainEntityOfPage": "{{ canonical_url }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.highlevel.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://www.highlevel.ai/#features"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ feature.name }}"
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "mainEntity": [
+    {% for faq in feature.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.q }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.a }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GoHighLevel",
+  "alternateName": ["HighLevel", "HighLevel AI", "GHL"],
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based (Cloud SaaS)",
+  "description": "GoHighLevel is an all-in-one AI-powered marketing, CRM, and automation platform for agencies and small businesses.",
+  "url": "https://www.gohighlevel.com/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "97",
+    "highPrice": "497",
+    "priceCurrency": "USD",
+    "offerCount": "3"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "bestRating": "5",
+    "ratingCount": "5200"
+  }
+}
+</script>
+
+{% include 'partials/css_base.html' %}
+</head>
+<body>
+{% include 'partials/nav.html' %}
+
+<!-- AI-CITABLE SUMMARY (visually hidden, crawlable) -->
+<div class="ai-summary" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<h2>GoHighLevel {{ feature.name }} Review</h2>
+<p>GoHighLevel {{ feature.name }} ({{ date_modified_display }}): {{ feature.description | truncate(200) }} {{ feature.editorial | truncate(200) }} Source: highlevel.ai/{{ feature.slug }}.html</p>
+</div>
+
+<main><article><div class="container">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; {{ feature.name }}
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header animate-on-scroll">
+    <div class="section-tag">FEATURE REVIEW</div>
+    <h1>GoHighLevel {{ feature.name }} Review ({{ year }}): Setup, Pricing &amp; Honest Verdict</h1>
+    <p class="article-meta">Updated {{ date_modified_display }} &middot; {{ read_time }} min read</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name"><a href="/about.html" style="color:inherit;text-decoration:none;">Josh Miller</a></div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="inline-disclosure">This article contains affiliate links. See our <a href="/editorial-policy.html">editorial policy</a>.</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-bar animate-on-scroll">
+    <p>On This Page</p>
+    <ul class="toc-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#setup">Setup Guide</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+      <li><a href="#editorial">Our Take</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">OVERVIEW</div>
+      <h2>What Is GoHighLevel {{ feature.name }}?</h2>
+    </div>
+    <div class="content-block">
+      <p>{{ feature.description }}</p>
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  <div style="text-align:center; padding:40px 0;" class="animate-on-scroll">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a>
+    <p class="inline-disclosure">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
+  </div>
+
+  <!-- SETUP GUIDE -->
+  <section id="setup" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">SETUP</div>
+      <h2>How to Set Up {{ feature.name }}</h2>
+      <p>Step-by-step guide to getting started</p>
+    </div>
+    <ol class="setup-list">
+      {% for step in feature.setup_steps %}
+      <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">PRICING</div>
+      <h2>{{ feature.name }} Pricing</h2>
+    </div>
+    <div class="content-block">
+      <p>{{ feature.pricing }}</p>
+    </div>
+  </section>
+
+  <!-- PROS & CONS -->
+  <section id="pros-cons" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">ANALYSIS</div>
+      <h2>Pros &amp; Cons</h2>
+    </div>
+    <div class="pros-cons-grid" style="max-width:780px;margin:0 auto;">
+      <div class="pros-column">
+        <h3>&#9989; Pros</h3>
+        <ul>
+          {% for pro in feature.pros %}
+          <li>{{ pro }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="cons-column">
+        <h3>&#10060; Cons</h3>
+        <ul>
+          {% for con in feature.cons %}
+          <li>{{ con }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL -->
+  <section id="editorial" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">OUR TAKE</div>
+      <h2>Our Honest Assessment</h2>
+    </div>
+    <div class="content-block">
+      {{ feature.editorial }}
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  <div style="text-align:center; padding:40px 0;" class="animate-on-scroll">
+    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your 14-Day Free Trial &rarr;</a>
+    <p class="inline-disclosure">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq" class="page-section animate-on-scroll">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      {% for faq in feature.faqs %}
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">{{ faq.q }}</button>
+        <div class="faq-answer">
+          <p>{{ faq.a }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <div class="related-guides animate-on-scroll">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/" class="related-card">
+        <span class="related-tag">Pillar Review</span>
+        <span class="related-title">HighLevel AI Review {{ year }} &mdash; Pricing, Features &amp; Verdict</span>
+      </a>
+      <a href="/pricing-explained.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">GoHighLevel Pricing Explained: Which Plan Is Right for You?</span>
+      </a>
+      {% for related in related_pages[:2] %}
+      <a href="/{{ related.slug }}.html" class="related-card">
+        <span class="related-tag">{{ related.type }}</span>
+        <span class="related-title">{{ related.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="final-cta animate-on-scroll">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>Test {{ feature.name }} and every other feature with a no-commitment trial &mdash; no credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+</div></article></main>
+
+<!-- LLM-only summary -->
+<div class="headless-data">
+  GoHighLevel {{ feature.name }}: {{ feature.description | truncate(300) }} {{ feature.editorial | truncate(200) }} Plans start at $97/mo. 14-day free trial available at gohighlevel.com.
+</div>
+
+{% include 'partials/footer.html' %}
+</body>
+</html>

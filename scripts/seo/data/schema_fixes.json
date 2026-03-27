@@ -1,0 +1,337 @@
+{
+  "about.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "Person",
+      "reason": "Missing Person schema"
+    }
+  ],
+  "activecampaign-alternative.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "best-prompts-sales-support.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-automations-save-time.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-march-2026-updates.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/index.html": [
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    }
+  ],
+  "blog/setup-gohighlevel-first-client.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "clickfunnels-alternative.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "clickfunnels-limitations.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "contact.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "editorial-policy.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "gohighlevel-pricing-calculator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "SoftwareApplication",
+      "reason": "Missing SoftwareApplication schema"
+    }
+  ],
+  "gohighlevel-reviews.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "ReviewArticle",
+      "reason": "Missing ReviewArticle schema"
+    }
+  ],
+  "gohighlevel-white-label-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-for-coaches.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-for-dentists.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-for-gyms.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-for-med-spas.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-for-real-estate.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-plus-shopify.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-plus-wordpress.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-activecampaign.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-chatgpt.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-clickfunnels.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-hubspot.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-keap.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-salesforce.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "highlevel-vs-zapier-make.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "hubspot-alternative.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "hubspot-pricing-limits.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "mistakes-to-avoid.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "pricing-explained.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "privacy.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "terms.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tool-stack-savings-calculator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/agency-pricing-calculator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "SoftwareApplication",
+      "reason": "Missing SoftwareApplication schema"
+    }
+  ],
+  "tools/client-onboarding-checklist.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/cta-generator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/email-subject-line-tester.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/feature-comparison.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/marketing-roi-calculator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "tools/sms-cost-estimator.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "voice-agent-setup.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "which-gohighlevel-plan.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "workflows-for-agencies.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ]
+}

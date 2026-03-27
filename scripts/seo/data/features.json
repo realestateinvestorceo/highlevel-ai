@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Email Marketing",
+    "slug": "gohighlevel-email-marketing",
+    "description": "GoHighLevel's email marketing system is a fully integrated tool that lets you create, send, and automate email campaigns without needing a separate platform like Mailchimp or ActiveCampaign. It includes a drag-and-drop email builder, pre-built templates, list segmentation, A/B testing, automated sequences, and detailed analytics. Emails are sent through LC Email (GoHighLevel's native sending infrastructure) or you can connect your own SMTP provider like Mailgun or SendGrid. The system is included in all GoHighLevel plans with no per-email fees on the base plans, making it a significant cost saver compared to standalone email platforms that charge based on subscriber count.",
+    "setup_steps": [
+      "<strong>Connect your sending domain:</strong> Go to Settings > Email Services and add your domain. Set up SPF, DKIM, and DMARC records for maximum deliverability.",
+      "<strong>Import your contacts:</strong> Upload contacts via CSV or connect an existing platform. GoHighLevel automatically deduplicates and validates email addresses.",
+      "<strong>Create email templates:</strong> Use the drag-and-drop builder to create branded templates. Save them for reuse across campaigns and workflows.",
+      "<strong>Set up your first workflow:</strong> Navigate to Automations > Workflows. Create a trigger (form submission, tag added, etc.) and add email actions with delays between messages.",
+      "<strong>Build a broadcast campaign:</strong> Go to Marketing > Emails and create a one-time campaign. Select your audience segment, choose a template, and schedule the send.",
+      "<strong>Monitor and optimize:</strong> Check open rates, click rates, and unsubscribe rates in the email analytics dashboard. A/B test subject lines to improve performance."
+    ],
+    "pricing": "Email marketing is included in all GoHighLevel plans. The Starter plan ($97/mo) includes email sending via LC Email at no additional per-email cost for up to 15,000 emails/mo. The Unlimited plan ($297/mo) and SaaS Pro ($497/mo) include higher sending limits. If you exceed the included limits or want premium deliverability, you can connect a third-party SMTP like Mailgun ($0.80 per 1,000 emails) or SendGrid. There are no per-subscriber fees on any plan, which is a major cost advantage over Mailchimp ($20-350/mo based on list size) and ActiveCampaign ($29-149/mo).",
+    "pros": [
+      "<strong>No per-subscriber fees</strong> &mdash; unlike Mailchimp, your cost does not increase as your list grows",
+      "<strong>Fully integrated with CRM</strong> &mdash; email data syncs with contacts, pipelines, and automations automatically",
+      "<strong>Workflow automation</strong> &mdash; trigger emails based on any CRM event, form submission, or tag change",
+      "<strong>Drag-and-drop builder</strong> &mdash; easy to create professional emails without coding",
+      "<strong>A/B testing</strong> &mdash; test subject lines and content variations to optimize performance"
+    ],
+    "cons": [
+      "<strong>Template library is smaller</strong> &mdash; fewer pre-built designs than Mailchimp or ActiveCampaign",
+      "<strong>Deliverability requires setup</strong> &mdash; you need to properly configure DNS records for best results",
+      "<strong>Analytics are basic</strong> &mdash; less detailed reporting than dedicated email platforms",
+      "<strong>No native RSS-to-email</strong> &mdash; cannot auto-send blog posts as email newsletters"
+    ],
+    "editorial": "<p>GoHighLevel's email marketing is best understood as a capable, integrated tool rather than a standalone email platform competitor. It does everything most businesses need: create emails, send broadcasts, automate sequences, segment lists, and track results. The key advantage is integration with the rest of the GoHighLevel ecosystem, where email becomes part of a larger automation that includes SMS, phone calls, pipeline updates, and task assignments.</p><p>Where it falls short compared to dedicated platforms like Mailchimp or ActiveCampaign is in template variety, advanced analytics, and deliverability optimization tools. If email marketing is your primary channel and you need advanced features like predictive send time optimization, dynamic content blocks, or extensive A/B testing capabilities, a dedicated platform may serve you better.</p><p>For agencies and businesses using GoHighLevel as their all-in-one platform, the email marketing feature eliminates the need for a separate subscription. A business paying $50-100/mo for Mailchimp or ActiveCampaign can save that entire cost since email is included in every GoHighLevel plan. The total cost of ownership is dramatically lower when you factor in that CRM, SMS, funnels, and automation are all bundled together.</p><p>Deliverability is solid when properly configured. Set up SPF, DKIM, and DMARC records, warm your sending domain gradually, and maintain clean lists. If you send high volumes (50,000+ emails per month), consider connecting Mailgun or SendGrid for better deliverability tracking and dedicated IPs.</p>",
+    "faqs": [
+      {
+        "q": "Is GoHighLevel email marketing free?",
+        "a": "Email marketing is included in all GoHighLevel plans at no additional cost. The Starter plan ($97/mo) includes email sending via LC Email. There are no per-subscriber fees, which makes it significantly cheaper than Mailchimp or ActiveCampaign for businesses with large contact lists. Additional costs may apply if you connect a third-party SMTP provider for high-volume sending."
+      },
+      {
+        "q": "Can GoHighLevel replace Mailchimp?",
+        "a": "For most businesses, yes. GoHighLevel includes a drag-and-drop email builder, automated sequences, list segmentation, A/B testing, and analytics. It lacks some advanced Mailchimp features like predictive analytics, advanced content blocks, and the extensive template library. However, GoHighLevel adds CRM, SMS, funnels, and automation that Mailchimp does not include, making it a more complete platform overall."
+      },
+      {
+        "q": "How is GoHighLevel email deliverability?",
+        "a": "Deliverability is good when properly configured. You need to set up SPF, DKIM, and DMARC records for your sending domain, warm your domain gradually (start with small batches), and maintain clean contact lists. GoHighLevel uses LC Email for native sending, and you can connect Mailgun or SendGrid for higher volume needs. Most users report deliverability comparable to mid-tier email platforms."
+      },
+      {
+        "q": "Does GoHighLevel support email automation sequences?",
+        "a": "Yes. GoHighLevel's workflow builder lets you create sophisticated email automation sequences triggered by any event: form submission, tag change, pipeline stage update, appointment booking, and more. You can add delays, conditions, and branching logic. Sequences can also include SMS, phone calls, and task assignments alongside email, making them more powerful than email-only automation tools."
+      }
+    ]
+  },
+  {
+    "name": "SMS Marketing",
+    "slug": "gohighlevel-sms-marketing",
+    "description": "GoHighLevel's SMS marketing system lets you send individual messages, bulk campaigns, and automated text sequences to your contacts. It is powered by Twilio or LC Phone (GoHighLevel's native telephony), giving you a real phone number that can send and receive texts. SMS is deeply integrated with the CRM, automation workflows, and pipeline management, meaning you can trigger text messages based on any event in the system. Open rates for SMS average 98% compared to 20-25% for email, making it one of the most effective channels for time-sensitive communications like appointment reminders, follow-ups, and promotions.",
+    "setup_steps": [
+      "<strong>Get a phone number:</strong> Go to Settings > Phone Numbers and purchase a local or toll-free number through LC Phone or connect your existing Twilio account.",
+      "<strong>Register for A2P 10DLC:</strong> Required for US business texting. Complete the brand registration and campaign registration in Settings > Phone Numbers > Trust Center. This takes 2-5 business days for approval.",
+      "<strong>Create SMS templates:</strong> Build reusable message templates with merge fields (contact name, appointment date, etc.) for common messages like reminders and follow-ups.",
+      "<strong>Set up automated workflows:</strong> Go to Automations > Workflows and create triggers with SMS actions. Common triggers include: form submission, appointment booked, pipeline stage change, and missed call.",
+      "<strong>Build a bulk SMS campaign:</strong> Go to Marketing > SMS and create a broadcast. Select your audience segment, craft your message, and send or schedule. Keep messages under 160 characters for best deliverability.",
+      "<strong>Monitor conversations:</strong> All SMS replies appear in the Conversations tab, creating a two-way messaging thread. Assign conversations to team members and use canned responses for efficiency."
+    ],
+    "pricing": "SMS messaging requires a phone number ($1-2/mo) and per-message costs through Twilio or LC Phone. LC Phone charges approximately $0.0079 per outbound SMS and $0.0079 per inbound SMS in the US. Twilio charges approximately $0.0079 per segment. Most businesses spend $20-50/mo on SMS depending on volume. A typical practice sending 500 messages per month spends about $4 on messaging plus $1.15 for the phone number. This is dramatically cheaper than standalone SMS platforms like SimpleTexting ($29-299/mo) or SlickText ($29-139/mo) which charge based on message credits.",
+    "pros": [
+      "<strong>98% open rates</strong> &mdash; dramatically higher engagement than email or social media",
+      "<strong>Two-way conversations</strong> &mdash; contacts can reply and you see everything in one inbox",
+      "<strong>Deep CRM integration</strong> &mdash; trigger texts based on any pipeline, tag, or workflow event",
+      "<strong>Per-message pricing</strong> &mdash; no monthly SMS platform subscription needed beyond GoHighLevel",
+      "<strong>Missed call text-back</strong> &mdash; automatically text callers who reach voicemail within 60 seconds"
+    ],
+    "cons": [
+      "<strong>A2P registration required</strong> &mdash; 10DLC compliance setup takes 2-5 business days and adds a small fee",
+      "<strong>Character limits</strong> &mdash; messages over 160 characters are split into multiple segments, increasing cost",
+      "<strong>Carrier filtering</strong> &mdash; aggressive or spammy messages may be filtered by carriers",
+      "<strong>US/Canada focused</strong> &mdash; international SMS is more expensive and has varying regulations"
+    ],
+    "editorial": "<p>SMS marketing is one of GoHighLevel's strongest competitive advantages. While most CRM and marketing platforms treat SMS as an afterthought or charge premium prices for it, GoHighLevel builds it into the core of the platform at near-wholesale Twilio rates. This makes SMS accessible to businesses of all sizes, not just those with large marketing budgets.</p><p>The real power of GoHighLevel SMS is not in bulk campaigns but in automated, event-triggered messages. Appointment reminders that reduce no-shows by 30-40%, missed call text-backs that capture leads who would otherwise call a competitor, and post-service review requests that build your Google reputation. These automations run 24/7 without staff intervention and consistently deliver the highest ROI of any marketing channel in the platform.</p><p>The A2P 10DLC registration process is a necessary friction point that many users find frustrating. Since 2023, US carriers require all business SMS to be registered, and the approval process takes 2-5 business days. GoHighLevel has streamlined this with their Trust Center, but it is still an extra step that delays your first SMS campaign. Plan for this during onboarding.</p><p>For businesses comparing GoHighLevel's SMS to standalone platforms, the math is straightforward. SimpleTexting charges $29/mo for 500 messages. GoHighLevel charges approximately $4 for the same 500 messages with no additional monthly subscription. Over a year, that is $348 saved on SMS alone, plus you get the entire GoHighLevel platform included.</p><p>One important note: SMS marketing is governed by TCPA regulations in the US. Always obtain proper consent before sending marketing messages, include opt-out instructions, and respect do-not-call lists. GoHighLevel includes opt-out handling, but compliance is ultimately your responsibility.</p>",
+    "faqs": [
+      {
+        "q": "How much does GoHighLevel SMS cost per message?",
+        "a": "Using LC Phone (GoHighLevel's native telephony), outbound SMS costs approximately $0.0079 per message segment in the US. A standard 160-character message costs about $0.008. If you connect your own Twilio account, rates are similar. Most businesses spend $20-50/mo on SMS depending on volume. There are no monthly SMS platform fees beyond your GoHighLevel subscription."
+      },
+      {
+        "q": "What is A2P 10DLC and do I need it?",
+        "a": "A2P 10DLC (Application-to-Person 10-Digit Long Code) is a carrier registration system required for all business SMS in the US since 2023. You must register your brand and SMS campaigns through GoHighLevel's Trust Center before sending messages. The process takes 2-5 business days for approval. Without registration, your messages will be filtered or blocked by carriers."
+      },
+      {
+        "q": "Can GoHighLevel send automated appointment reminders via SMS?",
+        "a": "Yes, this is one of the most popular SMS use cases. You can set up automated SMS reminders at any interval before appointments (72 hours, 24 hours, 2 hours, etc.). The messages can include merge fields for the patient or client name, appointment date and time, and a link to reschedule. Businesses using SMS reminders report 30-40% reduction in no-show rates."
+      },
+      {
+        "q": "Is GoHighLevel SMS TCPA compliant?",
+        "a": "GoHighLevel provides tools for TCPA compliance including opt-out handling, consent tracking, and do-not-contact list management. However, compliance is your responsibility. You must obtain explicit written consent before sending marketing messages, include opt-out instructions in every message, honor opt-out requests immediately, and maintain records of consent. GoHighLevel automates the opt-out process but you need to ensure proper consent collection."
+      }
+    ]
+  },
+  {
+    "name": "Funnel Builder",
+    "slug": "gohighlevel-funnel-builder",
+    "description": "GoHighLevel's funnel builder is a visual drag-and-drop tool for creating landing pages, sales pages, opt-in pages, order forms, and multi-step funnels. It replaces standalone tools like ClickFunnels ($147-297/mo), Leadpages ($49-99/mo), and Unbounce ($99-649/mo). The builder includes pre-built templates, custom code support, A/B split testing, and full integration with GoHighLevel's CRM, email, SMS, and workflow automation. Pages are hosted on GoHighLevel's infrastructure with custom domain support and SSL certificates included.",
+    "setup_steps": [
+      "<strong>Connect your domain:</strong> Go to Settings > Domains and add your custom domain. GoHighLevel provides free SSL certificates and handles DNS configuration.",
+      "<strong>Choose a template or start blank:</strong> Navigate to Sites > Funnels and click New Funnel. Browse pre-built templates by category (lead capture, webinar, sales page, etc.) or start from scratch.",
+      "<strong>Customize your pages:</strong> Use the drag-and-drop editor to modify text, images, buttons, forms, and sections. Add custom CSS for advanced styling. All elements are mobile-responsive by default.",
+      "<strong>Configure your forms:</strong> Add form elements and map fields to CRM contact properties. Set up form submission actions: add to pipeline, apply tag, trigger workflow, redirect to thank-you page.",
+      "<strong>Set up split testing:</strong> Create page variants and split traffic between them. GoHighLevel tracks conversion rates automatically and can auto-select winners after sufficient data.",
+      "<strong>Connect to workflows:</strong> Link form submissions and page visits to automation workflows. Trigger follow-up sequences, notify sales team, and update pipelines automatically."
+    ],
+    "pricing": "The funnel builder is included in all GoHighLevel plans at no additional cost. The Starter plan ($97/mo) includes unlimited funnels and pages. Compare this to ClickFunnels Basic at $147/mo (20 funnels), ClickFunnels Pro at $197/mo (100 funnels), or Leadpages Standard at $49/mo (limited features). GoHighLevel includes unlimited funnels, pages, and visitors on every plan, with custom domain support and SSL included. The only potential additional cost is for custom domains, which you purchase separately from a registrar.",
+    "pros": [
+      "<strong>Unlimited funnels and pages</strong> &mdash; no limits on any plan, unlike ClickFunnels which caps at 20-100 funnels",
+      "<strong>Deep CRM integration</strong> &mdash; form data flows directly into contacts, pipelines, and workflows",
+      "<strong>A/B split testing</strong> &mdash; test page variations with automatic traffic splitting and conversion tracking",
+      "<strong>Custom code support</strong> &mdash; add custom HTML, CSS, and JavaScript for advanced functionality",
+      "<strong>Free SSL and hosting</strong> &mdash; pages are served from GoHighLevel's CDN with no bandwidth limits"
+    ],
+    "cons": [
+      "<strong>Editor can be slower</strong> &mdash; drag-and-drop builder occasionally lags with complex pages",
+      "<strong>Template library is smaller</strong> &mdash; fewer pre-built designs than ClickFunnels or Leadpages",
+      "<strong>No native e-commerce</strong> &mdash; limited product catalog compared to dedicated e-commerce funnels",
+      "<strong>Learning curve</strong> &mdash; powerful but requires time to master all the configuration options"
+    ],
+    "editorial": "<p>GoHighLevel's funnel builder is a solid, capable tool that eliminates the need for a separate funnel or landing page platform. For most businesses, it does everything ClickFunnels, Leadpages, or Unbounce can do, but at a fraction of the cost since it is included in your GoHighLevel subscription.</p><p>The biggest advantage is not the builder itself but the integration with everything else. When someone fills out a form on your funnel page, that data instantly creates a contact in the CRM, adds them to a pipeline, triggers an SMS and email sequence, and notifies your sales team. With ClickFunnels, you would need Zapier or webhook integrations to achieve the same result, adding complexity and cost.</p><p>The template library is the weakest point. ClickFunnels has invested years in building a marketplace of conversion-optimized templates for specific industries and use cases. GoHighLevel's template library is growing but more limited. If you rely heavily on templates, this could slow your initial setup. However, once you build your first funnel, you can save it as a template and replicate it across campaigns.</p><p>Performance and page load speed are comparable to ClickFunnels. GoHighLevel hosts pages on their CDN with automatic optimization. Pages typically load in 2-3 seconds, which is acceptable for conversion-focused pages. For maximum speed, keep pages clean and avoid loading unnecessary scripts.</p><p>For agencies, the funnel builder is particularly valuable because you can create funnel templates (called Snapshots) and deploy them to client sub-accounts instantly. This means you can build a high-converting funnel once and roll it out to dozens of clients in minutes, which is a capability ClickFunnels does not offer in the same way.</p>",
+    "faqs": [
+      {
+        "q": "Can GoHighLevel replace ClickFunnels?",
+        "a": "For most businesses, yes. GoHighLevel's funnel builder includes drag-and-drop page editing, multi-step funnels, A/B testing, order forms, and one-click upsells. It lacks ClickFunnels' extensive template marketplace and some advanced e-commerce features, but includes CRM, email, SMS, and automation that ClickFunnels does not. The combined cost is significantly lower: $97/mo for GoHighLevel vs $147-297/mo for ClickFunnels plus separate CRM and email tools."
+      },
+      {
+        "q": "Are GoHighLevel funnels mobile-responsive?",
+        "a": "Yes. All funnel pages built in GoHighLevel are mobile-responsive by default. The editor includes a mobile preview mode where you can customize the mobile layout separately from desktop. You can show or hide specific elements on mobile and adjust spacing and font sizes for smaller screens."
+      },
+      {
+        "q": "Can I use my own domain for GoHighLevel funnels?",
+        "a": "Yes. You can connect unlimited custom domains to GoHighLevel. SSL certificates are provided free and automatically configured. Simply add a CNAME record pointing your domain to GoHighLevel's servers. You can assign different domains to different funnels if you manage multiple brands or clients."
+      },
+      {
+        "q": "Does GoHighLevel have order forms and payment processing?",
+        "a": "Yes. GoHighLevel integrates with Stripe for payment processing. You can create order forms with one-time payments, payment plans, subscriptions, and one-click upsells. Order form data syncs with the CRM, so you can track revenue per contact and trigger post-purchase automations. Transaction fees are Stripe's standard rates (2.9% + $0.30)."
+      }
+    ]
+  }
+]

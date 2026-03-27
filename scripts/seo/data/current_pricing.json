@@ -1,0 +1,36 @@
+{
+  "gohighlevel": {
+    "starter": "$97/mo",
+    "unlimited": "$297/mo",
+    "saas_pro": "$497/mo",
+    "trial": "14-day free trial",
+    "annual_discount": "yes"
+  },
+  "hubspot": {
+    "free": "$0/mo",
+    "starter": "$20/mo",
+    "professional": "$890/mo",
+    "enterprise": "$3,600/mo"
+  },
+  "clickfunnels": {
+    "startup": "$97/mo",
+    "pro": "$297/mo"
+  },
+  "activecampaign": {
+    "starter": "$15/mo",
+    "plus": "$49/mo",
+    "professional": "$79/mo",
+    "enterprise": "$145/mo"
+  },
+  "keap": {
+    "pro": "$199/mo",
+    "max": "$289/mo",
+    "ultimate": "$349/mo"
+  },
+  "salesforce": {
+    "starter": "$25/user/mo",
+    "professional": "$80/user/mo",
+    "enterprise": "$165/user/mo",
+    "unlimited": "$330/user/mo"
+  }
+}

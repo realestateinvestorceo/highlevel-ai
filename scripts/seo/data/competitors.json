@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Kartra",
+    "slug": "highlevel-vs-kartra",
+    "tagline": "is a marketing platform focused on course creators and online businesses, starting at $119/mo",
+    "best_for": "Course creators & info-product sellers",
+    "free_trial": "30 days ($1 trial)",
+    "g2_rating": "3.9/5",
+    "pricing": [
+      {"name": "Starter", "price": "$119/mo", "features": "Up to 2,500 leads, 1 custom domain, 15,000 emails/mo"},
+      {"name": "Growth", "price": "$229/mo", "features": "Up to 12,500 leads, 3 custom domains, unlimited emails"},
+      {"name": "Professional", "price": "$549/mo", "features": "Up to 25,000 leads, 5 domains, affiliate management"}
+    ],
+    "features": {
+      "CRM": {"ghl": true, "competitor": true},
+      "Funnel Builder": {"ghl": true, "competitor": true},
+      "Email Marketing": {"ghl": true, "competitor": true},
+      "SMS Marketing": {"ghl": true, "competitor": false},
+      "AI Chatbot": {"ghl": true, "competitor": false},
+      "AI Voice Agent": {"ghl": true, "competitor": false},
+      "Workflow Automation": {"ghl": true, "competitor": true},
+      "Appointment Scheduling": {"ghl": true, "competitor": true},
+      "Course/Membership Hosting": {"ghl": true, "competitor": true},
+      "Affiliate Management": {"ghl": "Basic", "competitor": true},
+      "White-Label SaaS Mode": {"ghl": true, "competitor": false},
+      "Reputation Management": {"ghl": true, "competitor": false},
+      "Unlimited Contacts": {"ghl": "Unlimited plan", "competitor": false},
+      "Native Integrations": {"ghl": "100+", "competitor": "50+"},
+      "Video Hosting": {"ghl": false, "competitor": true}
+    },
+    "pros": [
+      "<strong>Built-in video hosting</strong> &mdash; no need for Vimeo or Wistia",
+      "<strong>Excellent page builder</strong> &mdash; drag-and-drop with clean templates",
+      "<strong>Helpdesk system</strong> &mdash; built-in support ticket management",
+      "<strong>Behavioral triggers</strong> &mdash; sophisticated automation based on user actions"
+    ],
+    "cons": [
+      "<strong>No SMS marketing</strong> &mdash; missing a critical communication channel",
+      "<strong>No AI features</strong> &mdash; lacks chatbot and voice agent capabilities",
+      "<strong>Lead limits on all plans</strong> &mdash; you pay more as your list grows",
+      "<strong>No white-label option</strong> &mdash; cannot resell as your own platform",
+      "<strong>Higher starting price</strong> &mdash; $119/mo vs GoHighLevel's $97/mo"
+    ],
+    "verdict": "GoHighLevel is the stronger choice for agencies and service-based businesses that need CRM, SMS marketing, AI automation, and the ability to white-label the platform. Kartra has the edge for solo course creators and info-product sellers who need built-in video hosting, helpdesk functionality, and sophisticated behavioral automation triggers. If you run an agency or manage multiple clients, GoHighLevel's unlimited sub-accounts and white-label SaaS mode provide capabilities Kartra simply does not offer. For pure online education businesses that rely heavily on video content delivery, Kartra's native video hosting and membership tools are more polished. The bottom line: agencies and service businesses should pick GoHighLevel; dedicated course sellers should evaluate Kartra's video and membership features before deciding.",
+    "faqs": [
+      {
+        "q": "Can I migrate from Kartra to GoHighLevel?",
+        "a": "Yes. You can export your Kartra contacts as a CSV file and import them into GoHighLevel. Funnels and automations will need to be rebuilt, but GoHighLevel's funnel builder and workflow tools make the process manageable. Most users complete the migration within 1-2 weeks. Email templates and sequences should be recreated in GoHighLevel's workflow builder."
+      },
+      {
+        "q": "Does GoHighLevel have course hosting like Kartra?",
+        "a": "Yes, GoHighLevel has a built-in membership and course platform. You can host courses, create drip content, and manage student access. However, Kartra includes native video hosting while GoHighLevel requires you to embed videos from an external service like Vimeo, YouTube, or Wistia."
+      },
+      {
+        "q": "Which is better for agencies: Kartra or GoHighLevel?",
+        "a": "GoHighLevel is significantly better for agencies. It offers unlimited sub-accounts on the Unlimited plan ($297/mo), white-label SaaS mode on SaaS Pro ($497/mo), and agency-focused features like snapshot templates and client management. Kartra does not have sub-accounts or white-label capabilities, making it impractical for agencies managing multiple clients."
+      },
+      {
+        "q": "Is Kartra cheaper than GoHighLevel?",
+        "a": "No. Kartra starts at $119/mo (Starter) vs GoHighLevel at $97/mo. Kartra also imposes lead limits on every plan, so costs increase as your contact list grows. GoHighLevel's Unlimited plan at $297/mo includes unlimited contacts and sub-accounts, while Kartra's equivalent Growth plan at $229/mo still caps leads at 12,500."
+      }
+    ]
+  },
+  {
+    "name": "Monday.com",
+    "slug": "highlevel-vs-monday",
+    "tagline": "is a work management platform that includes CRM features, starting at $12/seat/mo",
+    "best_for": "Teams needing project management + basic CRM",
+    "free_trial": "14 days",
+    "g2_rating": "4.7/5",
+    "pricing": [
+      {"name": "Basic CRM", "price": "$12/seat/mo", "features": "Unlimited contacts, 1 pipeline, basic dashboards"},
+      {"name": "Standard CRM", "price": "$17/seat/mo", "features": "Email integration, quotes, custom automations (250/mo)"},
+      {"name": "Pro CRM", "price": "$28/seat/mo", "features": "Email tracking, mass emails, sales forecasting"},
+      {"name": "Enterprise", "price": "Custom pricing", "features": "Advanced permissions, HIPAA compliance, dedicated support"}
+    ],
+    "features": {
+      "CRM": {"ghl": true, "competitor": true},
+      "Funnel Builder": {"ghl": true, "competitor": false},
+      "Email Marketing": {"ghl": true, "competitor": "Basic"},
+      "SMS Marketing": {"ghl": true, "competitor": false},
+      "AI Chatbot": {"ghl": true, "competitor": false},
+      "AI Voice Agent": {"ghl": true, "competitor": false},
+      "Workflow Automation": {"ghl": true, "competitor": true},
+      "Appointment Scheduling": {"ghl": true, "competitor": false},
+      "Project Management": {"ghl": false, "competitor": true},
+      "White-Label SaaS Mode": {"ghl": true, "competitor": false},
+      "Reputation Management": {"ghl": true, "competitor": false},
+      "Unlimited Contacts": {"ghl": "Unlimited plan", "competitor": true},
+      "Native Integrations": {"ghl": "100+", "competitor": "200+"},
+      "Team Collaboration": {"ghl": "Basic", "competitor": true}
+    },
+    "pros": [
+      "<strong>Intuitive project management</strong> &mdash; best-in-class task boards and timelines",
+      "<strong>Low per-seat pricing</strong> &mdash; starts at just $12/seat/mo for CRM",
+      "<strong>200+ integrations</strong> &mdash; connects with most business tools",
+      "<strong>Excellent UI/UX</strong> &mdash; highly polished and easy to learn",
+      "<strong>Team collaboration</strong> &mdash; built for cross-team communication and updates"
+    ],
+    "cons": [
+      "<strong>No funnel builder</strong> &mdash; cannot create landing pages or sales funnels",
+      "<strong>No SMS or phone</strong> &mdash; missing critical communication channels",
+      "<strong>No AI chatbot or voice agent</strong> &mdash; lacks built-in AI automation",
+      "<strong>Per-seat pricing adds up</strong> &mdash; 10 users = $120-280/mo just for CRM",
+      "<strong>Not built for marketing</strong> &mdash; CRM is secondary to project management"
+    ],
+    "verdict": "GoHighLevel and Monday.com solve fundamentally different problems. GoHighLevel is a marketing-first all-in-one platform built for client acquisition, automation, and revenue generation. Monday.com is a project management platform that added CRM as a secondary feature. Choose GoHighLevel if you need funnels, SMS, AI chatbot, email marketing, and appointment booking in one platform. Choose Monday.com if your primary need is project management, team collaboration, and task tracking with a basic CRM bolted on. For agencies and marketing-focused businesses, GoHighLevel is the clear winner. For internal operations teams that need project tracking more than marketing automation, Monday.com makes more sense. The two platforms complement each other rather than directly compete.",
+    "faqs": [
+      {
+        "q": "Can Monday.com replace GoHighLevel?",
+        "a": "No. Monday.com is primarily a project management tool with basic CRM features. It lacks funnel builders, SMS marketing, AI chatbot, voice agents, appointment scheduling, reputation management, and email marketing automation that GoHighLevel provides. You would need 5-6 additional tools alongside Monday.com to match GoHighLevel's capabilities."
+      },
+      {
+        "q": "Can I use Monday.com and GoHighLevel together?",
+        "a": "Yes. Many agencies use Monday.com for internal project management and team task tracking while using GoHighLevel for client-facing marketing, CRM, and automation. You can connect them via Zapier or Make to sync data between platforms. For example, when a deal closes in GoHighLevel, you can auto-create a project in Monday.com."
+      },
+      {
+        "q": "Which is cheaper: Monday.com or GoHighLevel?",
+        "a": "It depends on team size. Monday.com starts at $12/seat/mo, so a solo user pays $48/mo (minimum 3 seats). A 10-person team on the Standard plan pays $170/mo. GoHighLevel is a flat $97/mo regardless of users. For teams of 6+ users needing marketing features, GoHighLevel is more cost-effective since it includes unlimited team members on all plans."
+      },
+      {
+        "q": "Does Monday.com have marketing automation?",
+        "a": "Monday.com has basic workflow automation (like auto-assign tasks and status changes) but lacks marketing-specific automation. It cannot send automated email sequences, SMS follow-ups, appointment reminders, or trigger multi-step nurture campaigns. For marketing automation, GoHighLevel is far more capable with its visual workflow builder."
+      }
+    ]
+  },
+  {
+    "name": "Kajabi",
+    "slug": "highlevel-vs-kajabi",
+    "tagline": "is a knowledge commerce platform for course creators and coaches, starting at $149/mo",
+    "best_for": "Course creators, coaches & membership sites",
+    "free_trial": "14 days",
+    "g2_rating": "4.3/5",
+    "pricing": [
+      {"name": "Kickstarter", "price": "$149/mo", "features": "1 product, 1 funnel, 1,250 contacts, 10,000 emails/mo"},
+      {"name": "Basic", "price": "$199/mo", "features": "3 products, 3 funnels, 10,000 contacts, unlimited emails"},
+      {"name": "Growth", "price": "$399/mo", "features": "15 products, 15 funnels, 25,000 contacts, 24/7 chat support"},
+      {"name": "Pro", "price": "$799/mo", "features": "100 products, 100 funnels, 100,000 contacts, affiliate program"}
+    ],
+    "features": {
+      "CRM": {"ghl": true, "competitor": "Basic"},
+      "Funnel Builder": {"ghl": true, "competitor": true},
+      "Email Marketing": {"ghl": true, "competitor": true},
+      "SMS Marketing": {"ghl": true, "competitor": false},
+      "AI Chatbot": {"ghl": true, "competitor": false},
+      "AI Voice Agent": {"ghl": true, "competitor": false},
+      "Workflow Automation": {"ghl": true, "competitor": "Basic"},
+      "Appointment Scheduling": {"ghl": true, "competitor": false},
+      "Course/Membership Hosting": {"ghl": true, "competitor": true},
+      "Podcast Hosting": {"ghl": false, "competitor": true},
+      "White-Label SaaS Mode": {"ghl": true, "competitor": false},
+      "Reputation Management": {"ghl": true, "competitor": false},
+      "Community Features": {"ghl": false, "competitor": true},
+      "Native Payment Processing": {"ghl": "Via Stripe", "competitor": "Kajabi Payments"},
+      "Mobile App": {"ghl": "GHL app", "competitor": "Branded app on Growth+"}
+    },
+    "pros": [
+      "<strong>Purpose-built for courses</strong> &mdash; best-in-class course creation and delivery experience",
+      "<strong>Beautiful out-of-box design</strong> &mdash; polished templates that look professional immediately",
+      "<strong>Built-in community platform</strong> &mdash; forums and discussions for student engagement",
+      "<strong>Podcast hosting</strong> &mdash; host and distribute podcasts natively",
+      "<strong>Branded mobile app</strong> &mdash; available on Growth plan and above for a premium experience"
+    ],
+    "cons": [
+      "<strong>No SMS marketing</strong> &mdash; missing a critical communication channel",
+      "<strong>No AI features</strong> &mdash; lacks chatbot and voice agent capabilities",
+      "<strong>Expensive pricing</strong> &mdash; starts at $149/mo with severe contact limits",
+      "<strong>Contact limits on every plan</strong> &mdash; only 1,250 contacts on the Kickstarter plan",
+      "<strong>Limited CRM functionality</strong> &mdash; not built for sales pipeline management",
+      "<strong>No white-label</strong> &mdash; cannot resell as your own platform"
+    ],
+    "verdict": "GoHighLevel is the better choice for agencies, service businesses, and anyone who needs a comprehensive marketing and CRM platform. Kajabi wins for dedicated course creators and coaches who prioritize course delivery experience, community features, and a polished out-of-box design. GoHighLevel offers dramatically better value at $97/mo with unlimited contacts (on the Unlimited plan), SMS marketing, AI chatbot, voice agent, and white-label SaaS mode that Kajabi simply does not provide. However, Kajabi's course builder is more refined, its templates are more polished, and features like podcast hosting and branded mobile apps cater specifically to the creator economy. If your business is 80% or more about selling courses and memberships, Kajabi's focused toolset may justify its higher price. If you need a full marketing stack with CRM, funnels, SMS, AI, and automation, GoHighLevel is the clear winner on both features and price.",
+    "faqs": [
+      {
+        "q": "Can I host courses on GoHighLevel like Kajabi?",
+        "a": "Yes, GoHighLevel has a built-in membership and course hosting feature. You can create courses with modules, lessons, drip content, and student progress tracking. However, Kajabi's course builder offers a more polished student experience with features like quizzes, assessments, and a dedicated mobile app. GoHighLevel's course feature is functional but more basic in comparison."
+      },
+      {
+        "q": "Is GoHighLevel cheaper than Kajabi?",
+        "a": "Significantly. GoHighLevel starts at $97/mo with no contact limits on higher plans. Kajabi starts at $149/mo with only 1,250 contacts. To get 25,000 contacts on Kajabi, you need the Growth plan at $399/mo. GoHighLevel's Unlimited plan at $297/mo includes unlimited contacts, sub-accounts, and features Kajabi does not offer like SMS, AI chatbot, and white-label mode."
+      },
+      {
+        "q": "Can I migrate from Kajabi to GoHighLevel?",
+        "a": "Yes. Export your Kajabi contacts and course student data as CSV files, then import them into GoHighLevel. You will need to rebuild your courses using GoHighLevel's membership builder and recreate your funnels and email sequences. Video content can be hosted on a service like Vimeo and embedded in GoHighLevel courses. Most migrations take 2-4 weeks depending on the amount of content."
+      },
+      {
+        "q": "Does Kajabi have a CRM like GoHighLevel?",
+        "a": "Kajabi has basic contact management and tagging, but it is not a full CRM. It lacks deal pipelines, opportunity tracking, advanced lead scoring, and the multi-channel communication features (SMS, phone, email, chat) that GoHighLevel provides. If CRM functionality and client management are important to your business, GoHighLevel is the far stronger platform."
+      }
+    ]
+  }
+]

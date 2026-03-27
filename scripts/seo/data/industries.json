@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Lawyers",
+    "slug": "highlevel-for-lawyers",
+    "pain_points": [
+      "Leads go cold because follow-up takes too long between consultations",
+      "No systematic process for collecting Google reviews from satisfied clients",
+      "Manually scheduling consultations eats up receptionist time and leads to double-bookings",
+      "Referral tracking is done on spreadsheets or not at all",
+      "Paying $500+/mo for separate tools: Clio, Mailchimp, Calendly, CallRail, Podium"
+    ],
+    "features": [
+      {"name": "Automated Intake Funnels", "description": "Create intake forms that automatically qualify leads, book consultations, and add prospects to the correct practice area pipeline. No manual data entry required."},
+      {"name": "AI Chatbot for After-Hours", "description": "An AI chatbot responds to website visitors 24/7, answering common questions about practice areas, fees, and process while capturing lead information for follow-up."},
+      {"name": "Missed Call Text-Back", "description": "When a potential client calls and no one answers, GoHighLevel automatically sends a text within 60 seconds. This prevents leads from calling the next firm on their list."},
+      {"name": "Review Generation", "description": "After case resolution, automatically send review requests via SMS and email. Route 4-5 star reviews to Google, intercept lower ratings for private feedback."},
+      {"name": "Pipeline Management", "description": "Visual pipelines for each practice area: new leads, consultation scheduled, retained, active case, resolved. Track every client through the entire lifecycle."},
+      {"name": "Appointment Scheduling", "description": "Embed booking calendars on your website. Clients self-schedule consultations based on attorney availability. Automated SMS/email reminders reduce no-shows."}
+    ],
+    "workflows": [
+      {"name": "New Lead Follow-Up", "description": "When a form is submitted: instant SMS acknowledgment, email with consultation booking link, 3-day follow-up if no booking, 7-day final follow-up with urgency message."},
+      {"name": "Consultation Reminders", "description": "Automated sequence: confirmation email at booking, SMS reminder 24 hours before, SMS reminder 2 hours before. Reduces no-show rate by 30-40%."},
+      {"name": "Post-Case Review Request", "description": "After a case is marked resolved: wait 3 days, send SMS asking about satisfaction, if positive send Google review link, if negative route to private feedback form."},
+      {"name": "Referral Partner Nurture", "description": "Monthly automated email to referral partners with firm updates, case results (anonymized), and gentle reminders to keep sending referrals. Track which partners generate the most business."}
+    ],
+    "roi_metrics": {
+      "Monthly tool cost savings": "$300-500/mo (replaces 5-6 separate tools)",
+      "No-show reduction": "30-40% fewer missed consultations",
+      "Lead response time": "Under 60 seconds (from 4+ hours average)",
+      "Google review increase": "3-5x more reviews within 90 days",
+      "Receptionist time saved": "10-15 hours/week on scheduling and follow-ups"
+    },
+    "editorial": "<p>GoHighLevel is a strong fit for small to mid-size law firms that rely on local lead generation and consultations. The platform excels at automating the intake-to-consultation pipeline, which is where most firms lose the most potential clients. The missed call text-back feature alone can significantly increase conversion rates, since prospective clients often call multiple firms and go with whoever responds first.</p><p>The biggest limitation for law firms is that GoHighLevel is not practice management software. It will not replace Clio, MyCase, or PracticePanther for case management, time tracking, billing, or trust accounting. Think of GoHighLevel as your marketing and client acquisition engine that feeds cases into your practice management system.</p><p>For solo practitioners and small firms spending $300-500/mo on separate marketing tools, consolidating into GoHighLevel at $97/mo makes immediate financial sense. Larger firms with dedicated marketing teams may want the Unlimited plan at $297/mo for unlimited sub-accounts if managing multiple practice area locations.</p><p>One important consideration: lawyers in highly regulated practice areas should be careful about automated communications. Ensure all automated messages comply with your state bar's advertising and communication rules. GoHighLevel's templates are fully customizable, so you can review and approve every message before it goes out. We recommend having your compliance team audit all automated workflows before activating them in production.</p>",
+    "faqs": [
+      {
+        "q": "Is GoHighLevel compliant with attorney advertising rules?",
+        "a": "GoHighLevel is a platform tool, and compliance depends on how you configure it. You control all message content, so you can ensure every automated email, SMS, and chatbot response complies with your state bar's advertising and solicitation rules. Review all automated messages with your compliance team before activating workflows. Many law firms successfully use GoHighLevel while maintaining full compliance."
+      },
+      {
+        "q": "Can GoHighLevel replace Clio or MyCase?",
+        "a": "No. GoHighLevel replaces your marketing and client acquisition tools, not your practice management software. Keep Clio, MyCase, or PracticePanther for case management, time tracking, billing, trust accounting, and document management. Use GoHighLevel for lead capture, consultation booking, client communication, review generation, and marketing automation."
+      },
+      {
+        "q": "How much does GoHighLevel cost for a law firm?",
+        "a": "The Starter plan at $97/mo covers everything a single-location firm needs. Add approximately $20-30/mo for Twilio SMS and voice costs. Total realistic cost is $117-130/mo, which replaces $300-500/mo in separate marketing tools like Mailchimp, Calendly, CallRail, and Podium."
+      },
+      {
+        "q": "Can GoHighLevel handle multiple practice areas?",
+        "a": "Yes. You can create separate pipelines for each practice area (family law, personal injury, estate planning, etc.), with dedicated intake forms, follow-up sequences, and booking calendars for each. The Unlimited plan supports unlimited sub-accounts if you need completely separate environments for different practice areas or office locations."
+      }
+    ]
+  },
+  {
+    "name": "Chiropractors",
+    "slug": "highlevel-for-chiropractors",
+    "pain_points": [
+      "Patient recall campaigns run manually on spreadsheets, losing 20-30% of reactivation opportunities",
+      "New patient acquisition relies on expensive print ads and word-of-mouth with no tracking",
+      "Google reviews are sparse because there is no systematic process to request them",
+      "Front desk staff spend 10+ hours per week on phone calls for scheduling and reminders",
+      "Paying for 4-5 separate tools that do not talk to each other"
+    ],
+    "features": [
+      {"name": "Online Booking Widget", "description": "Embed a booking calendar on your website and Google Business Profile. Patients self-schedule appointments based on provider availability. Reduces front desk phone volume by 40-50%."},
+      {"name": "Automated Appointment Reminders", "description": "SMS and email reminders at 72 hours, 24 hours, and 2 hours before each appointment. Reduces no-shows by 30-40% compared to manual reminder calls."},
+      {"name": "Patient Recall Campaigns", "description": "Automatically re-engage patients who have not visited in 30, 60, or 90 days. Multi-step SMS and email sequences with direct booking links bring patients back without staff effort."},
+      {"name": "Review Generation System", "description": "After each visit, automatically send review requests. Route happy patients to Google Reviews, intercept unhappy patients for private feedback. Build a 4.8+ star reputation."},
+      {"name": "New Patient Funnels", "description": "Create landing pages for specific offers (free consultation, spinal screening, new patient special) with built-in lead capture and automated follow-up sequences."},
+      {"name": "Missed Call Text-Back", "description": "When a potential patient calls and gets voicemail, an automatic text goes out within 60 seconds. This prevents them from calling the next chiropractor on the list."}
+    ],
+    "workflows": [
+      {"name": "New Patient Welcome", "description": "Trigger: form submission or booking. Actions: instant confirmation SMS, welcome email with intake forms, reminder sequence, post-first-visit follow-up and review request."},
+      {"name": "30/60/90 Day Recall", "description": "Trigger: days since last visit. Actions: SMS with personalized message and booking link at 30 days, email at 45 days, final SMS with special offer at 60 days, staff task at 90 days."},
+      {"name": "Post-Visit Review Request", "description": "Trigger: appointment marked complete. Actions: wait 2 hours, send SMS asking about experience, if positive response send Google review link, if negative send private feedback form."},
+      {"name": "Birthday and Wellness Campaigns", "description": "Trigger: contact birthday or wellness milestone. Actions: send personalized SMS/email with special offer or wellness tip. Keeps your practice top of mind between visits."}
+    ],
+    "roi_metrics": {
+      "Monthly tool cost savings": "$200-400/mo (replaces scheduling, email, SMS, review tools)",
+      "No-show reduction": "30-40% fewer missed appointments",
+      "Patient reactivation rate": "15-25% of lapsed patients return within 90 days",
+      "Google review increase": "4-6x more reviews within 60 days",
+      "Front desk time saved": "10-15 hours/week on calls and manual reminders"
+    },
+    "editorial": "<p>GoHighLevel is an excellent fit for chiropractic practices that want to automate patient communication without hiring additional front desk staff. The platform directly addresses the two biggest revenue leaks in chiropractic: missed appointments and lapsed patients who never come back for their next adjustment.</p><p>The automated recall system is particularly valuable. Most chiropractic practices lose 20-30% of their patient base every year simply because they do not have a systematic way to remind patients when their next visit is due. GoHighLevel's multi-step recall workflow handles this automatically, and practices typically see 15-25% of lapsed patients return within the first 90 days of implementation.</p><p>The review generation workflow is equally impactful. Chiropractors rely heavily on local SEO and Google Maps visibility. Automated post-visit review requests can increase your Google review count by 4-6x within 60 days, which directly improves your local search rankings and new patient acquisition.</p><p>GoHighLevel does not replace your chiropractic EHR or practice management system (ChiroTouch, Jane, etc.). It handles marketing and patient communication while your EHR handles clinical documentation, billing, and insurance. The two systems complement each other, and you can use Zapier to sync appointment data between them.</p><p>For a single-location practice, the Starter plan at $97/mo plus approximately $25/mo in Twilio costs provides everything you need. Multi-location practices should consider the Unlimited plan at $297/mo for separate sub-accounts per location.</p>",
+    "faqs": [
+      {
+        "q": "Can GoHighLevel integrate with ChiroTouch or Jane?",
+        "a": "GoHighLevel does not have a native integration with ChiroTouch or Jane, but you can connect them using Zapier or Make. Common integrations include syncing new patient contacts, triggering follow-up sequences when appointments are booked, and updating patient status when visits are completed. Many chiropractors use GoHighLevel for marketing and their EHR for clinical records."
+      },
+      {
+        "q": "How much does GoHighLevel cost for a chiropractic practice?",
+        "a": "The Starter plan at $97/mo covers everything a single-location practice needs: CRM, booking, email, SMS automation, funnels, and review management. Add approximately $20-30/mo for Twilio SMS and voice costs. Total realistic cost is $117-130/mo, replacing $200-400/mo in separate tools."
+      },
+      {
+        "q": "Is GoHighLevel HIPAA compliant for chiropractors?",
+        "a": "GoHighLevel is not HIPAA certified by default. Do not store protected health information (PHI) like clinical notes, diagnosis codes, or treatment records in the CRM. Use it strictly for marketing communications, appointment scheduling, review management, and non-clinical patient communication. Keep all clinical data in your HIPAA-compliant EHR system."
+      },
+      {
+        "q": "How quickly can a chiropractic practice set up GoHighLevel?",
+        "a": "Most chiropractic practices can have their core setup running within 1-2 weeks. This includes: importing contacts (day 1), setting up booking calendar and reminders (days 2-3), creating review request workflow (days 3-4), building a new patient funnel (days 5-7), and setting up recall campaigns (week 2). The 14-day free trial gives you enough time to build and test your core automations."
+      }
+    ]
+  },
+  {
+    "name": "Photographers",
+    "slug": "highlevel-for-photographers",
+    "pain_points": [
+      "Leads from Instagram, website, and referrals are tracked in scattered notes and DMs",
+      "Booking and contract management is handled through 3-4 separate apps",
+      "No systematic follow-up means 30-50% of inquiries go cold without a response",
+      "Client communication before shoots (location, timing, what to wear) is manual and repetitive",
+      "Review requests depend on remembering to ask, so Google presence is weak"
+    ],
+    "features": [
+      {"name": "Inquiry-to-Booking Pipeline", "description": "Visual pipeline tracking every lead from initial inquiry through consultation, proposal sent, booked, shoot completed, and gallery delivered. Never lose track of a potential client."},
+      {"name": "Automated Inquiry Response", "description": "When someone submits a contact form, GoHighLevel instantly sends a personalized SMS and email with your portfolio link and booking calendar. Respond faster than any competitor."},
+      {"name": "Session Prep Automation", "description": "After booking, automatically send a preparation sequence: what to wear guide, location details, timeline, and final reminders. Eliminates repetitive emails and ensures clients arrive prepared."},
+      {"name": "Review & Referral Engine", "description": "After gallery delivery, automatically request a Google review. Follow up with a referral incentive offer. Turn every satisfied client into a marketing channel."},
+      {"name": "Seasonal Campaign Funnels", "description": "Build mini-site funnels for seasonal offers: holiday mini sessions, spring family portraits, senior photo packages. Capture leads and automate the entire booking process."},
+      {"name": "Client Communication Hub", "description": "All client messages in one inbox: SMS, email, Instagram DMs, Facebook messages, and website chat. No more checking 5 different apps for client conversations."}
+    ],
+    "workflows": [
+      {"name": "New Inquiry Follow-Up", "description": "Trigger: form submission or DM. Actions: instant SMS with portfolio link and booking calendar, email with full package details, 3-day follow-up if no booking, 7-day final follow-up with limited-time offer."},
+      {"name": "Pre-Session Prep Sequence", "description": "Trigger: session booked. Actions: confirmation email with contract link, 7-day-before style guide email, 2-day-before location and time confirmation SMS, day-of weather and meeting point reminder."},
+      {"name": "Post-Gallery Review Request", "description": "Trigger: gallery delivered tag applied. Actions: wait 3 days, SMS asking if they love their photos, if positive send Google review link with specific prompt, 7 days later send referral card offer."},
+      {"name": "Past Client Reengagement", "description": "Trigger: 10 months since last session. Actions: personalized SMS reminding them of their last shoot anniversary, email with current seasonal offering, follow-up with limited availability message."}
+    ],
+    "roi_metrics": {
+      "Monthly tool cost savings": "$150-300/mo (replaces scheduling, email, CRM, chat tools)",
+      "Lead response time": "Under 60 seconds (from hours or days)",
+      "Inquiry-to-booking conversion": "20-40% increase from automated follow-ups",
+      "Google review increase": "5-8x more reviews within 90 days",
+      "Repeat booking rate": "15-25% increase from reengagement campaigns"
+    },
+    "editorial": "<p>GoHighLevel is a surprisingly strong fit for photography businesses, even though it is not specifically designed for the creative industry. The platform solves the number one revenue problem photographers face: losing leads because follow-up is slow, inconsistent, or nonexistent. When a bride inquires with five photographers, the one who responds within minutes with a professional, personalized message wins the booking more often than not.</p><p>The visual pipeline feature is particularly valuable for photographers who juggle dozens of clients in various stages. Being able to see at a glance who needs a proposal, who is booked, who needs prep emails, and who needs their gallery delivered eliminates the mental load of tracking everything in your head or on sticky notes.</p><p>The pre-session automation workflow is a genuine time-saver. Instead of manually sending what-to-wear guides, location pins, and timeline confirmations for every single session, GoHighLevel handles it all automatically. This gives you back hours every week that you can spend editing or shooting.</p><p>There are limitations to acknowledge. GoHighLevel does not replace your gallery delivery platform (Pixieset, Pic-Time, CloudSpot) or your contract and invoicing tool (HoneyBook, Dubsado). It handles marketing, CRM, and client communication. You will still need a gallery platform and may want a dedicated contract tool, though GoHighLevel's forms can handle basic contracts and payments.</p><p>For photographers earning $50,000+ annually, the $97/mo investment pays for itself if it converts even one additional booking per month. Most photographers report seeing results within the first 30 days of implementing automated follow-ups.</p>",
+    "faqs": [
+      {
+        "q": "Can GoHighLevel replace HoneyBook or Dubsado for photographers?",
+        "a": "Partially. GoHighLevel handles CRM, pipeline management, automated communication, scheduling, and basic contracts/invoicing. However, HoneyBook and Dubsado offer more polished client-facing proposals, contracts with e-signatures, and photography-specific invoice templates. Many photographers use GoHighLevel for marketing and lead management alongside HoneyBook for client-facing documents."
+      },
+      {
+        "q": "Does GoHighLevel work for wedding photographers?",
+        "a": "Yes, and particularly well. Wedding photography has long lead times (6-18 months) and requires extensive client communication. GoHighLevel's automated nurture sequences keep you top of mind during the planning process, prep sequences ensure clients are ready for each shoot, and the pipeline tracks every couple from inquiry through final gallery delivery."
+      },
+      {
+        "q": "How much does GoHighLevel cost for a photography business?",
+        "a": "The Starter plan at $97/mo covers everything a solo photographer needs. Add approximately $15-20/mo for Twilio SMS costs (photographers typically send fewer messages than service businesses). Total realistic cost is $112-120/mo, replacing $150-300/mo in separate marketing and CRM tools."
+      },
+      {
+        "q": "Can GoHighLevel capture leads from Instagram?",
+        "a": "Yes. GoHighLevel integrates with Instagram DMs and Facebook Messenger, pulling all messages into a single unified inbox. You can set up automated responses to Instagram DMs, create triggers based on keywords, and automatically add Instagram leads to your CRM pipeline. This is especially valuable for photographers who generate most of their leads through social media."
+      }
+    ]
+  }
+]
