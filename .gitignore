@@ -3,3 +3,13 @@
 # GSC tool credentials and tokens
 scripts/.credentials/
 scripts/reports/
+
+# SEO automation suite
+../.env
+../node_modules/
+../scripts/seo/backups/
+../scripts/seo/logs/
+../scripts/seo/reports/
+../scripts/seo/data/llm_visibility_history.csv
+../scripts/seo/data/dashboard_history.json
+../scripts/seo/data/freshness_cache.json
