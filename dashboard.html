@@ -577,23 +577,26 @@ td.critical { color: var(--accent-red); font-weight: 500; }
   function renderDashboard(d) {
     var html = '';
 
+    // Normalize: support both flat and nested JSON formats
+    var stats = d.stats || {};
+    var freshData = d.freshness || {};
+    var schemaData = d.schema || {};
+    var kwData = d.keywords || {};
+    var llmData = d.llm_visibility || d.llmVisibility || {};
+
     // Header
-    var updated = d.last_updated || d.lastUpdated || 'Unknown';
+    var updated = d.generated_at || d.last_updated || d.lastUpdated || 'Unknown';
     html += '<div class="dash-header">';
     html += '<h1>SEO Dashboard &mdash; highlevel.ai</h1>';
     html += '<div class="last-updated">Last updated: ' + esc(updated) + '</div>';
     html += '</div>';
 
     // Quick Stats
-    var totalPages = d.total_pages != null ? d.total_pages : (d.totalPages != null ? d.totalPages : '—');
-    var freshnessCount = 0;
-    if (d.freshness_issues) freshnessCount = Array.isArray(d.freshness_issues) ? d.freshness_issues.length : (d.freshness_issues.total || d.freshness_issues.count || 0);
-    if (d.freshnessIssues) freshnessCount = Array.isArray(d.freshnessIssues) ? d.freshnessIssues.length : (d.freshnessIssues.total || d.freshnessIssues.count || 0);
-    var schemaIssues = 0;
-    if (d.schema_issues) schemaIssues = Array.isArray(d.schema_issues) ? d.schema_issues.length : (d.schema_issues.total || d.schema_issues.count || 0);
-    if (d.schemaIssues) schemaIssues = Array.isArray(d.schemaIssues) ? d.schemaIssues.length : (d.schemaIssues.total || d.schemaIssues.count || 0);
-    var keywords = d.striking_distance_keywords || d.strikingDistanceKeywords || d.keywords || [];
-    var kwCount = Array.isArray(keywords) ? keywords.length : (keywords.total || keywords.count || 0);
+    var totalPages = stats.total_pages || d.total_pages || d.totalPages || '—';
+    var freshnessCount = stats.freshness_issues || freshData.total_issues || 0;
+    var schemaIssues = stats.schema_issues || schemaData.issues || 0;
+    var kwCount = stats.striking_distance_keywords || 0;
+    if (kwData.striking_distance && kwData.striking_distance.length) kwCount = kwData.striking_distance.length;
 
     html += '<div class="stats-row">';
     html += statCard('Total Pages', totalPages, '');
@@ -616,7 +619,7 @@ td.critical { color: var(--accent-red); font-weight: 500; }
     }
 
     // Freshness Issues
-    var freshItems = d.freshness_issues || d.freshnessIssues || [];
+    var freshItems = freshData.items || d.freshness_issues || d.freshnessIssues || [];
     if (!Array.isArray(freshItems) && freshItems.items) freshItems = freshItems.items;
     if (!Array.isArray(freshItems)) freshItems = [];
     html += '<div class="dash-section">';
@@ -657,10 +660,9 @@ td.critical { color: var(--accent-red); font-weight: 500; }
     html += '</div>';
 
     // Schema Status
-    var schemaList = d.schema_issues || d.schemaIssues || [];
-    if (!Array.isArray(schemaList) && schemaList.items) schemaList = schemaList.items;
+    var schemaList = schemaData.items || d.schema_issues || d.schemaIssues || [];
     if (!Array.isArray(schemaList)) schemaList = [];
-    var schemaTotal = d.schema_total || d.schemaTotal || d.total_schemas || totalPages || '?';
+    var schemaTotal = schemaData.total_schemas || d.schema_total || d.schemaTotal || d.total_schemas || totalPages || '?';
     html += '<div class="dash-section">';
     html += '<h2><span class="section-icon icon-green">&#x2705;</span>Schema Status</h2>';
     if (schemaList.length === 0) {
@@ -676,7 +678,7 @@ td.critical { color: var(--accent-red); font-weight: 500; }
     html += '</div>';
 
     // Keyword Opportunities
-    var kws = Array.isArray(keywords) ? keywords : (keywords.items || []);
+    var kws = kwData.striking_distance || [];
     html += '<div class="dash-section">';
     html += '<h2><span class="section-icon icon-blue">&#x1F50D;</span>Keyword Opportunities</h2>';
     if (!kws.length) {
@@ -697,7 +699,7 @@ td.critical { color: var(--accent-red); font-weight: 500; }
     html += '</div>';
 
     // AI Visibility
-    var ai = d.ai_visibility || d.aiVisibility || null;
+    var ai = llmData || d.ai_visibility || d.aiVisibility || null;
     html += '<div class="dash-section">';
     html += '<h2><span class="section-icon icon-purple">&#x1F916;</span>AI Visibility</h2>';
     if (!ai || (ai.citation_rate == null && ai.citationRate == null)) {
