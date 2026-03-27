@@ -74,6 +74,13 @@
       "reason": "Missing WebPage schema"
     }
   ],
+  "dashboard.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
   "editorial-policy.html": [
     {
       "action": "add",

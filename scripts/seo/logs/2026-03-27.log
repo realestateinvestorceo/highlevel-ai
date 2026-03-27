@@ -1,0 +1,80 @@
+2026-03-27 17:46:03,953 [freshness_monitor] INFO: Freshness monitor starting -- 48 HTML files to scan
+2026-03-27 17:46:03,953 [freshness_monitor] INFO: Scanning about.html
+2026-03-27 17:46:03,956 [freshness_monitor] INFO: Scanning activecampaign-alternative.html
+2026-03-27 17:46:03,979 [freshness_monitor] INFO: Scanning best-prompts-sales-support.html
+2026-03-27 17:46:03,990 [freshness_monitor] INFO: Scanning blog/gohighlevel-automations-save-time.html
+2026-03-27 17:46:03,998 [freshness_monitor] INFO: Scanning blog/gohighlevel-march-2026-updates.html
+2026-03-27 17:46:04,004 [freshness_monitor] INFO: Scanning blog/index.html
+2026-03-27 17:46:04,008 [freshness_monitor] INFO: Scanning blog/setup-gohighlevel-first-client.html
+2026-03-27 17:46:04,016 [freshness_monitor] INFO: Scanning clickfunnels-alternative.html
+2026-03-27 17:46:04,033 [freshness_monitor] INFO: Scanning clickfunnels-limitations.html
+2026-03-27 17:46:04,044 [freshness_monitor] INFO: Scanning contact.html
+2026-03-27 17:46:04,046 [freshness_monitor] INFO: Scanning dashboard.html
+2026-03-27 17:46:04,047 [freshness_monitor] INFO: Scanning editorial-policy.html
+2026-03-27 17:46:04,049 [freshness_monitor] INFO: Scanning gohighlevel-pricing-calculator.html
+2026-03-27 17:46:04,061 [freshness_monitor] INFO: Scanning gohighlevel-reviews.html
+2026-03-27 17:46:04,075 [freshness_monitor] INFO: Scanning gohighlevel-white-label-guide.html
+2026-03-27 17:46:04,085 [freshness_monitor] INFO: Scanning highlevel-for-coaches.html
+2026-03-27 17:46:04,099 [freshness_monitor] INFO: Scanning highlevel-for-dentists.html
+2026-03-27 17:46:04,110 [freshness_monitor] INFO: Scanning highlevel-for-gyms.html
+2026-03-27 17:46:04,122 [freshness_monitor] INFO: Scanning highlevel-for-med-spas.html
+2026-03-27 17:46:04,133 [freshness_monitor] INFO: Scanning highlevel-for-real-estate.html
+2026-03-27 17:46:04,144 [freshness_monitor] INFO: Scanning highlevel-plus-shopify.html
+2026-03-27 17:46:04,157 [freshness_monitor] INFO: Scanning highlevel-plus-wordpress.html
+2026-03-27 17:46:04,167 [freshness_monitor] INFO: Scanning highlevel-vs-activecampaign.html
+2026-03-27 17:46:04,185 [freshness_monitor] INFO: Scanning highlevel-vs-chatgpt.html
+2026-03-27 17:46:04,198 [freshness_monitor] INFO: Scanning highlevel-vs-clickfunnels.html
+2026-03-27 17:46:04,216 [freshness_monitor] INFO: Scanning highlevel-vs-hubspot.html
+2026-03-27 17:46:04,234 [freshness_monitor] INFO: Scanning highlevel-vs-keap.html
+2026-03-27 17:46:04,249 [freshness_monitor] INFO: Scanning highlevel-vs-salesforce.html
+2026-03-27 17:46:04,273 [freshness_monitor] INFO: Scanning highlevel-vs-zapier-make.html
+2026-03-27 17:46:04,286 [freshness_monitor] INFO: Scanning hubspot-alternative.html
+2026-03-27 17:46:04,302 [freshness_monitor] INFO: Scanning hubspot-pricing-limits.html
+2026-03-27 17:46:04,316 [freshness_monitor] INFO: Scanning index.html
+2026-03-27 17:46:04,357 [freshness_monitor] INFO: Scanning mistakes-to-avoid.html
+2026-03-27 17:46:04,371 [freshness_monitor] INFO: Scanning pricing-explained.html
+2026-03-27 17:46:04,393 [freshness_monitor] INFO: Scanning privacy.html
+2026-03-27 17:46:04,395 [freshness_monitor] INFO: Scanning terms.html
+2026-03-27 17:46:04,397 [freshness_monitor] INFO: Scanning tool-stack-savings-calculator.html
+2026-03-27 17:46:04,409 [freshness_monitor] INFO: Scanning tools/agency-pricing-calculator.html
+2026-03-27 17:46:04,419 [freshness_monitor] INFO: Scanning tools/client-onboarding-checklist.html
+2026-03-27 17:46:04,426 [freshness_monitor] INFO: Scanning tools/cta-generator.html
+2026-03-27 17:46:04,432 [freshness_monitor] INFO: Scanning tools/email-subject-line-tester.html
+2026-03-27 17:46:04,437 [freshness_monitor] INFO: Scanning tools/feature-comparison.html
+2026-03-27 17:46:04,450 [freshness_monitor] INFO: Scanning tools/index.html
+2026-03-27 17:46:04,455 [freshness_monitor] INFO: Scanning tools/marketing-roi-calculator.html
+2026-03-27 17:46:04,462 [freshness_monitor] INFO: Scanning tools/sms-cost-estimator.html
+2026-03-27 17:46:04,472 [freshness_monitor] INFO: Scanning voice-agent-setup.html
+2026-03-27 17:46:04,482 [freshness_monitor] INFO: Scanning which-gohighlevel-plan.html
+2026-03-27 17:46:04,491 [freshness_monitor] INFO: Scanning workflows-for-agencies.html
+2026-03-27 17:46:04,502 [freshness_monitor] INFO: Report saved to /home/runner/work/highlevel-ai/highlevel-ai/scripts/seo/reports/freshness-audit-2026-03-27.md
+2026-03-27 17:46:04,591 [schema_audit] INFO: Scanning 48 HTML files in /home/runner/work/highlevel-ai/highlevel-ai
+2026-03-27 17:46:04,609 [schema_audit] INFO: Audit complete: 48 pages, 147 schemas, 0 issues (0 errors, 0 warnings)
+2026-03-27 17:46:04,609 [schema_audit] INFO: Report saved: /home/runner/work/highlevel-ai/highlevel-ai/scripts/seo/reports/schema-audit-2026-03-27.md
+2026-03-27 17:46:04,610 [schema_audit] INFO: Fix data saved: /home/runner/work/highlevel-ai/highlevel-ai/scripts/seo/data/schema_fixes.json
+2026-03-27 17:46:04,784 [update_sitemap] INFO: Scanning HTML files in /home/runner/work/highlevel-ai/highlevel-ai ...
+2026-03-27 17:46:04,785 [update_sitemap] INFO: Found 48 HTML files to process
+2026-03-27 17:46:04,795 [update_sitemap] INFO: Collected metadata for 48 pages
+2026-03-27 17:46:04,795 [update_sitemap] INFO: --- Updating sitemap.xml ---
+2026-03-27 17:46:04,795 [update_sitemap] INFO: sitemap.xml: updated (8925 bytes, 48 URLs)
+2026-03-27 17:46:04,796 [update_sitemap] INFO: --- Updating llms.txt ---
+2026-03-27 17:46:04,796 [update_sitemap] WARNING: Could not find page listing marker in llms.txt; appending page listing at end
+2026-03-27 17:46:04,797 [update_sitemap] INFO: llms.txt: updated (27177 bytes written)
+2026-03-27 17:46:04,797 [update_sitemap] INFO: --- Updating llms-full.txt ---
+2026-03-27 17:46:04,797 [update_sitemap] INFO: llms-full.txt: no changes needed
+2026-03-27 17:46:04,797 [update_sitemap] INFO: Done: 2 file(s) updated.
+2026-03-27 17:46:04,873 [seo_dashboard] INFO: ============================================================
+2026-03-27 17:46:04,873 [seo_dashboard] INFO: SEO Dashboard run started
+2026-03-27 17:46:04,874 [seo_dashboard] INFO: ============================================================
+2026-03-27 17:46:05,126 [seo_dashboard] ERROR: GSC authentication failed: Expecting value: line 2 column 1 (char 1)
+2026-03-27 17:46:05,684 [seo_dashboard] ERROR: GA4 authentication failed: ('File /tmp/ga4-service-account.json is not a valid json file.', JSONDecodeError('Expecting value: line 2 column 1 (char 1)'))
+2026-03-27 17:46:05,684 [seo_dashboard] ERROR: Both GSC and GA4 failed. Cannot generate report.
+2026-03-27 17:46:05,783 [generate_dashboard_data] INFO: Scanning for latest reports in /home/runner/work/highlevel-ai/highlevel-ai/scripts/seo/reports
+2026-03-27 17:46:05,784 [generate_dashboard_data] INFO:   Found freshness: freshness-audit-2026-03-27.md
+2026-03-27 17:46:05,784 [generate_dashboard_data] INFO:   Found schema: schema-audit-2026-03-27.md
+2026-03-27 17:46:05,784 [generate_dashboard_data] INFO:   No report found for seo_dashboard
+2026-03-27 17:46:05,784 [generate_dashboard_data] INFO:   No report found for llm_visibility
+2026-03-27 17:46:05,785 [generate_dashboard_data] INFO:   No report found for daily_summary
+2026-03-27 17:46:05,785 [generate_dashboard_data] INFO:   No report found for internal_links
+2026-03-27 17:46:05,788 [generate_dashboard_data] INFO: Wrote dashboard data to /home/runner/work/highlevel-ai/highlevel-ai/dashboard-data.json
+2026-03-27 17:46:05,788 [generate_dashboard_data] INFO: Stats: 48 pages, 628 freshness issues, 0 schema issues, 0 striking-distance keywords

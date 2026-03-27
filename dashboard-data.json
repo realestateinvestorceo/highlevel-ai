@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27 10:27:06",
+  "generated_at": "2026-03-27 17:46:05",
   "report_dates": {
     "freshness": "2026-03-27",
     "schema": "2026-03-27",
@@ -7,7 +7,7 @@
     "llm_visibility": null
   },
   "stats": {
-    "total_pages": 47,
+    "total_pages": 48,
     "freshness_issues": 628,
     "schema_issues": 0,
     "striking_distance_keywords": 0
