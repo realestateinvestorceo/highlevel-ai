@@ -168,6 +168,181 @@ body {
   font-size: 0.85rem;
 }
 
+/* ── Earnings (THE scoreboard) ── */
+.earnings-section {
+  background: linear-gradient(135deg, #0f1a0f 0%, #12121a 50%, #1a0f1a 100%);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.earnings-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+}
+
+.earnings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.earnings-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.earnings-title .money-icon {
+  font-size: 1.5rem;
+}
+
+.earnings-badge {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--accent-green);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.earnings-big-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.earnings-sub {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.earnings-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.earnings-stat {
+  text-align: center;
+  padding: 16px 8px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+.earnings-stat-val {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.earnings-stat-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.screenshot-area {
+  border: 2px dashed rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.screenshot-area:hover {
+  border-color: var(--accent-blue);
+  background: rgba(79, 125, 249, 0.05);
+}
+
+.screenshot-area.has-image {
+  border-style: solid;
+  border-color: rgba(255,255,255,0.08);
+  padding: 12px;
+}
+
+.screenshot-area img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.screenshot-placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.screenshot-placeholder .upload-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.screenshot-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.screenshot-actions button {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-secondary);
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+
+.screenshot-actions button:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-primary);
+}
+
+.screenshot-actions button.remove-btn:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.screenshot-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 8px;
+}
+
+.earnings-file-input {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .earnings-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .earnings-big-number { font-size: 2.2rem; }
+}
+
 /* ── Hero Stats ── */
 .hero-stats {
   display: grid;
@@ -796,6 +971,50 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
+    // 0. EARNINGS — THE SCOREBOARD
+    // ═══════════════════════════════════════
+    var saved = localStorage.getItem('hl_earnings_img');
+    var savedDate = localStorage.getItem('hl_earnings_date') || '';
+
+    html += '<div class="earnings-section animate-in">';
+    html += '<div class="earnings-header">';
+    html += '<div class="earnings-title"><span class="money-icon">💰</span> Affiliate Earnings</div>';
+    html += '<div class="earnings-badge">THIS IS WHAT MATTERS</div>';
+    html += '</div>';
+
+    // If we have saved earnings data from manual input, show it
+    html += '<div class="earnings-big-number">$38.80</div>';
+    html += '<div class="earnings-sub">Total commissions earned · 40% recurring = $38.80/mo forever from 1 customer</div>';
+
+    html += '<div class="earnings-stats-row">';
+    html += '<div class="earnings-stat"><div class="earnings-stat-val">37</div><div class="earnings-stat-label">Clicks (6mo)</div></div>';
+    html += '<div class="earnings-stat"><div class="earnings-stat-val">1</div><div class="earnings-stat-label">Signups</div></div>';
+    html += '<div class="earnings-stat"><div class="earnings-stat-val">1</div><div class="earnings-stat-label">Paying Customer</div></div>';
+    html += '<div class="earnings-stat"><div class="earnings-stat-val">2.7%</div><div class="earnings-stat-label">Click→Customer</div></div>';
+    html += '</div>';
+
+    html += '<div style="color:var(--text-muted);font-size:0.8rem;margin-bottom:16px;">📊 History: Oct: 1 click · Nov–Jan: 0 · Feb: 7 clicks · Mar: 29 clicks, 1 signup, 1 customer, $38.80</div>';
+
+    // Screenshot upload area
+    html += '<input type="file" accept="image/*" class="earnings-file-input" id="earningsFileInput">';
+    html += '<div class="screenshot-area' + (saved ? ' has-image' : '') + '" id="screenshotArea">';
+    if (saved) {
+      html += '<img src="' + saved + '" alt="GHL Affiliate Performance" id="screenshotImg">';
+      html += '<div class="screenshot-actions">';
+      html += '<button onclick="document.getElementById(\'earningsFileInput\').click()">📷 Update Screenshot</button>';
+      html += '<button class="remove-btn" onclick="removeScreenshot()">✕ Remove</button>';
+      html += '</div>';
+      if (savedDate) html += '<div class="screenshot-date">Uploaded ' + esc(savedDate) + '</div>';
+    } else {
+      html += '<div class="screenshot-placeholder">';
+      html += '<span class="upload-icon">📸</span>';
+      html += 'Drop your GHL affiliate portal screenshot here<br><small>or click to upload</small>';
+      html += '</div>';
+    }
+    html += '</div>';
+    html += '</div>';
+
+    // ═══════════════════════════════════════
     // 1. HERO STATS
     // ═══════════════════════════════════════
     html += '<div class="hero-stats">';
@@ -1064,7 +1283,47 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 
     document.getElementById('dashboard').innerHTML = html;
     show('dashboard');
+
+    // Wire up screenshot upload
+    var fileInput = document.getElementById('earningsFileInput');
+    var screenshotArea = document.getElementById('screenshotArea');
+    if (screenshotArea && !screenshotArea._wired) {
+      screenshotArea._wired = true;
+      screenshotArea.addEventListener('click', function(e) {
+        if (e.target.tagName === 'BUTTON') return;
+        fileInput.click();
+      });
+      // Drag and drop
+      screenshotArea.addEventListener('dragover', function(e) { e.preventDefault(); screenshotArea.style.borderColor = 'var(--accent-green)'; });
+      screenshotArea.addEventListener('dragleave', function() { screenshotArea.style.borderColor = ''; });
+      screenshotArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        screenshotArea.style.borderColor = '';
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) handleScreenshotFile(e.dataTransfer.files[0]);
+      });
+      fileInput.addEventListener('change', function() {
+        if (fileInput.files && fileInput.files[0]) handleScreenshotFile(fileInput.files[0]);
+      });
+    }
   }
+
+  function handleScreenshotFile(file) {
+    if (!file.type.startsWith('image/')) return;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      localStorage.setItem('hl_earnings_img', e.target.result);
+      localStorage.setItem('hl_earnings_date', new Date().toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'}));
+      // Re-render
+      fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+    };
+    reader.readAsDataURL(file);
+  }
+
+  window.removeScreenshot = function() {
+    localStorage.removeItem('hl_earnings_img');
+    localStorage.removeItem('hl_earnings_date');
+    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+  };
 
 })();
 </script>
