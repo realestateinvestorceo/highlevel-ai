@@ -1,0 +1,83 @@
+name: Weekly SEO Report
+
+on:
+  schedule:
+    # Every Monday at 9:00 AM UTC (2:00 AM Pacific)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    # Manual trigger — click "Run workflow" in GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/seo/requirements.txt
+        working-directory: ${{ github.workspace }}
+
+      - name: Install Node.js dependencies
+        run: npm install
+        working-directory: ${{ github.workspace }}
+
+      - name: Write credentials files
+        run: |
+          mkdir -p site/scripts/.credentials
+          echo '${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}' > /tmp/ga4-service-account.json
+          echo '${{ secrets.GSC_CLIENT_SECRET_JSON }}' > site/scripts/.credentials/client_secret.json
+          echo '${{ secrets.GSC_TOKEN_JSON }}' > site/scripts/.credentials/token.json
+
+      - name: Create .env file
+        run: |
+          cat > .env << 'ENVEOF'
+          GA4_PROPERTY_ID=526181718
+          GA4_SERVICE_ACCOUNT_FILE=/tmp/ga4-service-account.json
+          GSC_SITE_URL=sc-domain:highlevel.ai
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          PERPLEXITY_API_KEY=${{ secrets.PERPLEXITY_API_KEY }}
+          ENVEOF
+
+      - name: Run Freshness Monitor
+        run: python3 scripts/seo/freshness_monitor.py --skip-links
+        continue-on-error: true
+
+      - name: Run Schema Audit
+        run: python3 scripts/seo/schema_audit.py --audit
+        continue-on-error: true
+
+      - name: Run Sitemap Updater
+        run: python3 scripts/seo/update_sitemap.py
+        continue-on-error: true
+
+      - name: Run SEO Dashboard
+        run: python3 scripts/seo/seo_dashboard.py --days 7
+        continue-on-error: true
+
+      - name: Generate Dashboard Data
+        run: python3 scripts/seo/generate_dashboard_data.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Auto-update: weekly SEO report $(date +%Y-%m-%d)"
+          git push
