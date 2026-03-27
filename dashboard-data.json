@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27 11:56:26",
+  "generated_at": "2026-03-27 13:05:41",
   "report_dates": {
     "freshness": "2026-03-27",
     "schema": "2026-03-27",
@@ -394,11 +394,11 @@
     }
   },
   "traffic": {
-    "sessions": 495,
-    "users": 457,
-    "pageviews": 569,
+    "sessions": 497,
+    "users": 459,
+    "pageviews": 570,
     "bounce_rate": 0.63,
-    "avg_duration": 80.8,
+    "avg_duration": 80.6,
     "sources": [
       {
         "source": "(direct)",
@@ -408,7 +408,7 @@
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 116
+        "sessions": 117
       },
       {
         "source": "chatgpt.com",
@@ -448,7 +448,7 @@
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 4
+        "sessions": 5
       },
       {
         "source": "duckduckgo",
