@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>SEO Dashboard — highlevel.ai</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0f;
+  --card-bg: #12121a;
+  --accent-blue: #4f7df9;
+  --accent-green: #34d399;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: rgba(255,255,255,0.06);
+  --radius: 16px;
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Sora', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Login Screen ── */
+#login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h1 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.login-card .input-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-card input[type="password"]:focus {
+  border-color: var(--accent-blue);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-blue);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.login-card button:hover { opacity: 0.9; }
+
+.login-error {
+  color: var(--accent-red);
+  font-size: 0.85rem;
+  margin-top: 12px;
+  min-height: 20px;
+}
+
+/* ── Loading ── */
+#loading-screen {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#loading-screen p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ── Dashboard ── */
+#dashboard {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* Header */
+.dash-header {
+  margin-bottom: 32px;
+}
+
+.dash-header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dash-header .last-updated {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Quick Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.stat-card .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-card .stat-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-card .stat-value.red { color: var(--accent-red); }
+.stat-card .stat-value.green { color: var(--accent-green); }
+.stat-card .stat-value.blue { color: var(--accent-blue); }
+.stat-card .stat-value.orange { color: var(--accent-orange); }
+
+/* Section */
+.dash-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.dash-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.icon-orange { background: rgba(245,158,11,0.15); }
+.icon-red { background: rgba(239,68,68,0.15); }
+.icon-green { background: rgba(52,211,153,0.15); }
+.icon-blue { background: rgba(79,125,249,0.15); }
+.icon-purple { background: rgba(168,85,247,0.15); }
+
+/* Priority Actions */
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.action-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-orange);
+  min-width: 22px;
+  padding-top: 1px;
+}
+
+.action-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.table-note {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 10px 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 10px 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child td { border-bottom: none; }
+
+tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+td.critical { color: var(--accent-red); font-weight: 500; }
+
+.summary-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.summary-stat {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.summary-stat strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Schema Status */
+.schema-ok, .schema-warn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.schema-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.schema-icon.ok { background: rgba(52,211,153,0.15); }
+.schema-icon.warn { background: rgba(239,68,68,0.15); }
+
+.schema-text { font-size: 1.1rem; font-weight: 500; }
+.schema-text.ok-text { color: var(--accent-green); }
+.schema-text.warn-text { color: var(--accent-red); }
+
+/* AI Visibility */
+.big-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.big-metric .big-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  line-height: 1;
+}
+
+.big-metric .big-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.platform-breakdown {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.platform-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 20px;
+  min-width: 140px;
+}
+
+.platform-item .plat-name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.platform-item .plat-val {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* No Data */
+.no-data {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 24px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Error state */
+.error-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 560px;
+  margin: 80px auto;
+}
+
+.error-card .err-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.error-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.error-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.dash-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .stats-row { grid-template-columns: 1fr; }
+  .login-card { padding: 36px 24px; }
+  #dashboard { padding: 20px 16px 48px; }
+  .dash-section { padding: 20px; }
+  .stat-card .stat-value { font-size: 1.6rem; }
+  .big-metric .big-num { font-size: 2.2rem; }
+  .dash-header h1 { font-size: 1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Login ── -->
+<div id="login-screen">
+  <div class="login-card">
+    <h1>SEO Dashboard</h1>
+    <p>Enter the dashboard password to continue.</p>
+    <div class="input-wrap">
+      <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
+    </div>
+    <button id="pw-btn" type="button">Unlock</button>
+    <div class="login-error" id="pw-error"></div>
+  </div>
+</div>
+
+<!-- ── Loading ── -->
+<div id="loading-screen">
+  <div class="spinner"></div>
+  <p>Loading dashboard data&hellip;</p>
+</div>
+
+<!-- ── Dashboard ── -->
+<div id="dashboard"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  var HASH = '94a826c1d6e34db7b5641615e5f9c5db9bdb9316ce821bf270581823b3959215';
+  var AUTH_KEY = 'seo_dash_auth';
+
+  // ── Utility ──
+  function esc(str) {
+    if (str == null) return '';
+    var d = document.createElement('div');
+    d.textContent = String(str);
+    return d.innerHTML;
+  }
+
+  async function sha256(text) {
+    var encoded = new TextEncoder().encode(text);
+    var buf = await crypto.subtle.digest('SHA-256', encoded);
+    return Array.from(new Uint8Array(buf)).map(function(b) {
+      return b.toString(16).padStart(2, '0');
+    }).join('');
+  }
+
+  function show(id) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('loading-screen').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'none';
+    var el = document.getElementById(id);
+    if (el) el.style.display = (id === 'login-screen' || id === 'loading-screen') ? 'flex' : 'block';
+  }
+
+  // ── Auth ──
+  async function attemptLogin(pw) {
+    var hash = await sha256(pw);
+    if (hash === HASH) {
+      sessionStorage.setItem(AUTH_KEY, '1');
+      loadData();
+    } else {
+      document.getElementById('pw-error').textContent = 'Wrong password';
+      document.getElementById('pw-input').value = '';
+      document.getElementById('pw-input').focus();
+    }
+  }
+
+  document.getElementById('pw-btn').addEventListener('click', function() {
+    var pw = document.getElementById('pw-input').value;
+    if (pw) attemptLogin(pw);
+  });
+
+  document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      var pw = this.value;
+      if (pw) attemptLogin(pw);
+    }
+    document.getElementById('pw-error').textContent = '';
+  });
+
+  // ── Check session ──
+  if (sessionStorage.getItem(AUTH_KEY) === '1') {
+    loadData();
+  }
+
+  // ── Load Data ──
+  function loadData() {
+    show('loading-screen');
+    fetch('dashboard-data.json')
+      .then(function(r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      })
+      .then(function(data) {
+        renderDashboard(data);
+      })
+      .catch(function() {
+        show('dashboard');
+        document.getElementById('dashboard').innerHTML =
+          '<div class="error-card">' +
+          '<div class="err-icon">&#x1F4CB;</div>' +
+          '<h2>No Reports Generated Yet</h2>' +
+          '<p>Run the automation suite first to generate <code>dashboard-data.json</code>.</p>' +
+          '</div>';
+      });
+  }
+
+  // ── Render ──
+  function renderDashboard(d) {
+    var html = '';
+
+    // Header
+    var updated = d.last_updated || d.lastUpdated || 'Unknown';
+    html += '<div class="dash-header">';
+    html += '<h1>SEO Dashboard &mdash; highlevel.ai</h1>';
+    html += '<div class="last-updated">Last updated: ' + esc(updated) + '</div>';
+    html += '</div>';
+
+    // Quick Stats
+    var totalPages = d.total_pages != null ? d.total_pages : (d.totalPages != null ? d.totalPages : '—');
+    var freshnessCount = 0;
+    if (d.freshness_issues) freshnessCount = Array.isArray(d.freshness_issues) ? d.freshness_issues.length : (d.freshness_issues.total || d.freshness_issues.count || 0);
+    if (d.freshnessIssues) freshnessCount = Array.isArray(d.freshnessIssues) ? d.freshnessIssues.length : (d.freshnessIssues.total || d.freshnessIssues.count || 0);
+    var schemaIssues = 0;
+    if (d.schema_issues) schemaIssues = Array.isArray(d.schema_issues) ? d.schema_issues.length : (d.schema_issues.total || d.schema_issues.count || 0);
+    if (d.schemaIssues) schemaIssues = Array.isArray(d.schemaIssues) ? d.schemaIssues.length : (d.schemaIssues.total || d.schemaIssues.count || 0);
+    var keywords = d.striking_distance_keywords || d.strikingDistanceKeywords || d.keywords || [];
+    var kwCount = Array.isArray(keywords) ? keywords.length : (keywords.total || keywords.count || 0);
+
+    html += '<div class="stats-row">';
+    html += statCard('Total Pages', totalPages, '');
+    html += statCard('Freshness Issues', freshnessCount, freshnessCount > 0 ? 'red' : 'green');
+    html += statCard('Schema Issues', schemaIssues, schemaIssues === 0 ? 'green' : 'red');
+    html += statCard('Striking Distance KWs', kwCount, 'blue');
+    html += '</div>';
+
+    // Priority Actions
+    var actions = d.priority_actions || d.priorityActions || d.actions || [];
+    if (actions.length > 0) {
+      html += '<div class="dash-section">';
+      html += '<h2><span class="section-icon icon-orange">&#x26A1;</span>Priority Actions</h2>';
+      html += '<div class="action-list">';
+      for (var i = 0; i < actions.length; i++) {
+        var txt = typeof actions[i] === 'string' ? actions[i] : (actions[i].text || actions[i].description || actions[i].action || '');
+        html += '<div class="action-item"><span class="action-num">' + (i + 1) + '.</span><span class="action-text">' + esc(txt) + '</span></div>';
+      }
+      html += '</div></div>';
+    }
+
+    // Freshness Issues
+    var freshItems = d.freshness_issues || d.freshnessIssues || [];
+    if (!Array.isArray(freshItems) && freshItems.items) freshItems = freshItems.items;
+    if (!Array.isArray(freshItems)) freshItems = [];
+    html += '<div class="dash-section">';
+    html += '<h2><span class="section-icon icon-red">&#x1F504;</span>Freshness Issues</h2>';
+    if (freshItems.length === 0) {
+      html += '<p class="no-data">No freshness issues detected.</p>';
+    } else {
+      // Summary by type
+      var types = {};
+      freshItems.forEach(function(item) {
+        var t = item.type || item.issue_type || 'Other';
+        types[t] = (types[t] || 0) + 1;
+      });
+      html += '<div class="summary-stats">';
+      html += '<span class="summary-stat">Total: <strong>' + freshItems.length + '</strong></span>';
+      Object.keys(types).forEach(function(t) {
+        html += '<span class="summary-stat">' + esc(t) + ': <strong>' + types[t] + '</strong></span>';
+      });
+      html += '</div>';
+
+      var maxShow = Math.min(freshItems.length, 50);
+      html += '<div class="table-wrap"><table><thead><tr><th>File</th><th>Type</th><th>Found</th><th>Expected</th></tr></thead><tbody>';
+      for (var fi = 0; fi < maxShow; fi++) {
+        var f = freshItems[fi];
+        var severity = (f.severity === 'critical' || f.critical) ? ' class="critical"' : '';
+        html += '<tr>';
+        html += '<td' + severity + '>' + esc(f.file || f.path || f.url || '—') + '</td>';
+        html += '<td>' + esc(f.type || f.issue_type || '—') + '</td>';
+        html += '<td>' + esc(f.found || f.actual || '—') + '</td>';
+        html += '<td>' + esc(f.expected || '—') + '</td>';
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+      if (freshItems.length > 50) {
+        html += '<p class="table-note">Showing ' + maxShow + ' of ' + freshItems.length + ' issues</p>';
+      }
+    }
+    html += '</div>';
+
+    // Schema Status
+    var schemaList = d.schema_issues || d.schemaIssues || [];
+    if (!Array.isArray(schemaList) && schemaList.items) schemaList = schemaList.items;
+    if (!Array.isArray(schemaList)) schemaList = [];
+    var schemaTotal = d.schema_total || d.schemaTotal || d.total_schemas || totalPages || '?';
+    html += '<div class="dash-section">';
+    html += '<h2><span class="section-icon icon-green">&#x2705;</span>Schema Status</h2>';
+    if (schemaList.length === 0) {
+      html += '<div class="schema-ok"><div class="schema-icon ok">&#x2714;</div><div class="schema-text ok-text">All ' + esc(schemaTotal) + ' schemas valid</div></div>';
+    } else {
+      html += '<div class="schema-warn"><div class="schema-icon warn">&#x26A0;</div><div class="schema-text warn-text">' + schemaList.length + ' schema issue' + (schemaList.length === 1 ? '' : 's') + ' found</div></div>';
+      html += '<div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>File</th><th>Issue</th></tr></thead><tbody>';
+      schemaList.forEach(function(s) {
+        html += '<tr><td>' + esc(s.file || s.path || s.url || '—') + '</td><td>' + esc(s.issue || s.message || s.error || '—') + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+    }
+    html += '</div>';
+
+    // Keyword Opportunities
+    var kws = Array.isArray(keywords) ? keywords : (keywords.items || []);
+    html += '<div class="dash-section">';
+    html += '<h2><span class="section-icon icon-blue">&#x1F50D;</span>Keyword Opportunities</h2>';
+    if (!kws.length) {
+      html += '<p class="no-data">No data yet &mdash; dashboard report hasn\'t run.</p>';
+    } else {
+      kws.sort(function(a, b) { return (b.impressions || 0) - (a.impressions || 0); });
+      html += '<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Impressions</th><th>Clicks</th></tr></thead><tbody>';
+      kws.forEach(function(k) {
+        html += '<tr>';
+        html += '<td>' + esc(k.keyword || k.query || '—') + '</td>';
+        html += '<td>' + esc(k.position != null ? k.position : '—') + '</td>';
+        html += '<td>' + esc(k.impressions != null ? k.impressions.toLocaleString() : '—') + '</td>';
+        html += '<td>' + esc(k.clicks != null ? k.clicks.toLocaleString() : '—') + '</td>';
+        html += '</tr>';
+      });
+      html += '</tbody></table></div>';
+    }
+    html += '</div>';
+
+    // AI Visibility
+    var ai = d.ai_visibility || d.aiVisibility || null;
+    html += '<div class="dash-section">';
+    html += '<h2><span class="section-icon icon-purple">&#x1F916;</span>AI Visibility</h2>';
+    if (!ai || (ai.citation_rate == null && ai.citationRate == null)) {
+      html += '<p class="no-data">No data yet &mdash; AI visibility report hasn\'t run.</p>';
+    } else {
+      var rate = ai.citation_rate != null ? ai.citation_rate : ai.citationRate;
+      html += '<div class="big-metric"><span class="big-num">' + esc(rate) + '%</span><span class="big-label">Citation Rate</span></div>';
+      var platforms = ai.platforms || ai.by_platform || ai.breakdown || null;
+      if (platforms && typeof platforms === 'object') {
+        html += '<div class="platform-breakdown">';
+        var keys = Array.isArray(platforms) ? platforms : Object.keys(platforms);
+        if (Array.isArray(platforms) && platforms.length && typeof platforms[0] === 'object') {
+          platforms.forEach(function(p) {
+            html += '<div class="platform-item"><div class="plat-name">' + esc(p.name || p.platform) + '</div><div class="plat-val">' + esc(p.rate != null ? p.rate + '%' : p.value) + '</div></div>';
+          });
+        } else if (!Array.isArray(platforms)) {
+          Object.keys(platforms).forEach(function(k) {
+            var v = platforms[k];
+            html += '<div class="platform-item"><div class="plat-name">' + esc(k) + '</div><div class="plat-val">' + esc(typeof v === 'number' ? v + '%' : v) + '</div></div>';
+          });
+        }
+        html += '</div>';
+      }
+    }
+    html += '</div>';
+
+    // Footer
+    html += '<div class="dash-footer">Reports auto-update every Monday at 9am UTC via GitHub Actions</div>';
+
+    document.getElementById('dashboard').innerHTML = html;
+    show('dashboard');
+  }
+
+  function statCard(label, value, color) {
+    return '<div class="stat-card">' +
+      '<div class="stat-label">' + esc(label) + '</div>' +
+      '<div class="stat-value' + (color ? ' ' + color : '') + '">' + esc(value) + '</div>' +
+      '</div>';
+  }
+
+})();
+</script>
+
+</body>
+</html>
