@@ -395,6 +395,46 @@ def main():
     except Exception as e:
         logger.warning("Could not fetch GA4 data: %s", e)
 
+    # Pull live GSC keyword data
+    gsc_keywords = {"striking_distance": [], "top_pages": []}
+    try:
+        add_existing_scripts_to_path()
+        import gsc_analyze
+        from config import GSC_SITE_URL
+        service = gsc_analyze.authenticate(GSC_SITE_URL)
+        qp, pages, queries, s, e2 = gsc_analyze.fetch_data(service, GSC_SITE_URL, 30)
+
+        # Striking distance keywords (position 5-20, 10+ impressions)
+        for row in qp:
+            pos = row.get("position", 0)
+            imp = row.get("impressions", 0)
+            if 5 <= pos <= 20 and imp >= 10:
+                gsc_keywords["striking_distance"].append({
+                    "keyword": row["keys"][0],
+                    "page": row["keys"][1].replace("https://www.highlevel.ai", "") if len(row["keys"]) > 1 else "",
+                    "position": round(pos, 1),
+                    "impressions": imp,
+                    "clicks": row.get("clicks", 0),
+                })
+        gsc_keywords["striking_distance"].sort(key=lambda x: x["impressions"], reverse=True)
+        gsc_keywords["striking_distance"] = gsc_keywords["striking_distance"][:20]
+
+        # Top pages
+        for p in pages:
+            url = p["keys"][0].replace("https://www.highlevel.ai", "") or "/"
+            gsc_keywords["top_pages"].append({
+                "page": url,
+                "clicks": p["clicks"],
+                "impressions": p["impressions"],
+                "position": round(p["position"], 1),
+            })
+        gsc_keywords["top_pages"].sort(key=lambda x: x["clicks"], reverse=True)
+        gsc_keywords["top_pages"] = gsc_keywords["top_pages"][:15]
+
+        logger.info("GSC data: %d striking distance keywords, %d pages", len(gsc_keywords["striking_distance"]), len(gsc_keywords["top_pages"]))
+    except Exception as ex:
+        logger.warning("Could not fetch GSC data: %s", ex)
+
     # Compile the dashboard data
     dashboard = {
         "generated_at": now(),
@@ -403,7 +443,7 @@ def main():
             "total_pages": freshness["pages_checked"] or schema["pages_scanned"] or 0,
             "freshness_issues": freshness["total_issues"],
             "schema_issues": schema["issues"],
-            "striking_distance_keywords": len(seo["striking_distance"]),
+            "striking_distance_keywords": len(gsc_keywords["striking_distance"]) or len(seo["striking_distance"]),
         },
         "priority_actions": daily["priority_actions"],
         "freshness": {
@@ -419,8 +459,8 @@ def main():
             "items": schema["items"],
         },
         "keywords": {
-            "striking_distance": seo["striking_distance"],
-            "top_pages": seo["top_pages"],
+            "striking_distance": gsc_keywords["striking_distance"] or seo["striking_distance"],
+            "top_pages": gsc_keywords["top_pages"] or seo["top_pages"],
             "traffic_summary": seo["traffic_summary"],
         },
         "llm_visibility": {
