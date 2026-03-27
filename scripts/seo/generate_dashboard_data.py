@@ -18,7 +18,7 @@ from pathlib import Path
 # Ensure the script's own directory is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from config import REPORTS_DIR, SITE_DIR, today, now, setup_logging
+from config import REPORTS_DIR, SITE_DIR, today, now, setup_logging, add_existing_scripts_to_path
 
 logger = setup_logging("generate_dashboard_data")
 
@@ -362,6 +362,39 @@ def main():
         else:
             report_dates[key] = None
 
+    # Pull live GA4 traffic data
+    traffic_data = {
+        "sessions": 0, "users": 0, "pageviews": 0,
+        "bounce_rate": 0, "avg_duration": 0,
+        "sources": [], "top_pages": [], "cta_clicks": 0
+    }
+    try:
+        add_existing_scripts_to_path()
+        import ga4_analyze
+        from google.analytics.data_v1beta.types import DateRange
+        client = ga4_analyze.get_client()
+        dr = DateRange(start_date="30daysAgo", end_date="today")
+
+        totals, _ = ga4_analyze.get_overview(client, dr)
+        traffic_data["sessions"] = totals.get("sessions", 0)
+        traffic_data["users"] = totals.get("users", 0)
+        traffic_data["pageviews"] = totals.get("pageviews", 0)
+        traffic_data["bounce_rate"] = round(totals.get("bounce_rate", 0), 2)
+        traffic_data["avg_duration"] = round(totals.get("avg_duration", 0), 1)
+
+        sources = ga4_analyze.get_traffic_sources(client, dr, limit=15)
+        traffic_data["sources"] = [
+            {"source": s.get("source", "?"), "medium": s.get("medium", "?"), "sessions": int(s.get("sessions", 0))}
+            for s in sources
+        ]
+
+        cta = ga4_analyze.get_cta_clicks(client, dr)
+        traffic_data["cta_clicks"] = sum(int(c.get("eventCount", 0)) for c in cta)
+
+        logger.info("GA4 data: %d sessions, %d users, %d CTA clicks", traffic_data["sessions"], traffic_data["users"], traffic_data["cta_clicks"])
+    except Exception as e:
+        logger.warning("Could not fetch GA4 data: %s", e)
+
     # Compile the dashboard data
     dashboard = {
         "generated_at": now(),
@@ -394,6 +427,7 @@ def main():
             "citation_rate": llm["citation_rate"],
             "by_platform": llm["by_platform"],
         },
+        "traffic": traffic_data,
     }
 
     # Write output

@@ -1,0 +1,107 @@
+# SEO Dashboard -- 2026-03-27
+Generated: 2026-03-27 11:29:40
+GSC Period: 2026-02-22 to 2026-03-24 (30 days)
+GA4 Period: last 30 days
+
+## Priority Actions
+1. Optimize for "highlevel" (pos 16.0, 841 impressions) on /
+2. Improve title/description for / (CTR 0.39% vs 1.5% expected, 12,180 impressions)
+
+## Search Performance (GSC)
+### Overview
+| Metric | Value | vs Previous |
+|--------|------:|-------------|
+| Total Clicks | 35 | -- |
+| Total Impressions | 8,115 | -- |
+| Avg CTR | 0.4% | -- |
+| Avg Position | 26.8 | -- |
+
+### Top Queries (by Impressions)
+| Query | Clicks | Impressions | CTR | Position |
+|-------|-------:|------------:|----:|---------:|
+| highlevel ai | 15 | 318 | 4.7% | 4.9 |
+| high level ai | 6 | 248 | 2.4% | 6.4 |
+| high level | 3 | 805 | 0.4% | 19.2 |
+| high level ia | 3 | 8 | 37.5% | 4.2 |
+| hlevel ai | 3 | 20 | 15.0% | 3.1 |
+| go high level | 1 | 465 | 0.2% | 19.3 |
+| gohighlevel ai voice agent pricing | 1 | 22 | 4.5% | 9.5 |
+| highlevel | 1 | 841 | 0.1% | 16.0 |
+| highlevele | 1 | 2 | 50.0% | 7.0 |
+| hilevel ai | 1 | 5 | 20.0% | 3.6 |
+| "agent crm" highlevel | 0 | 1 | 0.0% | 10.0 |
+| "all in one marketing" "highlevel" | 0 | 1 | 0.0% | 6.0 |
+| "birdeye" "reputation" "review" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com | 0 | 1 | 0.0% | 9.0 |
+| "glofox" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com | 0 | 1 | 0.0% | 5.0 |
+| "highlevel, inc." "gohighlevel.com" | 0 | 2 | 0.0% | 25.5 |
+| "two weeks" "video" "form" "highlevel" | 0 | 5 | 0.0% | 6.2 |
+| -site:facebook.com -site:fb.me -site:youtube.com -site:youtu.be -site:youtube.be -site:twitter.com -site:instagram.com -site:tiktok.com -site:vm.tiktok.com -site:t.co -site:x.com -site:reddit.com "kajabi" | 0 | 1 | 0.0% | 42.0 |
+| a high level | 0 | 1 | 0.0% | 46.0 |
+| a higher level | 0 | 1 | 0.0% | 52.0 |
+| about go high level | 0 | 1 | 0.0% | 27.0 |
+
+### Striking Distance Keywords (Quick Wins)
+| Query | Position | Impressions | Clicks | CTR | Page |
+|-------|--------:|-----------:|------:|----:|------|
+| highlevel | 16.0 | 841 | 1 | 0.12% | / |
+| high level | 19.2 | 805 | 3 | 0.37% | / |
+| go high level | 19.3 | 465 | 1 | 0.22% | / |
+| high level ai | 5.8 | 245 | 6 | 2.45% | / |
+| high level crm | 18.7 | 112 | 0 | 0% | / |
+| gohighlevel ai employee pricing 2026 | 6.8 | 62 | 0 | 0% | /pricing-explained.html |
+| hilevel | 12.9 | 56 | 0 | 0% | / |
+
+### CTR Below Expected
+| Page | Position | Expected CTR | Actual CTR | Gap | Impressions |
+|------|--------:|------------:|-----------:|----:|-----------:|
+| / | 15.0 | 1.5% | 0.39% | -1.1% | 12,180 |
+| /pricing-explained.html | 8.4 | 2.5% | 0.06% | -2.4% | 6,900 |
+| /voice-agent-setup.html | 8.4 | 2.5% | 0.08% | -2.4% | 3,948 |
+| /workflows-for-agencies.html | 11.3 | 1.5% | 0% | -1.5% | 1,548 |
+| /blog/gohighlevel-march-2026-updates.html | 4.2 | 8.0% | 0.1% | -7.9% | 1,011 |
+| /highlevel-vs-zapier-make.html | 7.7 | 2.5% | 0.45% | -2.0% | 888 |
+| /mistakes-to-avoid.html | 7.9 | 2.5% | 0.12% | -2.4% | 840 |
+| /highlevel-for-real-estate.html | 10.7 | 1.5% | 0% | -1.5% | 586 |
+| /gohighlevel-white-label-guide.html | 14.8 | 1.5% | 0% | -1.5% | 579 |
+| /highlevel-for-med-spas.html | 12.5 | 1.5% | 0.35% | -1.1% | 566 |
+| /gohighlevel-pricing-calculator.html | 13.8 | 1.5% | 0.5% | -1.0% | 399 |
+| /highlevel-vs-hubspot.html | 11.7 | 1.5% | 0% | -1.5% | 260 |
+| /highlevel-vs-chatgpt.html | 11.8 | 1.5% | 0% | -1.5% | 226 |
+| /terms.html | 7.8 | 2.5% | 0% | -2.5% | 138 |
+| /about.html | 21.5 | 1.5% | 0% | -1.5% | 135 |
+
+### Top Pages (by Clicks)
+| Page | Clicks | Impressions | CTR | Position |
+|------|-------:|------------:|----:|---------:|
+| / | 48 | 12,180 | 0.4% | 15.0 |
+| /highlevel-vs-zapier-make.html | 4 | 888 | 0.5% | 7.7 |
+| /pricing-explained.html | 4 | 6,900 | 0.1% | 8.4 |
+| /voice-agent-setup.html | 3 | 3,948 | 0.1% | 8.4 |
+| /gohighlevel-pricing-calculator.html | 2 | 399 | 0.5% | 13.8 |
+| /highlevel-for-med-spas.html | 2 | 566 | 0.4% | 12.5 |
+| /tools/sms-cost-estimator.html | 2 | 116 | 1.7% | 14.1 |
+| /blog/ | 1 | 43 | 2.3% | 8.0 |
+| /blog/gohighlevel-march-2026-updates.html | 1 | 1,011 | 0.1% | 4.2 |
+| /contact.html | 1 | 22 | 4.5% | 11.9 |
+| /mistakes-to-avoid.html | 1 | 840 | 0.1% | 7.9 |
+| /tools/feature-comparison.html | 1 | 88 | 1.1% | 10.8 |
+| /editorial-policy.html | 0 | 6 | 0.0% | 7.2 |
+| / | 0 | 3 | 0.0% | 6.0 |
+| / | 0 | 2 | 0.0% | 4.0 |
+| / | 0 | 3 | 0.0% | 6.0 |
+| / | 0 | 3 | 0.0% | 6.0 |
+| / | 0 | 2 | 0.0% | 4.0 |
+| / | 0 | 3 | 0.0% | 6.0 |
+| / | 0 | 2 | 0.0% | 4.0 |
+
+## Site Engagement (GA4)
+_GA4 data unavailable. Check authentication._
+
+## Conversion Funnel
+_Conversion funnel data unavailable._
+
+## Traffic Sources
+_Traffic source data unavailable._
+
+---
+_Report generated by seo_dashboard.py | 2026-03-27 11:29:40_

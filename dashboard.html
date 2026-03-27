@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>SEO Dashboard — highlevel.ai</title>
+<title>Dashboard — highlevel.ai</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,12 @@
 :root {
   --bg: #0a0a0f;
   --card-bg: #12121a;
+  --card-bg-hover: #181825;
   --accent-blue: #4f7df9;
   --accent-green: #34d399;
   --accent-orange: #f59e0b;
   --accent-red: #ef4444;
+  --accent-purple: #a855f7;
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -70,11 +72,6 @@ body {
   margin-bottom: 28px;
 }
 
-.login-card .input-wrap {
-  position: relative;
-  margin-bottom: 16px;
-}
-
 .login-card input[type="password"] {
   width: 100%;
   padding: 14px 16px;
@@ -86,6 +83,7 @@ body {
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s;
+  margin-bottom: 16px;
 }
 
 .login-card input[type="password"]:focus {
@@ -151,14 +149,18 @@ body {
 
 /* Header */
 .dash-header {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .dash-header h1 {
   font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 4px;
 }
 
 .dash-header .last-updated {
@@ -166,43 +168,83 @@ body {
   font-size: 0.85rem;
 }
 
-/* Quick Stats */
-.stats-row {
+/* ── Hero Stats ── */
+.hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
-.stat-card {
+.hero-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.stat-card .stat-label {
+.hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.hero-card .hero-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.hero-card .hero-value {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.hero-card .hero-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.hero-card .hero-sub {
   font-size: 0.8rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
-  font-weight: 500;
 }
 
-.stat-card .stat-value {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
+/* Colored top borders on hero cards */
+.hero-card.blue { border-top: 3px solid var(--accent-blue); }
+.hero-card.blue .hero-value { color: var(--accent-blue); }
+.hero-card.green { border-top: 3px solid var(--accent-green); }
+.hero-card.green .hero-value { color: var(--accent-green); }
+.hero-card.purple { border-top: 3px solid var(--accent-purple); }
+.hero-card.purple .hero-value { color: var(--accent-purple); }
+.hero-card.orange { border-top: 3px solid var(--accent-orange); }
+.hero-card.orange .hero-value { color: var(--accent-orange); }
+
+/* Subtle glow background */
+.hero-card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0.06;
+  pointer-events: none;
 }
+.hero-card.blue::after { background: var(--accent-blue); }
+.hero-card.green::after { background: var(--accent-green); }
+.hero-card.purple::after { background: var(--accent-purple); }
+.hero-card.orange::after { background: var(--accent-orange); }
 
-.stat-card .stat-value.red { color: var(--accent-red); }
-.stat-card .stat-value.green { color: var(--accent-green); }
-.stat-card .stat-value.blue { color: var(--accent-blue); }
-.stat-card .stat-value.orange { color: var(--accent-orange); }
-
-/* Section */
+/* ── Section Cards ── */
 .dash-section {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -213,7 +255,7 @@ body {
 
 .dash-section h2 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 20px;
   display: flex;
@@ -222,23 +264,234 @@ body {
 }
 
 .section-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   flex-shrink: 0;
 }
 
-.icon-orange { background: rgba(245,158,11,0.15); }
-.icon-red { background: rgba(239,68,68,0.15); }
 .icon-green { background: rgba(52,211,153,0.15); }
 .icon-blue { background: rgba(79,125,249,0.15); }
 .icon-purple { background: rgba(168,85,247,0.15); }
+.icon-orange { background: rgba(245,158,11,0.15); }
 
-/* Priority Actions */
+/* ── Traffic Sources Bar Chart ── */
+.sources-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.source-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.source-label {
+  width: 110px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.source-bar-wrap {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  height: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.source-bar {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: width 0.6s ease;
+  min-width: 0;
+}
+
+.source-bar span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.source-count {
+  width: 70px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Stacked bar */
+.stacked-bar-wrap {
+  width: 100%;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.stacked-seg {
+  height: 100%;
+  transition: width 0.5s ease;
+  min-width: 0;
+}
+
+.stacked-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Site Health Mini Cards ── */
+.health-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.health-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.health-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.health-icon.ok { background: rgba(52,211,153,0.15); }
+.health-icon.warn { background: rgba(245,158,11,0.15); }
+
+.health-text .h-value {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.health-text .h-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── AI Visibility ── */
+.ai-highlight {
+  background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(79,125,249,0.08));
+  border: 1px solid rgba(168,85,247,0.15);
+  border-radius: 12px;
+  padding: 24px;
+  line-height: 1.7;
+}
+
+.ai-highlight .ai-stat {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ai-highlight p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.ai-sources {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.ai-source-chip {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-source-chip .chip-val {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+}
+
+.ai-source-chip .chip-name {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── Keyword Empty State ── */
+.empty-state {
+  background: var(--bg);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.empty-state .empty-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Action Items ── */
 .action-list {
   display: flex;
   flex-direction: column;
@@ -256,6 +509,10 @@ body {
   align-items: flex-start;
 }
 
+.action-item.green-border { border-left-color: var(--accent-green); }
+.action-item.blue-border { border-left-color: var(--accent-blue); }
+.action-item.purple-border { border-left-color: var(--accent-purple); }
+
 .action-num {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -268,19 +525,18 @@ body {
 .action-text {
   color: var(--text-secondary);
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* Tables */
+.action-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Tables ── */
 .table-wrap {
   overflow-x: auto;
   margin-top: 12px;
-}
-
-.table-note {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  margin-top: 10px;
 }
 
 table {
@@ -308,111 +564,20 @@ tbody td {
 }
 
 tbody tr:last-child td { border-bottom: none; }
-
 tbody tr:hover { background: rgba(255,255,255,0.02); }
 
-td.critical { color: var(--accent-red); font-weight: 500; }
-
-.summary-stats {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.summary-stat {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.summary-stat strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-/* Schema Status */
-.schema-ok, .schema-warn {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 8px 0;
-}
-
-.schema-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  flex-shrink: 0;
-}
-
-.schema-icon.ok { background: rgba(52,211,153,0.15); }
-.schema-icon.warn { background: rgba(239,68,68,0.15); }
-
-.schema-text { font-size: 1.1rem; font-weight: 500; }
-.schema-text.ok-text { color: var(--accent-green); }
-.schema-text.warn-text { color: var(--accent-red); }
-
-/* AI Visibility */
-.big-metric {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.big-metric .big-num {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--accent-blue);
-  line-height: 1;
-}
-
-.big-metric .big-label {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.platform-breakdown {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.platform-item {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 14px 20px;
-  min-width: 140px;
-}
-
-.platform-item .plat-name {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.platform-item .plat-val {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-/* No Data */
-.no-data {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  padding: 24px 0;
+/* ── Footer ── */
+.dash-footer {
   text-align: center;
-  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  line-height: 1.6;
 }
 
-/* Error state */
+/* ── Error State ── */
 .error-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -423,46 +588,47 @@ td.critical { color: var(--accent-red); font-weight: 500; }
   margin: 80px auto;
 }
 
-.error-card .err-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.error-card h2 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-}
-
-.error-card p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-/* Footer */
-.dash-footer {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-}
+.error-card .err-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.error-card h2 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px; }
+.error-card p { color: var(--text-secondary); font-size: 0.9rem; }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .health-row { grid-template-columns: 1fr; }
+  .source-label { width: 80px; font-size: 0.78rem; }
 }
 
 @media (max-width: 600px) {
-  .stats-row { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; }
   .login-card { padding: 36px 24px; }
   #dashboard { padding: 20px 16px 48px; }
   .dash-section { padding: 20px; }
-  .stat-card .stat-value { font-size: 1.6rem; }
-  .big-metric .big-num { font-size: 2.2rem; }
+  .hero-card .hero-value { font-size: 1.8rem; }
   .dash-header h1 { font-size: 1.4rem; }
+  .dash-header { flex-direction: column; }
+  .ai-highlight .ai-stat { font-size: 1.4rem; }
 }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.animate-in:nth-child(1) { animation-delay: 0.05s; }
+.animate-in:nth-child(2) { animation-delay: 0.1s; }
+.animate-in:nth-child(3) { animation-delay: 0.15s; }
+.animate-in:nth-child(4) { animation-delay: 0.2s; }
+.animate-in:nth-child(5) { animation-delay: 0.25s; }
+.animate-in:nth-child(6) { animation-delay: 0.3s; }
+.animate-in:nth-child(7) { animation-delay: 0.35s; }
+.animate-in:nth-child(8) { animation-delay: 0.4s; }
 </style>
 </head>
 <body>
@@ -470,11 +636,9 @@ td.critical { color: var(--accent-red); font-weight: 500; }
 <!-- ── Login ── -->
 <div id="login-screen">
   <div class="login-card">
-    <h1>SEO Dashboard</h1>
+    <h1>highlevel.ai Dashboard</h1>
     <p>Enter the dashboard password to continue.</p>
-    <div class="input-wrap">
-      <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
-    </div>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
     <button id="pw-btn" type="button">Unlock</button>
     <div class="login-error" id="pw-error"></div>
   </div>
@@ -502,6 +666,12 @@ td.critical { color: var(--accent-red); font-weight: 500; }
     var d = document.createElement('div');
     d.textContent = String(str);
     return d.innerHTML;
+  }
+
+  function num(v) { return typeof v === 'number' ? v : 0; }
+
+  function commas(n) {
+    return n != null ? Number(n).toLocaleString() : '0';
   }
 
   async function sha256(text) {
@@ -573,171 +743,327 @@ td.critical { color: var(--accent-red); font-weight: 500; }
       });
   }
 
+  // ── Helper: find source sessions ──
+  function findSource(sources, sourceName, medium) {
+    if (!sources || !sources.length) return 0;
+    var total = 0;
+    for (var i = 0; i < sources.length; i++) {
+      var s = sources[i];
+      var sName = (s.source || '').toLowerCase();
+      var sMed = (s.medium || '').toLowerCase();
+      if (medium) {
+        if (sName.indexOf(sourceName) !== -1 && sMed === medium) total += num(s.sessions);
+      } else {
+        if (sName.indexOf(sourceName) !== -1) total += num(s.sessions);
+      }
+    }
+    return total;
+  }
+
   // ── Render ──
   function renderDashboard(d) {
     var html = '';
-
-    // Normalize: support both flat and nested JSON formats
+    var traffic = d.traffic || {};
+    var sources = traffic.sources || [];
     var stats = d.stats || {};
     var freshData = d.freshness || {};
     var schemaData = d.schema || {};
     var kwData = d.keywords || {};
-    var llmData = d.llm_visibility || d.llmVisibility || {};
+    var llmData = d.llm_visibility || {};
+    var actions = d.priority_actions || [];
+
+    var totalUsers = num(traffic.users);
+    var totalSessions = num(traffic.sessions);
+
+    // Extract key sources
+    var googleOrganic = findSource(sources, 'google', 'organic');
+    var chatgptSessions = findSource(sources, 'chatgpt');
+    var perplexitySessions = findSource(sources, 'perplexity');
+    var aiTotal = chatgptSessions + perplexitySessions;
+    var ctaClicks = num(traffic.cta_clicks);
+    var directSessions = findSource(sources, 'direct');
+    var bingSessions = findSource(sources, 'bing');
+    var facebookSessions = findSource(sources, 'facebook');
+    var quoraSessions = findSource(sources, 'quora');
+    var socialSessions = facebookSessions + quoraSessions;
+
+    var updated = d.generated_at || 'Unknown';
 
     // Header
-    var updated = d.generated_at || d.last_updated || d.lastUpdated || 'Unknown';
     html += '<div class="dash-header">';
-    html += '<h1>SEO Dashboard &mdash; highlevel.ai</h1>';
-    html += '<div class="last-updated">Last updated: ' + esc(updated) + '</div>';
+    html += '<h1>highlevel.ai Dashboard</h1>';
+    html += '<div class="last-updated">Updated ' + esc(updated) + '</div>';
     html += '</div>';
 
-    // Quick Stats
-    var totalPages = stats.total_pages || d.total_pages || d.totalPages || '—';
-    var freshnessCount = stats.freshness_issues || freshData.total_issues || 0;
-    var schemaIssues = stats.schema_issues || schemaData.issues || 0;
-    var kwCount = stats.striking_distance_keywords || 0;
-    if (kwData.striking_distance && kwData.striking_distance.length) kwCount = kwData.striking_distance.length;
+    // ═══════════════════════════════════════
+    // 1. HERO STATS
+    // ═══════════════════════════════════════
+    html += '<div class="hero-stats">';
 
-    html += '<div class="stats-row">';
-    html += statCard('Total Pages', totalPages, '');
-    html += statCard('Freshness Issues', freshnessCount, freshnessCount > 0 ? 'red' : 'green');
-    html += statCard('Schema Issues', schemaIssues, schemaIssues === 0 ? 'green' : 'red');
-    html += statCard('Striking Distance KWs', kwCount, 'blue');
+    html += '<div class="hero-card blue animate-in">';
+    html += '<span class="hero-icon">&#x1F465;</span>';
+    html += '<div class="hero-value">' + commas(totalUsers) + '</div>';
+    html += '<div class="hero-label">Visitors</div>';
+    html += '<div class="hero-sub">Last 30 days</div>';
     html += '</div>';
 
-    // Priority Actions
-    var actions = d.priority_actions || d.priorityActions || d.actions || [];
-    if (actions.length > 0) {
-      html += '<div class="dash-section">';
-      html += '<h2><span class="section-icon icon-orange">&#x26A1;</span>Priority Actions</h2>';
-      html += '<div class="action-list">';
-      for (var i = 0; i < actions.length; i++) {
-        var txt = typeof actions[i] === 'string' ? actions[i] : (actions[i].text || actions[i].description || actions[i].action || '');
-        html += '<div class="action-item"><span class="action-num">' + (i + 1) + '.</span><span class="action-text">' + esc(txt) + '</span></div>';
-      }
-      html += '</div></div>';
+    html += '<div class="hero-card green animate-in">';
+    html += '<span class="hero-icon">&#x1F50D;</span>';
+    html += '<div class="hero-value">' + commas(googleOrganic) + '</div>';
+    html += '<div class="hero-label">from Google</div>';
+    html += '<div class="hero-sub">Organic search</div>';
+    html += '</div>';
+
+    html += '<div class="hero-card purple animate-in">';
+    html += '<span class="hero-icon">&#x1F916;</span>';
+    html += '<div class="hero-value">' + commas(aiTotal) + '</div>';
+    html += '<div class="hero-label">from AI</div>';
+    html += '<div class="hero-sub">ChatGPT + Perplexity</div>';
+    html += '</div>';
+
+    html += '<div class="hero-card orange animate-in">';
+    html += '<span class="hero-icon">&#x1F5B1;&#xFE0F;</span>';
+    html += '<div class="hero-value">' + commas(ctaClicks) + '</div>';
+    html += '<div class="hero-label">CTA Clicks</div>';
+    html += '<div class="hero-sub">Affiliate link clicks</div>';
+    html += '</div>';
+
+    html += '</div>';
+
+    // ═══════════════════════════════════════
+    // 2. TRAFFIC SOURCES
+    // ═══════════════════════════════════════
+    // Build grouped sources
+    var grouped = [
+      { name: 'Google (organic)', sessions: googleOrganic, color: '#34d399' },
+      { name: 'Direct', sessions: directSessions, color: '#64748b' },
+      { name: 'ChatGPT', sessions: chatgptSessions, color: '#4f7df9' },
+      { name: 'Bing', sessions: bingSessions, color: '#f59e0b' },
+      { name: 'Social', sessions: socialSessions, color: '#a855f7' }
+    ];
+
+    // Calculate "Other"
+    var accounted = googleOrganic + directSessions + chatgptSessions + bingSessions + socialSessions + perplexitySessions;
+    var otherSessions = Math.max(0, totalSessions - accounted);
+    if (perplexitySessions > 0) {
+      grouped.push({ name: 'Perplexity', sessions: perplexitySessions, color: '#06b6d4' });
+    }
+    if (otherSessions > 0) {
+      grouped.push({ name: 'Other', sessions: otherSessions, color: '#475569' });
     }
 
-    // Freshness Issues
-    var freshItems = freshData.items || d.freshness_issues || d.freshnessIssues || [];
-    if (!Array.isArray(freshItems) && freshItems.items) freshItems = freshItems.items;
-    if (!Array.isArray(freshItems)) freshItems = [];
-    html += '<div class="dash-section">';
-    html += '<h2><span class="section-icon icon-red">&#x1F504;</span>Freshness Issues</h2>';
-    if (freshItems.length === 0) {
-      html += '<p class="no-data">No freshness issues detected.</p>';
-    } else {
-      // Summary by type
-      var types = {};
-      freshItems.forEach(function(item) {
-        var t = item.type || item.issue_type || 'Other';
-        types[t] = (types[t] || 0) + 1;
-      });
-      html += '<div class="summary-stats">';
-      html += '<span class="summary-stat">Total: <strong>' + freshItems.length + '</strong></span>';
-      Object.keys(types).forEach(function(t) {
-        html += '<span class="summary-stat">' + esc(t) + ': <strong>' + types[t] + '</strong></span>';
-      });
+    // Sort descending
+    grouped.sort(function(a, b) { return b.sessions - a.sessions; });
+
+    var maxSessions = grouped.length > 0 ? grouped[0].sessions : 1;
+
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-blue">&#x1F4CA;</span>Traffic Sources</h2>';
+
+    // Stacked bar
+    if (totalSessions > 0) {
+      html += '<div class="stacked-bar-wrap">';
+      for (var si = 0; si < grouped.length; si++) {
+        var pct = (grouped[si].sessions / totalSessions * 100);
+        if (pct < 0.5) continue;
+        html += '<div class="stacked-seg" style="width:' + pct.toFixed(1) + '%;background:' + grouped[si].color + '" title="' + esc(grouped[si].name) + ': ' + grouped[si].sessions + '"></div>';
+      }
       html += '</div>';
 
-      var maxShow = Math.min(freshItems.length, 50);
-      html += '<div class="table-wrap"><table><thead><tr><th>File</th><th>Type</th><th>Found</th><th>Expected</th></tr></thead><tbody>';
-      for (var fi = 0; fi < maxShow; fi++) {
-        var f = freshItems[fi];
-        var severity = (f.severity === 'critical' || f.critical) ? ' class="critical"' : '';
-        html += '<tr>';
-        html += '<td' + severity + '>' + esc(f.file || f.path || f.url || '—') + '</td>';
-        html += '<td>' + esc(f.type || f.issue_type || '—') + '</td>';
-        html += '<td>' + esc(f.found || f.actual || '—') + '</td>';
-        html += '<td>' + esc(f.expected || '—') + '</td>';
-        html += '</tr>';
+      // Legend
+      html += '<div class="stacked-legend">';
+      for (var li = 0; li < grouped.length; li++) {
+        if (grouped[li].sessions === 0) continue;
+        var lpct = (grouped[li].sessions / totalSessions * 100).toFixed(1);
+        html += '<span class="legend-item"><span class="legend-dot" style="background:' + grouped[li].color + '"></span>' + esc(grouped[li].name) + ' &mdash; ' + lpct + '%</span>';
       }
-      html += '</tbody></table></div>';
-      if (freshItems.length > 50) {
-        html += '<p class="table-note">Showing ' + maxShow + ' of ' + freshItems.length + ' issues</p>';
-      }
+      html += '</div>';
+    }
+
+    // Bar chart rows
+    html += '<div class="sources-chart">';
+    for (var bi = 0; bi < grouped.length; bi++) {
+      var g = grouped[bi];
+      if (g.sessions === 0) continue;
+      var barPct = Math.max(2, (g.sessions / maxSessions) * 100);
+      html += '<div class="source-row">';
+      html += '<div class="source-label">' + esc(g.name) + '</div>';
+      html += '<div class="source-bar-wrap"><div class="source-bar" style="width:' + barPct.toFixed(1) + '%;background:' + g.color + '"><span>' + g.sessions + '</span></div></div>';
+      html += '<div class="source-count">' + (g.sessions / totalSessions * 100).toFixed(1) + '%</div>';
+      html += '</div>';
     }
     html += '</div>';
-
-    // Schema Status
-    var schemaList = schemaData.items || d.schema_issues || d.schemaIssues || [];
-    if (!Array.isArray(schemaList)) schemaList = [];
-    var schemaTotal = schemaData.total_schemas || d.schema_total || d.schemaTotal || d.total_schemas || totalPages || '?';
-    html += '<div class="dash-section">';
-    html += '<h2><span class="section-icon icon-green">&#x2705;</span>Schema Status</h2>';
-    if (schemaList.length === 0) {
-      html += '<div class="schema-ok"><div class="schema-icon ok">&#x2714;</div><div class="schema-text ok-text">All ' + esc(schemaTotal) + ' schemas valid</div></div>';
-    } else {
-      html += '<div class="schema-warn"><div class="schema-icon warn">&#x26A0;</div><div class="schema-text warn-text">' + schemaList.length + ' schema issue' + (schemaList.length === 1 ? '' : 's') + ' found</div></div>';
-      html += '<div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>File</th><th>Issue</th></tr></thead><tbody>';
-      schemaList.forEach(function(s) {
-        html += '<tr><td>' + esc(s.file || s.path || s.url || '—') + '</td><td>' + esc(s.issue || s.message || s.error || '—') + '</td></tr>';
-      });
-      html += '</tbody></table></div>';
-    }
     html += '</div>';
 
-    // Keyword Opportunities
-    var kws = kwData.striking_distance || [];
-    html += '<div class="dash-section">';
-    html += '<h2><span class="section-icon icon-blue">&#x1F50D;</span>Keyword Opportunities</h2>';
-    if (!kws.length) {
-      html += '<p class="no-data">No data yet &mdash; dashboard report hasn\'t run.</p>';
-    } else {
-      kws.sort(function(a, b) { return (b.impressions || 0) - (a.impressions || 0); });
-      html += '<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Impressions</th><th>Clicks</th></tr></thead><tbody>';
-      kws.forEach(function(k) {
-        html += '<tr>';
-        html += '<td>' + esc(k.keyword || k.query || '—') + '</td>';
-        html += '<td>' + esc(k.position != null ? k.position : '—') + '</td>';
-        html += '<td>' + esc(k.impressions != null ? k.impressions.toLocaleString() : '—') + '</td>';
-        html += '<td>' + esc(k.clicks != null ? k.clicks.toLocaleString() : '—') + '</td>';
-        html += '</tr>';
-      });
-      html += '</tbody></table></div>';
-    }
+    // ═══════════════════════════════════════
+    // 3. SITE HEALTH
+    // ═══════════════════════════════════════
+    var totalPages = stats.total_pages || 0;
+    var totalSchemas = schemaData.total_schemas || 0;
+    var schemaIssues = num(schemaData.issues);
+    var freshnessTotal = num(freshData.total_issues || stats.freshness_issues);
+
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-green">&#x2705;</span>Site Health</h2>';
+    html += '<div class="health-row">';
+
+    // Pages
+    html += '<div class="health-card">';
+    html += '<div class="health-icon ok">&#x2714;&#xFE0F;</div>';
+    html += '<div class="health-text"><div class="h-value">' + commas(totalPages) + ' Pages</div><div class="h-label">All indexed and active</div></div>';
     html += '</div>';
 
-    // AI Visibility
-    var ai = llmData || d.ai_visibility || d.aiVisibility || null;
-    html += '<div class="dash-section">';
+    // Schemas
+    html += '<div class="health-card">';
+    html += '<div class="health-icon ok">&#x2714;&#xFE0F;</div>';
+    html += '<div class="health-text"><div class="h-value">' + commas(totalSchemas) + ' Schemas Valid</div><div class="h-label">' + (schemaIssues === 0 ? 'No issues found' : schemaIssues + ' issues') + '</div></div>';
+    html += '</div>';
+
+    // Content warnings
+    html += '<div class="health-card">';
+    html += '<div class="health-icon warn">&#x26A0;&#xFE0F;</div>';
+    html += '<div class="health-text"><div class="h-value">' + commas(freshnessTotal) + ' Content Warnings</div><div class="h-label">Mostly pricing refs to verify</div></div>';
+    html += '</div>';
+
+    html += '</div>'; // health-row
+    html += '</div>'; // section
+
+    // ═══════════════════════════════════════
+    // 4. AI VISIBILITY
+    // ═══════════════════════════════════════
+    html += '<div class="dash-section animate-in">';
     html += '<h2><span class="section-icon icon-purple">&#x1F916;</span>AI Visibility</h2>';
-    if (!ai || (ai.citation_rate == null && ai.citationRate == null)) {
-      html += '<p class="no-data">No data yet &mdash; AI visibility report hasn\'t run.</p>';
+
+    var citationRate = llmData.citation_rate;
+    var hasCitation = citationRate != null && citationRate > 0;
+
+    if (hasCitation) {
+      html += '<div class="ai-highlight">';
+      html += '<span class="ai-stat">' + esc(citationRate) + '% Citation Rate</span>';
+      html += '<p>AI tools are citing highlevel.ai in their responses.</p>';
+      html += '</div>';
     } else {
-      var rate = ai.citation_rate != null ? ai.citation_rate : ai.citationRate;
-      html += '<div class="big-metric"><span class="big-num">' + esc(rate) + '%</span><span class="big-label">Citation Rate</span></div>';
-      var platforms = ai.platforms || ai.by_platform || ai.breakdown || null;
-      if (platforms && typeof platforms === 'object') {
-        html += '<div class="platform-breakdown">';
-        var keys = Array.isArray(platforms) ? platforms : Object.keys(platforms);
-        if (Array.isArray(platforms) && platforms.length && typeof platforms[0] === 'object') {
-          platforms.forEach(function(p) {
-            html += '<div class="platform-item"><div class="plat-name">' + esc(p.name || p.platform) + '</div><div class="plat-val">' + esc(p.rate != null ? p.rate + '%' : p.value) + '</div></div>';
-          });
-        } else if (!Array.isArray(platforms)) {
-          Object.keys(platforms).forEach(function(k) {
-            var v = platforms[k];
-            html += '<div class="platform-item"><div class="plat-name">' + esc(k) + '</div><div class="plat-val">' + esc(typeof v === 'number' ? v + '%' : v) + '</div></div>';
-          });
-        }
-        html += '</div>';
+      html += '<div class="ai-highlight">';
+      if (aiTotal > 0) {
+        html += '<p style="font-size:1rem;color:var(--text-primary);margin-bottom:8px;font-weight:500;">AI tools aren\'t citing highlevel.ai directly yet, but ChatGPT is sending you <strong style="color:var(--accent-purple)">' + chatgptSessions + ' visitors/month</strong> via referral links &mdash; that\'s a good sign!</p>';
+        html += '<p>As your content improves, expect direct citations to follow the referral traffic.</p>';
+      } else {
+        html += '<p>No AI citation or referral data available yet. Once AI tools start referencing your content, traffic and citations will appear here.</p>';
       }
+      html += '</div>';
     }
+
+    // Show AI referral chips
+    if (aiTotal > 0) {
+      html += '<div class="ai-sources">';
+      if (chatgptSessions > 0) {
+        html += '<div class="ai-source-chip"><span class="chip-val">' + chatgptSessions + '</span><span class="chip-name">visitors from ChatGPT</span></div>';
+      }
+      if (perplexitySessions > 0) {
+        html += '<div class="ai-source-chip"><span class="chip-val">' + perplexitySessions + '</span><span class="chip-name">visitors from Perplexity</span></div>';
+      }
+      html += '</div>';
+    }
+
     html += '</div>';
 
-    // Footer
-    html += '<div class="dash-footer">Reports auto-update every Monday at 9am UTC via GitHub Actions</div>';
+    // ═══════════════════════════════════════
+    // 5. KEYWORD OPPORTUNITIES
+    // ═══════════════════════════════════════
+    var kws = kwData.striking_distance || [];
+
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-blue">&#x1F50D;</span>Keyword Opportunities</h2>';
+
+    if (kws.length > 0) {
+      kws.sort(function(a, b) { return num(b.impressions) - num(a.impressions); });
+      html += '<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Impressions</th><th>Clicks</th></tr></thead><tbody>';
+      for (var ki = 0; ki < kws.length; ki++) {
+        var k = kws[ki];
+        html += '<tr>';
+        html += '<td>' + esc(k.keyword || k.query || '') + '</td>';
+        html += '<td>' + esc(k.position != null ? k.position : '—') + '</td>';
+        html += '<td>' + (k.impressions != null ? commas(k.impressions) : '—') + '</td>';
+        html += '<td>' + (k.clicks != null ? commas(k.clicks) : '—') + '</td>';
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+    } else {
+      html += '<div class="empty-state">';
+      html += '<div class="empty-icon">&#x1F50E;</div>';
+      html += '<p>Connect Google Search Console to see which keywords you\'re close to ranking for. These are your biggest quick wins &mdash; keywords where you\'re on page 2 and a small content boost could move you to page 1.</p>';
+      html += '</div>';
+    }
+
+    html += '</div>';
+
+    // ═══════════════════════════════════════
+    // 6. WHAT TO DO NEXT
+    // ═══════════════════════════════════════
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-orange">&#x26A1;</span>What To Do Next</h2>';
+
+    var smartActions = [];
+
+    // Use priority_actions if they exist
+    if (actions.length > 0) {
+      for (var ai2 = 0; ai2 < actions.length; ai2++) {
+        var txt = typeof actions[ai2] === 'string' ? actions[ai2] : (actions[ai2].text || actions[ai2].description || actions[ai2].action || '');
+        smartActions.push({ text: txt, border: '' });
+      }
+    } else {
+      // Generate smart suggestions from the data
+      if (ctaClicks === 0) {
+        smartActions.push({
+          text: '<strong>Your CTA buttons aren\'t getting clicks.</strong> Consider testing different button text, colors, or placement. Even moving a CTA above the fold can double click-through rates.',
+          border: 'orange'
+        });
+      }
+
+      if (!hasCitation) {
+        smartActions.push({
+          text: '<strong>Submit your site to AI answer engines.</strong> Update your <code>llms.txt</code> with fresh data, and make sure your FAQ schema is comprehensive. AI tools use structured data to build answers.',
+          border: 'purple-border'
+        });
+      }
+
+      if (freshnessTotal > 100) {
+        smartActions.push({
+          text: '<strong>Review pricing references across your pages</strong> &mdash; ' + commas(freshnessTotal) + ' content items need verification. Most are pricing mentions that may be outdated.',
+          border: ''
+        });
+      }
+
+      if (googleOrganic > 0 && kws.length === 0) {
+        smartActions.push({
+          text: '<strong>Connect Google Search Console</strong> to unlock keyword opportunity data. You\'re already getting ' + googleOrganic + ' organic visits &mdash; there are likely easy wins hiding in your search data.',
+          border: 'blue-border'
+        });
+      }
+
+      smartActions.push({
+        text: '<strong>Run a fresh site audit</strong> (Ahrefs, Screaming Frog, or similar) to check for new technical SEO issues, broken links, and crawl errors.',
+        border: 'green-border'
+      });
+    }
+
+    html += '<div class="action-list">';
+    for (var ac = 0; ac < smartActions.length; ac++) {
+      var borderClass = smartActions[ac].border ? ' ' + smartActions[ac].border : '';
+      html += '<div class="action-item' + borderClass + '"><span class="action-num">' + (ac + 1) + '.</span><span class="action-text">' + smartActions[ac].text + '</span></div>';
+    }
+    html += '</div>';
+    html += '</div>';
+
+    // ═══════════════════════════════════════
+    // FOOTER
+    // ═══════════════════════════════════════
+    html += '<div class="dash-footer animate-in">';
+    html += 'Reports auto-update every Monday &middot; Last updated: ' + esc(updated) + ' &middot; Dashboard by highlevel.ai SEO automation';
+    html += '</div>';
 
     document.getElementById('dashboard').innerHTML = html;
     show('dashboard');
-  }
-
-  function statCard(label, value, color) {
-    return '<div class="stat-card">' +
-      '<div class="stat-label">' + esc(label) + '</div>' +
-      '<div class="stat-value' + (color ? ' ' + color : '') + '">' + esc(value) + '</div>' +
-      '</div>';
   }
 
 })();
