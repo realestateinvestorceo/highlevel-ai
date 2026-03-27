@@ -40,7 +40,7 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="googlebot" content="index, follow">
 <title>Email Subject Line Tester &amp; Grader | Free Tool</title>
-<meta name="description" content="Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers. Improve open rates before you hit send.">
+<meta name="description" content="Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers.">
 <meta name="author" content="Josh Miller">
 <link rel="canonical" href="https://www.highlevel.ai/tools/email-subject-line-tester.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
@@ -68,6 +68,12 @@
   "@type": "Article",
   "headline": "Email Subject Line Tester & Grader",
   "description": "Score your email subject lines instantly. Get a grade based on length, power words, personalization, urgency, and spam triggers. Improve open rates before you hit send.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
   "author": {
     "@type": "Person",
     "name": "Josh Miller",
@@ -108,6 +114,12 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
   "mainEntity": [
     {
       "@type": "Question",
@@ -579,6 +591,16 @@
   /* --- SECTION SPACING --- */
   .page-section { padding: 70px 0; }
 
+  /* --- RELATED GUIDES --- */
+  .related-guides { margin: 60px 0 40px; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+
   /* --- FOOTER --- */
   footer {
     border-top: 1px solid var(--border);
@@ -786,6 +808,31 @@
       <h2>Ready to Boost Your Email Open Rates?</h2>
       <p>GoHighLevel gives you email marketing, A/B testing, automation, SMS, CRM, and funnels&mdash;all in one platform. Start free for 14 days.</p>
       <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED GUIDES -->
+<section class="container">
+  <div class="related-guides animate-on-scroll">
+    <h2>Related Tools &amp; Guides</h2>
+    <div class="related-grid">
+      <a href="/tools/cta-generator.html" class="related-card">
+        <span class="related-tag">Free Tool</span>
+        <span class="related-title">Call-to-Action Generator: Create High-Converting CTAs</span>
+      </a>
+      <a href="/tools/sms-cost-estimator.html" class="related-card">
+        <span class="related-tag">Free Tool</span>
+        <span class="related-title">SMS Cost Estimator: Calculate Your Twilio Costs</span>
+      </a>
+      <a href="/best-prompts-sales-support.html" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Best GoHighLevel Prompts for Sales &amp; Support</span>
+      </a>
+      <a href="/tools/" class="related-card">
+        <span class="related-tag">Tools</span>
+        <span class="related-title">All Free GoHighLevel Tools &amp; Calculators</span>
+      </a>
     </div>
   </div>
 </section>
