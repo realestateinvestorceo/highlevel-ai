@@ -1,6 +1,6 @@
-const OpenAI = require("openai");
+const Anthropic = require("@anthropic-ai/sdk").default;
 
-const client = new OpenAI(); // uses OPENAI_API_KEY env var
+const client = new Anthropic(); // uses ANTHROPIC_API_KEY env var
 
 module.exports = async function handler(req, res) {
   // CORS
@@ -13,26 +13,27 @@ module.exports = async function handler(req, res) {
   const { image } = req.body || {};
   if (!image) return res.status(400).json({ error: "Missing image field" });
 
-  // Ensure we have a proper data URL for OpenAI
-  const dataUrl = image.startsWith("data:") ? image : "data:image/png;base64," + image;
+  // Strip data URL prefix if present
+  const base64 = image.replace(/^data:image\/\w+;base64,/, "");
+  const mediaType = image.startsWith("data:image/png") ? "image/png" : "image/jpeg";
 
   try {
-    const response = await client.chat.completions.create({
-      model: "gpt-4o-mini",
+    const msg = await client.messages.create({
+      model: "claude-haiku-4-5-20241022",
       max_tokens: 1024,
       messages: [
         {
           role: "user",
           content: [
             {
-              type: "image_url",
-              image_url: { url: dataUrl },
+              type: "image",
+              source: { type: "base64", media_type: mediaType, data: base64 },
             },
             {
               type: "text",
               text: `Extract the affiliate performance data from this screenshot into JSON. The table has columns: Day, Clicks, Signups, Customers, Earnings.
 
-Return ONLY valid JSON in this exact format (no markdown, no code fences, no explanation):
+Return ONLY valid JSON in this exact format (no markdown, no explanation):
 {
   "period": "Last 7 days",
   "totals": { "clicks": 0, "signups": 0, "customers": 0, "earnings": 0 },
@@ -53,9 +54,7 @@ Rules:
       ],
     });
 
-    let text = response.choices[0].message.content.trim();
-    // Strip markdown code fences if present
-    text = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "");
+    const text = msg.content[0].text.trim();
     // Parse to validate it's real JSON
     const data = JSON.parse(text);
     return res.status(200).json(data);
