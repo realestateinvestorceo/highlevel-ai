@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-30 14:10:25",
+  "generated_at": "2026-03-30 07:23:15",
   "report_dates": {
-    "freshness": "2026-03-30",
-    "schema": "2026-03-30",
+    "freshness": "2026-03-27",
+    "schema": "2026-03-27",
     "seo_dashboard": "2026-03-30",
     "llm_visibility": "2026-03-27"
   },
@@ -472,6 +472,163 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 0
+    "cta_clicks": 0,
+    "daily": [
+      {
+        "date": "20260228",
+        "sessions": 4,
+        "users": 4
+      },
+      {
+        "date": "20260301",
+        "sessions": 2,
+        "users": 2
+      },
+      {
+        "date": "20260302",
+        "sessions": 10,
+        "users": 7
+      },
+      {
+        "date": "20260303",
+        "sessions": 8,
+        "users": 8
+      },
+      {
+        "date": "20260304",
+        "sessions": 5,
+        "users": 5
+      },
+      {
+        "date": "20260305",
+        "sessions": 12,
+        "users": 11
+      },
+      {
+        "date": "20260306",
+        "sessions": 13,
+        "users": 12
+      },
+      {
+        "date": "20260307",
+        "sessions": 14,
+        "users": 12
+      },
+      {
+        "date": "20260308",
+        "sessions": 5,
+        "users": 5
+      },
+      {
+        "date": "20260309",
+        "sessions": 6,
+        "users": 6
+      },
+      {
+        "date": "20260310",
+        "sessions": 10,
+        "users": 10
+      },
+      {
+        "date": "20260311",
+        "sessions": 18,
+        "users": 18
+      },
+      {
+        "date": "20260312",
+        "sessions": 26,
+        "users": 25
+      },
+      {
+        "date": "20260313",
+        "sessions": 11,
+        "users": 11
+      },
+      {
+        "date": "20260314",
+        "sessions": 21,
+        "users": 19
+      },
+      {
+        "date": "20260315",
+        "sessions": 13,
+        "users": 13
+      },
+      {
+        "date": "20260316",
+        "sessions": 14,
+        "users": 13
+      },
+      {
+        "date": "20260317",
+        "sessions": 21,
+        "users": 20
+      },
+      {
+        "date": "20260318",
+        "sessions": 20,
+        "users": 20
+      },
+      {
+        "date": "20260319",
+        "sessions": 37,
+        "users": 31
+      },
+      {
+        "date": "20260320",
+        "sessions": 23,
+        "users": 19
+      },
+      {
+        "date": "20260321",
+        "sessions": 15,
+        "users": 14
+      },
+      {
+        "date": "20260322",
+        "sessions": 23,
+        "users": 20
+      },
+      {
+        "date": "20260323",
+        "sessions": 24,
+        "users": 23
+      },
+      {
+        "date": "20260324",
+        "sessions": 30,
+        "users": 28
+      },
+      {
+        "date": "20260325",
+        "sessions": 37,
+        "users": 34
+      },
+      {
+        "date": "20260326",
+        "sessions": 35,
+        "users": 34
+      },
+      {
+        "date": "20260327",
+        "sessions": 29,
+        "users": 26
+      },
+      {
+        "date": "20260328",
+        "sessions": 20,
+        "users": 20
+      },
+      {
+        "date": "20260329",
+        "sessions": 19,
+        "users": 18
+      },
+      {
+        "date": "20260330",
+        "sessions": 8,
+        "users": 7
+      }
+    ]
   }
 }

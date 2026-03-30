@@ -375,7 +375,11 @@ def main():
         client = ga4_analyze.get_client()
         dr = DateRange(start_date="30daysAgo", end_date="today")
 
-        totals, _ = ga4_analyze.get_overview(client, dr)
+        totals, ga4_daily = ga4_analyze.get_overview(client, dr)
+        traffic_data["daily"] = [
+            {"date": d["date"], "sessions": d["sessions"], "users": d["users"]}
+            for d in ga4_daily
+        ]
         traffic_data["sessions"] = totals.get("sessions", 0)
         traffic_data["users"] = totals.get("users", 0)
         traffic_data["pageviews"] = totals.get("pageviews", 0)

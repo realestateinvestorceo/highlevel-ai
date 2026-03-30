@@ -416,6 +416,57 @@ body {
   margin-top: 4px;
 }
 
+/* ── Trend Charts ── */
+.trends-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .trends-section { grid-template-columns: 1fr; }
+}
+
+.trend-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.trend-card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.trend-card .trend-value {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.trend-card .trend-value .trend-delta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.trend-delta.up { color: var(--accent-green); }
+.trend-delta.down { color: var(--accent-red); }
+
+.trend-chart-wrap {
+  position: relative;
+  height: 120px;
+}
+
 @media (max-width: 600px) {
   .earnings-stats-row { grid-template-columns: repeat(2, 1fr); }
   .earnings-big-number { font-size: 2.2rem; }
@@ -1157,6 +1208,51 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
+    // 1b. TREND CHARTS
+    // ═══════════════════════════════════════
+    var dailyData = traffic.daily || [];
+    html += '<div class="trends-section animate-in">';
+
+    // -- Visitors trend --
+    if (dailyData.length > 1) {
+      var lastWeekUsers = 0, prevWeekUsers = 0;
+      dailyData.forEach(function(dd, i) {
+        if (i >= dailyData.length - 7) lastWeekUsers += dd.users;
+        else if (i >= dailyData.length - 14) prevWeekUsers += dd.users;
+      });
+      var usersDelta = prevWeekUsers > 0 ? Math.round(((lastWeekUsers - prevWeekUsers) / prevWeekUsers) * 100) : 0;
+      var usersDeltaClass = usersDelta >= 0 ? 'up' : 'down';
+      var usersDeltaSign = usersDelta >= 0 ? '+' : '';
+
+      html += '<div class="trend-card">';
+      html += '<h3>Visitors (30 days)</h3>';
+      html += '<div class="trend-value">' + commas(totalUsers);
+      if (usersDelta !== 0) html += ' <span class="trend-delta ' + usersDeltaClass + '">' + usersDeltaSign + usersDelta + '% vs prev week</span>';
+      html += '</div>';
+      html += '<div class="trend-chart-wrap"><canvas id="visitorsChart"></canvas></div>';
+      html += '</div>';
+    }
+
+    // -- Earnings trend (from screenshot history) --
+    var earningsHistory = [];
+    try { earningsHistory = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
+    if (earningsHistory.length > 1) {
+      var latestEarnings = earningsHistory[earningsHistory.length - 1].earnings || 0;
+      html += '<div class="trend-card">';
+      html += '<h3>Affiliate Earnings (over time)</h3>';
+      html += '<div class="trend-value">$' + latestEarnings.toFixed(2) + '</div>';
+      html += '<div class="trend-chart-wrap"><canvas id="earningsChart"></canvas></div>';
+      html += '</div>';
+    } else {
+      html += '<div class="trend-card">';
+      html += '<h3>Affiliate Clicks (over time)</h3>';
+      html += '<div style="color:var(--text-muted);font-size:0.85rem;padding:20px 0;">Upload screenshots regularly to build a trend line</div>';
+      html += '</div>';
+    }
+
+    html += '</div>';
+
+    // ═══════════════════════════════════════
     // 2. TRAFFIC SOURCES
     // ═══════════════════════════════════════
     // Build grouped sources
@@ -1412,6 +1508,73 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
         if (fileInput.files && fileInput.files[0]) handleScreenshotFile(fileInput.files[0]);
       });
     }
+
+    // Draw trend charts
+    drawLineChart('visitorsChart', dailyData.map(function(dd) { return dd.users; }), dailyData.map(function(dd) {
+      var ds = String(dd.date);
+      return ds.substring(4,6) + '/' + ds.substring(6,8);
+    }), '#4f7df9');
+
+    var earningsHist = [];
+    try { earningsHist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
+    if (earningsHist.length > 1) {
+      drawLineChart('earningsChart', earningsHist.map(function(h) { return h.earnings; }), earningsHist.map(function(h) { return h.label; }), '#34d399');
+    }
+  }
+
+  function drawLineChart(canvasId, values, labels, color) {
+    var canvas = document.getElementById(canvasId);
+    if (!canvas || !values.length) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.scale(dpr, dpr);
+
+    var w = rect.width, h = rect.height;
+    var pad = { top: 10, right: 10, bottom: 24, left: 5 };
+    var cw = w - pad.left - pad.right;
+    var ch = h - pad.top - pad.bottom;
+    var maxVal = Math.max.apply(null, values) || 1;
+    var minVal = Math.min.apply(null, values);
+    var range = maxVal - minVal || 1;
+
+    function x(i) { return pad.left + (i / (values.length - 1)) * cw; }
+    function y(v) { return pad.top + ch - ((v - minVal) / range) * ch; }
+
+    // Fill gradient
+    ctx.beginPath();
+    ctx.moveTo(x(0), y(values[0]));
+    for (var i = 1; i < values.length; i++) ctx.lineTo(x(i), y(values[i]));
+    ctx.lineTo(x(values.length - 1), h - pad.bottom);
+    ctx.lineTo(x(0), h - pad.bottom);
+    ctx.closePath();
+    var grad = ctx.createLinearGradient(0, pad.top, 0, h - pad.bottom);
+    grad.addColorStop(0, color + '33');
+    grad.addColorStop(1, color + '05');
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Line
+    ctx.beginPath();
+    ctx.moveTo(x(0), y(values[0]));
+    for (var j = 1; j < values.length; j++) ctx.lineTo(x(j), y(values[j]));
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+    // X-axis labels (show ~5)
+    ctx.fillStyle = '#64748b';
+    ctx.font = '10px "DM Sans", sans-serif';
+    ctx.textAlign = 'center';
+    var step = Math.max(1, Math.floor(labels.length / 5));
+    for (var k = 0; k < labels.length; k += step) {
+      ctx.fillText(labels[k], x(k), h - 4);
+    }
   }
 
   function showToast(msg, type) {
@@ -1449,7 +1612,26 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       .then(function(data) {
         if (data.totals) {
           localStorage.setItem('hl_earnings_data', JSON.stringify(data));
-          localStorage.setItem('hl_earnings_extracted_at', new Date().toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'}));
+          var now = new Date();
+          var dateLabel = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
+          var fullDate = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'});
+          localStorage.setItem('hl_earnings_extracted_at', fullDate);
+          // Append to earnings history for trend chart
+          var hist = [];
+          try { hist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
+          // Only add one entry per day
+          var todayKey = now.toISOString().substring(0, 10);
+          hist = hist.filter(function(h) { return h.key !== todayKey; });
+          hist.push({
+            key: todayKey,
+            label: dateLabel,
+            earnings: data.totals.earnings,
+            clicks: data.totals.clicks,
+            customers: data.totals.customers
+          });
+          // Keep last 90 entries max
+          if (hist.length > 90) hist = hist.slice(hist.length - 90);
+          localStorage.setItem('hl_earnings_history', JSON.stringify(hist));
           showToast('Earnings data extracted: $' + data.totals.earnings.toFixed(2) + ' from ' + data.totals.customers + ' customer(s)', 'success');
         } else {
           showToast('Could not parse earnings from image', 'error');
