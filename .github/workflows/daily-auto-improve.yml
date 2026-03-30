@@ -62,28 +62,42 @@ jobs:
         continue-on-error: true
 
       # ══════════════════════════════════════
-      # STEP 2: Inject internal links
+      # STEP 2: Apply missing schema markup
+      # ══════════════════════════════════════
+      - name: Apply schema fixes
+        run: python3 scripts/seo/schema_audit.py --audit && python3 scripts/seo/apply_schema_fixes.py --apply
+        continue-on-error: true
+
+      # ══════════════════════════════════════
+      # STEP 3: Optimize meta for 0-click keywords
+      # ══════════════════════════════════════
+      - name: Optimize meta titles and descriptions
+        run: python3 scripts/seo/optimize_meta.py --apply
+        continue-on-error: true
+
+      # ══════════════════════════════════════
+      # STEP 4: Inject internal links
       # ══════════════════════════════════════
       - name: Auto-inject internal links
         run: node scripts/seo/auto_internal_links.js --apply
         continue-on-error: true
 
       # ══════════════════════════════════════
-      # STEP 3: Update sitemap + LLMs.txt
+      # STEP 5: Update sitemap + LLMs.txt
       # ══════════════════════════════════════
       - name: Update sitemap and LLMs.txt
         run: python3 scripts/seo/update_sitemap.py
         continue-on-error: true
 
       # ══════════════════════════════════════
-      # STEP 4: Refresh dashboard data
+      # STEP 6: Refresh dashboard data
       # ══════════════════════════════════════
       - name: Generate dashboard data
         run: python3 scripts/seo/generate_dashboard_data.py
         continue-on-error: true
 
       # ══════════════════════════════════════
-      # STEP 5: Commit and deploy
+      # STEP 7: Commit and deploy
       # ══════════════════════════════════════
       - name: Commit and push improvements
         run: |
