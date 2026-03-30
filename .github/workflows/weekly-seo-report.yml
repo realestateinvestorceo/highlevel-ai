@@ -82,4 +82,5 @@ jobs:
           # Only add safe files — never add .env or credentials
           git add dashboard-data.json sitemap.xml llms.txt llms-full.txt scripts/seo/reports/ scripts/seo/data/schema_fixes.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Auto-update: weekly SEO report $(date +%Y-%m-%d)"
+          git pull --rebase origin main || true
           git push
