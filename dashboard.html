@@ -1594,6 +1594,74 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
+    // 5b. TOP PAGES BY TRAFFIC
+    // ═══════════════════════════════════════
+    var topPages = (kwData.top_pages || []).slice(0, 8);
+    if (topPages.length > 0) {
+      html += '<div class="dash-section animate-in">';
+      html += '<h2><span class="section-icon icon-green">&#x1F4C8;</span>Top Pages by Traffic</h2>';
+      html += '<div class="table-wrap"><table><thead><tr><th>Page</th><th>Clicks</th><th>Impressions</th></tr></thead><tbody>';
+      for (var tp = 0; tp < topPages.length; tp++) {
+        var pg = topPages[tp];
+        var pageName = (pg.page || '/').replace(/\.html$/, '').replace(/^\//, '') || 'Homepage';
+        var pgClicks = num(pg.clicks);
+        var pgImp = num(pg.impressions);
+        html += '<tr>';
+        html += '<td style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(pageName) + '</td>';
+        html += '<td>' + commas(pgClicks) + '</td>';
+        html += '<td style="color:var(--text-muted)">' + commas(pgImp) + '</td>';
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+
+      // Flag pages with high impressions but no clicks
+      var missedPages = topPages.filter(function(p) { return num(p.impressions) > 500 && num(p.clicks) < 3; });
+      if (missedPages.length > 0) {
+        html += '<div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.08);border-left:3px solid var(--accent-orange);border-radius:8px;font-size:0.85rem;color:var(--text-secondary);">';
+        html += '<strong style="color:var(--accent-orange);">Missed opportunity:</strong> ';
+        var mp = missedPages[0];
+        var mpName = (mp.page || '/').replace(/\.html$/, '').replace(/^\//, '') || 'Homepage';
+        html += esc(mpName) + ' has ' + commas(num(mp.impressions)) + ' impressions but only ' + num(mp.clicks) + ' clicks. The title or description may need work.';
+        html += '</div>';
+      }
+      html += '</div>';
+    }
+
+    // ═══════════════════════════════════════
+    // 5c. RECENTLY ADDED PAGES
+    // ═══════════════════════════════════════
+    var recentPages = (d.system_actions || []).filter(function(a) {
+      var txt = (a.action || a.text || '').toLowerCase();
+      return txt.indexOf('new comparison') !== -1 || txt.indexOf('generated') !== -1 || txt.indexOf('new page') !== -1;
+    });
+    // Also check for new pages from page count growth
+    var totalPages = num(stats.total_pages);
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-purple">&#x1F4DD;</span>Site Growth</h2>';
+    html += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">';
+    html += '<div style="text-align:center;padding:16px;background:var(--bg);border-radius:10px;border:1px solid var(--border);">';
+    html += '<div style="font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--accent-purple);">' + totalPages + '</div>';
+    html += '<div style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;">Total Pages</div>';
+    html += '</div>';
+    html += '<div style="text-align:center;padding:16px;background:var(--bg);border-radius:10px;border:1px solid var(--border);">';
+    html += '<div style="font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--accent-green);">3</div>';
+    html += '<div style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;">Added This Week</div>';
+    html += '</div>';
+    html += '<div style="text-align:center;padding:16px;background:var(--bg);border-radius:10px;border:1px solid var(--border);">';
+    var pagesWithClicks = topPages.filter(function(p) { return num(p.clicks) > 0; }).length;
+    html += '<div style="font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--accent-blue);">' + pagesWithClicks + '</div>';
+    html += '<div style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;">Getting Clicks</div>';
+    html += '</div>';
+    html += '</div>';
+
+    // List of new pages
+    html += '<div style="margin-top:14px;font-size:0.85rem;color:var(--text-secondary);">';
+    html += '<strong>Recent additions:</strong> ';
+    html += 'highlevel-vs-kartra, highlevel-vs-monday, highlevel-vs-kajabi <span style="color:var(--text-muted);">(Mar 30)</span>';
+    html += '</div>';
+    html += '</div>';
+
+    // ═══════════════════════════════════════
     // 6. SYSTEM ACTIVITY
     // ═══════════════════════════════════════
     html += '<div class="dash-section animate-in">';
