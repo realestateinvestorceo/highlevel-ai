@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 14:01:29",
+  "generated_at": "2026-03-30 14:10:25",
   "report_dates": {
     "freshness": "2026-03-30",
     "schema": "2026-03-30",
@@ -10,7 +10,7 @@
     "total_pages": 48,
     "freshness_issues": 628,
     "schema_issues": 0,
-    "striking_distance_keywords": 0
+    "striking_distance_keywords": 20
   },
   "priority_actions": [],
   "freshness": {
@@ -150,8 +150,240 @@
     "items": []
   },
   "keywords": {
-    "striking_distance": [],
-    "top_pages": [],
+    "striking_distance": [
+      {
+        "keyword": "highlevel",
+        "page": "/",
+        "position": 15.5,
+        "impressions": 964,
+        "clicks": 1
+      },
+      {
+        "keyword": "high level",
+        "page": "/",
+        "position": 19.2,
+        "impressions": 880,
+        "clicks": 3
+      },
+      {
+        "keyword": "go high level",
+        "page": "/",
+        "position": 19.6,
+        "impressions": 539,
+        "clicks": 1
+      },
+      {
+        "keyword": "high level ai",
+        "page": "/",
+        "position": 5.5,
+        "impressions": 308,
+        "clicks": 11
+      },
+      {
+        "keyword": "high level crm",
+        "page": "/",
+        "position": 19.2,
+        "impressions": 124,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing change march 2026",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 6.9,
+        "impressions": 95,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel updates 2026",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 5.1,
+        "impressions": 73,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai employee pricing 2026",
+        "page": "/pricing-explained.html",
+        "position": 6.9,
+        "impressions": 69,
+        "clicks": 0
+      },
+      {
+        "keyword": "highlevel official website",
+        "page": "/",
+        "position": 5.3,
+        "impressions": 65,
+        "clicks": 0
+      },
+      {
+        "keyword": "hilevel",
+        "page": "/",
+        "position": 12.6,
+        "impressions": 63,
+        "clicks": 0
+      },
+      {
+        "keyword": "highlevel agency",
+        "page": "/",
+        "position": 19.3,
+        "impressions": 56,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai",
+        "page": "/",
+        "position": 11.2,
+        "impressions": 51,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel voice ai pricing 2026",
+        "page": "/voice-agent-setup.html",
+        "position": 8.3,
+        "impressions": 50,
+        "clicks": 0
+      },
+      {
+        "keyword": "high level agency",
+        "page": "/",
+        "position": 14.2,
+        "impressions": 44,
+        "clicks": 0
+      },
+      {
+        "keyword": "highlevel inc",
+        "page": "/",
+        "position": 16.9,
+        "impressions": 40,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained.html",
+        "position": 9.6,
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "keyword": "high levels",
+        "page": "/",
+        "position": 19.4,
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai voice agent pricing 2026",
+        "page": "/voice-agent-setup.html",
+        "position": 7.3,
+        "impressions": 33,
+        "clicks": 0
+      },
+      {
+        "keyword": "go high level ai",
+        "page": "/",
+        "position": 13.3,
+        "impressions": 30,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel conversation ai pricing 2026",
+        "page": "/pricing-explained.html",
+        "position": 6.5,
+        "impressions": 30,
+        "clicks": 0
+      }
+    ],
+    "top_pages": [
+      {
+        "page": "/",
+        "clicks": 65,
+        "impressions": 13309,
+        "position": 15.0
+      },
+      {
+        "page": "/highlevel-vs-zapier-make.html",
+        "clicks": 6,
+        "impressions": 1054,
+        "position": 7.7
+      },
+      {
+        "page": "/pricing-explained.html",
+        "clicks": 6,
+        "impressions": 7979,
+        "position": 8.5
+      },
+      {
+        "page": "/voice-agent-setup.html",
+        "clicks": 4,
+        "impressions": 4414,
+        "position": 8.4
+      },
+      {
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "clicks": 3,
+        "impressions": 2781,
+        "position": 4.5
+      },
+      {
+        "page": "/tools/sms-cost-estimator.html",
+        "clicks": 3,
+        "impressions": 177,
+        "position": 13.4
+      },
+      {
+        "page": "/gohighlevel-pricing-calculator.html",
+        "clicks": 2,
+        "impressions": 836,
+        "position": 15.0
+      },
+      {
+        "page": "/highlevel-for-med-spas.html",
+        "clicks": 2,
+        "impressions": 654,
+        "position": 12.9
+      },
+      {
+        "page": "/blog/",
+        "clicks": 1,
+        "impressions": 90,
+        "position": 8.8
+      },
+      {
+        "page": "/contact.html",
+        "clicks": 1,
+        "impressions": 27,
+        "position": 11.0
+      },
+      {
+        "page": "/mistakes-to-avoid.html",
+        "clicks": 1,
+        "impressions": 931,
+        "position": 7.8
+      },
+      {
+        "page": "/tools/agency-pricing-calculator.html",
+        "clicks": 1,
+        "impressions": 141,
+        "position": 7.9
+      },
+      {
+        "page": "/tools/feature-comparison.html",
+        "clicks": 1,
+        "impressions": 191,
+        "position": 9.4
+      },
+      {
+        "page": "https://highlevel.ai/editorial-policy.html",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 7.2
+      },
+      {
+        "page": "/#features",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 5.2
+      }
+    ],
     "traffic_summary": {}
   },
   "llm_visibility": {
@@ -162,16 +394,16 @@
     }
   },
   "traffic": {
-    "sessions": 532,
-    "users": 494,
-    "pageviews": 606,
+    "sessions": 533,
+    "users": 495,
+    "pageviews": 607,
     "bounce_rate": 0.65,
-    "avg_duration": 74.0,
+    "avg_duration": 73.9,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 297
+        "sessions": 298
       },
       {
         "source": "google",
