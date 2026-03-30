@@ -1609,8 +1609,8 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '<div class="system-activity">';
     for (var sa = 0; sa < sysActions.length; sa++) {
       var act = sysActions[sa];
-      var actText = typeof act === 'string' ? act : (act.text || act.description || '');
-      var actTime = (act.time || act.timestamp || '');
+      var actText = typeof act === 'string' ? act : (act.action || act.text || act.description || '');
+      var actTime = (act.when || act.time || act.timestamp || '');
       html += '<div class="system-activity-item">';
       html += '<span class="check-icon">&#x2705;</span>';
       html += '<span>' + esc(actText) + '</span>';
