@@ -323,6 +323,38 @@ def _extract_section(text: str, heading_pattern: str, next_heading_level: int = 
 
 
 # ──────────────────────────────────────────────
+# System Actions (from git log)
+# ──────────────────────────────────────────────
+
+def _get_system_actions():
+    """Read recent auto-improvement commits from git log."""
+    import subprocess
+    actions = []
+    try:
+        result = subprocess.run(
+            ["git", "log", "--oneline", "--format=%s|||%ar", "-20"],
+            capture_output=True, text=True, cwd=str(SITE_DIR), timeout=5
+        )
+        for line in result.stdout.strip().split("\n"):
+            if not line.strip():
+                continue
+            parts = line.split("|||", 1)
+            msg = parts[0].strip()
+            when = parts[1].strip() if len(parts) > 1 else ""
+            # Only include automation-related commits
+            keywords = ["auto-improve", "auto-apply", "auto-fix", "auto-update",
+                        "schema", "internal link", "meta optim", "comparison page",
+                        "sitemap", "dashboard data", "cta tracking"]
+            if any(kw in msg.lower() for kw in keywords):
+                actions.append({"action": msg, "when": when})
+            if len(actions) >= 5:
+                break
+    except Exception as e:
+        logger.warning("Could not read git log: %s", e)
+    return actions
+
+
+# ──────────────────────────────────────────────
 # Main
 # ──────────────────────────────────────────────
 
@@ -366,7 +398,7 @@ def main():
     traffic_data = {
         "sessions": 0, "users": 0, "pageviews": 0,
         "bounce_rate": 0, "avg_duration": 0,
-        "sources": [], "top_pages": [], "cta_clicks": 0
+        "sources": [], "top_pages": [], "cta_clicks": 0, "cta_by_page": []
     }
     try:
         add_existing_scripts_to_path()
@@ -394,6 +426,10 @@ def main():
 
         cta = ga4_analyze.get_cta_clicks(client, dr)
         traffic_data["cta_clicks"] = sum(int(c.get("count", 0) or c.get("eventCount", 0)) for c in cta)
+        traffic_data["cta_by_page"] = [
+            {"page": c.get("page", "?"), "clicks": int(c.get("count", 0) or c.get("eventCount", 0))}
+            for c in cta
+        ]
 
         logger.info("GA4 data: %d sessions, %d users, %d CTA clicks", traffic_data["sessions"], traffic_data["users"], traffic_data["cta_clicks"])
     except Exception as e:
@@ -472,6 +508,7 @@ def main():
             "by_platform": llm["by_platform"],
         },
         "traffic": traffic_data,
+        "system_actions": _get_system_actions(),
     }
 
     # Write output

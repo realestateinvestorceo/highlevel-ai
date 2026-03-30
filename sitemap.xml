@@ -55,8 +55,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.highlevel.ai/highlevel-vs-kajabi.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.highlevel.ai/highlevel-vs-kartra.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.highlevel.ai/highlevel-vs-keap.html</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.highlevel.ai/highlevel-vs-monday.html</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -170,7 +188,7 @@
   </url>
   <url>
     <loc>https://www.highlevel.ai/tools/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

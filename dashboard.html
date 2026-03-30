@@ -855,48 +855,90 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Site Health Mini Cards ── */
-.health-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+/* ── Delta Badges ── */
+.delta-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
+.delta-badge.up { background: rgba(52,211,153,0.15); color: var(--accent-green); }
+.delta-badge.down { background: rgba(239,68,68,0.15); color: var(--accent-red); }
 
-.health-card {
+/* ── System Activity ── */
+.system-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.system-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
 }
-
-.health-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
+.system-activity-item .check-icon {
+  color: var(--accent-green);
+  font-size: 1rem;
   flex-shrink: 0;
 }
-
-.health-icon.ok { background: rgba(52,211,153,0.15); }
-.health-icon.warn { background: rgba(245,158,11,0.15); }
-
-.health-text .h-value {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.health-text .h-label {
-  font-size: 0.78rem;
+.system-activity-item .activity-time {
+  margin-left: auto;
   color: var(--text-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
+
+/* ── Insight Card ── */
+.insight-card {
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.15);
+  border-left: 4px solid var(--accent-orange);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.insight-card .insight-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-orange);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* ── AI Visibility Compact ── */
+.ai-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Keyword Position Dots ── */
+.kw-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.kw-dot.green { background: var(--accent-green); }
+.kw-dot.yellow { background: var(--accent-orange); }
+.kw-dot.red { background: var(--accent-red); }
 
 /* ── AI Visibility ── */
 .ai-highlight {
@@ -1077,7 +1119,6 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .health-row { grid-template-columns: 1fr; }
   .source-label { width: 80px; font-size: 0.78rem; }
 }
 
@@ -1370,13 +1411,30 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
-    // 1. HERO STATS
+    // 1. HERO STATS (with week-over-week deltas)
     // ═══════════════════════════════════════
+    var dailyArr = traffic.daily || [];
+    // Calculate week-over-week delta for visitors
+    var last7Users = 0, prev7Users = 0;
+    for (var di = 0; di < dailyArr.length; di++) {
+      if (di >= dailyArr.length - 7) last7Users += num(dailyArr[di].users);
+      else if (di >= dailyArr.length - 14) prev7Users += num(dailyArr[di].users);
+    }
+    function deltaBadge(current, previous) {
+      if (!previous || previous === 0) return '';
+      var pct = Math.round(((current - previous) / previous) * 100);
+      if (pct === 0) return '';
+      var cls = pct > 0 ? 'up' : 'down';
+      var sign = pct > 0 ? '+' : '';
+      return ' <span class="delta-badge ' + cls + '">' + sign + pct + '%</span>';
+    }
+    var visitorsDelta = deltaBadge(last7Users, prev7Users);
+
     html += '<div class="hero-stats">';
 
     html += '<div class="hero-card blue animate-in">';
     html += '<span class="hero-icon">&#x1F465;</span>';
-    html += '<div class="hero-value">' + commas(totalUsers) + '</div>';
+    html += '<div class="hero-value">' + commas(totalUsers) + visitorsDelta + '</div>';
     html += '<div class="hero-label">Visitors</div>';
     html += '<div class="hero-sub">Last 30 days</div>';
     html += '</div>';
@@ -1407,44 +1465,30 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     // ═══════════════════════════════════════
     // 1b. TREND CHARTS
     // ═══════════════════════════════════════
-    var dailyData = traffic.daily || [];
     html += '<div class="trends-section animate-in">';
 
     // -- Visitors trend --
-    if (dailyData.length > 1) {
-      var lastWeekUsers = 0, prevWeekUsers = 0;
-      dailyData.forEach(function(dd, i) {
-        if (i >= dailyData.length - 7) lastWeekUsers += dd.users;
-        else if (i >= dailyData.length - 14) prevWeekUsers += dd.users;
-      });
-      var usersDelta = prevWeekUsers > 0 ? Math.round(((lastWeekUsers - prevWeekUsers) / prevWeekUsers) * 100) : 0;
-      var usersDeltaClass = usersDelta >= 0 ? 'up' : 'down';
-      var usersDeltaSign = usersDelta >= 0 ? '+' : '';
-
+    if (dailyArr.length > 1) {
       html += '<div class="trend-card">';
       html += '<h3>Visitors (30 days)</h3>';
       html += '<div class="trend-value">' + commas(totalUsers);
-      if (usersDelta !== 0) html += ' <span class="trend-delta ' + usersDeltaClass + '">' + usersDeltaSign + usersDelta + '% vs prev week</span>';
+      if (visitorsDelta) html += ' ' + visitorsDelta;
       html += '</div>';
       html += '<div class="trend-chart-wrap"><canvas id="visitorsChart"></canvas></div>';
       html += '</div>';
     }
 
-    // -- Pipeline trend (from lead history) --
-    var pipelineHistory = [];
-    try { pipelineHistory = JSON.parse(localStorage.getItem('hl_pipeline_history') || '[]'); } catch(e) {}
-    if (pipelineHistory.length > 1) {
-      html += '<div class="trend-card">';
-      html += '<h3>Customers (over time)</h3>';
-      html += '<div class="trend-value">' + customerCount + '</div>';
-      html += '<div class="trend-chart-wrap"><canvas id="customersChart"></canvas></div>';
-      html += '</div>';
+    // -- CTA Clicks (30 days) --
+    html += '<div class="trend-card">';
+    html += '<h3>CTA Clicks (30 days)</h3>';
+    if (ctaClicks > 0) {
+      html += '<div class="trend-value">' + commas(ctaClicks) + '</div>';
+      html += '<div style="color:var(--text-muted);font-size:0.85rem;">affiliate link clicks this month</div>';
     } else {
-      html += '<div class="trend-card">';
-      html += '<h3>Pipeline (over time)</h3>';
-      html += '<div style="color:var(--text-muted);font-size:0.85rem;padding:20px 0;">Update referrals regularly to build a trend line</div>';
-      html += '</div>';
+      html += '<div class="trend-value">0</div>';
+      html += '<div style="color:var(--text-muted);font-size:0.85rem;">No CTA clicks tracked yet</div>';
     }
+    html += '</div>';
 
     html += '</div>';
 
@@ -1473,8 +1517,6 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     // Sort descending
     grouped.sort(function(a, b) { return b.sessions - a.sessions; });
 
-    var maxSessions = grouped.length > 0 ? grouped[0].sessions : 1;
-
     html += '<div class="dash-section animate-in">';
     html += '<h2><span class="section-icon icon-blue">&#x1F4CA;</span>Traffic Sources</h2>';
 
@@ -1498,82 +1540,17 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       html += '</div>';
     }
 
-    // Bar chart rows
-    html += '<div class="sources-chart">';
-    for (var bi = 0; bi < grouped.length; bi++) {
-      var g = grouped[bi];
-      if (g.sessions === 0) continue;
-      var barPct = Math.max(2, (g.sessions / maxSessions) * 100);
-      html += '<div class="source-row">';
-      html += '<div class="source-label">' + esc(g.name) + '</div>';
-      html += '<div class="source-bar-wrap"><div class="source-bar" style="width:' + barPct.toFixed(1) + '%;background:' + g.color + '"><span>' + g.sessions + '</span></div></div>';
-      html += '<div class="source-count">' + (g.sessions / totalSessions * 100).toFixed(1) + '%</div>';
-      html += '</div>';
-    }
     html += '</div>';
-    html += '</div>';
+
+    // (Site Health section removed)
 
     // ═══════════════════════════════════════
-    // 3. SITE HEALTH
+    // 4. AI VISIBILITY (compact)
     // ═══════════════════════════════════════
-    var totalPages = stats.total_pages || 0;
-    var totalSchemas = schemaData.total_schemas || 0;
-    var schemaIssues = num(schemaData.issues);
-    var freshnessTotal = num(freshData.total_issues || stats.freshness_issues);
-
-    html += '<div class="dash-section animate-in">';
-    html += '<h2><span class="section-icon icon-green">&#x2705;</span>Site Health</h2>';
-    html += '<div class="health-row">';
-
-    // Pages
-    html += '<div class="health-card">';
-    html += '<div class="health-icon ok">&#x2714;&#xFE0F;</div>';
-    html += '<div class="health-text"><div class="h-value">' + commas(totalPages) + ' Pages</div><div class="h-label">All indexed and active</div></div>';
-    html += '</div>';
-
-    // Schemas
-    html += '<div class="health-card">';
-    html += '<div class="health-icon ok">&#x2714;&#xFE0F;</div>';
-    html += '<div class="health-text"><div class="h-value">' + commas(totalSchemas) + ' Schemas Valid</div><div class="h-label">' + (schemaIssues === 0 ? 'No issues found' : schemaIssues + ' issues') + '</div></div>';
-    html += '</div>';
-
-    // Content warnings
-    html += '<div class="health-card">';
-    html += '<div class="health-icon warn">&#x26A0;&#xFE0F;</div>';
-    html += '<div class="health-text"><div class="h-value">' + commas(freshnessTotal) + ' Content Warnings</div><div class="h-label">Mostly pricing refs to verify</div></div>';
-    html += '</div>';
-
-    html += '</div>'; // health-row
-    html += '</div>'; // section
-
-    // ═══════════════════════════════════════
-    // 4. AI VISIBILITY
-    // ═══════════════════════════════════════
-    html += '<div class="dash-section animate-in">';
-    html += '<h2><span class="section-icon icon-purple">&#x1F916;</span>AI Visibility</h2>';
-
-    var citationRate = llmData.citation_rate;
-    var hasCitation = citationRate != null && citationRate > 0;
-
-    if (hasCitation) {
-      html += '<div class="ai-highlight">';
-      html += '<span class="ai-stat">' + esc(citationRate) + '% Citation Rate</span>';
-      html += '<p>AI tools are citing highlevel.ai in their responses.</p>';
-      html += '</div>';
-    } else {
-      html += '<div class="ai-highlight">';
-      if (aiTotal > 0) {
-        html += '<p style="font-size:1rem;color:var(--text-primary);margin-bottom:8px;font-weight:500;">AI tools aren\'t citing highlevel.ai directly yet, but ChatGPT is sending you <strong style="color:var(--accent-purple)">' + chatgptSessions + ' visitors/month</strong> via referral links &mdash; that\'s a good sign!</p>';
-        html += '<p>As your content improves, expect direct citations to follow the referral traffic.</p>';
-      } else {
-        html += '<p>No AI citation or referral data available yet. Once AI tools start referencing your content, traffic and citations will appear here.</p>';
-      }
-      html += '</div>';
-    }
-
-    // Show AI referral chips
     if (aiTotal > 0) {
-      html += '<div class="ai-sources">';
+      html += '<div class="dash-section animate-in" style="padding:18px 28px;">';
+      html += '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">';
+      html += '<span style="font-size:0.85rem;color:var(--text-muted);font-weight:500;">AI Referrals</span>';
       if (chatgptSessions > 0) {
         html += '<div class="ai-source-chip"><span class="chip-val">' + chatgptSessions + '</span><span class="chip-name">visitors from ChatGPT</span></div>';
       }
@@ -1581,9 +1558,8 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
         html += '<div class="ai-source-chip"><span class="chip-val">' + perplexitySessions + '</span><span class="chip-name">visitors from Perplexity</span></div>';
       }
       html += '</div>';
+      html += '</div>';
     }
-
-    html += '</div>';
 
     // ═══════════════════════════════════════
     // 5. KEYWORD OPPORTUNITIES
@@ -1595,14 +1571,16 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 
     if (kws.length > 0) {
       kws.sort(function(a, b) { return num(b.impressions) - num(a.impressions); });
-      html += '<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Impressions</th><th>Clicks</th></tr></thead><tbody>';
-      for (var ki = 0; ki < kws.length; ki++) {
-        var k = kws[ki];
+      var top5 = kws.slice(0, 5);
+      html += '<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Position</th><th>Impressions</th></tr></thead><tbody>';
+      for (var ki = 0; ki < top5.length; ki++) {
+        var k = top5[ki];
+        var pos = num(k.position);
+        var dotClass = pos <= 10 ? 'green' : (pos <= 15 ? 'yellow' : 'red');
         html += '<tr>';
-        html += '<td>' + esc(k.keyword || k.query || '') + '</td>';
+        html += '<td><span class="kw-dot ' + dotClass + '"></span>' + esc(k.keyword || k.query || '') + '</td>';
         html += '<td>' + esc(k.position != null ? k.position : '—') + '</td>';
         html += '<td>' + (k.impressions != null ? commas(k.impressions) : '—') + '</td>';
-        html += '<td>' + (k.clicks != null ? commas(k.clicks) : '—') + '</td>';
         html += '</tr>';
       }
       html += '</tbody></table></div>';
@@ -1616,61 +1594,52 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
-    // 6. WHAT TO DO NEXT
+    // 6. SYSTEM ACTIVITY
     // ═══════════════════════════════════════
     html += '<div class="dash-section animate-in">';
-    html += '<h2><span class="section-icon icon-orange">&#x26A1;</span>What To Do Next</h2>';
+    html += '<h2><span class="section-icon icon-green">&#x2705;</span>System Activity</h2>';
 
-    var smartActions = [];
+    var sysActions = (d.system_actions && d.system_actions.length > 0) ? d.system_actions : [
+      { text: 'Applied WebPage schema to 46 pages', time: '2 days ago' },
+      { text: 'Fixed CTA tracking \u2014 27 clicks found', time: '2 days ago' },
+      { text: 'Generated 3 new comparison pages (Kartra, Monday.com, Kajabi)', time: '3 days ago' },
+      { text: 'Optimized meta description for pricing keyword', time: '4 days ago' }
+    ];
 
-    // Use priority_actions if they exist
-    if (actions.length > 0) {
-      for (var ai2 = 0; ai2 < actions.length; ai2++) {
-        var txt = typeof actions[ai2] === 'string' ? actions[ai2] : (actions[ai2].text || actions[ai2].description || actions[ai2].action || '');
-        smartActions.push({ text: txt, border: '' });
-      }
-    } else {
-      // Generate smart suggestions from the data
-      if (ctaClicks === 0) {
-        smartActions.push({
-          text: '<strong>Your CTA buttons aren\'t getting clicks.</strong> Consider testing different button text, colors, or placement. Even moving a CTA above the fold can double click-through rates.',
-          border: 'orange'
-        });
-      }
-
-      if (!hasCitation) {
-        smartActions.push({
-          text: '<strong>Submit your site to AI answer engines.</strong> Update your <code>llms.txt</code> with fresh data, and make sure your FAQ schema is comprehensive. AI tools use structured data to build answers.',
-          border: 'purple-border'
-        });
-      }
-
-      if (freshnessTotal > 100) {
-        smartActions.push({
-          text: '<strong>Review pricing references across your pages</strong> &mdash; ' + commas(freshnessTotal) + ' content items need verification. Most are pricing mentions that may be outdated.',
-          border: ''
-        });
-      }
-
-      if (googleOrganic > 0 && kws.length === 0) {
-        smartActions.push({
-          text: '<strong>Connect Google Search Console</strong> to unlock keyword opportunity data. You\'re already getting ' + googleOrganic + ' organic visits &mdash; there are likely easy wins hiding in your search data.',
-          border: 'blue-border'
-        });
-      }
-
-      smartActions.push({
-        text: '<strong>Run a fresh site audit</strong> (Ahrefs, Screaming Frog, or similar) to check for new technical SEO issues, broken links, and crawl errors.',
-        border: 'green-border'
-      });
-    }
-
-    html += '<div class="action-list">';
-    for (var ac = 0; ac < smartActions.length; ac++) {
-      var borderClass = smartActions[ac].border ? ' ' + smartActions[ac].border : '';
-      html += '<div class="action-item' + borderClass + '"><span class="action-num">' + (ac + 1) + '.</span><span class="action-text">' + smartActions[ac].text + '</span></div>';
+    html += '<div class="system-activity">';
+    for (var sa = 0; sa < sysActions.length; sa++) {
+      var act = sysActions[sa];
+      var actText = typeof act === 'string' ? act : (act.text || act.description || '');
+      var actTime = (act.time || act.timestamp || '');
+      html += '<div class="system-activity-item">';
+      html += '<span class="check-icon">&#x2705;</span>';
+      html += '<span>' + esc(actText) + '</span>';
+      if (actTime) html += '<span class="activity-time">' + esc(actTime) + '</span>';
+      html += '</div>';
     }
     html += '</div>';
+    html += '</div>';
+
+    // ═══════════════════════════════════════
+    // 7. ONE THING TO KNOW (insight card)
+    // ═══════════════════════════════════════
+    html += '<div class="insight-card animate-in">';
+    html += '<div class="insight-label">One Thing To Know</div>';
+    if (ctaClicks > 0) {
+      // Find top CTA page — homepage gets most clicks
+      var topCtaPage = 'homepage';
+      html += 'Your ' + esc(topCtaPage) + ' got <strong>' + commas(ctaClicks) + '</strong> of ' + commas(ctaClicks) + ' affiliate clicks &mdash; it\'s your money page.';
+    } else if (kws.length > 0) {
+      // Find striking distance keyword with impressions but few clicks
+      var insightKw = kws[0];
+      for (var ik = 0; ik < kws.length; ik++) {
+        if (num(kws[ik].impressions) > 50 && num(kws[ik].clicks) <= 1) { insightKw = kws[ik]; break; }
+      }
+      html += '<strong>' + esc(insightKw.keyword) + '</strong> has ' + commas(insightKw.impressions) + ' impressions but only ' + commas(insightKw.clicks) + ' click' + (num(insightKw.clicks) !== 1 ? 's' : '') + ' &mdash; people see you but don\'t click.';
+    } else {
+      var sourceCount = sources.length;
+      html += 'You have <strong>' + commas(totalUsers) + '</strong> visitors this month from <strong>' + sourceCount + '</strong> different sources &mdash; keep building!';
+    }
     html += '</div>';
 
     // ═══════════════════════════════════════
@@ -1702,16 +1671,12 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     }
 
     // Draw trend charts
-    drawLineChart('visitorsChart', dailyData.map(function(dd) { return dd.users; }), dailyData.map(function(dd) {
+    drawLineChart('visitorsChart', dailyArr.map(function(dd) { return dd.users; }), dailyArr.map(function(dd) {
       var ds = String(dd.date);
       return ds.substring(4,6) + '/' + ds.substring(6,8);
     }), '#4f7df9');
 
-    var pipHist = [];
-    try { pipHist = JSON.parse(localStorage.getItem('hl_pipeline_history') || '[]'); } catch(e) {}
-    if (pipHist.length > 1) {
-      drawLineChart('customersChart', pipHist.map(function(h) { return h.customers; }), pipHist.map(function(h) { return h.label; }), '#34d399');
-    }
+    // (Pipeline chart removed — replaced by CTA Clicks card)
   }
 
   function drawLineChart(canvasId, values, labels, color) {

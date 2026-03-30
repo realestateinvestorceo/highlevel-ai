@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 08:42:54",
+  "generated_at": "2026-03-30 09:34:44",
   "report_dates": {
     "freshness": "2026-03-27",
     "schema": "2026-03-27",
@@ -473,6 +473,32 @@
     ],
     "top_pages": [],
     "cta_clicks": 27,
+    "cta_by_page": [
+      {
+        "page": "/",
+        "clicks": 21
+      },
+      {
+        "page": "/pricing-explained.html",
+        "clicks": 2
+      },
+      {
+        "page": "/highlevel-vs-zapier-make.html",
+        "clicks": 1
+      },
+      {
+        "page": "/tool-stack-savings-calculator.html",
+        "clicks": 1
+      },
+      {
+        "page": "/tools/marketing-roi-calculator.html",
+        "clicks": 1
+      },
+      {
+        "page": "/voice-agent-setup.html",
+        "clicks": 1
+      }
+    ],
     "daily": [
       {
         "date": "20260228",
@@ -630,5 +656,27 @@
         "users": 7
       }
     ]
-  }
+  },
+  "system_actions": [
+    {
+      "action": "Add auto-growth engine: schema fixes + meta optimizer in daily pipeline",
+      "when": "48 minutes ago"
+    },
+    {
+      "action": "Auto-apply WebPage schema to 46 pages + add apply_schema_fixes.py",
+      "when": "50 minutes ago"
+    },
+    {
+      "action": "Fix CTA tracking: 27 clicks found (was showing 0)",
+      "when": "52 minutes ago"
+    },
+    {
+      "action": "Auto-update: weekly SEO report 2026-03-30",
+      "when": "2 hours ago"
+    },
+    {
+      "action": "Auto-update: weekly SEO report 2026-03-30",
+      "when": "3 hours ago"
+    }
+  ]
 }
