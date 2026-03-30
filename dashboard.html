@@ -416,6 +416,71 @@ body {
   margin-top: 4px;
 }
 
+.manual-entry {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.manual-entry summary {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.manual-entry summary:hover { color: var(--text-primary); }
+
+.manual-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+@media (max-width: 600px) { .manual-entry-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.manual-entry-grid label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.manual-entry-grid input {
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.manual-entry-grid input:focus { border-color: var(--accent-blue); }
+
+.manual-save-btn {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: var(--accent-green);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.manual-save-btn:hover { opacity: 0.85; }
+
 /* ── Trend Charts ── */
 .trends-section {
   display: grid;
@@ -1170,6 +1235,18 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       html += '</div>';
     }
     html += '</div>';
+
+    // Manual entry form
+    html += '<details class="manual-entry"><summary>✏️ Enter numbers manually</summary>';
+    html += '<div class="manual-entry-grid">';
+    html += '<div><label>Clicks</label><input type="number" id="manualClicks" value="' + eT.clicks + '"></div>';
+    html += '<div><label>Signups</label><input type="number" id="manualSignups" value="' + eT.signups + '"></div>';
+    html += '<div><label>Customers</label><input type="number" id="manualCustomers" value="' + eT.customers + '"></div>';
+    html += '<div><label>Earnings ($)</label><input type="number" step="0.01" id="manualEarnings" value="' + eT.earnings.toFixed(2) + '"></div>';
+    html += '</div>';
+    html += '<button class="manual-save-btn" onclick="saveManualEarnings()">Save</button>';
+    html += '</details>';
+
     html += '</div>';
 
     // ═══════════════════════════════════════
@@ -1652,6 +1729,37 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
   window.removeScreenshot = function() {
     localStorage.removeItem('hl_earnings_img');
     localStorage.removeItem('hl_earnings_date');
+    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+  };
+
+  window.saveManualEarnings = function() {
+    var clicks = parseInt(document.getElementById('manualClicks').value) || 0;
+    var signups = parseInt(document.getElementById('manualSignups').value) || 0;
+    var customers = parseInt(document.getElementById('manualCustomers').value) || 0;
+    var earnings = parseFloat(document.getElementById('manualEarnings').value) || 0;
+
+    var data = {
+      period: 'Manual entry',
+      totals: { clicks: clicks, signups: signups, customers: customers, earnings: earnings },
+      rows: []
+    };
+    localStorage.setItem('hl_earnings_data', JSON.stringify(data));
+
+    var now = new Date();
+    var dateLabel = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
+    var fullDate = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'});
+    localStorage.setItem('hl_earnings_extracted_at', fullDate);
+
+    // Append to earnings history for trend chart
+    var hist = [];
+    try { hist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
+    var todayKey = now.toISOString().substring(0, 10);
+    hist = hist.filter(function(h) { return h.key !== todayKey; });
+    hist.push({ key: todayKey, label: dateLabel, earnings: earnings, clicks: clicks, customers: customers });
+    if (hist.length > 90) hist = hist.slice(hist.length - 90);
+    localStorage.setItem('hl_earnings_history', JSON.stringify(hist));
+
+    showToast('Earnings updated: $' + earnings.toFixed(2), 'success');
     fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
   };
 
