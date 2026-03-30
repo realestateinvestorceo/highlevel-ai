@@ -393,7 +393,7 @@ def main():
         ]
 
         cta = ga4_analyze.get_cta_clicks(client, dr)
-        traffic_data["cta_clicks"] = sum(int(c.get("eventCount", 0)) for c in cta)
+        traffic_data["cta_clicks"] = sum(int(c.get("count", 0) or c.get("eventCount", 0)) for c in cta)
 
         logger.info("GA4 data: %d sessions, %d users, %d CTA clicks", traffic_data["sessions"], traffic_data["users"], traffic_data["cta_clicks"])
     except Exception as e:

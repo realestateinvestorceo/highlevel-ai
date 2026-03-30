@@ -275,7 +275,7 @@ def get_cta_clicks(client, date_range):
     try:
         response = run_report(
             client,
-            dimensions=["pagePath", "customEvent:page_section", "customEvent:event_label"],
+            dimensions=["pagePath"],
             metrics=["eventCount"],
             date_range=date_range,
             order_by=[OrderBy(
@@ -294,8 +294,8 @@ def get_cta_clicks(client, date_range):
         for row in response.rows:
             clicks.append({
                 "page": row.dimension_values[0].value,
-                "section": row.dimension_values[1].value,
-                "label": row.dimension_values[2].value,
+                "section": "",
+                "label": "",
                 "count": int(row.metric_values[0].value),
             })
         return clicks
