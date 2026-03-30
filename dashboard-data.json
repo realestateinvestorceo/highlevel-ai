@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-03-30 09:34:44",
+  "generated_at": "2026-03-30 10:48:05",
   "report_dates": {
-    "freshness": "2026-03-27",
+    "freshness": "2026-03-30",
     "schema": "2026-03-27",
     "seo_dashboard": "2026-03-30",
     "llm_visibility": "2026-03-27"
   },
   "stats": {
-    "total_pages": 48,
-    "freshness_issues": 628,
+    "total_pages": 51,
+    "freshness_issues": 640,
     "schema_issues": 0,
     "striking_distance_keywords": 20
   },
   "priority_actions": [],
   "freshness": {
-    "total_issues": 628,
-    "critical": 623,
+    "total_issues": 640,
+    "critical": 635,
     "warnings": 5,
     "by_type": {
       "outdated_year": 5,
-      "pricing_mismatch": 623
+      "pricing_mismatch": 635
     },
     "items": [
       {
@@ -394,16 +394,16 @@
     }
   },
   "traffic": {
-    "sessions": 533,
-    "users": 495,
-    "pageviews": 607,
+    "sessions": 538,
+    "users": 500,
+    "pageviews": 614,
     "bounce_rate": 0.65,
     "avg_duration": 73.9,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 298
+        "sessions": 303
       },
       {
         "source": "google",
@@ -428,7 +428,7 @@
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 12
+        "sessions": 13
       },
       {
         "source": "quora.com",
@@ -652,31 +652,31 @@
       },
       {
         "date": "20260330",
-        "sessions": 8,
-        "users": 7
+        "sessions": 13,
+        "users": 12
       }
     ]
   },
   "system_actions": [
     {
+      "action": "Fix System Activity: use correct field names (action/when) from dashboard data",
+      "when": "67 minutes ago"
+    },
+    {
+      "action": "Dashboard redesign + 3 new comparison pages + system activity feed",
+      "when": "71 minutes ago"
+    },
+    {
       "action": "Add auto-growth engine: schema fixes + meta optimizer in daily pipeline",
-      "when": "48 minutes ago"
-    },
-    {
-      "action": "Auto-apply WebPage schema to 46 pages + add apply_schema_fixes.py",
-      "when": "50 minutes ago"
-    },
-    {
-      "action": "Fix CTA tracking: 27 clicks found (was showing 0)",
-      "when": "52 minutes ago"
-    },
-    {
-      "action": "Auto-update: weekly SEO report 2026-03-30",
       "when": "2 hours ago"
     },
     {
-      "action": "Auto-update: weekly SEO report 2026-03-30",
-      "when": "3 hours ago"
+      "action": "Auto-apply WebPage schema to 46 pages + add apply_schema_fixes.py",
+      "when": "2 hours ago"
+    },
+    {
+      "action": "Fix CTA tracking: 27 clicks found (was showing 0)",
+      "when": "2 hours ago"
     }
   ]
 }

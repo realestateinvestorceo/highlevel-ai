@@ -1615,7 +1615,8 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       html += '</tbody></table></div>';
 
       // Flag pages with high impressions but no clicks
-      var missedPages = topPages.filter(function(p) { return num(p.impressions) > 500 && num(p.clicks) < 3; });
+      var missedPages = topPages.filter(function(p) { return num(p.impressions) > 500 && num(p.clicks) < 5; });
+      missedPages.sort(function(a, b) { return num(b.impressions) - num(a.impressions); });
       if (missedPages.length > 0) {
         html += '<div style="margin-top:12px;padding:12px 16px;background:rgba(245,158,11,0.08);border-left:3px solid var(--accent-orange);border-radius:8px;font-size:0.85rem;color:var(--text-secondary);">';
         html += '<strong style="color:var(--accent-orange);">Missed opportunity:</strong> ';
