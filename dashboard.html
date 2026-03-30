@@ -218,6 +218,148 @@ body {
   font-weight: 600;
 }
 
+/* ── Funnel ── */
+.funnel-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.funnel-step {
+  flex: 1;
+  text-align: center;
+  padding: 16px 8px;
+  position: relative;
+  min-width: 100px;
+}
+
+.funnel-step .funnel-val {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.funnel-step .funnel-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.funnel-arrow {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  padding: 0 2px;
+}
+
+.funnel-rate {
+  font-size: 0.65rem;
+  color: var(--accent-blue);
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .funnel-row { flex-wrap: wrap; }
+  .funnel-step { min-width: 80px; flex-basis: 30%; }
+  .funnel-arrow { display: none; }
+}
+
+/* ── Lead Pipeline ── */
+.pipeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.pipeline-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.pipeline-table td {
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.pipeline-table td:first-child { color: var(--text-primary); }
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.customer { background: rgba(52,211,153,0.15); color: var(--accent-green); }
+.status-badge.lead { background: rgba(79,125,249,0.15); color: var(--accent-blue); }
+.status-badge.cancelled { background: rgba(239,68,68,0.15); color: var(--accent-red); }
+
+.lead-form-area {
+  margin-top: 16px;
+}
+
+.lead-form-area summary {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lead-form-area summary:hover { color: var(--text-primary); }
+
+.lead-textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  resize: vertical;
+  outline: none;
+}
+
+.lead-textarea:focus { border-color: var(--accent-blue); }
+.lead-textarea::placeholder { color: var(--text-muted); }
+
+.lead-save-btn {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: var(--accent-green);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lead-save-btn:hover { opacity: 0.85; }
+
+.lead-hint {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 6px;
+}
+
 .earnings-big-number {
   font-family: var(--font-heading);
   font-size: 3rem;
@@ -231,35 +373,6 @@ body {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 24px;
-}
-
-.earnings-stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.earnings-stat {
-  text-align: center;
-  padding: 16px 8px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 10px;
-}
-
-.earnings-stat-val {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.earnings-stat-label {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 4px;
 }
 
 .screenshot-area {
@@ -1165,86 +1278,72 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += '</div>';
 
     // ═══════════════════════════════════════
-    // 0. EARNINGS — THE SCOREBOARD
+    // 0. CONVERSION FUNNEL & LEAD PIPELINE
     // ═══════════════════════════════════════
-    var saved = localStorage.getItem('hl_earnings_img');
-    var savedDate = localStorage.getItem('hl_earnings_date') || '';
+    var leads = [];
+    try { leads = JSON.parse(localStorage.getItem('hl_leads') || '[]'); } catch(e) {}
+    var leadCount = leads.filter(function(l) { return l.status === 'Lead'; }).length;
+    var customerCount = leads.filter(function(l) { return l.status === 'Customer'; }).length;
+    var cancelledCount = leads.filter(function(l) { return l.status === 'Cancelled'; }).length;
+    var totalReferrals = leads.length;
+    var earningsPerCustomer = 38.80;
+    var totalEarnings = customerCount * earningsPerCustomer;
 
     html += '<div class="earnings-section animate-in">';
     html += '<div class="earnings-header">';
-    html += '<div class="earnings-title"><span class="money-icon">💰</span> Affiliate Earnings</div>';
+    html += '<div class="earnings-title"><span class="money-icon">🔄</span> Conversion Funnel</div>';
     html += '<div class="earnings-badge">THIS IS WHAT MATTERS</div>';
     html += '</div>';
 
-    // Use extracted data if available, otherwise fall back to defaults
-    var earningsRaw = localStorage.getItem('hl_earnings_data');
-    var earningsData = null;
-    var eT = { clicks: 37, signups: 1, customers: 1, earnings: 38.80 }; // defaults
-    var earningsDate = localStorage.getItem('hl_earnings_extracted_at') || '';
-    if (earningsRaw) {
-      try {
-        earningsData = JSON.parse(earningsRaw);
-        eT = earningsData.totals || eT;
-      } catch(e) {}
-    }
-    var convRate = eT.clicks > 0 ? ((eT.customers / eT.clicks) * 100).toFixed(1) + '%' : '0%';
-    var period = earningsData ? (earningsData.period || 'Recent') : '6mo';
+    // Revenue headline
+    html += '<div class="earnings-big-number">$' + totalEarnings.toFixed(2) + '<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/mo recurring</span></div>';
+    html += '<div class="earnings-sub">' + customerCount + ' paying customer' + (customerCount !== 1 ? 's' : '') + ' × $' + earningsPerCustomer.toFixed(2) + '/mo (40% recurring commission)</div>';
 
-    html += '<div class="earnings-big-number">$' + eT.earnings.toFixed(2) + '</div>';
-    html += '<div class="earnings-sub">Total commissions earned · 40% recurring = $' + eT.earnings.toFixed(2) + '/mo from ' + eT.customers + ' customer' + (eT.customers !== 1 ? 's' : '') + '</div>';
-
-    html += '<div class="earnings-stats-row">';
-    html += '<div class="earnings-stat"><div class="earnings-stat-val">' + commas(eT.clicks) + '</div><div class="earnings-stat-label">Clicks (' + esc(period) + ')</div></div>';
-    html += '<div class="earnings-stat"><div class="earnings-stat-val">' + commas(eT.signups) + '</div><div class="earnings-stat-label">Signups</div></div>';
-    html += '<div class="earnings-stat"><div class="earnings-stat-val">' + commas(eT.customers) + '</div><div class="earnings-stat-label">Paying Customers</div></div>';
-    html += '<div class="earnings-stat"><div class="earnings-stat-val">' + convRate + '</div><div class="earnings-stat-label">Click→Customer</div></div>';
+    // Funnel visualization
+    html += '<div class="funnel-row">';
+    html += '<div class="funnel-step"><div class="funnel-val">' + commas(totalUsers) + '</div><div class="funnel-label">Page Views</div></div>';
+    html += '<div class="funnel-arrow">→</div>';
+    html += '<div class="funnel-step"><div class="funnel-val">' + commas(ctaClicks) + '</div><div class="funnel-label">Affiliate Clicks</div>';
+    if (totalUsers > 0 && ctaClicks > 0) html += '<div class="funnel-rate">' + ((ctaClicks/totalUsers)*100).toFixed(1) + '% click rate</div>';
+    html += '</div>';
+    html += '<div class="funnel-arrow">→</div>';
+    html += '<div class="funnel-step"><div class="funnel-val">' + totalReferrals + '</div><div class="funnel-label">Leads</div>';
+    if (ctaClicks > 0 && totalReferrals > 0) html += '<div class="funnel-rate">' + ((totalReferrals/ctaClicks)*100).toFixed(1) + '% signup rate</div>';
+    html += '</div>';
+    html += '<div class="funnel-arrow">→</div>';
+    html += '<div class="funnel-step"><div class="funnel-val" style="color:var(--accent-green)">' + customerCount + '</div><div class="funnel-label">Customers</div>';
+    if (totalReferrals > 0) html += '<div class="funnel-rate">' + ((customerCount/totalReferrals)*100).toFixed(1) + '% close rate</div>';
+    html += '</div>';
     html += '</div>';
 
-    // Per-day breakdown table (only if extracted data exists)
-    if (earningsData && earningsData.rows && earningsData.rows.length > 0) {
-      html += '<table class="earnings-breakdown"><thead><tr><th>Day</th><th>Clicks</th><th>Signups</th><th>Customers</th><th>Earnings</th></tr></thead><tbody>';
-      earningsData.rows.forEach(function(r) {
+    // Lead pipeline table
+    if (leads.length > 0) {
+      html += '<table class="pipeline-table"><thead><tr><th>Name</th><th>Created</th><th>Status</th></tr></thead><tbody>';
+      // Sort: customers first, then leads, then cancelled
+      var statusOrder = { 'Customer': 0, 'Lead': 1, 'Cancelled': 2 };
+      leads.slice().sort(function(a, b) {
+        var sa = statusOrder[a.status] != null ? statusOrder[a.status] : 1;
+        var sb = statusOrder[b.status] != null ? statusOrder[b.status] : 1;
+        if (sa !== sb) return sa - sb;
+        return new Date(b.created) - new Date(a.created);
+      }).forEach(function(l) {
+        var cls = l.status === 'Customer' ? 'customer' : l.status === 'Cancelled' ? 'cancelled' : 'lead';
         html += '<tr>';
-        html += '<td>' + esc(r.day) + '</td>';
-        html += '<td>' + r.clicks + '</td>';
-        html += '<td>' + r.signups + '</td>';
-        html += '<td' + (r.customers > 0 ? ' class="has-value"' : '') + '>' + r.customers + '</td>';
-        html += '<td' + (r.earnings > 0 ? ' class="has-value"' : '') + '>$' + r.earnings.toFixed(2) + '</td>';
+        html += '<td>' + esc(l.name) + '</td>';
+        html += '<td>' + esc(l.created) + '</td>';
+        html += '<td><span class="status-badge ' + cls + '">' + esc(l.status) + '</span></td>';
         html += '</tr>';
       });
       html += '</tbody></table>';
-      if (earningsDate) html += '<div class="earnings-extracted-date">Extracted ' + esc(earningsDate) + '</div>';
-    } else {
-      html += '<div style="color:var(--text-muted);font-size:0.8rem;margin-bottom:16px;">Upload a GHL affiliate screenshot to see daily breakdown</div>';
     }
 
-    // Screenshot upload area
-    html += '<input type="file" accept="image/*" class="earnings-file-input" id="earningsFileInput">';
-    html += '<div class="screenshot-area' + (saved ? ' has-image' : '') + '" id="screenshotArea">';
-    if (saved) {
-      html += '<img src="' + saved + '" alt="GHL Affiliate Performance" id="screenshotImg">';
-      html += '<div class="screenshot-actions">';
-      html += '<button onclick="document.getElementById(\'earningsFileInput\').click()">📷 Update Screenshot</button>';
-      html += '<button class="remove-btn" onclick="removeScreenshot()">✕ Remove</button>';
-      html += '</div>';
-      if (savedDate) html += '<div class="screenshot-date">Uploaded ' + esc(savedDate) + '</div>';
-    } else {
-      html += '<div class="screenshot-placeholder">';
-      html += '<span class="upload-icon">📸</span>';
-      html += 'Drop your GHL affiliate portal screenshot here<br><small>or click to upload</small>';
-      html += '</div>';
-    }
+    // Lead entry form
+    html += '<details class="lead-form-area" id="leadFormArea"><summary>✏️ Upload weekly referral CSV</summary>';
+    html += '<input type="file" accept=".csv" id="csvFileInput" style="display:none">';
+    html += '<div class="screenshot-area" id="csvDropArea" style="margin-top:10px">';
+    html += '<div class="screenshot-placeholder"><span class="upload-icon">📋</span>Drop your GHL referrals CSV here<br><small>or click to upload · exported from Referrals tab</small></div>';
     html += '</div>';
-
-    // Manual entry form
-    html += '<details class="manual-entry"><summary>✏️ Enter numbers manually</summary>';
-    html += '<div class="manual-entry-grid">';
-    html += '<div><label>Clicks</label><input type="number" id="manualClicks" value="' + eT.clicks + '"></div>';
-    html += '<div><label>Signups</label><input type="number" id="manualSignups" value="' + eT.signups + '"></div>';
-    html += '<div><label>Customers</label><input type="number" id="manualCustomers" value="' + eT.customers + '"></div>';
-    html += '<div><label>Earnings ($)</label><input type="number" step="0.01" id="manualEarnings" value="' + eT.earnings.toFixed(2) + '"></div>';
-    html += '</div>';
-    html += '<button class="manual-save-btn" onclick="saveManualEarnings()">Save</button>';
+    html += '<div class="lead-hint">Export CSV from your GHL affiliate portal → Referrals tab. Data from before Feb 2026 is automatically filtered out.</div>';
     html += '</details>';
 
     html += '</div>';
@@ -1310,20 +1409,19 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       html += '</div>';
     }
 
-    // -- Earnings trend (from screenshot history) --
-    var earningsHistory = [];
-    try { earningsHistory = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
-    if (earningsHistory.length > 1) {
-      var latestEarnings = earningsHistory[earningsHistory.length - 1].earnings || 0;
+    // -- Pipeline trend (from lead history) --
+    var pipelineHistory = [];
+    try { pipelineHistory = JSON.parse(localStorage.getItem('hl_pipeline_history') || '[]'); } catch(e) {}
+    if (pipelineHistory.length > 1) {
       html += '<div class="trend-card">';
-      html += '<h3>Affiliate Earnings (over time)</h3>';
-      html += '<div class="trend-value">$' + latestEarnings.toFixed(2) + '</div>';
-      html += '<div class="trend-chart-wrap"><canvas id="earningsChart"></canvas></div>';
+      html += '<h3>Customers (over time)</h3>';
+      html += '<div class="trend-value">' + customerCount + '</div>';
+      html += '<div class="trend-chart-wrap"><canvas id="customersChart"></canvas></div>';
       html += '</div>';
     } else {
       html += '<div class="trend-card">';
-      html += '<h3>Affiliate Clicks (over time)</h3>';
-      html += '<div style="color:var(--text-muted);font-size:0.85rem;padding:20px 0;">Upload screenshots regularly to build a trend line</div>';
+      html += '<h3>Pipeline (over time)</h3>';
+      html += '<div style="color:var(--text-muted);font-size:0.85rem;padding:20px 0;">Update referrals regularly to build a trend line</div>';
       html += '</div>';
     }
 
@@ -1564,25 +1662,21 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     document.getElementById('dashboard').innerHTML = html;
     show('dashboard');
 
-    // Wire up screenshot upload
-    var fileInput = document.getElementById('earningsFileInput');
-    var screenshotArea = document.getElementById('screenshotArea');
-    if (screenshotArea && !screenshotArea._wired) {
-      screenshotArea._wired = true;
-      screenshotArea.addEventListener('click', function(e) {
-        if (e.target.tagName === 'BUTTON') return;
-        fileInput.click();
-      });
-      // Drag and drop
-      screenshotArea.addEventListener('dragover', function(e) { e.preventDefault(); screenshotArea.style.borderColor = 'var(--accent-green)'; });
-      screenshotArea.addEventListener('dragleave', function() { screenshotArea.style.borderColor = ''; });
-      screenshotArea.addEventListener('drop', function(e) {
+    // Wire up CSV upload
+    var csvInput = document.getElementById('csvFileInput');
+    var csvArea = document.getElementById('csvDropArea');
+    if (csvArea && !csvArea._wired) {
+      csvArea._wired = true;
+      csvArea.addEventListener('click', function() { csvInput.click(); });
+      csvArea.addEventListener('dragover', function(e) { e.preventDefault(); csvArea.style.borderColor = 'var(--accent-green)'; });
+      csvArea.addEventListener('dragleave', function() { csvArea.style.borderColor = ''; });
+      csvArea.addEventListener('drop', function(e) {
         e.preventDefault();
-        screenshotArea.style.borderColor = '';
-        if (e.dataTransfer.files && e.dataTransfer.files[0]) handleScreenshotFile(e.dataTransfer.files[0]);
+        csvArea.style.borderColor = '';
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) handleCsvFile(e.dataTransfer.files[0]);
       });
-      fileInput.addEventListener('change', function() {
-        if (fileInput.files && fileInput.files[0]) handleScreenshotFile(fileInput.files[0]);
+      csvInput.addEventListener('change', function() {
+        if (csvInput.files && csvInput.files[0]) handleCsvFile(csvInput.files[0]);
       });
     }
 
@@ -1592,10 +1686,10 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
       return ds.substring(4,6) + '/' + ds.substring(6,8);
     }), '#4f7df9');
 
-    var earningsHist = [];
-    try { earningsHist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
-    if (earningsHist.length > 1) {
-      drawLineChart('earningsChart', earningsHist.map(function(h) { return h.earnings; }), earningsHist.map(function(h) { return h.label; }), '#34d399');
+    var pipHist = [];
+    try { pipHist = JSON.parse(localStorage.getItem('hl_pipeline_history') || '[]'); } catch(e) {}
+    if (pipHist.length > 1) {
+      drawLineChart('customersChart', pipHist.map(function(h) { return h.customers; }), pipHist.map(function(h) { return h.label; }), '#34d399');
     }
   }
 
@@ -1662,68 +1756,92 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     setTimeout(function() { t.remove(); }, 4000);
   }
 
-  function handleScreenshotFile(file) {
-    if (!file.type.startsWith('image/')) return;
+  function handleCsvFile(file) {
+    if (!file.name.endsWith('.csv')) { showToast('Please upload a .csv file', 'error'); return; }
     var reader = new FileReader();
     reader.onload = function(e) {
-      var dataUrl = e.target.result;
-      localStorage.setItem('hl_earnings_img', dataUrl);
-      localStorage.setItem('hl_earnings_date', new Date().toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'}));
+      var text = e.target.result;
+      parseCsvAndSave(text);
+    };
+    reader.readAsText(file);
+  }
 
-      // Show extraction spinner
-      var area = document.getElementById('screenshotArea');
-      if (area) {
-        area.innerHTML = '<div class="extraction-status"><div class="extraction-spinner"></div> Extracting earnings data...</div>';
+  function parseCsvAndSave(text) {
+    var lines = text.trim().split('\n');
+    if (lines.length < 2) { showToast('CSV appears empty', 'error'); return; }
+
+    var header = lines[0].split(',').map(function(h) { return h.trim().toLowerCase(); });
+    var stateIdx = header.indexOf('state');
+    var emailIdx = header.indexOf('email');
+    var createdIdx = header.indexOf('created_at');
+    var customerSinceIdx = header.indexOf('customer_since');
+
+    if (stateIdx === -1 || emailIdx === -1) {
+      showToast('CSV must have "state" and "email" columns', 'error');
+      return;
+    }
+
+    var cutoff = new Date('2026-02-01T00:00:00Z');
+    var leads = [];
+    var stateMap = { 'active': 'Customer', 'subscribed': 'Lead', 'signup': 'Lead', 'cancelled': 'Cancelled' };
+
+    for (var i = 1; i < lines.length; i++) {
+      var cols = lines[i].split(',').map(function(c) { return c.trim(); });
+      if (cols.length < header.length) continue;
+
+      var createdStr = createdIdx >= 0 ? cols[createdIdx] : '';
+      var created = createdStr ? new Date(createdStr) : null;
+
+      // Filter out pre-Feb 2026
+      if (created && created < cutoff) continue;
+
+      var rawState = (cols[stateIdx] || '').toLowerCase();
+      var status = stateMap[rawState] || 'Lead';
+      var email = cols[emailIdx] || '';
+      var customerSince = customerSinceIdx >= 0 ? cols[customerSinceIdx] : '';
+
+      // Format created date nicely
+      var createdLabel = '';
+      if (created) {
+        createdLabel = created.toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
       }
 
-      // Call extraction API
-      fetch('/api/extract-earnings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ image: dataUrl })
-      })
-      .then(function(r) {
-        if (!r.ok) throw new Error('API returned ' + r.status);
-        return r.json();
-      })
-      .then(function(data) {
-        if (data.totals) {
-          localStorage.setItem('hl_earnings_data', JSON.stringify(data));
-          var now = new Date();
-          var dateLabel = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
-          var fullDate = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'});
-          localStorage.setItem('hl_earnings_extracted_at', fullDate);
-          // Append to earnings history for trend chart
-          var hist = [];
-          try { hist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
-          // Only add one entry per day
-          var todayKey = now.toISOString().substring(0, 10);
-          hist = hist.filter(function(h) { return h.key !== todayKey; });
-          hist.push({
-            key: todayKey,
-            label: dateLabel,
-            earnings: data.totals.earnings,
-            clicks: data.totals.clicks,
-            customers: data.totals.customers
-          });
-          // Keep last 90 entries max
-          if (hist.length > 90) hist = hist.slice(hist.length - 90);
-          localStorage.setItem('hl_earnings_history', JSON.stringify(hist));
-          showToast('Earnings data extracted: $' + data.totals.earnings.toFixed(2) + ' from ' + data.totals.customers + ' customer(s)', 'success');
-        } else {
-          showToast('Could not parse earnings from image', 'error');
-        }
-        // Re-render with extracted data
-        fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
-      })
-      .catch(function(err) {
-        console.error('Extraction failed:', err);
-        showToast('Extraction failed — image saved as screenshot', 'error');
-        // Still re-render to show the uploaded image
-        fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+      // Name from email (before @)
+      var name = email.split('@')[0] || email;
+
+      leads.push({
+        email: email,
+        name: name,
+        created: createdLabel,
+        created_at: createdStr,
+        customer_since: customerSince,
+        status: status
       });
-    };
-    reader.readAsDataURL(file);
+    }
+
+    if (leads.length === 0) {
+      showToast('No referrals found after Feb 2026', 'error');
+      return;
+    }
+
+    localStorage.setItem('hl_leads', JSON.stringify(leads));
+
+    // Update pipeline history
+    var now = new Date();
+    var todayKey = now.toISOString().substring(0, 10);
+    var dateLabel = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
+    var customerCount = leads.filter(function(l) { return l.status === 'Customer'; }).length;
+    var leadCount = leads.filter(function(l) { return l.status === 'Lead'; }).length;
+
+    var hist = [];
+    try { hist = JSON.parse(localStorage.getItem('hl_pipeline_history') || '[]'); } catch(e) {}
+    hist = hist.filter(function(h) { return h.key !== todayKey; });
+    hist.push({ key: todayKey, label: dateLabel, customers: customerCount, leads: leadCount, total: leads.length });
+    if (hist.length > 90) hist = hist.slice(hist.length - 90);
+    localStorage.setItem('hl_pipeline_history', JSON.stringify(hist));
+
+    showToast(leads.length + ' referrals imported: ' + customerCount + ' customers, ' + leadCount + ' leads', 'success');
+    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
   }
 
   window.removeScreenshot = function() {
@@ -1732,36 +1850,7 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
   };
 
-  window.saveManualEarnings = function() {
-    var clicks = parseInt(document.getElementById('manualClicks').value) || 0;
-    var signups = parseInt(document.getElementById('manualSignups').value) || 0;
-    var customers = parseInt(document.getElementById('manualCustomers').value) || 0;
-    var earnings = parseFloat(document.getElementById('manualEarnings').value) || 0;
-
-    var data = {
-      period: 'Manual entry',
-      totals: { clicks: clicks, signups: signups, customers: customers, earnings: earnings },
-      rows: []
-    };
-    localStorage.setItem('hl_earnings_data', JSON.stringify(data));
-
-    var now = new Date();
-    var dateLabel = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
-    var fullDate = now.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'});
-    localStorage.setItem('hl_earnings_extracted_at', fullDate);
-
-    // Append to earnings history for trend chart
-    var hist = [];
-    try { hist = JSON.parse(localStorage.getItem('hl_earnings_history') || '[]'); } catch(e) {}
-    var todayKey = now.toISOString().substring(0, 10);
-    hist = hist.filter(function(h) { return h.key !== todayKey; });
-    hist.push({ key: todayKey, label: dateLabel, earnings: earnings, clicks: clicks, customers: customers });
-    if (hist.length > 90) hist = hist.slice(hist.length - 90);
-    localStorage.setItem('hl_earnings_history', JSON.stringify(hist));
-
-    showToast('Earnings updated: $' + earnings.toFixed(2), 'success');
-    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
-  };
+  // saveLeadData removed — replaced by CSV upload via handleCsvFile
 
 })();
 </script>
