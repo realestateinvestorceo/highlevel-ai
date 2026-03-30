@@ -34,10 +34,9 @@ from google.analytics.data_v1beta.types import (
 PROPERTY_ID = "526181718"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SERVICE_ACCOUNT_FILE = os.path.join(
-    os.path.expanduser("~"),
-    "Downloads",
-    "ai-projects-487616-878fcd9f633c.json",
+SERVICE_ACCOUNT_FILE = os.environ.get(
+    "GA4_SERVICE_ACCOUNT_FILE",
+    os.path.join(os.path.expanduser("~"), "Downloads", "ai-projects-487616-878fcd9f633c.json"),
 )
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "reports")
 

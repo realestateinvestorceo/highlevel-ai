@@ -298,7 +298,7 @@ def fetch_ga4_data(days: int = 30) -> dict | None:
         )
         cta_clicks = _ga4_run_report(
             client, start_date, end_date,
-            dimensions=["pagePath", "customEvent:event_label"],
+            dimensions=["pagePath", "eventName"],
             metrics=["eventCount"],
             dimension_filter=cta_filter,
             limit=500,
@@ -317,7 +317,7 @@ def fetch_ga4_data(days: int = 30) -> dict | None:
         )
         scroll_depth = _ga4_run_report(
             client, start_date, end_date,
-            dimensions=["pagePath", "customEvent:scroll_percentage"],
+            dimensions=["pagePath", "eventName"],
             metrics=["eventCount"],
             dimension_filter=scroll_filter,
             limit=1000,
@@ -452,7 +452,7 @@ def analyze_engagement(gsc_data: dict, ga4_data: dict) -> dict:
     scroll_map = {}  # path -> {threshold: count}
     for s in ga4_data.get("scroll_depth", []):
         path = s.get("pagePath", "")
-        pct = s.get("customEvent:scroll_percentage", "0")
+        pct = s.get("eventName", "0")
         count = s.get("eventCount", 0)
         if path not in scroll_map:
             scroll_map[path] = {}

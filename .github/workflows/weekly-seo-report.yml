@@ -73,6 +73,7 @@ jobs:
 
       - name: Generate Dashboard Data
         run: python3 scripts/seo/generate_dashboard_data.py
+        continue-on-error: true
 
       - name: Commit and push updates
         run: |
