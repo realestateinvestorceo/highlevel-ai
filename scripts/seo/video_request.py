@@ -198,7 +198,7 @@ def post_to_slack(page_url, title, script, thumbnail_path=None):
 
     client = WebClient(token=SLACK_BOT_TOKEN)
 
-    message = f"""@heygen REF: {page_url}
+    message = f"""<@U0APRDW5DN1> REF: {page_url}
 Title: {title}
 Create a professional explainer video. Use a natural, conversational voice at a slightly faster pace than default. Stock footage style, clean and educational. Here is the script:
 {script}"""
