@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-03-30 10:48:05",
+  "generated_at": "2026-03-31 07:22:14",
   "report_dates": {
     "freshness": "2026-03-30",
-    "schema": "2026-03-27",
+    "schema": "2026-03-31",
     "seo_dashboard": "2026-03-30",
     "llm_visibility": "2026-03-27"
   },
   "stats": {
-    "total_pages": 51,
-    "freshness_issues": 640,
-    "schema_issues": 0,
+    "total_pages": 48,
+    "freshness_issues": 628,
+    "schema_issues": 5,
     "striking_distance_keywords": 20
   },
   "priority_actions": [],
   "freshness": {
-    "total_issues": 640,
-    "critical": 635,
+    "total_issues": 628,
+    "critical": 623,
     "warnings": 5,
     "by_type": {
       "outdated_year": 5,
-      "pricing_mismatch": 635
+      "pricing_mismatch": 623
     },
     "items": [
       {
@@ -145,59 +145,75 @@
     ]
   },
   "schema": {
-    "total_schemas": 147,
-    "issues": 0,
-    "items": []
+    "total_schemas": 208,
+    "issues": 5,
+    "items": [
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `description`",
+      "Problem: Missing required field 'description' on WebPage",
+      "Suggested fix: Missing required field 'description'"
+    ]
   },
   "keywords": {
     "striking_distance": [
       {
         "keyword": "highlevel",
         "page": "/",
-        "position": 15.5,
-        "impressions": 964,
+        "position": 15.4,
+        "impressions": 998,
         "clicks": 1
       },
       {
         "keyword": "high level",
         "page": "/",
-        "position": 19.2,
-        "impressions": 880,
+        "position": 19.1,
+        "impressions": 901,
         "clicks": 3
       },
       {
         "keyword": "go high level",
         "page": "/",
-        "position": 19.6,
-        "impressions": 539,
+        "position": 19.7,
+        "impressions": 554,
         "clicks": 1
       },
       {
         "keyword": "high level ai",
         "page": "/",
-        "position": 5.5,
-        "impressions": 308,
-        "clicks": 11
+        "position": 5.3,
+        "impressions": 329,
+        "clicks": 12
       },
       {
         "keyword": "high level crm",
         "page": "/",
-        "position": 19.2,
-        "impressions": 124,
+        "position": 19.4,
+        "impressions": 128,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel pricing change march 2026",
         "page": "/blog/gohighlevel-march-2026-updates.html",
-        "position": 6.9,
-        "impressions": 95,
+        "position": 7.2,
+        "impressions": 111,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel updates 2026",
         "page": "/blog/gohighlevel-march-2026-updates.html",
-        "position": 5.1,
-        "impressions": 73,
+        "position": 5.7,
+        "impressions": 100,
         "clicks": 0
       },
       {
@@ -210,43 +226,43 @@
       {
         "keyword": "highlevel official website",
         "page": "/",
-        "position": 5.3,
-        "impressions": 65,
+        "position": 5.2,
+        "impressions": 68,
         "clicks": 0
       },
       {
         "keyword": "hilevel",
         "page": "/",
         "position": 12.6,
-        "impressions": 63,
+        "impressions": 64,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai",
+        "page": "/",
+        "position": 10.7,
+        "impressions": 57,
         "clicks": 0
       },
       {
         "keyword": "highlevel agency",
         "page": "/",
         "position": 19.3,
-        "impressions": 56,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel ai",
-        "page": "/",
-        "position": 11.2,
-        "impressions": 51,
+        "impressions": 57,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel voice ai pricing 2026",
         "page": "/voice-agent-setup.html",
         "position": 8.3,
-        "impressions": 50,
+        "impressions": 51,
         "clicks": 0
       },
       {
         "keyword": "high level agency",
         "page": "/",
-        "position": 14.2,
-        "impressions": 44,
+        "position": 14.0,
+        "impressions": 48,
         "clicks": 0
       },
       {
@@ -257,17 +273,17 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing official 2026",
-        "page": "/pricing-explained.html",
-        "position": 9.6,
-        "impressions": 34,
+        "keyword": "gohighlevel updates 2026 new features",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 5.5,
+        "impressions": 36,
         "clicks": 0
       },
       {
-        "keyword": "high levels",
-        "page": "/",
-        "position": 19.4,
-        "impressions": 34,
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained.html",
+        "position": 9.5,
+        "impressions": 35,
         "clicks": 0
       },
       {
@@ -280,8 +296,8 @@
       {
         "keyword": "go high level ai",
         "page": "/",
-        "position": 13.3,
-        "impressions": 30,
+        "position": 12.8,
+        "impressions": 32,
         "clicks": 0
       },
       {
@@ -295,57 +311,57 @@
     "top_pages": [
       {
         "page": "/",
-        "clicks": 65,
-        "impressions": 13309,
+        "clicks": 70,
+        "impressions": 13643,
         "position": 15.0
       },
       {
         "page": "/highlevel-vs-zapier-make.html",
         "clicks": 6,
-        "impressions": 1054,
+        "impressions": 1096,
         "position": 7.7
       },
       {
         "page": "/pricing-explained.html",
         "clicks": 6,
-        "impressions": 7979,
+        "impressions": 8409,
         "position": 8.5
       },
       {
         "page": "/voice-agent-setup.html",
         "clicks": 4,
-        "impressions": 4414,
+        "impressions": 4532,
         "position": 8.4
       },
       {
         "page": "/blog/gohighlevel-march-2026-updates.html",
         "clicks": 3,
-        "impressions": 2781,
-        "position": 4.5
+        "impressions": 3327,
+        "position": 4.6
       },
       {
         "page": "/tools/sms-cost-estimator.html",
         "clicks": 3,
-        "impressions": 177,
-        "position": 13.4
+        "impressions": 180,
+        "position": 13.3
       },
       {
         "page": "/gohighlevel-pricing-calculator.html",
         "clicks": 2,
-        "impressions": 836,
-        "position": 15.0
+        "impressions": 902,
+        "position": 15.6
       },
       {
         "page": "/highlevel-for-med-spas.html",
         "clicks": 2,
-        "impressions": 654,
-        "position": 12.9
+        "impressions": 668,
+        "position": 13.1
       },
       {
         "page": "/blog/",
         "clicks": 1,
-        "impressions": 90,
-        "position": 8.8
+        "impressions": 102,
+        "position": 8.7
       },
       {
         "page": "/contact.html",
@@ -354,34 +370,34 @@
         "position": 11.0
       },
       {
+        "page": "/highlevel-plus-wordpress.html",
+        "clicks": 1,
+        "impressions": 326,
+        "position": 9.4
+      },
+      {
         "page": "/mistakes-to-avoid.html",
         "clicks": 1,
-        "impressions": 931,
-        "position": 7.8
+        "impressions": 974,
+        "position": 7.7
       },
       {
         "page": "/tools/agency-pricing-calculator.html",
         "clicks": 1,
-        "impressions": 141,
+        "impressions": 174,
         "position": 7.9
+      },
+      {
+        "page": "/tools/client-onboarding-checklist.html",
+        "clicks": 1,
+        "impressions": 26,
+        "position": 15.1
       },
       {
         "page": "/tools/feature-comparison.html",
         "clicks": 1,
-        "impressions": 191,
-        "position": 9.4
-      },
-      {
-        "page": "https://highlevel.ai/editorial-policy.html",
-        "clicks": 0,
-        "impressions": 6,
-        "position": 7.2
-      },
-      {
-        "page": "/#features",
-        "clicks": 0,
-        "impressions": 6,
-        "position": 5.2
+        "impressions": 219,
+        "position": 9.5
       }
     ],
     "traffic_summary": {}
@@ -394,21 +410,21 @@
     }
   },
   "traffic": {
-    "sessions": 538,
-    "users": 500,
-    "pageviews": 614,
+    "sessions": 551,
+    "users": 512,
+    "pageviews": 630,
     "bounce_rate": 0.65,
-    "avg_duration": 73.9,
+    "avg_duration": 69.6,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 303
+        "sessions": 305
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 141
+        "sessions": 144
       },
       {
         "source": "chatgpt.com",
@@ -418,17 +434,17 @@
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 19
+        "sessions": 21
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 15
+        "sessions": 16
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 13
+        "sessions": 10
       },
       {
         "source": "quora.com",
@@ -439,6 +455,11 @@
         "source": "perplexity.ai",
         "medium": "referral",
         "sessions": 7
+      },
+      {
+        "source": "facebook.com",
+        "medium": "referral",
+        "sessions": 6
       },
       {
         "source": "duckduckgo",
@@ -454,11 +475,6 @@
         "source": "mail.google.com",
         "medium": "referral",
         "sessions": 3
-      },
-      {
-        "source": "facebook.com",
-        "medium": "referral",
-        "sessions": 2
       },
       {
         "source": "claude.ai",
@@ -500,11 +516,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260228",
-        "sessions": 4,
-        "users": 4
-      },
       {
         "date": "20260301",
         "sessions": 2,
@@ -652,31 +663,10 @@
       },
       {
         "date": "20260330",
-        "sessions": 13,
-        "users": 12
+        "sessions": 30,
+        "users": 28
       }
     ]
   },
-  "system_actions": [
-    {
-      "action": "Fix System Activity: use correct field names (action/when) from dashboard data",
-      "when": "67 minutes ago"
-    },
-    {
-      "action": "Dashboard redesign + 3 new comparison pages + system activity feed",
-      "when": "71 minutes ago"
-    },
-    {
-      "action": "Add auto-growth engine: schema fixes + meta optimizer in daily pipeline",
-      "when": "2 hours ago"
-    },
-    {
-      "action": "Auto-apply WebPage schema to 46 pages + add apply_schema_fixes.py",
-      "when": "2 hours ago"
-    },
-    {
-      "action": "Fix CTA tracking: 27 clicks found (was showing 0)",
-      "when": "2 hours ago"
-    }
-  ]
+  "system_actions": []
 }
