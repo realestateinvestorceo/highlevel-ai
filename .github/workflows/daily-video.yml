@@ -45,6 +45,7 @@ jobs:
           SLACK_CHANNEL_ID=${{ secrets.SLACK_CHANNEL_ID }}
           VIDEO_SHEET_ID=${{ secrets.VIDEO_SHEET_ID }}
           IDEOGRAM_API_KEY=${{ secrets.IDEOGRAM_API_KEY }}
+          PERPLEXITY_API_KEY=${{ secrets.PERPLEXITY_API_KEY }}
           ENVEOF
 
       - name: Run Video Pipeline (auto mode)

@@ -16,7 +16,7 @@ from pathlib import Path
 # Add scripts/seo/ to path for config import
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from config import (
-    ANTHROPIC_API_KEY, SLACK_BOT_TOKEN, SLACK_CHANNEL_ID,
+    ANTHROPIC_API_KEY, PERPLEXITY_API_KEY, SLACK_BOT_TOKEN, SLACK_CHANNEL_ID,
     VIDEO_SHEET_ID, GA4_SERVICE_ACCOUNT_FILE, SITE_URL,
     AFFILIATE_LINK, DATA_DIR, setup_logging, today
 )
@@ -39,10 +39,58 @@ def load_prompt(prompt_name, variables=None):
 
 
 # ──────────────────────────────────────────────
+# Step 0: Live research via Perplexity
+# ──────────────────────────────────────────────
+
+def research_topic(topic):
+    """Call Perplexity API to get current, factual information about a topic."""
+    if not PERPLEXITY_API_KEY:
+        logger.warning("No Perplexity API key — skipping live research")
+        return ""
+
+    import requests
+
+    query = f"""Research the following topic and provide ONLY current, verified facts that a video scriptwriter needs. Include:
+
+1. Current pricing (exact dollar amounts, plan names, what's included) as of 2026
+2. Key features and recent updates (last 6 months)
+3. Real competitor comparisons with specific pricing differences
+4. Any known limitations or common complaints from real users
+5. Specific statistics or data points with their sources
+
+Topic: {topic}
+
+Be specific — exact numbers, exact plan names, exact feature names. No vague statements. If you're not sure about something, say so rather than guessing."""
+
+    try:
+        resp = requests.post(
+            "https://api.perplexity.ai/chat/completions",
+            headers={
+                "Authorization": f"Bearer {PERPLEXITY_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": "sonar",
+                "messages": [{"role": "user", "content": query}],
+                "max_tokens": 2000,
+            },
+            timeout=30,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        research = data["choices"][0]["message"]["content"]
+        logger.info(f"Perplexity research: {len(research.split())} words")
+        return research
+    except Exception as e:
+        logger.warning(f"Perplexity research failed: {e}")
+        return ""
+
+
+# ──────────────────────────────────────────────
 # Step 1: Generate video script
 # ──────────────────────────────────────────────
 
-def generate_script(topic, page_url, short=False):
+def generate_script(topic, page_url, short=False, research_context=""):
     """Call Anthropic API to generate a video script."""
     from anthropic import Anthropic
 
@@ -50,6 +98,10 @@ def generate_script(topic, page_url, short=False):
         prompt = f"Write exactly 1 sentence about: {topic}. Under 12 words. Return ONLY the sentence, nothing else."
     else:
         prompt = load_prompt("video_script_prompt", {"topic": topic, "page_url": page_url})
+
+        # Inject live research if available
+        if research_context:
+            prompt += f"\n\nIMPORTANT — USE THESE VERIFIED FACTS (researched today, {today()}):\n\n{research_context}\n\nUse ONLY the facts above for any claims about pricing, features, comparisons, or statistics. Do not invent or assume any numbers — if the research doesn't cover something, don't include it in the script."
 
     client = Anthropic(api_key=ANTHROPIC_API_KEY)
     response = client.messages.create(
@@ -235,11 +287,28 @@ def main():
     print(f"Video Pipeline — {args.topic}")
     print(f"{'='*60}\n")
 
+    # Step 0: Live research via Perplexity
+    research_context = ""
+    if not args.short:
+        print("Researching topic (Perplexity)...")
+        plog.start("research")
+        try:
+            research_context = research_topic(args.topic)
+            if research_context:
+                plog.log_success("research", f"{len(research_context.split())} words")
+                print(f"Research complete ({len(research_context.split())} words)\n")
+            else:
+                plog.log_skipped("research", "no API key or empty response")
+                print("Research skipped (no Perplexity key or empty response)\n")
+        except Exception as e:
+            plog.log_error("research", e)
+            print(f"Research failed: {e} (continuing without research)\n")
+
     # Step 1: Generate script
     print("Generating video script...")
     plog.start("script_gen")
     try:
-        script = generate_script(args.topic, page_url, short=args.short)
+        script = generate_script(args.topic, page_url, short=args.short, research_context=research_context)
         plog.log_success("script_gen", f"{len(script.split())} words")
         print(f"Script generated ({len(script.split())} words)\n")
     except Exception as e:
