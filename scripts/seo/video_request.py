@@ -8,6 +8,7 @@ Usage:
     python scripts/seo/video_request.py --topic "..." --no-slack --no-sheets
 """
 
+import os
 import sys
 import json
 import argparse
