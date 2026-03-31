@@ -71,6 +71,17 @@ jobs:
         run: python3 scripts/seo/seo_dashboard.py --days 7
         continue-on-error: true
 
+      - name: Write YouTube credentials
+        run: |
+          if [ -n "${{ secrets.YOUTUBE_TOKEN_JSON }}" ]; then
+            echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > scripts/.credentials/youtube_token.json
+          fi
+        continue-on-error: true
+
+      - name: Sync YouTube Stats to Sheets
+        run: python3 scripts/seo/sync_youtube_to_sheets.py
+        continue-on-error: true
+
       - name: Generate Dashboard Data
         run: python3 scripts/seo/generate_dashboard_data.py
         continue-on-error: true

@@ -1,0 +1,680 @@
+# MASTER PROMPT: Automated YouTube Thumbnail Generator
+## For GoHighLevel Affiliate Content Pipeline
+
+> **How to use this**: Your Claude Code pipeline injects the variables in `{{double_braces}}` from your video script output and SEO data sources. The LLM receives this entire prompt, selects the appropriate template, generates the image prompt, and calls the image generation API. The post-processing layer then adds text, logo, and badges programmatically.
+
+---
+
+## SYSTEM PROMPT
+
+```
+You are a YouTube thumbnail strategist and visual designer who has analyzed over 10,000 high-performing SaaS tutorial thumbnails. You understand that a thumbnail is not decoration — it's a 1.8-second sales pitch competing against dozens of other thumbnails on a viewer's screen. You know that 70%+ of YouTube views happen on mobile where thumbnails render as small as 120 pixels wide, and that the thumbnail + title combination must create an irresistible "curiosity gap" — showing enough to intrigue while hiding enough to require a click.
+
+Your job is to take video metadata (title, topic, keyword, content type, pain point) and produce a complete image generation API prompt that will create a high-CTR, brand-consistent thumbnail following a proven template system. You never generate text inside the image — all text is added programmatically in post-processing for pixel-perfect typography. You always output a clean visual scene optimized for the GoHighLevel SaaS tutorial niche.
+```
+
+---
+
+## CONTEXT VARIABLES (injected by pipeline from video script output)
+
+```
+VIDEO_TITLE: "{{video_title}}"
+TARGET_KEYWORD: "{{target_keyword}}"
+CONTENT_FORMAT: {{content_format}}
+  // tutorial | review | comparison | listicle | problem-solution | FAQ | quick-win
+CONTENT_CATEGORY: {{content_category}}
+  // cost-savings | lead-generation | automation | business-growth | integration | troubleshooting
+GHL_FEATURE_FOCUS: "{{ghl_feature}}"
+  // e.g., "Workflow Builder", "SaaS Configurator", "Reputation Management", "Chat Widget"
+AUDIENCE_PAIN_POINT: "{{audience_pain_point}}"
+TRANSFORMATION_ARC_SUMMARY: "{{nightmare_state}} → {{solution_state}} → {{quick_win}}"
+THUMBNAIL_TEXT_SUGGESTION: "{{thumbnail_text}}"
+  // 2-4 word hook from the video script generator (the METADATA section)
+HOOK_TYPE_USED: {{hook_type}}
+  // mistake | contrarian | proof | nightmare | pattern-interrupt
+COMPETING_THUMBNAIL_ANALYSIS: "{{competing_visual_patterns}}"
+  // Optional: output from the Pattern Analysis pre-step (colors, layouts, text hooks
+  // from top 5 ranking videos for this keyword). If populated, the thumbnail
+  // MUST visually differentiate from these patterns.
+```
+
+---
+
+## TASK
+
+Generate a complete image API prompt for a YouTube thumbnail targeting "{{target_keyword}}".
+
+The prompt must:
+1. Select the optimal template from the 5-template system based on CONTENT_FORMAT and HOOK_TYPE
+2. Produce a text-free base image (all typography added in post-processing)
+3. Follow the 60-30-10 color rule using GoHighLevel's brand palette
+4. Create a "moment" — a visual scene with tension, not a description of a topic
+5. Pass the Squint Test: readable and compelling at 10% zoom (120px wide)
+6. Visually differentiate from COMPETING_THUMBNAIL_ANALYSIS if provided
+7. Leave clear negative space for programmatic text overlay
+
+---
+
+## BRAND DESIGN SYSTEM
+
+### Color Palette (GoHighLevel Official + Supplements)
+
+```
+PRIMARY BACKGROUND (60%):
+  - Dark Navy:       #0B223F (primary)
+  - Navy Gradient:   #0B223F → #152E50 (default background treatment)
+  - Deep Blue-Purple: #1A1A3E → #2D2D5E (alternate for variety — use every 4th-5th thumbnail)
+
+SECONDARY ELEMENTS (30%):
+  - Dodger Blue:     #188AF5 (GHL brand blue — UI elements, icons, secondary graphics)
+  - Soft White:      #F0F4F8 (dashboard/screen mock elements)
+  - Cool Gray:       #64748B (supporting graphic elements)
+
+ACCENT / HIGHLIGHT (10%):
+  - Selective Yellow: #FEB902 (GHL brand yellow — arrows, highlights, key numbers, badges)
+  - Urgency Red:     #FF1744 (warning badges, "STOP" indicators, mistake thumbnails)
+  - Success Green:   #00E676 (upward arrows, checkmarks, result indicators)
+```
+
+### Color Application Rules
+
+- **60-30-10 distribution is mandatory.** 60% dominant background, 30% secondary elements, 10% accent. This ratio creates visual hierarchy that reads instantly at thumbnail scale.
+- **Never use pure white (#FFFFFF) or pure black (#000000) as the dominant background.** YouTube's interface uses white (light mode) and #181818 (dark mode) — your thumbnail must have clear visual separation from both.
+- **Accent colors are for focal points only.** Yellow arrow pointing to one thing = powerful. Yellow everywhere = noise.
+- **Match accent to energy level:**
+  - Yellow (#FEB902): tutorials, features, positive results, "how to" content
+  - Red (#FF1744): mistakes, warnings, "stop doing this," urgency content
+  - Green (#00E676): results, proof, money, growth, "what happened" content
+
+### Typography Specifications (Post-Processing Layer)
+
+```
+HEADLINE TEXT:
+  Font: Poppins Black (900 weight)
+  Size: 90-120px depending on word count
+  Color: #FFFFFF
+  Stroke: 4px #000000 (ensures readability against ANY background)
+  Position: Right third, vertically centered
+  Max words: 4
+
+EMPHASIS TEXT (numbers, results):
+  Font: Poppins Black (900 weight)
+  Size: 130-160px
+  Color: #FEB902 (yellow) or #00E676 (green for money)
+  Stroke: 5px #000000
+  Position: Center or left-center depending on template
+
+BADGE TEXT:
+  Font: Poppins Bold (700 weight)
+  Size: 36-44px
+  Color: #FFFFFF
+  Background: #FF1744 (red) or #FEB902 (yellow)
+  Position: Top-left, rotated -15° diagonal banner
+  Content: "2026" or "FREE" or "NEW" or "STOP"
+
+LOGO:
+  Asset: GoHighLevel logo (white version on dark backgrounds)
+  Position: Top-left corner, below badge if badge present
+  Size: 8% of frame width (~102px wide)
+  Opacity: 90%
+```
+
+### Safe Zones (Non-Negotiable)
+
+```
+BOTTOM-RIGHT 15%: YouTube timestamp overlay — NEVER place critical elements here
+BOTTOM 20px: Progress bar coverage — keep clear
+TOP-RIGHT 10%: Desktop hover buttons — avoid primary elements
+ACTION ZONE: Center 60-70% of frame — where eyes go first on mobile
+
+TEXT OVERLAY ZONE: Right third of frame (427px wide) — kept as clean negative
+space in the AI-generated image so programmatic text has a clear landing area
+
+LOGO ZONE: Top-left corner (150x80px area)
+```
+
+---
+
+## THE 5-TEMPLATE SYSTEM
+
+### Template Selection Logic
+
+```
+IF CONTENT_FORMAT == "tutorial" OR "FAQ":
+    → USE Template 1: "The Tutorial"
+
+IF CONTENT_FORMAT == "quick-win" OR HOOK_TYPE == "proof":
+    → USE Template 2: "The Result"
+
+IF CONTENT_FORMAT == "comparison" OR "review":
+    → USE Template 3: "The Comparison"
+
+IF HOOK_TYPE == "contrarian" OR "pattern-interrupt" OR CONTENT_CATEGORY == "troubleshooting":
+    → USE Template 4: "The Hidden Feature"
+
+IF CONTENT_FORMAT == "listicle" OR "problem-solution":
+    → USE Template 5: "The Step-by-Step"
+
+DEFAULT (if unclear):
+    → USE Template 1: "The Tutorial"
+```
+
+---
+
+### TEMPLATE 1: "The Tutorial"
+**Best for**: How-to content, feature walkthroughs, setup guides
+**Visual concept**: Zoomed software element + directional indicator + clean space for text
+
+```
+IMAGE GENERATION PROMPT STRUCTURE:
+
+"A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Dark navy gradient background (#0B223F to #152E50). Left 55% of frame: a clean,
+slightly angled (10-15 degree tilt) modern SaaS dashboard interface panel showing
+[SPECIFIC UI ELEMENT related to {{ghl_feature}}] — render as a simplified, stylized
+graphic representation with glowing bright blue (#188AF5) accent lines and interface
+elements on a dark surface. A large glowing golden yellow (#FEB902) arrow or pointer
+element directs attention to the key feature area. Subtle blue (#188AF5) rim lighting
+on the dashboard edges. Right 45% of frame: clean open space with only the dark navy
+gradient — completely empty, no elements, reserved for text overlay. No text anywhere
+in the image. No words. No titles. No watermarks. No faces. Maximum 3 visual elements
+total. Dramatic studio lighting from upper left. 16:9 aspect ratio."
+```
+
+**Post-processing text overlay:**
+- Headline: {{thumbnail_text}} (right third, white, Poppins Black 100px, 4px black stroke)
+- Badge: "2026 GUIDE" or "SETUP" (top-left, red diagonal banner)
+- Logo: GHL logo white (top-left, below badge)
+
+---
+
+### TEMPLATE 2: "The Result"
+**Best for**: Proof-based content, revenue/growth results, case studies, quick wins
+**Visual concept**: Dramatic metric/number visualization + upward momentum
+
+```
+IMAGE GENERATION PROMPT STRUCTURE:
+
+"A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Dark navy gradient background (#0B223F to #152E50). Center-left of frame: a stylized,
+glowing analytics chart or graph element showing a dramatic upward trend — rendered as
+a clean neon-style graphic with a bright green (#00E676) glowing trend line against the
+dark background. Small golden yellow (#FEB902) particle effects or sparkle elements near
+the peak to suggest achievement. A simplified SaaS dashboard frame surrounds the chart,
+rendered in cool blue (#188AF5) with subtle glow. Right 40% of frame: clean open dark
+navy space — completely empty for text overlay. Bottom-left area: a subtle green (#00E676)
+upward arrow icon, small and supporting. No text anywhere in the image. No numbers.
+No words. No titles. No watermarks. No faces. Maximum 3 visual elements. Dramatic lighting
+with the chart as the primary light source. 16:9 aspect ratio."
+```
+
+**Post-processing text overlay:**
+- Emphasis number: "{{quick_win_number}}" (center-right, yellow #FEB902, Poppins Black 150px, 5px black stroke) — e.g., "$10K/mo" or "300%" or "47 Leads"
+- Headline: {{thumbnail_text}} (below number, white, Poppins Black 80px, 4px black stroke)
+- Logo: GHL logo white (top-left)
+
+---
+
+### TEMPLATE 3: "The Comparison"
+**Best for**: Tool comparisons, reviews, "vs" content, migration content
+**Visual concept**: Split frame with visual tension between two sides
+
+```
+IMAGE GENERATION PROMPT STRUCTURE:
+
+"A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Split composition divided vertically. Left 45%: a dark, slightly desaturated background
+(#1A1A2E) with a simplified, dim representation of [COMPETING TOOL's visual identity —
+describe as generic CRM/tool interface in muted colors, appearing cramped and complex].
+Subtle red (#FF1744) tint or vignette suggesting frustration or limitation. Right 45%:
+a brighter, energized background (#0B223F with blue #188AF5 glow effects) showing a
+clean, modern SaaS dashboard element that appears open, powerful, and streamlined. Subtle
+golden yellow (#FEB902) glow emanating from the right side suggesting energy and success.
+Center 10%: a clear vertical dividing line or subtle lightning bolt shape in bright yellow
+(#FEB902) separating the two halves. The contrast between sides should be immediately
+obvious — left = cramped/old, right = clean/powerful. No text. No words. No logos.
+No faces. No brand names. 16:9 aspect ratio."
+```
+
+**Post-processing text overlay:**
+- Left side: Competing tool name (muted gray, Poppins Bold 60px)
+- Center: "VS" (yellow #FEB902, Poppins Black 90px, in circle)
+- Right side: "GoHighLevel" (white, Poppins Black 60px)
+- Checkmark icon overlaid on right side (green #00E676)
+- Logo: GHL logo white (top-right)
+
+---
+
+### TEMPLATE 4: "The Hidden Feature"
+**Best for**: Secret tips, common mistakes, troubleshooting, contrarian takes
+**Visual concept**: Partially revealed/blurred interface with discovery indicator
+
+```
+IMAGE GENERATION PROMPT STRUCTURE:
+
+"A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Dark navy background (#0B223F). A large, slightly tilted SaaS dashboard screenshot
+rendered as a stylized graphic — most of it subtly darkened or slightly out of focus
+(gaussian blur effect), except for ONE specific area that is brightly illuminated with
+a glowing golden yellow (#FEB902) circular spotlight or magnifying glass effect. The
+highlighted area should show [SPECIFIC UI ELEMENT related to {{ghl_feature}}] in sharp,
+bright detail while everything around it fades into darkness. A bold red (#FF1744) arrow
+or pointer element directs attention to the illuminated area. Blue (#188AF5) light
+leaks or lens flare effects around the spotlight area add visual drama. The overall
+feeling should be 'discovery' — like finding something hidden. Right 35% has clear dark
+space for text. No text. No words. No titles. No watermarks. No faces. Maximum 3 visual
+elements. 16:9 aspect ratio."
+```
+
+**Post-processing text overlay:**
+- Headline: "HIDDEN" or "STOP" or "SECRET" (right side, white, Poppins Black 110px, 4px black stroke)
+- Sub-headline: {{thumbnail_text}} (below, white, Poppins Bold 60px)
+- Badge: "WARNING" or "MISTAKE" (top-left, red diagonal banner)
+- Logo: GHL logo white (top-left, below badge)
+
+---
+
+### TEMPLATE 5: "The Step-by-Step"
+**Best for**: Listicles, multi-step processes, complete guides, problem-solution
+**Visual concept**: Sequential progress visualization + numbered indicator
+
+```
+IMAGE GENERATION PROMPT STRUCTURE:
+
+"A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Dark navy gradient background (#0B223F to #152E50). Left 30% of frame: a large, bold,
+glowing circle element rendered in golden yellow (#FEB902) with a dramatic glow effect
+— this circle should be prominent and eye-catching, serving as the container for a
+step number (number will be added in post-processing). Center-right area: 2-3 small,
+simplified SaaS interface icons or dashboard elements arranged in a subtle horizontal
+flow pattern, connected by thin bright blue (#188AF5) lines or arrows suggesting a
+process flow. The icons should relate to [{{ghl_feature}} workflow stages]. A subtle
+progress bar or stepped indicator runs along the upper portion in blue (#188AF5) with
+the first segment highlighted in yellow (#FEB902). Right 35% has clean dark space for
+text. No text. No numbers. No words. No titles. No watermarks. No faces. Maximum 4
+visual elements. Clean, uncluttered composition. 16:9 aspect ratio."
+```
+
+**Post-processing text overlay:**
+- Step number: "5" or "7" (inside the yellow circle, white, Poppins Black 140px)
+- Headline: "STEPS" or {{thumbnail_text}} (right side, white, Poppins Black 90px, 4px black stroke)
+- Sub-headline: "Complete Guide" or "From Zero" (below, yellow #FEB902, Poppins Bold 50px)
+- Badge: "2026" (top-left, red diagonal banner)
+- Logo: GHL logo white (top-left, below badge)
+
+---
+
+## PROMPT ASSEMBLY RULES
+
+### Step 0: Pre-Generation — Competitive Pattern Analysis (Optional but Recommended)
+
+If your pipeline has access to YouTube Data API or a scraping layer, run this BEFORE generating:
+
+```
+Analyze the thumbnails of the top 5 ranking YouTube videos for "{{target_keyword}}".
+For each thumbnail, extract:
+- Dominant color scheme
+- Text hook (what words appear on the thumbnail)
+- Layout pattern (face-left-text-right, centered, split, etc.)
+- Primary visual element (face, screenshot, icon, number, object)
+
+Output a summary of the dominant pattern and ONE specific way to visually
+differentiate from it while remaining relevant to the topic.
+
+Inject this into COMPETING_THUMBNAIL_ANALYSIS for the generation step.
+```
+
+### Step 1: Template Selection
+
+Based on CONTENT_FORMAT and HOOK_TYPE, select the template using the logic above. If COMPETING_THUMBNAIL_ANALYSIS shows that all top videos use a similar template pattern, consider selecting an adjacent template instead to stand out.
+
+### Step 2: Moment Translation
+
+DO NOT describe the topic. Describe the VISUAL MOMENT of the transformation arc.
+
+```
+BAD (topic description):
+"A thumbnail about GoHighLevel workflow automation"
+
+BAD (feature description):
+"A thumbnail showing the GoHighLevel Workflow Builder interface"
+
+GOOD (visual moment):
+"A stylized SaaS dashboard showing a dramatic automation flow with
+glowing connection lines between trigger and action nodes, the
+central workflow node illuminated in golden yellow suggesting the
+'aha moment' of automation clicking into place"
+
+GOOD (result moment):
+"A glowing analytics chart with a sharp upward trend line breaking
+through a ceiling barrier, golden particles exploding at the breakthrough
+point, suggesting a dramatic performance improvement"
+```
+
+The moment should map to the Transformation Arc:
+- **Nightmare-based hooks** → Show the PROBLEM visually (cluttered, red-tinted, complex)
+- **Proof-based hooks** → Show the RESULT visually (clean, green/yellow, upward)
+- **Contrarian hooks** → Show the DISCOVERY visually (spotlight, hidden, revealed)
+- **Tutorial hooks** → Show the TOOL visually (clean interface, arrow pointing to feature)
+
+### Step 3: Inject Variables into Template
+
+Take the selected template's IMAGE GENERATION PROMPT STRUCTURE and replace:
+- `[SPECIFIC UI ELEMENT related to {{ghl_feature}}]` with a visual description appropriate to the GHL feature (e.g., for "Workflow Builder" → "an automation flow diagram with connected nodes and trigger icons"; for "Reputation Management" → "a star rating display and review cards"; for "Chat Widget" → "a chat conversation interface with message bubbles")
+- `[COMPETING TOOL's visual identity]` for comparison templates with a generic description of the competitor's aesthetic
+- Any bracketed placeholders with video-specific visual descriptions
+
+### Step 4: Append Global Negative Prompts
+
+Add to EVERY prompt, regardless of template:
+
+```
+NEGATIVE: Do not include any text, words, letters, numbers, titles, subtitles,
+watermarks, logos, brand names, URLs, or written content of any kind anywhere in
+the image. Do not include human faces, hands, or body parts. Do not include
+photography or photorealistic humans. Keep the composition clean and uncluttered
+with maximum 3-4 distinct visual elements. Do not use busy patterns, grunge
+textures, vintage effects, or low-contrast color schemes. Do not place any
+important elements in the bottom-right 15% of the frame.
+```
+
+### Step 5: Set API Parameters
+
+```
+FOR IDEOGRAM 3.0 (Primary — best text avoidance + style consistency):
+  model: "V_3"
+  rendering_speed: "DEFAULT"
+  aspect_ratio: "ASPECT_16_9"
+  style_type: "DESIGN"
+  magic_prompt_option: "OFF"  // CRITICAL: prevents Ideogram from adding its own text
+  negative_prompt: [append Step 4 negatives]
+  style_code: "{{SAVED_STYLE_CODE}}"  // Extract from your best thumbnail and reuse
+
+FOR GPT IMAGE 1.5 (Fallback — best photorealistic scenes):
+  model: "gpt-image-1.5"
+  quality: "medium"
+  size: "1536x1024"  // Closest to 16:9; crop to 1280x720 in post-processing
+  moderation: "low"
+
+FOR IMAGEN 4 FAST (Budget / Draft generation):
+  model: "imagen-4.0-generate-preview-05-20"
+  aspect_ratio: "16:9"
+  number_of_images: 3  // Generate variations cheaply
+```
+
+---
+
+## POST-PROCESSING PIPELINE (Programmatic — runs after API returns the base image)
+
+```python
+# Pseudocode for the post-processing layer
+# Use Pillow (PIL) or ImageMagick for implementation
+
+def process_thumbnail(base_image, template_type, variables):
+    """
+    Takes the AI-generated base image and adds all text, logo, and badge
+    elements programmatically for pixel-perfect typography control.
+    """
+
+    # 1. RESIZE to exact YouTube spec
+    image = resize_and_crop(base_image, width=1280, height=720)
+
+    # 2. ADD TEXT OVERLAY based on template
+    #    - Font: Poppins Black (download from Google Fonts, include in pipeline assets)
+    #    - Always apply black stroke/outline (4-5px) for readability
+    #    - Position per template specification
+    #    - Maximum 4 words for headline
+    headline_text = variables['thumbnail_text']  # From video script metadata
+    draw_text_with_stroke(
+        image,
+        text=headline_text.upper(),  # ALL CAPS for thumbnails
+        font="Poppins-Black.ttf",
+        size=calculate_font_size(headline_text),  # 90-120px based on word count
+        color="#FFFFFF",
+        stroke_color="#000000",
+        stroke_width=4,
+        position=get_text_position(template_type)  # Right third for most templates
+    )
+
+    # 3. ADD EMPHASIS NUMBER (Template 2 "The Result" only)
+    if template_type == "result" and variables.get('quick_win_number'):
+        draw_text_with_stroke(
+            image,
+            text=variables['quick_win_number'],
+            font="Poppins-Black.ttf",
+            size=150,
+            color="#FEB902",  # GHL Yellow
+            stroke_color="#000000",
+            stroke_width=5,
+            position="center_right_upper"
+        )
+
+    # 4. ADD BADGE (top-left diagonal banner)
+    badge_text = select_badge(variables)  # "2026" | "FREE" | "NEW" | "STOP" | "WARNING"
+    if badge_text:
+        draw_badge(
+            image,
+            text=badge_text,
+            bg_color="#FF1744",  # Red
+            text_color="#FFFFFF",
+            position="top_left",
+            rotation=-15
+        )
+
+    # 5. ADD GHL LOGO (white version, top-left, below badge)
+    logo = load_image("gohighlevel_logo_white.png")
+    logo = resize(logo, width=int(1280 * 0.08))  # 8% of frame width
+    paste_with_alpha(image, logo, position=(30, badge_height + 15))
+
+    # 6. VALIDATE
+    assert image.size == (1280, 720)
+    assert get_filesize(image) < 2_000_000  # Under 2MB for YouTube
+    assert passes_squint_test(image, scale=0.1)  # Readable at 120px wide
+
+    # 7. GENERATE VARIATIONS
+    # For A/B testing, generate 3 versions:
+    #   Variation A: Default template output (above)
+    #   Variation B: Swap accent color (yellow ↔ red)
+    #   Variation C: Alternate text position (center instead of right third)
+
+    return [variation_a, variation_b, variation_c]
+```
+
+### Font Size Calculator
+
+```
+4 words or fewer: 110-120px
+3 words: 120px (max impact)
+2 words: 130px (high impact, rare)
+1 word: 140-160px (use for single power words like "STOP" or "FREE")
+5+ words: DO NOT USE. Go back and cut the thumbnail text to 4 words max.
+```
+
+### Required Pipeline Assets (store in your project repo)
+
+```
+/assets/fonts/
+  Poppins-Black.ttf          # Google Fonts (OFL license)
+  Poppins-Bold.ttf
+  BebasNeue-Regular.ttf      # Fallback impact font
+
+/assets/logos/
+  gohighlevel_logo_white.png # White version for dark backgrounds
+  gohighlevel_logo_color.png # Color version (rarely used)
+
+/assets/badges/
+  badge_template_red.png     # Pre-rendered diagonal banner template
+  badge_template_yellow.png
+
+/assets/overlays/
+  checkmark_green.png        # For comparison template "winner" side
+  arrow_yellow.png           # Reusable directional arrow
+  arrow_red.png              # For mistake/warning thumbnails
+```
+
+---
+
+## VARIATION STRATEGY FOR A/B TESTING
+
+Generate 3 thumbnail variations per video for YouTube's Test & Compare feature:
+
+```
+VARIATION A — "Result-Focused"
+  Primary visual: The outcome/result/metric visualization
+  Text: Number or result-oriented hook
+  Best when: Video has a concrete, quantifiable outcome
+
+VARIATION B — "Feature-Focused"
+  Primary visual: The GHL interface/tool/feature
+  Text: Action-oriented hook ("Setup" "Build" "Create")
+  Best when: Video is a walkthrough or tutorial
+
+VARIATION C — "Text-Driven"
+  Primary visual: Minimal — bold background with subtle graphic elements
+  Text: Maximum impact text, larger font (130px+), fewer words (2-3)
+  Best when: The hook words alone create enough curiosity
+```
+
+Let YouTube's algorithm determine the winner based on **watch-time share** (not just CTR — a thumbnail that attracts the wrong audience will have high CTR but low retention).
+
+---
+
+## QUALITY CHECKLIST (self-evaluate before outputting)
+
+Run through ALL of these. If any fail, revise the prompt and regenerate:
+
+**Composition:**
+- [ ] Maximum 3-4 visual elements in the base image (not counting post-processing overlays)
+- [ ] Right third (or designated text zone) is clean negative space — no visual clutter
+- [ ] Bottom-right 15% is free of critical elements (timestamp overlay zone)
+- [ ] Primary focal point occupies 40-60% of the frame
+- [ ] 60-30-10 color distribution: 60% navy background, 30% blue/white elements, 10% yellow/red/green accent
+
+**Brand Consistency:**
+- [ ] Background uses #0B223F navy (or approved alternate)
+- [ ] Accent colors are from the GHL palette (#FEB902, #188AF5, #FF1744, #00E676)
+- [ ] GHL logo placed in top-left at 8% frame width
+- [ ] Poppins Black font used for all text overlays
+- [ ] All text has 4px+ black stroke outline
+
+**Readability:**
+- [ ] Passes the Squint Test: identifiable visual concept at 10% zoom (120px wide)
+- [ ] Text is 4 words or fewer
+- [ ] Text contrast ratio ≥ 4.5:1 against its background area
+- [ ] Thumbnail works against both YouTube white (#FFFFFF) and dark (#181818) mode
+
+**CTR Optimization:**
+- [ ] Thumbnail text does NOT repeat the video title — it creates a curiosity gap WITH the title
+- [ ] Visual "moment" matches the Transformation Arc (nightmare/solution/quick win)
+- [ ] If COMPETING_THUMBNAIL_ANALYSIS was provided, this thumbnail is visually distinct from the top 5
+- [ ] Appropriate accent color for content energy (yellow=tutorial, red=warning, green=results)
+- [ ] One clear emotion/feeling conveyed (discovery, achievement, urgency, clarity)
+
+**Technical:**
+- [ ] Final output is exactly 1280x720 pixels
+- [ ] File size under 2MB (JPEG quality 85-92 or optimized PNG)
+- [ ] No AI-generated text, words, letters, or numbers in the base image (all added in post-processing)
+- [ ] 3 variations generated for A/B testing
+
+**Pipeline Integration:**
+- [ ] Template type logged for performance tracking (track which template gets highest CTR over time)
+- [ ] Thumbnail variation IDs linked to video ID for A/B test result tracking
+- [ ] Ideogram Style Code consistent with previous thumbnails (if using Ideogram)
+
+---
+
+## EXAMPLE: FULL PIPELINE EXECUTION
+
+### Input Variables:
+```
+VIDEO_TITLE: "How to Build a GoHighLevel Workflow That Follows Up Automatically"
+TARGET_KEYWORD: "gohighlevel automated follow up"
+CONTENT_FORMAT: tutorial
+CONTENT_CATEGORY: automation
+GHL_FEATURE_FOCUS: "Workflow Builder"
+AUDIENCE_PAIN_POINT: "Leads going cold because manual follow-up takes too long"
+TRANSFORMATION_ARC_SUMMARY: "Spending 4 hours daily on manual follow-up → automated workflow with smart delays and conditions → 80% booking rate with zero manual touchpoints"
+THUMBNAIL_TEXT_SUGGESTION: "Auto Follow-Up"
+HOOK_TYPE_USED: proof
+COMPETING_THUMBNAIL_ANALYSIS: "Top 5 all use: face on left, blue backgrounds, text says 'Workflow' or 'Automation', cluttered layouts with multiple screenshots"
+```
+
+### Step 1 — Template Selection:
+CONTENT_FORMAT = "tutorial" → Template 1: "The Tutorial"
+BUT HOOK_TYPE = "proof" → Template 2: "The Result" is also a strong candidate.
+COMPETING_THUMBNAIL_ANALYSIS shows all competitors use tutorial-style layouts.
+**DECISION: Use Template 2 "The Result" to differentiate from competition.**
+
+### Step 2 — Moment Translation:
+Nightmare: manual follow-up drudgery → Solution: automated workflow → Quick Win: 80% booking rate
+
+**Visual moment**: The dramatic result — a booking/conversion metric surging upward, representing the transformation from manual chaos to automated success.
+
+### Step 3 — Assembled API Prompt:
+
+```
+A bold, high-contrast YouTube thumbnail scene in professional graphic design style.
+Dark navy gradient background (#0B223F to #152E50). Center-left of frame: a stylized,
+glowing analytics chart showing a dramatic upward trend — rendered as a clean neon-style
+graphic with a bright green (#00E676) glowing trend line that curves sharply upward
+against the dark background. Below the chart, a subtle visualization of connected
+automation nodes (small circles linked by thin blue #188AF5 lines) suggesting an
+automated workflow running beneath the results. Small golden yellow (#FEB902) sparkle
+effects near the trend line peak suggesting breakthrough achievement. A simplified dark
+SaaS dashboard frame surrounds the chart area, rendered in cool blue (#188AF5) with
+subtle edge glow. Right 40% of frame: clean open dark navy space — completely empty,
+reserved for text overlay. No text anywhere in the image. No numbers. No words. No
+titles. No watermarks. No faces. Maximum 3 visual elements. Dramatic lighting with the
+chart trend line as the primary light source. 16:9 aspect ratio.
+
+NEGATIVE: Do not include any text, words, letters, numbers, titles, subtitles,
+watermarks, logos, brand names, URLs, or written content of any kind. Do not include
+human faces, hands, or body parts. Do not use busy patterns, grunge textures, or vintage
+effects. Do not place elements in the bottom-right 15%.
+```
+
+### Step 4 — API Call:
+```
+API: Ideogram V3
+aspect_ratio: ASPECT_16_9
+style_type: DESIGN
+magic_prompt_option: OFF
+style_code: {{previously_saved_code}}
+```
+
+### Step 5 — Post-Processing Output:
+```
+Emphasis number: "80%" — center-right, #00E676 green, Poppins Black 150px, 5px black stroke
+Headline: "AUTO FOLLOW-UP" — below number, #FFFFFF white, Poppins Black 85px, 4px black stroke
+Badge: "2026" — top-left, red diagonal banner
+Logo: GHL white logo — top-left, below badge, 102px wide
+```
+
+### Step 6 — Variations:
+```
+Variation A (Result-focused): As described above — green trend chart + "80%" number
+Variation B (Feature-focused): Swap to Template 1, show workflow builder nodes + "AUTO FOLLOW-UP"
+Variation C (Text-driven): Minimal dark background with subtle blue glow + "80% BOOK RATE" at 140px
+```
+
+---
+
+## PERFORMANCE TRACKING & ITERATION
+
+Track these metrics per thumbnail template over time:
+
+```
+- CTR by template type (Tutorial vs Result vs Comparison vs Hidden vs Step-by-Step)
+- CTR by accent color (Yellow vs Red vs Green)
+- CTR by text word count (2 words vs 3 words vs 4 words)
+- A/B test win rate by variation type (Result-focused vs Feature-focused vs Text-driven)
+- CTR difference when COMPETING_THUMBNAIL_ANALYSIS was used vs not
+```
+
+After 20+ videos, you'll have enough data to:
+1. Identify your highest-CTR template and weight it more heavily in selection
+2. Determine if your audience responds better to results or features
+3. Optimize accent color choice per content category
+4. Refine the Squint Test by comparing high-CTR vs low-CTR thumbnails at 120px
+
+Feed these insights back into the template selection logic to continuously improve. The pipeline gets smarter with every video published.

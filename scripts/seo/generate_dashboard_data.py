@@ -18,7 +18,10 @@ from pathlib import Path
 # Ensure the script's own directory is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from config import REPORTS_DIR, SITE_DIR, today, now, setup_logging, add_existing_scripts_to_path
+from config import (
+    REPORTS_DIR, SITE_DIR, today, now, setup_logging, add_existing_scripts_to_path,
+    VIDEO_SHEET_ID, GA4_SERVICE_ACCOUNT_FILE,
+)
 
 logger = setup_logging("generate_dashboard_data")
 
@@ -355,6 +358,136 @@ def _get_system_actions():
 
 
 # ──────────────────────────────────────────────
+# YouTube Video Data (from HighLevel sheet tab)
+# ──────────────────────────────────────────────
+
+def _get_youtube_data():
+    """Read video data from the HighLevel tab for the dashboard."""
+    result = {"videos": [], "channel": {}}
+
+    if not VIDEO_SHEET_ID or not GA4_SERVICE_ACCOUNT_FILE:
+        return result
+
+    try:
+        import gspread
+        from google.oauth2.service_account import Credentials
+
+        scopes = [
+            "https://spreadsheets.google.com/feeds",
+            "https://www.googleapis.com/auth/drive",
+        ]
+        creds = Credentials.from_service_account_file(GA4_SERVICE_ACCOUNT_FILE, scopes=scopes)
+        gc = gspread.authorize(creds)
+        spreadsheet = gc.open_by_key(VIDEO_SHEET_ID)
+        ws = spreadsheet.worksheet("HighLevel")
+        rows = ws.get_all_records()
+
+        for row in rows:
+            vid = row.get("youtube_video_id", "").strip()
+            video = {
+                "page_url": row.get("page_url", ""),
+                "title": row.get("title", ""),
+                "youtube_url": row.get("youtube_url", ""),
+                "youtube_video_id": vid,
+                "created_date": row.get("created_date", ""),
+                "status": row.get("status", ""),
+                "views": row.get("views", 0),
+                "likes": row.get("likes", 0),
+                "comments": row.get("comments", 0),
+                "ctr": row.get("ctr", ""),
+                "avg_watch_pct": row.get("avg_watch_pct", ""),
+            }
+            result["videos"].append(video)
+
+        logger.info("YouTube data: %d videos from Sheets", len(result["videos"]))
+
+    except Exception as e:
+        logger.warning("Could not fetch YouTube data from Sheets: %s", e)
+
+    return result
+
+
+# ──────────────────────────────────────────────
+# Pipeline Health (from PipelineLog sheet tab)
+# ──────────────────────────────────────────────
+
+def _get_pipeline_data():
+    """Read recent pipeline runs from the PipelineLog tab and summarize for dashboard."""
+    result = {"last_runs": [], "has_recent_error": False, "last_error": None}
+
+    if not VIDEO_SHEET_ID or not GA4_SERVICE_ACCOUNT_FILE:
+        return result
+
+    try:
+        import gspread
+        from google.oauth2.service_account import Credentials
+        from datetime import datetime, timedelta
+
+        scopes = [
+            "https://spreadsheets.google.com/feeds",
+            "https://www.googleapis.com/auth/drive",
+        ]
+        creds = Credentials.from_service_account_file(GA4_SERVICE_ACCOUNT_FILE, scopes=scopes)
+        gc = gspread.authorize(creds)
+        spreadsheet = gc.open_by_key(VIDEO_SHEET_ID)
+
+        # Check if PipelineLog tab exists
+        tab_names = [ws.title for ws in spreadsheet.worksheets()]
+        if "PipelineLog" not in tab_names:
+            logger.info("PipelineLog tab not found — skipping pipeline data")
+            return result
+
+        ws = spreadsheet.worksheet("PipelineLog")
+        rows = ws.get_all_records()
+
+        if not rows:
+            return result
+
+        # Group rows by run_id
+        runs_map = {}
+        for row in rows:
+            rid = row.get("pipeline_run_id", "")
+            if not rid:
+                continue
+            if rid not in runs_map:
+                runs_map[rid] = {"run_id": rid, "topic": row.get("video_topic", ""), "steps": {}, "error_details": ""}
+            step = row.get("step_name", "")
+            status = row.get("status", "")
+            if step and status:
+                # Keep the latest status for each step (running → success overrides)
+                runs_map[rid]["steps"][step] = status
+            if status == "error":
+                runs_map[rid]["error_details"] = row.get("details", "")
+
+        # Sort by run_id descending, take last 7
+        sorted_runs = sorted(runs_map.values(), key=lambda r: r["run_id"], reverse=True)
+        result["last_runs"] = sorted_runs[:7]
+
+        # Check for recent errors (last 24h)
+        yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+        for run in sorted_runs[:3]:  # check last 3 runs
+            if run["run_id"] >= yesterday:
+                for step, status in run["steps"].items():
+                    if status == "error":
+                        result["has_recent_error"] = True
+                        result["last_error"] = {
+                            "step": step,
+                            "details": run["error_details"],
+                            "date": run["run_id"],
+                        }
+                        break
+            if result["has_recent_error"]:
+                break
+
+        logger.info("Pipeline data: %d runs, recent_error=%s", len(sorted_runs), result["has_recent_error"])
+
+    except Exception as e:
+        logger.warning("Could not fetch pipeline data: %s", e)
+
+    return result
+
+
+# ──────────────────────────────────────────────
 # Main
 # ──────────────────────────────────────────────
 
@@ -508,6 +641,8 @@ def main():
             "by_platform": llm["by_platform"],
         },
         "traffic": traffic_data,
+        "youtube": _get_youtube_data(),
+        "pipeline": _get_pipeline_data(),
         "system_actions": _get_system_actions(),
     }
 

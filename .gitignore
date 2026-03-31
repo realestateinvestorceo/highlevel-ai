@@ -14,3 +14,7 @@ scripts/reports/
 ../scripts/seo/data/dashboard_history.json
 ../scripts/seo/data/freshness_cache.json
 node_modules
+
+# OAuth secrets - never commit
+youtube_client_secret.json
+.DS_Store

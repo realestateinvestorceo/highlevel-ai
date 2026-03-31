@@ -54,7 +54,7 @@ if not EXISTING_SCRIPTS_DIR.exists() and SCRIPTS_DIR.parent.exists():
 # Load environment variables
 # ──────────────────────────────────────────────
 
-load_dotenv(PROJECT_ROOT / ".env")
+load_dotenv(PROJECT_ROOT / ".env", override=True)
 
 # ──────────────────────────────────────────────
 # Site configuration
@@ -85,6 +85,27 @@ GSC_TOKEN_FILE = str(CREDENTIALS_DIR / "token.json")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY", "")
+
+# ──────────────────────────────────────────────
+# Video pipeline (Slack + Google Sheets)
+# ──────────────────────────────────────────────
+
+SLACK_BOT_TOKEN = os.getenv("SLACK_BOT_TOKEN", "")
+SLACK_CHANNEL_ID = os.getenv("SLACK_CHANNEL_ID", "")
+VIDEO_SHEET_ID = os.getenv("VIDEO_SHEET_ID", "")
+
+# ──────────────────────────────────────────────
+# YouTube API
+# ──────────────────────────────────────────────
+
+YOUTUBE_CLIENT_SECRET = str(CREDENTIALS_DIR / "youtube_client_secret.json")
+YOUTUBE_TOKEN_FILE = str(CREDENTIALS_DIR / "youtube_token.json")
+
+# ──────────────────────────────────────────────
+# Thumbnail / Image generation
+# ──────────────────────────────────────────────
+
+IDEOGRAM_API_KEY = os.getenv("IDEOGRAM_API_KEY", "")
 
 # ──────────────────────────────────────────────
 # Author defaults (for schema generation)

@@ -897,6 +897,26 @@ body {
   white-space: nowrap;
 }
 
+/* ── Pipeline Health ── */
+.pipeline-alert {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.25);
+  border-left: 4px solid var(--accent-red);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pipeline-alert .alert-icon { font-size: 1.2rem; flex-shrink: 0; }
+.pipeline-step-ok { color: var(--accent-green); }
+.pipeline-step-err { color: var(--accent-red); }
+.pipeline-step-skip { color: var(--text-muted); }
+.pipeline-topic { color: var(--text-secondary); font-size: 0.85rem; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 /* ── Insight Card ── */
 .insight-card {
   background: rgba(245,158,11,0.06);
@@ -1688,6 +1708,104 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     }
     html += '</div>';
     html += '</div>';
+
+    // ═══════════════════════════════════════
+    // 6b. PIPELINE HEALTH
+    // ═══════════════════════════════════════
+    var pipeline = d.pipeline || {};
+    var pipeRuns = pipeline.last_runs || [];
+    var pipeErr = pipeline.last_error || null;
+    var pipeStepNames = ['script_gen', 'metadata_gen', 'sheets_write', 'slack_post'];
+    var pipeStepLabels = { script_gen: 'Script', metadata_gen: 'Meta', sheets_write: 'Sheets', slack_post: 'Slack' };
+
+    html += '<div class="dash-section animate-in">';
+    html += '<h2><span class="section-icon icon-color">&#x1F3AC;</span>Pipeline Health</h2>';
+
+    // Alert banner if recent error
+    if (pipeline.has_recent_error && pipeErr) {
+      html += '<div class="pipeline-alert">';
+      html += '<span class="alert-icon">&#x26A0;&#xFE0F;</span>';
+      html += '<span>Pipeline failed at <strong>' + esc(pipeErr.step || '') + '</strong>: ' + esc((pipeErr.details || '').slice(0, 120)) + ' (' + esc(pipeErr.date || '') + ')</span>';
+      html += '</div>';
+    }
+
+    if (pipeRuns.length === 0) {
+      html += '<p style="color:var(--text-muted);font-size:0.9rem;">No pipeline runs recorded yet. Run <code>video_request.py</code> to see status here.</p>';
+    } else {
+      html += '<div class="table-wrap"><table><thead><tr>';
+      html += '<th>Date</th><th>Topic</th>';
+      for (var ps = 0; ps < pipeStepNames.length; ps++) {
+        html += '<th style="text-align:center">' + esc(pipeStepLabels[pipeStepNames[ps]] || pipeStepNames[ps]) + '</th>';
+      }
+      html += '</tr></thead><tbody>';
+      for (var pr = 0; pr < pipeRuns.length && pr < 7; pr++) {
+        var run = pipeRuns[pr];
+        var steps = run.steps || {};
+        html += '<tr>';
+        html += '<td>' + esc(run.run_id || '') + '</td>';
+        html += '<td class="pipeline-topic" title="' + esc(run.topic || '') + '">' + esc(run.topic || '') + '</td>';
+        for (var psi = 0; psi < pipeStepNames.length; psi++) {
+          var st = steps[pipeStepNames[psi]] || '';
+          var icon = st === 'success' ? '<span class="pipeline-step-ok">&#x2705;</span>'
+                   : st === 'error' ? '<span class="pipeline-step-err" title="' + esc(run.error_details || '') + '">&#x274C;</span>'
+                   : st === 'skipped' ? '<span class="pipeline-step-skip">&#x23ED;</span>'
+                   : '<span class="pipeline-step-skip">&mdash;</span>';
+          html += '<td style="text-align:center">' + icon + '</td>';
+        }
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+    }
+    html += '</div>';
+
+    // ═══════════════════════════════════════
+    // 6c. VIDEO PERFORMANCE
+    // ═══════════════════════════════════════
+    var ytData = d.youtube || {};
+    var ytVideos = ytData.videos || [];
+
+    if (ytVideos.length > 0) {
+      html += '<div class="dash-section animate-in">';
+      html += '<h2><span class="section-icon icon-color">&#x1F4FA;</span>Video Performance</h2>';
+
+      // Summary cards
+      var ytTotalViews = 0, ytTotalLikes = 0, ytBestVideo = null, ytBestViews = 0;
+      var ytTotalCtr = 0, ytCtrCount = 0;
+      for (var yv = 0; yv < ytVideos.length; yv++) {
+        var vid = ytVideos[yv];
+        ytTotalViews += num(vid.views);
+        ytTotalLikes += num(vid.likes);
+        if (num(vid.views) > ytBestViews) { ytBestViews = num(vid.views); ytBestVideo = vid; }
+        if (vid.ctr) { ytTotalCtr += parseFloat(vid.ctr); ytCtrCount++; }
+      }
+      var ytAvgCtr = ytCtrCount > 0 ? (ytTotalCtr / ytCtrCount).toFixed(1) : 'N/A';
+
+      html += '<div class="hero-stats" style="margin-bottom:18px">';
+      html += '<div class="hero-card blue"><div class="hero-number">' + commas(ytVideos.length) + '</div><div class="hero-label">Videos</div></div>';
+      html += '<div class="hero-card green"><div class="hero-number">' + commas(ytTotalViews) + '</div><div class="hero-label">Total Views</div></div>';
+      html += '<div class="hero-card purple"><div class="hero-number">' + ytAvgCtr + '%</div><div class="hero-label">Avg CTR</div></div>';
+      html += '<div class="hero-card orange"><div class="hero-number">' + commas(ytTotalLikes) + '</div><div class="hero-label">Total Likes</div></div>';
+      html += '</div>';
+
+      // Video table
+      html += '<div class="table-wrap"><table><thead><tr>';
+      html += '<th>Title</th><th>Page</th><th>Views</th><th>Likes</th><th>Date</th>';
+      html += '</tr></thead><tbody>';
+      for (var yvi = 0; yvi < ytVideos.length && yvi < 15; yvi++) {
+        var v = ytVideos[yvi];
+        var vTitle = esc(v.title || 'Untitled');
+        var vLink = v.youtube_url ? '<a href="' + esc(v.youtube_url) + '" target="_blank" style="color:var(--accent-blue);text-decoration:none">' + vTitle + '</a>' : vTitle;
+        html += '<tr>';
+        html += '<td>' + vLink + '</td>';
+        html += '<td style="color:var(--text-muted);font-size:0.85rem">' + esc(v.page_url || '') + '</td>';
+        html += '<td>' + commas(v.views || 0) + '</td>';
+        html += '<td>' + commas(v.likes || 0) + '</td>';
+        html += '<td style="color:var(--text-muted);font-size:0.85rem">' + esc(v.created_date || '') + '</td>';
+        html += '</tr>';
+      }
+      html += '</tbody></table></div>';
+      html += '</div>';
+    }
 
     // ═══════════════════════════════════════
     // 7. ONE THING TO KNOW (insight card)

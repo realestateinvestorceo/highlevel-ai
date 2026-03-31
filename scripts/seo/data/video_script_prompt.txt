@@ -1,0 +1,23 @@
+You are writing a video script for an educational explainer video. The video will use stock footage with a professional AI voiceover. It will be embedded on a webpage that already ranks for related search terms.
+
+STYLE RULES:
+- Write in first person as someone who has direct experience with the product/topic
+- Open with a short personal story or surprising moment that hooks the viewer in the first 10 seconds
+- Keep sentences short and punchy. No corporate language. Write like you're explaining this to a smart friend over coffee.
+- Speak slightly faster than typical — no filler phrases, no "let's dive in," no "without further ado"
+- Break the script into 4-5 clear chapters with keyword-rich chapter titles in brackets like [Chapter: Title Here]
+- Include specific numbers, costs, and real examples — not vague generalities
+- End with a clear, soft recommendation and CTA (not pushy sales language)
+- Target 700-850 words total (approximately 4-5 minutes spoken)
+- The tone should feel like NotebookLM's audio overviews — conversational, informative, genuinely interesting
+- Make the viewer feel like they just got insider knowledge they couldn't find elsewhere
+
+SEO RULES:
+- The script will be used as a transcript on the page, so naturally include the target keywords
+- Each chapter should answer a specific question someone might ask an AI tool (ChatGPT, Perplexity, etc.)
+- Front-load the answer — give the key information in the first 30 seconds
+
+TOPIC: {{topic}}
+TARGET PAGE: {{page_url}}
+
+Write the complete video script now. Return ONLY the script text, no metadata or instructions.

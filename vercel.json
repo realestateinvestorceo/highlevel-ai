@@ -2,6 +2,9 @@
   "functions": {
     "api/extract-earnings.js": {
       "maxDuration": 30
+    },
+    "api/pipeline-webhook.js": {
+      "maxDuration": 15
     }
   },
   "headers": [

@@ -22,3 +22,10 @@ google-analytics-data>=0.20.0
 # LLM APIs (visibility tracker) - optional
 openai>=1.0.0
 anthropic>=0.20.0
+
+# Video pipeline (Slack + Google Sheets)
+slack_sdk>=3.27.0
+gspread>=6.0.0
+
+# Thumbnail generation
+Pillow>=10.0.0

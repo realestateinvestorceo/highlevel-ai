@@ -1,0 +1,79 @@
+name: Daily Video Pipeline
+
+on:
+  schedule:
+    # Every day at 6:30 AM UTC (11:30 PM Pacific)
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+    # Manual trigger — click "Run workflow" in GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  generate-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/seo/requirements.txt
+
+      - name: Write credentials files
+        run: |
+          mkdir -p scripts/.credentials
+          echo '${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}' > /tmp/ga4-service-account.json
+          if [ -n "${{ secrets.YOUTUBE_TOKEN_JSON }}" ]; then
+            echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > scripts/.credentials/youtube_token.json
+          fi
+
+      - name: Create .env file
+        run: |
+          cat > .env << ENVEOF
+          GA4_PROPERTY_ID=526181718
+          GA4_SERVICE_ACCOUNT_FILE=/tmp/ga4-service-account.json
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_BOT_TOKEN=${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID=${{ secrets.SLACK_CHANNEL_ID }}
+          VIDEO_SHEET_ID=${{ secrets.VIDEO_SHEET_ID }}
+          IDEOGRAM_API_KEY=${{ secrets.IDEOGRAM_API_KEY }}
+          ENVEOF
+
+      - name: Run Video Pipeline (auto mode)
+        run: python3 scripts/seo/video_request.py --auto
+        continue-on-error: true
+
+      - name: Sync video embeds to pages
+        run: |
+          python3 scripts/seo/generate_video_embeds_json.py
+          python3 scripts/seo/add_video_embeds.py
+        continue-on-error: true
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/seo/data/video_embeds.json *.html blog/*.html tools/*.html 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Auto-update: daily video pipeline $(date +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push
+
+  notify-failure:
+    needs: [generate-video]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack of failure
+        run: |
+          curl -X POST -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{"channel":"${{ secrets.SLACK_CHANNEL_ID }}","text":":rotating_light: Daily video pipeline FAILED. Check GitHub Actions."}' \
+          https://slack.com/api/chat.postMessage
