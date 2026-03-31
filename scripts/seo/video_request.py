@@ -198,7 +198,7 @@ def post_to_slack(page_url, title, script, thumbnail_path=None):
 
     client = WebClient(token=SLACK_BOT_TOKEN)
 
-    message = f"""REF: {page_url}
+    message = f"""🎥 REF: {page_url}
 Title: {title}
 Create a professional explainer video. Use a natural, conversational voice at a slightly faster pace than default. Stock footage style, clean and educational. Here is the script:
 {script}"""
@@ -210,14 +210,6 @@ Create a professional explainer video. Use a natural, conversational voice at a 
 
     ts = response["ts"]
     logger.info(f"Slack message posted (ts: {ts})")
-
-    # Add movie_camera reaction to trigger HeyGen
-    client.reactions_add(
-        channel=SLACK_CHANNEL_ID,
-        timestamp=ts,
-        name="movie_camera"
-    )
-    logger.info("Added 🎥 reaction to trigger HeyGen")
 
     # Attach thumbnail image to the thread if available
     if thumbnail_path:
