@@ -193,43 +193,28 @@ def write_to_sheets(page_url, metadata):
 # ──────────────────────────────────────────────
 
 def post_to_slack(page_url, title, script, thumbnail_path=None):
-    """Post the video script to Slack channel, optionally attach thumbnail."""
-    from slack_sdk import WebClient
+    """Post the video script to Slack channel via incoming webhook."""
+    import requests
 
-    client = WebClient(token=SLACK_BOT_TOKEN)
+    SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL", "")
 
     message = f"""<@U0APRDW5DN1> REF: {page_url}
 Title: {title}
 Create a professional explainer video. Use a natural, conversational voice at a slightly faster pace than default. Stock footage style, clean and educational. Here is the script:
 {script}"""
 
-    response = client.chat_postMessage(
-        channel=SLACK_CHANNEL_ID,
-        text=message
+    response = requests.post(
+        SLACK_WEBHOOK_URL,
+        json={"text": message},
+        headers={"Content-Type": "application/json"},
     )
 
-    ts = response["ts"]
-    logger.info(f"Slack message posted (ts: {ts})")
+    if response.status_code == 200 and response.text == "ok":
+        logger.info("Slack webhook posted successfully")
+    else:
+        logger.warning(f"Slack webhook response: {response.status_code} {response.text}")
 
-    # Attach thumbnail image to the thread if available
-    if thumbnail_path:
-        try:
-            from pathlib import Path
-            thumb = Path(thumbnail_path)
-            if thumb.exists():
-                client.files_upload_v2(
-                    channel=SLACK_CHANNEL_ID,
-                    file=str(thumb),
-                    filename=thumb.name,
-                    title=f"Thumbnail: {title}",
-                    thread_ts=ts,
-                    initial_comment="Generated thumbnail for this video:",
-                )
-                logger.info(f"Thumbnail attached to Slack thread: {thumb.name}")
-        except Exception as e:
-            logger.warning(f"Could not attach thumbnail to Slack: {e}")
-
-    return ts
+    return None
 
 
 # ──────────────────────────────────────────────
