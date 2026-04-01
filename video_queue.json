@@ -1,0 +1,43 @@
+{
+  "last_updated": "2026-03-31T18:00:00Z",
+  "videos": [
+    {
+      "id": "2026-03-31-gohighlevel-vs-hubspot",
+      "topic": "GoHighLevel vs HubSpot 2026: Which CRM Actually Saves You Money?",
+      "status": "pending",
+      "created_date": "2026-03-31",
+      "page_url": "/highlevel-vs-hubspot.html",
+      "thumbnail_path": "/thumbnails/2026-03-31-gohighlevel-vs-hubspot.jpg",
+      "source_urls": [
+        "https://www.gohighlevel.com/pricing",
+        "https://www.hubspot.com/pricing/marketing",
+        "https://www.highlevel.ai/highlevel-vs-hubspot.html",
+        "https://www.highlevel.ai/pricing-explained.html",
+        "https://www.highlevel.ai/hubspot-alternative.html"
+      ],
+      "research_summary": "GoHighLevel Starter plan is $97/mo with unlimited contacts and 3 sub-accounts. GoHighLevel Unlimited is $297/mo with unlimited sub-accounts and white-labeling. HubSpot CRM is free but Marketing Hub Professional starts at $800/mo (billed annually) with a 2,000 contact limit. HubSpot Enterprise is $3,600/mo. GoHighLevel includes built-in funnel builder, email marketing, SMS, calendar booking, and CRM in every plan. HubSpot charges separately for Marketing Hub, Sales Hub, Service Hub, and CMS Hub. For agencies managing multiple clients, GoHighLevel's SaaS Mode ($497/mo) lets you white-label and resell, while HubSpot has no equivalent. HubSpot has stronger native reporting and a larger app marketplace (1,400+ integrations vs GoHighLevel's ~50). HubSpot is better for enterprise teams that need advanced attribution and custom objects.",
+      "notebooklm_prompt": "Create a YouTube video script about \"GoHighLevel vs HubSpot 2026: Which CRM Actually Saves You Money?\" for the channel \"HighLevel AI\" (highlevel.ai).\n\nGOAL: Educate viewers about GoHighLevel vs HubSpot 2026: Which CRM Actually Saves You Money? and naturally mention that highlevel.ai has a detailed review/comparison/guide on this topic. The call-to-action is to visit highlevel.ai for more details.\n\nTARGET AUDIENCE: Small business owners, marketing agencies, and entrepreneurs evaluating GoHighLevel or already using it.\n\nSTYLE GUIDELINES:\n- Conversational, energetic tone — like explaining to a friend\n- Start with a strong hook in the first 5 seconds (question, bold claim, or surprising stat)\n- Keep it under 8 minutes\n- Use simple language, avoid jargon\n- Include specific numbers, pricing, and real feature names (no vague claims)\n- End with a clear CTA: \"Check out highlevel.ai for the full breakdown\"\n\nSTRUCTURE:\n1. Hook (5-10 seconds) — grab attention immediately\n2. Context (30 seconds) — why this topic matters right now\n3. Main content (4-6 minutes) — the meat of the topic with specific details\n4. Comparison or unique angle (1 minute) — what makes this different/better\n5. CTA + outro (15 seconds) — visit highlevel.ai\n\nKEY FACTS FROM RESEARCH:\nGoHighLevel Starter plan is $97/mo with unlimited contacts and 3 sub-accounts. GoHighLevel Unlimited is $297/mo with unlimited sub-accounts and white-labeling. HubSpot CRM is free but Marketing Hub Professional starts at $800/mo (billed annually) with a 2,000 contact limit. HubSpot Enterprise is $3,600/mo. GoHighLevel includes built-in funnel builder, email marketing, SMS, calendar booking, and CRM in every plan. HubSpot charges separately for Marketing Hub, Sales Hub, Service Hub, and CMS Hub. For agencies managing multiple clients, GoHighLevel's SaaS Mode ($497/mo) lets you white-label and resell, while HubSpot has no equivalent. HubSpot has stronger native reporting and a larger app marketplace (1,400+ integrations vs GoHighLevel's ~50). HubSpot is better for enterprise teams that need advanced attribution and custom objects.\n\nIMPORTANT: Only state facts that appear in the source materials. Do not invent pricing, features, or statistics.",
+      "youtube_url": null,
+      "youtube_video_id": null,
+      "completed_date": null
+    },
+    {
+      "id": "2026-03-30-gohighlevel-pricing-explained",
+      "topic": "GoHighLevel Pricing 2026: Every Plan Explained in 5 Minutes",
+      "status": "complete",
+      "created_date": "2026-03-30",
+      "page_url": "/pricing-explained.html",
+      "thumbnail_path": "/thumbnails/2026-03-30-gohighlevel-pricing-explained.jpg",
+      "source_urls": [
+        "https://www.gohighlevel.com/pricing",
+        "https://www.highlevel.ai/pricing-explained.html",
+        "https://www.highlevel.ai/gohighlevel-pricing-calculator.html"
+      ],
+      "research_summary": "GoHighLevel offers three main plans: Starter ($97/mo), Unlimited ($297/mo), and SaaS Pro ($497/mo). All plans include unlimited contacts. Starter includes 3 sub-accounts, Unlimited has unlimited sub-accounts with white-labeling, and SaaS Pro adds SaaS Mode for reselling.",
+      "notebooklm_prompt": "Create a YouTube video script about \"GoHighLevel Pricing 2026\"...",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtube_video_id": "dQw4w9WgXcQ",
+      "completed_date": "2026-03-31"
+    }
+  ]
+}

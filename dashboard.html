@@ -1172,6 +1172,306 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 .animate-in:nth-child(6) { animation-delay: 0.3s; }
 .animate-in:nth-child(7) { animation-delay: 0.35s; }
 .animate-in:nth-child(8) { animation-delay: 0.4s; }
+
+/* ── Tab Bar ── */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover { color: var(--text-secondary); }
+
+.tab-btn.active {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ── Video Tab ── */
+.video-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.video-pending-count {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.video-pending-count span {
+  color: var(--accent-orange);
+}
+
+.video-header-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.video-header-links a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.video-header-links a:hover { text-decoration: underline; }
+
+.video-note {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.video-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.video-card:hover { border-color: rgba(255,255,255,0.12); }
+
+.video-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.video-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.video-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.video-status.pending {
+  background: rgba(251, 146, 60, 0.15);
+  color: var(--accent-orange);
+}
+
+.video-status.complete {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--accent-green);
+}
+
+.video-thumbnail-wrap {
+  margin-bottom: 16px;
+}
+
+.video-thumbnail-wrap img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.video-thumbnail-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.video-thumbnail-actions a,
+.video-thumbnail-actions button {
+  font-size: 0.8rem;
+  color: var(--accent-blue);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.video-thumbnail-actions a:hover,
+.video-thumbnail-actions button:hover { text-decoration: underline; }
+
+.video-section-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.video-section-toggle:hover { color: var(--text-primary); }
+
+.video-section-toggle .arrow {
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+}
+
+.video-section-toggle.open .arrow { transform: rotate(90deg); }
+
+.video-collapsible {
+  display: none;
+  padding: 12px 0;
+}
+
+.video-collapsible.open { display: block; }
+
+.video-prompt-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.video-source-urls {
+  list-style: none;
+  padding: 0;
+}
+
+.video-source-urls li {
+  padding: 4px 0;
+}
+
+.video-source-urls a {
+  color: var(--accent-blue);
+  font-size: 0.82rem;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.video-source-urls a:hover { text-decoration: underline; }
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(79, 125, 249, 0.12);
+  color: var(--accent-blue);
+  border: 1px solid rgba(79, 125, 249, 0.25);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover { background: rgba(79, 125, 249, 0.2); }
+
+.video-complete-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.video-yt-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.video-yt-input:focus { border-color: var(--accent-blue); }
+
+.video-yt-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mark-complete-btn {
+  padding: 10px 20px;
+  background: var(--accent-green);
+  color: #0a0a0f;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.mark-complete-btn:hover { opacity: 0.9; }
+
+.mark-complete-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.video-yt-link {
+  color: var(--accent-green);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.video-yt-link:hover { text-decoration: underline; }
+
+.video-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1223,6 +1523,10 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 
   var HASH = '20779ca4e9489d7b0a80076f0f79aa5ddbb2f3b322eb43355687d12c9f53c19c';
   var AUTH_KEY = 'seo_dash_auth';
+  var PW_KEY = 'seo_dash_pw';
+  var activeTab = 'overview';
+  var dashboardData = null;
+  var videoQueueData = null;
 
   // ── Utility ──
   function esc(str) {
@@ -1259,6 +1563,7 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     var hash = await sha256(pw);
     if (hash === HASH) {
       sessionStorage.setItem(AUTH_KEY, '1');
+      sessionStorage.setItem(PW_KEY, pw);
       loadData();
     } else {
       document.getElementById('pw-error').textContent = 'Wrong password';
@@ -1288,24 +1593,54 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
   // ── Load Data ──
   function loadData() {
     show('loading-screen');
-    fetch('dashboard-data.json')
-      .then(function(r) {
-        if (!r.ok) throw new Error(r.status);
-        return r.json();
-      })
-      .then(function(data) {
-        renderDashboard(data);
+    var dashPromise = fetch('dashboard-data.json').then(function(r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+    var videoPromise = fetch('video_queue.json').then(function(r) {
+      if (!r.ok) return { videos: [] };
+      return r.json();
+    }).catch(function() { return { videos: [] }; });
+
+    Promise.all([dashPromise, videoPromise])
+      .then(function(results) {
+        dashboardData = results[0];
+        videoQueueData = results[1];
+        renderWithTabs();
       })
       .catch(function() {
-        show('dashboard');
-        document.getElementById('dashboard').innerHTML =
-          '<div class="error-card">' +
-          '<div class="err-icon">&#x1F4CB;</div>' +
-          '<h2>No Reports Generated Yet</h2>' +
-          '<p>Run the automation suite first to generate <code>dashboard-data.json</code>.</p>' +
-          '</div>';
+        dashboardData = {};
+        videoQueueData = { videos: [] };
+        renderWithTabs();
       });
   }
+
+  function renderWithTabs() {
+    var tabBarHtml = '<div class="tab-bar">';
+    tabBarHtml += '<button class="tab-btn' + (activeTab === 'overview' ? ' active' : '') + '" onclick="switchTab(\'overview\')">Overview</button>';
+    tabBarHtml += '<button class="tab-btn' + (activeTab === 'videos' ? ' active' : '') + '" onclick="switchTab(\'videos\')">Videos</button>';
+    tabBarHtml += '</div>';
+    tabBarHtml += '<div id="tab-overview" class="tab-content' + (activeTab === 'overview' ? ' active' : '') + '"></div>';
+    tabBarHtml += '<div id="tab-videos" class="tab-content' + (activeTab === 'videos' ? ' active' : '') + '"></div>';
+
+    document.getElementById('dashboard').innerHTML = tabBarHtml;
+    show('dashboard');
+
+    renderDashboardInto(dashboardData);
+    renderVideoTab(videoQueueData);
+  }
+
+  window.switchTab = function(tab) {
+    activeTab = tab;
+    var btns = document.querySelectorAll('.tab-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle('active', btns[i].textContent.toLowerCase() === tab);
+    }
+    var contents = document.querySelectorAll('.tab-content');
+    for (var j = 0; j < contents.length; j++) {
+      contents[j].classList.toggle('active', contents[j].id === 'tab-' + tab);
+    }
+  };
 
   // ── Helper: find source sessions ──
   function findSource(sources, sourceName, medium) {
@@ -1325,7 +1660,7 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
   }
 
   // ── Render ──
-  function renderDashboard(d) {
+  function renderDashboardInto(d) {
     var html = '';
     var traffic = d.traffic || {};
     var sources = traffic.sources || [];
@@ -1836,8 +2171,8 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     html += 'Reports auto-update every Monday &middot; Last updated: ' + esc(updated) + ' &middot; Dashboard by highlevel.ai SEO automation';
     html += '</div>';
 
-    document.getElementById('dashboard').innerHTML = html;
-    show('dashboard');
+    var overviewEl = document.getElementById('tab-overview');
+    if (overviewEl) overviewEl.innerHTML = html;
 
     // Wire up CSV upload
     var csvInput = document.getElementById('csvFileInput');
@@ -1865,6 +2200,196 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 
     // (Pipeline chart removed — replaced by CTA Clicks card)
   }
+
+  // ── Video Tab ──
+  function renderVideoTab(data) {
+    var videos = (data && data.videos) || [];
+    var pending = videos.filter(function(v) { return v.status === 'pending'; });
+    var complete = videos.filter(function(v) { return v.status === 'complete'; });
+
+    // Sort: newest first within each group
+    pending.sort(function(a, b) { return b.created_date > a.created_date ? 1 : -1; });
+    complete.sort(function(a, b) { return (b.completed_date || b.created_date) > (a.completed_date || a.created_date) ? 1 : -1; });
+
+    var sorted = pending.concat(complete);
+
+    var html = '';
+
+    // Header bar
+    html += '<div class="video-header-bar">';
+    html += '<div class="video-pending-count"><span>' + pending.length + '</span> video' + (pending.length !== 1 ? 's' : '') + ' pending</div>';
+    html += '<div class="video-header-links">';
+    html += '<a href="https://github.com/realestateinvestorceo/highlevel-ai/edit/main/site/data/notebooklm_prompt.txt" target="_blank">Edit prompt template</a>';
+    html += '</div>';
+    html += '</div>';
+
+    html += '<div class="video-note">Videos run daily at 6:30am UTC. New topics appear here automatically.</div>';
+
+    if (sorted.length === 0) {
+      html += '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">';
+      html += '<div style="font-size:2rem;margin-bottom:12px;">&#127909;</div>';
+      html += '<p>No videos in the queue yet. The daily pipeline will add topics automatically.</p>';
+      html += '</div>';
+    }
+
+    for (var i = 0; i < sorted.length; i++) {
+      var v = sorted[i];
+      var isComplete = v.status === 'complete';
+      var cardId = 'vc-' + i;
+
+      html += '<div class="video-card">';
+
+      // Header: title + badge
+      html += '<div class="video-card-header">';
+      html += '<div>';
+      html += '<div class="video-card-title">' + esc(v.topic) + '</div>';
+      html += '<div class="video-date">' + esc(v.created_date) + (v.page_url ? ' &middot; ' + esc(v.page_url) : '') + '</div>';
+      html += '</div>';
+      html += '<div class="video-status ' + (isComplete ? 'complete' : 'pending') + '">' + (isComplete ? 'Complete' : 'Pending') + '</div>';
+      html += '</div>';
+
+      // Thumbnail
+      if (v.thumbnail_path) {
+        html += '<div class="video-thumbnail-wrap">';
+        html += '<img src="' + esc(v.thumbnail_path) + '" alt="Thumbnail for ' + esc(v.topic) + '" loading="lazy">';
+        html += '<div class="video-thumbnail-actions">';
+        html += '<a href="' + esc(v.thumbnail_path) + '" download="' + esc(v.id) + '.jpg">Download thumbnail</a>';
+        html += '</div>';
+        html += '</div>';
+      }
+
+      // Source URLs
+      if (v.source_urls && v.source_urls.length > 0) {
+        html += '<button class="video-section-toggle" onclick="toggleVideoSection(\'' + cardId + '-urls\')">';
+        html += '<span class="arrow">&#9654;</span> Source URLs (' + v.source_urls.length + ')';
+        html += '</button>';
+        html += '<div class="video-collapsible" id="' + cardId + '-urls">';
+        html += '<button class="copy-btn" onclick="copyToClipboard(\'' + escAttr(v.source_urls.join('\n')) + '\', \'URLs\')">Copy all URLs</button>';
+        html += '<ul class="video-source-urls" style="margin-top:8px;">';
+        for (var u = 0; u < v.source_urls.length; u++) {
+          html += '<li><a href="' + esc(v.source_urls[u]) + '" target="_blank">' + esc(v.source_urls[u]) + '</a></li>';
+        }
+        html += '</ul>';
+        html += '</div>';
+      }
+
+      // NotebookLM Prompt
+      if (v.notebooklm_prompt) {
+        html += '<button class="video-section-toggle" onclick="toggleVideoSection(\'' + cardId + '-prompt\')">';
+        html += '<span class="arrow">&#9654;</span> NotebookLM Prompt';
+        html += '</button>';
+        html += '<div class="video-collapsible" id="' + cardId + '-prompt">';
+        html += '<button class="copy-btn" onclick="copyVideoPrompt(\'' + cardId + '\')">Copy prompt</button>';
+        html += '<div class="video-prompt-box" id="' + cardId + '-prompt-text">' + esc(v.notebooklm_prompt) + '</div>';
+        html += '</div>';
+      }
+
+      // Research Summary
+      if (v.research_summary) {
+        html += '<button class="video-section-toggle" onclick="toggleVideoSection(\'' + cardId + '-research\')">';
+        html += '<span class="arrow">&#9654;</span> Research Summary';
+        html += '</button>';
+        html += '<div class="video-collapsible" id="' + cardId + '-research">';
+        html += '<div class="video-prompt-box">' + esc(v.research_summary) + '</div>';
+        html += '</div>';
+      }
+
+      // YouTube URL / Mark Complete
+      html += '<div class="video-complete-row">';
+      if (isComplete && v.youtube_url) {
+        html += '<a class="video-yt-link" href="' + esc(v.youtube_url) + '" target="_blank">' + esc(v.youtube_url) + '</a>';
+        if (v.completed_date) {
+          html += '<span style="color:var(--text-muted);font-size:0.8rem;">Completed ' + esc(v.completed_date) + '</span>';
+        }
+      } else {
+        html += '<input type="text" class="video-yt-input" id="' + cardId + '-yt" placeholder="Paste YouTube URL here...">';
+        html += '<button class="mark-complete-btn" onclick="markVideoComplete(\'' + esc(v.id) + '\', \'' + cardId + '-yt\')">Mark Complete</button>';
+      }
+      html += '</div>';
+
+      html += '</div>'; // .video-card
+    }
+
+    var videosEl = document.getElementById('tab-videos');
+    if (videosEl) videosEl.innerHTML = html;
+  }
+
+  function escAttr(str) {
+    return String(str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n');
+  }
+
+  window.toggleVideoSection = function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var isOpen = el.classList.toggle('open');
+    var btn = el.previousElementSibling;
+    if (btn) btn.classList.toggle('open', isOpen);
+  };
+
+  window.copyToClipboard = function(text, label) {
+    // Unescape the newlines
+    text = text.replace(/\\n/g, '\n');
+    navigator.clipboard.writeText(text).then(function() {
+      showToast((label || 'Text') + ' copied to clipboard');
+    }).catch(function() {
+      showToast('Failed to copy', 'error');
+    });
+  };
+
+  window.copyVideoPrompt = function(cardId) {
+    var el = document.getElementById(cardId + '-prompt-text');
+    if (!el) return;
+    navigator.clipboard.writeText(el.textContent).then(function() {
+      showToast('Prompt copied to clipboard');
+    }).catch(function() {
+      showToast('Failed to copy', 'error');
+    });
+  };
+
+  window.markVideoComplete = function(videoId, inputId) {
+    var input = document.getElementById(inputId);
+    if (!input) return;
+    var url = input.value.trim();
+    if (!url) { showToast('Please paste a YouTube URL first', 'error'); return; }
+    if (url.indexOf('youtube.com') === -1 && url.indexOf('youtu.be') === -1) {
+      showToast('Please enter a valid YouTube URL', 'error'); return;
+    }
+
+    var pw = sessionStorage.getItem(PW_KEY);
+    if (!pw) { showToast('Session expired — please refresh and log in again', 'error'); return; }
+
+    var btn = input.nextElementSibling;
+    if (btn) { btn.disabled = true; btn.textContent = 'Saving...'; }
+    input.disabled = true;
+
+    fetch('/api/update-video', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ video_id: videoId, youtube_url: url, password: pw })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        showToast('Video marked complete!');
+        // Reload video queue after a brief delay (Vercel rebuild takes a moment)
+        setTimeout(function() {
+          fetch('video_queue.json').then(function(r) { return r.json(); }).then(function(q) {
+            videoQueueData = q;
+            renderVideoTab(q);
+          }).catch(function() {});
+        }, 2000);
+      } else {
+        showToast('Error: ' + (data.error || 'Unknown error'), 'error');
+        if (btn) { btn.disabled = false; btn.textContent = 'Mark Complete'; }
+        input.disabled = false;
+      }
+    })
+    .catch(function(err) {
+      showToast('Network error: ' + err.message, 'error');
+      if (btn) { btn.disabled = false; btn.textContent = 'Mark Complete'; }
+      input.disabled = false;
+    });
+  };
 
   function drawLineChart(canvasId, values, labels, color) {
     var canvas = document.getElementById(canvasId);
@@ -2014,13 +2539,13 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     localStorage.setItem('hl_pipeline_history', JSON.stringify(hist));
 
     showToast(leads.length + ' referrals imported: ' + customerCount + ' customers, ' + leadCount + ' leads', 'success');
-    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+    fetch('dashboard-data.json').then(function(r){return r.json()}).then(function(d){dashboardData=d;renderDashboardInto(d);}).catch(function(){renderDashboardInto({})});
   }
 
   window.removeScreenshot = function() {
     localStorage.removeItem('hl_earnings_img');
     localStorage.removeItem('hl_earnings_date');
-    fetch('dashboard-data.json').then(function(r){return r.json()}).then(renderDashboard).catch(function(){renderDashboard({})});
+    fetch('dashboard-data.json').then(function(r){return r.json()}).then(function(d){dashboardData=d;renderDashboardInto(d);}).catch(function(){renderDashboardInto({})});
   };
 
   // saveLeadData removed — replaced by CSV upload via handleCsvFile

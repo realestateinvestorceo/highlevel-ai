@@ -5,6 +5,9 @@
     },
     "api/pipeline-webhook.js": {
       "maxDuration": 15
+    },
+    "api/update-video.js": {
+      "maxDuration": 15
     }
   },
   "headers": [

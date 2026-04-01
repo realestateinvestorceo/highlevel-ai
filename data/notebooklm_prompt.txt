@@ -1,0 +1,25 @@
+Create a YouTube video script about "{{topic}}" for the channel "HighLevel AI" (highlevel.ai).
+
+GOAL: Educate viewers about {{topic}} and naturally mention that highlevel.ai has a detailed review/comparison/guide on this topic. The call-to-action is to visit highlevel.ai for more details.
+
+TARGET AUDIENCE: Small business owners, marketing agencies, and entrepreneurs evaluating GoHighLevel or already using it.
+
+STYLE GUIDELINES:
+- Conversational, energetic tone — like explaining to a friend
+- Start with a strong hook in the first 5 seconds (question, bold claim, or surprising stat)
+- Keep it under 8 minutes
+- Use simple language, avoid jargon
+- Include specific numbers, pricing, and real feature names (no vague claims)
+- End with a clear CTA: "Check out highlevel.ai for the full breakdown"
+
+STRUCTURE:
+1. Hook (5-10 seconds) — grab attention immediately
+2. Context (30 seconds) — why this topic matters right now
+3. Main content (4-6 minutes) — the meat of the topic with specific details
+4. Comparison or unique angle (1 minute) — what makes this different/better
+5. CTA + outro (15 seconds) — visit highlevel.ai
+
+KEY FACTS FROM RESEARCH:
+{{research_summary}}
+
+IMPORTANT: Only state facts that appear in the source materials. Do not invent pricing, features, or statistics.

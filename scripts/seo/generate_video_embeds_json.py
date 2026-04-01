@@ -52,6 +52,31 @@ def main():
             "youtube_url": row.get("youtube_url", "") or f"https://www.youtube.com/watch?v={video_id}",
         }
 
+    # Also read completed videos from video_queue.json
+    from config import SITE_DIR
+    queue_path = SITE_DIR / "video_queue.json"
+    if queue_path.exists():
+        try:
+            queue = json.loads(queue_path.read_text(encoding="utf-8"))
+            queue_added = 0
+            for v in queue.get("videos", []):
+                vid = (v.get("youtube_video_id") or "").strip()
+                page = (v.get("page_url") or "").strip()
+                if vid and page and page not in embeds:
+                    embeds[page] = {
+                        "video_id": vid,
+                        "title": v.get("topic", ""),
+                        "description": "",
+                        "upload_date": v.get("completed_date", v.get("created_date", "")),
+                        "thumbnail_url": f"https://img.youtube.com/vi/{vid}/maxresdefault.jpg",
+                        "youtube_url": v.get("youtube_url", "") or f"https://www.youtube.com/watch?v={vid}",
+                    }
+                    queue_added += 1
+            if queue_added:
+                logger.info(f"Added {queue_added} entries from video_queue.json")
+        except Exception as e:
+            logger.warning(f"Could not read video_queue.json: {e}")
+
     output_path = DATA_DIR / "video_embeds.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(embeds, f, indent=2, ensure_ascii=False)

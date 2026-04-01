@@ -1,18 +1,22 @@
 """
-Video Pipeline — Generate video scripts, post to Slack, log to Google Sheets.
+Video Pipeline — Research topics, generate thumbnails, build NotebookLM prompts,
+and save to video_queue.json for manual video creation.
 
 Usage:
     python scripts/seo/video_request.py --topic "GoHighLevel Pricing Explained"
     python scripts/seo/video_request.py --topic "GHL vs HubSpot" --page "/highlevel-vs-hubspot.html"
     python scripts/seo/video_request.py --topic "..." --dry-run
-    python scripts/seo/video_request.py --topic "..." --no-slack --no-sheets
+    python scripts/seo/video_request.py --auto
 """
 
 import os
+import re
 import sys
 import json
+import shutil
 import argparse
 from pathlib import Path
+from datetime import datetime
 
 # Add scripts/seo/ to path for config import
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -44,10 +48,14 @@ def load_prompt(prompt_name, variables=None):
 # ──────────────────────────────────────────────
 
 def research_topic(topic):
-    """Call Perplexity API to get current, factual information about a topic."""
+    """Call Perplexity API to get current, factual information about a topic.
+
+    Returns:
+        tuple: (research_text, citation_urls) — research content and list of source URLs.
+    """
     if not PERPLEXITY_API_KEY:
         logger.warning("No Perplexity API key — skipping live research")
-        return ""
+        return "", []
 
     import requests
 
@@ -80,11 +88,12 @@ Be specific — exact numbers, exact plan names, exact feature names. No vague s
         resp.raise_for_status()
         data = resp.json()
         research = data["choices"][0]["message"]["content"]
-        logger.info(f"Perplexity research: {len(research.split())} words")
-        return research
+        citations = data.get("citations", [])
+        logger.info(f"Perplexity research: {len(research.split())} words, {len(citations)} citations")
+        return research, citations
     except Exception as e:
         logger.warning(f"Perplexity research failed: {e}")
-        return ""
+        return "", []
 
 
 # ──────────────────────────────────────────────
@@ -219,19 +228,154 @@ Create a professional explainer video. Use a natural, conversational voice at a 
 
 
 # ──────────────────────────────────────────────
+# Step 5: Video queue helpers
+# ──────────────────────────────────────────────
+
+def slugify(text):
+    """Convert text to URL-friendly slug."""
+    text = text.lower().strip()
+    text = re.sub(r'[^\w\s-]', '', text)
+    text = re.sub(r'[\s_]+', '-', text)
+    text = re.sub(r'-+', '-', text)
+    return text[:60].rstrip('-')
+
+
+def collect_source_urls(topic, page_url, citation_urls):
+    """Combine Perplexity citations with matching highlevel.ai pages."""
+    urls = list(citation_urls) if citation_urls else []
+
+    # Add the video's own page URL
+    if page_url:
+        urls.append(f"{SITE_URL}{page_url}")
+
+    # Find matching internal pages from internal_links_map.json
+    links_map_path = DATA_DIR / "internal_links_map.json"
+    if links_map_path.exists():
+        try:
+            links_map = json.loads(links_map_path.read_text(encoding="utf-8"))
+            topic_words = set(topic.lower().split())
+            matches = []
+            for keyword, path in links_map.items():
+                kw_words = set(keyword.lower().split())
+                overlap = len(topic_words & kw_words)
+                if overlap >= 1:
+                    matches.append((overlap, f"{SITE_URL}{path}"))
+            # Sort by overlap descending, take top 5
+            matches.sort(key=lambda x: x[0], reverse=True)
+            for _, url in matches[:5]:
+                if url not in urls:
+                    urls.append(url)
+        except Exception as e:
+            logger.warning(f"Could not load internal_links_map.json: {e}")
+
+    # Dedupe while preserving order
+    seen = set()
+    deduped = []
+    for u in urls:
+        if u not in seen:
+            seen.add(u)
+            deduped.append(u)
+    return deduped
+
+
+def generate_notebooklm_prompt(topic, research_summary):
+    """Load the NotebookLM prompt template and fill in placeholders."""
+    # Try site/data/ first (deploy root), fall back to scripts/seo/data/
+    template_path = SITE_DIR / "data" / "notebooklm_prompt.txt"
+    if not template_path.exists():
+        template_path = DATA_DIR / "notebooklm_prompt.txt"
+    if not template_path.exists():
+        logger.warning("NotebookLM prompt template not found")
+        return ""
+
+    template = template_path.read_text(encoding="utf-8")
+    prompt = template.replace("{{topic}}", topic)
+    prompt = prompt.replace("{{research_summary}}", research_summary or "(No research available)")
+    return prompt
+
+
+def save_to_video_queue(video_id, topic, page_url, thumbnail_rel_path,
+                        source_urls, research_summary, notebooklm_prompt):
+    """Append a new video entry to site/video_queue.json."""
+    queue_path = SITE_DIR / "video_queue.json"
+
+    if queue_path.exists():
+        queue = json.loads(queue_path.read_text(encoding="utf-8"))
+    else:
+        queue = {"last_updated": "", "videos": []}
+
+    # Don't add duplicates
+    existing_ids = {v["id"] for v in queue["videos"]}
+    if video_id in existing_ids:
+        logger.info(f"Video {video_id} already in queue, skipping")
+        return None
+
+    entry = {
+        "id": video_id,
+        "topic": topic,
+        "status": "pending",
+        "created_date": today(),
+        "page_url": page_url,
+        "thumbnail_path": thumbnail_rel_path,
+        "source_urls": source_urls,
+        "research_summary": research_summary or "",
+        "notebooklm_prompt": notebooklm_prompt or "",
+        "youtube_url": None,
+        "youtube_video_id": None,
+        "completed_date": None,
+    }
+
+    queue["videos"].append(entry)
+    queue["last_updated"] = datetime.utcnow().isoformat() + "Z"
+
+    queue_path.write_text(json.dumps(queue, indent=2) + "\n", encoding="utf-8")
+    logger.info(f"Added video {video_id} to queue ({len(queue['videos'])} total)")
+    return entry
+
+
+def copy_thumbnail_to_site(thumbnail_path, video_id):
+    """Copy and compress thumbnail to site/thumbnails/ for web serving."""
+    if not thumbnail_path or not Path(thumbnail_path).exists():
+        return None
+
+    dest_dir = SITE_DIR / "thumbnails"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest_path = dest_dir / f"{video_id}.jpg"
+
+    try:
+        from PIL import Image
+        img = Image.open(thumbnail_path)
+        img = img.convert("RGB")
+        # Resize to 1280x720 if larger
+        if img.width > 1280 or img.height > 720:
+            img = img.resize((1280, 720), Image.LANCZOS)
+        img.save(str(dest_path), "JPEG", quality=80, optimize=True)
+        # Check size — compress more if over 200KB
+        if dest_path.stat().st_size > 200_000:
+            img.save(str(dest_path), "JPEG", quality=60, optimize=True)
+        logger.info(f"Thumbnail saved: {dest_path} ({dest_path.stat().st_size // 1024}KB)")
+    except ImportError:
+        # No Pillow — just copy the file
+        shutil.copy2(thumbnail_path, dest_path)
+        logger.info(f"Thumbnail copied (no PIL): {dest_path}")
+
+    return f"/thumbnails/{video_id}.jpg"
+
+
+# ──────────────────────────────────────────────
 # Main
 # ──────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate a video script, post to Slack, and log to Google Sheets."
+        description="Research video topics, generate thumbnails, and save to video queue."
     )
     parser.add_argument("--topic", default="", help="Video topic (e.g. 'GoHighLevel Pricing Explained')")
     parser.add_argument("--auto", action="store_true", help="Auto-research topic, load master prompt + performance context")
     parser.add_argument("--page", default="", help="Target page path (e.g. '/pricing-explained.html')")
-    parser.add_argument("--dry-run", action="store_true", help="Generate script only, don't post anywhere")
+    parser.add_argument("--dry-run", action="store_true", help="Generate outputs only, don't save to queue")
     parser.add_argument("--short", action="store_true", help="Generate a short test script (~100 words)")
-    parser.add_argument("--no-slack", action="store_true", help="Skip Slack posting")
+    parser.add_argument("--no-slack", action="store_true", default=True, help="Skip Slack posting (default: skip)")
     parser.add_argument("--no-sheets", action="store_true", help="Skip Google Sheets logging")
     args = parser.parse_args()
 
@@ -267,14 +411,15 @@ def main():
 
     # Step 0: Live research via Perplexity
     research_context = ""
+    citation_urls = []
     if not args.short:
         print("Researching topic (Perplexity)...")
         plog.start("research")
         try:
-            research_context = research_topic(args.topic)
+            research_context, citation_urls = research_topic(args.topic)
             if research_context:
-                plog.log_success("research", f"{len(research_context.split())} words")
-                print(f"Research complete ({len(research_context.split())} words)\n")
+                plog.log_success("research", f"{len(research_context.split())} words, {len(citation_urls)} citations")
+                print(f"Research complete ({len(research_context.split())} words, {len(citation_urls)} citations)\n")
             else:
                 plog.log_skipped("research", "no API key or empty response")
                 print("Research skipped (no Perplexity key or empty response)\n")
@@ -282,7 +427,7 @@ def main():
             plog.log_error("research", e)
             print(f"Research failed: {e} (continuing without research)\n")
 
-    # Step 1: Generate script
+    # Step 1: Generate script (still used for metadata generation)
     print("Generating video script...")
     plog.start("script_gen")
     try:
@@ -333,17 +478,56 @@ def main():
         plog.log_error("thumbnail_gen", e)
         print(f"Thumbnail generation failed: {e} (continuing without thumbnail)")
 
+    # Step 3: Build video queue entry
+    video_id = f"{today()}-{slugify(args.topic)}"
+
+    # Copy thumbnail to site/thumbnails/
+    thumbnail_rel_path = copy_thumbnail_to_site(thumbnail_path, video_id)
+
+    # Collect source URLs (Perplexity citations + matching internal pages)
+    source_urls = collect_source_urls(args.topic, page_url, citation_urls)
+    print(f"Source URLs collected: {len(source_urls)}")
+
+    # Generate NotebookLM prompt from template
+    notebooklm_prompt = generate_notebooklm_prompt(args.topic, research_context)
+    if notebooklm_prompt:
+        print(f"NotebookLM prompt generated ({len(notebooklm_prompt)} chars)")
+
     if args.dry_run:
+        plog.log_skipped("queue_write", "dry-run")
         plog.log_skipped("sheets_write", "dry-run")
-        plog.log_skipped("slack_post", "dry-run")
-        print("─── DRY RUN ─── Script preview:\n")
-        print(script[:1000])
-        print("\n... (truncated)" if len(script) > 1000 else "")
+        print("\n─── DRY RUN ─── Preview:\n")
+        print(f"Video ID: {video_id}")
+        print(f"Thumbnail: {thumbnail_rel_path or '(none)'}")
+        print(f"Source URLs: {source_urls[:3]}...")
+        print(f"NotebookLM prompt: {notebooklm_prompt[:200]}...")
         print(f"\n{'='*60}")
-        print("Dry run complete. No messages posted.")
+        print("Dry run complete. Nothing saved.")
         return
 
-    # Step 3: Google Sheets
+    # Save to video_queue.json
+    plog.start("queue_write")
+    try:
+        entry = save_to_video_queue(
+            video_id=video_id,
+            topic=args.topic,
+            page_url=page_url,
+            thumbnail_rel_path=thumbnail_rel_path,
+            source_urls=source_urls,
+            research_summary=research_context,
+            notebooklm_prompt=notebooklm_prompt,
+        )
+        if entry:
+            plog.log_success("queue_write", f"video_id={video_id}")
+            print(f"Video queue updated: {video_id}")
+        else:
+            plog.log_skipped("queue_write", "duplicate video_id")
+            print(f"Video {video_id} already in queue")
+    except Exception as e:
+        plog.log_error("queue_write", e)
+        print(f"Queue write error: {e}")
+
+    # Step 4: Google Sheets (backward compat — basic metadata only)
     if args.no_sheets:
         plog.log_skipped("sheets_write", "--no-sheets")
         print("Skipping Google Sheets (--no-sheets)")
@@ -357,29 +541,17 @@ def main():
             plog.log_error("sheets_write", e)
             print(f"Google Sheets error: {e}")
 
-    # Step 4: Slack
-    slack_ts = None
-    if args.no_slack:
-        plog.log_skipped("slack_post", "--no-slack")
-        print("Skipping Slack (--no-slack)")
-    else:
-        plog.start("slack_post")
-        try:
-            slack_ts = post_to_slack(page_url, metadata.get("title", ""), script, thumbnail_path=thumbnail_path)
-            plog.log_success("slack_post", f"ts={slack_ts}")
-            print(f"Slack message posted successfully")
-            print(f"Slack message timestamp: {slack_ts}")
-        except Exception as e:
-            plog.log_error("slack_post", e)
-            print(f"Slack error: {e}")
+    # Slack posting is disabled by default (manual video workflow)
+    plog.log_skipped("slack_post", "manual workflow — no Slack posting")
 
     # Summary
     print(f"\n{'='*60}")
-    print(f"Video Title: {metadata.get('title', 'N/A')}")
-    print(f"Google Sheets: {'written' if not args.no_sheets else 'skipped'}")
-    print(f"Slack: {'posted' if slack_ts else 'skipped'}")
-    if slack_ts:
-        print(f"Slack TS: {slack_ts}")
+    print(f"Video ID: {video_id}")
+    print(f"Title: {metadata.get('title', 'N/A')}")
+    print(f"Thumbnail: {thumbnail_rel_path or 'none'}")
+    print(f"Source URLs: {len(source_urls)}")
+    print(f"Queue: saved")
+    print(f"Sheets: {'written' if not args.no_sheets else 'skipped'}")
     print(f"{'='*60}\n")
 
 
