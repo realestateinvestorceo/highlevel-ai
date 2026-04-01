@@ -39,26 +39,5 @@
       "type": "ReviewArticle",
       "reason": "Missing ReviewArticle schema"
     }
-  ],
-  "highlevel-vs-kajabi.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    }
-  ],
-  "highlevel-vs-kartra.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    }
-  ],
-  "highlevel-vs-monday.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    }
   ]
 }
