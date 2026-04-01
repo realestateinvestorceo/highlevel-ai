@@ -22,7 +22,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from config import (
     ANTHROPIC_API_KEY, PERPLEXITY_API_KEY, SLACK_BOT_TOKEN, SLACK_CHANNEL_ID,
-    VIDEO_SHEET_ID, GA4_SERVICE_ACCOUNT_FILE, SITE_URL,
+    VIDEO_SHEET_ID, GA4_SERVICE_ACCOUNT_FILE, SITE_URL, SITE_DIR,
     AFFILIATE_LINK, DATA_DIR, setup_logging, today
 )
 
