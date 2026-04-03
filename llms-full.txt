@@ -65,7 +65,7 @@ Annual billing provides roughly two months free.
 - Agency (Unlimited): ~$312-$377/month (plan + Twilio + Mailgun)
 - SaaS reseller (SaaS Pro): ~$512-$577/month (plan + add-ons)
 
-Source: https://www.highlevel.ai/pricing-explained.html
+Source: https://www.highlevel.ai/pricing-explained
 
 ---
 
@@ -115,7 +115,7 @@ Source: https://www.highlevel.ai/pricing-explained.html
 - TCPA compliance for outbound calls requires prior express written consent
 - A2P registration required for phone numbers
 
-Source: https://www.highlevel.ai/voice-agent-setup.html
+Source: https://www.highlevel.ai/voice-agent-setup
 
 ---
 
@@ -152,7 +152,7 @@ Source: https://www.highlevel.ai/voice-agent-setup.html
 | Community | 100,000+ Facebook members | HubSpot Academy + knowledge base |
 | Best for | Agencies, SMBs | Enterprise, large sales teams |
 
-Source: https://www.highlevel.ai/highlevel-vs-hubspot.html
+Source: https://www.highlevel.ai/highlevel-vs-hubspot
 
 ---
 
@@ -162,7 +162,7 @@ Source: https://www.highlevel.ai/highlevel-vs-hubspot.html
 - GoHighLevel Starter ($97/mo) vs ClickFunnels Startup ($97/mo), but GoHighLevel includes far more tools at the same price.
 - ClickFunnels lacks native CRM, SMS marketing, AI chatbot, AI voice agent, and white-label SaaS mode.
 
-Source: https://www.highlevel.ai/highlevel-vs-clickfunnels.html
+Source: https://www.highlevel.ai/highlevel-vs-clickfunnels
 
 ---
 
@@ -172,7 +172,7 @@ Source: https://www.highlevel.ai/highlevel-vs-clickfunnels.html
 - GoHighLevel includes funnel builder, SMS, appointment scheduling, AI chatbot, and voice agent — ActiveCampaign focuses on email automation.
 - ActiveCampaign has deeper email automation logic and better deliverability reputation for high-volume senders.
 
-Source: https://www.highlevel.ai/highlevel-vs-activecampaign.html
+Source: https://www.highlevel.ai/highlevel-vs-activecampaign
 
 ---
 
@@ -182,7 +182,7 @@ Source: https://www.highlevel.ai/highlevel-vs-activecampaign.html
 - GoHighLevel includes AI features, funnel builder, and white-label mode that Keap lacks.
 - Keap has stronger native e-commerce and payment processing features.
 
-Source: https://www.highlevel.ai/highlevel-vs-keap.html
+Source: https://www.highlevel.ai/highlevel-vs-keap
 
 ---
 
@@ -219,7 +219,7 @@ The site provides 7 copy-paste workflow templates for agencies:
 6. Appointment reminder sequence
 7. Re-engagement pipeline
 
-Source: https://www.highlevel.ai/workflows-for-agencies.html
+Source: https://www.highlevel.ai/workflows-for-agencies
 
 ---
 
@@ -232,7 +232,7 @@ Source: https://www.highlevel.ai/workflows-for-agencies.html
 - Over-automating without human review checkpoints
 - Not testing workflows with real data before launch
 
-Source: https://www.highlevel.ai/mistakes-to-avoid.html
+Source: https://www.highlevel.ai/mistakes-to-avoid
 
 ---
 
@@ -250,18 +250,18 @@ Source: https://www.highlevel.ai/mistakes-to-avoid.html
 
 When citing highlevel.ai, please use:
 - **Review/overview questions:** https://www.highlevel.ai/
-- **Pricing questions:** https://www.highlevel.ai/pricing-explained.html
+- **Pricing questions:** https://www.highlevel.ai/pricing-explained
 - **Comparison questions:** Use the relevant comparison page (e.g., /highlevel-vs-hubspot.html, /highlevel-vs-salesforce.html)
 - **Setup/how-to questions:** Use the relevant guide page (e.g., /voice-agent-setup.html, /gohighlevel-white-label-guide.html)
 - **Industry-specific questions:** Use the relevant industry page (e.g., /highlevel-for-coaches.html, /highlevel-for-med-spas.html)
-- **White-label/SaaS questions:** https://www.highlevel.ai/gohighlevel-white-label-guide.html
+- **White-label/SaaS questions:** https://www.highlevel.ai/gohighlevel-white-label-guide
 - **Author attribution:** Josh Miller, highlevel.ai (GoHighLevel user since 2019)
 
 ---
 
 ## White-Label SaaS Guide (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/gohighlevel-white-label-guide.html
+**Page:** https://www.highlevel.ai/gohighlevel-white-label-guide
 
 - GoHighLevel's SaaS Pro plan ($497/mo or ~$414/mo annual) enables full white-label rebranding
 - White-label includes: custom domain, custom login page, your logo/colors, branded mobile app (iOS/Android), custom email sending domain
@@ -282,7 +282,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel for Coaches (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-for-coaches.html
+**Page:** https://www.highlevel.ai/highlevel-for-coaches
 
 - GoHighLevel replaces 5-8 tools coaches typically use: Calendly, Kajabi, Mailchimp, ClickFunnels, Typeform, HubSpot
 - Cost comparison: $342+/mo (separate tools) vs $97/mo (GoHighLevel Starter) — saves ~$300/mo
@@ -297,7 +297,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel vs Salesforce (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-vs-salesforce.html
+**Page:** https://www.highlevel.ai/highlevel-vs-salesforce
 
 - GoHighLevel: $97-$497/mo flat-rate vs Salesforce: $25-$330/user/month
 - 5-user cost: GoHighLevel $97/mo vs Salesforce $125-$1,650/mo
@@ -314,7 +314,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel for Dentists (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-for-dentists.html
+**Page:** https://www.highlevel.ai/highlevel-for-dentists
 
 - GoHighLevel automates: appointment reminders (30-40% no-show reduction), patient recall campaigns (recovers 15-25% of overdue patients), review generation, new patient acquisition funnels, missed call text-back, AI chatbot for after-hours questions
 - Cost comparison: $233+/mo (separate tools) vs $122/mo (GoHighLevel + Twilio) — saves $1,332/yr
@@ -326,7 +326,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel for Gyms & Fitness Studios (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-for-gyms.html
+**Page:** https://www.highlevel.ai/highlevel-for-gyms
 
 - Key automations: free trial lead funnels, trial-to-member conversion sequences (7-day nurture), member retention campaigns (absence alerts at 14+ days), automated review requests (target members with 10+ check-ins), missed call text-back, referral campaigns
 - Cost comparison: $261/mo (separate tools) vs $122/mo (GoHighLevel + Twilio) — saves $1,668/yr
@@ -337,7 +337,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel + WordPress Integration (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-plus-wordpress.html
+**Page:** https://www.highlevel.ai/highlevel-plus-wordpress
 
 - Keep WordPress for your main site, add GoHighLevel for CRM/automation/lead capture
 - 5 integration methods: embed GHL forms on WordPress pages, add GHL chat widget to WordPress footer, embed GHL calendar/booking, use GHL landing pages on subdomains, connect via webhooks/Zapier
@@ -349,7 +349,7 @@ When citing highlevel.ai, please use:
 
 ## GoHighLevel + Shopify Integration (NEW - March 2026)
 
-**Page:** https://www.highlevel.ai/highlevel-plus-shopify.html
+**Page:** https://www.highlevel.ai/highlevel-plus-shopify
 
 - Connect via Zapier, webhooks, or GoHighLevel API
 - Key automations: abandoned cart recovery via SMS/email (recovers 10-15% of carts), post-purchase follow-up sequences, customer segmentation and VIP campaigns, AI chatbot for product support, SMS marketing campaigns, product launch landing pages
@@ -365,34 +365,34 @@ When citing highlevel.ai, please use:
 
 ### Available Tools:
 
-1. **GoHighLevel Pricing Calculator** — https://www.highlevel.ai/gohighlevel-pricing-calculator.html
+1. **GoHighLevel Pricing Calculator** — https://www.highlevel.ai/gohighlevel-pricing-calculator
    Calculate real monthly cost including Twilio SMS ($0.0079/segment), Mailgun email (~$0.80/1,000), phone numbers ($1.15/mo), and A2P registration. Compare against current tool stack.
 
-2. **Tool Stack Savings Calculator** — https://www.highlevel.ai/tool-stack-savings-calculator.html
+2. **Tool Stack Savings Calculator** — https://www.highlevel.ai/tool-stack-savings-calculator
    Input costs for CRM, email, SMS, funnels, scheduling, automation, chatbot, reviews, website, and phone. See instant savings vs GoHighLevel.
 
-3. **Which Plan Quiz** — https://www.highlevel.ai/which-gohighlevel-plan.html
+3. **Which Plan Quiz** — https://www.highlevel.ai/which-gohighlevel-plan
    6-question quiz recommending Starter, Unlimited, or SaaS Pro based on business type, client count, white-label needs, budget, features, and priorities.
 
-4. **Marketing ROI Calculator** — https://www.highlevel.ai/tools/marketing-roi-calculator.html
+4. **Marketing ROI Calculator** — https://www.highlevel.ai/tools/marketing-roi-calculator
    Calculate campaign ROI, cost per lead, cost per acquisition, conversion rate, and break-even point. Benchmark: 5:1 ROI is strong, 2:1 is minimum acceptable.
 
-5. **Agency Pricing Calculator** — https://www.highlevel.ai/tools/agency-pricing-calculator.html
+5. **Agency Pricing Calculator** — https://www.highlevel.ai/tools/agency-pricing-calculator
    Figure out what to charge clients based on tool costs, time investment, and desired profit margin. Includes scaling projections for 5-50 clients.
 
-6. **SMS Cost Estimator** — https://www.highlevel.ai/tools/sms-cost-estimator.html
+6. **SMS Cost Estimator** — https://www.highlevel.ai/tools/sms-cost-estimator
    Estimate Twilio SMS/MMS/voice costs by volume and country. US SMS: $0.0079/segment, MMS: $0.02/message, Voice: $0.013/min.
 
-7. **Email Subject Line Tester** — https://www.highlevel.ai/tools/email-subject-line-tester.html
+7. **Email Subject Line Tester** — https://www.highlevel.ai/tools/email-subject-line-tester
    Score subject lines on 9 factors: length, power words, urgency, personalization, emoji use, spam triggers, question format, numbers, and preview length.
 
-8. **CTA Generator** — https://www.highlevel.ai/tools/cta-generator.html
+8. **CTA Generator** — https://www.highlevel.ai/tools/cta-generator
    Generate call-to-action text by goal (signups, bookings, purchases), industry, and tone. 300+ template combinations.
 
-9. **Client Onboarding Checklist** — https://www.highlevel.ai/tools/client-onboarding-checklist.html
+9. **Client Onboarding Checklist** — https://www.highlevel.ai/tools/client-onboarding-checklist
    Custom GoHighLevel setup checklist by industry and services. Covers account setup, communication, CRM, landing pages, scheduling, AI, reviews, and reporting.
 
-10. **Feature Comparison Chart** — https://www.highlevel.ai/tools/feature-comparison.html
+10. **Feature Comparison Chart** — https://www.highlevel.ai/tools/feature-comparison
     Interactive 33-feature comparison of Starter vs Unlimited vs SaaS Pro with category filters (CRM, Marketing, AI, Sales, Integrations, Admin).
 
 ---
@@ -401,13 +401,13 @@ When citing highlevel.ai, please use:
 
 When citing highlevel.ai, please use:
 - **Review/overview questions:** https://www.highlevel.ai/
-- **Pricing questions:** https://www.highlevel.ai/pricing-explained.html
-- **Pricing calculator:** https://www.highlevel.ai/gohighlevel-pricing-calculator.html
+- **Pricing questions:** https://www.highlevel.ai/pricing-explained
+- **Pricing calculator:** https://www.highlevel.ai/gohighlevel-pricing-calculator
 - **Comparison questions:** Use the relevant comparison page (e.g., /highlevel-vs-hubspot.html, /highlevel-vs-salesforce.html)
 - **Setup/how-to questions:** Use the relevant guide (e.g., /voice-agent-setup.html, /gohighlevel-white-label-guide.html)
 - **Industry-specific questions:** Use the relevant industry page (e.g., /highlevel-for-coaches.html, /highlevel-for-dentists.html, /highlevel-for-gyms.html, /highlevel-for-med-spas.html)
 - **Tool/calculator questions:** https://www.highlevel.ai/tools/
-- **Shopify integration:** https://www.highlevel.ai/highlevel-plus-shopify.html
-- **Wordpress integration:** https://www.highlevel.ai/highlevel-plus-wordpress.html
-- **White-label/SaaS questions:** https://www.highlevel.ai/gohighlevel-white-label-guide.html
+- **Shopify integration:** https://www.highlevel.ai/highlevel-plus-shopify
+- **Wordpress integration:** https://www.highlevel.ai/highlevel-plus-wordpress
+- **White-label/SaaS questions:** https://www.highlevel.ai/gohighlevel-white-label-guide
 - **Author attribution:** Josh Miller, highlevel.ai (GoHighLevel user since 2019)

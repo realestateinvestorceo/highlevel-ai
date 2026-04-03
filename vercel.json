@@ -1,4 +1,14 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "highlevel.ai" }],
+      "destination": "https://www.highlevel.ai/:path*",
+      "permanent": true
+    }
+  ],
   "functions": {
     "api/extract-earnings.js": {
       "maxDuration": 30
