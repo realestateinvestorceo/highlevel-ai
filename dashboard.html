@@ -2451,7 +2451,8 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     t.className = 'toast ' + (type || 'success');
     t.textContent = msg;
     document.body.appendChild(t);
-    setTimeout(function() { t.remove(); }, 4000);
+    setTimeout(function() { t.style.opacity = '0'; t.style.transition = 'opacity 0.5s'; }, 5000);
+    setTimeout(function() { t.remove(); }, 5500);
   }
 
   function handleCsvFile(file) {
@@ -2538,8 +2539,15 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     if (hist.length > 90) hist = hist.slice(hist.length - 90);
     localStorage.setItem('hl_pipeline_history', JSON.stringify(hist));
 
-    showToast(leads.length + ' referrals imported: ' + customerCount + ' customers, ' + leadCount + ' leads', 'success');
+    // Re-render dashboard with updated lead data
     fetch('dashboard-data.json').then(function(r){return r.json()}).then(function(d){dashboardData=d;renderDashboardInto(d);}).catch(function(){renderDashboardInto({})});
+
+    // Scroll to funnel section and show success with a slight delay so re-render completes
+    setTimeout(function() {
+      var funnel = document.querySelector('.earnings-section');
+      if (funnel) funnel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      showToast('✅ ' + leads.length + ' referrals imported: ' + customerCount + ' customers, ' + leadCount + ' leads', 'success');
+    }, 300);
   }
 
   window.removeScreenshot = function() {
