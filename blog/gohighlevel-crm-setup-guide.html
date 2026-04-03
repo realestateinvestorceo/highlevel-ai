@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>How to Set Up Your GoHighLevel CRM From Scratch (Step-by-Step)</title>
+<meta name="description" content="A complete walkthrough for setting up GoHighLevel's CRM — pipelines, custom fields, automations, and contact management. Written for beginners.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-crm-setup-guide">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Set Up Your GoHighLevel CRM From Scratch (Step-by-Step)">
+<meta property="og:description" content="A complete walkthrough for setting up GoHighLevel's CRM — pipelines, custom fields, automations, and contact management. Written for beginners.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-crm-setup-guide">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-02T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-02">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Set Up Your GoHighLevel CRM From Scratch (Step-by-Step)">
+<meta name="twitter:description" content="A complete walkthrough for setting up GoHighLevel's CRM — pipelines, custom fields, automations, and contact management. Written for beginners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Set Up Your GoHighLevel CRM From Scratch (Step-by-Step)",
+  "description": "A complete walkthrough for setting up GoHighLevel's CRM — pipelines, custom fields, automations, and contact management. Written for beginners.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-crm-setup-guide",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "How to Set Up Your GoHighLevel CRM From Scratch (S"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    touch-action: manipulation;
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .content-block {
+    max-width: 780px; margin: 0 auto; font-size: 16px;
+    line-height: 1.8; color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--text-primary); margin: 48px 0 20px; letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 24px; color: var(--text-secondary);
+  }
+  .content-block li { margin-bottom: 8px; line-height: 1.7; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .content-block a:hover { color: #fff; }
+  .content-block code {
+    background: var(--bg-card); padding: 2px 8px; border-radius: 4px;
+    font-size: 14px; color: var(--accent-orange);
+  }
+  .content-block pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px; margin: 20px 0;
+    overflow-x: auto; font-size: 14px; line-height: 1.6;
+  }
+  .content-block blockquote {
+    border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0;
+    background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary); font-style: italic;
+  }
+  .tip-box {
+    background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box {
+    background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box strong { color: var(--accent-orange); }
+  .summary-box {
+    background: var(--bg-card); border: 1px solid var(--border-accent);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 40px;
+  }
+  .summary-box p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px; padding: 20px 24px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+  }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary); text-decoration: none;
+    border-bottom: 1px solid transparent; transition: all 0.2s;
+  }
+  .toc-links li a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+  .final-cta { padding: 80px 0; text-align: center; }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent); border-radius: 24px;
+    padding: 64px 48px; position: relative; overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; position: relative;
+  }
+  .final-cta p { color: var(--text-secondary); font-size: 17px; max-width: 560px; margin: 0 auto 32px; position: relative; }
+  .final-cta .btn { position: relative; }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+  .page-section { padding: 70px 0; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 16px; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c;
+    position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .headless-data {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .animate-on-scroll { transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-enabled .animate-on-scroll { opacity: 0; transform: translateY(24px); }
+  .js-enabled .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px); padding: 20px 24px;
+      border-bottom: 1px solid var(--border); gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Set Up Your GoHighLevel CRM From Scratch (S</span>
+  </nav>
+
+  <div class="article-header">
+    <div class="section-tag">Tutorial</div>
+    <h1>How to Set Up Your GoHighLevel CRM From Scratch (Step-by-Step)</h1>
+    <p style="color:var(--text-secondary); font-size:18px; line-height:1.6; margin-bottom:24px;">A complete walkthrough for setting up GoHighLevel's CRM — pipelines, custom fields, automations, and contact management. Written for beginners.</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 02, 2026 &bull; 12 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block" id="article-content">
+    <p>Setting up your GoHighLevel CRM properly from day one will save you countless hours down the road. I've been using HighLevel since 2019, and I've seen too many users rush through the setup only to rebuild everything later. Let's walk through this step-by-step so you get it right the first time.</p>
+
+<p>Before we dive in, make sure you're logged into your GoHighLevel account. If you're running an agency, you'll want to do this setup in a test sub-account first – think of sub-accounts like separate "apartments" for each client. This way you can perfect your process before rolling it out.</p>
+
+<h2>Step 1: Creating Your First Sales Pipeline</h2>
+
+<p>Your pipeline is the backbone of your CRM. It shows exactly where each prospect stands in your sales process. Here's how to set up a solid foundation:</p>
+
+<h3>Navigate to Pipelines</h3>
+<ol>
+<li>From your main dashboard, click on <strong>Opportunities</strong> in the left sidebar</li>
+<li>Click <strong>Pipeline</strong> at the top of the page</li>
+<li>Hit the <strong>+ New Pipeline</strong> button</li>
+</ol>
+
+<h3>Create Your Pipeline Stages</h3>
+<p>I recommend starting with these six stages (you can always add more later):</p>
+
+<ol>
+<li><strong>New Lead</strong> – Fresh prospects who just entered your system</li>
+<li><strong>Contacted</strong> – You've reached out but haven't qualified them yet</li>
+<li><strong>Qualified</strong> – They have budget, need, and authority to buy</li>
+<li><strong>Proposal</strong> – You've sent a quote or proposal</li>
+<li><strong>Won</strong> – Closed deals (your money makers!)</li>
+<li><strong>Lost</strong> – Deals that didn't work out</li>
+</ol>
+
+<p>To add each stage:</p>
+<ol>
+<li>Name your pipeline (like "Sales Pipeline 2026")</li>
+<li>Click <strong>Add Stage</strong> for each phase</li>
+<li>Use the drag handles to reorder stages if needed</li>
+<li>Set probability percentages for each stage (New Lead: 10%, Contacted: 20%, Qualified: 40%, Proposal: 70%, Won: 100%, Lost: 0%)</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Keep your initial pipeline simple. I've seen businesses create 15-stage pipelines that nobody uses because they're too complicated. Start with 4-6 stages max.</div>
+
+<h2>Step 2: Setting Up Custom Fields</h2>
+
+<p>Custom fields let you track information specific to your business. This is where HighLevel really shines compared to basic CRMs.</p>
+
+<h3>Access Custom Fields</h3>
+<ol>
+<li>Go to <strong>Settings</strong> (gear icon in the left sidebar)</li>
+<li>Click <strong>Custom Fields</strong></li>
+<li>Choose whether to add fields at the Contact level or Opportunity level</li>
+</ol>
+
+<h3>Essential Custom Fields to Create</h3>
+
+<p>For <strong>Contacts</strong>, I recommend these fields:</p>
+<ul>
+<li><strong>Lead Source</strong> (dropdown): Facebook, Google, Referral, Website, etc.</li>
+<li><strong>Budget Range</strong> (dropdown): Under $1K, $1K-5K, $5K-10K, $10K+</li>
+<li><strong>Industry</strong> (text): Their business type</li>
+<li><strong>Pain Points</strong> (text area): What problems they need solved</li>
+<li><strong>Preferred Contact Method</strong> (dropdown): Phone, Email, Text</li>
+</ul>
+
+<p>For <strong>Opportunities</strong>, add:</p>
+<ul>
+<li><strong>Deal Value</strong> (currency): Potential revenue</li>
+<li><strong>Close Date</strong> (date): When you expect to close</li>
+<li><strong>Competitor</strong> (text): Who else they're considering</li>
+<li><strong>Next Action</strong> (text): What needs to happen next</li>
+</ul>
+
+<p>To create each field:</p>
+<ol>
+<li>Click <strong>Add Custom Field</strong></li>
+<li>Choose your field type (text, dropdown, date, etc.)</li>
+<li>Name it clearly – avoid abbreviations</li>
+<li>For dropdowns, add your options</li>
+<li>Save the field</li>
+</ol>
+
+<div class="warning-box"><strong>Important:</strong> Think carefully about field names before creating them. While you can edit them later, it gets messy if you have data in the system already.</div>
+
+<h2>Step 3: Importing Your Contacts</h2>
+
+<p>Now let's get your existing contacts into HighLevel. You have several options here.</p>
+
+<h3>CSV Upload (Most Common)</h3>
+<ol>
+<li>Navigate to <strong>Contacts</strong> in the left sidebar</li>
+<li>Click the <strong>Import</strong> button at the top right</li>
+<li>Choose <strong>Import from CSV</strong></li>
+<li>Download the sample CSV to see the required format</li>
+<li>Upload your file and map the columns to HighLevel fields</li>
+</ol>
+
+<p>Your CSV should include these minimum columns:</p>
+<ul>
+<li>First Name</li>
+<li>Last Name</li>
+<li>Email</li>
+<li>Phone</li>
+<li>Any custom fields you created</li>
+</ul>
+
+<h3>Manual Entry</h3>
+<p>For adding individual contacts:</p>
+<ol>
+<li>From Contacts, click <strong>+ Add Contact</strong></li>
+<li>Fill in the basic information</li>
+<li>Add tags if relevant (more on this below)</li>
+<li>Fill in your custom fields</li>
+<li>Save the contact</li>
+</ol>
+
+<h3>Integration Setup</h3>
+<p>HighLevel connects with tons of platforms. To set up integrations:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>Integrations</strong></li>
+<li>Find your platform (Zapier is great for connecting almost anything)</li>
+<li>Follow the connection steps</li>
+<li>Map fields between platforms</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Before importing thousands of contacts, test with a small batch first. Import 10-20 contacts to make sure your field mapping is correct.</div>
+
+<h2>Step 4: Creating Smart Lists and Segments</h2>
+
+<p>Smart lists automatically group contacts based on criteria you set. They're incredibly powerful for targeted marketing.</p>
+
+<h3>Create Your First Smart List</h3>
+<ol>
+<li>From <strong>Contacts</strong>, click <strong>Smart Lists</strong></li>
+<li>Click <strong>+ Add Smart List</strong></li>
+<li>Name your list (like "Hot Leads")</li>
+<li>Set your conditions</li>
+</ol>
+
+<h3>Useful Smart List Examples</h3>
+
+<p><strong>High-Value Prospects:</strong></p>
+<ul>
+<li>Budget Range = "$10K+"</li>
+<li>Lead Score > 50 (if you're tracking scores)</li>
+<li>Tags contain "interested"</li>
+</ul>
+
+<p><strong>Re-engagement Campaign:</strong></p>
+<ul>
+<li>Last Activity > 30 days ago</li>
+<li>Pipeline Stage = "Contacted"</li>
+<li>Email Status = "Subscribed"</li>
+</ul>
+
+<p><strong>New Leads This Month:</strong></p>
+<ul>
+<li>Created Date = "This Month"</li>
+<li>Pipeline Stage = "New Lead"</li>
+</ul>
+
+<div class="tip-box"><strong>Pro tip:</strong> Smart lists update automatically, so they're perfect for running ongoing campaigns. Set them up once and they keep working for you.</div>
+
+<h2>Step 5: Setting Up Lead Source Tracking</h2>
+
+<p>Knowing where your best leads come from is crucial for smart marketing spend. Here's how to track it properly:</p>
+
+<h3>Configure Source Attribution</h3>
+<ol>
+<li>Use the Lead Source custom field you created earlier</li>
+<li>Set up UTM parameters on all your marketing links</li>
+<li>Create forms that capture source automatically</li>
+</ol>
+
+<h3>Popular Lead Sources to Track</h3>
+<ul>
+<li>Google Ads</li>
+<li>Facebook/Instagram Ads</li>
+<li>Organic Search (SEO)</li>
+<li>Referrals</li>
+<li>Cold Outreach</li>
+<li>Networking Events</li>
+<li>Direct Website</li>
+</ul>
+
+<h3>Set Up Source-Based Tagging</h3>
+<p>Create tags for each major source and apply them automatically:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>Tags</strong></li>
+<li>Create tags like "google-ads", "facebook-lead", "referral"</li>
+<li>Use workflows to auto-apply tags based on source</li>
+</ol>
+
+<h2>Step 6: Configuring Contact Views and Filters</h2>
+
+<p>The default contact view shows everything, which gets messy fast. Let's organize it better.</p>
+
+<h3>Customize Your Contact Columns</h3>
+<ol>
+<li>In the Contacts section, look for the column settings (usually a gear icon)</li>
+<li>Choose which fields to display</li>
+<li>Drag columns to reorder them</li>
+</ol>
+
+<p>I recommend showing these columns by default:</p>
+<ul>
+<li>Name</li>
+<li>Email</li>
+<li>Phone</li>
+<li>Lead Source (your custom field)</li>
+<li>Tags</li>
+<li>Pipeline Stage</li>
+<li>Last Activity</li>
+</ul>
+
+<h3>Set Up Useful Filters</h3>
+<p>Create saved filters for common views:</p>
+
+<p><strong>"Today's Follow-ups":</strong></p>
+<ul>
+<li>Next Action Date = Today</li>
+<li>Pipeline Stage ≠ Won or Lost</li>
+</ul>
+
+<p><strong>"High Priority":</strong></p>
+<ul>
+<li>Tags contain "hot" OR Budget Range = "$10K+"</li>
+<li>Pipeline Stage = Qualified or Proposal</li>
+</ul>
+
+<p><strong>"Need Attention":</strong></p>
+<ul>
+<li>Last Activity > 7 days ago</li>
+<li>Pipeline Stage ≠ Won or Lost</li>
+</ul>
+
+<h2>Step 7: Basic Automation Triggers</h2>
+
+<p>This is where HighLevel gets exciting. Let's set up some simple automations that'll save you hours every week.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> For more complex setups, check out our detailed guide on <a href="/blog/gohighlevel-automations-save-time">automation workflows</a>.</div>
+
+<h3>New Contact Welcome Sequence</h3>
+<ol>
+<li>Go to <strong>Marketing</strong> → <strong>Workflows</strong></li>
+<li>Click <strong>+ Create Workflow</strong></li>
+<li>Choose "Contact Added" as your trigger</li>
+<li>Add conditions if needed (like specific lead sources)</li>
+<li>Add actions: Send welcome email, apply tags, create opportunity</li>
+</ol>
+
+<h3>Stage Change Notifications</h3>
+<p>Get notified when important things happen:</p>
+<ol>
+<li>Trigger: "Opportunity Stage Changed"</li>
+<li>Condition: New stage = "Qualified"</li>
+<li>Action: Send email notification to sales rep</li>
+</ol>
+
+<h3>Tag-Based Follow-up</h3>
+<p>Automatically follow up based on contact behavior:</p>
+<ol>
+<li>Trigger: "Tag Added"</li>
+<li>Condition: Tag = "interested"</li>
+<li>Action: Wait 1 day, then send follow-up email</li>
+</ol>
+
+<h2>Step 8: CRM Hygiene Best Practices</h2>
+
+<p>A messy CRM is worse than no CRM. Here's how to keep yours clean from day one:</p>
+
+<h3>Daily Habits</h3>
+<ul>
+<li><strong>Update pipeline stages immediately</strong> after contact interactions</li>
+<li><strong>Add notes</strong> to every meaningful conversation</li>
+<li><strong>Set next action dates</strong> for every active opportunity</li>
+<li><strong>Apply tags consistently</strong> – create a tag naming convention and stick to it</li>
+</ul>
+
+<h3>Weekly Maintenance</h3>
+<ul>
+<li>Review contacts with no activity in 30+ days</li>
+<li>Clean up duplicate contacts (HighLevel has a merge feature)</li>
+<li>Update any stale opportunities</li>
+<li>Check for contacts missing important custom field data</li>
+</ul>
+
+<h3>Monthly Reviews</h3>
+<ul>
+<li>Analyze pipeline conversion rates</li>
+<li>Review lead source performance</li>
+<li>Update smart lists if your business focus changes</li>
+<li>Archive or delete truly dead leads</li>
+</ul>
+
+<div class="warning-box"><strong>Important:</strong> Set up these habits now while your database is small. It's much harder to establish good practices when you have thousands of messy contacts.</div>
+
+<h3>Data Entry Standards</h3>
+<p>Create rules for your team:</p>
+<ul>
+<li>Always use proper case (John Smith, not john smith)</li>
+<li>Standardize phone formats (xxx-xxx-xxxx)</li>
+<li>Use consistent company name formats</li>
+<li>Require certain fields before marking leads as "Qualified"</li>
+</ul>
+
+<h2>Testing Your Setup</h2>
+
+<p>Before going live, test everything:</p>
+
+<ol>
+<li>Create a test contact manually</li>
+<li>Import a small CSV file</li>
+<li>Move the test contact through your pipeline stages</li>
+<li>Verify your automations trigger correctly</li>
+<li>Check that your smart lists populate properly</li>
+<li>Test your saved filters and views</li>
+</ol>
+
+<p>If you're setting this up for clients (like in our <a href="/gohighlevel-white-label-guide">white-label guide</a>), do this testing in a sub-account first. You can then replicate the setup across multiple client accounts.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Document your setup process as you go. You'll thank me later when you need to train team members or set up additional sub-accounts.</div>
+
+<h2>Bottom Line</h2>
+
+<p>A well-configured CRM is your business's memory and your sales team's best friend. Take the time to set up these fundamentals properly – custom fields, pipelines, smart lists, and basic automations. Start simple and add complexity as you grow.</p>
+
+<p>In my six years using HighLevel, I've seen businesses transform their sales processes just by implementing these basics correctly. The CRM features alone justify the cost, but remember that HighLevel offers so much more. Check out our <a href="/gohighlevel-reviews">GoHighLevel review</a> to see how the CRM fits into the bigger platform picture.</p>
+
+<p>Most importantly, actually use what you set up. The fanciest CRM setup in the world won't help if your team doesn't adopt it. Keep it simple, train your team well, and build good habits from day one.</p>
+
+<blockquote>Remember: Your CRM should work for you, not against you. If something feels too complicated, simplify it. You can always add complexity later as your team gets comfortable with the basics.</blockquote>
+  </div>
+
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See everything we've covered in this guide for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+  <div class="related-guides">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/gohighlevel-automations-save-time" class="related-card">
+        <span class="related-tag">Tutorial</span>
+        <span class="related-title">5 Automations That Save 10+ Hours/Week</span>
+      </a>
+      <a href="/gohighlevel-reviews" class="related-card">
+        <span class="related-tag">Review</span>
+        <span class="related-title">GoHighLevel Review 2026</span>
+      </a>
+      <a href="/pricing-explained" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained</span>
+      </a>
+      <a href="/which-gohighlevel-plan" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Which Plan Is Right for You?</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparisons">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.
+      Our opinions and ratings are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>

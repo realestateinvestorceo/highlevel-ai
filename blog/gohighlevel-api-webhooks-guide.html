@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>GoHighLevel API & Webhooks: Developer's Quick-Start Guide</title>
+<meta name="description" content="How to use GoHighLevel's API and webhooks — authentication, key endpoints, webhook setup, and practical integration examples.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-api-webhooks-guide">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel API & Webhooks: Developer's Quick-Start Guide">
+<meta property="og:description" content="How to use GoHighLevel's API and webhooks — authentication, key endpoints, webhook setup, and practical integration examples.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-api-webhooks-guide">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-02T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-02">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel API & Webhooks: Developer's Quick-Start Guide">
+<meta name="twitter:description" content="How to use GoHighLevel's API and webhooks — authentication, key endpoints, webhook setup, and practical integration examples.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GoHighLevel API & Webhooks: Developer's Quick-Start Guide",
+  "description": "How to use GoHighLevel's API and webhooks — authentication, key endpoints, webhook setup, and practical integration examples.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-api-webhooks-guide",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "GoHighLevel API & Webhooks"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    touch-action: manipulation;
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .content-block {
+    max-width: 780px; margin: 0 auto; font-size: 16px;
+    line-height: 1.8; color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--text-primary); margin: 48px 0 20px; letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 24px; color: var(--text-secondary);
+  }
+  .content-block li { margin-bottom: 8px; line-height: 1.7; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .content-block a:hover { color: #fff; }
+  .content-block code {
+    background: var(--bg-card); padding: 2px 8px; border-radius: 4px;
+    font-size: 14px; color: var(--accent-orange);
+  }
+  .content-block pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px; margin: 20px 0;
+    overflow-x: auto; font-size: 14px; line-height: 1.6;
+  }
+  .content-block blockquote {
+    border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0;
+    background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary); font-style: italic;
+  }
+  .tip-box {
+    background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box {
+    background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box strong { color: var(--accent-orange); }
+  .summary-box {
+    background: var(--bg-card); border: 1px solid var(--border-accent);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 40px;
+  }
+  .summary-box p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px; padding: 20px 24px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+  }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary); text-decoration: none;
+    border-bottom: 1px solid transparent; transition: all 0.2s;
+  }
+  .toc-links li a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+  .final-cta { padding: 80px 0; text-align: center; }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent); border-radius: 24px;
+    padding: 64px 48px; position: relative; overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; position: relative;
+  }
+  .final-cta p { color: var(--text-secondary); font-size: 17px; max-width: 560px; margin: 0 auto 32px; position: relative; }
+  .final-cta .btn { position: relative; }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+  .page-section { padding: 70px 0; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 16px; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c;
+    position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .headless-data {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .animate-on-scroll { transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-enabled .animate-on-scroll { opacity: 0; transform: translateY(24px); }
+  .js-enabled .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px); padding: 20px 24px;
+      border-bottom: 1px solid var(--border); gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>GoHighLevel API & Webhooks</span>
+  </nav>
+
+  <div class="article-header">
+    <div class="section-tag">Developer Guide</div>
+    <h1>GoHighLevel API & Webhooks: Developer's Quick-Start Guide</h1>
+    <p style="color:var(--text-secondary); font-size:18px; line-height:1.6; margin-bottom:24px;">How to use GoHighLevel's API and webhooks — authentication, key endpoints, webhook setup, and practical integration examples.</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 02, 2026 &bull; 12 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block" id="article-content">
+    <p>GoHighLevel's API and webhook system is one of its most powerful features, letting you connect virtually any external system to your GHL account. After 6+ years of using GoHighLevel since 2019, I've built dozens of custom integrations - from simple WordPress form connections to complex multi-system workflows that handle everything automatically.</p>
+
+<p>This guide will walk you through everything you need to know to start building your own integrations, whether you're a seasoned developer or just getting started with APIs.</p>
+
+<h2>GoHighLevel API Overview</h2>
+
+<p>GoHighLevel uses a REST API v2 that gives you programmatic access to virtually every feature in the platform. You can create and update contacts, manage opportunities through your sales pipeline, send messages, book appointments, trigger campaigns, and much more.</p>
+
+<p>The API is built around standard HTTP methods (GET, POST, PUT, DELETE) and returns JSON responses. Here's what you can do:</p>
+
+<ul>
+<li><strong>Contact Management:</strong> Create, update, delete, and search contacts</li>
+<li><strong>Pipeline Management:</strong> Add opportunities, move deals through stages, update values</li>
+<li><strong>Calendar Integration:</strong> Book appointments, check availability, manage calendar events</li>
+<li><strong>Communication:</strong> Send SMS, emails, and voicemails programmatically</li>
+<li><strong>Campaign Management:</strong> Add contacts to campaigns, trigger automations</li>
+<li><strong>Custom Fields:</strong> Update any custom fields you've created in your account</li>
+</ul>
+
+<div class="tip-box"><strong>Pro tip:</strong> The API follows GoHighLevel's permission system, so API calls will only work with data the authenticated user has access to. This is especially important when working with agency sub-accounts.</div>
+
+<h2>Authentication Methods</h2>
+
+<p>GoHighLevel offers three main authentication methods, each suited for different use cases:</p>
+
+<h3>OAuth 2.0 (Recommended for Most Cases)</h3>
+
+<p>OAuth 2.0 is the gold standard for API authentication and what I recommend for most integrations. It's required if you want to:</p>
+<ul>
+<li>Receive webhooks from GoHighLevel</li>
+<li>Build apps for the GoHighLevel Marketplace</li>
+<li>Access multiple locations from a single integration</li>
+<li>Share your integration with other users</li>
+</ul>
+
+<p>Here's the OAuth flow:</p>
+
+<ol>
+<li>Register your app in GoHighLevel's developer portal</li>
+<li>Redirect users to the authorization URL with your client ID and scopes</li>
+<li>GoHighLevel redirects back to your app with an authorization code</li>
+<li>Exchange the code for access and refresh tokens</li>
+<li>Use the access token in API calls (expires every ~24 hours)</li>
+<li>Use the refresh token to get new access tokens automatically</li>
+</ol>
+
+<p>The authorization URL looks like this:</p>
+<pre><code>https://marketplace.gohighlevel.com/oauth/chooselocation?response_type=code&redirect_uri=YOUR_CALLBACK_URL&client_id=YOUR_CLIENT_ID&scope=contacts.readonly+contacts.write+opportunities.write</code></pre>
+
+<h3>Agency API Keys</h3>
+
+<p>Agency API keys are perfect for managing sub-accounts programmatically. You can generate these in your Agency Settings > API Keys. They're long-lived and scoped to agency-level operations, but they don't support webhooks.</p>
+
+<h3>Private Integration Tokens</h3>
+
+<p>For simple, single-location integrations that don't need webhooks, private tokens are the easiest option. Generate them in your location settings and use them directly in API calls.</p>
+
+<div class="warning-box"><strong>Important:</strong> Never expose API keys or tokens in client-side code. Always keep them on your server and use them in backend API calls only.</div>
+
+<h2>Key API Endpoints</h2>
+
+<p>The GoHighLevel API is organized around the main objects in the system. Here are the endpoints you'll use most often:</p>
+
+<h3>Contacts API</h3>
+
+<p>Base endpoint: <code>GET/POST/PUT https://services.leadconnectorhq.com/contacts/</code></p>
+
+<p>The contacts API is probably what you'll use most. You can create new contacts, update existing ones, search by email or phone, and manage tags and custom fields.</p>
+
+<h3>Opportunities API</h3>
+
+<p>Base endpoint: <code>GET/POST/PUT https://services.leadconnectorhq.com/opportunities/</code></p>
+
+<p>This handles your sales pipeline. Create new deals, move opportunities between stages, update monetary values, and assign to team members.</p>
+
+<h3>Conversations API</h3>
+
+<p>Base endpoint: <code>GET/POST https://services.leadconnectorhq.com/conversations/</code></p>
+
+<p>Send SMS messages, emails, and manage conversation threads. Essential for automated follow-up sequences.</p>
+
+<h3>Calendars API</h3>
+
+<p>Base endpoint: <code>GET/POST https://services.leadconnectorhq.com/calendars/</code></p>
+
+<p>Book appointments, check availability, and manage calendar events. Great for integrating with external booking systems.</p>
+
+<h2>Creating and Updating Contacts</h2>
+
+<p>Contact management is the foundation of most GoHighLevel integrations. Here's how to create a new contact using curl:</p>
+
+<pre><code>curl -X POST "https://services.leadconnectorhq.com/contacts/" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "tags": ["lead", "website"],
+    "customFields": [
+      {
+        "id": "custom_field_id",
+        "value": "Custom Value"
+      }
+    ]
+  }'</code></pre>
+
+<p>To update an existing contact, use PUT with the contact ID:</p>
+
+<pre><code>curl -X PUT "https://services.leadconnectorhq.com/contacts/CONTACT_ID" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "Jane",
+    "tags": ["lead", "website", "qualified"]
+  }'</code></pre>
+
+<div class="tip-box"><strong>Pro tip:</strong> Always search for existing contacts by email or phone before creating new ones to avoid duplicates. Use the search endpoint: <code>GET /contacts/search?email=john@example.com</code></div>
+
+<h2>Pipeline and Opportunity Management</h2>
+
+<p>Managing your sales pipeline through the API is incredibly powerful for <a href="/workflows-for-agencies">workflows for agencies</a>. Here's how to create a new opportunity:</p>
+
+<pre><code>curl -X POST "https://services.leadconnectorhq.com/opportunities/" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Website Redesign Project",
+    "stageId": "stage_id_here",
+    "pipelineId": "pipeline_id_here",
+    "contactId": "contact_id_here",
+    "monetaryValue": 5000,
+    "assignedTo": "user_id_here"
+  }'</code></pre>
+
+<p>To move an opportunity to a different stage:</p>
+
+<pre><code>curl -X PUT "https://services.leadconnectorhq.com/opportunities/OPPORTUNITY_ID" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "stageId": "new_stage_id_here"
+  }'</code></pre>
+
+<p>I use this heavily in my agency to automatically move deals based on client actions - like moving to "Contract Sent" when a proposal is generated, or "Won" when payment is received.</p>
+
+<h2>Webhook Setup and Configuration</h2>
+
+<p>Webhooks are where GoHighLevel's automation really shines. There are two types:</p>
+
+<h3>Inbound Webhooks (Triggering GHL Workflows)</h3>
+
+<p>Inbound webhooks let external systems trigger GoHighLevel workflows. Every workflow can have a webhook trigger that looks like this:</p>
+
+<p><code>https://hooks.leadconnectorhq.com/v1/hooker/XXXXX?company_id=YYYY</code></p>
+
+<p>To trigger a workflow from an external system:</p>
+
+<pre><code>curl -X POST "https://hooks.leadconnectorhq.com/v1/hooker/YOUR_HOOK_ID?company_id=YOUR_COMPANY_ID" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "Alice",
+    "email": "alice@example.com",
+    "customData": "any value you want"
+  }'</code></pre>
+
+<p>The data you send becomes available as variables in your workflow, which you can use in follow-up actions.</p>
+
+<h3>Outbound Webhooks (GHL Notifying External Systems)</h3>
+
+<p>Outbound webhooks send data from GoHighLevel to external systems when specific events happen. You set these up in your <a href="/blog/gohighlevel-automations-save-time">automation workflows</a> using the "Webhook" action.</p>
+
+<p>GoHighLevel signs outbound webhooks for security. Always verify the signature to prevent spoofing:</p>
+
+<pre><code>// Node.js example
+const crypto = require('crypto');
+
+function verifyWebhook(payload, signature, publicKey) {
+  const payloadBuffer = Buffer.from(payload, 'utf8');
+  const signatureBuffer = Buffer.from(signature, 'base64');
+  
+  return crypto.verify(null, payloadBuffer, publicKey, signatureBuffer);
+}</code></pre>
+
+<div class="warning-box"><strong>Important:</strong> Always verify webhook signatures in production. Unverified webhooks can be spoofed by malicious actors.</div>
+
+<h2>Common Webhook Events</h2>
+
+<p>Here are the webhook events I use most often in my integrations:</p>
+
+<h3>Contact Created</h3>
+<pre><code>{
+  "type": "ContactCreate",
+  "contactId": "contact_123",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "tags": ["lead"],
+  "source": "Website Form"
+}</code></pre>
+
+<h3>Opportunity Stage Changed</h3>
+<pre><code>{
+  "type": "OpportunityStageUpdate",
+  "opportunityId": "opp_456",
+  "contactId": "contact_123",
+  "pipelineId": "pipeline_789",
+  "stageId": "stage_abc",
+  "stageName": "Proposal Sent",
+  "monetaryValue": 5000
+}</code></pre>
+
+<h3>Appointment Booked</h3>
+<pre><code>{
+  "type": "AppointmentBooked",
+  "appointmentId": "appt_999",
+  "contactId": "contact_123",
+  "calendarId": "cal_888",
+  "startTime": "2024-01-15T14:00:00Z",
+  "endTime": "2024-01-15T15:00:00Z",
+  "title": "Discovery Call"
+}</code></pre>
+
+<h2>Zapier Integration</h2>
+
+<p>While you can build direct API integrations, sometimes Zapier is the faster option, especially for simple workflows. Use Zapier when:</p>
+
+<ul>
+<li>You need to connect GoHighLevel to popular apps (Gmail, Slack, Shopify)</li>
+<li>The integration is simple (trigger → action)</li>
+<li>You want to avoid custom development</li>
+<li>Non-technical team members need to modify the workflow</li>
+</ul>
+
+<p>To connect GoHighLevel to Zapier:</p>
+
+<ol>
+<li>Create a new Zap in Zapier</li>
+<li>Choose "Webhooks by Zapier" as your trigger</li>
+<li>Select "Catch Hook" and copy the webhook URL</li>
+<li>In GoHighLevel, add a "Webhook" action to your workflow</li>
+<li>Paste the Zapier URL and configure the data to send</li>
+<li>Test the connection and configure your Zapier action</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Use webhook.site to test your webhook payloads before connecting to the final destination. It's a lifesaver for debugging.</div>
+
+<h2>Make.com Integration</h2>
+
+<p>Make.com (formerly Integromat) is more powerful than Zapier for complex workflows. It's my preferred choice when I need conditional logic, loops, or data transformation.</p>
+
+<p>To set up a Make.com integration:</p>
+
+<ol>
+<li>Add a "Webhooks" module in Make</li>
+<li>Choose "Custom webhook" and copy the URL</li>
+<li>In GoHighLevel, add the Make webhook URL to your workflow</li>
+<li>For agency/sub-account setups, use an HTTP module to exchange agency tokens for location tokens</li>
+</ol>
+
+<p>Make.com is particularly powerful for agency setups because you can handle multi-location authentication and routing in a single scenario.</p>
+
+<h2>Rate Limits and Best Practices</h2>
+
+<p>GoHighLevel implements rate limiting to ensure platform stability. While the exact limits aren't publicly documented, here are best practices I follow:</p>
+
+<ul>
+<li><strong>Batch operations:</strong> Group multiple updates into single API calls when possible</li>
+<li><strong>Implement retries:</strong> Use exponential backoff for 429 (rate limit) responses</li>
+<li><strong>Cache data:</strong> Don't repeatedly fetch the same data; cache it locally</li>
+<li><strong>Use webhooks:</strong> Instead of polling for changes, let GoHighLevel notify you</li>
+<li><strong>Off-peak processing:</strong> Schedule heavy operations during low-usage hours</li>
+</ul>
+
+<h2>Error Handling and Debugging</h2>
+
+<p>Robust error handling is crucial for production integrations. Here's my standard error handling pattern:</p>
+
+<pre><code>async function ghlApiCall(endpoint, data) {
+  try {
+    const response = await fetch(`https://services.leadconnectorhq.com${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    
+    if (!response.ok) {
+      if (response.status === 401) {
+        // Token expired, refresh it
+        await refreshAccessToken();
+        return ghlApiCall(endpoint, data); // Retry
+      }
+      throw new Error(`API call failed: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('GHL API Error:', error);
+    // Log to your error tracking service
+    throw error;
+  }
+}</code></pre>
+
+<p>For debugging, I always:</p>
+<ul>
+<li>Log all API requests and responses (excluding sensitive data)</li>
+<li>Use webhook.site for testing webhook payloads</li>
+<li>Check GoHighLevel's system status page during outages</li>
+<li>Validate webhook signatures in development environments</li>
+</ul>
+
+<h2>Three Practical Integration Examples</h2>
+
+<h3>Example 1: WordPress Form to GoHighLevel</h3>
+
+<p>This is probably the most common integration I build. Here's a PHP snippet for WordPress:</p>
+
+<pre><code>function send_to_ghl($form_data) {
+    $webhook_url = 'https://hooks.leadconnectorhq.com/v1/hooker/YOUR_HOOK_ID?company_id=YOUR_COMPANY_ID';
+    
+    $data = array(
+        'firstName' => $form_data['first_name'],
+        'lastName' => $form_data['last_name'],
+        'email' => $form_data['email'],
+        'phone' => $form_data['phone'],
+        'source' => 'Contact Form'
+    );
+    
+    wp_remote_post($webhook_url, array(
+        'headers' => array('Content-Type' => 'application/json'),
+        'body' => json_encode($data)
+    ));
+}</code></pre>
+
+<p>In GoHighLevel, create a workflow triggered by this webhook that adds the contact and starts your follow-up sequence.</p>
+
+<h3>Example 2: GoHighLevel to Slack Notifications</h3>
+
+<p>Get instant notifications when important events happen in your pipeline:</p>
+
+<pre><code>// Outbound webhook from GHL to your server
+app.post('/ghl-webhook', (req, res) => {
+    const { type, opportunity, contact } = req.body;
+    
+    if (type === 'OpportunityWon') {
+        const message = {
+            text: `🎉 New sale! ${contact.firstName} ${contact.lastName} - $${opportunity.monetaryValue}`,
+            channel: '#sales'
+        };
+        
+        // Send to Slack
+        fetch(SLACK_WEBHOOK_URL, {
+            method: 'POST',
+            body: JSON.stringify(message)
+        });
+    }
+    
+    res.sendStatus(200);
+});</code></pre>
+
+<h3>Example 3: Custom Dashboard Integration</h3>
+
+<p>Build a custom dashboard that pulls data from GoHighLevel's API:</p>
+
+<pre><code>async function fetchDashboardData() {
+    const [contacts, opportunities] = await Promise.all([
+        fetch('/contacts?limit=100', { headers: authHeaders }),
+        fetch('/opportunities?limit=100', { headers: authHeaders })
+    ]);
+    
+    const contactsData = await contacts.json();
+    const opportunitiesData = await opportunities.json();
+    
+    return {
+        totalContacts: contactsData.meta.total,
+        newContactsThisMonth: contactsData.contacts.filter(isThisMonth).length,
+        pipelineValue: opportunitiesData.opportunities.reduce((sum, opp) => 
+            sum + opp.monetaryValue, 0
+        )
+    };
+}</code></pre>
+
+<p>This type of integration is particularly valuable for agencies using the <a href="/gohighlevel-white-label-guide">white-label guide</a> who want to provide custom reporting to clients.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> When building custom dashboards, consider using GoHighLevel's existing reporting features first. Often, a custom dashboard isn't necessary if the built-in reports meet your needs.</div>
+
+<h2>Bottom Line</h2>
+
+<p>GoHighLevel's API and webhook system opens up unlimited integration possibilities. Whether you're connecting a simple contact form or building complex multi-system workflows, the foundation is solid and well-documented.</p>
+
+<p>Start small with a single integration - maybe connecting your website forms to GoHighLevel - then expand from there. The OAuth 2.0 authentication might seem complex initially, but it's worth the extra setup for the security and flexibility it provides.</p>
+
+<p>Remember that sometimes the simplest solution is the best one. Before building a custom integration, check if GoHighLevel already has native integration with your desired platform, or if a tool like Zapier can handle the job with less development time.</p>
+
+<p>The API continues to evolve, so always refer to the official documentation for the latest endpoints and features. With these fundamentals in place, you'll be able to create powerful automations that save time and improve your client experience.</p>
+  </div>
+
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See everything we've covered in this guide for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+  <div class="related-guides">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/gohighlevel-automations-save-time" class="related-card">
+        <span class="related-tag">Tutorial</span>
+        <span class="related-title">5 Automations That Save 10+ Hours/Week</span>
+      </a>
+      <a href="/gohighlevel-reviews" class="related-card">
+        <span class="related-tag">Review</span>
+        <span class="related-title">GoHighLevel Review 2026</span>
+      </a>
+      <a href="/pricing-explained" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained</span>
+      </a>
+      <a href="/which-gohighlevel-plan" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Which Plan Is Right for You?</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparisons">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.
+      Our opinions and ratings are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>

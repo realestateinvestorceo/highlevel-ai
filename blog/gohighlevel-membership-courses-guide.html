@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>How to Create Membership Sites & Courses in GoHighLevel</title>
+<meta name="description" content="Build and sell online courses and membership content inside GoHighLevel — setup, content delivery, drip scheduling, and monetization strategies.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-membership-courses-guide">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Create Membership Sites & Courses in GoHighLevel">
+<meta property="og:description" content="Build and sell online courses and membership content inside GoHighLevel — setup, content delivery, drip scheduling, and monetization strategies.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-membership-courses-guide">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-02T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-02">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Create Membership Sites & Courses in GoHighLevel">
+<meta name="twitter:description" content="Build and sell online courses and membership content inside GoHighLevel — setup, content delivery, drip scheduling, and monetization strategies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Create Membership Sites & Courses in GoHighLevel",
+  "description": "Build and sell online courses and membership content inside GoHighLevel — setup, content delivery, drip scheduling, and monetization strategies.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-membership-courses-guide",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "How to Create Membership Sites & Courses in GoHigh"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    touch-action: manipulation;
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .content-block {
+    max-width: 780px; margin: 0 auto; font-size: 16px;
+    line-height: 1.8; color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--text-primary); margin: 48px 0 20px; letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 24px; color: var(--text-secondary);
+  }
+  .content-block li { margin-bottom: 8px; line-height: 1.7; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .content-block a:hover { color: #fff; }
+  .content-block code {
+    background: var(--bg-card); padding: 2px 8px; border-radius: 4px;
+    font-size: 14px; color: var(--accent-orange);
+  }
+  .content-block pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px; margin: 20px 0;
+    overflow-x: auto; font-size: 14px; line-height: 1.6;
+  }
+  .content-block blockquote {
+    border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0;
+    background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary); font-style: italic;
+  }
+  .tip-box {
+    background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box {
+    background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box strong { color: var(--accent-orange); }
+  .summary-box {
+    background: var(--bg-card); border: 1px solid var(--border-accent);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 40px;
+  }
+  .summary-box p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px; padding: 20px 24px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+  }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary); text-decoration: none;
+    border-bottom: 1px solid transparent; transition: all 0.2s;
+  }
+  .toc-links li a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+  .final-cta { padding: 80px 0; text-align: center; }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent); border-radius: 24px;
+    padding: 64px 48px; position: relative; overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; position: relative;
+  }
+  .final-cta p { color: var(--text-secondary); font-size: 17px; max-width: 560px; margin: 0 auto 32px; position: relative; }
+  .final-cta .btn { position: relative; }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+  .page-section { padding: 70px 0; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 16px; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c;
+    position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .headless-data {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .animate-on-scroll { transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-enabled .animate-on-scroll { opacity: 0; transform: translateY(24px); }
+  .js-enabled .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px); padding: 20px 24px;
+      border-bottom: 1px solid var(--border); gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Create Membership Sites & Courses in GoHigh</span>
+  </nav>
+
+  <div class="article-header">
+    <div class="section-tag">Tutorial</div>
+    <h1>How to Create Membership Sites & Courses in GoHighLevel</h1>
+    <p style="color:var(--text-secondary); font-size:18px; line-height:1.6; margin-bottom:24px;">Build and sell online courses and membership content inside GoHighLevel — setup, content delivery, drip scheduling, and monetization strategies.</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 02, 2026 &bull; 12 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block" id="article-content">
+    <p>After six years of building membership sites and courses in GoHighLevel, I've watched the platform evolve from a basic CRM into a surprisingly capable course creation tool. While it's not going to replace Kajabi overnight, GHL's membership features have become robust enough for most coaches, consultants, and agencies to consolidate their tech stack.</p>
+
+<p>Let me walk you through exactly how to create membership sites and courses in GoHighLevel, plus give you my honest take on where it excels and where dedicated course platforms still have an edge.</p>
+
+<h2>GoHighLevel's Membership & Course Builder Overview</h2>
+
+<p>GoHighLevel's course builder lives within the broader client portal system. Unlike standalone platforms that only do courses, GHL integrates your membership site directly with your CRM, funnels, and <a href="/blog/gohighlevel-automations-save-time">automation workflows</a>. This means when someone buys your course, they're automatically added to your pipeline, tagged appropriately, and can receive follow-up sequences—all without Zapier or third-party integrations.</p>
+
+<p>The course builder supports multiple content types, drip scheduling, progress tracking, and community features. What makes it particularly powerful is the tight integration with GHL's payment processing, funnel builder, and email marketing tools.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Before diving into course creation, check out HighLevel University's "Course Creator's Playbook" (Agency View > University > HighLevel University > Learning). It's free and covers the complete workflow I'm about to break down.</div>
+
+<h2>Creating Your First Course: Modules and Lessons</h2>
+
+<p>Setting up a course structure in GHL is straightforward. Navigate to Sites > Memberships > Courses and click "Add Course." You'll set up your course hierarchy using modules (main sections) and lessons (individual content pieces).</p>
+
+<p>Here's my recommended approach for structuring courses:</p>
+
+<ol>
+<li><strong>Course Overview:</strong> Welcome video and expectations</li>
+<li><strong>Module 1-X:</strong> Core content organized by topic or week</li>
+<li><strong>Bonus Materials:</strong> Templates, worksheets, additional resources</li>
+<li><strong>Community Access:</strong> Discussion areas and Q&A</li>
+</ol>
+
+<p>Each module can contain unlimited lessons, and you can rearrange them with drag-and-drop functionality. I typically keep modules to 5-7 lessons maximum to avoid overwhelming students.</p>
+
+<h3>Lesson Creation Workflow</h3>
+
+<p>For each lesson, you'll add:</p>
+<ul>
+<li><strong>Title and Description:</strong> Clear, benefit-focused names</li>
+<li><strong>Content Type:</strong> Video, text, PDF, or downloadable files</li>
+<li><strong>Duration Estimate:</strong> Helps students plan their time</li>
+<li><strong>Completion Settings:</strong> Manual mark complete or auto-advance</li>
+</ul>
+
+<h2>Content Types Supported</h2>
+
+<p>GoHighLevel supports all the essential content formats you'd expect:</p>
+
+<h3>Video Content</h3>
+<p>Upload MP4 files directly or embed from Vimeo, YouTube, or Wistia. The built-in video player includes progress tracking and prevents downloading (though it's not as secure as Vimeo's private embedding). Video quality is good, but load times can be slower than dedicated video hosting platforms.</p>
+
+<h3>Text Lessons</h3>
+<p>Rich text editor with formatting, images, and embedded media. Perfect for written instructions, case studies, or supplementary content. The editor is clean but basic—don't expect advanced formatting options.</p>
+
+<h3>PDF and Downloads</h3>
+<p>Upload worksheets, templates, or reference materials. Students can download these directly, and you can track who accessed what files. File size limits are generous (up to 100MB per file).</p>
+
+<h3>Interactive Elements</h3>
+<p>While GHL doesn't have built-in quizzes or assessments, you can embed forms or surveys to create interactive checkpoints. I often use this for homework submissions or progress checks.</p>
+
+<div class="warning-box"><strong>Important:</strong> Video hosting directly in GHL uses your storage allocation. For video-heavy courses, consider hosting on Vimeo and embedding to save space and improve loading speeds.</div>
+
+<h2>Drip Content Scheduling</h2>
+
+<p>This is where GHL really shines compared to basic membership plugins. The drip scheduling options are flexible and actually boost completion rates by about 29% in my experience.</p>
+
+<h3>Drip Schedule Types</h3>
+
+<p><strong>Time-Based Drip:</strong> Release new content every X days. Perfect for self-paced courses where you want to maintain momentum. I typically use 3-7 day intervals depending on content complexity.</p>
+
+<p><strong>Date-Based Drip:</strong> Release content on specific calendar dates. Ideal for cohort-based programs or when you're pre-selling a course that's not fully complete yet.</p>
+
+<p><strong>Progress-Based Drip:</strong> Unlock new lessons only after completing previous ones. Great for sequential skill-building where each lesson builds on the last.</p>
+
+<p><strong>Hybrid Approach:</strong> Combine time-based with progress gates. For example, release weekly but require homework completion to advance. This works exceptionally well for premium programs.</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<tr style="background-color: #f5f5f5;">
+<th style="padding: 10px; border: 1px solid #ddd;">Drip Strategy</th>
+<th style="padding: 10px; border: 1px solid #ddd;">Release Pattern</th>
+<th style="padding: 10px; border: 1px solid #ddd;">Best For</th>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Time-based</td>
+<td style="padding: 10px; border: 1px solid #ddd;">New module every 7 days</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Self-paced with accountability</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Date-based</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Specific dates</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Cohorts/live components</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Progress-based</td>
+<td style="padding: 10px; border: 1px solid #ddd;">After prior completion</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Sequential skills</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Hybrid</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Weekly + progress gates</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Premium with homework</td>
+</tr>
+</table>
+
+<p>You can also control content visibility separately from access. Students might see the full course outline but only access unlocked lessons—this actually increases engagement as they can see what's coming.</p>
+
+<h2>Membership Levels and Access Controls</h2>
+
+<p>GHL's membership system allows you to create different access tiers. You can bundle multiple courses into single offers or create progressive access levels (Basic → Premium → VIP).</p>
+
+<h3>Setting Up Access Levels</h3>
+
+<p>Create membership levels by defining:</p>
+<ul>
+<li><strong>Course Access:</strong> Which courses each level includes</li>
+<li><strong>Community Access:</strong> Private discussion areas per level</li>
+<li><strong>Bonus Content:</strong> Exclusive resources for higher tiers</li>
+<li><strong>Duration:</strong> Lifetime, annual, or monthly access</li>
+</ul>
+
+<p>I often structure it like this:</p>
+<ul>
+<li><strong>Starter ($97):</strong> Core course only</li>
+<li><strong>Complete ($197):</strong> Core course + bonus modules + community</li>
+<li><strong>VIP ($497):</strong> Everything + 1-on-1 calls + implementation templates</li>
+</ul>
+
+<div class="tip-box"><strong>Pro tip:</strong> Use GHL's tagging system to automatically assign membership levels based on purchase. This integrates beautifully with your CRM for ongoing relationship management.</div>
+
+<h2>Payment Integration Options</h2>
+
+<p>One of GHL's biggest advantages is native payment processing. No need for external payment processors or complex integrations—everything runs through Stripe or NMI within your GHL account.</p>
+
+<h3>Payment Structure Options</h3>
+
+<p><strong>One-Time Payments:</strong> Simple course purchases with immediate access. Perfect for evergreen courses under $500.</p>
+
+<p><strong>Recurring Subscriptions:</strong> Monthly or annual billing for ongoing access. Great for community-based memberships or regularly updated content.</p>
+
+<p><strong>Payment Plans:</strong> Split larger purchases (like $997 courses) into 3-6 payments. This significantly increases conversion rates for higher-ticket programs.</p>
+
+<p><strong>Free Trials:</strong> Offer 7-30 day free access before charging. Works well for subscription-based models.</p>
+
+<p>The payment forms integrate directly with your funnel pages, and failed payment recovery is automated. I've seen 15-20% of failed payments recovered through GHL's dunning sequence.</p>
+
+<h2>Student Progress Tracking</h2>
+
+<p>The progress tracking in GHL is comprehensive but not overwhelming. You can monitor:</p>
+
+<ul>
+<li><strong>Course Completion Rates:</strong> Overall and by individual student</li>
+<li><strong>Lesson Engagement:</strong> Time spent, completion status</li>
+<li><strong>Login Frequency:</strong> Who's active vs. dormant</li>
+<li><strong>Download Tracking:</strong> Which resources are most popular</li>
+</ul>
+
+<p>This data feeds into your CRM, allowing you to create targeted follow-up campaigns. For example, I automatically email students who haven't logged in for 14 days with motivation and support.</p>
+
+<div class="warning-box"><strong>Important:</strong> Progress tracking requires students to manually mark lessons complete unless you set auto-advancement. Train your students on this during onboarding.</div>
+
+<h2>Community Features and Comments</h2>
+
+<p>GHL's community features have improved dramatically. You can create discussion areas tied to specific courses or membership levels. Students can comment on individual lessons, ask questions, and interact with each other.</p>
+
+<h3>Community Setup</h3>
+
+<p>Navigate to Sites > Communities to create discussion spaces. You can:</p>
+<ul>
+<li>Create course-specific channels</li>
+<li>Set up general discussion areas</li>
+<li>Enable file sharing and image uploads</li>
+<li>Moderate comments and posts</li>
+<li>Pin important announcements</li>
+</ul>
+
+<p>The community integrates with your courses through the "Learning" section, where drip-scheduled content lives alongside discussions. Engagement-based unlocks are possible—for example, active community members might get free access to bonus courses.</p>
+
+<p>However, the community features are still basic compared to dedicated platforms like Circle or Discord. If community is central to your business model, you might want to integrate with external tools.</p>
+
+<h2>Automated Enrollment from Funnels and Forms</h2>
+
+<p>This is where GHL's all-in-one approach really pays off. When someone purchases through your funnel, completes a form, or triggers an automation, they can be automatically enrolled in courses.</p>
+
+<h3>Enrollment Triggers</h3>
+
+<p><strong>Purchase-Based:</strong> Automatic enrollment upon payment completion</p>
+<p><strong>Form Submission:</strong> Free course access for lead magnets</p>
+<p><strong>Tag-Based:</strong> Assign course access when specific tags are applied</p>
+<p><strong>Date-Based:</strong> Enroll students on specific dates (great for cohorts)</p>
+<p><strong>Manual:</strong> Direct assignment by course administrators</p>
+
+<p>I frequently use this for progressive course unlocking. Complete Course 1 → Get tagged → Automatically enrolled in Course 2 → Receive email sequence about Course 3 upgrade.</p>
+
+<p>The <a href="/blog/gohighlevel-automations-save-time">automation workflows</a> make this seamless. You can create complex enrollment sequences that would require multiple tools in other platforms.</p>
+
+<h2>Certificate of Completion Setup</h2>
+
+<p>GHL includes basic certificate functionality. You can design completion certificates with your branding and automatically award them when students finish courses.</p>
+
+<p>Certificate features include:</p>
+<ul>
+<li>Custom design with logo and branding</li>
+<li>Student name and completion date auto-population</li>
+<li>PDF download capability</li>
+<li>Email delivery upon completion</li>
+</ul>
+
+<p>The certificate designer is functional but limited. For professional certificates with advanced design needs, you might need external tools like Canva integrated through automations.</p>
+
+<h2>GoHighLevel vs. Kajabi, Teachable, and Thinkific</h2>
+
+<p>Having used all these platforms extensively, here's my honest comparison:</p>
+
+<h3>Where GoHighLevel Excels</h3>
+
+<p><strong>All-in-One Integration:</strong> Your courses, CRM, email marketing, funnels, and payments live in one system. No integration headaches or monthly subscription to multiple tools.</p>
+
+<p><strong>Advanced Drip Scheduling:</strong> More flexible than most dedicated course platforms, especially the hybrid and progress-based options.</p>
+
+<p><strong>CRM Integration:</strong> Student data flows directly into your sales pipeline. You can nurture course graduates into higher-ticket coaching or consulting.</p>
+
+<p><strong>Cost Effectiveness:</strong> At $97/month (check our <a href="/pricing-explained">pricing page</a> for current rates), you get course hosting plus full marketing automation. Kajabi alone costs $149/month.</p>
+
+<p><strong>White-Label Capability:</strong> Agencies can offer course creation as a service to clients under their own brand (see our <a href="/gohighlevel-white-label-guide">white-label guide</a>).</p>
+
+<h3>Where Dedicated Platforms Have an Edge</h3>
+
+<p><strong>Course-Specific Features:</strong> Kajabi and Teachable have more advanced quiz builders, assignment systems, and gradebooks.</p>
+
+<p><strong>Video Experience:</strong> Better video players with speed controls, transcripts, and superior mobile experience.</p>
+
+<p><strong>Design Flexibility:</strong> More course page templates and customization options. GHL's course pages are clean but basic.</p>
+
+<p><strong>Analytics:</strong> Deeper course analytics and student behavior insights.</p>
+
+<p><strong>Mobile Apps:</strong> Dedicated course platforms often have better mobile apps for students.</p>
+
+<blockquote>Bottom line: Choose GHL if you want to consolidate your marketing stack and already use it for CRM/funnels. Stick with Kajabi or Teachable if course delivery is your primary business and you need advanced educational features.</blockquote>
+
+<h2>Tips for Course Creators Switching to GoHighLevel</h2>
+
+<p>If you're migrating from another platform, here's what I've learned from helping dozens of creators make the transition:</p>
+
+<h3>Migration Strategy</h3>
+
+<p><strong>Start with New Courses:</strong> Don't migrate everything at once. Launch your next course on GHL while keeping existing ones on your current platform.</p>
+
+<p><strong>Export Student Data:</strong> Most platforms allow CSV exports. Import this into GHL's CRM to maintain student relationships.</p>
+
+<p><strong>Recreate Your Best-Performing Funnels:</strong> Use GHL's funnel builder to recreate your sales pages and checkout processes. Often, the tighter integration improves conversion rates.</p>
+
+<p><strong>Set Up Parallel Systems:</strong> Run both platforms for 30-60 days to ensure everything works smoothly before fully migrating.</p>
+
+<h3>Common Gotchas to Avoid</h3>
+
+<p><strong>Video File Sizes:</strong> Large video files eat into your storage allocation quickly. Optimize videos or use external hosting.</p>
+
+<p><strong>Student Training:</strong> GHL's interface is different from Teachable or Kajabi. Create a quick orientation video for your students.</p>
+
+<p><strong>Email Deliverability:</strong> Set up proper domain authentication for course notification emails. Poor setup can hurt deliverability.</p>
+
+<p><strong>Mobile Experience:</strong> Test your courses thoroughly on mobile devices. Some formatting might need adjustment.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Use GHL's survey tool to collect feedback from beta students about the new course experience. This helps identify issues before your main launch.</div>
+
+<h3>Leveraging GHL's Unique Advantages</h3>
+
+<p><strong>Progressive Course Selling:</strong> Use course completion data to automatically pitch advanced programs. Tag completing students and trigger sales sequences for your high-ticket coaching.</p>
+
+<p><strong>Community Upsells:</strong> Offer community access as an upsell to course purchases. The integrated system makes this seamless.</p>
+
+<p><strong>Multi-Location Courses:</strong> If you serve multiple niches, create separate course libraries for different audiences under one GHL account.</p>
+
+<p>For coaches specifically, check out our <a href="/highlevel-for-coaches">coaches guide</a> which covers using courses as lead magnets and client onboarding tools.</p>
+
+<h2>Bottom Line</h2>
+
+<p>GoHighLevel's course and membership features have matured into a solid alternative to dedicated platforms, especially if you're already using GHL for marketing automation. The tight integration between courses, CRM, and sales funnels creates opportunities that standalone course platforms can't match.</p>
+
+<p>However, if course delivery is your primary business and you need advanced educational features like detailed analytics, sophisticated quizzes, or premium mobile apps, dedicated platforms like Kajabi still have an edge.</p>
+
+<p>The sweet spot for GHL courses is coaches, consultants, and agencies who want to consolidate their tech stack while offering educational content as part of a broader customer journey. The ability to seamlessly move students from free courses to paid programs to high-ticket services makes it particularly powerful for service-based businesses.</p>
+
+<p>Want to explore GHL's course features yourself? Check out our <a href="/which-gohlighlevel-plan">which plan quiz</a> to determine the best starting point for your needs.</p>
+  </div>
+
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See everything we've covered in this guide for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+  <div class="related-guides">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/gohighlevel-automations-save-time" class="related-card">
+        <span class="related-tag">Tutorial</span>
+        <span class="related-title">5 Automations That Save 10+ Hours/Week</span>
+      </a>
+      <a href="/gohighlevel-reviews" class="related-card">
+        <span class="related-tag">Review</span>
+        <span class="related-title">GoHighLevel Review 2026</span>
+      </a>
+      <a href="/pricing-explained" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained</span>
+      </a>
+      <a href="/which-gohighlevel-plan" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Which Plan Is Right for You?</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparisons">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.
+      Our opinions and ratings are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>

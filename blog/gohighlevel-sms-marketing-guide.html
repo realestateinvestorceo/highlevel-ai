@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>GoHighLevel SMS Marketing: Setup, Compliance & Campaign Strategies</title>
+<meta name="description" content="How to set up SMS marketing in GoHighLevel — Twilio integration, A2P 10DLC registration, compliance rules, and campaign templates that convert.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-sms-marketing-guide">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel SMS Marketing: Setup, Compliance & Campaign Strategies">
+<meta property="og:description" content="How to set up SMS marketing in GoHighLevel — Twilio integration, A2P 10DLC registration, compliance rules, and campaign templates that convert.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-sms-marketing-guide">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-02T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-02">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel SMS Marketing: Setup, Compliance & Campaign Strategies">
+<meta name="twitter:description" content="How to set up SMS marketing in GoHighLevel — Twilio integration, A2P 10DLC registration, compliance rules, and campaign templates that convert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GoHighLevel SMS Marketing: Setup, Compliance & Campaign Strategies",
+  "description": "How to set up SMS marketing in GoHighLevel — Twilio integration, A2P 10DLC registration, compliance rules, and campaign templates that convert.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-sms-marketing-guide",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "GoHighLevel SMS Marketing"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    touch-action: manipulation;
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .content-block {
+    max-width: 780px; margin: 0 auto; font-size: 16px;
+    line-height: 1.8; color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--text-primary); margin: 48px 0 20px; letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 24px; color: var(--text-secondary);
+  }
+  .content-block li { margin-bottom: 8px; line-height: 1.7; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .content-block a:hover { color: #fff; }
+  .content-block code {
+    background: var(--bg-card); padding: 2px 8px; border-radius: 4px;
+    font-size: 14px; color: var(--accent-orange);
+  }
+  .content-block pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px; margin: 20px 0;
+    overflow-x: auto; font-size: 14px; line-height: 1.6;
+  }
+  .content-block blockquote {
+    border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0;
+    background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary); font-style: italic;
+  }
+  .tip-box {
+    background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box {
+    background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box strong { color: var(--accent-orange); }
+  .summary-box {
+    background: var(--bg-card); border: 1px solid var(--border-accent);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 40px;
+  }
+  .summary-box p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px; padding: 20px 24px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+  }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary); text-decoration: none;
+    border-bottom: 1px solid transparent; transition: all 0.2s;
+  }
+  .toc-links li a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+  .final-cta { padding: 80px 0; text-align: center; }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent); border-radius: 24px;
+    padding: 64px 48px; position: relative; overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; position: relative;
+  }
+  .final-cta p { color: var(--text-secondary); font-size: 17px; max-width: 560px; margin: 0 auto 32px; position: relative; }
+  .final-cta .btn { position: relative; }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+  .page-section { padding: 70px 0; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 16px; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c;
+    position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .headless-data {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .animate-on-scroll { transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-enabled .animate-on-scroll { opacity: 0; transform: translateY(24px); }
+  .js-enabled .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px); padding: 20px 24px;
+      border-bottom: 1px solid var(--border); gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>GoHighLevel SMS Marketing</span>
+  </nav>
+
+  <div class="article-header">
+    <div class="section-tag">Tutorial</div>
+    <h1>GoHighLevel SMS Marketing: Setup, Compliance & Campaign Strategies</h1>
+    <p style="color:var(--text-secondary); font-size:18px; line-height:1.6; margin-bottom:24px;">How to set up SMS marketing in GoHighLevel — Twilio integration, A2P 10DLC registration, compliance rules, and campaign templates that convert.</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 02, 2026 &bull; 12 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block" id="article-content">
+    <p>SMS marketing in GoHighLevel is incredibly powerful—when done right. But here's the thing: most people jump straight into sending messages without understanding compliance requirements, and that's where they get into serious trouble. After six years of using GoHighLevel and helping hundreds of agencies set up SMS campaigns, I've seen the good, the bad, and the downright expensive mistakes.</p>
+
+<p>This guide covers everything you need to know about SMS marketing in GoHighLevel, with heavy emphasis on staying compliant and avoiding costly violations.</p>
+
+<h2>Setting Up Your Twilio Account and Connecting to GoHighLevel</h2>
+
+<p>Before you can send a single text message through GoHighLevel, you need a phone service provider. While GoHighLevel offers LC Phone (we'll cover that later), most users start with Twilio because it's been the standard integration for years.</p>
+
+<h3>Step 1: Create Your Twilio Account</h3>
+
+<p>Head to Twilio's website and create a new account. You'll need to verify your identity with a phone number and email address. Twilio will give you $15 in free credits to start testing.</p>
+
+<h3>Step 2: Get Your API Credentials</h3>
+
+<p>Once logged into Twilio, locate your <strong>Account SID</strong> and <strong>Auth Token</strong> in the upper right corner of your dashboard. These are your API credentials that allow GoHighLevel to communicate with Twilio.</p>
+
+<h3>Step 3: Connect Twilio to GoHighLevel</h3>
+
+<ol>
+<li>In GoHighLevel, navigate to Settings → Phone Numbers</li>
+<li>Click "Add Provider" and select Twilio</li>
+<li>Enter your Account SID and Auth Token</li>
+<li>Click "Connect"</li>
+</ol>
+
+<h3>Step 4: Test the Connection</h3>
+
+<p>Send a test message to your own phone number to verify everything is working. Check both your phone and the communication logs in GoHighLevel to confirm delivery.</p>
+
+<div class="warning-box"><strong>Important:</strong> Do not start any marketing campaigns until you complete A2P 10DLC registration. Sending marketing messages without proper registration can result in heavy filtering or blocked messages.</div>
+
+<h2>A2P 10DLC Registration: The Non-Negotiable Step</h2>
+
+<p>A2P (Application-to-Person) 10DLC registration is required by U.S. carriers for all business SMS messaging. This isn't optional—it's mandatory for any marketing or promotional messages.</p>
+
+<h3>Why A2P 10DLC Exists</h3>
+
+<p>Carriers implemented A2P 10DLC to reduce spam and improve message deliverability. Without registration, your messages will be filtered, blocked, or heavily throttled.</p>
+
+<h3>Step-by-Step A2P 10DLC Registration Process</h3>
+
+<ol>
+<li><strong>Brand Registration:</strong> Register your business brand with Twilio, including business name, EIN, website, and business type</li>
+<li><strong>Brand Verification:</strong> Provide documentation like articles of incorporation or business licenses</li>
+<li><strong>Campaign Registration:</strong> Define your use cases (promotional, customer service, etc.)</li>
+<li><strong>Number Assignment:</strong> Assign your 10DLC numbers to approved campaigns</li>
+</ol>
+
+<h3>Costs and Timeline</h3>
+
+<ul>
+<li><strong>Brand Registration:</strong> $4 one-time fee</li>
+<li><strong>Campaign Registration:</strong> $10 one-time fee per campaign</li>
+<li><strong>Monthly Fees:</strong> $2-15 per month depending on throughput requirements</li>
+<li><strong>Timeline:</strong> 1-3 weeks for standard brands, up to 6-8 weeks for special verification</li>
+</ul>
+
+<div class="tip-box"><strong>Pro tip:</strong> Start your A2P 10DLC registration immediately, even before you're ready to send messages. The approval process takes time, and you can't send marketing messages without it.</div>
+
+<h2>Phone Number Setup: Local vs Toll-Free</h2>
+
+<p>Choosing the right phone numbers affects both deliverability and costs.</p>
+
+<h3>Local Numbers (10DLC)</h3>
+
+<ul>
+<li><strong>Cost:</strong> $1-2 per month per number</li>
+<li><strong>Best for:</strong> Two-way conversations, customer service, appointment reminders</li>
+<li><strong>Throughput:</strong> 75-4,500 messages per day (depending on brand verification)</li>
+<li><strong>Requirements:</strong> Must complete A2P 10DLC registration</li>
+</ul>
+
+<h3>Toll-Free Numbers</h3>
+
+<ul>
+<li><strong>Cost:</strong> $2-5 per month per number</li>
+<li><strong>Best for:</strong> High-volume campaigns, promotional messages</li>
+<li><strong>Throughput:</strong> Up to 1,000 messages per day initially</li>
+<li><strong>Requirements:</strong> Toll-free verification process required</li>
+</ul>
+
+<p>In my experience, most small businesses should start with local numbers for personalized communication, then add toll-free numbers as volume increases.</p>
+
+<h2>TCPA Compliance: The Make-or-Break Factor</h2>
+
+<p>TCPA (Telephone Consumer Protection Act) violations can cost $500-1,500 per message. I've seen businesses face five and six-figure lawsuits for non-compliance. Here's what you absolutely must know:</p>
+
+<h3>Opt-In Requirements</h3>
+
+<p><strong>Express Written Consent</strong> is required for all marketing messages. This means:</p>
+
+<ul>
+<li>Clear disclosure that person is agreeing to receive text messages</li>
+<li>Your business name and phone number</li>
+<li>Statement that consent isn't required to purchase</li>
+<li>Information about message/data rates</li>
+</ul>
+
+<p>Example compliant opt-in: "By clicking Submit, you consent to receive marketing text messages from [Business Name] at the number provided, including messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel."</p>
+
+<h3>Opt-Out Handling</h3>
+
+<p>GoHighLevel automatically handles STOP requests, but you need to understand the rules:</p>
+
+<ul>
+<li>Must honor STOP, CANCEL, END, QUIT, UNSUBSCRIBE, and similar keywords</li>
+<li>Must stop messages within a reasonable time (typically within 5 minutes)</li>
+<li>Can send one final confirmation message</li>
+<li>Cannot charge for processing opt-out requests</li>
+</ul>
+
+<h3>Quiet Hours</h3>
+
+<p>Never send marketing messages outside 8 AM - 9 PM in the recipient's time zone. GoHighLevel can handle this automatically if you set it up correctly.</p>
+
+<div class="warning-box"><strong>Important:</strong> TCPA compliance is your responsibility, not GoHighLevel's or Twilio's. When in doubt, consult with an attorney specializing in TCPA law.</div>
+
+<h2>SMS Campaign Types in GoHighLevel</h2>
+
+<p>GoHighLevel supports three main types of SMS campaigns, each serving different purposes:</p>
+
+<h3>Broadcast Messages</h3>
+
+<p>One-time messages sent to a list of contacts. Perfect for announcements, promotions, or event reminders. Use the Campaigns section to set up broadcasts with proper filtering and scheduling.</p>
+
+<h3>Drip Sequences</h3>
+
+<p>Automated series of messages sent over time. These work great for onboarding new customers or nurturing leads. Set these up in the <a href="/blog/gohighlevel-automations-save-time">automation workflows</a> section.</p>
+
+<h3>Triggered Messages</h3>
+
+<p>Messages sent based on specific actions or events, like form submissions, appointment bookings, or website visits. These typically have the highest engagement rates because they're contextually relevant.</p>
+
+<h2>SMS Templates That Actually Convert</h2>
+
+<p>After testing thousands of messages, here are the templates that consistently perform best:</p>
+
+<h3>Appointment Reminders</h3>
+
+<p>"Hi [First Name], this is [Business Name] confirming your appointment tomorrow at [Time]. Please reply YES to confirm or RESCHEDULE if you need to change. See you soon!"</p>
+
+<h3>Follow-Up After Service</h3>
+
+<p>"Hi [First Name], thanks for choosing [Business Name] today! How was your experience? If you loved it, we'd appreciate a quick review: [Link]. Reply STOP to opt out."</p>
+
+<h3>Promotional Messages</h3>
+
+<p>"[First Name], exclusive offer for you! 20% off your next [Service] when you book by Friday. Ready to schedule? Reply YES or call [Phone]. Expires [Date]. Reply STOP to opt out."</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Keep messages under 160 characters when possible to avoid multi-segment charges. Every 160 characters counts as one message segment.</div>
+
+<h2>Two-Way SMS Conversations</h2>
+
+<p>One of GoHighLevel's strongest features is handling two-way SMS conversations. When prospects reply to your messages, they appear in the conversations tab where your team can respond in real-time.</p>
+
+<p>Best practices for two-way conversations:</p>
+
+<ul>
+<li>Respond quickly (within 5 minutes if possible)</li>
+<li>Use saved replies for common questions</li>
+<li>Set up auto-responses for after-hours inquiries</li>
+<li>Train your team on professional texting etiquette</li>
+</ul>
+
+<h2>SMS Costs Breakdown</h2>
+
+<p>Understanding SMS costs helps you budget effectively and avoid surprises.</p>
+
+<h3>Twilio Pricing Structure</h3>
+
+<ul>
+<li><strong>Outbound SMS:</strong> $0.0079 per message segment</li>
+<li><strong>Inbound SMS:</strong> $0.0079 per message segment</li>
+<li><strong>Phone numbers:</strong> $1-5 per month depending on type</li>
+<li><strong>A2P 10DLC fees:</strong> $4-25 one-time plus monthly throughput fees</li>
+</ul>
+
+<h3>What Counts as a Message Segment</h3>
+
+<ul>
+<li>Standard SMS: 160 characters = 1 segment</li>
+<li>Unicode (emojis, special characters): 70 characters = 1 segment</li>
+<li>Messages over the limit split into multiple segments</li>
+<li>Each segment is charged separately</li>
+</ul>
+
+<p>Example: A 200-character message counts as 2 segments and costs $0.0158 to send.</p>
+
+<h2>LC Phone: The Twilio Alternative</h2>
+
+<p>GoHighLevel's LC Phone system launched as an alternative to third-party providers like Twilio. Here's how it compares:</p>
+
+<h3>LC Phone Advantages</h3>
+
+<ul>
+<li>Integrated directly into GoHighLevel (no separate setup)</li>
+<li>Simpler compliance handling</li>
+<li>Unified billing with your GoHighLevel subscription</li>
+<li>Voice calling included</li>
+</ul>
+
+<h3>LC Phone Limitations</h3>
+
+<ul>
+<li>Less control over advanced features</li>
+<li>Potentially higher costs for high-volume users</li>
+<li>Newer system with fewer integration options</li>
+</ul>
+
+<p>For most small businesses, LC Phone is the easier choice. For agencies managing multiple clients or high-volume senders, Twilio often provides better value and flexibility.</p>
+
+<h2>Common SMS Mistakes and How to Avoid Them</h2>
+
+<p>I've seen these mistakes cost businesses thousands of dollars and damage their reputations:</p>
+
+<h3>Mistake 1: Sending Messages Without Proper Consent</h3>
+
+<p><strong>Problem:</strong> Using purchased lists or adding people who didn't explicitly opt in.<br>
+<strong>Solution:</strong> Only message people who opted in through your own forms or gave verbal consent.</p>
+
+<h3>Mistake 2: Ignoring Quiet Hours</h3>
+
+<p><strong>Problem:</strong> Sending promotional messages at 11 PM or 6 AM.<br>
+<strong>Solution:</strong> Configure GoHighLevel to respect quiet hours (8 AM - 9 PM recipient's timezone).</p>
+
+<h3>Mistake 3: Not Testing Messages</h3>
+
+<p><strong>Problem:</strong> Sending campaigns with broken links, wrong personalization, or formatting issues.<br>
+<strong>Solution:</strong> Always send test messages to yourself before launching campaigns.</p>
+
+<h3>Mistake 4: Overcomplicating Opt-In Language</h3>
+
+<p><strong>Problem:</strong> Using confusing legal language that doesn't actually provide proper consent.<br>
+<strong>Solution:</strong> Use clear, simple language that explicitly states what people are agreeing to.</p>
+
+<h3>Mistake 5: Not Monitoring Deliverability</h3>
+
+<p><strong>Problem:</strong> Continuing to send messages when delivery rates drop, indicating filtering issues.<br>
+<strong>Solution:</strong> Monitor delivery rates and investigate any significant drops.</p>
+
+<div class="warning-box"><strong>Important:</strong> These compliance issues are serious. If you're unsure about any aspect of SMS compliance, consult with a qualified attorney before launching campaigns.</div>
+
+<blockquote>SMS marketing can be incredibly effective when done properly. The key is prioritizing compliance first, then focusing on creating valuable, timely messages that recipients actually want to receive.</blockquote>
+
+<h2>Bottom Line</h2>
+
+<p>SMS marketing in GoHighLevel is powerful, but it requires careful attention to compliance and best practices. Start with proper A2P 10DLC registration, ensure you have explicit consent from all recipients, and focus on providing value rather than just pushing sales messages. Whether you choose Twilio or LC Phone, the fundamentals remain the same: respect your audience, follow the law, and measure your results.</p>
+
+<p>If you're just getting started with GoHighLevel, check out our <a href="/gohighlevel-reviews">GoHighLevel review</a> for a complete overview of the platform's capabilities, or use our <a href="/which-gohighlevel-plan">which plan quiz</a> to determine the best subscription level for your needs.</p>
+  </div>
+
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See everything we've covered in this guide for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+  <div class="related-guides">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/gohighlevel-automations-save-time" class="related-card">
+        <span class="related-tag">Tutorial</span>
+        <span class="related-title">5 Automations That Save 10+ Hours/Week</span>
+      </a>
+      <a href="/gohighlevel-reviews" class="related-card">
+        <span class="related-tag">Review</span>
+        <span class="related-title">GoHighLevel Review 2026</span>
+      </a>
+      <a href="/pricing-explained" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained</span>
+      </a>
+      <a href="/which-gohighlevel-plan" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Which Plan Is Right for You?</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparisons">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.
+      Our opinions and ratings are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>

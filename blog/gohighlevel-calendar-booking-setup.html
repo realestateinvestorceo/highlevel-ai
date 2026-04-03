@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<title>GoHighLevel Calendar & Booking Setup: The Complete Guide</title>
+<meta name="description" content="How to set up GoHighLevel's calendar system — appointment types, availability, reminders, round-robin booking, and reducing no-shows.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-calendar-booking-setup">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel Calendar & Booking Setup: The Complete Guide">
+<meta property="og:description" content="How to set up GoHighLevel's calendar system — appointment types, availability, reminders, round-robin booking, and reducing no-shows.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-calendar-booking-setup">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-02T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-02">
+<meta property="article:author" content="Josh Miller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel Calendar & Booking Setup: The Complete Guide">
+<meta name="twitter:description" content="How to set up GoHighLevel's calendar system — appointment types, availability, reminders, round-robin booking, and reducing no-shows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GoHighLevel Calendar & Booking Setup: The Complete Guide",
+  "description": "How to set up GoHighLevel's calendar system — appointment types, availability, reminders, round-robin booking, and reducing no-shows.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.highlevel.ai/og-image.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Josh Miller",
+    "jobTitle": "Marketing Technology Consultant",
+    "url": "https://www.highlevel.ai/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-calendar-booking-setup",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "highlevel.ai",
+    "url": "https://www.highlevel.ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "GoHighLevel Calendar & Booking Setup"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: '';
+    position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: '';
+    position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    touch-action: manipulation;
+    color: var(--text-secondary); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px; position: relative;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px; background: var(--text-primary);
+    border-radius: 2px; transition: all 0.3s;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 700;
+    font-size: 15px; text-decoration: none; cursor: pointer;
+    border: none; transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(79,125,249,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .btn-nav {
+    padding: 10px 22px; font-size: 13px;
+    background: var(--accent); color: #fff; border-radius: 50px;
+    text-decoration: none; font-weight: 600; transition: all 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-bright); transform: translateY(-1px); }
+  .section-tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2.5px; color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .content-block {
+    max-width: 780px; margin: 0 auto; font-size: 16px;
+    line-height: 1.8; color: var(--text-secondary);
+  }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 {
+    font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--text-primary); margin: 48px 0 20px; letter-spacing: -0.5px;
+  }
+  .content-block h3 {
+    font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin: 36px 0 14px;
+  }
+  .content-block ul, .content-block ol {
+    margin: 0 0 20px 24px; color: var(--text-secondary);
+  }
+  .content-block li { margin-bottom: 8px; line-height: 1.7; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .content-block a:hover { color: #fff; }
+  .content-block code {
+    background: var(--bg-card); padding: 2px 8px; border-radius: 4px;
+    font-size: 14px; color: var(--accent-orange);
+  }
+  .content-block pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px; margin: 20px 0;
+    overflow-x: auto; font-size: 14px; line-height: 1.6;
+  }
+  .content-block blockquote {
+    border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0;
+    background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary); font-style: italic;
+  }
+  .tip-box {
+    background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box {
+    background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2);
+    border-radius: var(--radius); padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box strong { color: var(--accent-orange); }
+  .summary-box {
+    background: var(--bg-card); border: 1px solid var(--border-accent);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 40px;
+  }
+  .summary-box p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+  .toc-bar {
+    max-width: 780px; margin: 0 auto 40px; padding: 20px 24px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .toc-bar p {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+  }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; }
+  .toc-links li a {
+    font-size: 13px; color: var(--text-secondary); text-decoration: none;
+    border-bottom: 1px solid transparent; transition: all 0.2s;
+  }
+  .toc-links li a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+  .final-cta { padding: 80px 0; text-align: center; }
+  .final-cta-box {
+    background: linear-gradient(135deg, rgba(79,125,249,0.08), rgba(52,211,153,0.04));
+    border: 1px solid var(--border-accent); border-radius: 24px;
+    padding: 64px 48px; position: relative; overflow: hidden;
+  }
+  .final-cta-box::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(79,125,249,0.1), transparent 60%);
+  }
+  .final-cta h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; position: relative;
+  }
+  .final-cta p { color: var(--text-secondary); font-size: 17px; max-width: 560px; margin: 0 auto 32px; position: relative; }
+  .final-cta .btn { position: relative; }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure {
+    max-width: 640px; margin: 16px auto 0;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  }
+  .page-section { padding: 70px 0; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-green));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0;
+  }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 16px; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .related-guides { max-width: 780px; margin: 60px auto 0; }
+  .related-guides h2 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; text-decoration: none; transition: all 0.3s; }
+  .related-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .related-tag { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-bright); margin-bottom: 6px; }
+  .related-title { display: block; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c;
+    position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .headless-data {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .animate-on-scroll { transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-enabled .animate-on-scroll { opacity: 0; transform: translateY(24px); }
+  .js-enabled .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: rgba(10,10,15,0.95);
+      backdrop-filter: blur(20px); padding: 20px 24px;
+      border-bottom: 1px solid var(--border); gap: 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links { max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .nav-toggle { display: flex; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<script>document.documentElement.classList.add('js-enabled');</script>
+
+<div class="ambient-bg"></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#comparisons">Comparisons</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<article>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>GoHighLevel Calendar & Booking Setup</span>
+  </nav>
+
+  <div class="article-header">
+    <div class="section-tag">Tutorial</div>
+    <h1>GoHighLevel Calendar & Booking Setup: The Complete Guide</h1>
+    <p style="color:var(--text-secondary); font-size:18px; line-height:1.6; margin-bottom:24px;">How to set up GoHighLevel's calendar system — appointment types, availability, reminders, round-robin booking, and reducing no-shows.</p>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">Marketing Technology Consultant</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 02, 2026 &bull; 12 min read</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block" id="article-content">
+    <p>Setting up GoHighLevel's calendar system correctly can be the difference between a smooth booking flow that converts prospects into customers and a broken experience that sends them to your competitors. After six years of using GoHighLevel, I've seen agencies transform their appointment scheduling from chaos to clockwork with the right calendar configuration.</p>
+
+<p>This guide covers everything you need to master GoHighLevel's calendar and booking system, from basic setup to advanced no-show recovery workflows that save thousands in lost revenue.</p>
+
+<h2>Understanding GoHighLevel Calendar Types</h2>
+
+<p>GoHighLevel offers four distinct calendar types, each designed for specific use cases:</p>
+
+<h3>Personal Calendar</h3>
+<p>Best for solo practitioners or when you want specific team members handling their own bookings. Personal calendars sync directly with individual Google or Outlook calendars and respect existing appointments.</p>
+
+<h3>Round-Robin Calendar</h3>
+<p>Essential for sales teams and service providers who need fair distribution of appointments. The system automatically assigns bookings to the next available team member based on your chosen distribution logic.</p>
+
+<h3>Class/Group Calendar</h3>
+<p>Perfect for workshops, webinars, or group coaching sessions. Multiple people can book the same time slot up to your specified capacity limit.</p>
+
+<h3>Service Calendar</h3>
+<p>Designed for businesses offering multiple services with different durations and team requirements. Each service can have unique pricing, duration, and staff assignments.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Most agencies I work with start with personal calendars for initial client calls, then add round-robin calendars as they scale their sales teams.</div>
+
+<h2>Setting Up Your First Calendar</h2>
+
+<p>Navigate to <strong>Calendars</strong> in your GoHighLevel sub-account's left menu, then click <strong>+ New Calendar</strong>.</p>
+
+<h3>Basic Configuration</h3>
+<ol>
+<li><strong>Calendar Name:</strong> Use descriptive names like "Discovery Call - Sales Team" or "Strategy Session - John"</li>
+<li><strong>Duration:</strong> Set realistic appointment lengths (15-60 minutes typical)</li>
+<li><strong>Buffer Time:</strong> Add 5-15 minutes before/after to prevent back-to-back scheduling stress</li>
+<li><strong>Booking Window:</strong> I recommend 14-30 days out for most service businesses</li>
+<li><strong>Minimum Notice:</strong> Set at least 2-4 hours to avoid last-minute bookings</li>
+</ol>
+
+<h3>Availability Settings</h3>
+<p>Configure your working hours carefully. GoHighLevel respects these settings religiously, so if you set Tuesday availability as 9 AM - 12 PM, no appointments will be available outside that window.</p>
+
+<ul>
+<li><strong>Daily Hours:</strong> Set realistic windows that account for lunch, administrative tasks, and buffer time</li>
+<li><strong>Timezone Display:</strong> Choose whether to show your timezone or the prospect's timezone</li>
+<li><strong>Weekend Availability:</strong> Most B2B services should disable weekend bookings unless specifically needed</li>
+</ul>
+
+<div class="warning-box"><strong>Important:</strong> Always test your calendar availability from a different timezone to ensure it displays correctly for prospects across different regions.</div>
+
+<h2>Creating Appointment Types</h2>
+
+<p>Different appointment purposes require different configurations. Here's how I set up the most common types:</p>
+
+<h3>Discovery Call Setup</h3>
+<ul>
+<li><strong>Duration:</strong> 30 minutes</li>
+<li><strong>Buffer:</strong> 15 minutes after</li>
+<li><strong>Questions:</strong> Company name, current challenges, budget range</li>
+<li><strong>Confirmation:</strong> Include meeting agenda and preparation instructions</li>
+</ul>
+
+<h3>Consultation Appointment</h3>
+<ul>
+<li><strong>Duration:</strong> 45-60 minutes</li>
+<li><strong>Buffer:</strong> 30 minutes after for notes and follow-up</li>
+<li><strong>Requirements:</strong> Mandate phone number and specific pain points</li>
+<li><strong>Preparation:</strong> Send intake form link in confirmation</li>
+</ul>
+
+<h3>Service Appointment</h3>
+<ul>
+<li><strong>Duration:</strong> Varies by service</li>
+<li><strong>Location:</strong> Include address or video link</li>
+<li><strong>Preparation:</strong> Service-specific instructions and requirements</li>
+<li><strong>Payment:</strong> Link to payment processor if deposit required</li>
+</ul>
+
+<h2>Embedding Calendar on Your Website</h2>
+
+<p>GoHighLevel provides multiple embedding options for seamless integration:</p>
+
+<h3>Inline Embed</h3>
+<p>Copy the provided iframe code and paste it directly into your webpage. This creates a seamless booking experience without redirecting visitors.</p>
+
+<h3>Popup Widget</h3>
+<p>Add the popup script to your site's header, then use the trigger button code where you want the booking popup to appear. I've found this increases conversion rates by 15-20% compared to separate booking pages.</p>
+
+<h3>Funnel Integration</h3>
+<p>When building funnels in GoHighLevel, drag the calendar element directly onto your page. This creates the cleanest integration and fastest loading times.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Place calendars after value-building content, not immediately. Prospects who understand your value before seeing the booking form convert 3x higher in my experience.</div>
+
+<h2>Calendar Booking Links and QR Codes</h2>
+
+<p>Every calendar generates a unique booking URL that you can share directly:</p>
+
+<ul>
+<li><strong>Email Signatures:</strong> Include your booking link for easy scheduling</li>
+<li><strong>Social Media:</strong> Use in LinkedIn messages, Facebook posts, and Instagram bios</li>
+<li><strong>QR Codes:</strong> Generate QR codes for business cards, flyers, and in-person networking</li>
+<li><strong>SMS Campaigns:</strong> Include shortened booking links in text message sequences</li>
+</ul>
+
+<h3>Link Customization</h3>
+<p>Customize your booking URLs with UTM parameters to track which marketing channels drive the most appointments. This data is crucial for optimizing your marketing spend.</p>
+
+<h2>Round-Robin Booking for Teams</h2>
+
+<p>Round-robin distribution ensures fair appointment allocation and prevents team burnout. Here's my tested setup process:</p>
+
+<h3>Team Member Requirements</h3>
+<ol>
+<li>Each team member needs a GoHighLevel user account</li>
+<li>Connected Google or Outlook calendar with correct timezone</li>
+<li>Defined availability hours that match business needs</li>
+</ol>
+
+<h3>Distribution Logic Options</h3>
+
+<h4>Equal Rotation</h4>
+<p>Assigns appointments in sequence, ensuring each team member gets the same number of bookings over time.</p>
+
+<h4>Next Available</h4>
+<p>Assigns to whoever has the earliest available slot, which can favor team members with more open availability.</p>
+
+<h4>Priority-Based</h4>
+<p>Allows weighting team members differently. Senior closers might get 60% of bookings while junior staff get 40%.</p>
+
+<div class="tip-box"><strong>Pro tip:</strong> Enable "Always Book with Assigned User" to prioritize existing contact relationships over round-robin distribution. This increases show rates significantly.</div>
+
+<h3>Advanced Round-Robin Settings</h3>
+<ul>
+<li><strong>Staff Selection:</strong> Turn off to enforce true round-robin, or enable to let prospects choose their preferred team member</li>
+<li><strong>Reassignment Rules:</strong> Configure whether rescheduled appointments go back through round-robin or stay with the original assignee</li>
+<li><strong>Maximum Daily Bookings:</strong> Prevent team member overload by capping daily appointments</li>
+</ul>
+
+<h2>Automated Reminders That Reduce No-Shows</h2>
+
+<p>No-shows kill revenue and waste time. My reminder sequence reduces no-shows by 40-60%:</p>
+
+<h3>24-Hour Reminder (Email + SMS)</h3>
+<p><strong>SMS Template:</strong></p>
+<blockquote>Hi {{contact.first_name}}, this is a reminder about your {{calendar.appointment_type}} tomorrow at {{calendar.appointment_time}}. We're looking forward to speaking with you! Reply STOP to opt out.</blockquote>
+
+<p><strong>Email Template:</strong></p>
+<blockquote>Subject: Tomorrow's {{calendar.appointment_type}} - What to Expect<br><br>Hi {{contact.first_name}},<br><br>Just confirming your {{calendar.appointment_type}} tomorrow ({{calendar.appointment_date}}) at {{calendar.appointment_time}}.<br><br>We'll be discussing:<br>• Your current challenges with [topic]<br>• Potential solutions we can provide<br>• Next steps if there's a good fit<br><br>Please have [specific preparation items] ready.<br><br>Looking forward to our conversation!<br><br>Best regards,<br>{{user.name}}</blockquote>
+
+<h3>1-Hour Reminder (SMS Only)</h3>
+<p><strong>SMS Template:</strong></p>
+<blockquote>{{contact.first_name}}, your {{calendar.appointment_type}} with {{user.name}} starts in 1 hour. [Include meeting link if virtual] See you soon!</blockquote>
+
+<h3>Setting Up Reminder Workflows</h3>
+<p>Create <a href="/blog/gohighlevel-automations-save-time">automation workflows</a> triggered by "Appointment Booked" events. Add delays of 24 hours and 1 hour before the appointment time, then send your reminder messages.</p>
+
+<h2>Follow-Up Sequences After Appointments</h2>
+
+<p>The money is in the follow-up. Configure workflows triggered by appointment completion:</p>
+
+<h3>Immediate Follow-Up (5 minutes after)</h3>
+<ul>
+<li>Thank you message</li>
+<li>Meeting recap or promised resources</li>
+<li>Next steps clearly outlined</li>
+<li>Calendar link for follow-up appointments if needed</li>
+</ul>
+
+<h3>24-Hour Follow-Up</h3>
+<ul>
+<li>Check if they have additional questions</li>
+<li>Provide additional value (case studies, testimonials)</li>
+<li>Soft pitch for next step in sales process</li>
+</ul>
+
+<h3>1-Week Follow-Up</h3>
+<ul>
+<li>Nurture sequence begins</li>
+<li>Industry insights and tips</li>
+<li>Social proof and success stories</li>
+</ul>
+
+<h2>Rescheduling and Cancellation Policies</h2>
+
+<p>Clear policies protect your time while maintaining good customer relationships:</p>
+
+<h3>Rescheduling Settings</h3>
+<ul>
+<li><strong>Lead Time:</strong> Require at least 4-hour notice for rescheduling</li>
+<li><strong>Limit:</strong> Allow maximum 2 reschedules to prevent chronic reschedulers</li>
+<li><strong>Reassignment:</strong> Choose whether reschedules go through round-robin again or stay with original assignee</li>
+</ul>
+
+<h3>Cancellation Policy</h3>
+<p>Include clear cancellation terms in your booking confirmations:</p>
+<blockquote>Cancellations must be made at least 24 hours in advance. Late cancellations or no-shows may result in a cancellation fee for future bookings.</blockquote>
+
+<div class="warning-box"><strong>Important:</strong> Make sure your cancellation and rescheduling policies comply with local consumer protection laws, especially if you're charging fees.</div>
+
+<h2>Google Calendar and Outlook Sync</h2>
+
+<p>Proper calendar integration prevents double-bookings and keeps your schedule organized:</p>
+
+<h3>Setup Process</h3>
+<ol>
+<li>Go to Settings → Integrations in your GoHighLevel account</li>
+<li>Connect your Google or Outlook calendar</li>
+<li>Grant necessary permissions for read/write access</li>
+<li>Test the integration by booking a test appointment</li>
+</ol>
+
+<h3>Sync Settings</h3>
+<ul>
+<li><strong>Two-Way Sync:</strong> Enable to have GoHighLevel appointments appear in your external calendar and vice versa</li>
+<li><strong>Conflict Detection:</strong> GoHighLevel automatically checks for conflicts before allowing bookings</li>
+<li><strong>Multiple Calendars:</strong> Connect separate calendars for different appointment types</li>
+</ul>
+
+<h3>Troubleshooting Sync Issues</h3>
+<p>Common problems and solutions:</p>
+<ul>
+<li><strong>Missing Appointments:</strong> Check timezone settings on both platforms</li>
+<li><strong>Double Bookings:</strong> Verify two-way sync is enabled</li>
+<li><strong>Delayed Sync:</strong> Allow up to 15 minutes for appointments to appear across platforms</li>
+</ul>
+
+<h2>No-Show Recovery Workflow</h2>
+
+<p>When someone doesn't show up, quick action can recover 20-30% of missed appointments:</p>
+
+<h3>Immediate Response (Within 15 minutes)</h3>
+<p><strong>SMS Template:</strong></p>
+<blockquote>Hi {{contact.first_name}}, I noticed you missed our {{calendar.appointment_time}} appointment. No worries - things come up! Would you like to reschedule? [Include booking link] - {{user.name}}</blockquote>
+
+<h3>4-Hour Follow-Up</h3>
+<p><strong>Email Template:</strong></p>
+<blockquote>Subject: Let's Reschedule - I'm Here to Help<br><br>Hi {{contact.first_name}},<br><br>I waited for our call earlier today but wasn't able to connect with you.<br><br>I know how busy life can get, so I wanted to make it easy to reschedule if you're still interested in [topic discussed].<br><br>[Include calendar link]<br><br>If now isn't the right time, I understand. Just let me know if you'd like me to follow up in a few weeks instead.<br><br>Best regards,<br>{{user.name}}</blockquote>
+
+<h3>24-Hour Final Attempt</h3>
+<p>One last text message offering to reschedule, then move the contact to a long-term nurture sequence.</p>
+
+<h2>Calendar Analytics and Optimization</h2>
+
+<p>GoHighLevel provides detailed calendar analytics to optimize your booking process:</p>
+
+<h3>Key Metrics to Track</h3>
+<ul>
+<li><strong>Booking Conversion Rate:</strong> Percentage of calendar page visitors who complete booking</li>
+<li><strong>Show Rate:</strong> Percentage of booked appointments that actually occur</li>
+<li><strong>Lead Source Performance:</strong> Which marketing channels drive the highest-quality appointments</li>
+<li><strong>Time Slot Performance:</strong> Which appointment times have the highest show rates</li>
+<li><strong>Team Member Performance:</strong> Show rates and conversion rates by individual team member</li>
+</ul>
+
+<h3>Optimization Strategies</h3>
+
+<h4>Improve Booking Conversion</h4>
+<ul>
+<li>A/B test calendar page headlines and descriptions</li>
+<li>Reduce required form fields to minimum necessary</li>
+<li>Add social proof near the booking form</li>
+<li>Optimize available time slots based on prospect preferences</li>
+</ul>
+
+<h4>Increase Show Rates</h4>
+<ul>
+<li>Implement the reminder sequence outlined above</li>
+<li>Add booking friction (require phone number, not just email)</li>
+<li>Send calendar invites with clear meeting agendas</li>
+<li>Follow up immediately after booking with confirmation call</li>
+</ul>
+
+<div class="tip-box"><strong>Pro tip:</strong> Track your metrics monthly and set improvement targets. Even a 5% increase in show rates can significantly impact revenue over time.</div>
+
+<h3>Advanced Analytics Setup</h3>
+<p>Create custom reports in GoHighLevel to track:</p>
+<ul>
+<li>Monthly appointment volume trends</li>
+<li>Revenue per appointment by source</li>
+<li>Cost per booked appointment by marketing channel</li>
+<li>Seasonal booking patterns for capacity planning</li>
+</ul>
+
+<h2>Integration with Other GoHighLevel Features</h2>
+
+<p>Maximize your calendar ROI by integrating with other platform features:</p>
+
+<ul>
+<li><strong>Lead Scoring:</strong> Automatically score contacts based on appointment booking and show behavior</li>
+<li><strong>Pipeline Management:</strong> Move contacts through sales stages based on appointment outcomes</li>
+<li><strong>Email Marketing:</strong> Trigger targeted email sequences based on appointment types</li>
+<li><strong>Reputation Management:</strong> Send review requests after successful appointments</li>
+</ul>
+
+<p>For agencies managing multiple clients, check out our <a href="/workflows-for-agencies">workflows for agencies</a> guide to streamline calendar management across all accounts.</p>
+
+<h2>Common Calendar Mistakes to Avoid</h2>
+
+<p>After helping hundreds of agencies optimize their calendars, here are the biggest mistakes I see:</p>
+
+<ul>
+<li><strong>Too Many Available Slots:</strong> Scarcity increases perceived value - limit availability</li>
+<li><strong>No Buffer Time:</strong> Back-to-back appointments lead to rushed calls and poor experiences</li>
+<li><strong>Weak Confirmation Messages:</strong> Use confirmations to build excitement and set expectations</li>
+<li><strong>No No-Show Recovery:</strong> 30% of no-shows will reschedule if you follow up properly</li>
+<li><strong>Ignoring Analytics:</strong> Optimize based on data, not assumptions</li>
+</ul>
+
+<p>Avoid these and other common pitfalls by reviewing our comprehensive <a href="/mistakes-to-avoid">mistakes to avoid</a> guide.</p>
+
+<h2>Bottom Line</h2>
+
+<p>GoHighLevel's calendar system is incredibly powerful when configured correctly. The key is starting with solid fundamentals - proper availability settings, clear appointment types, and reliable reminders - then optimizing based on your specific metrics and business needs.</p>
+
+<p>Focus on reducing friction in the booking process while adding just enough qualification questions to ensure quality prospects. Implement the no-show prevention and recovery workflows immediately - they'll pay for themselves within the first month.</p>
+
+<p>Remember that calendar optimization is ongoing. Review your analytics monthly, test different configurations, and continuously refine your process. The agencies that treat their calendar as a conversion optimization tool, not just a scheduling widget, consistently see the highest ROI from their GoHighLevel investment.</p>
+
+<p>If you're new to GoHighLevel, our <a href="/which-gohighlevel-plan">which plan quiz</a> can help you choose the right subscription level for your calendar and booking needs.</p>
+  </div>
+
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <h2>Try GoHighLevel Free for 14 Days</h2>
+      <p>See everything we've covered in this guide for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+
+  <div class="related-guides">
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/gohighlevel-automations-save-time" class="related-card">
+        <span class="related-tag">Tutorial</span>
+        <span class="related-title">5 Automations That Save 10+ Hours/Week</span>
+      </a>
+      <a href="/gohighlevel-reviews" class="related-card">
+        <span class="related-tag">Review</span>
+        <span class="related-title">GoHighLevel Review 2026</span>
+      </a>
+      <a href="/pricing-explained" class="related-card">
+        <span class="related-tag">Pricing</span>
+        <span class="related-title">GoHighLevel Pricing Explained</span>
+      </a>
+      <a href="/which-gohighlevel-plan" class="related-card">
+        <span class="related-tag">Guide</span>
+        <span class="related-title">Which Plan Is Right for You?</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#comparisons">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.
+      Our opinions and ratings are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>
