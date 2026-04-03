@@ -1,4 +1,130 @@
 {
+  "blog/gohighlevel-ai-chatbot-setup.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-api-webhooks-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-april-2026-updates.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-calendar-booking-setup.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-crm-setup-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-email-marketing-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-facebook-ads-integration.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-for-beginners-getting-started.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-funnel-builder-tutorial.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-google-ads-integration.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-local-seo-google-business.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-membership-courses-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-reporting-analytics-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-reputation-management.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-sms-marketing-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-vs-all-in-one-platforms-2026.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-white-label-saas-mode-tutorial.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
+  "blog/gohighlevel-workflow-automation-guide.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    }
+  ],
   "blog/index.html": [
     {
       "action": "add",
