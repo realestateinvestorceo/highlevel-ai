@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-04 07:06:30",
+  "generated_at": "2026-04-05 07:12:55",
   "report_dates": {
     "freshness": "2026-03-30",
-    "schema": "2026-04-04",
+    "schema": "2026-04-05",
     "seo_dashboard": "2026-03-30",
     "llm_visibility": "2026-03-27"
   },
@@ -178,21 +178,21 @@
     }
   },
   "traffic": {
-    "sessions": 632,
-    "users": 587,
-    "pageviews": 727,
-    "bounce_rate": 0.65,
-    "avg_duration": 74.2,
+    "sessions": 643,
+    "users": 599,
+    "pageviews": 744,
+    "bounce_rate": 0.66,
+    "avg_duration": 73.7,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 340
+        "sessions": 350
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 173
+        "sessions": 176
       },
       {
         "source": "bing",
@@ -250,22 +250,22 @@
         "sessions": 2
       },
       {
-        "source": "copilot.com",
-        "medium": "referral",
+        "source": "ecosia.org",
+        "medium": "organic",
         "sessions": 1
       },
       {
-        "source": "ecosia.org",
-        "medium": "organic",
+        "source": "m.facebook.com",
+        "medium": "referral",
         "sessions": 1
       }
     ],
     "top_pages": [],
-    "cta_clicks": 32,
+    "cta_clicks": 33,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 25
+        "clicks": 26
       },
       {
         "page": "/pricing-explained.html",
@@ -293,11 +293,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260305",
-        "sessions": 12,
-        "users": 11
-      },
       {
         "date": "20260306",
         "sessions": 13,
@@ -440,8 +435,13 @@
       },
       {
         "date": "20260403",
-        "sessions": 15,
-        "users": 13
+        "sessions": 21,
+        "users": 19
+      },
+      {
+        "date": "20260404",
+        "sessions": 17,
+        "users": 17
       }
     ]
   },
@@ -454,5 +454,10 @@
     "has_recent_error": false,
     "last_error": null
   },
-  "system_actions": []
+  "system_actions": [
+    {
+      "action": "Auto-update: daily video pipeline 2026-04-04",
+      "when": "24 hours ago"
+    }
+  ]
 }
