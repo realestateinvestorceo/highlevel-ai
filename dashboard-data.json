@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-04-06 07:50:15",
+  "generated_at": "2026-04-06 10:16:05",
   "report_dates": {
-    "freshness": "2026-03-30",
+    "freshness": "2026-04-06",
     "schema": "2026-04-06",
-    "seo_dashboard": "2026-03-30",
+    "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
   "stats": {
-    "total_pages": 48,
-    "freshness_issues": 628,
+    "total_pages": 69,
+    "freshness_issues": 672,
     "schema_issues": 5,
     "striking_distance_keywords": 0
   },
   "priority_actions": [],
   "freshness": {
-    "total_issues": 628,
-    "critical": 623,
-    "warnings": 5,
+    "total_issues": 672,
+    "critical": 666,
+    "warnings": 6,
     "by_type": {
-      "outdated_year": 5,
-      "pricing_mismatch": 623
+      "outdated_year": 6,
+      "pricing_mismatch": 666
     },
     "items": [
       {
@@ -178,16 +178,16 @@
     }
   },
   "traffic": {
-    "sessions": 664,
-    "users": 621,
-    "pageviews": 765,
-    "bounce_rate": 0.66,
-    "avg_duration": 78.4,
+    "sessions": 671,
+    "users": 628,
+    "pageviews": 772,
+    "bounce_rate": 0.67,
+    "avg_duration": 76.8,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 367
+        "sessions": 373
       },
       {
         "source": "google",
@@ -212,7 +212,7 @@
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 9
+        "sessions": 10
       },
       {
         "source": "quora.com",
@@ -225,12 +225,12 @@
         "sessions": 7
       },
       {
-        "source": "facebook.com",
+        "source": "perplexity.ai",
         "medium": "referral",
-        "sessions": 6
+        "sessions": 7
       },
       {
-        "source": "perplexity.ai",
+        "source": "facebook.com",
         "medium": "referral",
         "sessions": 6
       },
@@ -446,6 +446,11 @@
         "date": "20260405",
         "sessions": 29,
         "users": 29
+      },
+      {
+        "date": "20260406",
+        "sessions": 7,
+        "users": 7
       }
     ]
   },
@@ -460,8 +465,8 @@
   },
   "system_actions": [
     {
-      "action": "Auto-update: daily video pipeline 2026-04-05",
-      "when": "24 hours ago"
+      "action": "Auto-update: daily video pipeline 2026-04-06",
+      "when": "2 hours ago"
     }
   ]
 }
