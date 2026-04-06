@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-05 07:12:55",
+  "generated_at": "2026-04-06 07:50:15",
   "report_dates": {
     "freshness": "2026-03-30",
-    "schema": "2026-04-05",
+    "schema": "2026-04-06",
     "seo_dashboard": "2026-03-30",
     "llm_visibility": "2026-03-27"
   },
@@ -178,46 +178,46 @@
     }
   },
   "traffic": {
-    "sessions": 643,
-    "users": 599,
-    "pageviews": 744,
+    "sessions": 664,
+    "users": 621,
+    "pageviews": 765,
     "bounce_rate": 0.66,
-    "avg_duration": 73.7,
+    "avg_duration": 78.4,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 350
+        "sessions": 367
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 176
+        "sessions": 180
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 24
+        "sessions": 26
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 23
+        "sessions": 24
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 22
+        "sessions": 21
+      },
+      {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 9
       },
       {
         "source": "quora.com",
         "medium": "referral",
         "sessions": 9
-      },
-      {
-        "source": "perplexity.ai",
-        "medium": "referral",
-        "sessions": 8
       },
       {
         "source": "duckduckgo",
@@ -230,14 +230,14 @@
         "sessions": 6
       },
       {
-        "source": "yahoo",
-        "medium": "organic",
+        "source": "perplexity.ai",
+        "medium": "referral",
         "sessions": 6
       },
       {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 4
+        "source": "yahoo",
+        "medium": "organic",
+        "sessions": 6
       },
       {
         "source": "mail.google.com",
@@ -250,26 +250,30 @@
         "sessions": 2
       },
       {
-        "source": "ecosia.org",
-        "medium": "organic",
+        "source": "chat.qwen.ai",
+        "medium": "referral",
         "sessions": 1
       },
       {
-        "source": "m.facebook.com",
-        "medium": "referral",
+        "source": "ecosia.org",
+        "medium": "organic",
         "sessions": 1
       }
     ],
     "top_pages": [],
-    "cta_clicks": 33,
+    "cta_clicks": 35,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 26
+        "clicks": 27
       },
       {
         "page": "/pricing-explained.html",
         "clicks": 2
+      },
+      {
+        "page": "/blog/gohighlevel-for-beginners-getting-started",
+        "clicks": 1
       },
       {
         "page": "/gohighlevel-white-label-guide.html",
@@ -293,11 +297,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260306",
-        "sessions": 13,
-        "users": 12
-      },
       {
         "date": "20260307",
         "sessions": 14,
@@ -440,8 +439,13 @@
       },
       {
         "date": "20260404",
-        "sessions": 17,
-        "users": 17
+        "sessions": 22,
+        "users": 22
+      },
+      {
+        "date": "20260405",
+        "sessions": 29,
+        "users": 29
       }
     ]
   },
@@ -456,7 +460,7 @@
   },
   "system_actions": [
     {
-      "action": "Auto-update: daily video pipeline 2026-04-04",
+      "action": "Auto-update: daily video pipeline 2026-04-05",
       "when": "24 hours ago"
     }
   ]
