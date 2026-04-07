@@ -403,6 +403,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.highlevel.ai/what-is-gohighlevel</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.highlevel.ai/workflows-for-agencies</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
