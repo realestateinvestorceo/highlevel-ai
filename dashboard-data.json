@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-06 10:16:05",
+  "generated_at": "2026-04-07 07:24:15",
   "report_dates": {
     "freshness": "2026-04-06",
-    "schema": "2026-04-06",
+    "schema": "2026-04-07",
     "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
@@ -145,7 +145,7 @@
     ]
   },
   "schema": {
-    "total_schemas": 266,
+    "total_schemas": 267,
     "issues": 5,
     "items": [
       "Field: `datePublished`",
@@ -178,31 +178,31 @@
     }
   },
   "traffic": {
-    "sessions": 671,
-    "users": 628,
-    "pageviews": 772,
+    "sessions": 703,
+    "users": 660,
+    "pageviews": 797,
     "bounce_rate": 0.67,
-    "avg_duration": 76.8,
+    "avg_duration": 76.6,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 373
+        "sessions": 387
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 180
+        "sessions": 188
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 26
+        "sessions": 28
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 24
+        "sessions": 26
       },
       {
         "source": "chatgpt.com",
@@ -212,7 +212,12 @@
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 10
+        "sessions": 15
+      },
+      {
+        "source": "perplexity.ai",
+        "medium": "referral",
+        "sessions": 9
       },
       {
         "source": "quora.com",
@@ -225,18 +230,13 @@
         "sessions": 7
       },
       {
-        "source": "perplexity.ai",
-        "medium": "referral",
+        "source": "yahoo",
+        "medium": "organic",
         "sessions": 7
       },
       {
         "source": "facebook.com",
         "medium": "referral",
-        "sessions": 6
-      },
-      {
-        "source": "yahoo",
-        "medium": "organic",
         "sessions": 6
       },
       {
@@ -297,11 +297,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260307",
-        "sessions": 14,
-        "users": 12
-      },
       {
         "date": "20260308",
         "sessions": 5,
@@ -449,8 +444,8 @@
       },
       {
         "date": "20260406",
-        "sessions": 7,
-        "users": 7
+        "sessions": 53,
+        "users": 51
       }
     ]
   },
@@ -465,8 +460,8 @@
   },
   "system_actions": [
     {
-      "action": "Auto-update: daily video pipeline 2026-04-06",
-      "when": "2 hours ago"
+      "action": "Rewrite titles/descriptions for CTR + add FAQ schema to top pages",
+      "when": "14 hours ago"
     }
   ]
 }
