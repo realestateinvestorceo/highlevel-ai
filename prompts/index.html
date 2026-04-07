@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>GoHighLevel AI Prompt Library: 30+ Copy-Paste Prompts</title>
+<meta name="description" content="Free copy-paste AI prompts for GoHighLevel — chatbot training, voice agent scripts, email campaigns, funnel copy, and workflow automation. Ready to use.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/prompts/index">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel AI Prompt Library: 30+ Copy-Paste Prompts">
+<meta property="og:description" content="Free copy-paste AI prompts for GoHighLevel — chatbot training, voice agent scripts, email campaigns, funnel copy, and workflow automation. Ready to use.">
+<meta property="og:url" content="https://www.highlevel.ai/prompts/index">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-07T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-07">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel AI Prompt Library: 30+ Copy-Paste Prompts">
+<meta name="twitter:description" content="Free copy-paste AI prompts for GoHighLevel — chatbot training, voice agent scripts, email campaigns, funnel copy, and workflow automation. Ready to use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GoHighLevel AI Prompt Library: 30+ Copy-Paste Prompts",
+  "description": "Free copy-paste AI prompts for GoHighLevel — chatbot training, voice agent scripts, email campaigns, funnel copy, and workflow automation. Ready to use.",
+  "url": "https://www.highlevel.ai/prompts/index",
+  "author": {"@type": "Person", "name": "Josh Miller", "url": "https://www.highlevel.ai/about"},
+  "publisher": {"@type": "Organization", "name": "highlevel.ai", "url": "https://www.highlevel.ai/"},
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"}, {"@type": "ListItem", "position": 2, "name": "AI Prompts", "item": "https://www.highlevel.ai/prompts/"}, {"@type": "ListItem", "position": 3, "name": "AI Prompts"}]
+}
+</script>
+
+<script>
+function copyPrompt(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.textContent.trim()).then(function() {
+    var btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy Prompt'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --accent-purple: #a78bfa;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary); color: var(--text-primary);
+    line-height: 1.7; font-size: 16px; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: ''; position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: ''; position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0; background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif; font-weight: 900; font-size: 22px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 500; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px;
+    border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none;
+    cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: all 0.25s;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5); color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,125,249,0.45); }
+  .btn-nav { padding: 10px 22px; font-size: 13px; background: var(--accent); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; }
+  .btn-nav:hover { background: var(--accent-bright); }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure { max-width: 640px; margin: 16px auto 0; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c; position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-bright); margin-bottom: 16px; }
+  .page-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .page-header p { color: var(--text-secondary); font-size: 18px; line-height: 1.6; max-width: 700px; }
+  .headless-data { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(10,10,15,0.95); backdrop-filter: blur(20px); padding: 20px 24px; border-bottom: 1px solid var(--border); gap: 16px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
+  
+  .prompt-grid { display: grid; gap: 20px; margin: 40px 0; }
+  .prompt-section { margin: 48px 0; }
+  .prompt-section h2 { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); }
+  .prompt-section > p { color: var(--text-secondary); margin-bottom: 24px; }
+  .prompt-card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px; transition: all 0.3s;
+  }
+  .prompt-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+  .prompt-header { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .prompt-category {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--accent-bright); background: var(--accent-glow); padding: 4px 10px; border-radius: 6px;
+  }
+  .prompt-industry {
+    font-size: 11px; font-weight: 600; color: var(--accent-green);
+    background: rgba(52,211,153,0.1); padding: 4px 10px; border-radius: 6px;
+  }
+  .prompt-card h3 { font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+  .prompt-text {
+    background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 16px; font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+    font-family: 'DM Sans', monospace; white-space: pre-wrap;
+  }
+  .copy-btn {
+    margin-top: 12px; padding: 8px 20px; background: var(--accent-glow); color: var(--accent-bright);
+    border: 1px solid var(--border-accent); border-radius: 8px; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .copy-btn:hover { background: var(--accent); color: #fff; }
+  .copy-btn.copied { background: var(--accent-green); color: #fff; border-color: var(--accent-green); }
+  .prompt-count { font-size: 14px; color: var(--accent-green); font-weight: 600; margin-bottom: 32px; }
+
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<div class="ambient-bg"></div>
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/prompts/">AI Prompts</a> &rsaquo; <span>AI Prompts</span></nav>
+  <div class="page-header">
+    <div class="section-tag">AI Prompt Library</div>
+    <h1>GoHighLevel AI Prompt Library: 30+ Copy-Paste Prompts</h1>
+  </div>
+
+  <main class="ai-prompt-library">
+  <div class="hero-section">
+    <h1>GoHighLevel AI Prompt Library</h1>
+    <p class="hero-description">
+      Copy-paste prompts to supercharge your GoHighLevel AI features. Train better chatbots, create compelling campaigns, and automate your workflows with these proven prompts. Simply copy, customize with your business details, and paste into GHL's AI tools.
+    </p>
+    <div class="quick-links">
+      <a href="/blog/gohighlevel-ai-chatbot-setup" class="link-btn">Chatbot Setup Guide</a>
+      <a href="/voice-agent-setup" class="link-btn">Voice Agent Setup</a>
+    </div>
+  </div>
+
+  <section class="prompt-section">
+    <h2>🤖 Conversation AI / Chatbot Prompts</h2>
+    <p>System prompts to train your GoHighLevel chatbot for specific industries and use cases.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Dental Practice</span>
+        </div>
+        <h3>Dental Clinic Patient Assistant</h3>
+        <div class="prompt-text" id="prompt-1">You are a friendly dental receptionist for [DENTAL_PRACTICE_NAME] in [CITY]. Help patients with: appointment scheduling, insurance questions, service explanations, and emergency guidance. Always be empathetic about dental anxiety. For emergencies, direct to call [PHONE_NUMBER]. Services include cleanings, fillings, crowns, implants, and cosmetic dentistry. Office hours: [HOURS]. Never diagnose conditions - always recommend speaking with Dr. [DOCTOR_NAME]. If asked about pain, show concern and offer urgent appointment scheduling.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-1')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Real Estate</span>
+        </div>
+        <h3>Real Estate Lead Qualifier</h3>
+        <div class="prompt-text" id="prompt-2">You're a knowledgeable real estate assistant for [AGENT_NAME] serving [CITY_AREA]. Qualify leads by asking: budget range, timeline, preferred neighborhoods, must-have features, and whether they need to sell first. Share market insights about [CITY] like average home prices, best schools, and neighborhood highlights. Offer to schedule property viewings or market analysis calls. Always capture contact info and buying/selling timeline. For listings, mention our average days on market is [NUMBER] and we've sold [NUMBER] homes this year.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-2')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Marketing Agency</span>
+        </div>
+        <h3>Marketing Agency Consultant Bot</h3>
+        <div class="prompt-text" id="prompt-3">You represent [AGENCY_NAME], a digital marketing agency specializing in [SPECIALTIES]. Ask prospects about their current marketing challenges, monthly ad spend, target audience, and biggest goals. Offer insights about common issues in their industry. Our services include: Google Ads, Facebook marketing, SEO, website design, and marketing automation. Mention case studies like "[CLIENT] increased leads by [PERCENTAGE]" and offer free strategy sessions. Always ask about their current marketing team and what's not working with their current approach.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-3')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Fitness/Gym</span>
+        </div>
+        <h3>Gym Membership Assistant</h3>
+        <div class="prompt-text" id="prompt-4">Welcome to [GYM_NAME]! I help with memberships, class schedules, and fitness goals. Ask about their fitness experience, preferred workout times, and specific goals (weight loss, strength, endurance). Our facilities include [EQUIPMENT/AMENITIES]. Classes: [CLASS_TYPES] at [TIMES]. Membership options: [MEMBERSHIP_TYPES] starting at $[PRICE]. Offer free trial sessions and gym tours. Address common concerns like intimidation, time constraints, and previous gym experiences. Always emphasize our supportive community and certified trainers.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-4')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Med Spa</span>
+        </div>
+        <h3>Med Spa Consultation Bot</h3>
+        <div class="prompt-text" id="prompt-5">You're a beauty consultant for [MEDSPA_NAME]. Help clients explore treatments for their aesthetic goals. Ask about specific concerns: wrinkles, acne, hair removal, body contouring, or skin rejuvenation. Our services: Botox, dermal fillers, laser treatments, facials, and [OTHER_SERVICES]. Always mention consultations with our licensed practitioners are required before treatment. Discuss treatment expectations, downtime, and aftercare. Offer complimentary consultations and mention current promotions like "[CURRENT_OFFER]". Never provide medical advice - defer to licensed staff.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-5')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Chatbot System</span>
+          <span class="prompt-industry">Business Coaching</span>
+        </div>
+        <h3>Business Coach Lead Qualifier</h3>
+        <div class="prompt-text" id="prompt-6">I'm an assistant for [COACH_NAME], helping entrepreneurs scale to [TARGET_REVENUE]. Ask about their current business stage, revenue, team size, and biggest challenges. Common pain points: marketing, sales systems, team management, and scaling operations. Our coaching covers: [COACHING_AREAS]. Share success stories: "[CLIENT] grew from $[X] to $[Y] in [TIMEFRAME]." Offer strategy sessions to discuss their specific situation. Ask about their current investment in business education and what results they're seeking in the next 90 days.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-6')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prompt-section">
+    <h2>📞 AI Voice Agent Prompts</h2>
+    <p>Call handling prompts for GoHighLevel's voice agent to manage different call scenarios professionally.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Voice Agent</span>
+          <span class="prompt-industry">Appointment Booking</span>
+        </div>
+        <h3>Appointment Scheduling Assistant</h3>
+        <div class="prompt-text" id="prompt-7">You're scheduling appointments for [BUSINESS_NAME]. Greet callers warmly: "Thank you for calling [BUSINESS_NAME], I'm here to help schedule your appointment." Ask for their preferred service, date, and time. Check availability in our system for [AVAILABLE_DAYS] between [HOURS]. Collect: full name, phone, email, and specific service needed. For new clients, explain what to expect and mention any prep required. Confirm appointment details and send confirmation text. If no availability matches, offer 2-3 alternative times and explain our cancellation policy.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-7')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Voice Agent</span>
+          <span class="prompt-industry">Lead Qualification</span>
+        </div>
+        <h3>Sales Lead Qualifier</h3>
+        <div class="prompt-text" id="prompt-8">You're qualifying leads for [COMPANY_NAME]. Start with: "I'm following up on your interest in [SERVICE/PRODUCT]." Ask key qualifying questions: What prompted their interest? What's their timeline? What's their budget range? Have they worked with similar services before? Listen for urgency indicators and pain points. Based on responses, categorize as: Hot (ready to buy), Warm (interested, needs nurturing), or Cold (not qualified). For hot leads, schedule immediate consultations. For warm leads, offer valuable resources and schedule follow-up calls. Always end with clear next steps.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-8')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Voice Agent</span>
+          <span class="prompt-industry">After-Hours</span>
+        </div>
+        <h3>After-Hours Call Handler</h3>
+        <div class="prompt-text" id="prompt-9">You're handling after-hours calls for [BUSINESS_NAME]. Start with: "Thank you for calling [BUSINESS_NAME]. Our office is currently closed, but I'm here to help." For emergencies related to [EMERGENCY_TYPE], provide emergency contact: [EMERGENCY_NUMBER]. For non-emergencies, offer to: schedule callbacks during business hours ([HOURS]), take detailed messages, or schedule appointments. Ask if they'd like a text confirmation of any scheduled callback or appointment. Reassure them that someone will contact them first thing when the office opens.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-9')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Voice Agent</span>
+          <span class="prompt-industry">FAQ Handling</span>
+        </div>
+        <h3>FAQ and Information Assistant</h3>
+        <div class="prompt-text" id="prompt-10">You provide information about [BUSINESS_NAME]. Common questions include: hours ([BUSINESS_HOURS]), location ([ADDRESS]), services offered ([MAIN_SERVICES]), pricing for [SERVICE] (starting at $[PRICE]), and availability. For complex questions, say "Let me connect you with a specialist who can give you detailed information about that." Always offer to schedule consultations for service-specific questions. Keep a helpful, knowledgeable tone. If you don't know something, admit it and offer to have someone call back with the answer within [TIMEFRAME].</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-10')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Voice Agent</span>
+          <span class="prompt-industry">Customer Service</span>
+        </div>
+        <h3>Customer Service Call Handler</h3>
+        <div class="prompt-text" id="prompt-11">You handle customer service for [BUSINESS_NAME]. Listen actively to concerns and empathize: "I understand how frustrating that must be." For common issues like [COMMON_ISSUE_1] or [COMMON_ISSUE_2], provide solutions: [SOLUTION_STEPS]. For billing questions, collect account info and explain you'll have billing specialist call back within [TIMEFRAME]. For complaints, acknowledge the issue, apologize sincerely, and focus on resolution. Always ask "Is there anything else I can help you with today?" before ending calls. Document all issues for follow-up.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-11')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prompt-section">
+    <h2>✉️ Email & SMS Campaign Prompts</h2>
+    <p>AI prompts for generating effective email sequences and SMS campaigns that convert.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Email Sequence</span>
+          <span class="prompt-industry">Welcome Series</span>
+        </div>
+        <h3>5-Part Welcome Email Series</h3>
+        <div class="prompt-text" id="prompt-12">Create a 5-email welcome sequence for [BUSINESS_NAME] targeting [TARGET_AUDIENCE]. Email 1: Welcome and set expectations, introduce [YOUR_NAME/STORY], include [FREE_RESOURCE]. Email 2: Share origin story and mission, build trust. Email 3: Provide valuable tip about [INDUSTRY_PROBLEM], establish expertise. Email 4: Customer success story featuring [RESULT_ACHIEVED], social proof. Email 5: Special offer for new subscribers - [DISCOUNT/BONUS] with urgency (expires in 48 hours). Each email should be 150-250 words, conversational tone, and include clear CTA. Subject lines should be curiosity-driven and personal.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-12')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Email Campaign</span>
+          <span class="prompt-industry">E-commerce</span>
+        </div>
+        <h3>Abandoned Cart Recovery Sequence</h3>
+        <div class="prompt-text" id="prompt-13">Write 3-email abandoned cart sequence for [STORE_NAME]. Email 1 (1 hour later): Friendly reminder "Did you forget something?" Show cart items with images, simple CTA "Complete Your Order." Email 2 (24 hours): Address common objections, include customer reviews, offer free shipping if order is $[AMOUNT]+. Email 3 (72 hours): Final attempt with urgency, offer [DISCOUNT]% off, mention limited stock or deal expiration. Include social proof, money-back guarantee, and easy checkout link. Tone should be helpful, not pushy. Each email should be mobile-optimized with clear product images and pricing.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-13')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Email Campaign</span>
+          <span class="prompt-industry">Re-engagement</span>
+        </div>
+        <h3>Win-Back Email Campaign</h3>
+        <div class="prompt-text" id="prompt-14">Create a re-engagement campaign for [BUSINESS_NAME] targeting subscribers inactive for 90+ days. Email 1: "We miss you" approach, ask if they still want to hear from us, include preference center link. Email 2: Share what they've missed - new products, services, or content highlights. Include "catch-up" offer or exclusive content. Email 3: "Last chance" email with special comeback offer - [SPECIFIC_OFFER] only for returning subscribers. If no engagement, final email asking if they want to unsubscribe. Focus on value, not sales. Include survey asking what content they'd prefer to receive.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-14')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">SMS Campaign</span>
+          <span class="prompt-industry">Review Request</span>
+        </div>
+        <h3>Review Request SMS Sequence</h3>
+        <div class="prompt-text" id="prompt-15">Write SMS sequence requesting reviews for [BUSINESS_NAME]. Send 2-3 days after service completion. Message 1: "Hi [NAME]! How was your experience with [SERVICE] at [BUSINESS_NAME]? We'd love to hear your feedback!" Message 2 (if 5-star feedback): "Thanks! Would you mind sharing your experience on Google? [REVIEW_LINK] It really helps us!" Message 3 (if less than 5 stars): "Thanks for the feedback. We'd love to make this right. Can [MANAGER_NAME] call you to discuss? Reply YES." Keep messages under 160 characters, friendly tone, easy opt-out option.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-15')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">SMS Campaign</span>
+          <span class="prompt-industry">Appointment Reminder</span>
+        </div>
+        <h3>Appointment Reminder SMS Series</h3>
+        <div class="prompt-text" id="prompt-16">Create appointment reminder SMS sequence for [BUSINESS_NAME]. Message 1 (48 hours before): "Hi [NAME]! Reminder: You have an appointment on [DATE] at [TIME] for [SERVICE] with [PROVIDER]. Reply CONFIRM or call [PHONE] to reschedule." Message 2 (day before): "Tomorrow's the day! Your [TIME] appointment for [SERVICE] is confirmed. Address: [ADDRESS]. Need directions? [MAPS_LINK]" Message 3 (2 hours before): "See you in 2 hours for your [SERVICE] appointment! Bring [WHAT_TO_BRING]. Running late? Call [PHONE]." Include cancellation policy and easy reschedule options.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-16')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Email Campaign</span>
+          <span class="prompt-industry">Nurture Sequence</span>
+        </div>
+        <h3>Educational Nurture Campaign</h3>
+        <div class="prompt-text" id="prompt-17">Design 6-email educational series for [INDUSTRY] targeting [IDEAL_CLIENT]. Each email addresses a specific pain point: Email 1: "[PROBLEM_1] - Why this happens and quick fixes" Email 2: "[PROBLEM_2] - Step-by-step solution guide" Email 3: Case study showing real results. Email 4: "[PROBLEM_3] - Advanced strategies" Email 5: "Mistakes to avoid when [DOING_X]" Email 6: "Ready to get professional help?" soft pitch. Include actionable tips, downloadable resources, and social proof. End each email with a question to encourage replies and engagement.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-17')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prompt-section">
+    <h2>📄 Funnel & Landing Page Copy Prompts</h2>
+    <p>Generate high-converting landing page headlines, subheadlines, and CTAs for your funnels.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Landing Page</span>
+          <span class="prompt-industry">Lead Generation</span>
+        </div>
+        <h3>Lead Magnet Landing Page Copy</h3>
+        <div class="prompt-text" id="prompt-18">Write landing page copy for [LEAD_MAGNET_NAME] targeting [TARGET_AUDIENCE]. Headline should promise the main benefit: "Get [SPECIFIC_RESULT] in [TIMEFRAME] Without [COMMON_OBJECTION]." Subheading explains what they'll receive and why it works. Include 5-7 bullet points highlighting key benefits (start with action verbs). Add social proof section with testimonials about similar results. Address main objection with "This works even if [OBJECTION]." CTA button text: "Get Instant Access" or "Download Free [RESOURCE_TYPE]." Include privacy statement and spam-free guarantee. Keep copy scannable with short paragraphs and bold key phrases.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-18')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Sales Page</span>
+          <span class="prompt-industry">Course/Coaching</span>
+        </div>
+        <h3>High-Converting Sales Page Structure</h3>
+        <div class="prompt-text" id="prompt-19">Create sales page for [PRODUCT/SERVICE] priced at $[PRICE]. Start with problem-focused headline: "Struggling with [PAIN_POINT]? Here's the [SOLUTION_TYPE] That [SPECIFIC_OUTCOME]." Include story section about transformation. Present offer with clear value stack showing $[TOTAL_VALUE] for only $[PRICE]. Add scarcity element: limited spots or time-sensitive bonus. Include FAQ section addressing top 5-8 objections. Multiple CTA buttons throughout: "Secure Your Spot Now" or "Get [PRODUCT] Today." Add strong guarantee and risk reversal. Include bio section establishing credibility and client testimonials with specific results.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-19')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Landing Page</span>
+          <span class="prompt-industry">Service Business</span>
+        </div>
+        <h3>Service Business Landing Page</h3>
+        <div class="prompt-text" id="prompt-20">Write landing page copy for [SERVICE_NAME] in [CITY]. Headline: "Finally! [SERVICE_TYPE] in [CITY] That [MAIN_BENEFIT] - Guaranteed!" Subheading explains unique approach and local advantage. Create "What You Get" section with 3-5 service components. Add "Why Choose [BUSINESS_NAME]" with 4-6 differentiators (experience, guarantees, local knowledge, etc.). Include local testimonials and before/after examples. Add FAQ section for common service questions. Strong CTA: "Get Your Free [CONSULTATION/ESTIMATE]" with phone number prominent. Include service area coverage and response time promises.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-20')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Landing Page</span>
+          <span class="prompt-industry">E-commerce</span>
+        </div>
+        <h3>Product Landing Page Copy</h3>
+        <div class="prompt-text" id="prompt-21">Create product page copy for [PRODUCT_NAME] solving [PROBLEM]. Headline: "[PRODUCT] - The [UNIQUE_MECHANISM] That [PRIMARY_BENEFIT] in [TIMEFRAME]." Add benefit-focused bullet points: "✓ [Benefit 1 with social proof]" "✓ [Benefit 2 with statistic]" etc. Include ingredients/features section explaining why each component works. Add customer testimonials with photos and specific results. Create urgency with limited-time offer or stock scarcity. Address concerns with money-back guarantee and shipping info. Multiple purchase buttons with different packages (single, bundle, subscription). Include "As Seen On" media logos for credibility.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-21')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Landing Page</span>
+          <span class="prompt-industry">Webinar Registration</span>
+        </div>
+        <h3>Webinar Registration Page Copy</h3>
+        <div class="prompt-text" id="prompt-22">Write webinar registration page for "[WEBINAR_TITLE]" targeting [AUDIENCE]. Headline: "Free Training: How [TARGET_AUDIENCE] Are [ACHIEVING_RESULT] Using [METHOD] (Even If [COMMON_OBJECTION])." Add bullet points of what they'll learn: "• The #1 mistake that [NEGATIVE_OUTCOME]" "• My proven [X]-step system for [RESULT]" "• Live Q&A session." Include host bio with credentials and past student results. Add countdown timer for registration deadline. Show upcoming dates/times in multiple time zones. Social proof: "Join 1000+ attendees" or testimonials from past webinars. CTA: "Reserve My Free Seat" with simple registration form.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-22')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Landing Page</span>
+          <span class="prompt-industry">App Download</span>
+        </div>
+        <h3>App Download Landing Page</h3>
+        <div class="prompt-text" id="prompt-23">Create app download page for [APP_NAME]. Headline: "The [APP_TYPE] That [MAIN_BENEFIT] - Now Available Free!" Show app screenshots with feature callouts. Benefits section: "Save [TIME_AMOUNT] per day," "Track [SPECIFIC_METRICS]," "Connect with [COMMUNITY_SIZE] users." Include app store ratings and download numbers for social proof. Add "How It Works" in 3 simple steps with icons. Feature comparison chart vs. competitors. Testimonials from beta users with specific results. Multiple download buttons for iOS/Android. "Safe & Secure" badges and privacy policy link. Include demo video or interactive preview.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-23')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prompt-section">
+    <h2>⚡ Workflow Automation Prompts</h2>
+    <p>Plain English prompts to create complex workflows using GoHighLevel's AI workflow builder.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">Lead Nurturing</span>
+        </div>
+        <h3>New Lead Follow-up Automation</h3>
+        <div class="prompt-text" id="prompt-24">Create a workflow that triggers when a new lead fills out [FORM_NAME]. Immediately send welcome email with [LEAD_MAGNET]. After 2 hours, send SMS: "Thanks for your interest in [SERVICE]! Quick question - what's your biggest challenge with [PROBLEM_AREA]?" If they reply, tag as "engaged" and notify [SALES_PERSON]. If no reply after 24 hours, send email with case study and book consultation CTA. After 3 days, if no booking, add to nurture sequence and send weekly value emails. If they book consultation, tag as "hot lead" and send appointment confirmation sequence.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-24')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">Customer Onboarding</span>
+        </div>
+        <h3>Customer Onboarding Automation</h3>
+        <div class="prompt-text" id="prompt-25">Build workflow starting when someone purchases [PRODUCT/SERVICE]. Immediately: send purchase confirmation email with access details, add to "Customer" list, create task for [TEAM_MEMBER] to prepare welcome package. Day 1: Send welcome email with getting started checklist and schedule onboarding call. Day 3: Send tutorial video and check-in SMS. Day 7: Send feedback survey and case study examples. Day 14: Send advanced tips email. Day 30: Send renewal/upsell offer if applicable. If customer doesn't engage with emails (no opens), switch to SMS. Create tasks for manual follow-up on high-value customers.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-25')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">Appointment Management</span>
+        </div>
+        <h3>Appointment Booking & Reminder System</h3>
+        <div class="prompt-text" id="prompt-26">Create workflow for appointment bookings. When appointment is scheduled: send confirmation email with calendar invite, add to [CALENDAR], send SMS confirmation. 48 hours before: send reminder email with appointment details and preparation instructions. 24 hours before: send SMS reminder with address and parking info. 2 hours before: final SMS reminder. If appointment is rescheduled, send new confirmations and cancel old reminders. After appointment: wait 2 hours, then send thank you email with follow-up care instructions. Next day: send review request SMS. If no-show, send SMS asking to reschedule and create task for staff follow-up.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-26')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">Event Marketing</span>
+        </div>
+        <h3>Event Registration & Promotion Workflow</h3>
+        <div class="prompt-text" id="prompt-27">Build event promotion workflow for [EVENT_NAME]. When someone registers: send confirmation email with event details and calendar invite, add to "Event Attendees" list. 1 week before: send preparation email with agenda and what to bring. 3 days before: send reminder with parking/location details. Day before: send final reminder with any last-minute updates. Day of event: send "see you there" message with check-in instructions. After event: send thank you email with resources shared, survey link, and next event invitation. For no-shows: send apology email with recorded session (if available) and next event invitation.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-27')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">E-commerce</span>
+        </div>
+        <h3>Order Fulfillment & Upsell Automation</h3>
+        <div class="prompt-text" id="prompt-28">Create workflow for order processing. When order is placed: send order confirmation email, create fulfillment task for [TEAM_MEMBER], charge payment method. When order ships: send shipping notification with tracking number and delivery estimate. Day after delivery: send "How's your order?" email with unboxing tips. 3 days later: send review request with photo upload option. 1 week later: send upsell email for complementary products based on purchase history. 1 month later: send reorder reminder for consumable products. If customer leaves 5-star review, send thank you discount for next purchase.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-28')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Workflow Builder</span>
+          <span class="prompt-industry">Membership Site</span>
+        </div>
+        <h3>Membership Engagement & Retention Workflow</h3>
+        <div class="prompt-text" id="prompt-29">Design workflow for membership site engagement. When member joins: send welcome sequence with community access and first-week action plan. Track login activity - if no login in 7 days, send "missing you" email with quick wins guide. If still no login after 14 days, send SMS check-in and offer help call. Monthly: send progress check-in survey and personalized tips based on responses. Before renewal: send value reminder email with stats on their engagement and wins. If cancellation requested, send exit survey and win-back offer. For engaged members, send VIP upgrade offers and beta access to new features.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-29')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prompt-section">
+    <h2>📝 Content & Social Media Prompts</h2>
+    <p>Generate engaging blog posts, social media content, and ad copy using AI to grow your online presence.</p>
+    
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Blog Content</span>
+          <span class="prompt-industry">SEO Article</span>
+        </div>
+        <h3>SEO-Optimized Blog Post Generator</h3>
+        <div class="prompt-text" id="prompt-30">Write a comprehensive blog post about "[TOPIC]" targeting the keyword "[PRIMARY_KEYWORD]" for [TARGET_AUDIENCE]. Include: compelling headline with keyword, 150-word introduction with hook and problem statement, 5-7 H2 subheadings naturally incorporating related keywords, actionable tips with examples, FAQ section addressing [3-5 COMMON_QUESTIONS], conclusion with clear CTA to [DESIRED_ACTION]. Aim for 1500-2000 words. Include meta description under 160 characters. Add internal links to [RELATED_POSTS] and external links to authoritative sources. Write in conversational tone, use bullet points for readability, and include call-out boxes for key tips.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-30')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Social Media</span>
+          <span class="prompt-industry">Instagram Posts</span>
+        </div>
+        <h3>Instagram Content Calendar Generator</h3>
+        <div class="prompt-text" id="prompt-31">Create 30 days of Instagram content for [BUSINESS_TYPE] targeting [AUDIENCE]. Mix content types: educational posts (40%), behind-the-scenes (20%), user-generated content (15%), promotional (15%), inspirational quotes (10%). For each post include: engaging caption with hook in first line, 3-5 relevant hashtags from [INDUSTRY_HASHTAGS], clear CTA (save, share, comment, or visit bio link). Educational posts should solve specific problems like "[COMMON_PROBLEM]." Include story prompts, poll questions, and carousel post ideas. Maintain consistent brand voice: [BRAND_PERSONALITY]. Add posting schedule recommendations and engagement strategies.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-31')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Ad Copy</span>
+          <span class="prompt-industry">Facebook Ads</span>
+        </div>
+        <h3>Facebook Ad Campaign Copy</h3>
+        <div class="prompt-text" id="prompt-32">Write Facebook ad campaign for [PRODUCT/SERVICE] targeting [AUDIENCE_DEMOGRAPHICS]. Create 3 ad variations: Problem-focused ad starting with "[PAIN_POINT]?" and presenting solution. Benefit-focused ad highlighting "[MAIN_BENEFIT]" with social proof. Urgency-focused ad with limited-time offer or scarcity. Each ad needs: attention-grabbing headline, 125-word primary text, clear value proposition, strong CTA button text. Include audience targeting suggestions, campaign objective recommendations, and A/B testing elements. Add compliance notes for [INDUSTRY] advertising rules. Suggest complementary images/videos and landing page alignment tips.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-32')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Content Series</span>
+          <span class="prompt-industry">LinkedIn</span>
+        </div>
+        <h3>LinkedIn Thought Leadership Series</h3>
+        <div class="prompt-text" id="prompt-33">Develop 10-part LinkedIn content series establishing [YOUR_NAME] as thought leader in [INDUSTRY]. Posts should include: industry insights with personal commentary, contrarian viewpoints with supporting data, success story breakdowns, trend predictions with analysis, mistake lessons learned, tool/resource recommendations, behind-the-scenes business insights, client transformation stories, industry myth-busting, and actionable frameworks. Each post: 150-200 words, starts with hook question or bold statement, includes personal anecdote, ends with engagement question. Add hashtag strategy and posting schedule. Include ideas for native video content and LinkedIn article topics.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-33')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Video Content</span>
+          <span class="prompt-industry">YouTube</span>
+        </div>
+        <h3>YouTube Video Script Template</h3>
+        <div class="prompt-text" id="prompt-34">Create YouTube video script for "[VIDEO_TOPIC]" targeting [AUDIENCE]. Structure: Hook (0-15 seconds): Start with intriguing question or bold statement about [PROBLEM]. Introduction (15-30 seconds): Promise what they'll learn and why it matters. Main content (2-8 minutes): Break into 3-5 key points with examples, stories, or demonstrations. Use pattern interrupts every 30-60 seconds to maintain attention. Conclusion (30 seconds): Summarize key takeaways and give clear next step. Include: subscribe reminder, comment question for engagement, end screen suggestions for related videos. Add SEO-optimized title suggestions, description template with timestamps, and thumbnail ideas.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-34')">Copy Prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-category">Email Newsletter</span>
+          <span class="prompt-industry">Content Marketing</span>
+        </div>
+        <h3>Weekly Newsletter Content Planner</h3>
+        <div class="prompt-text" id="prompt-35">Plan weekly newsletter for [BUSINESS_NAME] targeting [SUBSCRIBER_BASE]. Include consistent sections: Personal note from [SENDER_NAME] (50 words), Industry spotlight highlighting [TREND/NEWS] with your take (100 words), Tip of the week solving [COMMON_PROBLEM] (75 words), Resource recommendation - tool, book, or article (50 words), Community highlight featuring subscriber win (75 words), and CTA section promoting [CURRENT_OFFER] (50 words). Total length: 400-500 words. Include subject line formulas, send day/time recommendations, and seasonal content ideas. Add metrics to track and optimization suggestions.</div>
+        <button class="copy-btn" onclick="copyPrompt('prompt-35')">Copy Prompt</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+.ai-prompt-library {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.quick-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.link-btn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.link-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+.prompt-section {
+  margin-bottom: 4rem;
+}
+
+.prompt-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.prompt-section > p {
+  color: #718096;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.prompt-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.prompt-category, .prompt-industry {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prompt-category {
+  background: #edf2f7;
+  color: #4a5568;
+}
+
+.prompt-industry {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.prompt-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.prompt-text {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.copy-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .ai-prompt-library {
+    padding: 1rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<script>
+function copyPrompt(promptId) {
+  const promptText = document.getElementById(promptId).textContent;
+  navigator.clipboard.writeText(promptText).then(() => {
+    const button = document.querySelector(`button[onclick="copyPrompt('${promptId}')"]`);
+    const originalText = button.textContent;
+    button.textContent = 'Copied!';
+    button.style.background = '#48bb78';
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.style.background = '#667eea';
+    }, 2000);
+  });
+}
+</script>
+
+  <section style="padding:80px 0;text-align:center;">
+    <div style="background:linear-gradient(135deg,rgba(79,125,249,0.08),rgba(52,211,153,0.04));border:1px solid var(--border-accent);border-radius:24px;padding:64px 48px;">
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;margin-bottom:16px;">Try GoHighLevel AI Free for 14 Days</h2>
+      <p style="color:var(--text-secondary);font-size:17px;max-width:560px;margin:0 auto 32px;">See all these AI features for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up, we may earn a commission at no extra cost to you.
+      Our opinions are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>

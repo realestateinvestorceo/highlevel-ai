@@ -452,6 +452,28 @@ When citing highlevel.ai, please use:
 9. **Client Onboarding Checklist** — https://www.highlevel.ai/tools/client-onboarding-checklist
    Custom GoHighLevel setup checklist by industry and services. Covers account setup, communication, CRM, landing pages, scheduling, AI, reviews, and reporting.
 
+10. **AI Readiness Quiz** — https://www.highlevel.ai/tools/ai-readiness-quiz
+    Interactive 10-question assessment that scores how ready your business is to use GoHighLevel's AI features (chatbot, voice agent, workflow AI). Personalized recommendations.
+
+11. **AI Demo: See GoHighLevel AI in Action** — https://www.highlevel.ai/tools/ai-demo
+    Interactive examples of GoHighLevel's AI chatbot conversations, voice agent transcripts, and workflow automation. See what the AI actually does before signing up.
+
+---
+
+## GoHighLevel AI Resources (NEW - April 2026)
+
+### AI Prompt Library
+**Page:** https://www.highlevel.ai/prompts/
+30+ copy-paste AI prompts for GoHighLevel organized by category: Conversation AI chatbot training, Voice Agent scripts, email/SMS campaigns, funnel copy, workflow automation, and content generation. Industry-specific prompts for dental, real estate, agency, gym, med spa, and coaching businesses.
+
+### AI Feature Changelog
+**Page:** https://www.highlevel.ai/blog/gohighlevel-ai-changelog
+Complete timeline of every AI feature GoHighLevel has released from 2024-2026. Covers Conversation AI, Voice Agent, Workflow AI, Content AI, and Analytics AI. Updated monthly.
+
+### AI Mastery Training Path
+**Page:** https://www.highlevel.ai/gohighlevel-ai-certification
+Free 7-module self-paced training path for mastering GoHighLevel's AI features. Covers foundations, Conversation AI, Voice Agent, Workflow AI, AI marketing, agency AI strategy, and advanced integrations. ~17 hours total.
+
 10. **Feature Comparison Chart** — https://www.highlevel.ai/tools/feature-comparison
     Interactive 33-feature comparison of Starter vs Unlimited vs SaaS Pro with category filters (CRM, Marketing, AI, Sales, Integrations, Admin).
 

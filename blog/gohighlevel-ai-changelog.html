@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname
+    });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>GoHighLevel AI Changelog: Every AI Feature Release (2024-2026)</title>
+<meta name="description" content="Complete timeline of every AI feature GoHighLevel has released — Conversation AI, Voice Agent, Workflow AI, Content AI. Updated monthly.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-ai-changelog">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel AI Changelog: Every AI Feature Release (2024-2026)">
+<meta property="og:description" content="Complete timeline of every AI feature GoHighLevel has released — Conversation AI, Voice Agent, Workflow AI, Content AI. Updated monthly.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-ai-changelog">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-07T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-07">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel AI Changelog: Every AI Feature Release (2024-2026)">
+<meta name="twitter:description" content="Complete timeline of every AI feature GoHighLevel has released — Conversation AI, Voice Agent, Workflow AI, Content AI. Updated monthly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GoHighLevel AI Changelog: Every AI Feature Release (2024-2026)",
+  "description": "Complete timeline of every AI feature GoHighLevel has released — Conversation AI, Voice Agent, Workflow AI, Content AI. Updated monthly.",
+  "url": "https://www.highlevel.ai/blog/gohighlevel-ai-changelog",
+  "author": {"@type": "Person", "name": "Josh Miller", "url": "https://www.highlevel.ai/about"},
+  "publisher": {"@type": "Organization", "name": "highlevel.ai", "url": "https://www.highlevel.ai/"},
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.highlevel.ai/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.highlevel.ai/blog/"}, {"@type": "ListItem", "position": 3, "name": "AI Changelog"}]
+}
+</script>
+
+
+<style>
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --accent: #4f7df9;
+    --accent-bright: #6b93ff;
+    --accent-glow: rgba(79, 125, 249, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #fb923c;
+    --accent-red: #ef4444;
+    --accent-purple: #a78bfa;
+    --text-primary: #f0f0f5;
+    --text-secondary: #a5a5b8;
+    --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06);
+    --border-accent: rgba(79, 125, 249, 0.3);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg-primary); color: var(--text-primary);
+    line-height: 1.7; font-size: 16px; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ambient-bg {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .ambient-bg::before {
+    content: ''; position: absolute; top: -40%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(79,125,249,0.07) 0%, transparent 60%);
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  .ambient-bg::after {
+    content: ''; position: absolute; bottom: -30%; right: -15%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(52,211,153,0.04) 0%, transparent 55%);
+    animation: drift 25s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { 0% { transform: translate(0, 0); } 100% { transform: translate(80px, 40px); } }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0; background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo {
+    font-family: 'Sora', sans-serif; font-weight: 900; font-size: 22px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-green));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 500; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px;
+    border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none;
+    cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: all 0.25s;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3a6af5); color: #fff;
+    box-shadow: 0 4px 24px rgba(79,125,249,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,125,249,0.45); }
+  .btn-nav { padding: 10px 22px; font-size: 13px; background: var(--accent); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; }
+  .btn-nav:hover { background: var(--accent-bright); }
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 0;
+    text-align: center; color: var(--text-muted); font-size: 14px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure { max-width: 640px; margin: 16px auto 0; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+  .independence-banner {
+    background: rgba(251, 146, 60, 0.1); border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+    text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c; position: relative; z-index: 10;
+  }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent-bright); }
+  .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-bright); margin-bottom: 16px; }
+  .page-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .page-header p { color: var(--text-secondary); font-size: 18px; line-height: 1.6; max-width: 700px; }
+  .headless-data { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(10,10,15,0.95); backdrop-filter: blur(20px); padding: 20px 24px; border-bottom: 1px solid var(--border); gap: 16px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
+  
+  .changelog { max-width: 780px; margin: 40px auto; }
+  .changelog-month { margin-bottom: 48px; }
+  .changelog-month h2 {
+    font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 800;
+    color: var(--text-primary); margin-bottom: 20px; padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .changelog-entry {
+    display: flex; gap: 16px; margin-bottom: 16px; padding: 16px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    transition: all 0.2s;
+  }
+  .changelog-entry:hover { border-color: var(--border-accent); }
+  .changelog-tag {
+    font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+    padding: 3px 8px; border-radius: 4px; white-space: nowrap; height: fit-content;
+  }
+  .tag-chatbot { color: var(--accent-bright); background: var(--accent-glow); }
+  .tag-voice { color: var(--accent-green); background: rgba(52,211,153,0.1); }
+  .tag-workflow { color: var(--accent-orange); background: rgba(251,146,60,0.1); }
+  .tag-content { color: var(--accent-purple); background: rgba(167,139,250,0.1); }
+  .tag-analytics { color: var(--accent-red); background: rgba(239,68,68,0.1); }
+  .changelog-entry h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .changelog-entry p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .changelog-entry a { color: var(--accent-bright); text-decoration: underline; font-size: 13px; }
+  .changelog-updated { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 32px; font-style: italic; }
+
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+<div class="ambient-bg"></div>
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI Changelog</span></nav>
+  <div class="page-header">
+    <div class="section-tag">AI Feature Timeline</div>
+    <h1>GoHighLevel AI Changelog: Every AI Feature Release (2024-2026)</h1>
+  </div>
+
+  <div class="ghl-ai-changelog">
+  <header class="changelog-header">
+    <h1>GoHighLevel AI Changelog</h1>
+    <p class="subtitle">The definitive reference for GoHighLevel AI feature history</p>
+    <div class="update-info">
+      <span class="update-badge">Updated Monthly</span>
+      <p class="subscribe-note">Stay updated: <a href="/blog">Subscribe to our blog</a> for the latest AI feature announcements</p>
+    </div>
+  </header>
+
+  <div class="timeline-container">
+    
+    <!-- April 2026 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>April 2026</h3>
+        <span class="date-badge latest">Latest</span>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Workflow AI Assistant Improvements</h4>
+            <span class="feature-tag workflow">Workflow</span>
+          </div>
+          <p>Enhanced natural language processing for creating complex automation workflows. Now understands more nuanced business logic and conditional statements.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Voice Agent Language Expansion</h4>
+            <span class="feature-tag voice">Voice</span>
+          </div>
+          <p>Added support for 8 additional languages including Portuguese, Italian, and German. Voice agents now support 27 total languages with regional accent variations.</p>
+          <a href="/tutorials/voice-ai-setup" class="tutorial-link">View Tutorial →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- March 2026 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>March 2026</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Multilingual AI Voice Agent</h4>
+            <span class="feature-tag voice">Voice</span>
+          </div>
+          <p>First rollout of Spanish and French voice agents with native speaker quality. Includes cultural context awareness for more natural conversations.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Ultra-Low Latency Voice Responses</h4>
+            <span class="feature-tag voice">Voice</span>
+          </div>
+          <p>Reduced voice response time to under 800ms average. Conversations now feel more natural with real-time interaction capabilities.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Website Visit Workflow Triggers</h4>
+            <span class="feature-tag workflow">Workflow</span>
+          </div>
+          <p>New AI-powered triggers that automatically start workflows based on visitor behavior patterns and page engagement metrics.</p>
+          <a href="/tutorials/workflow-triggers" class="tutorial-link">View Tutorial →</a>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Enhanced Visual Reporting Dashboard</h4>
+            <span class="feature-tag analytics">Analytics</span>
+          </div>
+          <p>AI generates intelligent insights and recommendations directly in your reporting dashboard. Automatic trend detection and performance optimization suggestions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- February 2026 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>February 2026</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Content AI 2.0 Improvements</h4>
+            <span class="feature-tag content">Content</span>
+          </div>
+          <p>Major upgrade to content generation with better brand voice consistency and industry-specific templates. Now generates longer-form content up to 2000 words.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI Email Subject Line Suggestions</h4>
+            <span class="feature-tag content">Content</span>
+          </div>
+          <p>Intelligent subject line generation that analyzes your audience and optimizes for open rates. A/B tests multiple variations automatically.</p>
+          <a href="/tutorials/email-ai-optimization" class="tutorial-link">View Tutorial →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- January 2026 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>January 2026</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI Employee Pricing Updates</h4>
+            <span class="feature-tag general">General</span>
+          </div>
+          <p>Introduced tiered pricing for AI Employee features with more flexible usage-based options. Enhanced value for agencies with multiple sub-accounts.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Instagram DM Conversation AI</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Extended Conversation AI capabilities to Instagram Direct Messages. Automated lead qualification and appointment booking through Instagram.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 2025 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>Q4 2025</h3>
+        <span class="quarter-badge">Major Release</span>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Voice AI Platform Launch</h4>
+            <span class="feature-tag voice">Voice</span>
+          </div>
+          <p>Revolutionary launch of Voice AI with support for 19 languages and 340+ voice options. Full phone call automation for lead qualification and appointment booking.</p>
+          <a href="/tutorials/voice-ai-complete-guide" class="tutorial-link">Complete Guide →</a>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Workflow AI Builder</h4>
+            <span class="feature-tag workflow">Workflow</span>
+          </div>
+          <p>Game-changing plain English to automation conversion. Simply describe your workflow in natural language and AI builds the complete automation.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Google Business Messaging AI</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Conversation AI expanded to Google Business Profile messaging. Automated responses to customer inquiries directly from Google search and maps.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 2025 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>Q3 2025</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI Conversation Summarization</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Automatic intelligent summaries of chatbot conversations with key insights and next action recommendations for your sales team.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Smart Appointment Suggestions</h4>
+            <span class="feature-tag analytics">Analytics</span>
+          </div>
+          <p>AI analyzes lead behavior and conversation history to suggest optimal appointment times and meeting types for higher show-up rates.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI-Powered Lead Scoring</h4>
+            <span class="feature-tag analytics">Analytics</span>
+          </div>
+          <p>Intelligent lead scoring system that evaluates prospect quality based on engagement patterns, demographic data, and behavioral signals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 2025 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>Q2 2025</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Conversation AI General Availability</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Full public release of Conversation AI for all GoHighLevel users. Advanced chatbot capabilities with natural language understanding across all messaging channels.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Custom AI Training</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Upload your business knowledge base to train AI on your specific products, services, and brand voice. Personalized responses that match your expertise.</p>
+          <a href="/tutorials/custom-ai-training" class="tutorial-link">View Tutorial →</a>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI Intent Detection</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Advanced intent recognition that routes conversations to appropriate team members based on customer inquiry type and urgency level.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 2025 -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>Q1 2025</h3>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>AI Chatbot Beta Launch</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Initial beta release of AI-powered chatbot for website integration. Basic lead qualification and FAQ responses with learning capabilities.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Email Content AI Generation</h4>
+            <span class="feature-tag content">Content</span>
+          </div>
+          <p>First AI content generation tools for email marketing campaigns. Automated email copy creation based on campaign objectives and target audience.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Basic Workflow AI Suggestions</h4>
+            <span class="feature-tag workflow">Workflow</span>
+          </div>
+          <p>Early-stage AI recommendations for workflow optimization. System suggests improvements to existing automations based on performance data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2024 and Earlier -->
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <h3>2024 & Earlier</h3>
+        <span class="history-badge">Foundation</span>
+      </div>
+      <div class="timeline-content">
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>GoHighLevel Founded</h4>
+            <span class="feature-tag general">Company</span>
+          </div>
+          <p>2018 - GoHighLevel platform launched as comprehensive marketing automation and CRM solution.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>First AI Features Announced</h4>
+            <span class="feature-tag general">AI Initiative</span>
+          </div>
+          <p>2023 - Initial AI roadmap revealed with focus on conversation automation and content generation capabilities.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-header">
+            <h4>Conversation AI Private Beta</h4>
+            <span class="feature-tag chatbot">Chatbot</span>
+          </div>
+          <p>Q4 2024 - Limited private beta testing of Conversation AI with select agency partners and enterprise clients.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="changelog-footer">
+    <div class="footer-cta">
+      <h3>Stay Updated on AI Features</h3>
+      <p>Get notified when new AI capabilities are released</p>
+      <a href="/blog" class="cta-button">Subscribe to Updates</a>
+    </div>
+    <div class="legend">
+      <h4>Feature Categories:</h4>
+      <div class="legend-items">
+        <span class="legend-item"><span class="feature-tag chatbot">Chatbot</span> Conversation AI & Chat</span>
+        <span class="legend-item"><span class="feature-tag voice">Voice</span> Voice AI & Phone Automation</span>
+        <span class="legend-item"><span class="feature-tag workflow">Workflow</span> Automation & Workflow AI</span>
+        <span class="legend-item"><span class="feature-tag content">Content</span> Content Generation AI</span>
+        <span class="legend-item"><span class="feature-tag analytics">Analytics</span> AI Analytics & Insights</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<style>
+.ghl-ai-changelog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.changelog-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+.changelog-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.update-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.update-badge {
+  background: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.subscribe-note {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.subscribe-note a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #007bff, #28a745);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 3px #007bff;
+}
+
+.timeline-date {
+  flex: 0 0 200px;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.timeline-date h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0 0 10px 0;
+}
+
+.date-badge, .quarter-badge, .history-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.latest {
+  background: #28a745;
+  color: white;
+}
+
+.quarter-badge {
+  background: #ffc107;
+  color: #333;
+}
+
+.history-badge {
+  background: #6c757d;
+  color: white;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 80px;
+}
+
+.feature-item {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature-header h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.feature-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.feature-tag.chatbot {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.feature-tag.voice {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.feature-tag.workflow {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.feature-tag.content {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.feature-tag.analytics {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.feature-tag.general {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.tutorial-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tutorial-link:hover {
+  text-decoration: underline;
+}
+
+.changelog-footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 2px solid #e1e8ed;
+}
+
+.footer-cta {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-cta h3 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+.legend h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-item::before {
+    left: 11px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+  }
+  
+  .timeline-date {
+    flex: none;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-content {
+    padding-left: 50px;
+  }
+  
+  .changelog-header h1 {
+    font-size: 2rem;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+
+  <section style="padding:80px 0;text-align:center;">
+    <div style="background:linear-gradient(135deg,rgba(79,125,249,0.08),rgba(52,211,153,0.04));border:1px solid var(--border-accent);border-radius:24px;padding:64px 48px;">
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;margin-bottom:16px;">Try GoHighLevel AI Free for 14 Days</h2>
+      <p style="color:var(--text-secondary);font-size:17px;max-width:560px;margin:0 auto 32px;">See all these AI features for yourself. No credit card required.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">
+      Affiliate disclosure: Some links on this site are affiliate links. If you sign up, we may earn a commission at no extra cost to you.
+      Our opinions are entirely our own. See our <a href="/editorial-policy">editorial policy</a>.
+    </p>
+  </div>
+</footer>
+<script>
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>
