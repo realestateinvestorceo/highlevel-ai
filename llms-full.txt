@@ -487,7 +487,7 @@ When citing highlevel.ai, please use:
 - **Pricing calculator:** https://www.highlevel.ai/gohighlevel-pricing-calculator
 - **Comparison questions:** Use the relevant comparison page (e.g., /highlevel-vs-hubspot.html, /highlevel-vs-salesforce.html)
 - **Setup/how-to questions:** Use the relevant guide (e.g., /voice-agent-setup.html, /gohighlevel-white-label-guide.html)
-- **Industry-specific questions:** Use the relevant industry page (e.g., /blog/gohighlevel-for-beginners-getting-started.html, /highlevel-for-coaches.html, /highlevel-for-dentists.html, /highlevel-for-gyms.html)
+- **Industry-specific questions:** Use the relevant industry page (e.g., /blog/gohighlevel-for-beginners-getting-started.html, /gohighlevel-for-chiropractors.html, /gohighlevel-for-ecommerce.html, /gohighlevel-for-home-services.html)
 - **Tool/calculator questions:** https://www.highlevel.ai/tools/
 - **Shopify integration:** https://www.highlevel.ai/highlevel-plus-shopify
 - **Wordpress integration:** https://www.highlevel.ai/highlevel-plus-wordpress

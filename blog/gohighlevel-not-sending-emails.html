@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="fp_ref=ai"]');
+    if (!link) return;
+    gtag('event', 'cta_click', {
+      event_category: 'affiliate',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_path: window.location.pathname
+    });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)</title>
+<meta name="description" content="If your GoHighLevel emails aren't sending or landing in spam, here are the 8 most common causes and how to fix each one — from DNS records to Mailgun setup.">
+<meta name="author" content="Josh Miller">
+<link rel="canonical" href="https://www.highlevel.ai/blog/gohighlevel-not-sending-emails">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26A1;</text></svg>" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)">
+<meta property="og:description" content="If your GoHighLevel emails aren't sending or landing in spam, here are the 8 most common causes and how to fix each one — from DNS records to Mailgun setup.">
+<meta property="og:url" content="https://www.highlevel.ai/blog/gohighlevel-not-sending-emails">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-04-07T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-07">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)">
+<meta name="twitter:description" content="If your GoHighLevel emails aren't sending or landing in spam, here are the 8 most common causes and how to fix each one — from DNS records to Mailgun setup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)",
+  "description": "If your GoHighLevel emails aren't sending or landing in spam, here are the 8 most common causes and how to fix each one — from DNS records to Mailgun setup.",
+  "image": {"@type": "ImageObject", "url": "https://www.highlevel.ai/og-image.png", "width": 1200, "height": 630},
+  "author": {"@type": "Person", "name": "Josh Miller", "url": "https://www.highlevel.ai/about"},
+  "publisher": {"@type": "Organization", "name": "highlevel.ai", "url": "https://www.highlevel.ai/"},
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07",
+  "mainEntityOfPage": "https://www.highlevel.ai/blog/gohighlevel-not-sending-emails"
+}
+</script>
+<style>
+  :root {
+    --bg-primary: #0a0a0f; --bg-secondary: #111118; --bg-card: #16161f;
+    --bg-card-hover: #1c1c28; --accent: #4f7df9; --accent-bright: #6b93ff;
+    --accent-green: #34d399; --accent-orange: #fb923c; --accent-red: #ef4444;
+    --text-primary: #f0f0f5; --text-secondary: #a5a5b8; --text-muted: #77778a;
+    --border: rgba(255,255,255,0.06); --border-accent: rgba(79,125,249,0.3);
+    --radius: 16px; --radius-sm: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 0; background: rgba(10,10,15,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'Sora', sans-serif; font-weight: 900; font-size: 22px; background: linear-gradient(135deg, var(--accent-bright), var(--accent-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 500; }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 32px; height: 32px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: all 0.25s; }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), #3a6af5); color: #fff; box-shadow: 0 4px 24px rgba(79,125,249,0.3); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,125,249,0.45); }
+  .btn-nav { padding: 10px 22px; font-size: 13px; background: var(--accent); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; }
+  .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; padding-top: 100px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+  .section-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-bright); margin-bottom: 16px; }
+  .article-header { max-width: 780px; margin: 0 auto 40px; }
+  .article-header h1 { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+  .article-meta { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .author-byline { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-green)); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: #fff; flex-shrink: 0; }
+  .author-info { font-size: 14px; line-height: 1.4; }
+  .author-name { font-weight: 700; color: var(--text-primary); }
+  .author-title { color: var(--text-muted); font-size: 13px; }
+  .content-block { max-width: 780px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: var(--text-secondary); }
+  .content-block p { margin-bottom: 20px; }
+  .content-block h2 { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: var(--text-primary); margin: 48px 0 20px; }
+  .content-block h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-primary); margin: 36px 0 14px; }
+  .content-block ul, .content-block ol { margin: 0 0 20px 24px; }
+  .content-block li { margin-bottom: 8px; }
+  .content-block strong { color: var(--text-primary); }
+  .content-block a { color: var(--accent-bright); text-decoration: underline; }
+  .content-block table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+  .content-block th { background: var(--bg-card); padding: 12px 16px; text-align: left; font-weight: 700; border: 1px solid var(--border); color: var(--text-primary); }
+  .content-block td { padding: 12px 16px; border: 1px solid var(--border); }
+  .content-block blockquote { border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0; background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-style: italic; }
+  .tip-box { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2); border-radius: var(--radius); padding: 20px 24px; margin: 24px 0; }
+  .tip-box strong { color: var(--accent-green); }
+  .warning-box { background: rgba(251,146,60,0.08); border: 1px solid rgba(251,146,60,0.2); border-radius: var(--radius); padding: 20px 24px; margin: 24px 0; }
+  .warning-box strong { color: var(--accent-orange); }
+  .headless-data { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .inline-disclosure { font-size: 13px; color: var(--text-muted); font-style: italic; }
+  .inline-disclosure a { color: var(--text-secondary); text-decoration: underline; }
+  footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 14px; }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .affiliate-disclosure { max-width: 640px; margin: 16px auto 0; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+  .independence-banner { background: rgba(251,146,60,0.1); border-bottom: 1px solid rgba(251,146,60,0.2); text-align: center; padding: 10px 24px; font-size: 13px; color: #fb923c; position: relative; z-index: 10; }
+  .independence-banner a { color: #fb923c; text-decoration: underline; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(10,10,15,0.95); backdrop-filter: blur(20px); padding: 20px 24px; border-bottom: 1px solid var(--border); gap: 16px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
+</style>
+</head>
+<body>
+<div class="independence-banner">&#9888;&#65039; highlevel.ai is an independent review site. Not affiliated with, endorsed by, or sponsored by HighLevel Inc. / GoHighLevel. <a href="/about">About this site &rarr;</a></div>
+
+<header>
+<nav aria-label="Site navigation">
+  <div class="container">
+    <a href="/" class="nav-logo">highlevel.ai</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">&larr; Full Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Troubleshooting</span></nav>
+
+  <div class="article-header">
+    <div class="section-tag">Troubleshooting</div>
+    <h1>GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)</h1>
+    <div class="author-byline">
+      <div class="author-avatar">JM</div>
+      <div class="author-info">
+        <div class="author-name">Josh Miller</div>
+        <div class="author-title">GoHighLevel user since 2019 &bull; SaaS Pro plan</div>
+      </div>
+    </div>
+    <p class="article-meta">Published April 07, 2026</p>
+    <p class="inline-disclosure">This article contains affiliate links. <a href="/editorial-policy">Full disclosure</a>.</p>
+  </div>
+
+  <div class="content-block">
+    <div class="headless-data" style="display: none;">
+GoHighLevel email delivery issues stem from eight primary causes: missing DKIM records that prevent authentication, absent SPF records blocking domain verification, lacking DMARC policies that fail spam filters, unverified Mailgun configurations, sending from free email domains like Gmail, content triggering spam filters, sending emails too rapidly without proper warm-up, and LC Email versus Mailgun setup conflicts. Authentication failures are the leading cause, requiring proper SPF, DKIM, and DMARC configuration in DNS settings. Missing DKIM records appear as "not verified" in domain settings, while SPF records need specific includes for leadconnectorhq.com and mailgun.org. DMARC policies should start with "p=none" for monitoring. Mailgun requires separate verification beyond GoHighLevel's built-in settings. Free email domains bypass authentication entirely. Content issues include spam trigger words and poor formatting. Rapid sending without warm-up triggers provider blocks. LC Email and Mailgun require different DNS configurations that can conflict without proper setup.
+</div>
+
+<h2>GoHighLevel Not Sending Emails? 8 Fixes (Troubleshooting Guide)</h2>
+
+<p>Nothing's more frustrating than launching an email campaign in <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">GoHighLevel</a> only to discover your messages aren't reaching inboxes. After 6+ years of troubleshooting email delivery issues, I've identified the eight most common culprits—and more importantly, how to fix each one.</p>
+
+<p>Email authentication failures account for roughly 80% of delivery problems in GoHighLevel. The remaining issues typically involve configuration errors, content problems, or sending behavior that triggers spam filters. Let's dive into each issue with specific symptoms, diagnostic steps, and exact fixes.</p>
+
+<h2>1. Missing DKIM Record (Authentication Failure)</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Domain shows "Not Verified" status in GoHighLevel</li>
+<li>Emails going to spam folders consistently</li>
+<li>Email headers show "DKIM: FAIL" or "DKIM: NONE"</li>
+<li>Low open rates across all email campaigns</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Navigate to <strong>Settings → Domains</strong> in your GoHighLevel account. Select your sending domain and check the DNS Records section. If you see a red "X" or "Not Verified" next to the DKIM record, this confirms the issue.</p>
+
+<p>For external verification, send a test email to yourself and examine the email headers. Look for authentication results—missing DKIM will show as "DKIM=none" in the headers.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>In GoHighLevel, go to <strong>Settings → Domains</strong></li>
+<li>Click on your domain and locate the DKIM record in the DNS Records section</li>
+<li>Copy the DKIM record details:
+   <ul>
+   <li><strong>Name:</strong> krs._domainkey</li>
+   <li><strong>Value:</strong> The long encrypted string (starts with p=MIGfMA0GCSqGSIb...)</li>
+   </ul>
+</li>
+<li>Access your domain registrar's DNS management panel</li>
+<li>Create a new TXT record with the exact name and value</li>
+<li>Wait 24-48 hours for DNS propagation</li>
+<li>Return to GoHighLevel and click "Verify Domain"</li>
+</ol>
+
+<div class="warning-box"><strong>Important:</strong> Copy the DKIM value into a text editor first to ensure no hidden characters or formatting issues transfer to your DNS settings.</div>
+
+<h2>2. Missing SPF Record</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Emails bouncing back with authentication errors</li>
+<li>Recipients seeing "via leadconnectorhq.com" warnings</li>
+<li>Inconsistent delivery across different email providers</li>
+<li>SPF authentication showing as "FAIL" in email headers</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Use MXToolbox.com to check your domain's SPF record. Enter your domain and select "SPF Record Lookup." If no SPF record exists, or if it doesn't include GoHighLevel's infrastructure, you'll see an error or incomplete results.</p>
+
+<p>You can also check by sending test emails to different providers (Gmail, Outlook, Yahoo) and examining the authentication results in the email headers.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Access your domain registrar's DNS management interface</li>
+<li>Look for existing SPF records (TXT records starting with "v=spf1")</li>
+<li>If no SPF record exists, create a new TXT record:
+   <ul>
+   <li><strong>Name:</strong> @ (or your root domain)</li>
+   <li><strong>Value:</strong> <code>v=spf1 include:spf.leadconnectorhq.com include:mailgun.org ~all</code></li>
+   </ul>
+</li>
+<li>If an SPF record already exists, add the includes before the "~all" or "-all" mechanism</li>
+<li>Save the DNS changes</li>
+<li>Wait 2-4 hours for propagation, then test using MXToolbox</li>
+</ol>
+
+<div class="warning-box"><strong>Important:</strong> You can only have ONE SPF record per domain. If you have multiple SPF records, email providers will ignore them all, causing authentication to fail.</div>
+
+<h2>3. No DMARC Policy</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Emails inconsistently reaching inboxes</li>
+<li>No visibility into email authentication failures</li>
+<li>Gradual decline in deliverability over time</li>
+<li>Recipients' email providers showing authentication warnings</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Check for a DMARC record using MXToolbox.com's DMARC lookup tool. Enter your domain—if no DMARC record exists, major email providers have no policy guidance for handling authentication failures.</p>
+
+<p>Without DMARC, you're also missing valuable reports that show which emails pass or fail authentication checks.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Create a DMARC TXT record in your DNS:
+   <ul>
+   <li><strong>Name:</strong> _dmarc</li>
+   <li><strong>Value:</strong> <code>v=DMARC1; p=none; rua=mailto:your-email@yourdomain.com</code></li>
+   </ul>
+</li>
+<li>Replace "your-email@yourdomain.com" with your actual email address</li>
+<li>Save the DNS record and wait for propagation</li>
+<li>After 2-4 weeks of monitoring reports, consider changing policy to "quarantine" or "reject"</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Start with "p=none" policy to monitor authentication without affecting delivery. Once you've confirmed SPF and DKIM are working correctly, you can strengthen the policy.</div>
+
+<h2>4. Mailgun Not Verified</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>GoHighLevel shows domain as verified, but emails still have delivery issues</li>
+<li>Receiving "550 5.7.1" error codes</li>
+<li>Emails marked as "sent" in GoHighLevel but never arriving</li>
+<li>Inconsistent delivery timing</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>GoHighLevel uses Mailgun as its email delivery infrastructure. Even if your domain shows as verified in GoHighLevel, Mailgun may require separate verification steps.</p>
+
+<p>Check your email activity logs in GoHighLevel. If you see successful sends but poor delivery rates, this suggests a Mailgun verification issue rather than a GoHighLevel problem.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>In GoHighLevel, go to <strong>Settings → Email Services → Sending Domain</strong></li>
+<li>Click "Verify Domain" even if it appears verified</li>
+<li>If verification fails, wait 10 minutes and try again</li>
+<li>Check your DNS records are propagated using online DNS checkers</li>
+<li>Contact GoHighLevel support if verification continues failing after proper DNS setup</li>
+<li>Request manual verification of your domain with Mailgun through support</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Sometimes you need to click "Verify Domain" twice in GoHighLevel. If the first attempt shows "not verified," wait a few minutes and try again.</div>
+
+<h2>5. Sending from Free Email Domain</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Using @gmail.com, @yahoo.com, or @outlook.com as your "From" address</li>
+<li>High spam rates despite proper content</li>
+<li>Recipients seeing authentication warnings</li>
+<li>Domain alignment failures in email headers</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Check your email campaigns and automations in GoHighLevel. Look at the "From" email address you're using. If it's a free email provider domain, this creates authentication conflicts that hurt deliverability.</p>
+
+<p>Free email domains have their own authentication policies that conflict with third-party sending through GoHighLevel's infrastructure.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Purchase a professional domain if you don't have one</li>
+<li>Set up email hosting or use your domain registrar's email service</li>
+<li>Add your professional domain to GoHighLevel (<strong>Settings → Domains</strong>)</li>
+<li>Complete the authentication setup (SPF, DKIM, DMARC) for your domain</li>
+<li>Update all campaigns and automations to use your professional email address</li>
+<li>Test email delivery from your new professional domain</li>
+</ol>
+
+<div class="warning-box"><strong>Important:</strong> Your "From" email address domain must match your authenticated sending domain in GoHighLevel for optimal deliverability.</div>
+
+<h2>6. Email Content Triggering Spam Filters</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Low open rates despite good authentication</li>
+<li>Emails consistently landing in spam folders</li>
+<li>High unsubscribe rates</li>
+<li>Poor engagement metrics across campaigns</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Use Mail-Tester.com to analyze your email content. Send a test email to the provided address and review the spam score and feedback. Scores below 7/10 indicate content issues.</p>
+
+<p>Common triggers include excessive capitalization, multiple exclamation points, words like "FREE," "GUARANTEED," or "URGENT," and poor HTML formatting.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Review your email content for spam trigger words</li>
+<li>Reduce ALL CAPS text and excessive punctuation (!!!)</li>
+<li>Balance text-to-image ratios (aim for 60% text, 40% images)</li>
+<li>Include a clear unsubscribe link</li>
+<li>Add your physical business address</li>
+<li>Use personalization tokens to customize messages</li>
+<li>Test content with Mail-Tester before sending campaigns</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Write your emails like personal conversations. The more natural and conversational your tone, the better your deliverability will be.</div>
+
+<h2>7. Sending Too Fast (Warm-up Needed)</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Good initial delivery, then sudden drops</li>
+<li>Temporary sending blocks from email providers</li>
+<li>Error messages about rate limiting</li>
+<li>Delivery delays of several hours</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Check your email sending volume in GoHighLevel's reporting. If you're sending thousands of emails immediately after setting up a new domain or returning after a sending break, this suggests a warm-up issue.</p>
+
+<p>New domains or domains with low sending history need gradual volume increases to build sender reputation.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Start with 50-100 emails per day for new domains</li>
+<li>Increase volume by 50-100 emails daily</li>
+<li>Monitor bounce rates and spam complaints closely</li>
+<li>Focus on engaged subscribers initially</li>
+<li>Gradually expand to your full list over 2-4 weeks</li>
+<li>Use GoHighLevel's email scheduling to spread sends throughout the day</li>
+</ol>
+
+<div class="warning-box"><strong>Important:</strong> Rushing the warm-up process can damage your sender reputation permanently. It's better to start slow and build steadily.</div>
+
+<h2>8. LC Email vs Mailgun Configuration Issue</h2>
+
+<h3>Symptoms</h3>
+<ul>
+<li>Conflicting DNS records</li>
+<li>Some emails delivering, others failing</li>
+<li>Authentication passing intermittently</li>
+<li>Different delivery results for different campaigns</li>
+</ul>
+
+<h3>How to Diagnose</h3>
+<p>Check your email services settings in GoHighLevel (<strong>Settings → Email Services</strong>). If you have both LC Email and Mailgun configured, or if you've switched between them, conflicting DNS records may exist.</p>
+
+<p>Look for duplicate DKIM records or conflicting SPF includes in your DNS settings.</p>
+
+<h3>Exact Steps to Fix</h3>
+<ol>
+<li>Choose one email service (Mailgun is recommended for higher volumes)</li>
+<li>Remove DNS records from the unused service</li>
+<li>Clean up duplicate or conflicting DNS entries</li>
+<li>Ensure SPF record includes only necessary services</li>
+<li>Verify domain authentication with your chosen service</li>
+<li>Test email delivery thoroughly</li>
+<li>Update any hardcoded email settings in campaigns</li>
+</ol>
+
+<p>For comprehensive email marketing strategies beyond delivery issues, check out our complete <a href="/blog/gohighlevel-email-marketing-guide">GoHighLevel email marketing guide</a>.</p>
+
+<h2>Testing Your Fixes</h2>
+
+<p>After implementing any of these fixes, proper testing is crucial:</p>
+
+<ol>
+<li><strong>DNS Propagation Check:</strong> Use DNSChecker.org to verify your changes have propagated globally</li>
+<li><strong>Authentication Testing:</strong> Use MXToolbox.com to verify SPF, DKIM, and DMARC records</li>
+<li><strong>Inbox Testing:</strong> Send test emails to Gmail, Outlook, Yahoo, and Apple Mail accounts</li>
+<li><strong>Content Analysis:</strong> Run your email content through Mail-Tester.com</li>
+<li><strong>Delivery Monitoring:</strong> Watch your GoHighLevel analytics for improved open rates and reduced bounces</li>
+</ol>
+
+<div class="tip-box"><strong>Pro tip:</strong> Keep a test email list with addresses from different providers. Send regular tests to monitor your ongoing deliverability health.</div>
+
+<h2>Prevention and Ongoing Maintenance</h2>
+
+<p>Preventing future email delivery issues requires ongoing attention:</p>
+
+<ul>
+<li><strong>Monitor Metrics:</strong> Track open rates, click rates, and bounce rates weekly</li>
+<li><strong>List Hygiene:</strong> Remove hard bounces and unengaged subscribers regularly</li>
+<li><strong>Content Quality:</strong> Maintain high-quality, relevant email content</li>
+<li><strong>Authentication Monitoring:</strong> Set up DMARC reports to catch authentication issues early</li>
+<li><strong>Sending Consistency:</strong> Maintain regular sending volumes to preserve sender reputation</li>
+</ul>
+
+<p>Remember that email deliverability is an ongoing process, not a one-time setup. Regular monitoring and maintenance will keep your emails reaching inboxes consistently.</p>
+
+<h2>Bottom Line</h2>
+
+<p>Email delivery problems in GoHighLevel almost always stem from authentication issues, configuration errors, or sending behavior problems. The most critical fixes are proper DNS authentication (SPF, DKIM, DMARC), using professional domains, and gradual warm-up for new sending domains.</p>
+
+<p>Start with authentication—fix your DNS records first, then move to content and sending behavior optimizations. Most users see immediate improvements after properly configuring their domain authentication, with dramatic delivery improvements within 48-72 hours.</p>
+
+<p>If you've worked through all eight fixes and still experience delivery issues, the problem likely requires direct support intervention or deeper infrastructure investigation with <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">GoHighLevel's support team</a>.</p>
+  </div>
+
+  <section style="padding:80px 0;text-align:center;">
+    <div style="background:linear-gradient(135deg,rgba(79,125,249,0.08),rgba(52,211,153,0.04));border:1px solid var(--border-accent);border-radius:24px;padding:64px 48px;">
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;margin-bottom:16px;">Try GoHighLevel Free for 14 Days</h2>
+      <p style="color:var(--text-secondary);font-size:17px;max-width:560px;margin:0 auto 32px;">No credit card required. See if it's the right fit.</p>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Review</a>
+      <a href="/prompts/">AI Prompts</a>
+      <a href="/tools/">Free Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about">About</a>
+    </div>
+    <p>&copy; 2026 highlevel.ai &mdash; Independent GoHighLevel review. Not affiliated with HighLevel Inc.</p>
+    <p class="affiliate-disclosure">Affiliate disclosure: Some links earn us a commission at no extra cost to you. <a href="/editorial-policy">Editorial policy</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
