@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -1629,7 +1635,7 @@
       <a href="#faq">FAQ</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1656,7 +1662,7 @@
       <dfn>HighLevel AI</dfn>, also known as GoHighLevel, is an all-in-one AI-powered marketing and CRM platform built for digital marketing agencies, consultants, and small businesses. Founded in 2018 by Shaun Clark, HighLevel consolidates over 10 separate marketing tools into a single platform — including CRM and pipeline management, funnel and website building, email and SMS marketing, appointment scheduling, reputation management, and AI-powered automation. The platform's AI capabilities include a conversational AI chatbot that responds to leads via SMS, email, and webchat; an AI <a href="/voice-agent-setup" data-auto-link="true">voice agent</a> for inbound calls; AI-generated content for emails and campaigns; and intelligent workflow automations. HighLevel offers three pricing tiers starting at $97 per month, with a 14-day free trial requiring no credit card.<a href="#sources" class="citation-ref">[1]</a> Over one million businesses worldwide use GoHighLevel, and it holds a <strong>4.6 out of 5 rating</strong> from more than 5,200 user reviews (source: G2<a href="#sources" class="citation-ref">[3]</a>, Capterra<a href="#sources" class="citation-ref">[4]</a>, and Trustpilot<a href="#sources" class="citation-ref">[5]</a> aggregate, January 2026).
     </p>
     <div class="hero-cta">
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial — No Credit Card Needed <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial — No Credit Card Needed <span>→</span></a>
       <a href="#features" class="btn btn-ghost">Explore AI Features</a>
     </div>
     <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Trusted by 1,000,000+ businesses • 4.6/5 from 5,200+ reviews • 14-day free trial, no card required</p>
@@ -1760,18 +1766,18 @@
     <div class="sources-box animate-on-scroll">
       <h3>Reference Sources</h3>
       <ol class="sources-list">
-        <li><span class="source-num">[1]</span> <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" rel="nofollow sponsored">GoHighLevel Official Pricing Page</a> — plan tiers, trial terms</li>
-        <li><span class="source-num">[2]</span> <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">GoHighLevel Official Website</a> — company info, user count, features</li>
+        <li><span class="source-num">[1]</span> <a href="https://www.gohighlevel.com/pricing?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta3" rel="nofollow sponsored">GoHighLevel Official Pricing Page</a> — plan tiers, trial terms</li>
+        <li><span class="source-num">[2]</span> <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta4" rel="nofollow sponsored">GoHighLevel Official Website</a> — company info, user count, features</li>
         <li><span class="source-num">[3]</span> <a href="https://www.g2.com/products/highlevel/reviews" rel="nofollow">G2 GoHighLevel Reviews</a> — aggregate rating, review count</li>
         <li><span class="source-num">[4]</span> <a href="https://www.capterra.com/p/177156/HighLevel/reviews/" rel="nofollow">Capterra GoHighLevel Reviews</a> — aggregate rating, review count</li>
         <li><span class="source-num">[5]</span> <a href="https://www.trustpilot.com/review/www.gohighlevel.com" rel="nofollow">Trustpilot GoHighLevel Reviews</a> — aggregate rating</li>
         <li><span class="source-num">[6]</span> <a href="https://www.hubspot.com/pricing" rel="nofollow">HubSpot Pricing Page</a> — Marketing Hub pricing</li>
         <li><span class="source-num">[7]</span> <a href="https://www.clickfunnels.com/pricing" rel="nofollow">ClickFunnels Pricing Page</a> — plan pricing</li>
         <li><span class="source-num">[8]</span> <a href="https://www.activecampaign.com/pricing" rel="nofollow">ActiveCampaign Pricing Page</a> — plan pricing</li>
-        <li><span class="source-num">[9]</span> <a href="https://www.gohighlevel.com/ai-features?fp_ref=ai" rel="nofollow sponsored">GoHighLevel AI Features</a>— AI bot, <a href="/voice-agent-setup" data-auto-link="true">voice agent</a> details</li>
+        <li><span class="source-num">[9]</span> <a href="https://www.gohighlevel.com/ai-features?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta5" rel="nofollow sponsored">GoHighLevel AI Features</a>— AI bot, <a href="/voice-agent-setup" data-auto-link="true">voice agent</a> details</li>
         <li><span class="source-num">[10]</span> <a href="https://www.facebook.com/groups/gohighlevel" rel="nofollow">GoHighLevel Facebook Community</a> — member count</li>
         <li><span class="source-num">[11]</span> <a href="https://calendly.com/pricing" rel="nofollow">Calendly Pricing Page</a> — plan pricing</li>
-        <li><span class="source-num">[12]</span> <a href="https://www.gohighlevel.com/hipaa-compliance?fp_ref=ai" rel="nofollow sponsored">GoHighLevel HIPAA Compliance</a> — compliance info</li>
+        <li><span class="source-num">[12]</span> <a href="https://www.gohighlevel.com/hipaa-compliance?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta6" rel="nofollow sponsored">GoHighLevel HIPAA Compliance</a> — compliance info</li>
       </ol>
       <p class="sources-verified">Last verified: February 20, 2026. Pricing and feature details may change. Check official sources for the most current information.</p>
     </div>
@@ -1854,7 +1860,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try These AI Features Free for 14 Days <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta7" class="btn btn-primary" rel="nofollow sponsored">Try These AI Features Free for 14 Days <span>→</span></a>
 </div>
 
 <!-- WHO IS IT FOR? -->
@@ -1903,7 +1909,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">See If HighLevel Fits Your Business — Start Free Trial <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta8" class="btn btn-primary" rel="nofollow sponsored">See If HighLevel Fits Your Business — Start Free Trial <span>→</span></a>
 </div>
 
 <!-- GETTING STARTED -->
@@ -1953,7 +1959,7 @@
           <li>Reputation Management</li>
           <li>Reporting Dashboard</li>
         </ul>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-ghost" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try Starter Free for 14 Days</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta9" class="btn btn-ghost" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try Starter Free for 14 Days</a>
         <p style="font-size:12px;color:var(--text-muted);margin-top:8px;text-align:center;">14-day free trial, cancel anytime</p>
       </div>
       <div class="price-card featured animate-on-scroll">
@@ -1970,7 +1976,7 @@
           <li>Membership &amp; Course Hosting</li>
           <li>Advanced Permissions</li>
         </ul>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try Unlimited Free — Most Popular</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta10" class="btn btn-primary" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try Unlimited Free — Most Popular</a>
         <p style="font-size:12px;color:var(--text-muted);margin-top:8px;text-align:center;">14-day free trial, cancel anytime</p>
       </div>
       <div class="price-card animate-on-scroll">
@@ -1987,7 +1993,7 @@
           <li>Custom Domain &amp; Branding</li>
           <li>Client Subscription Management</li>
         </ul>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-ghost" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try SaaS Pro Free for 14 Days</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta11" class="btn btn-ghost" style="width:100%;justify-content:center;" rel="nofollow sponsored">Try SaaS Pro Free for 14 Days</a>
         <p style="font-size:12px;color:var(--text-muted);margin-top:8px;text-align:center;">14-day free trial, cancel anytime</p>
       </div>
     </div>
@@ -2132,7 +2138,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Compare for Yourself — Try GoHighLevel Free <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta12" class="btn btn-primary" rel="nofollow sponsored">Compare for Yourself — Try GoHighLevel Free <span>→</span></a>
 </div>
 
 <!-- PROS & CONS -->
@@ -2174,7 +2180,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Weigh It Yourself — 14-Day Free Trial, No Card Required <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta13" class="btn btn-primary" rel="nofollow sponsored">Weigh It Yourself — 14-Day Free Trial, No Card Required <span>→</span></a>
 </div>
 
 <!-- PRICING CALCULATOR -->
@@ -2265,7 +2271,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Build Your First Workflow During the Free Trial <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta14" class="btn btn-primary" rel="nofollow sponsored">Build Your First Workflow During the Free Trial <span>→</span></a>
 </div>
 
 <!-- VOICE AGENT CHECKLIST -->
@@ -2443,7 +2449,7 @@
       <p class="verdict-text">After six-plus years as an active GoHighLevel customer — including working directly with the platform’s founders in its early days — GoHighLevel earns a strong recommendation for marketing agencies, consultants, and growth-oriented small businesses. <strong>The platform delivers on its core promise:</strong> replacing 10+ separate marketing tools with a single, AI-powered platform at a fraction of the combined cost. The AI conversation bot and voice agent are genuine differentiators — not gimmicks — and the white-label SaaS opportunity is unmatched in this category. The learning curve is the biggest barrier to entry, but the 14-day free trial with no credit card gives you a low-risk window to evaluate fit. If you are spending $200 or more per month on separate marketing tools, GoHighLevel is worth testing.</p>
     </div>
     <div class="content-block animate-on-scroll" style="margin-top:32px;text-align:center;">
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta15" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
     </div>
   </div>
 </section>
@@ -2486,7 +2492,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Join 1M+ Businesses Using HighLevel — Start Free <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta16" class="btn btn-primary" rel="nofollow sponsored">Join 1M+ Businesses Using HighLevel — Start Free <span>→</span></a>
 </div>
 
 <!-- FAQ (20 Questions) -->
@@ -2584,7 +2590,7 @@
       </div>
 
       <div class="animate-on-scroll" style="text-align:center;padding:20px 0;">
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Still Have Questions? Try It Free for 14 Days <span>→</span></a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta17" class="btn btn-primary" rel="nofollow sponsored">Still Have Questions? Try It Free for 14 Days <span>→</span></a>
       </div>
 
       <div class="faq-item">
@@ -2827,7 +2833,7 @@
     <div class="final-cta-box animate-on-scroll">
       <h2>Ready to Replace Your Marketing Stack?</h2>
       <p>Join over 1,000,000 businesses using HighLevel AI to automate marketing, close more deals, and scale faster. 14-day free trial — no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta18" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
     </div>
   </div>
 </section>
@@ -2968,7 +2974,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=homepage&utm_content=cta19" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

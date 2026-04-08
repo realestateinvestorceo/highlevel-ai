@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -807,7 +813,7 @@
       <a href="/">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=mistakes-to-avoid&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1123,7 +1129,7 @@
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Avoid These Mistakes — Start With a Free Trial <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=mistakes-to-avoid&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Avoid These Mistakes — Start With a Free Trial <span>→</span></a>
 </div>
 
 <!-- FAQ -->
@@ -1219,7 +1225,7 @@
     <div class="final-cta-box animate-on-scroll">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Now that you know what mistakes to avoid, start with a solid setup plan. GoHighLevel's 14-day free trial gives you enough time to configure your account correctly, test your first workflows, and see results — no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=mistakes-to-avoid&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
     </div>
   </div>
 </section>
@@ -1308,7 +1314,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=mistakes-to-avoid&utm_content=cta4" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

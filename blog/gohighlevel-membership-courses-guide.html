@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
   (function() {
@@ -397,7 +403,7 @@
       <a href="/#guides">Guides</a>
       <a href="/blog/">Blog</a>
       <a href="/#comparisons">Comparisons</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=blog-gohighlevel-membership-courses-guide&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -709,7 +715,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>See everything we've covered in this guide for yourself. No credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=blog-gohighlevel-membership-courses-guide&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
     </div>
   </section>
 

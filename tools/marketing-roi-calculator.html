@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -771,7 +777,7 @@
       <a href="/tools/">Free Tools</a>
       <a href="/#guides">Guides</a>
       <a href="/#comparisons">Comparisons</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-marketing-roi-calculator&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -942,7 +948,7 @@
           <span class="amount positive" id="r-ltv-profit">$18,000</span>
         </div>
 
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary results-cta" rel="nofollow sponsored">
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-marketing-roi-calculator&utm_content=cta2" class="btn btn-primary results-cta" rel="nofollow sponsored">
           Improve Your ROI with GoHighLevel <span>&rarr;</span>
         </a>
       </div>
@@ -987,7 +993,7 @@
       </ul>
 
       <div style="text-align:center; margin: 32px 0;">
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>&rarr;</span></a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-marketing-roi-calculator&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -1056,7 +1062,7 @@
     <div class="final-cta-box">
       <h2>Boost Your Marketing ROI</h2>
       <p>Replace your scattered tool stack with one platform. Automate follow-ups, nurture leads, and close more deals &mdash; all from GoHighLevel.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-marketing-roi-calculator&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
     </div>
   </div>
 </section>

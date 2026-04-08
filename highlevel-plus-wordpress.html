@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -781,7 +787,7 @@
       <a href="/#comparison">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-plus-wordpress&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -971,7 +977,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-plus-wordpress&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
   </div>
 
   <!-- SECTION 3: WordPress vs GoHighLevel Website Builder -->
@@ -1074,7 +1080,7 @@
   </div>
 
   <ol class="setup-list animate-on-scroll">
-    <li><strong>Sign up for a GoHighLevel free trial.</strong> Start a 14-day free trial at <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored" style="color:var(--accent-bright);">gohighlevel.com</a>. No credit card required. This gives you access to the CRM, forms, chat widget, calendars, and automation builder.</li>
+    <li><strong>Sign up for a GoHighLevel free trial.</strong> Start a 14-day free trial at <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-plus-wordpress&utm_content=cta3" rel="nofollow sponsored" style="color:var(--accent-bright);">gohighlevel.com</a>. No credit card required. This gives you access to the CRM, forms, chat widget, calendars, and automation builder.</li>
     <li><strong>Install the "Insert Headers and Footers" plugin on WordPress.</strong> Go to Plugins &gt; Add New in your WordPress dashboard. Search for "WPCode" or "Insert Headers and Footers." Install and activate.</li>
     <li><strong>Create your first GoHighLevel form and embed it on a WordPress page.</strong> In GoHighLevel, build a contact or lead capture form. Copy the embed code. In WordPress, add a Custom HTML block to a page and paste it.</li>
     <li><strong>Add the GoHighLevel chat widget to your WordPress footer.</strong> In GoHighLevel, go to Sites &gt; Chat Widget and copy the script. In WordPress, paste it into the Footer section of Insert Headers and Footers. Save.</li>
@@ -1148,7 +1154,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Test the CRM, forms, chat widget, calendar booking, and full automation suite alongside your WordPress site. No credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-plus-wordpress&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
       <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link — we may earn a commission if you subscribe.</p>
     </div>
   </div>
@@ -1241,7 +1247,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-plus-wordpress&utm_content=cta5" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

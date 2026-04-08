@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -608,7 +614,7 @@
       <a href="/#guides">Guides</a>
       <a href="/blog/">Blog</a>
       <a href="/#comparisons">Comparisons</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=blog-setup-gohighlevel-first-client&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -665,7 +671,7 @@
   <section id="intro" class="content-block animate-on-scroll">
     <h2>Before You Start</h2>
     <p>Setting up your first client is always the hardest. You are learning the platform, figuring out the right workflow, and trying to impress your client all at the same time. The good news: once you have done it once, it becomes a repeatable process you can knock out in under two hours.</p>
-    <p>This guide covers the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">Unlimited plan ($297/mo)</a> which supports multiple client sub-accounts. If you are on the Starter plan, you are limited to a single sub-account &mdash; that works for running your own business, but you will need the Unlimited tier to manage clients.</p>
+    <p>This guide covers the <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=blog-setup-gohighlevel-first-client&utm_content=cta2" rel="nofollow sponsored">Unlimited plan ($297/mo)</a> which supports multiple client sub-accounts. If you are on the Starter plan, you are limited to a single sub-account &mdash; that works for running your own business, but you will need the Unlimited tier to manage clients.</p>
     <p><strong>What you will need before starting:</strong></p>
     <ul>
       <li>Client&rsquo;s business name, phone number, address, and timezone</li>
@@ -872,7 +878,7 @@
     <div class="final-cta-box">
       <h2>Start Building &mdash; Free 14-Day Trial</h2>
       <p>Set up your first client sub-account today. Full access to CRM, automations, funnels, SMS, email, and AI chatbot &mdash; no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=blog-setup-gohighlevel-first-client&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
     </div>
   </section>
 

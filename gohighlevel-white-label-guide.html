@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -873,7 +879,7 @@
       <a href="/#comparison">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1016,7 +1022,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your White-Label SaaS — 14-Day Free Trial <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Start Your White-Label SaaS — 14-Day Free Trial <span>→</span></a>
   </div>
 
   <!-- SECTION 4: Step-by-Step Setup -->
@@ -1028,7 +1034,7 @@
   </div>
 
   <ol class="setup-list animate-on-scroll">
-    <li><strong>Sign up for the GoHighLevel SaaS Pro plan.</strong> Start with the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> to test the full white-label experience before committing to $497/mo. You get access to all SaaS Pro features during the trial.<a href="#sources" class="citation-ref">[1]</a></li>
+    <li><strong>Sign up for the GoHighLevel SaaS Pro plan.</strong> Start with the <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta3" rel="nofollow sponsored">14-day free trial</a> to test the full white-label experience before committing to $497/mo. You get access to all SaaS Pro features during the trial.<a href="#sources" class="citation-ref">[1]</a></li>
     <li><strong>Choose your brand name and register your domain.</strong> Pick a professional brand name for your SaaS product (e.g., "AgencyOS," "ClientHub," or a niche-specific name like "DentalFlow CRM"). Register a domain and set up DNS records to point to your white-labeled GoHighLevel instance.</li>
     <li><strong>Configure white-label settings.</strong> Upload your logo, set your brand colors, add your favicon, and apply any custom CSS to match your brand identity. This controls how the platform looks when clients log in.<a href="#sources" class="citation-ref">[1]</a></li>
     <li><strong>Set up your custom domain for the client-facing app.</strong> Map your domain (e.g., app.yoursaas.com) to GoHighLevel so clients access your branded URL — not a GoHighLevel subdomain. Configure SSL certificates for secure access.</li>
@@ -1141,7 +1147,7 @@
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Can I start with a lower plan and upgrade later?</button>
       <div class="faq-answer">
-        <p>White-label functionality is only available on the SaaS Pro plan at $497/mo. The Starter ($97/mo) and Unlimited ($297/mo) plans do not include white-labeling. However, you can start with the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> of the SaaS Pro plan to test everything before committing. If you are not ready for white-label, you can use the lower plans for your own agency operations and upgrade to SaaS Pro when you are ready to resell.<a href="#sources" class="citation-ref">[2]</a></p>
+        <p>White-label functionality is only available on the SaaS Pro plan at $497/mo. The Starter ($97/mo) and Unlimited ($297/mo) plans do not include white-labeling. However, you can start with the <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta4" rel="nofollow sponsored">14-day free trial</a> of the SaaS Pro plan to test everything before committing. If you are not ready for white-label, you can use the lower plans for your own agency operations and upgrade to SaaS Pro when you are ready to resell.<a href="#sources" class="citation-ref">[2]</a></p>
       </div>
     </div>
   </div>
@@ -1159,15 +1165,15 @@
     <ul class="sources-list">
       <li>
         <span class="source-num">[1]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel White-Label SaaS Mode — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta5" target="_blank" rel="nofollow sponsored">GoHighLevel White-Label SaaS Mode — gohighlevel.com</a>
       </li>
       <li>
         <span class="source-num">[2]</span>
-        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
+        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta6" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
       </li>
       <li>
         <span class="source-num">[3]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Features &amp; Integrations — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta7" target="_blank" rel="nofollow sponsored">GoHighLevel Features &amp; Integrations — gohighlevel.com</a>
       </li>
       <li>
         <span class="source-num">[4]</span>
@@ -1207,7 +1213,7 @@
     <div class="final-cta-box">
       <h2>Start Your White-Label SaaS Business Today</h2>
       <p>Launch your own branded SaaS platform on GoHighLevel's 14-day free trial. Set up your brand, configure your pricing tiers, and onboard your first client — risk free.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta8" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
       <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link — we may earn a commission if you subscribe.</p>
     </div>
   </div>
@@ -1295,7 +1301,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=gohighlevel-white-label-guide&utm_content=cta9" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -849,7 +855,7 @@
       <a href="/#comparison">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1084,7 +1090,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try HighLevel for Real Estate — 14-Day Free Trial <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try HighLevel for Real Estate — 14-Day Free Trial <span>→</span></a>
   </div>
 
   <div class="content-block">
@@ -1154,11 +1160,11 @@
     <ul class="sources-list">
       <li>
         <span class="source-num">[1]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Features — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta3" target="_blank" rel="nofollow sponsored">GoHighLevel Features — gohighlevel.com</a>
       </li>
       <li>
         <span class="source-num">[2]</span>
-        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
+        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta4" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
       </li>
       <li>
         <span class="source-num">[3]</span>
@@ -1166,7 +1172,7 @@
       </li>
       <li>
         <span class="source-num">[4]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel CRM Documentation — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta5" target="_blank" rel="nofollow sponsored">GoHighLevel CRM Documentation — gohighlevel.com</a>
       </li>
     </ul>
   </div>
@@ -1202,7 +1208,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Set up your real estate pipeline, configure the AI conversation bot, and build your first property landing page during the trial — no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta6" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
       <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link — we may earn a commission if you subscribe.</p>
     </div>
   </div>
@@ -1290,7 +1296,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-real-estate&utm_content=cta7" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

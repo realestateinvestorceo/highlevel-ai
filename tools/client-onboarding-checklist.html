@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -897,7 +903,7 @@
       <a href="/">&larr; Full Review</a>
       <a href="/#guides">Guides</a>
       <a href="/tools/">Tools</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-client-onboarding-checklist&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -1075,7 +1081,7 @@
     <div class="snapshot-tip">
       <h3>&#128161; Streamline Your Onboarding with GoHighLevel Snapshots</h3>
       <p>After completing your first client setup, save the entire sub-account as a <strong>snapshot</strong>. Snapshots capture everything &mdash; pipelines, automations, funnels, email templates, calendars &mdash; and let you replicate the setup for new clients in one click. This can reduce onboarding time from several hours down to 1&ndash;2 hours.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored" style="font-size:14px;padding:12px 24px;">Start Building Your First Snapshot &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-client-onboarding-checklist&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored" style="font-size:14px;padding:12px 24px;">Start Building Your First Snapshot &rarr;</a>
     </div>
   </div>
 
@@ -1144,7 +1150,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>See if GoHighLevel fits your agency. Full access to every feature during the trial &mdash; no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-client-onboarding-checklist&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>&rarr;</span></a>
     </div>
   </div>
 </section>

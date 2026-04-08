@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -855,7 +861,7 @@
       <a href="/">← Full Review</a>
       <a href="/#guides">Guides</a>
       <a href="/#comparisons">Comparisons</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-agency-pricing-calculator&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1079,7 +1085,7 @@
           <div class="benchmark-line"><strong>Avg. profit margin:</strong> 30–50%</div>
         </div>
 
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary results-cta" rel="nofollow sponsored" id="results-cta">
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-agency-pricing-calculator&utm_content=cta2" class="btn btn-primary results-cta" rel="nofollow sponsored" id="results-cta">
           Start Your Free Trial <span>→</span>
         </a>
       </div>
@@ -1168,7 +1174,7 @@
     <div class="final-cta-box">
       <h2>Build Your Agency on GoHighLevel</h2>
       <p>Flat-rate pricing. Unlimited sub-accounts. <a href="/gohighlevel-white-label-guide" data-auto-link="true">White-label</a> ready. Start your 14-day free trial and see why agencies are switching.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-agency-pricing-calculator&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>→</span></a>
     </div>
   </div>
 </section>

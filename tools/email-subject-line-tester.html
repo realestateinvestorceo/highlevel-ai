@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -705,7 +711,7 @@
       <a href="/tools/">Free Tools</a>
       <a href="/#guides">Guides</a>
       <a href="/#comparisons">Comparisons</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-email-subject-line-tester&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -789,7 +795,7 @@
     <p>GoHighLevel includes a full email marketing platform built for agencies and small businesses. You get a drag-and-drop email builder, automation workflows that trigger based on contact behavior, and built-in A/B testing so you can test subject lines at scale.</p>
     <p>Their deliverability tools help you monitor reputation, warm up new domains, and keep your emails out of spam folders. Combined with SMS, CRM, funnels, and scheduling in one platform, it eliminates the need for five or six separate subscriptions.</p>
     <p>Plans start at <strong>$97/mo</strong> with a 14-day free trial&mdash;no credit card required.</p>
-    <p style="margin-top:24px;"><a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a></p>
+    <p style="margin-top:24px;"><a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-email-subject-line-tester&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a></p>
   </div>
 
   <!-- FAQ -->
@@ -813,7 +819,7 @@
       <div class="faq-item animate-on-scroll">
         <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Does GoHighLevel have email marketing?</button>
         <div class="faq-answer">
-          <p>Yes. GoHighLevel includes a full email marketing platform with a drag-and-drop email builder, automation workflows, A/B testing for subject lines and content, and deliverability monitoring tools. Plans start at $97/mo and include a 14-day free trial. <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">Start your free trial here</a>.</p>
+          <p>Yes. GoHighLevel includes a full email marketing platform with a drag-and-drop email builder, automation workflows, A/B testing for subject lines and content, and deliverability monitoring tools. Plans start at $97/mo and include a 14-day free trial. <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-email-subject-line-tester&utm_content=cta3" rel="nofollow sponsored">Start your free trial here</a>.</p>
         </div>
       </div>
     </div>
@@ -828,7 +834,7 @@
     <div class="final-cta-box animate-on-scroll">
       <h2>Ready to Boost Your Email Open Rates?</h2>
       <p>GoHighLevel gives you email marketing, A/B testing, automation, SMS, CRM, and funnels&mdash;all in one platform. Start free for 14 days.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-email-subject-line-tester&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
     </div>
   </div>
 </section>

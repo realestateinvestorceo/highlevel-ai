@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -871,7 +877,7 @@
       <a href="/#comparisons">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=clickfunnels-limitations&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1137,12 +1143,12 @@
       <p>If online reviews drive your business — common for local services, restaurants, medical practices, and agencies — ClickFunnels offers nothing in this area. You need a platform with automated review request campaigns and monitoring.</p>
 
       <h3>Considering an Alternative?</h3>
-      <p>If you recognize yourself in the scenarios above, it may be worth exploring platforms that consolidate these features into a single tool. <a href="/clickfunnels-alternative">GoHighLevel</a> is the most common alternative for users outgrowing ClickFunnels — it includes a comparable funnel builder alongside CRM, SMS, AI, scheduling, reputation management, and white-label SaaS mode, starting at $97/month. You can <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">start a free 14-day trial</a> to test whether it fills the gaps you are experiencing with ClickFunnels.</p>
+      <p>If you recognize yourself in the scenarios above, it may be worth exploring platforms that consolidate these features into a single tool. <a href="/clickfunnels-alternative">GoHighLevel</a> is the most common alternative for users outgrowing ClickFunnels — it includes a comparable funnel builder alongside CRM, SMS, AI, scheduling, reputation management, and white-label SaaS mode, starting at $97/month. You can <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=clickfunnels-limitations&utm_content=cta2" rel="nofollow sponsored">start a free 14-day trial</a> to test whether it fills the gaps you are experiencing with ClickFunnels.</p>
     </div>
   </section>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try the Better Alternative — GoHighLevel Free Trial <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=clickfunnels-limitations&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Try the Better Alternative — GoHighLevel Free Trial <span>→</span></a>
   </div>
 
   <!-- FAQ -->
@@ -1221,7 +1227,7 @@
     <div class="final-cta-box">
       <h2>Need More Than Funnels?</h2>
       <p>If ClickFunnels' limitations are holding you back, explore a platform that includes funnels, CRM, SMS, AI, and more — all in one subscription.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=clickfunnels-limitations&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days →</a>
     </div>
   </section>
 
@@ -1287,7 +1293,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=clickfunnels-limitations&utm_content=cta5" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

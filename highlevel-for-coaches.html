@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -861,7 +867,7 @@
       <a href="/#comparison">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -990,7 +996,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days <span>→</span></a>
   </div>
 
   <!-- SECTION 3: Best GoHighLevel Features for Coaches -->
@@ -1043,7 +1049,7 @@
   </div>
 
   <ol class="setup-list animate-on-scroll">
-    <li><strong>Sign up for the 14-day free trial.</strong> Choose the Starter plan ($97/mo) for solo coaching or the Unlimited plan ($297/mo) for group programs, courses, and the AI chatbot. <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">Start your free trial here</a>.</li>
+    <li><strong>Sign up for the 14-day free trial.</strong> Choose the Starter plan ($97/mo) for solo coaching or the Unlimited plan ($297/mo) for group programs, courses, and the AI chatbot. <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta3" rel="nofollow sponsored">Start your free trial here</a>.</li>
     <li><strong>Import your contacts.</strong> Upload your existing client list from your current CRM, email tool, or spreadsheet. GoHighLevel supports CSV imports and direct integrations with common platforms. Tag contacts by status (lead, active client, past client) for segmentation.</li>
     <li><strong>Set up your booking calendar.</strong> Create calendars for each session type you offer — discovery calls, 1-on-1 coaching sessions, group coaching calls, and strategy sessions. Set durations, buffer times, and availability windows for each.</li>
     <li><strong>Build your first funnel.</strong> Create a landing page for your primary offer, whether that is a discovery call booking page or a webinar registration funnel. Connect it to your calendar and CRM so leads flow automatically into your pipeline.</li>
@@ -1099,7 +1105,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
   </div>
 
   <div class="content-block">
@@ -1156,15 +1162,15 @@
     <ul class="sources-list">
       <li>
         <span class="source-num">[1]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Features &amp; Platform Overview — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta5" target="_blank" rel="nofollow sponsored">GoHighLevel Features &amp; Platform Overview — gohighlevel.com</a>
       </li>
       <li>
         <span class="source-num">[2]</span>
-        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
+        <a href="https://www.gohighlevel.com/pricing?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta6" target="_blank" rel="nofollow sponsored">GoHighLevel Pricing — gohighlevel.com/pricing</a>
       </li>
       <li>
         <span class="source-num">[3]</span>
-        <a href="https://www.gohighlevel.com/?fp_ref=ai" target="_blank" rel="nofollow sponsored">GoHighLevel Memberships &amp; Courses — gohighlevel.com</a>
+        <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta7" target="_blank" rel="nofollow sponsored">GoHighLevel Memberships &amp; Courses — gohighlevel.com</a>
       </li>
     </ul>
   </div>
@@ -1200,7 +1206,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Set up your booking calendar, build your first funnel, and create your email nurture sequence during the trial. See how much time you save before you commit.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta8" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial →</a>
       <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link — we may earn a commission if you subscribe.</p>
     </div>
   </div>
@@ -1288,7 +1294,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-coaches&utm_content=cta9" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

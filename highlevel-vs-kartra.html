@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -1001,7 +1007,7 @@
       <a href="/#comparisons">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-vs-kartra&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -1092,7 +1098,7 @@
 
   <!-- MID CTA -->
   <div style="text-align:center; padding:40px 0;" class="animate-on-scroll">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-vs-kartra&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a>
     <p class="inline-disclosure">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
   </div>
 
@@ -1361,7 +1367,7 @@
 
   <!-- MID CTA -->
   <div style="text-align:center; padding:40px 0;" class="animate-on-scroll">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-vs-kartra&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel Free for 14 Days &rarr;</a>
     <p class="inline-disclosure">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
   </div>
 
@@ -1427,7 +1433,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>See firsthand how HighLevel compares to Kartra. Test the CRM, AI chatbot, funnel builder, and automation workflows with a no-commitment trial &mdash; no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-vs-kartra&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
     </div>
   </section>
 
@@ -1506,7 +1512,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-vs-kartra&utm_content=cta5" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
   </div>
 </div></body>
 </html>

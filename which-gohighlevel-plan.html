@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -899,7 +905,7 @@
       <a href="/#comparisons">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1234,7 +1240,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>See if GoHighLevel fits your business. Full access to every feature during the trial — no credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial <span>→</span></a>
     </div>
   </div>
 </section>
@@ -1414,7 +1420,7 @@ function showResults() {
   html += '</div>';
 
   // CTA
-  html += '<div style="text-align:center;margin:28px 0 8px"><a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your ' + plan.name + ' Free Trial <span>&rarr;</span></a></div>';
+  html += '<div style="text-align:center;margin:28px 0 8px"><a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your ' + plan.name + ' Free Trial <span>&rarr;</span></a></div>';
 
   // Comparison grid
   html += '<div style="margin-top:48px"><div class="section-tag" style="text-align:center;margin-bottom:20px">Compare All Plans</div>';
@@ -1431,9 +1437,9 @@ function showResults() {
     p.features.forEach(function(f) { html += '<li>' + f + '</li>'; });
     html += '</ul>';
     if (isRec) {
-      html += '<a href="https://www.gohighlevel.com/?fp_ref=ai" class="compare-cta compare-cta-primary" rel="nofollow sponsored">Start Free Trial &rarr;</a>';
+      html += '<a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta4" class="compare-cta compare-cta-primary" rel="nofollow sponsored">Start Free Trial &rarr;</a>';
     } else {
-      html += '<a href="https://www.gohighlevel.com/?fp_ref=ai" class="compare-cta compare-cta-ghost" rel="nofollow sponsored">Start Free Trial &rarr;</a>';
+      html += '<a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta5" class="compare-cta compare-cta-ghost" rel="nofollow sponsored">Start Free Trial &rarr;</a>';
     }
     html += '</div>';
   });
@@ -1559,7 +1565,7 @@ document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=which-gohighlevel-plan&utm_content=cta6" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

@@ -11,11 +11,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -910,7 +916,7 @@
       <a href="#faq">FAQ</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial →</a>
     </div>
   </div>
 </nav>
@@ -1515,7 +1521,7 @@ Constraints: Comply with Facebook and Google advertising policies. No exaggerate
 </section>
 
 <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-  <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try These Prompts — Start Free Trial <span>→</span></a>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try These Prompts — Start Free Trial <span>→</span></a>
 </div>
 
 <!-- SECTION: COMMON MISTAKES -->
@@ -1584,9 +1590,9 @@ Constraints: Comply with Facebook and Google advertising policies. No exaggerate
     <div class="sources-box animate-on-scroll">
       <h3>Reference Sources</h3>
       <ol class="sources-list">
-        <li><span class="source-num">[1]</span> <a href="https://www.gohighlevel.com/ai-features?fp_ref=ai" rel="nofollow sponsored">GoHighLevel AI Features</a> — conversation AI, voice agent, content generator details</li>
+        <li><span class="source-num">[1]</span> <a href="https://www.gohighlevel.com/ai-features?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta3" rel="nofollow sponsored">GoHighLevel AI Features</a> — conversation AI, voice agent, content generator details</li>
         <li><span class="source-num">[2]</span> <a href="https://help.gohighlevel.com/support/solutions/articles/155000001335-conversation-ai-bot-explained" rel="nofollow">GoHighLevel Conversation AI Documentation</a> — prompt configuration, settings, workflow integration</li>
-        <li><span class="source-num">[3]</span> <a href="https://www.gohighlevel.com/pricing?fp_ref=ai" rel="nofollow sponsored">GoHighLevel Pricing</a> — plan tiers, AI feature availability by plan</li>
+        <li><span class="source-num">[3]</span> <a href="https://www.gohighlevel.com/pricing?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta4" rel="nofollow sponsored">GoHighLevel Pricing</a> — plan tiers, AI feature availability by plan</li>
       </ol>
       <p class="sources-verified">Last verified: February 20, 2026. Feature availability and documentation may change. Check official sources for the most current information.</p>
     </div>
@@ -1629,7 +1635,7 @@ Constraints: Comply with Facebook and Google advertising policies. No exaggerate
     <div class="final-cta-box animate-on-scroll">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Deploy these prompt templates during your trial and see how the AI conversation bot, voice agent, and content tools perform for your business. No credit card required to start.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta5" class="btn btn-primary" rel="nofollow sponsored">Start Your Free 14-Day Trial <span>→</span></a>
     </div>
   </div>
 </section>
@@ -1718,7 +1724,7 @@ Constraints: Comply with Facebook and Google advertising policies. No exaggerate
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=best-prompts-sales-support&utm_content=cta6" class="btn-sticky" rel="nofollow sponsored">Start Free Trial →</a>
   </div>
 </div>
 

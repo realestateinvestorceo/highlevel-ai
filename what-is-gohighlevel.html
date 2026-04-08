@@ -10,11 +10,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
       page_section: (link.closest('section') || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 </script>
@@ -252,7 +258,7 @@
       <a href="/prompts/">AI Prompts</a>
       <a href="/blog/">Blog</a>
       <a href="/tools/">Tools</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=what-is-gohighlevel&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -683,7 +689,7 @@ GoHighLevel is an all-in-one marketing, sales, and CRM platform founded in April
 <p>If you're considering GoHighLevel, here are the recommended next steps:</p>
 
 <ol>
-<li><strong>Take the Free Trial:</strong> Sign up for the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> to explore the platform hands-on</li>
+<li><strong>Take the Free Trial:</strong> Sign up for the <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=what-is-gohighlevel&utm_content=cta2" rel="nofollow sponsored">14-day free trial</a> to explore the platform hands-on</li>
 <li><strong>Assess Your Current Tools:</strong> Use our <a href="/tools/ai-readiness-quiz">AI Readiness Quiz</a> to evaluate which tools GoHighLevel could replace</li>
 <li><strong>Learn the Basics:</strong> Read our <a href="/blog/gohighlevel-for-beginners-getting-started">GoHighLevel Beginner's Guide</a></li>
 <li><strong>Set Up Core Features:</strong> Start with <a href="/blog/gohighlevel-ai-chatbot-setup">AI Chatbot Setup</a> and <a href="/voice-agent-setup">Voice Agent Configuration</a></li>
@@ -707,7 +713,7 @@ GoHighLevel is an all-in-one marketing, sales, and CRM platform founded in April
     <div style="background:linear-gradient(135deg,rgba(79,125,249,0.08),rgba(52,211,153,0.04));border:1px solid var(--border-accent);border-radius:24px;padding:64px 48px;">
       <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;margin-bottom:16px;">Try GoHighLevel AI Free for 14 Days</h2>
       <p style="color:var(--text-secondary);font-size:17px;max-width:560px;margin:0 auto 32px;">See all these AI features for yourself. No credit card required.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=what-is-gohighlevel&utm_content=cta3" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
     </div>
   </section>
 </div>

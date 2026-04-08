@@ -1,0 +1,44 @@
+2026-04-07 11:29:25,862 [update_sitemap] INFO: Scanning HTML files in /Users/josh/Downloads/AI Projects/HighlevelAI/site ...
+2026-04-07 11:29:25,865 [update_sitemap] INFO: Found 73 HTML files to process
+2026-04-07 11:29:25,920 [update_sitemap] INFO: Collected metadata for 73 pages
+2026-04-07 11:29:25,920 [update_sitemap] INFO: --- Updating sitemap.xml ---
+2026-04-07 11:29:25,923 [update_sitemap] INFO: sitemap.xml: updated (13497 bytes, 73 URLs)
+2026-04-07 11:29:25,923 [update_sitemap] INFO: --- Updating llms.txt ---
+2026-04-07 11:29:25,927 [update_sitemap] WARNING: Could not find page listing marker in llms.txt; appending page listing at end
+2026-04-07 11:29:25,932 [update_sitemap] INFO: llms.txt: updated (306935 bytes written)
+2026-04-07 11:29:25,932 [update_sitemap] INFO: --- Updating llms-full.txt ---
+2026-04-07 11:29:25,934 [update_sitemap] INFO: llms-full.txt: no changes needed
+2026-04-07 11:29:25,934 [update_sitemap] INFO: Done: 2 file(s) updated.
+2026-04-07 11:30:17,331 [update_sitemap] INFO: Scanning HTML files in /Users/josh/Downloads/AI Projects/HighlevelAI/site ...
+2026-04-07 11:30:17,333 [update_sitemap] INFO: Found 73 HTML files to process
+2026-04-07 11:30:17,371 [update_sitemap] INFO: Collected metadata for 73 pages
+2026-04-07 11:30:17,371 [update_sitemap] INFO: --- Updating sitemap.xml ---
+2026-04-07 11:30:17,372 [update_sitemap] INFO: sitemap.xml: updated (13497 bytes, 73 URLs)
+2026-04-07 11:30:17,372 [update_sitemap] INFO: --- Updating llms.txt ---
+2026-04-07 11:30:17,376 [update_sitemap] WARNING: Could not find page listing marker in llms.txt; appending page listing at end
+2026-04-07 11:30:17,381 [update_sitemap] INFO: llms.txt: updated (324755 bytes written)
+2026-04-07 11:30:17,381 [update_sitemap] INFO: --- Updating llms-full.txt ---
+2026-04-07 11:30:17,382 [update_sitemap] INFO: llms-full.txt: no changes needed
+2026-04-07 11:30:17,382 [update_sitemap] INFO: Done: 2 file(s) updated.
+2026-04-07 11:47:17,837 [update_sitemap] INFO: Scanning HTML files in /Users/josh/Downloads/AI Projects/HighlevelAI/site ...
+2026-04-07 11:47:17,839 [update_sitemap] INFO: Found 74 HTML files to process
+2026-04-07 11:47:17,890 [update_sitemap] INFO: Collected metadata for 74 pages
+2026-04-07 11:47:17,890 [update_sitemap] INFO: --- Updating sitemap.xml ---
+2026-04-07 11:47:17,892 [update_sitemap] INFO: sitemap.xml: updated (13674 bytes, 74 URLs)
+2026-04-07 11:47:17,892 [update_sitemap] INFO: --- Updating llms.txt ---
+2026-04-07 11:47:17,896 [update_sitemap] WARNING: Could not find page listing marker in llms.txt; appending page listing at end
+2026-04-07 11:47:17,903 [update_sitemap] INFO: llms.txt: updated (343948 bytes written)
+2026-04-07 11:47:17,903 [update_sitemap] INFO: --- Updating llms-full.txt ---
+2026-04-07 11:47:17,905 [update_sitemap] INFO: llms-full.txt: no changes needed
+2026-04-07 11:47:17,905 [update_sitemap] INFO: Done: 2 file(s) updated.
+2026-04-07 13:45:59,964 [update_sitemap] INFO: Scanning HTML files in /Users/josh/Downloads/AI Projects/HighlevelAI/site ...
+2026-04-07 13:45:59,968 [update_sitemap] INFO: Found 99 HTML files to process
+2026-04-07 13:46:00,041 [update_sitemap] INFO: Collected metadata for 99 pages
+2026-04-07 13:46:00,041 [update_sitemap] INFO: --- Updating sitemap.xml ---
+2026-04-07 13:46:00,045 [update_sitemap] INFO: sitemap.xml: updated (18316 bytes, 99 URLs)
+2026-04-07 13:46:00,045 [update_sitemap] INFO: --- Updating llms.txt ---
+2026-04-07 13:46:00,049 [update_sitemap] WARNING: Could not find page listing marker in llms.txt; appending page listing at end
+2026-04-07 13:46:00,055 [update_sitemap] INFO: llms.txt: updated (370140 bytes written)
+2026-04-07 13:46:00,055 [update_sitemap] INFO: --- Updating llms-full.txt ---
+2026-04-07 13:46:00,059 [update_sitemap] INFO: llms-full.txt: updated (27652 bytes written)
+2026-04-07 13:46:00,059 [update_sitemap] INFO: Done: 3 file(s) updated.

@@ -13,11 +13,17 @@
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href*="fp_ref=ai"]');
     if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
     gtag('event', 'cta_click', {
       event_category: 'affiliate',
       event_label: link.textContent.trim().substring(0, 100),
-      page_section: (link.closest('section')  || {}).id || 'unknown',
-      page_path: window.location.pathname
+      page_section: (link.closest('section') || {}).id || 'unknown',
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
     });
   });
 
@@ -872,7 +878,7 @@
       <a href="/#comparison">Comparisons</a>
       <a href="/tools/">Free Tools</a>
       <a href="/blog/">Blog</a>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-dentists&utm_content=cta1" class="btn-nav" rel="nofollow sponsored">Start Free Trial &rarr;</a>
     </div>
   </div>
 </nav>
@@ -975,7 +981,7 @@
   </div>
 
   <div class="container animate-on-scroll" style="text-align:center;padding:24px 0 8px;">
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel for Your Dental Practice &mdash; 14-Day Free Trial <span>&rarr;</span></a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-dentists&utm_content=cta2" class="btn btn-primary" rel="nofollow sponsored">Try GoHighLevel for Your Dental Practice &mdash; 14-Day Free Trial <span>&rarr;</span></a>
   </div>
 
   <!-- SECTION 3: Sample Dental Practice Workflow -->
@@ -1110,7 +1116,7 @@
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How much does GoHighLevel cost for a dental practice?</button>
       <div class="faq-answer">
-        <p>The Starter plan at $97/mo covers everything a single dental practice needs: CRM, appointment booking, SMS and email automation, funnels, review management, and the AI chatbot. Add approximately $20&ndash;30/mo for Twilio SMS and voice integration. Total realistic cost: $117&ndash;130/mo. This replaces $300&ndash;500/mo in separate marketing tools that most practices currently pay for individually. Start with the <a href="https://www.gohighlevel.com/?fp_ref=ai" rel="nofollow sponsored">14-day free trial</a> (no credit card required) to test it before committing.</p>
+        <p>The Starter plan at $97/mo covers everything a single dental practice needs: CRM, appointment booking, SMS and email automation, funnels, review management, and the AI chatbot. Add approximately $20&ndash;30/mo for Twilio SMS and voice integration. Total realistic cost: $117&ndash;130/mo. This replaces $300&ndash;500/mo in separate marketing tools that most practices currently pay for individually. Start with the <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-dentists&utm_content=cta3" rel="nofollow sponsored">14-day free trial</a> (no credit card required) to test it before committing.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -1158,7 +1164,7 @@
     <div class="final-cta-box">
       <h2>Try GoHighLevel Free for 14 Days</h2>
       <p>Set up your dental practice booking system, appointment reminders, recall automations, and review requests during the trial. Build your first workflow and see the results before you commit.</p>
-      <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
+      <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-dentists&utm_content=cta4" class="btn btn-primary" rel="nofollow sponsored">Start Your Free Trial &rarr;</a>
       <p class="inline-disclosure" style="margin-top: 20px;">Affiliate link &mdash; we may earn a commission if you subscribe.</p>
     </div>
   </div>
@@ -1251,7 +1257,7 @@
 <div class="sticky-cta-bar" id="stickyCtaBar">
   <div class="container">
     <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
-    <a href="https://www.gohighlevel.com/?fp_ref=ai" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+    <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=highlevel-for-dentists&utm_content=cta5" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
   </div>
 </div>
 </body>
