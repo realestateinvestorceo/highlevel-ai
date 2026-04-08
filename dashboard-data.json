@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-07 07:24:15",
+  "generated_at": "2026-04-08 07:27:34",
   "report_dates": {
     "freshness": "2026-04-06",
-    "schema": "2026-04-07",
+    "schema": "2026-04-08",
     "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
@@ -145,7 +145,7 @@
     ]
   },
   "schema": {
-    "total_schemas": 267,
+    "total_schemas": 304,
     "issues": 5,
     "items": [
       "Field: `datePublished`",
@@ -178,41 +178,41 @@
     }
   },
   "traffic": {
-    "sessions": 703,
-    "users": 660,
-    "pageviews": 797,
-    "bounce_rate": 0.67,
-    "avg_duration": 76.6,
+    "sessions": 748,
+    "users": 702,
+    "pageviews": 842,
+    "bounce_rate": 0.66,
+    "avg_duration": 77.6,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 387
+        "sessions": 409
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 188
+        "sessions": 199
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 28
+        "sessions": 32
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 26
+        "sessions": 28
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 21
+        "sessions": 23
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 15
+        "sessions": 19
       },
       {
         "source": "perplexity.ai",
@@ -225,14 +225,14 @@
         "sessions": 9
       },
       {
-        "source": "duckduckgo",
-        "medium": "organic",
-        "sessions": 7
-      },
-      {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 7
+        "sessions": 9
+      },
+      {
+        "source": "duckduckgo",
+        "medium": "organic",
+        "sessions": 8
       },
       {
         "source": "facebook.com",
@@ -261,11 +261,11 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 35,
+    "cta_clicks": 38,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 27
+        "clicks": 30
       },
       {
         "page": "/pricing-explained.html",
@@ -297,11 +297,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260308",
-        "sessions": 5,
-        "users": 5
-      },
       {
         "date": "20260309",
         "sessions": 6,
@@ -444,8 +439,13 @@
       },
       {
         "date": "20260406",
-        "sessions": 53,
-        "users": 51
+        "sessions": 58,
+        "users": 56
+      },
+      {
+        "date": "20260407",
+        "sessions": 45,
+        "users": 42
       }
     ]
   },
@@ -460,8 +460,8 @@
   },
   "system_actions": [
     {
-      "action": "Rewrite titles/descriptions for CTR + add FAQ schema to top pages",
-      "when": "14 hours ago"
+      "action": "Fix broken affiliate link + 13 broken internal links",
+      "when": "11 hours ago"
     }
   ]
 }

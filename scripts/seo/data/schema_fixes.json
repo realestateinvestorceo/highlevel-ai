@@ -1,4 +1,130 @@
 {
+  "blog/best-all-in-one-marketing-platform.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/best-crm-for-agencies.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/gohighlevel-ai-changelog.html": [
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    }
+  ],
+  "blog/gohighlevel-hipaa-compliance.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/gohighlevel-not-sending-emails.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/gohighlevel-speed-to-lead.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/gohighlevel-twilio-setup.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "blog/how-to-cancel-gohighlevel.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
   "blog/index.html": [
     {
       "action": "add",
@@ -25,6 +151,23 @@
       "field": "image"
     }
   ],
+  "blog/migrate-hubspot-to-gohighlevel.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing BlogPosting schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
   "dashboard.html": [
     {
       "action": "add",
@@ -33,11 +176,222 @@
       "field": "description"
     }
   ],
+  "gohighlevel-affiliate-program.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-ai-certification.html": [
+    {
+      "action": "add",
+      "type": "Article",
+      "reason": "Missing Article schema"
+    }
+  ],
+  "gohighlevel-for-chiropractors.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-ecommerce.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-home-services.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-insurance-agents.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-lawyers.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-photographers.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-roofing-companies.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-for-saas-startups.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-free-trial.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-pros-and-cons.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
   "gohighlevel-reviews.html": [
     {
       "action": "add",
       "type": "ReviewArticle",
       "reason": "Missing ReviewArticle schema"
+    }
+  ],
+  "gohighlevel-vs-close-crm.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "gohighlevel-vs-jobber.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "highlevel-vs-vendasta.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "is-gohighlevel-legit.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "is-gohighlevel-worth-it.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
+    }
+  ],
+  "what-does-gohighlevel-replace.html": [
+    {
+      "action": "add",
+      "type": "WebPage",
+      "reason": "Missing WebPage schema"
+    },
+    {
+      "action": "add",
+      "type": "BreadcrumbList",
+      "reason": "Missing BreadcrumbList schema"
     }
   ]
 }
