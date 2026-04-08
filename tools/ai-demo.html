@@ -227,6 +227,30 @@
   .demo-disclaimer { text-align: center; font-size: 12px; color: var(--text-muted); font-style: italic; margin-top: 16px; }
   @media (max-width: 700px) { .before-after { grid-template-columns: 1fr; } }
 
+
+/* Sticky CTA Bar */
+.sticky-cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+  background: rgba(10,10,15,0.95); backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(79,125,249,0.2);
+  padding: 12px 24px;
+  transform: translateY(100%); transition: transform 0.3s ease;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.sticky-cta-bar.visible { transform: translateY(0); }
+.sticky-cta-bar p { font-size: 14px; color: #a5a5b8; margin: 0; }
+.sticky-cta-bar p strong { color: #f0f0f5; }
+.btn-sticky {
+  padding: 8px 20px; background: linear-gradient(135deg, #4f7df9, #3a6af5);
+  color: #fff; border-radius: 50px; font-weight: 700; font-size: 13px;
+  text-decoration: none; white-space: nowrap; transition: all 0.2s;
+}
+.btn-sticky:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(79,125,249,0.4); }
+@media (max-width: 600px) {
+  .sticky-cta-bar { flex-direction: column; gap: 8px; padding: 10px 16px; }
+  .sticky-cta-bar p { font-size: 13px; text-align: center; }
+}
+
 </style>
 </head>
 <body>
@@ -857,6 +881,26 @@
             replayCurrentChat();
         });
     </script>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCtaBar">
+  <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-ai-demo&utm_content=sticky-bar" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+</div>
+<script>
+(function(){{
+  var bar = document.getElementById('stickyCtaBar');
+  if (!bar) return;
+  var shown = false;
+  window.addEventListener('scroll', function() {{
+    if (!shown && window.scrollY > 400) {{
+      bar.classList.add('visible');
+      shown = true;
+    }}
+  }});
+}})();
+</script>
+
 </body>
 </html>
 
@@ -895,5 +939,25 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
 }
 </script>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta-bar" id="stickyCtaBar">
+  <p><strong>Try GoHighLevel free for 14 days</strong> — no credit card required</p>
+  <a href="https://www.gohighlevel.com/?fp_ref=ai&utm_source=highlevelai&utm_medium=affiliate&utm_campaign=tools-ai-demo&utm_content=sticky-bar" class="btn-sticky" rel="nofollow sponsored">Start Free Trial &rarr;</a>
+</div>
+<script>
+(function(){{
+  var bar = document.getElementById('stickyCtaBar');
+  if (!bar) return;
+  var shown = false;
+  window.addEventListener('scroll', function() {{
+    if (!shown && window.scrollY > 400) {{
+      bar.classList.add('visible');
+      shown = true;
+    }}
+  }});
+}})();
+</script>
+
 </body>
 </html>
