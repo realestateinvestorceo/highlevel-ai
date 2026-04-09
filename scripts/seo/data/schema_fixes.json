@@ -2,13 +2,27 @@
   "blog/best-all-in-one-marketing-platform.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -19,13 +33,27 @@
   "blog/best-crm-for-agencies.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -37,19 +65,52 @@
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     }
   ],
   "blog/gohighlevel-hipaa-compliance.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -60,13 +121,27 @@
   "blog/gohighlevel-not-sending-emails.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -77,13 +152,27 @@
   "blog/gohighlevel-speed-to-lead.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -94,13 +183,27 @@
   "blog/gohighlevel-twilio-setup.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -111,13 +214,27 @@
   "blog/how-to-cancel-gohighlevel.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -154,13 +271,27 @@
   "blog/migrate-hubspot-to-gohighlevel.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
+      "type": "BlogPosting",
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
     },
     {
       "action": "add",
       "type": "BlogPosting",
-      "reason": "Missing BlogPosting schema"
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
+    {
+      "action": "add",
+      "type": "BlogPosting",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
+    {
+      "action": "fix",
+      "type": "BlogPosting",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     },
     {
       "action": "add",
@@ -179,11 +310,6 @@
   "gohighlevel-affiliate-program.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
@@ -198,21 +324,11 @@
   "gohighlevel-for-chiropractors.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-for-ecommerce.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -222,21 +338,11 @@
   "gohighlevel-for-home-services.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-for-insurance-agents.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -246,21 +352,11 @@
   "gohighlevel-for-lawyers.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-for-photographers.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -270,21 +366,11 @@
   "gohighlevel-for-roofing-companies.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-for-saas-startups.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -294,21 +380,11 @@
   "gohighlevel-free-trial.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-pros-and-cons.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -325,21 +401,11 @@
   "gohighlevel-vs-close-crm.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "gohighlevel-vs-jobber.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -349,21 +415,11 @@
   "highlevel-vs-vendasta.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "is-gohighlevel-legit.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",
@@ -373,21 +429,11 @@
   "is-gohighlevel-worth-it.html": [
     {
       "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
-    {
-      "action": "add",
       "type": "BreadcrumbList",
       "reason": "Missing BreadcrumbList schema"
     }
   ],
   "what-does-gohighlevel-replace.html": [
-    {
-      "action": "add",
-      "type": "WebPage",
-      "reason": "Missing WebPage schema"
-    },
     {
       "action": "add",
       "type": "BreadcrumbList",

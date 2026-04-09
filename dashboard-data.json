@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-08 07:27:34",
+  "generated_at": "2026-04-09 07:43:15",
   "report_dates": {
     "freshness": "2026-04-06",
-    "schema": "2026-04-08",
+    "schema": "2026-04-09",
     "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
   "stats": {
     "total_pages": 69,
     "freshness_issues": 672,
-    "schema_issues": 5,
-    "striking_distance_keywords": 0
+    "schema_issues": 41,
+    "striking_distance_keywords": 20
   },
   "priority_actions": [],
   "freshness": {
@@ -145,9 +145,117 @@
     ]
   },
   "schema": {
-    "total_schemas": 304,
-    "issues": 5,
+    "total_schemas": 338,
+    "issues": 41,
     "items": [
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
+      "Field: `datePublished`",
+      "Problem: Missing required field 'datePublished' on BlogPosting",
+      "Suggested fix: Missing required field 'datePublished'",
+      "Field: `dateModified`",
+      "Problem: Missing required field 'dateModified' on BlogPosting",
+      "Suggested fix: Missing required field 'dateModified'",
+      "Field: `mainEntityOfPage`",
+      "Problem: Missing required field 'mainEntityOfPage' on BlogPosting",
+      "Suggested fix: Missing required field 'mainEntityOfPage'",
+      "Field: `image`",
+      "Problem: 'image' is a plain string; should be an ImageObject with url/width/height",
+      "Suggested fix: Image is string, should be ImageObject",
       "Field: `datePublished`",
       "Problem: Missing required field 'datePublished' on BlogPosting",
       "Suggested fix: Missing required field 'datePublished'",
@@ -166,8 +274,240 @@
     ]
   },
   "keywords": {
-    "striking_distance": [],
-    "top_pages": [],
+    "striking_distance": [
+      {
+        "keyword": "highlevel",
+        "page": "/",
+        "position": 12.1,
+        "impressions": 1363,
+        "clicks": 1
+      },
+      {
+        "keyword": "high level",
+        "page": "/",
+        "position": 15.8,
+        "impressions": 1059,
+        "clicks": 5
+      },
+      {
+        "keyword": "go high level",
+        "page": "/",
+        "position": 18.1,
+        "impressions": 855,
+        "clicks": 3
+      },
+      {
+        "keyword": "gohighlevel official website",
+        "page": "/",
+        "position": 7.2,
+        "impressions": 128,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing change march 2026",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 7.4,
+        "impressions": 118,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel updates 2026",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 5.6,
+        "impressions": 115,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai",
+        "page": "/",
+        "position": 9.4,
+        "impressions": 104,
+        "clicks": 0
+      },
+      {
+        "keyword": "go high level ai",
+        "page": "/",
+        "position": 9.3,
+        "impressions": 103,
+        "clicks": 0
+      },
+      {
+        "keyword": "hilevel",
+        "page": "/",
+        "position": 10.8,
+        "impressions": 101,
+        "clicks": 0
+      },
+      {
+        "keyword": "highlevel official website",
+        "page": "/",
+        "position": 5.1,
+        "impressions": 99,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai employee pricing 2026",
+        "page": "/pricing-explained.html",
+        "position": 7.4,
+        "impressions": 76,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel news",
+        "page": "/blog/",
+        "position": 7.1,
+        "impressions": 71,
+        "clicks": 0
+      },
+      {
+        "keyword": "active facebook ads blueleveltechnologies.com",
+        "page": "/blog/gohighlevel-facebook-ads-integration",
+        "position": 7.0,
+        "impressions": 70,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel updates 2026",
+        "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 6.0,
+        "impressions": 60,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing change april 2026",
+        "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 7.4,
+        "impressions": 58,
+        "clicks": 0
+      },
+      {
+        "keyword": "high level agency",
+        "page": "/",
+        "position": 12.7,
+        "impressions": 57,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained",
+        "position": 9.9,
+        "impressions": 49,
+        "clicks": 0
+      },
+      {
+        "keyword": "high-level",
+        "page": "/",
+        "position": 19.9,
+        "impressions": 47,
+        "clicks": 0
+      },
+      {
+        "keyword": "ghl ai",
+        "page": "/",
+        "position": 7.6,
+        "impressions": 42,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel updates 2026 new features",
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "position": 5.6,
+        "impressions": 42,
+        "clicks": 0
+      }
+    ],
+    "top_pages": [
+      {
+        "page": "/",
+        "clicks": 108,
+        "impressions": 14018,
+        "position": 15.3
+      },
+      {
+        "page": "/pricing-explained.html",
+        "clicks": 6,
+        "impressions": 9417,
+        "position": 8.5
+      },
+      {
+        "page": "/highlevel-vs-zapier-make.html",
+        "clicks": 5,
+        "impressions": 1340,
+        "position": 7.7
+      },
+      {
+        "page": "/blog/gohighlevel-march-2026-updates.html",
+        "clicks": 4,
+        "impressions": 3977,
+        "position": 4.7
+      },
+      {
+        "page": "/tools/sms-cost-estimator.html",
+        "clicks": 4,
+        "impressions": 326,
+        "position": 11.2
+      },
+      {
+        "page": "/voice-agent-setup.html",
+        "clicks": 4,
+        "impressions": 4686,
+        "position": 8.6
+      },
+      {
+        "page": "/blog/gohighlevel-facebook-ads-integration",
+        "clicks": 2,
+        "impressions": 148,
+        "position": 9.1
+      },
+      {
+        "page": "/gohighlevel-pricing-calculator.html",
+        "clicks": 2,
+        "impressions": 1374,
+        "position": 18.1
+      },
+      {
+        "page": "/highlevel-for-med-spas.html",
+        "clicks": 2,
+        "impressions": 771,
+        "position": 12.9
+      },
+      {
+        "page": "/tools/feature-comparison.html",
+        "clicks": 2,
+        "impressions": 374,
+        "position": 9.6
+      },
+      {
+        "page": "/blog/",
+        "clicks": 1,
+        "impressions": 190,
+        "position": 7.6
+      },
+      {
+        "page": "/blog/gohighlevel-crm-setup-guide",
+        "clicks": 1,
+        "impressions": 121,
+        "position": 20.8
+      },
+      {
+        "page": "/blog/gohighlevel-for-beginners-getting-started",
+        "clicks": 1,
+        "impressions": 44,
+        "position": 13.9
+      },
+      {
+        "page": "/blog/gohighlevel-google-ads-integration",
+        "clicks": 1,
+        "impressions": 110,
+        "position": 40
+      },
+      {
+        "page": "/blog/gohighlevel-membership-courses-guide",
+        "clicks": 1,
+        "impressions": 112,
+        "position": 8.3
+      }
+    ],
     "traffic_summary": {}
   },
   "llm_visibility": {
@@ -178,31 +518,31 @@
     }
   },
   "traffic": {
-    "sessions": 748,
-    "users": 702,
-    "pageviews": 842,
-    "bounce_rate": 0.66,
-    "avg_duration": 77.6,
+    "sessions": 812,
+    "users": 760,
+    "pageviews": 915,
+    "bounce_rate": 0.67,
+    "avg_duration": 77.5,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 409
+        "sessions": 442
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 199
+        "sessions": 216
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 32
+        "sessions": 37
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 28
+        "sessions": 30
       },
       {
         "source": "chatgpt.com",
@@ -212,12 +552,17 @@
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 19
+        "sessions": 16
       },
       {
-        "source": "perplexity.ai",
-        "medium": "referral",
-        "sessions": 9
+        "source": "duckduckgo",
+        "medium": "organic",
+        "sessions": 11
+      },
+      {
+        "source": "yahoo",
+        "medium": "organic",
+        "sessions": 11
       },
       {
         "source": "quora.com",
@@ -225,13 +570,8 @@
         "sessions": 9
       },
       {
-        "source": "yahoo",
-        "medium": "organic",
-        "sessions": 9
-      },
-      {
-        "source": "duckduckgo",
-        "medium": "organic",
+        "source": "perplexity.ai",
+        "medium": "referral",
         "sessions": 8
       },
       {
@@ -250,18 +590,18 @@
         "sessions": 2
       },
       {
-        "source": "chat.qwen.ai",
-        "medium": "referral",
-        "sessions": 1
+        "source": "copilot.com",
+        "medium": "(not set)",
+        "sessions": 2
       },
       {
-        "source": "ecosia.org",
-        "medium": "organic",
-        "sessions": 1
+        "source": "ph.search.yahoo.com",
+        "medium": "referral",
+        "sessions": 2
       }
     ],
     "top_pages": [],
-    "cta_clicks": 38,
+    "cta_clicks": 39,
     "cta_by_page": [
       {
         "page": "/",
@@ -277,6 +617,10 @@
       },
       {
         "page": "/gohighlevel-white-label-guide.html",
+        "clicks": 1
+      },
+      {
+        "page": "/highlevel-for-coaches",
         "clicks": 1
       },
       {
@@ -297,11 +641,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260309",
-        "sessions": 6,
-        "users": 6
-      },
       {
         "date": "20260310",
         "sessions": 10,
@@ -444,8 +783,13 @@
       },
       {
         "date": "20260407",
-        "sessions": 45,
-        "users": 42
+        "sessions": 51,
+        "users": 46
+      },
+      {
+        "date": "20260408",
+        "sessions": 64,
+        "users": 60
       }
     ]
   },
@@ -458,10 +802,5 @@
     "has_recent_error": false,
     "last_error": null
   },
-  "system_actions": [
-    {
-      "action": "Fix broken affiliate link + 13 broken internal links",
-      "when": "11 hours ago"
-    }
-  ]
+  "system_actions": []
 }
