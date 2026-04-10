@@ -38,10 +38,18 @@ from datetime import datetime, timedelta
 QUERIES_FILE = DATA_DIR / "tracking_queries.json"
 CSV_FILE = DATA_DIR / "llm_visibility_history.csv"
 CSV_COLUMNS = [
-    "date", "query", "provider", "cited", "citation_snippet",
+    "date", "query", "provider", "cited", "brand_mention",
+    "citations_urls", "citation_snippet",
     "competitors_cited", "response_length",
 ]
 
+# `cited` is the union of grounded-URL citations (Perplexity's citations
+# array contains highlevel.ai) and plain text mentions of the domain. These
+# two signals answer different questions:
+#   - URL citation: "Did the AI actually link to us as a source?"  (hard proof
+#     that our content is being crawled and used)
+#   - Brand mention: "Did the AI type 'highlevel.ai' anywhere in the answer?"
+#     (weaker, but catches non-grounded ChatGPT/Claude recommending us by name)
 TARGET_DOMAINS = ["highlevel.ai", "www.highlevel.ai"]
 COMPETITOR_DOMAINS = [
     "gohighlevel.com",
@@ -60,12 +68,12 @@ PROVIDERS = {
     },
     "anthropic": {
         "name": "Anthropic",
-        "model": "claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-5",
         "key_var": "ANTHROPIC_API_KEY",
     },
     "perplexity": {
         "name": "Perplexity",
-        "model": "llama-3.1-sonar-large-128k-online",
+        "model": "sonar",
         "key_var": "PERPLEXITY_API_KEY",
     },
 }
@@ -77,46 +85,52 @@ logger = setup_logging("llm_visibility_tracker")
 # Query Functions
 # ──────────────────────────────────────────────
 
-def query_openai(prompt: str) -> str | None:
+# Each query function returns (response_text, citations_urls) where
+# citations_urls is a list of source URLs the provider explicitly grounded
+# its answer in. Only Perplexity returns real grounded citations; OpenAI
+# and Anthropic non-grounded calls always return an empty list.
+
+def query_openai(prompt: str) -> tuple[str | None, list[str]]:
     """Query ChatGPT via OpenAI API."""
     if not OPENAI_API_KEY:
-        return None
+        return None, []
     try:
         from openai import OpenAI
         client = OpenAI(api_key=OPENAI_API_KEY)
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model=PROVIDERS["openai"]["model"],
             messages=[{"role": "user", "content": prompt}],
             max_tokens=1000,
         )
-        return response.choices[0].message.content
+        return response.choices[0].message.content, []
     except Exception as e:
         logger.error(f"OpenAI error: {e}")
-        return None
+        return None, []
 
 
-def query_anthropic(prompt: str) -> str | None:
+def query_anthropic(prompt: str) -> tuple[str | None, list[str]]:
     """Query Claude via Anthropic API."""
     if not ANTHROPIC_API_KEY:
-        return None
+        return None, []
     try:
         from anthropic import Anthropic
         client = Anthropic(api_key=ANTHROPIC_API_KEY)
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=PROVIDERS["anthropic"]["model"],
             max_tokens=1000,
             messages=[{"role": "user", "content": prompt}],
         )
-        return response.content[0].text
+        return response.content[0].text, []
     except Exception as e:
         logger.error(f"Anthropic error: {e}")
-        return None
+        return None, []
 
 
-def query_perplexity(prompt: str) -> str | None:
-    """Query Perplexity via their OpenAI-compatible API."""
+def query_perplexity(prompt: str) -> tuple[str | None, list[str]]:
+    """Query Perplexity with return_citations so we get the real grounded
+    source URL list, not just the response text."""
     if not PERPLEXITY_API_KEY:
-        return None
+        return None, []
     try:
         import requests
         response = requests.post(
@@ -126,17 +140,29 @@ def query_perplexity(prompt: str) -> str | None:
                 "Content-Type": "application/json",
             },
             json={
-                "model": "llama-3.1-sonar-large-128k-online",
+                "model": PROVIDERS["perplexity"]["model"],
                 "messages": [{"role": "user", "content": prompt}],
                 "max_tokens": 1000,
+                "return_citations": True,
             },
             timeout=30,
         )
         response.raise_for_status()
-        return response.json()["choices"][0]["message"]["content"]
+        payload = response.json()
+        text = payload["choices"][0]["message"]["content"]
+        # Perplexity returns citations at the top level of the response.
+        # Different API versions have put them in different places over time,
+        # so check both.
+        citations = payload.get("citations") or []
+        if not citations:
+            # Older format — search_results with url fields
+            for sr in payload.get("search_results") or []:
+                if isinstance(sr, dict) and sr.get("url"):
+                    citations.append(sr["url"])
+        return text, citations
     except Exception as e:
         logger.error(f"Perplexity error: {e}")
-        return None
+        return None, []
 
 
 QUERY_FUNCTIONS = {
@@ -150,12 +176,28 @@ QUERY_FUNCTIONS = {
 # Citation Detection
 # ──────────────────────────────────────────────
 
-def check_citation(text: str) -> bool:
-    """Check if highlevel.ai is mentioned in the response."""
+def check_brand_mention(text: str) -> bool:
+    """True if highlevel.ai appears as a string anywhere in the response text."""
     if not text:
         return False
     text_lower = text.lower()
     return any(domain in text_lower for domain in TARGET_DOMAINS)
+
+
+def check_url_citation(citations_urls: list[str]) -> bool:
+    """True if any of Perplexity's grounded citation URLs point at highlevel.ai."""
+    if not citations_urls:
+        return False
+    for url in citations_urls:
+        url_lower = (url or "").lower()
+        if any(domain in url_lower for domain in TARGET_DOMAINS):
+            return True
+    return False
+
+
+def check_citation(text: str, citations_urls: list[str] | None = None) -> bool:
+    """Combined citation signal — True if either grounded URL cite or text mention."""
+    return check_url_citation(citations_urls or []) or check_brand_mention(text)
 
 
 def extract_citation_snippet(text: str, max_length: int = 200) -> str:
@@ -205,9 +247,13 @@ def ensure_csv():
 
 
 def append_result(date_str: str, query: str, provider: str, cited: bool,
+                  brand_mention: bool, citations_urls: list[str],
                   snippet: str, competitors: list[str], response_length: int):
     """Append a single result row to the CSV."""
     ensure_csv()
+    # If an older CSV exists with the pre-brand_mention columns, migrate it
+    # by appending the new columns lazily on first write.
+    _ensure_csv_header_current()
     with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
@@ -215,10 +261,43 @@ def append_result(date_str: str, query: str, provider: str, cited: bool,
             query,
             provider,
             "true" if cited else "false",
+            "true" if brand_mention else "false",
+            " ".join(citations_urls),
             snippet,
             ",".join(competitors),
             response_length,
         ])
+
+
+def _ensure_csv_header_current():
+    """If the CSV exists with the old 7-column schema, rewrite it with the
+    new 9-column header so appends don't misalign."""
+    if not CSV_FILE.exists():
+        return
+    with open(CSV_FILE, "r", encoding="utf-8") as f:
+        first_line = f.readline().strip()
+    if first_line == ",".join(CSV_COLUMNS):
+        return  # already current
+    # Read everything, rewrite with new header + migrated rows
+    with open(CSV_FILE, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        old_rows = list(reader)
+    with open(CSV_FILE, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(CSV_COLUMNS)
+        for r in old_rows:
+            writer.writerow([
+                r.get("date", ""),
+                r.get("query", ""),
+                r.get("provider", ""),
+                r.get("cited", "false"),
+                r.get("brand_mention", r.get("cited", "false")),
+                r.get("citations_urls", ""),
+                r.get("citation_snippet", ""),
+                r.get("competitors_cited", ""),
+                r.get("response_length", "0"),
+            ])
+    logger.info("Migrated CSV to new schema (%d rows)", len(old_rows))
 
 
 def read_csv_history() -> list[dict]:
@@ -294,36 +373,43 @@ def run_all_queries():
             provider_name = provider_info["name"]
 
             logger.info(f"  {provider_name}...", )
-            response_text = query_fn(query)
+            response_text, citations_urls = query_fn(query)
 
             if response_text is None:
                 logger.warning(f"  {provider_name}: no response (error or timeout)")
                 query_results[provider_key] = None
                 # Still log the failure
-                append_result(date_str, query, provider_key, False, "", [], 0)
+                append_result(date_str, query, provider_key,
+                              False, False, [], "", [], 0)
                 completed += 1
                 time.sleep(1)
                 continue
 
-            cited = check_citation(response_text)
-            snippet = extract_citation_snippet(response_text) if cited else ""
+            url_cited = check_url_citation(citations_urls)
+            brand_mention = check_brand_mention(response_text)
+            cited = url_cited or brand_mention
+            snippet = extract_citation_snippet(response_text) if brand_mention else ""
             competitors = find_competitor_citations(response_text)
             response_length = len(response_text)
 
             if cited:
                 cited_count += 1
-                logger.info(f"  {provider_name}: CITED")
+                tag = "URL CITE" if url_cited else "brand mention"
+                logger.info(f"  {provider_name}: CITED ({tag})")
             else:
                 logger.info(f"  {provider_name}: not cited")
 
             if competitors:
                 logger.info(f"  {provider_name}: competitors mentioned: {', '.join(competitors)}")
 
-            append_result(date_str, query, provider_key, cited, snippet,
-                          competitors, response_length)
+            append_result(date_str, query, provider_key, cited, brand_mention,
+                          citations_urls, snippet, competitors, response_length)
 
             query_results[provider_key] = {
                 "cited": cited,
+                "url_cited": url_cited,
+                "brand_mention": brand_mention,
+                "citations_urls": citations_urls,
                 "snippet": snippet,
                 "competitors": competitors,
                 "response_length": response_length,
@@ -359,17 +445,24 @@ def run_single_query(query: str):
         provider_name = provider_info["name"]
 
         print(f"\n--- {provider_name} ({provider_info['model']}) ---")
-        response_text = query_fn(query)
+        response_text, citations_urls = query_fn(query)
 
         if response_text is None:
             print("  ERROR: No response")
             continue
 
-        cited = check_citation(response_text)
-        snippet = extract_citation_snippet(response_text) if cited else ""
+        url_cited = check_url_citation(citations_urls)
+        brand_mention = check_brand_mention(response_text)
+        cited = url_cited or brand_mention
+        snippet = extract_citation_snippet(response_text) if brand_mention else ""
         competitors = find_competitor_citations(response_text)
 
-        print(f"  Cited: {'YES' if cited else 'no'}")
+        print(f"  URL cite: {'YES' if url_cited else 'no'}  "
+              f"Brand mention: {'YES' if brand_mention else 'no'}")
+        if citations_urls:
+            print(f"  Grounded sources: {len(citations_urls)}")
+            for u in citations_urls[:5]:
+                print(f"    - {u}")
         if snippet:
             print(f"  Snippet: {snippet}")
         if competitors:
@@ -377,8 +470,8 @@ def run_single_query(query: str):
         print(f"  Response length: {len(response_text)} chars")
 
         # Log to CSV
-        append_result(date_str, query, provider_key, cited, snippet,
-                      competitors, len(response_text))
+        append_result(date_str, query, provider_key, cited, brand_mention,
+                      citations_urls, snippet, competitors, len(response_text))
 
         time.sleep(1)
 
@@ -589,27 +682,53 @@ def generate_report(results: list[dict] | None = None,
     # Count today's citations
     today_rows = [r for r in rows if r.get("date") == date_str]
     today_cited = sum(1 for r in today_rows if r.get("cited") == "true")
+    today_brand = sum(1 for r in today_rows if r.get("brand_mention") == "true")
+    today_url = sum(
+        1 for r in today_rows
+        if r.get("cited") == "true" and r.get("brand_mention") != "true"
+    )
+    # A row is a URL-only cite if cited=true but brand_mention=false (meaning
+    # the provider's returned citation URLs matched but the response text
+    # didn't). It's a URL+brand cite if both are true. Simpler: count rows
+    # whose citations_urls column contains a highlevel.ai substring.
+    today_url = 0
+    for r in today_rows:
+        urls = (r.get("citations_urls") or "").lower()
+        if any(d in urls for d in TARGET_DOMAINS):
+            today_url += 1
     today_total = len(today_rows) if today_rows else total_queries * total_providers
     today_rate = round(today_cited / today_total * 100, 1) if today_total > 0 else 0
+    today_brand_rate = round(today_brand / today_total * 100, 1) if today_total > 0 else 0
+    today_url_rate = round(today_url / today_total * 100, 1) if today_total > 0 else 0
 
     lines.append("## Summary")
     lines.append(f"- Queries tested: {total_queries}")
     lines.append(f"- Providers checked: {total_providers}")
     lines.append(f"- Overall citation rate: {today_rate}%")
+    lines.append(f"- URL citation rate: {today_url_rate}%")
+    lines.append(f"- Brand mention rate: {today_brand_rate}%")
     lines.append("")
 
     # Results by Provider
     lines.append("## Results by Provider")
-    lines.append("| Provider | Queries | Citations | Rate |")
-    lines.append("|----------|---------|-----------|------|")
+    lines.append("| Provider | Queries | Citations | URL Cites | Brand Mentions | Rate |")
+    lines.append("|----------|---------|-----------|-----------|----------------|------|")
 
     for pk in provider_keys:
         pname = providers[pk]["name"]
         p_rows = [r for r in today_rows if r.get("provider") == pk]
         p_total = len(p_rows)
         p_cited = sum(1 for r in p_rows if r.get("cited") == "true")
+        p_brand = sum(1 for r in p_rows if r.get("brand_mention") == "true")
+        p_url = 0
+        for r in p_rows:
+            urls = (r.get("citations_urls") or "").lower()
+            if any(d in urls for d in TARGET_DOMAINS):
+                p_url += 1
         p_rate = round(p_cited / p_total * 100, 1) if p_total > 0 else 0
-        lines.append(f"| {pname} | {p_total} | {p_cited} | {p_rate}% |")
+        lines.append(
+            f"| {pname} | {p_total} | {p_cited} | {p_url} | {p_brand} | {p_rate}% |"
+        )
 
     lines.append("")
 
