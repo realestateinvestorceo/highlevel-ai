@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-09 07:43:15",
+  "generated_at": "2026-04-10 07:48:23",
   "report_dates": {
     "freshness": "2026-04-06",
-    "schema": "2026-04-09",
+    "schema": "2026-04-10",
     "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
@@ -279,28 +279,35 @@
         "keyword": "highlevel",
         "page": "/",
         "position": 12.1,
-        "impressions": 1363,
+        "impressions": 1374,
         "clicks": 1
       },
       {
         "keyword": "high level",
         "page": "/",
         "position": 15.8,
-        "impressions": 1059,
+        "impressions": 1062,
         "clicks": 5
       },
       {
         "keyword": "go high level",
         "page": "/",
-        "position": 18.1,
-        "impressions": 855,
+        "position": 18.2,
+        "impressions": 868,
         "clicks": 3
       },
       {
         "keyword": "gohighlevel official website",
         "page": "/",
-        "position": 7.2,
-        "impressions": 128,
+        "position": 6.9,
+        "impressions": 176,
+        "clicks": 0
+      },
+      {
+        "keyword": "high level crm",
+        "page": "/",
+        "position": 19.9,
+        "impressions": 143,
         "clicks": 0
       },
       {
@@ -311,6 +318,20 @@
         "clicks": 0
       },
       {
+        "keyword": "go high level ai",
+        "page": "/",
+        "position": 8.9,
+        "impressions": 116,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai",
+        "page": "/",
+        "position": 9.2,
+        "impressions": 116,
+        "clicks": 0
+      },
+      {
         "keyword": "gohighlevel updates 2026",
         "page": "/blog/gohighlevel-march-2026-updates.html",
         "position": 5.6,
@@ -318,66 +339,59 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel ai",
+        "keyword": "highlevel official website",
         "page": "/",
-        "position": 9.4,
-        "impressions": 104,
-        "clicks": 0
-      },
-      {
-        "keyword": "go high level ai",
-        "page": "/",
-        "position": 9.3,
-        "impressions": 103,
+        "position": 5,
+        "impressions": 107,
         "clicks": 0
       },
       {
         "keyword": "hilevel",
         "page": "/",
-        "position": 10.8,
+        "position": 10.6,
         "impressions": 101,
         "clicks": 0
       },
       {
-        "keyword": "highlevel official website",
-        "page": "/",
-        "position": 5.1,
-        "impressions": 99,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel ai employee pricing 2026",
-        "page": "/pricing-explained.html",
-        "position": 7.4,
-        "impressions": 76,
+        "keyword": "gohighlevel updates 2026",
+        "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 6.1,
+        "impressions": 82,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel news",
         "page": "/blog/",
         "position": 7.1,
-        "impressions": 71,
+        "impressions": 78,
         "clicks": 0
       },
       {
         "keyword": "active facebook ads blueleveltechnologies.com",
         "page": "/blog/gohighlevel-facebook-ads-integration",
-        "position": 7.0,
-        "impressions": 70,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel updates 2026",
-        "page": "/blog/gohighlevel-april-2026-updates",
-        "position": 6.0,
-        "impressions": 60,
+        "position": 7.1,
+        "impressions": 72,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel pricing change april 2026",
         "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 7.8,
+        "impressions": 72,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai employee pricing 2026",
+        "page": "/pricing-explained.html",
         "position": 7.4,
-        "impressions": 58,
+        "impressions": 71,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained",
+        "position": 9.9,
+        "impressions": 57,
         "clicks": 0
       },
       {
@@ -388,112 +402,92 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing official 2026",
+        "keyword": "gohighlevel pricing 2026 official",
         "page": "/pricing-explained",
-        "position": 9.9,
-        "impressions": 49,
+        "position": 9.5,
+        "impressions": 46,
         "clicks": 0
       },
       {
         "keyword": "high-level",
         "page": "/",
-        "position": 19.9,
-        "impressions": 47,
-        "clicks": 0
-      },
-      {
-        "keyword": "ghl ai",
-        "page": "/",
-        "position": 7.6,
-        "impressions": 42,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel updates 2026 new features",
-        "page": "/blog/gohighlevel-march-2026-updates.html",
-        "position": 5.6,
-        "impressions": 42,
+        "position": 19.4,
+        "impressions": 46,
         "clicks": 0
       }
     ],
     "top_pages": [
       {
         "page": "/",
-        "clicks": 108,
-        "impressions": 14018,
-        "position": 15.3
+        "clicks": 113,
+        "impressions": 14215,
+        "position": 15.2
       },
       {
         "page": "/pricing-explained.html",
         "clicks": 6,
-        "impressions": 9417,
+        "impressions": 9203,
         "position": 8.5
-      },
-      {
-        "page": "/highlevel-vs-zapier-make.html",
-        "clicks": 5,
-        "impressions": 1340,
-        "position": 7.7
       },
       {
         "page": "/blog/gohighlevel-march-2026-updates.html",
         "clicks": 4,
-        "impressions": 3977,
+        "impressions": 4000,
         "position": 4.7
+      },
+      {
+        "page": "/highlevel-vs-zapier-make.html",
+        "clicks": 4,
+        "impressions": 1357,
+        "position": 7.7
       },
       {
         "page": "/tools/sms-cost-estimator.html",
         "clicks": 4,
-        "impressions": 326,
-        "position": 11.2
+        "impressions": 353,
+        "position": 11.1
       },
       {
         "page": "/voice-agent-setup.html",
         "clicks": 4,
-        "impressions": 4686,
+        "impressions": 4672,
         "position": 8.6
       },
       {
         "page": "/blog/gohighlevel-facebook-ads-integration",
         "clicks": 2,
-        "impressions": 148,
+        "impressions": 154,
         "position": 9.1
       },
       {
         "page": "/gohighlevel-pricing-calculator.html",
         "clicks": 2,
-        "impressions": 1374,
-        "position": 18.1
-      },
-      {
-        "page": "/highlevel-for-med-spas.html",
-        "clicks": 2,
-        "impressions": 771,
-        "position": 12.9
+        "impressions": 1388,
+        "position": 18.3
       },
       {
         "page": "/tools/feature-comparison.html",
         "clicks": 2,
-        "impressions": 374,
+        "impressions": 381,
         "position": 9.6
       },
       {
         "page": "/blog/",
         "clicks": 1,
-        "impressions": 190,
-        "position": 7.6
+        "impressions": 206,
+        "position": 7.4
       },
       {
         "page": "/blog/gohighlevel-crm-setup-guide",
         "clicks": 1,
-        "impressions": 121,
-        "position": 20.8
+        "impressions": 159,
+        "position": 23.1
       },
       {
         "page": "/blog/gohighlevel-for-beginners-getting-started",
         "clicks": 1,
-        "impressions": 44,
-        "position": 13.9
+        "impressions": 65,
+        "position": 12.6
       },
       {
         "page": "/blog/gohighlevel-google-ads-integration",
@@ -504,8 +498,14 @@
       {
         "page": "/blog/gohighlevel-membership-courses-guide",
         "clicks": 1,
-        "impressions": 112,
-        "position": 8.3
+        "impressions": 165,
+        "position": 8.9
+      },
+      {
+        "page": "/blog/gohighlevel-workflow-automation-guide",
+        "clicks": 1,
+        "impressions": 440,
+        "position": 13.1
       }
     ],
     "traffic_summary": {}
@@ -518,51 +518,51 @@
     }
   },
   "traffic": {
-    "sessions": 812,
-    "users": 760,
-    "pageviews": 915,
+    "sessions": 856,
+    "users": 800,
+    "pageviews": 959,
     "bounce_rate": 0.67,
-    "avg_duration": 77.5,
+    "avg_duration": 76.7,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 442
+        "sessions": 465
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 216
+        "sessions": 229
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 37
+        "sessions": 40
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 30
+        "sessions": 29
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 23
+        "sessions": 24
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 16
+        "sessions": 15
       },
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 11
+        "sessions": 13
       },
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 11
+        "sessions": 12
       },
       {
         "source": "quora.com",
@@ -580,32 +580,32 @@
         "sessions": 6
       },
       {
+        "source": "claude.ai",
+        "medium": "referral",
+        "sessions": 4
+      },
+      {
         "source": "mail.google.com",
         "medium": "referral",
         "sessions": 3
       },
       {
-        "source": "claude.ai",
+        "source": "ph.search.yahoo.com",
         "medium": "referral",
-        "sessions": 2
+        "sessions": 3
       },
       {
         "source": "copilot.com",
         "medium": "(not set)",
         "sessions": 2
-      },
-      {
-        "source": "ph.search.yahoo.com",
-        "medium": "referral",
-        "sessions": 2
       }
     ],
     "top_pages": [],
-    "cta_clicks": 39,
+    "cta_clicks": 42,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 30
+        "clicks": 33
       },
       {
         "page": "/pricing-explained.html",
@@ -641,11 +641,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260310",
-        "sessions": 10,
-        "users": 10
-      },
       {
         "date": "20260311",
         "sessions": 18,
@@ -788,8 +783,13 @@
       },
       {
         "date": "20260408",
-        "sessions": 64,
-        "users": 60
+        "sessions": 69,
+        "users": 63
+      },
+      {
+        "date": "20260409",
+        "sessions": 49,
+        "users": 47
       }
     ]
   },
@@ -802,5 +802,10 @@
     "has_recent_error": false,
     "last_error": null
   },
-  "system_actions": []
+  "system_actions": [
+    {
+      "action": "Auto-update: daily video pipeline 2026-04-09",
+      "when": "24 hours ago"
+    }
+  ]
 }
