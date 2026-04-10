@@ -366,6 +366,11 @@ def _get_youtube_data():
     result = {"videos": [], "channel": {}}
 
     if not VIDEO_SHEET_ID or not GA4_SERVICE_ACCOUNT_FILE:
+        logger.warning(
+            "YouTube data skipped — VIDEO_SHEET_ID=%s GA4_SERVICE_ACCOUNT_FILE=%s",
+            "set" if VIDEO_SHEET_ID else "MISSING",
+            "set" if GA4_SERVICE_ACCOUNT_FILE else "MISSING",
+        )
         return result
 
     try:
@@ -416,6 +421,11 @@ def _get_pipeline_data():
     result = {"last_runs": [], "has_recent_error": False, "last_error": None}
 
     if not VIDEO_SHEET_ID or not GA4_SERVICE_ACCOUNT_FILE:
+        logger.warning(
+            "Pipeline data skipped — VIDEO_SHEET_ID=%s GA4_SERVICE_ACCOUNT_FILE=%s",
+            "set" if VIDEO_SHEET_ID else "MISSING",
+            "set" if GA4_SERVICE_ACCOUNT_FILE else "MISSING",
+        )
         return result
 
     try:

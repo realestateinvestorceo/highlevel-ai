@@ -65,7 +65,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add scripts/seo/data/video_embeds.json video_queue.json thumbnails/ *.html blog/*.html tools/*.html 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Auto-update: daily video pipeline $(date +%Y-%m-%d)"
-          git pull --rebase origin main || true
+          git pull --rebase --autostash origin main || true
           git push
 
   notify-failure:
