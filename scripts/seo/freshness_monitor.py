@@ -260,8 +260,25 @@ def check_stale_dates(html: str, filepath: Path) -> list[dict]:
 # Check 3: Pricing mismatches
 # ────────────────────────────────────────────────
 
+_PRICE_NUMERIC = re.compile(r"\$[\d,]+(?:\.\d+)?")
+
+
+def _price_key(price_str: str) -> str:
+    """Normalize a price string for comparison.
+
+    "$97/mo", "$97/month", "$97" all become "$97". This prevents false
+    "pricing mismatch" flags caused purely by suffix formatting differences
+    between the canonical pricing JSON and the page's visible text.
+    """
+    m = _PRICE_NUMERIC.search(price_str)
+    if not m:
+        return price_str.lower()
+    # Strip commas so "$1,000" and "$1000" match.
+    return m.group().replace(",", "").lower()
+
+
 def load_canonical_pricing() -> dict:
-    """Load canonical pricing and flatten to {brand: set_of_prices}."""
+    """Load canonical pricing and flatten to {brand: set_of_normalized_keys}."""
     pricing_file = DATA_DIR / "current_pricing.json"
     raw = load_json(pricing_file, {})
     flat = {}
@@ -270,7 +287,7 @@ def load_canonical_pricing() -> dict:
         for plan_name, value in plans.items():
             # Extract dollar amounts from values like "$97/mo", "14-day free trial"
             for pm in PRICE_PATTERN.finditer(str(value)):
-                prices.add(pm.group())
+                prices.add(_price_key(pm.group()))
         flat[brand] = prices
     return flat
 
@@ -278,6 +295,18 @@ def load_canonical_pricing() -> dict:
 def check_pricing(html: str, filepath: Path, canonical: dict) -> list[dict]:
     """Find dollar amounts near brand mentions and flag mismatches."""
     issues = []
+
+    # Competitor comparison pages legitimately quote competitor prices as
+    # part of the content. Skip pricing checks on them entirely.
+    rel_path = str(filepath.relative_to(SITE_DIR)).lower()
+    if (
+        rel_path.endswith("-alternative.html")
+        or rel_path.endswith("-limitations.html")
+        or "pricing-limits" in rel_path
+        or "-vs-" in rel_path
+    ):
+        return issues
+
     # Get all visible text as one blob for proximity search
     visible = extract_visible_text(html)
     full_text = " ".join(text for _, text in visible).lower()
@@ -289,8 +318,10 @@ def check_pricing(html: str, filepath: Path, canonical: dict) -> list[dict]:
         if brand not in canonical:
             continue
         known_prices = canonical[brand]
-        # Normalize known prices to lowercase for comparison
-        known_lower = {p.lower() for p in known_prices}
+        if not known_prices:
+            continue
+        # canonical is already stored as normalized keys via _price_key
+        known_keys = known_prices
 
         for variant in variants:
             # Find all positions of this brand variant in text
@@ -300,14 +331,24 @@ def check_pricing(html: str, filepath: Path, canonical: dict) -> list[dict]:
                 idx = full_text.find(variant_lower, start)
                 if idx == -1:
                     break
-                # Look for dollar amounts within 200 chars on either side
-                window_start = max(0, idx - 200)
-                window_end = min(len(full_text), idx + len(variant_lower) + 200)
+                # Tighter proximity window — comparison tables and paragraphs
+                # mentioning many tools/prices cause cross-contamination with
+                # anything wider than ~60 chars.
+                window_start = max(0, idx - 60)
+                window_end = min(len(full_text), idx + len(variant_lower) + 60)
                 window = full_text[window_start:window_end]
 
                 for pm in PRICE_PATTERN.finditer(window):
                     found_price = pm.group()
-                    if found_price not in known_lower:
+                    # Only flag prices that carry a per-unit suffix (e.g. /mo,
+                    # /month, /year). Bare dollar amounts ("$800", "$10,000")
+                    # are almost always savings, revenue, examples — not
+                    # pricing claims — and generate overwhelming false
+                    # positives on real content pages.
+                    if "/" not in found_price:
+                        continue
+                    found_key = _price_key(found_price)
+                    if found_key not in known_keys:
                         # Get context around the price
                         p_start = max(0, pm.start() - 20)
                         p_end = min(len(window), pm.end() + 20)

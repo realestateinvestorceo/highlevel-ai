@@ -110,7 +110,7 @@ def generate_schema(schema_type: str, rel_path: str, html: str) -> dict | None:
             },
         }
 
-    if schema_type == "ReviewArticle":
+    if schema_type in ("ReviewArticle", "Article"):
         return {
             "@context": "https://schema.org",
             "@type": "Article",
@@ -121,6 +121,40 @@ def generate_schema(schema_type: str, rel_path: str, html: str) -> dict | None:
             "publisher": PUBLISHER,
             "image": OG_IMAGE,
         }
+
+    if schema_type == "Organization":
+        return {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": PUBLISHER["name"],
+            "url": PUBLISHER["url"],
+            "logo": OG_IMAGE,
+        }
+
+    if schema_type == "BreadcrumbList":
+        return {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": SITE_URL + "/",
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": title,
+                    "item": url,
+                },
+            ],
+        }
+
+    if schema_type in ("FAQPage", "Product"):
+        # Content-dependent types. Auto-generating a stub would produce
+        # invalid or misleading structured data, so skip silently.
+        return None
 
     logger.warning("Unknown schema type: %s — skipping", schema_type)
     return None
