@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-10 07:48:23",
+  "generated_at": "2026-04-11 07:05:43",
   "report_dates": {
     "freshness": "2026-04-06",
-    "schema": "2026-04-10",
+    "schema": "2026-04-11",
     "seo_dashboard": "2026-04-06",
     "llm_visibility": "2026-03-27"
   },
@@ -279,36 +279,43 @@
         "keyword": "highlevel",
         "page": "/",
         "position": 12.1,
-        "impressions": 1374,
+        "impressions": 1389,
         "clicks": 1
       },
       {
         "keyword": "high level",
         "page": "/",
-        "position": 15.8,
-        "impressions": 1062,
+        "position": 15.6,
+        "impressions": 1068,
         "clicks": 5
       },
       {
         "keyword": "go high level",
         "page": "/",
         "position": 18.2,
-        "impressions": 868,
+        "impressions": 884,
         "clicks": 3
       },
       {
         "keyword": "gohighlevel official website",
         "page": "/",
-        "position": 6.9,
-        "impressions": 176,
+        "position": 6.7,
+        "impressions": 213,
         "clicks": 0
       },
       {
         "keyword": "high level crm",
         "page": "/",
-        "position": 19.9,
-        "impressions": 143,
+        "position": 19.6,
+        "impressions": 141,
         "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel ai",
+        "page": "/",
+        "position": 9.1,
+        "impressions": 129,
+        "clicks": 1
       },
       {
         "keyword": "gohighlevel pricing change march 2026",
@@ -320,14 +327,7 @@
       {
         "keyword": "go high level ai",
         "page": "/",
-        "position": 8.9,
-        "impressions": 116,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel ai",
-        "page": "/",
-        "position": 9.2,
+        "position": 8.5,
         "impressions": 116,
         "clicks": 0
       },
@@ -339,31 +339,38 @@
         "clicks": 0
       },
       {
-        "keyword": "highlevel official website",
-        "page": "/",
-        "position": 5,
-        "impressions": 107,
-        "clicks": 0
-      },
-      {
         "keyword": "hilevel",
         "page": "/",
-        "position": 10.6,
-        "impressions": 101,
+        "position": 10.5,
+        "impressions": 102,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel updates 2026",
         "page": "/blog/gohighlevel-april-2026-updates",
-        "position": 6.1,
-        "impressions": 82,
+        "position": 6.3,
+        "impressions": 93,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel news",
         "page": "/blog/",
-        "position": 7.1,
-        "impressions": 78,
+        "position": 6.9,
+        "impressions": 86,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing 2026 official",
+        "page": "/pricing-explained",
+        "position": 9.4,
+        "impressions": 83,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing change april 2026",
+        "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 7.9,
+        "impressions": 81,
         "clicks": 0
       },
       {
@@ -374,24 +381,17 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing change april 2026",
-        "page": "/blog/gohighlevel-april-2026-updates",
-        "position": 7.8,
-        "impressions": 72,
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained",
+        "position": 9.8,
+        "impressions": 69,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel ai employee pricing 2026",
         "page": "/pricing-explained.html",
         "position": 7.4,
-        "impressions": 71,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel pricing official 2026",
-        "page": "/pricing-explained",
-        "position": 9.9,
-        "impressions": 57,
+        "impressions": 67,
         "clicks": 0
       },
       {
@@ -402,55 +402,55 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing 2026 official",
-        "page": "/pricing-explained",
-        "position": 9.5,
-        "impressions": 46,
+        "keyword": "ghl ai",
+        "page": "/",
+        "position": 8.1,
+        "impressions": 50,
         "clicks": 0
       },
       {
         "keyword": "high-level",
         "page": "/",
-        "position": 19.4,
-        "impressions": 46,
+        "position": 19.6,
+        "impressions": 47,
         "clicks": 0
       }
     ],
     "top_pages": [
       {
         "page": "/",
-        "clicks": 113,
-        "impressions": 14215,
-        "position": 15.2
+        "clicks": 120,
+        "impressions": 14361,
+        "position": 15.1
       },
       {
         "page": "/pricing-explained.html",
         "clicks": 6,
-        "impressions": 9203,
+        "impressions": 8986,
         "position": 8.5
       },
       {
         "page": "/blog/gohighlevel-march-2026-updates.html",
         "clicks": 4,
-        "impressions": 4000,
+        "impressions": 4018,
         "position": 4.7
       },
       {
         "page": "/highlevel-vs-zapier-make.html",
         "clicks": 4,
-        "impressions": 1357,
-        "position": 7.7
+        "impressions": 1409,
+        "position": 7.6
       },
       {
         "page": "/tools/sms-cost-estimator.html",
         "clicks": 4,
-        "impressions": 353,
-        "position": 11.1
+        "impressions": 377,
+        "position": 11.0
       },
       {
         "page": "/voice-agent-setup.html",
         "clicks": 4,
-        "impressions": 4672,
+        "impressions": 4580,
         "position": 8.6
       },
       {
@@ -460,52 +460,52 @@
         "position": 9.1
       },
       {
+        "page": "/blog/gohighlevel-membership-courses-guide",
+        "clicks": 2,
+        "impressions": 209,
+        "position": 9.0
+      },
+      {
         "page": "/gohighlevel-pricing-calculator.html",
         "clicks": 2,
-        "impressions": 1388,
-        "position": 18.3
+        "impressions": 1401,
+        "position": 18.5
+      },
+      {
+        "page": "/gohighlevel-white-label-guide",
+        "clicks": 2,
+        "impressions": 267,
+        "position": 14.2
       },
       {
         "page": "/tools/feature-comparison.html",
         "clicks": 2,
-        "impressions": 381,
-        "position": 9.6
+        "impressions": 390,
+        "position": 9.5
       },
       {
         "page": "/blog/",
         "clicks": 1,
-        "impressions": 206,
-        "position": 7.4
+        "impressions": 218,
+        "position": 7.6
       },
       {
         "page": "/blog/gohighlevel-crm-setup-guide",
         "clicks": 1,
-        "impressions": 159,
+        "impressions": 186,
         "position": 23.1
       },
       {
         "page": "/blog/gohighlevel-for-beginners-getting-started",
         "clicks": 1,
-        "impressions": 65,
-        "position": 12.6
+        "impressions": 87,
+        "position": 12.1
       },
       {
-        "page": "/blog/gohighlevel-google-ads-integration",
+        "page": "/blog/gohighlevel-funnel-builder-tutorial",
         "clicks": 1,
-        "impressions": 110,
-        "position": 40
-      },
-      {
-        "page": "/blog/gohighlevel-membership-courses-guide",
-        "clicks": 1,
-        "impressions": 165,
-        "position": 8.9
-      },
-      {
-        "page": "/blog/gohighlevel-workflow-automation-guide",
-        "clicks": 1,
-        "impressions": 440,
-        "position": 13.1
+        "impressions": 37,
+        "position": 19.2
       }
     ],
     "traffic_summary": {}
@@ -518,16 +518,16 @@
     }
   },
   "traffic": {
-    "sessions": 856,
-    "users": 800,
-    "pageviews": 959,
-    "bounce_rate": 0.67,
-    "avg_duration": 76.7,
+    "sessions": 881,
+    "users": 824,
+    "pageviews": 978,
+    "bounce_rate": 0.68,
+    "avg_duration": 76.6,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 465
+        "sessions": 480
       },
       {
         "source": "google",
@@ -537,7 +537,7 @@
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 40
+        "sessions": 43
       },
       {
         "source": "chatgpt.com",
@@ -545,14 +545,14 @@
         "sessions": 29
       },
       {
-        "source": "chatgpt.com",
-        "medium": "(not set)",
-        "sessions": 24
-      },
-      {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 15
+        "sessions": 25
+      },
+      {
+        "source": "chatgpt.com",
+        "medium": "(not set)",
+        "sessions": 25
       },
       {
         "source": "duckduckgo",
@@ -562,7 +562,12 @@
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 12
+        "sessions": 13
+      },
+      {
+        "source": "perplexity.ai",
+        "medium": "referral",
+        "sessions": 10
       },
       {
         "source": "quora.com",
@@ -570,19 +575,14 @@
         "sessions": 9
       },
       {
-        "source": "perplexity.ai",
+        "source": "claude.ai",
         "medium": "referral",
-        "sessions": 8
+        "sessions": 5
       },
       {
         "source": "facebook.com",
         "medium": "referral",
-        "sessions": 6
-      },
-      {
-        "source": "claude.ai",
-        "medium": "referral",
-        "sessions": 4
+        "sessions": 5
       },
       {
         "source": "mail.google.com",
@@ -601,11 +601,11 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 42,
+    "cta_clicks": 44,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 33
+        "clicks": 34
       },
       {
         "page": "/pricing-explained.html",
@@ -613,6 +613,10 @@
       },
       {
         "page": "/blog/gohighlevel-for-beginners-getting-started",
+        "clicks": 1
+      },
+      {
+        "page": "/gohighlevel-free-trial",
         "clicks": 1
       },
       {
@@ -641,11 +645,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260311",
-        "sessions": 18,
-        "users": 18
-      },
       {
         "date": "20260312",
         "sessions": 26,
@@ -788,24 +787,332 @@
       },
       {
         "date": "20260409",
-        "sessions": 49,
-        "users": 47
+        "sessions": 51,
+        "users": 49
+      },
+      {
+        "date": "20260410",
+        "sessions": 41,
+        "users": 40
       }
     ]
   },
   "youtube": {
-    "videos": [],
+    "videos": [
+      {
+        "page_url": "/highlevel-vs-hubspot.html",
+        "title": "GoHighLevel vs HubSpot: Real Cost Comparison (Save $47K/Year!)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/index.html",
+        "title": "GoHighLevel Pricing 2026: Is $297/Month Worth It? (Full Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/pricing-explained.html",
+        "title": "GoHighLevel Pricing: Hidden Costs They Don't Tell You (2026 Guide)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-zapier-make.html",
+        "title": "GoHighLevel vs Zapier vs Make: The $400/Month Automation Truth",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-clickfunnels.html",
+        "title": "GoHighLevel vs ClickFunnels: I Tested Both for 6 Months (Real Results)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-kartra.html",
+        "title": "GoHighLevel vs Kartra: Real Cost Analysis After 60 Days Testing",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-workflow-automation.html",
+        "title": "GoHighLevel Workflow Automation: From $2K Mistake to 40% Conversion",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-real-estate.html",
+        "title": "GoHighLevel Real Estate Pricing 2026: Save $800/Month vs 7 Tools",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-02",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-reputation-management.html",
+        "title": "GoHighLevel Reputation Management Review: Saves Me $1,100/Month",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-03",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-saas-configurator.html",
+        "title": "GoHighLevel SaaS Mode: $20K Mistake Avoided (8 Month Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-04",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-gyms.html",
+        "title": "GoHighLevel for Gyms: Save $139/Month (Real Cost Breakdown)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-05",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-missed-call-text-back.html",
+        "title": "GoHighLevel Missed Call Text Back: Stop Losing 94% of Your Leads",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-06",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-dental.html",
+        "title": "GoHighLevel for Dental Practices: Real Costs & Review 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-07",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-email-marketing.html",
+        "title": "GoHighLevel Email Marketing 2026: Setup Guide + Hidden Costs",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-08",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-calendars.html",
+        "title": "GoHighLevel Calendar Review: All-in-One Booking System (2024)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-09",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-insurance.html",
+        "title": "GoHighLevel for Insurance: Real Costs & Truth in 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-10",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      }
+    ],
     "channel": {}
   },
   "pipeline": {
-    "last_runs": [],
+    "last_runs": [
+      {
+        "run_id": "2026-04-10",
+        "topic": "gohighlevel for insurance agents",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-09",
+        "topic": "gohighlevel calendar booking setup",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-08",
+        "topic": "gohighlevel email marketing setup",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-07",
+        "topic": "gohighlevel for dental practices",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-06",
+        "topic": "gohighlevel missed call text back",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-05",
+        "topic": "gohighlevel for gyms and fitness",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      },
+      {
+        "run_id": "2026-04-04",
+        "topic": "gohighlevel saas mode explained",
+        "steps": {
+          "research": "success",
+          "script_gen": "success",
+          "metadata_gen": "success",
+          "thumbnail_gen": "success",
+          "queue_write": "success",
+          "sheets_write": "success",
+          "slack_post": "skipped"
+        },
+        "error_details": ""
+      }
+    ],
     "has_recent_error": false,
     "last_error": null
   },
-  "system_actions": [
-    {
-      "action": "Auto-update: daily video pipeline 2026-04-09",
-      "when": "24 hours ago"
-    }
-  ]
+  "system_actions": []
 }
