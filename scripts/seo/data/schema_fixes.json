@@ -23,11 +23,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/best-crm-for-agencies.html": [
@@ -54,11 +49,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/gohighlevel-ai-changelog.html": [
@@ -111,11 +101,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/gohighlevel-not-sending-emails.html": [
@@ -142,11 +127,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/gohighlevel-speed-to-lead.html": [
@@ -173,11 +153,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/gohighlevel-twilio-setup.html": [
@@ -204,11 +179,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/how-to-cancel-gohighlevel.html": [
@@ -235,11 +205,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "blog/index.html": [
@@ -292,11 +257,6 @@
       "type": "BlogPosting",
       "reason": "Image is string, should be ImageObject",
       "field": "image"
-    },
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ],
   "dashboard.html": [
@@ -307,88 +267,30 @@
       "field": "description"
     }
   ],
-  "gohighlevel-affiliate-program.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
   "gohighlevel-ai-certification.html": [
     {
       "action": "add",
       "type": "Article",
-      "reason": "Missing Article schema"
-    }
-  ],
-  "gohighlevel-for-chiropractors.html": [
+      "reason": "Missing required field 'datePublished'",
+      "field": "datePublished"
+    },
     {
       "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-ecommerce.html": [
+      "type": "Article",
+      "reason": "Missing required field 'dateModified'",
+      "field": "dateModified"
+    },
     {
       "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-home-services.html": [
+      "type": "Article",
+      "reason": "Missing required field 'mainEntityOfPage'",
+      "field": "mainEntityOfPage"
+    },
     {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-insurance-agents.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-lawyers.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-photographers.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-roofing-companies.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-for-saas-startups.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-free-trial.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-pros-and-cons.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
+      "action": "fix",
+      "type": "Article",
+      "reason": "Image is string, should be ImageObject",
+      "field": "image"
     }
   ],
   "gohighlevel-reviews.html": [
@@ -396,48 +298,6 @@
       "action": "add",
       "type": "ReviewArticle",
       "reason": "Missing ReviewArticle schema"
-    }
-  ],
-  "gohighlevel-vs-close-crm.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "gohighlevel-vs-jobber.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "highlevel-vs-vendasta.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "is-gohighlevel-legit.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "is-gohighlevel-worth-it.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
-    }
-  ],
-  "what-does-gohighlevel-replace.html": [
-    {
-      "action": "add",
-      "type": "BreadcrumbList",
-      "reason": "Missing BreadcrumbList schema"
     }
   ]
 }
