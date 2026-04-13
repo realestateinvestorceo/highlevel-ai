@@ -1,145 +1,145 @@
 {
-  "generated_at": "2026-04-13 08:10:46",
+  "generated_at": "2026-04-13 10:52:07",
   "report_dates": {
-    "freshness": "2026-04-06",
+    "freshness": "2026-04-13",
     "schema": "2026-04-13",
-    "seo_dashboard": "2026-04-06",
+    "seo_dashboard": "2026-04-13",
     "llm_visibility": "2026-03-27"
   },
   "stats": {
-    "total_pages": 69,
-    "freshness_issues": 672,
+    "total_pages": 99,
+    "freshness_issues": 99,
     "schema_issues": 45,
     "striking_distance_keywords": 20
   },
   "priority_actions": [],
   "freshness": {
-    "total_issues": 672,
-    "critical": 666,
-    "warnings": 6,
+    "total_issues": 99,
+    "critical": 85,
+    "warnings": 14,
     "by_type": {
-      "outdated_year": 6,
-      "pricing_mismatch": 666
+      "outdated_year": 14,
+      "pricing_mismatch": 85
     },
     "items": [
       {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$297",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
         "found": "$97/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$497/month",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$15",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$800",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$15/mo",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$400/month",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
         "found": "$297/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$25",
+        "found": "$20/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$50/month",
+        "found": "$890/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$30/month",
+        "found": "$127/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$16",
+        "found": "$497/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$45/month",
+        "found": "$149/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-all-in-one-marketing-platform.html",
         "type": "pricing_mismatch",
-        "found": "$500",
+        "found": "$399/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/best-crm-for-agencies.html",
+        "type": "pricing_mismatch",
+        "found": "$249/month",
+        "expected": null
+      },
+      {
+        "file": "blog/best-crm-for-agencies.html",
+        "type": "pricing_mismatch",
+        "found": "$399/month",
+        "expected": null
+      },
+      {
+        "file": "blog/best-crm-for-agencies.html",
+        "type": "pricing_mismatch",
+        "found": "$599/month",
+        "expected": null
+      },
+      {
+        "file": "blog/gohighlevel-automations-save-time.html",
+        "type": "pricing_mismatch",
+        "found": "$2,100/month",
+        "expected": null
+      },
+      {
+        "file": "blog/gohighlevel-automations-save-time.html",
+        "type": "pricing_mismatch",
+        "found": "$50/hr",
+        "expected": null
+      },
+      {
+        "file": "blog/gohighlevel-email-marketing-guide.html",
+        "type": "pricing_mismatch",
+        "found": "$27/month",
+        "expected": null
+      },
+      {
+        "file": "blog/how-to-cancel-gohighlevel.html",
+        "type": "pricing_mismatch",
+        "found": "$200/month",
+        "expected": null
+      },
+      {
+        "file": "blog/migrate-hubspot-to-gohighlevel.html",
         "type": "pricing_mismatch",
         "found": "$800/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/migrate-hubspot-to-gohighlevel.html",
         "type": "pricing_mismatch",
-        "found": "$400",
+        "found": "$800/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "blog/migrate-hubspot-to-gohighlevel.html",
         "type": "pricing_mismatch",
-        "found": "$97",
+        "found": "$1,000/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "gohighlevel-for-roofing-companies.html",
         "type": "pricing_mismatch",
-        "found": "$97/mo",
+        "found": "$49/month",
         "expected": null
       },
       {
-        "file": "activecampaign-alternative.html",
+        "file": "gohighlevel-for-saas-startups.html",
         "type": "pricing_mismatch",
-        "found": "$297",
-        "expected": null
-      },
-      {
-        "file": "activecampaign-alternative.html",
-        "type": "pricing_mismatch",
-        "found": "$97/month",
+        "found": "$197/month",
         "expected": null
       }
     ]
@@ -530,16 +530,16 @@
     }
   },
   "traffic": {
-    "sessions": 962,
-    "users": 900,
-    "pageviews": 1064,
-    "bounce_rate": 0.68,
-    "avg_duration": 79.9,
+    "sessions": 967,
+    "users": 905,
+    "pageviews": 1070,
+    "bounce_rate": 0.69,
+    "avg_duration": 86.3,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 543
+        "sessions": 547
       },
       {
         "source": "google",
@@ -549,7 +549,7 @@
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 45
+        "sessions": 46
       },
       {
         "source": "chatgpt.com",
@@ -567,14 +567,14 @@
         "sessions": 15
       },
       {
-        "source": "duckduckgo",
-        "medium": "organic",
+        "source": "(not set)",
+        "medium": "(not set)",
         "sessions": 13
       },
       {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 12
+        "source": "duckduckgo",
+        "medium": "organic",
+        "sessions": 13
       },
       {
         "source": "perplexity.ai",
@@ -806,356 +806,27 @@
         "date": "20260412",
         "sessions": 49,
         "users": 48
+      },
+      {
+        "date": "20260413",
+        "sessions": 5,
+        "users": 5
       }
     ]
   },
   "youtube": {
-    "videos": [
-      {
-        "page_url": "/highlevel-vs-hubspot.html",
-        "title": "GoHighLevel vs HubSpot: Real Cost Comparison (Save $47K/Year!)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-03-31",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/index.html",
-        "title": "GoHighLevel Pricing 2026: Is $297/Month Worth It? (Full Review)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-03-31",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/pricing-explained.html",
-        "title": "GoHighLevel Pricing: Hidden Costs They Don't Tell You (2026 Guide)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-03-31",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-vs-zapier-make.html",
-        "title": "GoHighLevel vs Zapier vs Make: The $400/Month Automation Truth",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-03-31",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-vs-clickfunnels.html",
-        "title": "GoHighLevel vs ClickFunnels: I Tested Both for 6 Months (Real Results)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-03-31",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-vs-kartra.html",
-        "title": "GoHighLevel vs Kartra: Real Cost Analysis After 60 Days Testing",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-01",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-workflow-automation.html",
-        "title": "GoHighLevel Workflow Automation: From $2K Mistake to 40% Conversion",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-01",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-for-real-estate.html",
-        "title": "GoHighLevel Real Estate Pricing 2026: Save $800/Month vs 7 Tools",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-02",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-reputation-management.html",
-        "title": "GoHighLevel Reputation Management Review: Saves Me $1,100/Month",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-03",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-saas-configurator.html",
-        "title": "GoHighLevel SaaS Mode: $20K Mistake Avoided (8 Month Review)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-04",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-for-gyms.html",
-        "title": "GoHighLevel for Gyms: Save $139/Month (Real Cost Breakdown)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-05",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-missed-call-text-back.html",
-        "title": "GoHighLevel Missed Call Text Back: Stop Losing 94% of Your Leads",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-06",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-for-dental.html",
-        "title": "GoHighLevel for Dental Practices: Real Costs & Review 2026",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-07",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-email-marketing.html",
-        "title": "GoHighLevel Email Marketing 2026: Setup Guide + Hidden Costs",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-08",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-calendars.html",
-        "title": "GoHighLevel Calendar Review: All-in-One Booking System (2024)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-09",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/highlevel-for-insurance.html",
-        "title": "GoHighLevel for Insurance: Real Costs & Truth in 2026",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-10",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-twilio-setup.html",
-        "title": "GoHighLevel Twilio Setup: Real Costs & Setup Guide (2024)",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-11",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      },
-      {
-        "page_url": "/gohighlevel-chat-widget.html",
-        "title": "GoHighLevel Chat Widget Review: Replace Your Entire Tech Stack?",
-        "youtube_url": "",
-        "youtube_video_id": "",
-        "created_date": "2026-04-12",
-        "status": "pending",
-        "views": 0,
-        "likes": 0,
-        "comments": 0,
-        "ctr": "",
-        "avg_watch_pct": ""
-      }
-    ],
+    "videos": [],
     "channel": {}
   },
   "pipeline": {
-    "last_runs": [
-      {
-        "run_id": "2026-04-12",
-        "topic": "gohighlevel chat widget setup",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-11",
-        "topic": "gohighlevel twilio setup guide",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-10",
-        "topic": "gohighlevel for insurance agents",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-09",
-        "topic": "gohighlevel calendar booking setup",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-08",
-        "topic": "gohighlevel email marketing setup",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-07",
-        "topic": "gohighlevel for dental practices",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      },
-      {
-        "run_id": "2026-04-06",
-        "topic": "gohighlevel missed call text back",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
-      }
-    ],
+    "last_runs": [],
     "has_recent_error": false,
     "last_error": null
   },
   "system_actions": [
     {
-      "action": "Auto-update: daily video pipeline 2026-04-12",
-      "when": "24 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-04-13",
+      "when": "3 hours ago"
     }
   ]
 }
