@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-14 07:53:28",
+  "generated_at": "2026-04-15 07:54:00",
   "report_dates": {
     "freshness": "2026-04-13",
-    "schema": "2026-04-14",
+    "schema": "2026-04-15",
     "seo_dashboard": "2026-04-13",
     "llm_visibility": "2026-03-27"
   },
@@ -291,56 +291,77 @@
         "keyword": "highlevel",
         "page": "/",
         "position": 11.8,
-        "impressions": 1411,
+        "impressions": 1388,
         "clicks": 1
       },
       {
         "keyword": "high level",
         "page": "/",
         "position": 15.4,
-        "impressions": 1073,
+        "impressions": 1028,
         "clicks": 5
       },
       {
         "keyword": "go high level",
         "page": "/",
-        "position": 18.3,
-        "impressions": 951,
+        "position": 18.4,
+        "impressions": 930,
         "clicks": 3
       },
       {
         "keyword": "gohighlevel official website",
         "page": "/",
-        "position": 6.2,
-        "impressions": 351,
+        "position": 6.1,
+        "impressions": 384,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel ai",
         "page": "/",
-        "position": 8.7,
-        "impressions": 164,
-        "clicks": 1
+        "position": 8.6,
+        "impressions": 173,
+        "clicks": 2
       },
       {
         "keyword": "go high level ai",
         "page": "/",
-        "position": 8.2,
-        "impressions": 137,
-        "clicks": 0
-      },
-      {
-        "keyword": "high level crm",
-        "page": "/",
-        "position": 19.3,
-        "impressions": 134,
+        "position": 8.1,
+        "impressions": 143,
         "clicks": 0
       },
       {
         "keyword": "gohighlevel pricing change april 2026",
         "page": "/blog/gohighlevel-april-2026-updates",
-        "position": 8.2,
-        "impressions": 130,
+        "position": 8.3,
+        "impressions": 133,
+        "clicks": 0
+      },
+      {
+        "keyword": "high level crm",
+        "page": "/",
+        "position": 19.1,
+        "impressions": 132,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing 2026 official",
+        "page": "/pricing-explained",
+        "position": 9.4,
+        "impressions": 129,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel pricing official 2026",
+        "page": "/pricing-explained",
+        "position": 9.5,
+        "impressions": 128,
+        "clicks": 0
+      },
+      {
+        "keyword": "gohighlevel updates 2026",
+        "page": "/blog/gohighlevel-april-2026-updates",
+        "position": 6.6,
+        "impressions": 123,
         "clicks": 0
       },
       {
@@ -351,17 +372,10 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing official 2026",
-        "page": "/pricing-explained",
-        "position": 9.5,
-        "impressions": 115,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel updates 2026",
-        "page": "/blog/gohighlevel-april-2026-updates",
-        "position": 6.5,
-        "impressions": 115,
+        "keyword": "gohighlevel news",
+        "page": "/blog/",
+        "position": 6.9,
+        "impressions": 117,
         "clicks": 0
       },
       {
@@ -372,23 +386,9 @@
         "clicks": 0
       },
       {
-        "keyword": "gohighlevel pricing 2026 official",
-        "page": "/pricing-explained",
-        "position": 9.4,
-        "impressions": 112,
-        "clicks": 0
-      },
-      {
-        "keyword": "gohighlevel news",
-        "page": "/blog/",
-        "position": 6.9,
-        "impressions": 107,
-        "clicks": 0
-      },
-      {
         "keyword": "hilevel",
         "page": "/",
-        "position": 10.1,
+        "position": 10.3,
         "impressions": 103,
         "clicks": 0
       },
@@ -397,6 +397,13 @@
         "page": "/blog/gohighlevel-facebook-ads-integration",
         "position": 7.1,
         "impressions": 72,
+        "clicks": 0
+      },
+      {
+        "keyword": "keap (infusionsoft) vs gohigherdash competitor analysis",
+        "page": "/highlevel-vs-keap.html",
+        "position": 5.8,
+        "impressions": 68,
         "clicks": 0
       },
       {
@@ -409,61 +416,48 @@
       {
         "keyword": "ghl ai",
         "page": "/",
-        "position": 8.5,
-        "impressions": 58,
+        "position": 8.6,
+        "impressions": 61,
         "clicks": 0
       },
       {
         "keyword": "high level agency",
         "page": "/",
-        "position": 12.5,
-        "impressions": 57,
-        "clicks": 0
-      },
-      {
-        "keyword": "high level software",
-        "page": "/",
-        "position": 19.6,
-        "impressions": 52,
+        "position": 12.3,
+        "impressions": 56,
         "clicks": 0
       }
     ],
     "top_pages": [
       {
         "page": "/",
-        "clicks": 128,
-        "impressions": 14809,
+        "clicks": 132,
+        "impressions": 14610,
         "position": 14.9
       },
       {
         "page": "/pricing-explained.html",
         "clicks": 6,
-        "impressions": 8106,
+        "impressions": 7827,
         "position": 8.6
       },
       {
         "page": "/blog/gohighlevel-march-2026-updates.html",
         "clicks": 4,
-        "impressions": 4043,
+        "impressions": 4063,
         "position": 4.7
       },
       {
         "page": "/highlevel-vs-zapier-make.html",
         "clicks": 4,
-        "impressions": 1474,
-        "position": 7.7
+        "impressions": 1457,
+        "position": 7.8
       },
       {
         "page": "/tools/sms-cost-estimator.html",
         "clicks": 4,
-        "impressions": 421,
+        "impressions": 440,
         "position": 10.9
-      },
-      {
-        "page": "/voice-agent-setup.html",
-        "clicks": 4,
-        "impressions": 4154,
-        "position": 9.0
       },
       {
         "page": "/blog/gohighlevel-membership-courses-guide",
@@ -474,8 +468,14 @@
       {
         "page": "/pricing-explained",
         "clicks": 3,
-        "impressions": 7038,
-        "position": 8.4
+        "impressions": 7805,
+        "position": 8.5
+      },
+      {
+        "page": "/voice-agent-setup.html",
+        "clicks": 3,
+        "impressions": 4003,
+        "position": 9.0
       },
       {
         "page": "/blog/gohighlevel-facebook-ads-integration",
@@ -486,37 +486,37 @@
       {
         "page": "/gohighlevel-pricing-calculator.html",
         "clicks": 2,
-        "impressions": 1471,
-        "position": 19.4
+        "impressions": 1485,
+        "position": 19.7
       },
       {
         "page": "/gohighlevel-white-label-guide",
         "clicks": 2,
-        "impressions": 415,
-        "position": 15.4
+        "impressions": 440,
+        "position": 15.3
       },
       {
         "page": "/highlevel-for-gyms.html",
         "clicks": 2,
-        "impressions": 250,
+        "impressions": 259,
         "position": 7.2
       },
       {
         "page": "/tools/feature-comparison.html",
         "clicks": 2,
-        "impressions": 408,
-        "position": 9.6
+        "impressions": 415,
+        "position": 9.7
       },
       {
         "page": "/blog/",
         "clicks": 1,
-        "impressions": 249,
-        "position": 8.2
+        "impressions": 266,
+        "position": 8.3
       },
       {
         "page": "/blog/gohighlevel-april-2026-updates",
         "clicks": 1,
-        "impressions": 3824,
+        "impressions": 4156,
         "position": 4.2
       }
     ],
@@ -530,36 +530,36 @@
     }
   },
   "traffic": {
-    "sessions": 1001,
-    "users": 939,
-    "pageviews": 1109,
+    "sessions": 1033,
+    "users": 968,
+    "pageviews": 1141,
     "bounce_rate": 0.68,
-    "avg_duration": 79.0,
+    "avg_duration": 73.6,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 570
+        "sessions": 582
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 247
+        "sessions": 261
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 47
-      },
-      {
-        "source": "chatgpt.com",
-        "medium": "referral",
-        "sessions": 31
+        "sessions": 50
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 28
+        "sessions": 30
+      },
+      {
+        "source": "chatgpt.com",
+        "medium": "referral",
+        "sessions": 29
       },
       {
         "source": "yahoo",
@@ -567,29 +567,29 @@
         "sessions": 15
       },
       {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 14
+      },
+      {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 13
+        "sessions": 12
+      },
+      {
+        "source": "claude.ai",
+        "medium": "referral",
+        "sessions": 9
+      },
+      {
+        "source": "perplexity.ai",
+        "medium": "referral",
+        "sessions": 9
       },
       {
         "source": "quora.com",
         "medium": "referral",
         "sessions": 9
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 8
-      },
-      {
-        "source": "claude.ai",
-        "medium": "referral",
-        "sessions": 8
-      },
-      {
-        "source": "perplexity.ai",
-        "medium": "referral",
-        "sessions": 8
       },
       {
         "source": "facebook.com",
@@ -657,11 +657,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260315",
-        "sessions": 13,
-        "users": 13
-      },
       {
         "date": "20260316",
         "sessions": 14,
@@ -804,8 +799,13 @@
       },
       {
         "date": "20260413",
-        "sessions": 53,
-        "users": 51
+        "sessions": 61,
+        "users": 59
+      },
+      {
+        "date": "20260414",
+        "sessions": 37,
+        "users": 34
       }
     ]
   },
@@ -1051,6 +1051,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-04-14",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca3Kru5pfrdfLhcbLx4iq'}"
+      },
+      {
         "run_id": "2026-04-13",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -1128,33 +1137,19 @@
           "slack_post": "skipped"
         },
         "error_details": ""
-      },
-      {
-        "run_id": "2026-04-07",
-        "topic": "gohighlevel for dental practices",
-        "steps": {
-          "research": "success",
-          "script_gen": "success",
-          "metadata_gen": "success",
-          "thumbnail_gen": "success",
-          "queue_write": "success",
-          "sheets_write": "success",
-          "slack_post": "skipped"
-        },
-        "error_details": ""
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca1TPks8YmG8vATiUoVU3'}",
-      "date": "2026-04-13"
+      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca3Kru5pfrdfLhcbLx4iq'}",
+      "date": "2026-04-14"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-update: weekly SEO report 2026-04-13",
-      "when": "21 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-04-14",
+      "when": "24 hours ago"
     }
   ]
 }
