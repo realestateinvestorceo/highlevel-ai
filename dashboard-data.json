@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-01 08:17:37",
+  "generated_at": "2026-05-02 07:50:00",
   "report_dates": {
     "freshness": "2026-04-27",
-    "schema": "2026-05-01",
+    "schema": "2026-05-02",
     "seo_dashboard": "2026-04-27",
     "llm_visibility": "2026-03-27"
   },
@@ -298,16 +298,16 @@
     }
   },
   "traffic": {
-    "sessions": 1359,
+    "sessions": 1360,
     "users": 1265,
-    "pageviews": 1509,
+    "pageviews": 1512,
     "bounce_rate": 0.68,
-    "avg_duration": 93.7,
+    "avg_duration": 93.5,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 736
+        "sessions": 737
       },
       {
         "source": "google",
@@ -317,17 +317,17 @@
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 81
+        "sessions": 86
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 33
+        "sessions": 30
       },
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 29
+        "sessions": 28
       },
       {
         "source": "yahoo",
@@ -337,17 +337,12 @@
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 22
+        "sessions": 24
       },
       {
         "source": "claude.ai",
         "medium": "referral",
         "sessions": 21
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 18
       },
       {
         "source": "perplexity.ai",
@@ -357,12 +352,17 @@
       {
         "source": "copilot.com",
         "medium": "referral",
-        "sessions": 9
+        "sessions": 10
+      },
+      {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 8
       },
       {
         "source": "ecosia.org",
         "medium": "organic",
-        "sessions": 5
+        "sessions": 6
       },
       {
         "source": "ph.search.yahoo.com",
@@ -381,11 +381,11 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 51,
+    "cta_clicks": 49,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 39
+        "clicks": 37
       },
       {
         "page": "/gohighlevel-free-trial",
@@ -429,11 +429,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260401",
-        "sessions": 35,
-        "users": 31
-      },
       {
         "date": "20260402",
         "sessions": 36,
@@ -576,8 +571,13 @@
       },
       {
         "date": "20260430",
-        "sessions": 49,
-        "users": 45
+        "sessions": 58,
+        "users": 53
+      },
+      {
+        "date": "20260501",
+        "sessions": 27,
+        "users": 23
       }
     ]
   },
@@ -823,6 +823,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-05-01",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CabY1AG7sVqUJyzdraaMy'}"
+      },
+      {
         "run_id": "2026-04-30",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -875,27 +884,18 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaQ8GrF1sL2f47ZxeD7y6'}"
-      },
-      {
-        "run_id": "2026-04-24",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaNHVkhYUbS4yX6QBTWzB'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaZf1rc4y3d2EgcQMgzhU'}",
-      "date": "2026-04-30"
+      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CabY1AG7sVqUJyzdraaMy'}",
+      "date": "2026-05-01"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-04-30",
+      "action": "Auto-improve: daily SEO fixes 2026-05-01",
       "when": "24 hours ago"
     }
   ]
