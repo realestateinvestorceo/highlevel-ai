@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-04 11:10:12",
+  "generated_at": "2026-05-05 08:16:14",
   "report_dates": {
     "freshness": "2026-05-04",
-    "schema": "2026-05-04",
+    "schema": "2026-05-05",
     "seo_dashboard": "2026-05-04",
     "llm_visibility": "2026-03-27"
   },
@@ -298,26 +298,26 @@
     }
   },
   "traffic": {
-    "sessions": 1360,
-    "users": 1265,
-    "pageviews": 1506,
-    "bounce_rate": 0.69,
-    "avg_duration": 89.5,
+    "sessions": 1388,
+    "users": 1287,
+    "pageviews": 1539,
+    "bounce_rate": 0.68,
+    "avg_duration": 98.1,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 731
+        "sessions": 733
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 349
+        "sessions": 354
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 90
+        "sessions": 92
       },
       {
         "source": "chatgpt.com",
@@ -332,17 +332,22 @@
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 26
+        "sessions": 27
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 24
+        "sessions": 25
       },
       {
         "source": "claude.ai",
         "medium": "referral",
-        "sessions": 22
+        "sessions": 25
+      },
+      {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 18
       },
       {
         "source": "perplexity.ai",
@@ -353,11 +358,6 @@
         "source": "copilot.com",
         "medium": "referral",
         "sessions": 10
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 7
       },
       {
         "source": "ecosia.org",
@@ -375,8 +375,8 @@
         "sessions": 4
       },
       {
-        "source": "perplexity",
-        "medium": "(not set)",
+        "source": "facebook.com",
+        "medium": "referral",
         "sessions": 4
       }
     ],
@@ -429,11 +429,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260404",
-        "sessions": 22,
-        "users": 22
-      },
       {
         "date": "20260405",
         "sessions": 29,
@@ -576,29 +571,332 @@
       },
       {
         "date": "20260503",
-        "sessions": 35,
-        "users": 32
+        "sessions": 38,
+        "users": 35
       },
       {
         "date": "20260504",
-        "sessions": 1,
-        "users": 1
+        "sessions": 48,
+        "users": 42
       }
     ]
   },
   "youtube": {
-    "videos": [],
+    "videos": [
+      {
+        "page_url": "/highlevel-vs-hubspot.html",
+        "title": "GoHighLevel vs HubSpot: Real Cost Comparison (Save $47K/Year!)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/index.html",
+        "title": "GoHighLevel Pricing 2026: Is $297/Month Worth It? (Full Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/pricing-explained.html",
+        "title": "GoHighLevel Pricing: Hidden Costs They Don't Tell You (2026 Guide)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-zapier-make.html",
+        "title": "GoHighLevel vs Zapier vs Make: The $400/Month Automation Truth",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-clickfunnels.html",
+        "title": "GoHighLevel vs ClickFunnels: I Tested Both for 6 Months (Real Results)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-kartra.html",
+        "title": "GoHighLevel vs Kartra: Real Cost Analysis After 60 Days Testing",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-workflow-automation.html",
+        "title": "GoHighLevel Workflow Automation: From $2K Mistake to 40% Conversion",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-real-estate.html",
+        "title": "GoHighLevel Real Estate Pricing 2026: Save $800/Month vs 7 Tools",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-02",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-reputation-management.html",
+        "title": "GoHighLevel Reputation Management Review: Saves Me $1,100/Month",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-03",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-saas-configurator.html",
+        "title": "GoHighLevel SaaS Mode: $20K Mistake Avoided (8 Month Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-04",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-gyms.html",
+        "title": "GoHighLevel for Gyms: Save $139/Month (Real Cost Breakdown)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-05",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-missed-call-text-back.html",
+        "title": "GoHighLevel Missed Call Text Back: Stop Losing 94% of Your Leads",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-06",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-dental.html",
+        "title": "GoHighLevel for Dental Practices: Real Costs & Review 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-07",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-email-marketing.html",
+        "title": "GoHighLevel Email Marketing 2026: Setup Guide + Hidden Costs",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-08",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-calendars.html",
+        "title": "GoHighLevel Calendar Review: All-in-One Booking System (2024)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-09",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-insurance.html",
+        "title": "GoHighLevel for Insurance: Real Costs & Truth in 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-10",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-twilio-setup.html",
+        "title": "GoHighLevel Twilio Setup: Real Costs & Setup Guide (2024)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-11",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-chat-widget.html",
+        "title": "GoHighLevel Chat Widget Review: Replace Your Entire Tech Stack?",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-12",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      }
+    ],
     "channel": {}
   },
   "pipeline": {
-    "last_runs": [],
-    "has_recent_error": false,
-    "last_error": null
+    "last_runs": [
+      {
+        "run_id": "2026-05-04",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "skipped",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CahG49h8fVHuuCLJ9zGgY'}"
+      },
+      {
+        "run_id": "2026-05-03",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CafJtTEeDwreExT7dcWrQ'}"
+      },
+      {
+        "run_id": "2026-05-02",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CadQBfdpB9RK1nWXEAUPZ'}"
+      },
+      {
+        "run_id": "2026-05-01",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CabY1AG7sVqUJyzdraaMy'}"
+      },
+      {
+        "run_id": "2026-04-30",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaZf1rc4y3d2EgcQMgzhU'}"
+      },
+      {
+        "run_id": "2026-04-29",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaXm2CijUvncGB7dX2HjU'}"
+      },
+      {
+        "run_id": "2026-04-28",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaVuDeXzSPKRdmR98tzB7'}"
+      }
+    ],
+    "has_recent_error": true,
+    "last_error": {
+      "step": "script_gen",
+      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CahG49h8fVHuuCLJ9zGgY'}",
+      "date": "2026-05-04"
+    }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-05-04",
-      "when": "3 hours ago"
+      "action": "Auto-update: weekly SEO report 2026-05-04",
+      "when": "21 hours ago"
     }
   ]
 }
