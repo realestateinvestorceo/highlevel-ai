@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-08 07:46:57",
+  "generated_at": "2026-05-09 08:00:57",
   "report_dates": {
     "freshness": "2026-05-04",
-    "schema": "2026-05-08",
+    "schema": "2026-05-09",
     "seo_dashboard": "2026-05-04",
     "llm_visibility": "2026-03-27"
   },
@@ -298,21 +298,21 @@
     }
   },
   "traffic": {
-    "sessions": 1388,
-    "users": 1282,
-    "pageviews": 1554,
-    "bounce_rate": 0.68,
-    "avg_duration": 133.0,
+    "sessions": 1363,
+    "users": 1260,
+    "pageviews": 1521,
+    "bounce_rate": 0.69,
+    "avg_duration": 127.2,
     "sources": [
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 706
+        "sessions": 697
       },
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 368
+        "sessions": 356
       },
       {
         "source": "bing",
@@ -322,32 +322,27 @@
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 32
+        "sessions": 28
       },
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 29
+        "sessions": 28
       },
       {
         "source": "chatgpt.com",
         "medium": "referral",
-        "sessions": 28
+        "sessions": 27
       },
       {
         "source": "claude.ai",
         "medium": "referral",
-        "sessions": 26
+        "sessions": 27
       },
       {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 22
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 15
+        "sessions": 23
       },
       {
         "source": "perplexity.ai",
@@ -355,14 +350,19 @@
         "sessions": 13
       },
       {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 12
+      },
+      {
         "source": "copilot.com",
         "medium": "referral",
-        "sessions": 10
+        "sessions": 11
       },
       {
         "source": "ecosia.org",
         "medium": "organic",
-        "sessions": 9
+        "sessions": 10
       },
       {
         "source": "perplexity",
@@ -370,30 +370,30 @@
         "sessions": 6
       },
       {
-        "source": "ph.search.yahoo.com",
+        "source": "facebook.com",
         "medium": "referral",
-        "sessions": 5
+        "sessions": 4
       },
       {
-        "source": "copilot.com",
-        "medium": "(not set)",
-        "sessions": 4
+        "source": "au.search.yahoo.com",
+        "medium": "referral",
+        "sessions": 3
       }
     ],
     "top_pages": [],
-    "cta_clicks": 57,
+    "cta_clicks": 60,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 43
+        "clicks": 44
       },
       {
         "page": "/pricing-explained",
-        "clicks": 3
+        "clicks": 5
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 2
+        "clicks": 3
       },
       {
         "page": "/blog/gohighlevel-crm-setup-guide",
@@ -401,10 +401,6 @@
       },
       {
         "page": "/blog/gohighlevel-membership-courses-guide",
-        "clicks": 1
-      },
-      {
-        "page": "/highlevel-for-coaches",
         "clicks": 1
       },
       {
@@ -433,11 +429,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260408",
-        "sessions": 69,
-        "users": 63
-      },
       {
         "date": "20260409",
         "sessions": 60,
@@ -580,8 +571,18 @@
       },
       {
         "date": "20260507",
-        "sessions": 53,
-        "users": 53
+        "sessions": 54,
+        "users": 54
+      },
+      {
+        "date": "20260508",
+        "sessions": 41,
+        "users": 38
+      },
+      {
+        "date": "20260509",
+        "sessions": 2,
+        "users": 2
       }
     ]
   },
@@ -827,6 +828,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-05-08",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Capm7x5QThx43z6UpchDt'}"
+      },
+      {
         "run_id": "2026-05-07",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -879,28 +889,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CadQBfdpB9RK1nWXEAUPZ'}"
-      },
-      {
-        "run_id": "2026-05-01",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CabY1AG7sVqUJyzdraaMy'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Canx3aFQH4MQaNA2JM8tx'}",
-      "date": "2026-05-07"
+      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Capm7x5QThx43z6UpchDt'}",
+      "date": "2026-05-08"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-05-07",
-      "when": "23 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-05-08",
+      "when": "24 hours ago"
     }
   ]
 }
