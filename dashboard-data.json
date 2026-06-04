@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-03 11:06:29",
+  "generated_at": "2026-06-04 10:00:40",
   "report_dates": {
     "freshness": "2026-06-01",
-    "schema": "2026-06-03",
+    "schema": "2026-06-04",
     "seo_dashboard": "2026-06-01",
     "llm_visibility": "2026-03-27"
   },
@@ -298,11 +298,11 @@
     }
   },
   "traffic": {
-    "sessions": 1134,
-    "users": 1050,
-    "pageviews": 1290,
-    "bounce_rate": 0.62,
-    "avg_duration": 237.9,
+    "sessions": 1130,
+    "users": 1048,
+    "pageviews": 1273,
+    "bounce_rate": 0.61,
+    "avg_duration": 246.1,
     "sources": [
       {
         "source": "(direct)",
@@ -312,12 +312,12 @@
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 340
+        "sessions": 346
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 131
+        "sessions": 134
       },
       {
         "source": "yahoo",
@@ -327,12 +327,12 @@
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 29
+        "sessions": 31
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 19
+        "sessions": 21
       },
       {
         "source": "chatgpt.com",
@@ -340,19 +340,19 @@
         "sessions": 18
       },
       {
-        "source": "claude.ai",
-        "medium": "referral",
-        "sessions": 14
-      },
-      {
         "source": "app.clickup.com",
         "medium": "referral",
         "sessions": 12
       },
       {
+        "source": "claude.ai",
+        "medium": "referral",
+        "sessions": 11
+      },
+      {
         "source": "chatgpt.com",
         "medium": "(not set)",
-        "sessions": 9
+        "sessions": 8
       },
       {
         "source": "copilot.com",
@@ -365,35 +365,35 @@
         "sessions": 5
       },
       {
-        "source": "facebook.com",
-        "medium": "referral",
-        "sessions": 5
-      },
-      {
         "source": "ph.search.yahoo.com",
         "medium": "referral",
         "sessions": 5
       },
       {
+        "source": "copilot.com",
+        "medium": "(not set)",
+        "sessions": 4
+      },
+      {
         "source": "ca.search.yahoo.com",
         "medium": "referral",
-        "sessions": 4
+        "sessions": 3
       }
     ],
     "top_pages": [],
-    "cta_clicks": 62,
+    "cta_clicks": 69,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 44
+        "clicks": 47
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 9
+        "clicks": 10
       },
       {
         "page": "/pricing-explained",
-        "clicks": 3
+        "clicks": 4
       },
       {
         "page": "/blog/gohighlevel-crm-setup-guide",
@@ -404,11 +404,19 @@
         "clicks": 1
       },
       {
+        "page": "/gohighlevel-affiliate-program",
+        "clicks": 1
+      },
+      {
         "page": "/gohighlevel-pricing-calculator",
         "clicks": 1
       },
       {
         "page": "/highlevel-plus-wordpress",
+        "clicks": 1
+      },
+      {
+        "page": "/highlevel-vs-hubspot",
         "clicks": 1
       },
       {
@@ -421,11 +429,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260504",
-        "sessions": 50,
-        "users": 43
-      },
       {
         "date": "20260505",
         "sessions": 40,
@@ -568,13 +571,13 @@
       },
       {
         "date": "20260602",
-        "sessions": 57,
-        "users": 55
+        "sessions": 58,
+        "users": 56
       },
       {
         "date": "20260603",
-        "sessions": 4,
-        "users": 4
+        "sessions": 49,
+        "users": 44
       }
     ]
   },
@@ -820,6 +823,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-06-03",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbgFEeLCZwMU2TiNCvTtr'}"
+      },
+      {
         "run_id": "2026-06-02",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -872,28 +884,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbUpe8Y2bKstb4BMs7XCd'}"
-      },
-      {
-        "run_id": "2026-05-27",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbSvoh7nesedYUXmDVw9b'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbeKkBhMfD5zZ59tKjCe5'}",
-      "date": "2026-06-02"
+      "details": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbgFEeLCZwMU2TiNCvTtr'}",
+      "date": "2026-06-03"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-06-02",
-      "when": "24 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-06-03",
+      "when": "23 hours ago"
     }
   ]
 }
