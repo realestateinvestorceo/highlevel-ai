@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-19 10:43:05",
+  "generated_at": "2026-06-20 09:21:53",
   "report_dates": {
     "freshness": "2026-06-15",
-    "schema": "2026-06-19",
+    "schema": "2026-06-20",
     "seo_dashboard": "2026-06-15",
     "llm_visibility": "2026-03-27"
   },
@@ -298,41 +298,41 @@
     }
   },
   "traffic": {
-    "sessions": 1344,
-    "users": 1240,
-    "pageviews": 1572,
-    "bounce_rate": 0.59,
-    "avg_duration": 115.6,
+    "sessions": 1385,
+    "users": 1279,
+    "pageviews": 1606,
+    "bounce_rate": 0.6,
+    "avg_duration": 112.8,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 580
+        "sessions": 597
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 455
+        "sessions": 466
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 110
+        "sessions": 108
       },
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 44
+        "sessions": 43
       },
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 35
+        "sessions": 36
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 20
+        "sessions": 27
       },
       {
         "source": "app.clickup.com",
@@ -350,6 +350,11 @@
         "sessions": 10
       },
       {
+        "source": "claude.ai",
+        "medium": "ai-assistant",
+        "sessions": 7
+      },
+      {
         "source": "copilot.com",
         "medium": "(not set)",
         "sessions": 7
@@ -360,19 +365,14 @@
         "sessions": 6
       },
       {
-        "source": "claude.ai",
-        "medium": "ai-assistant",
-        "sessions": 6
-      },
-      {
         "source": "ecosia.org",
         "medium": "organic",
         "sessions": 6
       },
       {
-        "source": "chatgpt.com",
-        "medium": "(not set)",
-        "sessions": 4
+        "source": "gemini.google.com",
+        "medium": "ai-assistant",
+        "sessions": 5
       },
       {
         "source": "chatgpt.com",
@@ -381,11 +381,11 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 92,
+    "cta_clicks": 95,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 68
+        "clicks": 70
       },
       {
         "page": "/gohighlevel-free-trial",
@@ -424,6 +424,10 @@
         "clicks": 1
       },
       {
+        "page": "/highlevel-for-dentists",
+        "clicks": 1
+      },
+      {
         "page": "/highlevel-plus-shopify",
         "clicks": 1
       },
@@ -441,11 +445,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260520",
-        "sessions": 23,
-        "users": 22
-      },
       {
         "date": "20260521",
         "sessions": 32,
@@ -588,8 +587,18 @@
       },
       {
         "date": "20260618",
-        "sessions": 46,
-        "users": 42
+        "sessions": 54,
+        "users": 48
+      },
+      {
+        "date": "20260619",
+        "sessions": 54,
+        "users": 53
+      },
+      {
+        "date": "20260620",
+        "sessions": 2,
+        "users": 2
       }
     ]
   },
@@ -835,6 +844,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-06-19",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcCWTwQLV6UeBdDAEySQY'}"
+      },
+      {
         "run_id": "2026-06-18",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -887,28 +905,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cc13MVt585qUho7kr8qsS'}"
-      },
-      {
-        "run_id": "2026-06-12",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbyEdPESMJpNRxrqVPaUr'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcAbovdLRoHPrNDPyFETk'}",
-      "date": "2026-06-18"
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcCWTwQLV6UeBdDAEySQY'}",
+      "date": "2026-06-19"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-06-18",
-      "when": "24 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-06-19",
+      "when": "23 hours ago"
     }
   ]
 }
