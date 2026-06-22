@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-21 09:54:59",
+  "generated_at": "2026-06-22 12:10:43",
   "report_dates": {
     "freshness": "2026-06-15",
-    "schema": "2026-06-21",
+    "schema": "2026-06-22",
     "seo_dashboard": "2026-06-15",
     "llm_visibility": "2026-03-27"
   },
@@ -298,26 +298,26 @@
     }
   },
   "traffic": {
-    "sessions": 1409,
-    "users": 1302,
-    "pageviews": 1648,
+    "sessions": 1454,
+    "users": 1338,
+    "pageviews": 1701,
     "bounce_rate": 0.61,
-    "avg_duration": 107.5,
+    "avg_duration": 109.1,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 629
+        "sessions": 666
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 480
+        "sessions": 483
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 103
+        "sessions": 104
       },
       {
         "source": "duckduckgo",
@@ -327,12 +327,12 @@
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 34
+        "sessions": 32
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 22
+        "sessions": 27
       },
       {
         "source": "app.clickup.com",
@@ -381,15 +381,15 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 99,
+    "cta_clicks": 108,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 72
+        "clicks": 77
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 12
+        "clicks": 16
       },
       {
         "page": "/highlevel-for-coaches",
@@ -445,11 +445,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260522",
-        "sessions": 21,
-        "users": 20
-      },
       {
         "date": "20260523",
         "sessions": 12,
@@ -592,13 +587,18 @@
       },
       {
         "date": "20260620",
-        "sessions": 45,
-        "users": 40
+        "sessions": 49,
+        "users": 42
       },
       {
         "date": "20260621",
-        "sessions": 4,
-        "users": 4
+        "sessions": 56,
+        "users": 49
+      },
+      {
+        "date": "20260622",
+        "sessions": 10,
+        "users": 9
       }
     ]
   },
@@ -844,6 +844,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-06-21",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcGDuho3bWcKqrrvp36zs'}"
+      },
+      {
         "run_id": "2026-06-20",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -896,28 +905,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cc55BHZsg6FM2arPY4fhJ'}"
-      },
-      {
-        "run_id": "2026-06-14",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cc2xm8Q6JJqNddgDQ6Pzu'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcEJVtZM49PgBfLgqrwZL'}",
-      "date": "2026-06-20"
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcGDuho3bWcKqrrvp36zs'}",
+      "date": "2026-06-21"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-06-20",
-      "when": "25 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-06-21",
+      "when": "26 hours ago"
     }
   ]
 }
