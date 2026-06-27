@@ -243,33 +243,52 @@ def parse_seo_dashboard(text: str) -> dict:
 
 
 def parse_llm_visibility(text: str) -> dict:
-    """Extract citation rates from an LLM visibility report."""
+    """Extract citation rates from an LLM visibility report.
+
+    The report format is defined in llm_visibility_tracker.generate_report.
+    Expected lines:
+      - Overall citation rate: 45.0%
+      - URL citation rate: 12.0%
+      - Brand mention rate: 33.0%
+      | OpenAI | 15 | 8 | 2 | 6 | 53.3% |
+      | Anthropic | 15 | ... |
+      | Perplexity | 15 | ... |
+    """
     result = {
         "citation_rate": None,
+        "url_citation_rate": None,
+        "brand_mention_rate": None,
         "by_platform": {},
     }
     if not text:
         return result
 
-    # Overall citation rate: "Overall citation rate: 45%"  or "Citation rate: 45%"
-    m = re.search(
-        r"(?:overall\s+)?citation\s+rate[:\s]+([\d.]+)%", text, re.IGNORECASE
-    )
-    if m:
-        result["citation_rate"] = float(m.group(1))
+    # Overall / URL / brand rates from the Summary bullets
+    patterns = {
+        "citation_rate": r"overall\s+citation\s+rate[:\s]+([\d.]+)%",
+        "url_citation_rate": r"url\s+citation\s+rate[:\s]+([\d.]+)%",
+        "brand_mention_rate": r"brand\s+mention\s+rate[:\s]+([\d.]+)%",
+    }
+    for key, pat in patterns.items():
+        m = re.search(pat, text, re.IGNORECASE)
+        if m:
+            result[key] = float(m.group(1))
 
-    # Per-platform: "| ChatGPT | 60% |" or "- ChatGPT: 60%"
-    for m in re.finditer(r"\|\s*(\w[\w\s]*?)\s*\|\s*([\d.]+)%\s*\|", text):
-        name = m.group(1).strip()
-        if name.lower() in ("platform", "---", "metric"):
-            continue
-        result["by_platform"][name] = float(m.group(2))
-
-    # Also try list format: "- ChatGPT: 60%"
-    for m in re.finditer(r"^[-*]\s*(\w[\w\s]*?)\s*:\s*([\d.]+)%", text, re.MULTILINE):
-        name = m.group(1).strip()
-        if name.lower() not in result["by_platform"]:
-            result["by_platform"][name] = float(m.group(2))
+    # Per-provider rows: only match against the known provider names so we
+    # never pick up header rows, separator rows, or stray numeric columns.
+    known_providers = ("OpenAI", "Anthropic", "Perplexity")
+    for provider in known_providers:
+        # Match a markdown table row whose first cell is this provider name
+        # and whose last cell is a percentage. Everything in between is the
+        # query/cite counts and is ignored here.
+        pat = (
+            r"\|\s*" + re.escape(provider) + r"\s*\|"
+            r"(?:[^|]*\|)*?"      # skip any number of intermediate cells
+            r"\s*([\d.]+)%\s*\|"  # last cell is the rate
+        )
+        m = re.search(pat, text)
+        if m:
+            result["by_platform"][provider] = float(m.group(1))
 
     return result
 

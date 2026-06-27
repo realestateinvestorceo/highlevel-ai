@@ -71,6 +71,10 @@ jobs:
         run: python3 scripts/seo/seo_dashboard.py --days 7
         continue-on-error: true
 
+      - name: Run LLM Visibility Tracker
+        run: python3 scripts/seo/llm_visibility_tracker.py
+        continue-on-error: true
+
       - name: Write YouTube credentials
         run: |
           if [ -n "${{ secrets.YOUTUBE_TOKEN_JSON }}" ]; then
@@ -91,7 +95,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # Only add safe files — never add .env or credentials
-          git add dashboard-data.json sitemap.xml llms.txt llms-full.txt scripts/seo/reports/ scripts/seo/data/schema_fixes.json 2>/dev/null || true
+          git add dashboard-data.json sitemap.xml llms.txt llms-full.txt scripts/seo/reports/ scripts/seo/data/schema_fixes.json scripts/seo/data/llm_visibility_history.csv 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Auto-update: weekly SEO report $(date +%Y-%m-%d)"
-          git pull --rebase origin main || true
+          git pull --rebase --autostash origin main || true
           git push
