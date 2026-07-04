@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-03 09:23:31",
+  "generated_at": "2026-07-04 08:41:49",
   "report_dates": {
     "freshness": "2026-06-29",
-    "schema": "2026-07-03",
+    "schema": "2026-07-04",
     "seo_dashboard": "2026-06-29",
     "llm_visibility": "2026-03-27"
   },
@@ -298,31 +298,31 @@
     }
   },
   "traffic": {
-    "sessions": 1925,
-    "users": 1758,
-    "pageviews": 2220,
+    "sessions": 1953,
+    "users": 1782,
+    "pageviews": 2259,
     "bounce_rate": 0.62,
-    "avg_duration": 99.0,
+    "avg_duration": 99.3,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 967
+        "sessions": 990
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 631
+        "sessions": 643
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 97
+        "sessions": 96
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 44
+        "sessions": 34
       },
       {
         "source": "duckduckgo",
@@ -332,12 +332,12 @@
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 26
+        "sessions": 24
       },
       {
         "source": "(data not available)",
         "medium": "(data not available)",
-        "sessions": 24
+        "sessions": 21
       },
       {
         "source": "gemini.google.com",
@@ -365,14 +365,14 @@
         "sessions": 10
       },
       {
-        "source": "app.clickup.com",
-        "medium": "referral",
-        "sessions": 7
-      },
-      {
         "source": "perplexity.ai",
         "medium": "ai-assistant",
         "sessions": 7
+      },
+      {
+        "source": "app.clickup.com",
+        "medium": "referral",
+        "sessions": 6
       },
       {
         "source": "copilot.com",
@@ -381,7 +381,7 @@
       }
     ],
     "top_pages": [],
-    "cta_clicks": 153,
+    "cta_clicks": 151,
     "cta_by_page": [
       {
         "page": "/",
@@ -392,11 +392,11 @@
         "clicks": 17
       },
       {
-        "page": "/pricing-explained",
-        "clicks": 5
+        "page": "/highlevel-for-coaches",
+        "clicks": 4
       },
       {
-        "page": "/highlevel-for-coaches",
+        "page": "/pricing-explained",
         "clicks": 4
       },
       {
@@ -408,7 +408,7 @@
         "clicks": 2
       },
       {
-        "page": "/highlevel-vs-hubspot",
+        "page": "/tools/sms-cost-estimator",
         "clicks": 2
       },
       {
@@ -432,10 +432,6 @@
         "clicks": 1
       },
       {
-        "page": "/gohighlevel-affiliate-program",
-        "clicks": 1
-      },
-      {
         "page": "/gohighlevel-white-label-guide",
         "clicks": 1
       },
@@ -448,20 +444,15 @@
         "clicks": 1
       },
       {
-        "page": "/highlevel-vs-salesforce",
+        "page": "/highlevel-vs-hubspot",
         "clicks": 1
       },
       {
-        "page": "/tools/sms-cost-estimator",
+        "page": "/highlevel-vs-salesforce",
         "clicks": 1
       }
     ],
     "daily": [
-      {
-        "date": "20260603",
-        "sessions": 53,
-        "users": 47
-      },
       {
         "date": "20260604",
         "sessions": 55,
@@ -604,13 +595,18 @@
       },
       {
         "date": "20260702",
-        "sessions": 89,
-        "users": 83
+        "sessions": 95,
+        "users": 88
       },
       {
         "date": "20260703",
-        "sessions": 4,
-        "users": 4
+        "sessions": 77,
+        "users": 68
+      },
+      {
+        "date": "20260704",
+        "sessions": 2,
+        "users": 2
       }
     ]
   },
@@ -856,6 +852,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-07-03",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CceuWV6f4Cn1sxd6NDsWb'}"
+      },
+      {
         "run_id": "2026-07-02",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -908,28 +913,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcTWKjHABU18EowbHN7fK'}"
-      },
-      {
-        "run_id": "2026-06-26",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcRg562aHLEYRJL77BLew'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Ccd1mP7buSeVucyk7eqQQ'}",
-      "date": "2026-07-02"
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CceuWV6f4Cn1sxd6NDsWb'}",
+      "date": "2026-07-03"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-07-02",
-      "when": "24 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-07-03",
+      "when": "23 hours ago"
     }
   ]
 }
