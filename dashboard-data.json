@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-05 08:56:50",
+  "generated_at": "2026-07-06 10:43:14",
   "report_dates": {
     "freshness": "2026-06-29",
-    "schema": "2026-07-05",
+    "schema": "2026-07-06",
     "seo_dashboard": "2026-06-29",
     "llm_visibility": "2026-03-27"
   },
@@ -298,26 +298,26 @@
     }
   },
   "traffic": {
-    "sessions": 1955,
-    "users": 1781,
-    "pageviews": 2256,
+    "sessions": 1993,
+    "users": 1816,
+    "pageviews": 2279,
     "bounce_rate": 0.62,
-    "avg_duration": 95.6,
+    "avg_duration": 93.2,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 999
+        "sessions": 1010
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 657
+        "sessions": 686
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 91
+        "sessions": 97
       },
       {
         "source": "duckduckgo",
@@ -325,14 +325,14 @@
         "sessions": 33
       },
       {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 32
+      },
+      {
         "source": "yahoo",
         "medium": "organic",
         "sessions": 25
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 23
       },
       {
         "source": "gemini.google.com",
@@ -352,7 +352,7 @@
       {
         "source": "chatgpt.com",
         "medium": "ai-assistant",
-        "sessions": 10
+        "sessions": 11
       },
       {
         "source": "youtube.com",
@@ -360,36 +360,36 @@
         "sessions": 10
       },
       {
-        "source": "(data not available)",
-        "medium": "(data not available)",
-        "sessions": 9
-      },
-      {
         "source": "perplexity.ai",
         "medium": "ai-assistant",
         "sessions": 9
       },
       {
-        "source": "app.clickup.com",
-        "medium": "referral",
-        "sessions": 6
-      },
-      {
         "source": "perplexity",
         "medium": "(not set)",
         "sessions": 6
+      },
+      {
+        "source": "app.clickup.com",
+        "medium": "referral",
+        "sessions": 5
+      },
+      {
+        "source": "copilot.com",
+        "medium": "ai-assistant",
+        "sessions": 5
       }
     ],
     "top_pages": [],
-    "cta_clicks": 149,
+    "cta_clicks": 155,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 106
+        "clicks": 109
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 18
+        "clicks": 21
       },
       {
         "page": "/highlevel-for-coaches",
@@ -457,11 +457,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260605",
-        "sessions": 45,
-        "users": 44
-      },
       {
         "date": "20260606",
         "sessions": 31,
@@ -604,13 +599,18 @@
       },
       {
         "date": "20260704",
-        "sessions": 46,
-        "users": 42
+        "sessions": 50,
+        "users": 46
       },
       {
         "date": "20260705",
-        "sessions": 8,
-        "users": 8
+        "sessions": 77,
+        "users": 73
+      },
+      {
+        "date": "20260706",
+        "sessions": 10,
+        "users": 10
       }
     ]
   },
@@ -919,17 +919,13 @@
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcVSNcLKrxhJr9zrjjXSv'}"
       }
     ],
-    "has_recent_error": true,
-    "last_error": {
-      "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcgkWXeQg1w5oVfUyC5c9'}",
-      "date": "2026-07-04"
-    }
+    "has_recent_error": false,
+    "last_error": null
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-07-04",
-      "when": "24 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-07-05",
+      "when": "26 hours ago"
     }
   ]
 }
