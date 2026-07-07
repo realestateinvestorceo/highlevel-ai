@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-06 12:54:29",
+  "generated_at": "2026-07-07 09:48:05",
   "report_dates": {
     "freshness": "2026-07-06",
-    "schema": "2026-07-06",
+    "schema": "2026-07-07",
     "seo_dashboard": "2026-07-06",
     "llm_visibility": "2026-03-27"
   },
@@ -298,26 +298,26 @@
     }
   },
   "traffic": {
-    "sessions": 1996,
-    "users": 1819,
-    "pageviews": 2282,
-    "bounce_rate": 0.62,
-    "avg_duration": 93.2,
+    "sessions": 2026,
+    "users": 1845,
+    "pageviews": 2338,
+    "bounce_rate": 0.63,
+    "avg_duration": 97.1,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 1013
+        "sessions": 1027
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 686
+        "sessions": 695
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 97
+        "sessions": 100
       },
       {
         "source": "(not set)",
@@ -327,7 +327,7 @@
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 33
+        "sessions": 32
       },
       {
         "source": "yahoo",
@@ -352,17 +352,17 @@
       {
         "source": "chatgpt.com",
         "medium": "ai-assistant",
+        "sessions": 12
+      },
+      {
+        "source": "perplexity.ai",
+        "medium": "ai-assistant",
         "sessions": 11
       },
       {
         "source": "youtube.com",
         "medium": "referral",
         "sessions": 10
-      },
-      {
-        "source": "perplexity.ai",
-        "medium": "ai-assistant",
-        "sessions": 9
       },
       {
         "source": "perplexity",
@@ -375,13 +375,13 @@
         "sessions": 5
       },
       {
-        "source": "copilot.com",
-        "medium": "ai-assistant",
+        "source": "in.search.yahoo.com",
+        "medium": "referral",
         "sessions": 5
       }
     ],
     "top_pages": [],
-    "cta_clicks": 155,
+    "cta_clicks": 158,
     "cta_by_page": [
       {
         "page": "/",
@@ -389,7 +389,7 @@
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 21
+        "clicks": 23
       },
       {
         "page": "/highlevel-for-coaches",
@@ -401,7 +401,7 @@
       },
       {
         "page": "/gohighlevel-pricing-calculator",
-        "clicks": 2
+        "clicks": 3
       },
       {
         "page": "/highlevel-for-real-estate",
@@ -457,11 +457,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260606",
-        "sessions": 31,
-        "users": 29
-      },
       {
         "date": "20260607",
         "sessions": 43,
@@ -604,29 +599,337 @@
       },
       {
         "date": "20260705",
-        "sessions": 77,
-        "users": 73
+        "sessions": 79,
+        "users": 75
       },
       {
         "date": "20260706",
-        "sessions": 13,
-        "users": 13
+        "sessions": 69,
+        "users": 63
+      },
+      {
+        "date": "20260707",
+        "sessions": 3,
+        "users": 3
       }
     ]
   },
   "youtube": {
-    "videos": [],
+    "videos": [
+      {
+        "page_url": "/highlevel-vs-hubspot.html",
+        "title": "GoHighLevel vs HubSpot: Real Cost Comparison (Save $47K/Year!)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/index.html",
+        "title": "GoHighLevel Pricing 2026: Is $297/Month Worth It? (Full Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/pricing-explained.html",
+        "title": "GoHighLevel Pricing: Hidden Costs They Don't Tell You (2026 Guide)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-zapier-make.html",
+        "title": "GoHighLevel vs Zapier vs Make: The $400/Month Automation Truth",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-clickfunnels.html",
+        "title": "GoHighLevel vs ClickFunnels: I Tested Both for 6 Months (Real Results)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-03-31",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-vs-kartra.html",
+        "title": "GoHighLevel vs Kartra: Real Cost Analysis After 60 Days Testing",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-workflow-automation.html",
+        "title": "GoHighLevel Workflow Automation: From $2K Mistake to 40% Conversion",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-01",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-real-estate.html",
+        "title": "GoHighLevel Real Estate Pricing 2026: Save $800/Month vs 7 Tools",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-02",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-reputation-management.html",
+        "title": "GoHighLevel Reputation Management Review: Saves Me $1,100/Month",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-03",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-saas-configurator.html",
+        "title": "GoHighLevel SaaS Mode: $20K Mistake Avoided (8 Month Review)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-04",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-gyms.html",
+        "title": "GoHighLevel for Gyms: Save $139/Month (Real Cost Breakdown)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-05",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-missed-call-text-back.html",
+        "title": "GoHighLevel Missed Call Text Back: Stop Losing 94% of Your Leads",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-06",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-dental.html",
+        "title": "GoHighLevel for Dental Practices: Real Costs & Review 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-07",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-email-marketing.html",
+        "title": "GoHighLevel Email Marketing 2026: Setup Guide + Hidden Costs",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-08",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-calendars.html",
+        "title": "GoHighLevel Calendar Review: All-in-One Booking System (2024)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-09",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/highlevel-for-insurance.html",
+        "title": "GoHighLevel for Insurance: Real Costs & Truth in 2026",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-10",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-twilio-setup.html",
+        "title": "GoHighLevel Twilio Setup: Real Costs & Setup Guide (2024)",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-11",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      },
+      {
+        "page_url": "/gohighlevel-chat-widget.html",
+        "title": "GoHighLevel Chat Widget Review: Replace Your Entire Tech Stack?",
+        "youtube_url": "",
+        "youtube_video_id": "",
+        "created_date": "2026-04-12",
+        "status": "pending",
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "ctr": "",
+        "avg_watch_pct": ""
+      }
+    ],
     "channel": {}
   },
   "pipeline": {
-    "last_runs": [],
-    "has_recent_error": false,
-    "last_error": null
+    "last_runs": [
+      {
+        "run_id": "2026-07-06",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CckhoKrssjKaVbo9E64DK'}"
+      },
+      {
+        "run_id": "2026-07-04",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcgkWXeQg1w5oVfUyC5c9'}"
+      },
+      {
+        "run_id": "2026-07-03",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CceuWV6f4Cn1sxd6NDsWb'}"
+      },
+      {
+        "run_id": "2026-07-02",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Ccd1mP7buSeVucyk7eqQQ'}"
+      },
+      {
+        "run_id": "2026-07-01",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcbBXbkdNWdS47jUU22M4'}"
+      },
+      {
+        "run_id": "2026-06-30",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcZFxxCqv3gpySwZBBHkH'}"
+      },
+      {
+        "run_id": "2026-06-29",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcXUebF2nRv7hQz2hwN3s'}"
+      }
+    ],
+    "has_recent_error": true,
+    "last_error": {
+      "step": "script_gen",
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CckhoKrssjKaVbo9E64DK'}",
+      "date": "2026-07-06"
+    }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-07-06",
-      "when": "2 hours ago"
+      "action": "Auto-update: weekly SEO report 2026-07-06",
+      "when": "21 hours ago"
     }
   ]
 }
