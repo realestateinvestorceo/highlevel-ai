@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-07 09:48:05",
+  "generated_at": "2026-07-08 08:34:02",
   "report_dates": {
     "freshness": "2026-07-06",
-    "schema": "2026-07-07",
+    "schema": "2026-07-08",
     "seo_dashboard": "2026-07-06",
     "llm_visibility": "2026-03-27"
   },
@@ -298,46 +298,56 @@
     }
   },
   "traffic": {
-    "sessions": 2026,
-    "users": 1845,
-    "pageviews": 2338,
+    "sessions": 2078,
+    "users": 1884,
+    "pageviews": 2393,
     "bounce_rate": 0.63,
-    "avg_duration": 97.1,
+    "avg_duration": 97.6,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 1027
+        "sessions": 1043
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 695
+        "sessions": 702
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 100
+        "sessions": 98
       },
       {
         "source": "(not set)",
         "medium": "(not set)",
-        "sessions": 33
+        "sessions": 39
       },
       {
         "source": "duckduckgo",
         "medium": "organic",
-        "sessions": 32
+        "sessions": 30
       },
       {
         "source": "yahoo",
         "medium": "organic",
-        "sessions": 25
+        "sessions": 29
+      },
+      {
+        "source": "(data not available)",
+        "medium": "(data not available)",
+        "sessions": 23
       },
       {
         "source": "gemini.google.com",
         "medium": "ai-assistant",
         "sessions": 18
+      },
+      {
+        "source": "chatgpt.com",
+        "medium": "ai-assistant",
+        "sessions": 14
       },
       {
         "source": "claude.ai",
@@ -347,12 +357,7 @@
       {
         "source": "ecosia.org",
         "medium": "organic",
-        "sessions": 13
-      },
-      {
-        "source": "chatgpt.com",
-        "medium": "ai-assistant",
-        "sessions": 12
+        "sessions": 14
       },
       {
         "source": "perplexity.ai",
@@ -365,35 +370,30 @@
         "sessions": 10
       },
       {
-        "source": "perplexity",
-        "medium": "(not set)",
-        "sessions": 6
-      },
-      {
         "source": "app.clickup.com",
         "medium": "referral",
-        "sessions": 5
+        "sessions": 6
       },
       {
         "source": "in.search.yahoo.com",
         "medium": "referral",
-        "sessions": 5
+        "sessions": 6
       }
     ],
     "top_pages": [],
-    "cta_clicks": 158,
+    "cta_clicks": 161,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 109
+        "clicks": 110
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 23
+        "clicks": 24
       },
       {
         "page": "/highlevel-for-coaches",
-        "clicks": 4
+        "clicks": 5
       },
       {
         "page": "/pricing-explained",
@@ -457,11 +457,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260607",
-        "sessions": 43,
-        "users": 42
-      },
       {
         "date": "20260608",
         "sessions": 50,
@@ -604,13 +599,18 @@
       },
       {
         "date": "20260706",
-        "sessions": 69,
-        "users": 63
+        "sessions": 73,
+        "users": 67
       },
       {
         "date": "20260707",
-        "sessions": 3,
-        "users": 3
+        "sessions": 88,
+        "users": 74
+      },
+      {
+        "date": "20260708",
+        "sessions": 6,
+        "users": 6
       }
     ]
   },
@@ -856,6 +856,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-07-07",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcnWa9DnSLHpinSABpkvK'}"
+      },
+      {
         "run_id": "2026-07-06",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -908,28 +917,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcZFxxCqv3gpySwZBBHkH'}"
-      },
-      {
-        "run_id": "2026-06-29",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcXUebF2nRv7hQz2hwN3s'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CckhoKrssjKaVbo9E64DK'}",
-      "date": "2026-07-06"
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcnWa9DnSLHpinSABpkvK'}",
+      "date": "2026-07-07"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-update: weekly SEO report 2026-07-06",
-      "when": "21 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-07-07",
+      "when": "23 hours ago"
     }
   ]
 }
