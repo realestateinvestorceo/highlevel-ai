@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11 08:00:55",
+  "generated_at": "2026-07-12 08:22:25",
   "report_dates": {
     "freshness": "2026-07-06",
-    "schema": "2026-07-11",
+    "schema": "2026-07-12",
     "seo_dashboard": "2026-07-06",
     "llm_visibility": "2026-03-27"
   },
@@ -298,31 +298,26 @@
     }
   },
   "traffic": {
-    "sessions": 2200,
+    "sessions": 2201,
     "users": 1996,
-    "pageviews": 2448,
+    "pageviews": 2475,
     "bounce_rate": 0.61,
-    "avg_duration": 99.9,
+    "avg_duration": 97.3,
     "sources": [
       {
         "source": "google",
         "medium": "organic",
-        "sessions": 1107
+        "sessions": 1114
       },
       {
         "source": "(direct)",
         "medium": "(none)",
-        "sessions": 767
+        "sessions": 768
       },
       {
         "source": "bing",
         "medium": "organic",
-        "sessions": 101
-      },
-      {
-        "source": "(not set)",
-        "medium": "(not set)",
-        "sessions": 37
+        "sessions": 103
       },
       {
         "source": "yahoo",
@@ -333,6 +328,11 @@
         "source": "duckduckgo",
         "medium": "organic",
         "sessions": 29
+      },
+      {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "sessions": 27
       },
       {
         "source": "gemini.google.com",
@@ -357,7 +357,7 @@
       {
         "source": "perplexity.ai",
         "medium": "ai-assistant",
-        "sessions": 12
+        "sessions": 11
       },
       {
         "source": "youtube.com",
@@ -365,31 +365,31 @@
         "sessions": 10
       },
       {
+        "source": "perplexity",
+        "medium": "(not set)",
+        "sessions": 6
+      },
+      {
         "source": "(data not available)",
         "medium": "(data not available)",
-        "sessions": 8
+        "sessions": 5
       },
       {
         "source": "in.search.yahoo.com",
         "medium": "referral",
-        "sessions": 6
-      },
-      {
-        "source": "perplexity",
-        "medium": "(not set)",
-        "sessions": 6
+        "sessions": 5
       }
     ],
     "top_pages": [],
-    "cta_clicks": 165,
+    "cta_clicks": 167,
     "cta_by_page": [
       {
         "page": "/",
-        "clicks": 114
+        "clicks": 115
       },
       {
         "page": "/gohighlevel-free-trial",
-        "clicks": 28
+        "clicks": 30
       },
       {
         "page": "/pricing-explained",
@@ -424,10 +424,6 @@
         "clicks": 1
       },
       {
-        "page": "/blog/gohighlevel-crm-setup-guide",
-        "clicks": 1
-      },
-      {
         "page": "/blog/gohighlevel-membership-courses-guide",
         "clicks": 1
       },
@@ -453,11 +449,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20260611",
-        "sessions": 55,
-        "users": 54
-      },
       {
         "date": "20260612",
         "sessions": 62,
@@ -600,8 +591,13 @@
       },
       {
         "date": "20260710",
-        "sessions": 70,
-        "users": 61
+        "sessions": 78,
+        "users": 68
+      },
+      {
+        "date": "20260711",
+        "sessions": 48,
+        "users": 47
       }
     ]
   },
@@ -847,6 +843,15 @@
   "pipeline": {
     "last_runs": [
       {
+        "run_id": "2026-07-11",
+        "topic": "gohighlevel for coaches and consultants",
+        "steps": {
+          "research": "success",
+          "script_gen": "error"
+        },
+        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}"
+      },
+      {
         "run_id": "2026-07-10",
         "topic": "gohighlevel for coaches and consultants",
         "steps": {
@@ -899,28 +904,19 @@
           "script_gen": "error"
         },
         "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CcgkWXeQg1w5oVfUyC5c9'}"
-      },
-      {
-        "run_id": "2026-07-03",
-        "topic": "gohighlevel for coaches and consultants",
-        "steps": {
-          "research": "success",
-          "script_gen": "error"
-        },
-        "error_details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CceuWV6f4Cn1sxd6NDsWb'}"
       }
     ],
     "has_recent_error": true,
     "last_error": {
       "step": "script_gen",
-      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CctBYFECEQs9rkbwdvdPW'}",
-      "date": "2026-07-10"
+      "details": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}",
+      "date": "2026-07-11"
     }
   },
   "system_actions": [
     {
-      "action": "Auto-improve: daily SEO fixes 2026-07-10",
-      "when": "22 hours ago"
+      "action": "Auto-improve: daily SEO fixes 2026-07-11",
+      "when": "24 hours ago"
     }
   ]
 }
