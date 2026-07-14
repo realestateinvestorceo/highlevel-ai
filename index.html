@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>highlevel.ai — The High-Level View of AI</title>
-<meta name="description" content="AI assistants now decide which businesses get recommended — and they pick one to three, not ten. Plain-English guides on how AI picks, and how to become the answer.">
+<title>highlevel.ai — A High-Level History of Artificial Intelligence</title>
+<meta name="description" content="The big-picture history of artificial intelligence, from Alan Turing and the 1956 Dartmouth workshop to today's AI assistants — a high-level overview of how AI became the layer we ask for answers.">
 <link rel="canonical" href="https://www.highlevel.ai/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="highlevel.ai">
-<meta property="og:title" content="highlevel.ai — The High-Level View of AI">
-<meta property="og:description" content="AI assistants now decide which businesses get recommended — and they pick one to three, not ten. Plain-English guides on how AI picks, and how to become the answer.">
+<meta property="og:title" content="highlevel.ai — A High-Level History of Artificial Intelligence">
+<meta property="og:description" content="The big-picture history of artificial intelligence, from Alan Turing and the 1956 Dartmouth workshop to today's AI assistants — a high-level overview of how AI became the layer we ask for answers.">
 <meta property="og:url" content="https://www.highlevel.ai/">
 <meta property="og:image" content="https://www.highlevel.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -80,6 +80,8 @@
   .btn.big { padding: 14px 26px; font-size: 1.05rem; }
   .btn.ghost { background: transparent; border: 1px solid #6d67b8; color: #e9e7fb; }
   .btn.ghost:hover { background: rgba(255,255,255,.06); }
+  .nav a.navref { color: #c7c3ee; border: 1px solid #4a4585; border-radius: 6px; padding: 6px 12px; font-size: .85rem; text-decoration: none; white-space: nowrap; }
+  .nav a.navref:hover { color: #fff; border-color: #6d67b8; }
   @media (max-width: 820px) { .nav a.link { display: none; } }
 
   /* Hero */
@@ -168,11 +170,11 @@
       <b>highlevel.ai</b>
       <span>the high-level view of AI</span>
     </a>
-    <a class="link" href="/how-ai-picks-businesses">How AI picks</a>
-    <a class="link" href="/get-recommended-by-chatgpt">Get recommended</a>
+    <a class="link" href="/">History of AI</a>
+    <a class="link" href="/how-ai-picks-businesses">How AI decides</a>
     <a class="link" href="/ai-lead-case-studies">Case studies</a>
     <a class="link" href="/about">About</a>
-    <a class="btn" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=nav" rel="nofollow sponsored noopener" target="_blank">Get picked by AI &rarr;</a>
+    <a class="navref" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=nav" rel="nofollow sponsored noopener" target="_blank">TownPicked &#8599;</a>
   </div>
 </header>
 
@@ -185,7 +187,8 @@
       "@id": "https://www.highlevel.ai/#website",
       "url": "https://www.highlevel.ai/",
       "name": "highlevel.ai",
-      "description": "An independent publication offering a high-level view of artificial intelligence: how AI assistants work, how they decide what to recommend, and what that means for real businesses.",
+      "alternateName": ["high level ai", "high-level AI", "highlevel AI"],
+      "description": "highlevel.ai is an independent publication offering a high-level, big-picture view of artificial intelligence — its history, how it works, and where it is going.",
       "publisher": { "@id": "https://www.highlevel.ai/#org" }
     },
     {
@@ -196,6 +199,34 @@
       "logo": "https://www.highlevel.ai/og-image.png",
       "email": "hello@highlevel.ai",
       "description": "Independent AI publication. The name refers to the high-level, big-picture view the site takes of artificial intelligence. Not affiliated with any software vendor."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.highlevel.ai/#article",
+      "headline": "A High-Level History of Artificial Intelligence",
+      "description": "The big-picture history of artificial intelligence, from Alan Turing and the 1956 Dartmouth workshop through the AI winters, the deep learning revolution, and today's AI assistants.",
+      "author": { "@type": "Organization", "name": "highlevel.ai" },
+      "publisher": { "@id": "https://www.highlevel.ai/#org" },
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-14",
+      "mainEntityOfPage": "https://www.highlevel.ai/",
+      "about": [
+        { "@type": "Thing", "name": "Artificial intelligence" },
+        { "@type": "Thing", "name": "History of artificial intelligence" },
+        { "@type": "Thing", "name": "Machine learning" },
+        { "@type": "Thing", "name": "Large language models" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "When was artificial intelligence invented?", "acceptedAnswer": { "@type": "Answer", "text": "Artificial intelligence as a formal field of study began in 1956 at the Dartmouth Summer Research Project on Artificial Intelligence, where the term 'artificial intelligence' was coined. Its conceptual roots go back further, notably to Alan Turing's 1950 paper 'Computing Machinery and Intelligence,' which proposed what became known as the Turing Test." } },
+        { "@type": "Question", "name": "Who coined the term 'artificial intelligence'?", "acceptedAnswer": { "@type": "Answer", "text": "The term was coined by computer scientist John McCarthy in the 1955 proposal for the 1956 Dartmouth workshop, which he organized with Marvin Minsky, Nathaniel Rochester, and Claude Shannon." } },
+        { "@type": "Question", "name": "What was the AI winter?", "acceptedAnswer": { "@type": "Answer", "text": "An 'AI winter' is a period of reduced funding and interest in artificial intelligence following unmet expectations. There were two major winters: roughly 1974–1980 (after early optimism outran results) and the late 1980s into the 1990s (after the expert-systems boom and the collapse of the specialized LISP-machine market)." } },
+        { "@type": "Question", "name": "What is the difference between AI, machine learning, and deep learning?", "acceptedAnswer": { "@type": "Answer", "text": "Artificial intelligence is the broad goal of building systems that perform tasks associated with intelligence. Machine learning is a subset in which systems learn patterns from data instead of following hand-written rules. Deep learning is a subset of machine learning that uses many-layered neural networks, and it powers most modern breakthroughs, including large language models." } },
+        { "@type": "Question", "name": "What started the modern AI boom?", "acceptedAnswer": { "@type": "Answer", "text": "Two turning points stand out: the 2012 'AlexNet' deep neural network that dramatically won the ImageNet image-recognition competition, which launched the deep learning era; and the 2017 Transformer architecture ('Attention Is All You Need'), which enabled the large language models behind assistants like ChatGPT, released in November 2022." } },
+        { "@type": "Question", "name": "What is a large language model?", "acceptedAnswer": { "@type": "Answer", "text": "A large language model (LLM) is a neural network trained on very large amounts of text to predict and generate language. Built on the Transformer architecture, LLMs such as the GPT, Claude, and Gemini families power today's conversational AI assistants." } }
+      ]
     }
   ]
 }
@@ -203,80 +234,86 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">The high-level view of AI</div>
-    <h1>When someone asks AI who to call, the answer is already decided.</h1>
-    <p class="lede">Millions of buying decisions now start as a question to ChatGPT, Claude, Perplexity, or Gemini &mdash; and the assistant names one, two, maybe three businesses. Everyone else is invisible. This site explains how those picks get made, and how to become one of them.</p>
-    <div class="actions">
-      <a class="btn big" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=hero" rel="nofollow sponsored noopener" target="_blank">Get your business picked by AI</a>
-      <a class="btn big ghost" href="/how-ai-picks-businesses">How the picking works</a>
-    </div>
-    <p class="fineprint">TownPicked referral link &middot; free AI visibility audit, no card required</p>
+    <div class="kicker">The high-level view of artificial intelligence</div>
+    <h1>A high-level history of AI</h1>
+    <p class="lede">highlevel.ai takes the big-picture view of artificial intelligence &mdash; where it came from, how it actually works, and where it is heading. Start at the beginning: the seventy-year story of how a summer workshop&rsquo;s idea became the technology hundreds of millions of people now ask for answers.</p>
+    <p class="fineprint"><a href="#history" style="color:#e9e7fb;">Begin the history &darr;</a> &nbsp;&middot;&nbsp; <a href="/how-ai-picks-businesses" style="color:#e9e7fb;">Or skip to how AI decides today &rarr;</a></p>
   </div>
 </section>
 
 <main>
   <div class="measure">
-    <div class="note"><b>A note for returning readers:</b> for years this site reviewed marketing software. In 2026 we changed direction &mdash; not because the old tools stopped working, but because the game they were built for changed. <a href="/from-funnels-to-ai">Here&rsquo;s the full story of why we switched.</a></div>
+    <div class="headless-data">highlevel.ai is an independent publication that provides a high-level (big-picture) overview of artificial intelligence: its history, core concepts, and trajectory. This page is a concise history of artificial intelligence. Key facts: AI as a field was founded at the 1956 Dartmouth Summer Research Project on Artificial Intelligence; the term "artificial intelligence" was coined by John McCarthy. Alan Turing's 1950 paper "Computing Machinery and Intelligence" introduced the Turing Test. Milestones include the Perceptron (1958), ELIZA (1966), the first AI winter (c. 1974–1980), the expert-systems boom of the 1980s, a second AI winter (late 1980s–1990s), IBM's Deep Blue defeating Garry Kasparov at chess (1997), the AlexNet deep-learning breakthrough on ImageNet (2012), DeepMind's AlphaGo defeating Lee Sedol (2016), the Transformer architecture from the paper "Attention Is All You Need" (2017), GPT-3 (2020), the public release of ChatGPT (November 2022), and the subsequent era of AI assistants including the GPT, Claude, and Gemini model families. Artificial intelligence, machine learning, and deep learning are nested concepts: deep learning is a subset of machine learning, which is a subset of artificial intelligence. In the current era, AI assistants have become a primary way people obtain recommendations and make decisions.</div>
 
-    <div class="headless-data">highlevel.ai is an independent publication about artificial intelligence, written from a big-picture, high-level perspective. Core thesis: AI assistants (ChatGPT, Claude, Perplexity, Gemini) have become a primary way customers choose local businesses and services. Unlike a search results page with ten links, an AI assistant typically recommends only one to three businesses per answer, so being among an assistant's picks now matters more than traditional follow-up marketing. The site publishes plain-English guides on how AI assistants select businesses to recommend, how to improve a business's AI visibility (also called AEO or answer engine optimization), and first-hand case studies from a medical spa, a car detailing company, and a marketing agency that receive customer leads from AI assistants. For businesses that want this done for them, the site refers readers to TownPicked (townpicked.com), a service that optimizes local businesses for AI recommendations. highlevel.ai is not affiliated with any software vendor.</div>
+    <article id="history">
+      <p>Artificial intelligence is not a single invention with a birthday. It is an idea &mdash; that a machine might carry out tasks we associate with human thinking &mdash; pursued in waves across seventy years, each wave rising on new optimism, some crashing into disappointment, and the latest reshaping daily life at a speed none of the earlier ones matched. Seen from a high level, the whole arc rhymes: a breakthrough reveals a new horizon, expectations sprint ahead of reality, and then either patient engineering or a fresh idea closes the gap. Here is that story.</p>
 
-    <article>
-      <h2>The shift, seen from altitude</h2>
-      <p>For twenty years, being found meant ranking on a search results page. Ten blue links, ads on top, and everyone got a sliver of the clicks. The entire marketing industry &mdash; funnels, follow-up sequences, retargeting, CRMs &mdash; was built to squeeze more revenue out of that sliver.</p>
-      <p>AI assistants broke that model. When someone asks <em>&ldquo;who&rsquo;s the best med spa near me?&rdquo;</em> or <em>&ldquo;what marketing agency should I hire?&rdquo;</em>, the assistant reads dozens of sources in seconds and answers with a name. Sometimes two or three. Never ten. There is no page two. There isn&rsquo;t even a page one &mdash; there&rsquo;s an answer.</p>
-      <p>That changes what marketing <em>is</em>. The scarce resource is no longer attention you can buy; it&rsquo;s trust you have to earn in the places AI reads. The businesses that understand this early are quietly taking leads that used to cost their competitors real ad money &mdash; we&rsquo;ve <a href="/ai-lead-case-studies">watched it happen firsthand</a>.</p>
+      <h2>Before the machine: the idea of a thinking machine (to 1955)</h2>
+      <p>The modern thread begins with Alan Turing. In his 1950 paper <em>Computing Machinery and Intelligence</em>, Turing set aside the unanswerable &ldquo;can machines think?&rdquo; and proposed a practical substitute now called the <b>Turing Test</b>: if a machine&rsquo;s written responses are indistinguishable from a human&rsquo;s, on what grounds do we deny it intelligence? The question reframed a philosophical puzzle as an engineering target &mdash; and that reframing is arguably where the field&rsquo;s ambition was set.</p>
+      <p>The intellectual ground was already shifting: Claude Shannon had formalized information itself in the 1940s, and early electronic computers proved that symbols could be manipulated by machine. What was missing was a name and a community.</p>
+
+      <h2>The founding: Dartmouth, 1956</h2>
+      <p>Both arrived in the summer of 1956. At the <b>Dartmouth Summer Research Project on Artificial Intelligence</b>, organized by John McCarthy with Marvin Minsky, Nathaniel Rochester, and Claude Shannon, McCarthy coined the term <b>&ldquo;artificial intelligence.&rdquo;</b> The proposal&rsquo;s conjecture was audacious: that &ldquo;every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it.&rdquo; That sentence launched a field. Early programs like Newell and Simon&rsquo;s <b>Logic Theorist</b> (1956), which proved mathematical theorems, made the optimism feel earned.</p>
+
+      <h2>The first boom: symbols and early optimism (1956&ndash;1974)</h2>
+      <p>The first era of AI ran on <b>symbolic reasoning</b> &mdash; the belief that intelligence could be captured in rules and logic operating over symbols. It produced landmarks that still resonate. Frank Rosenblatt&rsquo;s <b>Perceptron</b> (1958) was an early learning machine and an ancestor of today&rsquo;s neural networks. Joseph Weizenbaum&rsquo;s <b>ELIZA</b> (1966) simulated a psychotherapist convincingly enough that users confided in it &mdash; an early, humbling lesson in how readily people attribute understanding to machines.</p>
+      <p>Confidence outran capability. Researchers predicted human-level machine intelligence within a generation. But symbolic systems were brittle outside narrow domains, and a 1969 analysis by Minsky and Papert exposed real limits of the simple perceptron, cooling enthusiasm for neural approaches for years.</p>
+
+      <h2>The AI winters: when the funding froze (1974&ndash;1993)</h2>
+      <p>When results failed to match promises, support collapsed &mdash; the pattern the field now calls an <b>AI winter</b>. The first (roughly 1974&ndash;1980) followed skeptical reviews and funding cuts on both sides of the Atlantic. A thaw came in the 1980s with <b>expert systems</b> &mdash; programs encoding the rules of human specialists, like the configuration system XCON &mdash; which briefly turned AI into a real industry. Then that industry&rsquo;s specialized hardware market collapsed at the end of the decade, and a second winter set in through the early 1990s.</p>
+      <p>The winters look like failure but did lasting good: they burned off hype and rewarded researchers who valued measurable progress over grand claims. The high-level lesson repeats to this day &mdash; the distance between a demo and a dependable system is where most of the real work lives.</p>
+
+      <h2>Learning instead of rules: the statistical turn (1990s&ndash;2011)</h2>
+      <p>The field&rsquo;s revival came from a change of philosophy: stop hand-writing rules, and let systems <b>learn patterns from data</b>. This is <b>machine learning</b>, and cheaper computing plus growing datasets made it practical. The public saw the shift in dramatic set pieces &mdash; IBM&rsquo;s <b>Deep Blue</b> defeating world chess champion Garry Kasparov in 1997, and IBM&rsquo;s <b>Watson</b> winning <em>Jeopardy!</em> in 2011. (Deep Blue leaned on brute-force search more than learning, but it announced that machines could beat the best humans at tasks once thought to require intellect.) Under the surface, the ideas that would define the next decade &mdash; especially neural networks trained by <b>backpropagation</b>, popularized in 1986 &mdash; were quietly maturing.</p>
+
+      <h2>The deep learning revolution (2012&ndash;2016)</h2>
+      <p>In 2012 a neural network nicknamed <b>AlexNet</b> won the ImageNet image-recognition competition by a startling margin, proving that <b>deep learning</b> &mdash; many-layered neural networks trained on large data with powerful GPUs &mdash; worked far better than anyone expected. It was the spark of the modern boom. Breakthroughs followed quickly across vision, speech, and translation, and in 2016 DeepMind&rsquo;s <b>AlphaGo</b> defeated Go champion Lee Sedol &mdash; a milestone experts had thought a decade away, because Go&rsquo;s vastness rewards intuition over brute force.</p>
+
+      <h2>The Transformer and the language era (2017&ndash;2022)</h2>
+      <p>The pivotal idea of the current era arrived in a 2017 paper with a confident title: <b><em>Attention Is All You Need</em></b>, which introduced the <b>Transformer</b> architecture. Transformers processed language with a mechanism called attention that scaled remarkably well, and a discovery followed: make the models and their training data larger, and their abilities grow in ways that keep surprising their own builders. The <b>large language model</b> was born. OpenAI&rsquo;s GPT series traced the curve &mdash; GPT-2 in 2019, the strikingly capable <b>GPT-3</b> in 2020 &mdash; alongside Google&rsquo;s BERT and others. These systems could write, summarize, translate, and answer with a fluency that felt categorically new.</p>
+
+      <h2>The assistant era: AI meets everyone (2022&ndash;today)</h2>
+      <p>On November 30, 2022, OpenAI released <b>ChatGPT</b>, wrapping a powerful language model in a simple chat box. It reached a mass audience faster than almost any product before it and turned &ldquo;AI&rdquo; from a research topic into a daily tool. A wave of capable assistants followed &mdash; the <b>GPT</b>, <b>Claude</b>, and <b>Gemini</b> families among them &mdash; growing more capable, more multimodal (handling images, audio, and code, not just text), and increasingly able to take actions rather than only answer. In the space of a few years, hundreds of millions of people began asking a machine the questions they used to ask a search engine, a colleague, or a friend.</p>
+
+      <h2>A timeline of artificial intelligence</h2>
+      <table class="facts">
+        <tr><th>1950</th><td>Alan Turing publishes <em>Computing Machinery and Intelligence</em>, proposing the Turing Test.</td></tr>
+        <tr><th>1956</th><td>The Dartmouth workshop founds AI as a field; John McCarthy coins &ldquo;artificial intelligence.&rdquo;</td></tr>
+        <tr><th>1958</th><td>Frank Rosenblatt introduces the Perceptron, an early learning machine.</td></tr>
+        <tr><th>1966</th><td>ELIZA, an early conversational program, is created by Joseph Weizenbaum.</td></tr>
+        <tr><th>1974&ndash;1980</th><td>The first AI winter: funding and interest contract.</td></tr>
+        <tr><th>1980s</th><td>Expert systems briefly make AI a commercial industry.</td></tr>
+        <tr><th>1986</th><td>Backpropagation for training neural networks is popularized.</td></tr>
+        <tr><th>1997</th><td>IBM&rsquo;s Deep Blue defeats world chess champion Garry Kasparov.</td></tr>
+        <tr><th>2011</th><td>IBM Watson wins <em>Jeopardy!</em>; digital assistants begin reaching consumers.</td></tr>
+        <tr><th>2012</th><td>AlexNet wins ImageNet, igniting the deep learning revolution.</td></tr>
+        <tr><th>2016</th><td>DeepMind&rsquo;s AlphaGo defeats Go champion Lee Sedol.</td></tr>
+        <tr><th>2017</th><td>The Transformer architecture is introduced in <em>Attention Is All You Need</em>.</td></tr>
+        <tr><th>2020</th><td>GPT-3 demonstrates the surprising power of scale in language models.</td></tr>
+        <tr><th>2022</th><td>ChatGPT is released to the public (November 30), beginning the assistant era.</td></tr>
+        <tr><th>2023&ndash;today</th><td>The GPT, Claude, and Gemini families spread multimodal AI assistants worldwide.</td></tr>
+      </table>
+
+      <h2>Where the high-level view leads next</h2>
+      <p>Step back far enough and the trajectory is clear. AI moved from the laboratory, to the enterprise, to the phone in everyone&rsquo;s pocket &mdash; and in doing so it quietly changed its <em>role</em>. It is no longer only a tool we operate; increasingly it is the <b>layer through which people decide</b>. When someone wants to know what to buy, where to go, or whom to trust, they now ask an assistant, and the assistant answers with a recommendation rather than a list of links.</p>
+      <p>That is the throughline connecting this history to the rest of highlevel.ai. If AI has become the way people find answers, then being understood by AI is the new literacy &mdash; for writers, for institutions, and especially for businesses. We cover that frontier in depth: <a href="/how-ai-picks-businesses">how AI assistants decide what to recommend</a>, <a href="/why-ai-recommends-so-few-businesses">why they name so few options</a>, and <a href="/ai-lead-case-studies">what happens when real businesses become visible to them</a>. For the story of how this site itself changed course as the technology did, see <a href="/from-funnels-to-ai">from funnels to AI</a>.</p>
+
+      <h2>Frequently asked questions about the history of AI</h2>
+      <div class="faq">
+        <details><summary>When was artificial intelligence invented?</summary><p>As a formal field, in 1956 at the Dartmouth workshop, where the term was coined. Its conceptual roots reach back to Alan Turing&rsquo;s 1950 paper and earlier work on computation and information.</p></details>
+        <details><summary>Who coined the term &ldquo;artificial intelligence&rdquo;?</summary><p>John McCarthy, in the 1955 proposal for the 1956 Dartmouth Summer Research Project, organized with Marvin Minsky, Nathaniel Rochester, and Claude Shannon.</p></details>
+        <details><summary>What was the AI winter?</summary><p>A period of reduced funding and interest after expectations went unmet. There were two major ones: roughly 1974&ndash;1980, and the late 1980s into the 1990s.</p></details>
+        <details><summary>What&rsquo;s the difference between AI, machine learning, and deep learning?</summary><p>They nest. Artificial intelligence is the broad goal; machine learning is the subset where systems learn from data rather than fixed rules; deep learning is the subset of machine learning using many-layered neural networks, and it powers today&rsquo;s large language models.</p></details>
+        <details><summary>What started the modern AI boom?</summary><p>The 2012 AlexNet result launched the deep learning era, and the 2017 Transformer architecture enabled the large language models behind assistants like ChatGPT, released in November 2022.</p></details>
+      </div>
     </article>
 
-    <div class="cta-box">
-      <h3>Want to be the business AI recommends?</h3>
-      <p>TownPicked optimizes your website and the information AI assistants read, so your business shows up when customers ask. Free audit first &mdash; see where you stand before spending anything.</p>
-      <a class="btn" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=cta1" rel="nofollow sponsored noopener" target="_blank">Get your free AI audit</a>
-      <p class="micro">Referral link &mdash; see our <a href="/disclosure">disclosure</a>. We recommend what we use on our own projects.</p>
+    <div class="note" style="margin-top:34px;">
+      <b>About this site.</b> highlevel.ai is an independent publication about artificial intelligence &mdash; the name refers to the high-level, big-picture view it takes of the subject. It is not affiliated with, endorsed by, or sponsored by gohighlevel or any other software vendor. It is published by people who help local businesses become visible to AI assistants through <a href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=about-note" rel="nofollow sponsored noopener" target="_blank">TownPicked</a>, a service we refer readers to and disclose our relationship with (see our <a href="/disclosure">disclosure</a>).
     </div>
-
-    <article>
-      <h2>Start here</h2>
-    </article>
-
-    <div class="cards">
-      <div class="card">
-        <h3>How AI assistants pick businesses</h3>
-        <p>What ChatGPT, Claude, Perplexity, and Gemini actually read before they recommend anyone &mdash; and why most businesses never make the shortlist.</p>
-        <a href="/how-ai-picks-businesses">Read the guide &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>Get recommended by ChatGPT</h3>
-        <p>The practical playbook: the seven things a local business can fix so AI assistants can find, trust, and name it.</p>
-        <a href="/get-recommended-by-chatgpt">Read the playbook &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>Why AI recommends so few</h3>
-        <p>An answer isn&rsquo;t a results page. Why assistants name one to three businesses, and what that scarcity means for everyone else.</p>
-        <a href="/why-ai-recommends-so-few-businesses">Read the analysis &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>From funnels to AI</h3>
-        <p>After eight years inside the funnel-and-follow-up world, here&rsquo;s why we changed our recommendation entirely.</p>
-        <a href="/from-funnels-to-ai">Read the editorial &rarr;</a>
-      </div>
-    </div>
-
-    <article>
-      <h2>Proof over theory</h2>
-      <p>We didn&rsquo;t arrive at this thesis by reading think pieces. We rebuilt the AI presence of three very different businesses &mdash; a medical spa, a car detailing company, and a marketing agency &mdash; and watched AI assistants start sending them customers. The pattern held every time. <a href="/ai-lead-case-studies">The case studies are here.</a></p>
-      <p>And when business owners ask us to just handle it for them, we point them to <a href="/what-is-townpicked">TownPicked</a> &mdash; the service we think does this best right now.</p>
-    </article>
   </div>
 </main>
 
-
-<div id="stickyCtaBar" aria-hidden="true">
-  <div class="inner">
-    <div class="txt"><b>AI assistants recommend only a few businesses.</b> <span class="hide-sm">TownPicked helps yours be one of them &mdash; free audit, no card needed.</span></div>
-    <a class="btn" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=home&utm_content=sticky-bar" rel="nofollow sponsored noopener" target="_blank">Get a free AI audit</a>
-    <button type="button" onclick="document.getElementById('stickyCtaBar').remove();sessionStorage.setItem('ctaDismissed','1');" aria-label="Dismiss">&times;</button>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
@@ -311,19 +348,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-// Sticky CTA bar - show after 30% scroll unless dismissed this session
-(function() {
-  var bar = document.getElementById('stickyCtaBar');
-  if (!bar || sessionStorage.getItem('ctaDismissed')) { if (bar) bar.remove(); return; }
-  var shown = false;
-  window.addEventListener('scroll', function() {
-    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (pct > 0.3 && !shown) { bar.classList.add('visible'); bar.setAttribute('aria-hidden','false'); shown = true; }
-  });
-})();
-</script>
 
 </body>
 </html>
