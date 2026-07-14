@@ -1,0 +1,11 @@
+# Internal tooling — must not be publicly served on the domain
+scripts/
+prompts/
+data/
+node_modules/
+video_queue.json
+package.json
+package-lock.json
+youtube_client_secret.json
+*.py
+.github/

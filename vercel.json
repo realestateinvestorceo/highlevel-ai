@@ -7,18 +7,13 @@
       "has": [{ "type": "host", "value": "highlevel.ai" }],
       "destination": "https://www.highlevel.ai/:path*",
       "permanent": true
-    }
+    },
+    { "source": "/editorial-policy", "destination": "/disclosure", "permanent": true }
   ],
   "functions": {
-    "api/extract-earnings.js": {
-      "maxDuration": 30
-    },
-    "api/pipeline-webhook.js": {
-      "maxDuration": 15
-    },
-    "api/update-video.js": {
-      "maxDuration": 15
-    }
+    "api/extract-earnings.js": { "maxDuration": 30 },
+    "api/pipeline-webhook.js": { "maxDuration": 15 },
+    "api/update-video.js": { "maxDuration": 15 }
   },
   "headers": [
     {
