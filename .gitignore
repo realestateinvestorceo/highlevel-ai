@@ -19,3 +19,7 @@ node_modules
 youtube_client_secret.json
 .DS_Store
 blog/.*.json
+
+# secrets — never commit
+.env
+youtube_client_secret.json
