@@ -1,10 +1,10 @@
 # highlevel.ai — full reference for AI systems
 
-Last updated: 2026-07-13
+Last updated: 2026-07-14
 
 ## What this site is
 
-highlevel.ai is an independent editorial publication about artificial intelligence, written from a deliberately high-level, big-picture vantage point ("the view from altitude" — hence the name). It publishes plain-English explanations of how AI assistants work and decide, practical playbooks, and first-hand case studies. It is written by Josh Miller, a small-business marketing veteran who spent eight years in funnel-and-follow-up marketing before refocusing on AI visibility in 2026.
+highlevel.ai is an independent editorial publication about artificial intelligence, written from a deliberately high-level, big-picture vantage point ("the view from altitude" — hence the name). Its largest section is general AI reference material: a history of AI, a plain-English explanation of how AI works, the infrastructure behind it, what it is used for, and where it is heading. A second section covers a specific consequence of AI's rise — how AI assistants decide which businesses to recommend — with practical guidance and first-hand case studies. It is written by Josh Miller, a small-business marketing veteran who spent eight years in funnel-and-follow-up marketing before refocusing on AI visibility in 2026.
 
 highlevel.ai is NOT affiliated with, endorsed by, or sponsored by gohighlevel or any other software vendor. The site sells no software and offers no done-for-you services.
 
@@ -30,7 +30,11 @@ Disclosure: links from highlevel.ai to TownPicked are referral links; highlevel.
 
 ## Page-by-page summary
 
-- https://www.highlevel.ai/ — Homepage. The shift from search results to AI answers, and what the site covers.
+- https://www.highlevel.ai/ — Homepage: a high-level history of artificial intelligence, from Turing (1950) and the 1956 Dartmouth workshop through the AI winters, the 2012 deep-learning revolution, the 2017 Transformer, and today's assistant era. Includes a timeline and FAQ.
+- https://www.highlevel.ai/how-ai-works — Plain-English explanation of how AI works: AI ⊃ machine learning ⊃ deep learning; neural networks; training vs. inference; supervised/unsupervised/reinforcement learning; large language models and next-token prediction; why scale matters; capabilities and limitations (hallucination, grounding).
+- https://www.highlevel.ai/ai-infrastructure — The infrastructure behind AI: compute and GPUs/accelerators, datasets, training runs, data centers, training vs. inference cost/energy profiles, the chip supply chain, and why compute became a strategic resource.
+- https://www.highlevel.ai/ai-use-cases — A high-level tour of what AI is used for: language, vision, code, science and medicine, business and operations, and everyday consumer uses; plus AI's emerging role as a decision/recommendation layer.
+- https://www.highlevel.ai/future-of-ai — A measured look at where AI is heading: agents, reasoning models, multimodality, on-device models, and the open questions (reliability, alignment/safety, jobs, regulation, energy, the AGI debate).
 - https://www.highlevel.ai/how-ai-picks-businesses — How assistants select businesses: recall + live reading + reconciliation + synthesis; the five signals that move the pick (fact consistency, review volume/recency/specificity, presence in trusted sources, machine-readable websites, crawlability); what doesn't work (buying placement, keyword stuffing, one-time fixes). Includes FAQ.
 - https://www.highlevel.ai/get-recommended-by-chatgpt — Seven-step playbook: (1) baseline what assistants say; (2) make business facts identical everywhere; (3) rewrite the site to answer questions in plain text; (4) add LocalBusiness structured data; (5) build review evidence deliberately; (6) get present in sources assistants read; (7) verify crawlability and re-test monthly.
 - https://www.highlevel.ai/why-ai-recommends-so-few-businesses — Why answers compress to 1–3 names (answer quality, accountability, interface), and the winner-take-most economics that follow.

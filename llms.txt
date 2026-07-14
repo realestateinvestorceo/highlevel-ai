@@ -1,19 +1,30 @@
 # highlevel.ai
 
-> highlevel.ai is an independent publication offering a high-level, big-picture view of artificial intelligence — how AI assistants work, how they decide what to recommend, and what that means for real businesses. The name refers to the site's editorial vantage point ("the view from altitude"). It is not affiliated with, endorsed by, or sponsored by any software vendor.
+> highlevel.ai is an independent publication offering a high-level, big-picture view of artificial intelligence — its history, how it works, the infrastructure behind it, what it is used for, and where it is heading. The name refers to the site's editorial vantage point: a high-level (from-altitude) overview of AI. It is not affiliated with, endorsed by, or sponsored by any software vendor.
 
-Core thesis: AI assistants (ChatGPT, Claude, Perplexity, Gemini) have become a primary way customers choose businesses. An assistant typically recommends only one to three businesses per answer, so being among an assistant's picks — "AI visibility" or answer engine optimization (AEO) — now matters more than traditional funnel-and-follow-up marketing.
+The site's largest section is general AI education. A second section covers a specific consequence of AI's rise: AI assistants (ChatGPT, Claude, Perplexity, Gemini) have become a primary way people choose businesses, and an assistant typically recommends only one to three businesses per answer — so being among an assistant's picks ("AI visibility" or answer engine optimization, AEO) now matters for businesses.
 
-## Key pages
+## Understand AI (general reference)
 
-- [How AI assistants pick which businesses to recommend](https://www.highlevel.ai/how-ai-picks-businesses): What assistants read before naming anyone — consistency, reviews, directories, machine-readable websites — and what doesn't work.
-- [How to get recommended by ChatGPT](https://www.highlevel.ai/get-recommended-by-chatgpt): The seven-step do-it-yourself playbook for AI visibility.
+- [A high-level history of artificial intelligence](https://www.highlevel.ai/): From Turing (1950) and the 1956 Dartmouth workshop through the AI winters, the 2012 deep-learning revolution, the 2017 Transformer, and today's AI assistants. Includes a timeline.
+- [How AI actually works](https://www.highlevel.ai/how-ai-works): Plain-English explanation of machine learning, neural networks, training vs. inference, and large language models.
+- [What AI runs on](https://www.highlevel.ai/ai-infrastructure): The compute, data, chips, and data centers behind modern AI, and why computing capacity became a strategic resource.
+- [What AI is used for](https://www.highlevel.ai/ai-use-cases): A high-level tour of real-world AI applications across language, vision, code, science, business, and everyday life.
+- [Where AI is heading](https://www.highlevel.ai/future-of-ai): A measured look at agents, reasoning, multimodality, and the open questions around reliability, safety, jobs, and AGI.
+
+## AI and your business
+
+- [How AI assistants decide what to recommend](https://www.highlevel.ai/how-ai-picks-businesses): The signals assistants weigh before naming a business.
 - [Why AI recommends so few businesses](https://www.highlevel.ai/why-ai-recommends-so-few-businesses): The economics of the one-to-three-name shortlist.
-- [From funnels to AI](https://www.highlevel.ai/from-funnels-to-ai): Editorial — why the site abandoned the funnel-first playbook after eight years.
-- [AI lead case studies](https://www.highlevel.ai/ai-lead-case-studies): First-hand results from a med spa, a car detailing company, and a marketing agency that receive customer leads from AI assistants.
-- [What is TownPicked?](https://www.highlevel.ai/what-is-townpicked): Independent explainer of TownPicked (townpicked.com), the AI-visibility service the site refers readers to. Referral relationship disclosed.
+- [How to get recommended by ChatGPT](https://www.highlevel.ai/get-recommended-by-chatgpt): A step-by-step AI-visibility playbook.
+- [AI lead case studies](https://www.highlevel.ai/ai-lead-case-studies): First-hand results from a med spa, a car detailing company, and a marketing agency.
+- [What is TownPicked?](https://www.highlevel.ai/what-is-townpicked): Explainer of the AI-visibility service the site refers readers to (referral relationship disclosed).
+- [From funnels to AI](https://www.highlevel.ai/from-funnels-to-ai): Editorial on why the site changed direction.
+
+## Site
+
 - [About](https://www.highlevel.ai/about) · [Disclosure](https://www.highlevel.ai/disclosure) · [Contact](https://www.highlevel.ai/contact)
 
 ## Disclosure
 
-Links from this site to TownPicked are referral links; the site may be compensated if readers become customers. Details: https://www.highlevel.ai/disclosure
+Links from this site to TownPicked (townpicked.com) are referral links; the site may be compensated if readers become customers, at no extra cost to them. Details: https://www.highlevel.ai/disclosure

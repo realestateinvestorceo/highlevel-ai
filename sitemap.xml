@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.highlevel.ai/</loc><lastmod>2026-07-13</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.highlevel.ai/how-ai-works</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.highlevel.ai/ai-infrastructure</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.highlevel.ai/ai-use-cases</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.highlevel.ai/future-of-ai</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.highlevel.ai/how-ai-picks-businesses</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.highlevel.ai/get-recommended-by-chatgpt</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.highlevel.ai/why-ai-recommends-so-few-businesses</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
