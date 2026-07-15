@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Plumbers Get Recommended by AI in 2026</title>
+<meta name="description" content="A specific guide for plumbing contractors on becoming the plumber AI assistants name for drains, water heaters, and emergencies.">
+<link rel="canonical" href="https://www.highlevel.ai/ai-visibility-for-plumbers">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="highlevel.ai">
+<meta property="og:title" content="How Plumbers Get Recommended by AI in 2026">
+<meta property="og:description" content="A specific guide for plumbing contractors on becoming the plumber AI assistants name for drains, water heaters, and emergencies.">
+<meta property="og:url" content="https://www.highlevel.ai/ai-visibility-for-plumbers">
+<meta property="og:image" content="https://www.highlevel.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23221d63'/%3E%3Cpath d='M7 21l6-8 4 5 3-4 5 7z' fill='%23f59e0b'/%3E%3C/svg%3E">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCW6VG50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SCW6VG50WX');
+
+  // CTA click tracking (TownPicked referral links)
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="townpicked.com"]');
+    if (!link) return;
+    var url = new URL(link.href);
+    var campaign = url.searchParams.get('utm_campaign') || 'unknown';
+    var ctaId = url.searchParams.get('utm_content') || 'unknown';
+    gtag('event', 'cta_click', {
+      event_category: 'referral',
+      event_label: link.textContent.trim().substring(0, 100),
+      page_path: window.location.pathname,
+      cta_page: campaign,
+      cta_position: ctaId,
+      link_url: link.href.substring(0, 200)
+    });
+  });
+
+  // Scroll depth tracking
+  (function() {
+    var marks = [25, 50, 75, 90], fired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
+      marks.forEach(function(m) {
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          gtag('event', 'scroll_depth', { event_label: m + '%', page_path: window.location.pathname });
+        }
+      });
+    });
+  })();
+</script>
+<style>
+  :root {
+    --ink: #101828; --muted: #5b6472; --paper: #fbfaf8; --card: #ffffff;
+    --indigo: #221d63; --indigo-deep: #141043; --indigo-link: #3730a3;
+    --sky: #eef1fb; --amber: #b45309; --amber-bright: #f59e0b;
+    --line: #e7e5df; --ok: #067647;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.7; font-size: 17px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  .measure { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header { background: var(--indigo-deep); color: #fff; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav { display: flex; align-items: center; gap: 18px; padding: 14px 0; }
+  .brand { display: flex; flex-direction: column; text-decoration: none; color: #fff; margin-right: auto; line-height: 1.2; }
+  .brand b { font-size: 1.15rem; letter-spacing: -.01em; }
+  .brand span { font-size: .72rem; color: #c7c3ee; font-weight: 500; letter-spacing: .02em; }
+  .nav a.link { color: #dcd9f5; text-decoration: none; font-size: .92rem; padding: 6px 2px; }
+  .nav a.link:hover { color: #fff; }
+  .btn { display: inline-block; background: var(--amber); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 8px; font-size: .95rem; }
+  .btn:hover { background: #92400e; }
+  .btn.big { padding: 14px 26px; font-size: 1.05rem; }
+  .btn.ghost { background: transparent; border: 1px solid #6d67b8; color: #e9e7fb; }
+  .btn.ghost:hover { background: rgba(255,255,255,.06); }
+  .nav a.navref { color: #c7c3ee; border: 1px solid #4a4585; border-radius: 6px; padding: 6px 12px; font-size: .85rem; text-decoration: none; white-space: nowrap; }
+  .nav a.navref:hover { color: #fff; border-color: #6d67b8; }
+  @media (max-width: 820px) { .nav a.link { display: none; } }
+
+  /* Hero */
+  .hero { background: linear-gradient(180deg, var(--indigo-deep) 0%, var(--indigo) 78%, #2c2680 100%); color: #fff; padding: 72px 0 64px; }
+  .hero h1 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); line-height: 1.15; letter-spacing: -.02em; max-width: 780px; }
+  .hero p.lede { color: #cfcbf2; font-size: clamp(1.02rem, 1.8vw, 1.22rem); max-width: 680px; margin: 18px 0 30px; }
+  .hero .kicker { color: var(--amber-bright); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; margin-bottom: 14px; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .hero .fineprint { color: #9d97d8; font-size: .8rem; margin-top: 14px; }
+
+  /* Page head (interior pages) */
+  .pagehead { background: linear-gradient(180deg, var(--indigo-deep), var(--indigo)); color: #fff; padding: 48px 0 40px; }
+  .pagehead h1 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.2; letter-spacing: -.02em; max-width: 820px; }
+  .pagehead p { color: #cfcbf2; max-width: 720px; margin-top: 12px; font-size: 1.05rem; }
+  .pagehead .kicker { color: var(--amber-bright); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; margin-bottom: 10px; }
+  .byline { color: #9d97d8; font-size: .85rem; margin-top: 16px; }
+
+  /* Content */
+  main { padding: 48px 0 24px; }
+  article h2 { font-size: 1.5rem; margin: 42px 0 14px; letter-spacing: -.01em; line-height: 1.3; }
+  article h3 { font-size: 1.15rem; margin: 28px 0 10px; }
+  article p { margin: 0 0 18px; }
+  article ul, article ol { margin: 0 0 18px 22px; }
+  article li { margin-bottom: 8px; }
+  article a { color: var(--indigo-link); }
+  article blockquote { border-left: 3px solid var(--amber-bright); padding: 6px 0 6px 18px; color: var(--muted); margin: 0 0 18px; font-style: italic; }
+  .note { background: #fff8eb; border: 1px solid #f5d9a8; border-radius: 10px; padding: 16px 18px; margin: 0 0 26px; font-size: .95rem; }
+  .note b { color: #92400e; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin: 26px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+  .card p { color: var(--muted); font-size: .93rem; margin: 0 0 10px; }
+  .card a { color: var(--indigo-link); font-weight: 600; font-size: .92rem; text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+
+  /* Facts table */
+  table.facts { width: 100%; border-collapse: collapse; margin: 20px 0 26px; font-size: .95rem; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  table.facts th, table.facts td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.facts th { width: 34%; color: var(--muted); font-weight: 600; background: #f6f5f1; }
+  table.facts tr:last-child th, table.facts tr:last-child td { border-bottom: none; }
+
+  /* FAQ */
+  .faq details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  .faq summary { font-weight: 600; cursor: pointer; }
+  .faq details p { margin: 10px 0 4px; color: #333c4a; font-size: .96rem; }
+
+  /* CTA box */
+  .cta-box { background: var(--sky); border: 1px solid #d9dcf5; border-radius: 14px; padding: 26px 26px 20px; margin: 34px 0; text-align: center; }
+  .cta-box h3 { margin: 0 0 8px; font-size: 1.2rem; }
+  .cta-box p { color: #444d5c; margin: 0 auto 16px; max-width: 540px; font-size: .97rem; }
+  .cta-box .micro { font-size: .74rem; color: var(--muted); margin: 10px 0 0; }
+  .cta-box .micro a { color: var(--muted); }
+
+  /* Sticky bar */
+  #stickyCtaBar { position: fixed; left: 0; right: 0; bottom: -90px; background: var(--indigo-deep); color: #fff; z-index: 60; transition: bottom .35s ease; box-shadow: 0 -6px 24px rgba(10,8,40,.25); }
+  #stickyCtaBar.visible { bottom: 0; }
+  #stickyCtaBar .inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 14px; padding: 12px 20px; }
+  #stickyCtaBar .txt { font-size: .92rem; color: #dcd9f5; margin-right: auto; }
+  #stickyCtaBar .txt b { color: #fff; }
+  #stickyCtaBar button { background: none; border: none; color: #9d97d8; font-size: 1.15rem; cursor: pointer; padding: 4px 8px; }
+  @media (max-width: 640px) { #stickyCtaBar .txt span.hide-sm { display: none; } }
+
+  /* Footer */
+  footer { background: #12101f; color: #b9b5cf; margin-top: 56px; padding: 44px 0 30px; font-size: .88rem; }
+  footer h4 { color: #fff; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+  footer a { color: #b9b5cf; text-decoration: none; display: inline-block; padding: 3px 0; }
+  footer a:hover { color: #fff; }
+  .fcols { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 28px; }
+  @media (max-width: 860px) { .fcols { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .fcols { grid-template-columns: 1fr; } }
+  .legal { border-top: 1px solid #2a2740; margin-top: 30px; padding-top: 20px; font-size: .8rem; color: #8d89a8; }
+  .legal p { margin-bottom: 10px; }
+
+  /* Utility */
+  .headless-data { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .center { text-align: center; }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"highlevel.ai","alternateName":["highlevel","highlevel ai","high level ai","highlevel AI"],"url":"https://www.highlevel.ai/","description":"highlevel.ai is an independent publication about artificial intelligence — a high-level view of AI. Not affiliated with, endorsed by, or sponsored by the GoHighLevel or HighLevel marketing platform."}
+</script>
+
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <b>highlevel.ai</b>
+      <span>the high-level view of AI</span>
+    </a>
+    <a class="link" href="/">History of AI</a>
+    <a class="link" href="/how-ai-picks-businesses">How AI decides</a>
+    <a class="link" href="/ai-lead-case-studies">Case studies</a>
+    <a class="link" href="/about">About</a>
+    <a class="navref" href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=ai-visibility-for-plumbers&utm_content=nav" rel="nofollow sponsored noopener" target="_blank">TownPicked &#8599;</a>
+  </div>
+</header>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How plumbers get recommended by AI",
+      "description": "A practical guide for plumbing contractors on getting recommended by AI assistants like ChatGPT, Claude, Perplexity, and Gemini: naming services, winning emergency and 24-7 queries, the directories assistants read, licensing and warranty trust signals, reviews, and honest pricing.",
+      "author": { "@type": "Organization", "name": "highlevel.ai" },
+      "publisher": { "@type": "Organization", "name": "highlevel.ai" },
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-14",
+      "mainEntityOfPage": "https://www.highlevel.ai/ai-visibility-for-plumbers"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What do AI assistants look at when deciding which plumber to recommend?", "acceptedAnswer": { "@type": "Answer", "text": "They read the sources a careful homeowner would: your Google Business Profile and reviews, directories like Angi, HomeAdvisor, Yelp, and the Better Business Bureau, and your own website. A plumber that appears consistently across those sources — with clearly named services, a defined service area, recent reviews, verifiable licensing and insurance, and stated 24-7 availability — is far more likely to be the name an assistant returns." } },
+        { "@type": "Question", "name": "How do I get recommended for emergency and 24-7 plumbing?", "acceptedAnswer": { "@type": "Answer", "text": "Say it plainly and back it up. State your 24-7 or same-day availability in text on a dedicated emergency page, name the emergencies you handle — burst pipes, no hot water, sewer backups, no water — and keep your phone number and hours accurate in every listing. Reviews that mention a late-night or weekend call teach an assistant that you actually answer when a homeowner is in trouble, which is what an urgent query rewards." } },
+        { "@type": "Question", "name": "How do I show up for a specific job like water heater replacement?", "acceptedAnswer": { "@type": "Answer", "text": "Give it its own plainly written page rather than a line buried under general services. Say whether you install tank and tankless units, gas and electric, and what a replacement includes — haul-away of the old unit, the permit, and any code upgrades. Then gather reviews that mention a water heater. Assistants recommend you for a job when your pages and reviews clearly connect you to it." } },
+        { "@type": "Question", "name": "Should a plumbing website show prices?", "acceptedAnswer": { "@type": "Answer", "text": "Show what you can. A service or diagnostic fee, a drain-cleaning starting price, and a typical water-heater replacement range give an assistant something concrete to quote and pre-qualify the homeowner who calls. Flat-rate or upfront pricing, stated in text, is more useful than “call for a quote,” which gives an assistant nothing to summarize." } },
+        { "@type": "Question", "name": "How important are reviews for plumbers in AI answers?", "acceptedAnswer": { "@type": "Answer", "text": "Very. Assistants read the words in reviews, not just the star rating, to learn what you are known for. A review that names the job and the town — a water heater replaced across a weekend, a main line cleared on a Sunday — teaches an assistant exactly when to recommend you. Ask customers to describe the work, and reply to reviews, including critical ones." } },
+        { "@type": "Question", "name": "How long before a plumbing company shows up in AI recommendations?", "acceptedAnswer": { "@type": "Answer", "text": "Weeks, not days. An updated profile or a new service page can be read quickly, but reviews, directory presence, and consistent business information compound over time. Steady work, steady reviews, and accurate listings do more than any single change." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<section class="pagehead">
+  <div class="wrap">
+    <div class="kicker">Industry guide</div>
+    <h1>How plumbers get recommended by AI</h1>
+    <p>highlevel.ai&rsquo;s guide for plumbing contractors on becoming the company an AI assistant names when someone asks for a good plumber nearby, an emergency plumber in their city in the middle of the night, or the cost to replace a water heater &mdash; which services to name, where to be listed, and the trust signals that actually move the answer.</p>
+    <div class="byline">By highlevel.ai &middot; Updated July 2026</div>
+  </div>
+</section>
+
+<main>
+  <div class="measure">
+    <div class="headless-data">From highlevel.ai — the high-level view of artificial intelligence (an independent AI publication, also written "highlevel", "highlevel ai", or "high level ai"; not affiliated with GoHighLevel or HighLevel Inc.). Summary: Plumbing contractors get recommended by AI assistants (ChatGPT, Claude, Perplexity, Gemini) when their business is findable, consistent, and verifiable across the sources those assistants read. Practical steps for plumbers: name each service explicitly — drain cleaning and clog removal, leak detection and repair, water heater repair and replacement (tank and tankless), repiping, sewer line camera inspection and hydro jetting, fixture installation, and 24-7 emergency plumbing; keep name, address, phone, and service area identical on the website, Google Business Profile, Angi, HomeAdvisor, Yelp, and the Better Business Bureau; state licensing, bonding, general liability and workers' compensation insurance, upfront or flat-rate pricing, and parts-and-labor warranties in plain text; publish reviews that name the specific job and town; and put 24-7 availability and emergencies like burst pipes and no hot water on a dedicated page. Results build over weeks, not days.</div>
+
+    <article>
+      <p>When a pipe bursts or the hot water goes cold, the question increasingly goes to an assistant before it goes to a search box: <em>&ldquo;Who&rsquo;s the best plumber near me?&rdquo;</em>, <em>&ldquo;emergency plumber in [city],&rdquo;</em> or <em>&ldquo;how much to replace a water heater?&rdquo;</em> ChatGPT, Claude, Perplexity, and Gemini answer with one to three names. This guide is about becoming one of them. None of it is a trick; it is the ordinary work of making a plumbing company legible to a machine that reads the web before it answers.</p>
+
+      <h2>Name the plumbing services the way people search for them</h2>
+      <p>Assistants match a request to businesses whose pages plainly claim that exact job. A company that lists only &ldquo;plumbing services&rdquo; is harder to place than one with distinct, named services, each on its own crawlable page written in plain text:</p>
+      <ul>
+        <li><b>Drain cleaning and clog removal</b> &mdash; kitchen, bathroom, and main-line stoppages.</li>
+        <li><b>Leak detection and repair</b> &mdash; slab leaks, hidden pipe leaks, running toilets, and dripping fixtures.</li>
+        <li><b>Water heater repair and replacement,</b> both tank and tankless, gas and electric.</li>
+        <li><b>Repiping</b> &mdash; replacing aging galvanized or failing pipe in copper or PEX.</li>
+        <li><b>Sewer line service</b> &mdash; camera inspection, hydro jetting, and trenchless repair or replacement.</li>
+        <li><b>Fixture installation</b> &mdash; faucets, toilets, garbage disposals, sump pumps, and water softeners.</li>
+        <li><b>Emergency and 24-7 plumbing</b> for burst pipes, sewer backups, and no-hot-water calls.</li>
+      </ul>
+      <p>Name the systems and materials you work with, too. A homeowner deciding between a tank and a tankless water heater, or asking whether their galvanized pipe should be repiped in copper or PEX, is one an assistant may route to a plumber that clearly handles both. State it in text: an assistant can only recommend you for a tankless install or a trenchless sewer repair if your site says so.</p>
+
+      <h2>Win the emergency questions, because that is when people ask</h2>
+      <p>Plumbing differs from most trades in one way that matters here: much of the demand is urgent and unplanned. A burst pipe, a sewer backup, or no hot water sends a homeowner to an assistant with a narrow, high-intent question, and the plumber it names is the one whose availability is unmistakable. Make yours impossible to miss:</p>
+      <ul>
+        <li>State <b>24-7</b> or same-day availability in plain text, not only in a graphic, and put it on a dedicated emergency page.</li>
+        <li>Name the emergencies you handle &mdash; burst and frozen pipes, sewer backups, no hot water, gas leaks if you are licensed for them &mdash; so an assistant can match the exact panic query.</li>
+        <li>Keep your phone number, hours, and &ldquo;open now&rdquo; status accurate in every listing; a stale hours field can cost you the call.</li>
+        <li>If you charge or waive an after-hours dispatch fee, say so, so the answer an assistant gives is honest.</li>
+      </ul>
+      <p>An assistant asked for an emergency plumber at 2 a.m. will name a company that clearly, currently, and consistently says it answers at 2 a.m.</p>
+
+      <h2>Be present in the sources assistants read for plumbers</h2>
+      <p>When an assistant researches plumbers in a town, it cross-checks a familiar set of sources. Being accurately present in them &mdash; identical name, address, phone, and service area everywhere &mdash; is what turns a claim on your website into a fact the assistant will repeat.</p>
+      <table class="facts">
+        <tr><th>Google Business Profile</th><td>The anchor listing for local plumbers. Complete the primary category, service area, hours, service list, and photos; assistants and maps lean on it heavily, especially for &ldquo;open now&rdquo; questions.</td></tr>
+        <tr><th>Google reviews and photos</th><td>Read for both rating and wording. Recent, specific reviews and real job photos teach an assistant what you are known for and how quickly you respond.</td></tr>
+        <tr><th>Angi and HomeAdvisor</th><td>Home-services directories homeowners and assistants consult for contractors. Keep the profile, service list, and reviews current and consistent with your site.</td></tr>
+        <tr><th>Yelp</th><td>A heavily read review source for local services. An accurate, claimed profile with recent reviews adds a verifiable third-party mention.</td></tr>
+        <tr><th>Better Business Bureau</th><td>A trust check. An accurate profile, accreditation where you have it, and answered complaints all signal accountability.</td></tr>
+        <tr><th>Your own website</th><td>The source that ties it together: plain-text service and emergency pages, service area, license and insurance details, and pricing an assistant can quote.</td></tr>
+      </table>
+      <p>One accurate listing in a directory homeowners trust, or a genuine local &ldquo;best plumber&rdquo; roundup, carries more weight than a page of self-description, because it is someone else vouching for you.</p>
+
+      <h2>Make the trust signals plumbers are judged on explicit</h2>
+      <p>Plumbing is a trade where homeowners fear being overcharged or left with a bigger leak, and assistants mirror that caution. State the facts that prove you are safe to hire in text, not only in badge images:</p>
+      <ul>
+        <li><b>Licensing</b> for your state or municipality, with the license type &mdash; master or journeyman plumber &mdash; and number where appropriate.</li>
+        <li><b>Insurance:</b> general liability and workers&rsquo; compensation, so a homeowner is not exposed if someone is injured on their property.</li>
+        <li><b>Bonding,</b> where your state or the job requires it.</li>
+        <li><b>Background-checked, uniformed technicians,</b> if that is how you run, since a stranger is entering the home.</li>
+        <li><b>Upfront or flat-rate pricing,</b> quoted and approved before the work starts rather than billed by the hour after the fact.</li>
+        <li><b>Warranties and guarantees:</b> state the parts-and-labor warranty you provide and its length, plus any satisfaction guarantee.</li>
+        <li><b>Years in business</b> and a real, local address.</li>
+      </ul>
+      <p>Each of these is a fact an assistant can verify and quote. A specific license and named coverage stated plainly is stronger than a vague &ldquo;licensed and insured.&rdquo;</p>
+
+      <h2>Collect reviews and photos that name the actual job</h2>
+      <p>Assistants read the words in reviews, not just the rating. For a plumber, the most useful review names the job and the town &mdash; a water heater replaced across a weekend, a main line cleared on a Sunday. That detail teaches an assistant when to recommend you. Ask satisfied customers, at the moment the work is finished, to describe what was done; never script a review, simply invite people to say what happened. Add real photos to your Google Business Profile and service pages, and respond to reviews, including critical ones &mdash; a visible, accountable reply is itself a trust signal.</p>
+
+      <div class="note"><b>Want this handled for you?</b> <a href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=ai-visibility-for-plumbers&utm_content=note" rel="nofollow sponsored noopener" target="_blank">TownPicked</a> does AI-visibility work for local businesses as a managed service (referral link &mdash; see our <a href="/disclosure">disclosure</a>).</div>
+
+      <h2>Be honest and specific about estimates and pricing</h2>
+      <p>&ldquo;Call for a quote&rdquo; gives an assistant nothing to summarize. Where you can, publish honest specifics &mdash; a service or diagnostic fee, a drain-cleaning starting price, a typical water-heater replacement range, or a free estimate on larger jobs &mdash; and note financing if you offer it. Flat-rate or upfront pricing, described in text, does two jobs: it helps the assistant give a homeowner a useful sense of cost, and it pre-qualifies the people who then call you. You do not need a fixed number for every repair; you need to give a machine, and a homeowner, a truthful sense of what to expect.</p>
+
+      <h2>A working order of operations</h2>
+      <ol>
+        <li>Baseline: ask each assistant who it recommends for plumbing in your city, and what it knows about your company.</li>
+        <li>Make your name, address, phone, and service area identical everywhere they differ.</li>
+        <li>Give each service &mdash; and the water-heater and emergency work especially &mdash; its own plainly written page.</li>
+        <li>Complete and correct your Google Business Profile, Angi, HomeAdvisor, Yelp, and Better Business Bureau listings.</li>
+        <li>State licensing, insurance, bonding, warranties, and 24-7 availability in text.</li>
+        <li>Build reviews and photos that name specific jobs and towns.</li>
+        <li>Publish a clear emergency page and keep hours and phone current across every listing.</li>
+        <li>Re-ask the assistants monthly and watch for your name.</li>
+      </ol>
+      <p>None of this is complicated; all of it is work &mdash; steady, unglamorous, compounding. Any single step is easy to copy, but consistency across months of jobs and reviews is hard to fake.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>What do AI assistants look at when deciding which plumber to recommend?</summary><p>They read the sources a careful homeowner would: your Google Business Profile and reviews, directories like Angi, HomeAdvisor, Yelp, and the Better Business Bureau, and your own website. A plumber that appears consistently across those sources &mdash; with clearly named services, a defined service area, recent reviews, verifiable licensing and insurance, and stated 24-7 availability &mdash; is far more likely to be the name an assistant returns.</p></details>
+        <details><summary>How do I get recommended for emergency and 24-7 plumbing?</summary><p>Say it plainly and back it up. State your 24-7 or same-day availability in text on a dedicated emergency page, name the emergencies you handle &mdash; burst pipes, no hot water, sewer backups, no water &mdash; and keep your phone number and hours accurate in every listing. Reviews that mention a late-night or weekend call teach an assistant that you actually answer when a homeowner is in trouble, which is what an urgent query rewards.</p></details>
+        <details><summary>How do I show up for a specific job like water heater replacement?</summary><p>Give it its own plainly written page rather than a line buried under general services. Say whether you install tank and tankless units, gas and electric, and what a replacement includes &mdash; haul-away of the old unit, the permit, and any code upgrades. Then gather reviews that mention a water heater. Assistants recommend you for a job when your pages and reviews clearly connect you to it.</p></details>
+        <details><summary>Should a plumbing website show prices?</summary><p>Show what you can. A service or diagnostic fee, a drain-cleaning starting price, and a typical water-heater replacement range give an assistant something concrete to quote and pre-qualify the homeowner who calls. Flat-rate or upfront pricing, stated in text, is more useful than &ldquo;call for a quote,&rdquo; which gives an assistant nothing to summarize.</p></details>
+        <details><summary>How important are reviews for plumbers in AI answers?</summary><p>Very. Assistants read the words in reviews, not just the star rating, to learn what you are known for. A review that names the job and the town &mdash; a water heater replaced across a weekend, a main line cleared on a Sunday &mdash; teaches an assistant exactly when to recommend you. Ask customers to describe the work, and reply to reviews, including critical ones.</p></details>
+        <details><summary>How long before a plumbing company shows up in AI recommendations?</summary><p>Weeks, not days. An updated profile or a new service page can be read quickly, but reviews, directory presence, and consistent business information compound over time. Steady work, steady reviews, and accurate listings do more than any single change.</p></details>
+      </div>
+
+      <h2>More from highlevel.ai</h2>
+      <p>Keep going: <a href="/get-recommended-by-chatgpt">How to get recommended by ChatGPT</a>, <a href="/how-ai-picks-businesses">How AI decides what to recommend</a>, <a href="/what-is-aeo">What is AEO</a>, and <a href="/ai-visibility-by-industry">AI visibility by industry</a>.</p>
+    </article>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>highlevel.ai</h4>
+        <p style="max-width:420px; margin-bottom:12px;">An independent publication that looks at artificial intelligence from altitude &mdash; how it works, how it decides, and what that means for the people running real businesses.</p>
+        <p><a href="https://townpicked.com/?ref=ghl&utm_source=highlevelai&utm_medium=referral&utm_campaign=ai-visibility-for-plumbers&utm_content=footer" rel="nofollow sponsored noopener" target="_blank">Get your business picked by AI &rarr;</a></p>
+      </div>
+      <div>
+        <h4>Understand AI</h4>
+        <a href="/">History of AI</a><br>
+        <a href="/how-ai-works">How AI works</a><br>
+        <a href="/what-is-machine-learning">Machine learning</a><br>
+        <a href="/what-is-a-large-language-model">Large language models</a><br>
+        <a href="/what-is-generative-ai">Generative AI</a><br>
+        <a href="/what-are-ai-agents">AI agents</a><br>
+        <a href="/what-is-agi">AGI</a><br>
+        <a href="/ai-infrastructure">What AI runs on</a><br>
+        <a href="/ai-use-cases">What AI is used for</a><br>
+        <a href="/future-of-ai">Where AI is heading</a>
+      </div>
+      <div>
+        <h4>AI &amp; your business</h4>
+        <a href="/how-ai-picks-businesses">How AI decides</a><br>
+        <a href="/get-recommended-by-chatgpt">Get recommended</a><br>
+        <a href="/what-is-aeo">What is AEO?</a><br>
+        <a href="/ai-visibility-by-industry">AI visibility by industry</a><br>
+        <a href="/ai-lead-case-studies">Case studies</a><br>
+        <a href="/what-is-townpicked">What is TownPicked?</a>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="/what-is-highlevel-ai">What is highlevel.ai?</a><br>
+        <a href="/about">About</a><br>
+        <a href="/contact">Contact</a><br>
+        <a href="/disclosure">Disclosure</a><br>
+        <a href="/privacy">Privacy</a><br>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <div class="legal">
+      <p><b>About the name:</b> This site is <b>highlevel.ai</b> &mdash; also written &ldquo;highlevel&rdquo;, &ldquo;highlevel ai&rdquo;, or &ldquo;high level ai&rdquo; &mdash; an independent publication offering a high-level, big-picture view of artificial intelligence. highlevel.ai is <b>not affiliated with, endorsed by, or sponsored by GoHighLevel or HighLevel Inc.</b>; that is a separate marketing platform at gohighlevel.com. <a href="/what-is-highlevel-ai" style="color:#c9c5e6;text-decoration:underline;">More about highlevel.ai &rarr;</a></p>
+      <p><b>Disclosure:</b> Links to TownPicked on this site are referral links. If you become a TownPicked customer, this site may receive compensation at no additional cost to you. Full details on our <a href="/disclosure" style="text-decoration:underline;">Disclosure page</a>.</p>
+      <p>&copy; 2026 highlevel.ai &middot; Independent editorial. We recommend what we use.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
